@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03-27 09:31 - 破產風險 (Risk of Ruin)</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+/* Timeline - 依日期分組 */
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+/* Content */
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+/* Session content */
+.session-block { margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+.session-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.session-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.session-number { background: var(--primary); color: white; padding: 4px 12px; border-radius: 16px; font-size: 14px; font-weight: 600; }
+.session-info h2 { margin: 0; padding: 0; border: none; font-size: 20px; }
+.session-info .time { font-size: 14px; color: var(--text-muted); margin-top: 4px; }
+
+/* Knowledge page */
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-03-27</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-03-27 #7 · <span class="tag">💰 基本面分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>03-27 09:31 - 破產風險 (Risk of Ruin)</h1>
+                    <h1>2026-03-27 09:31 - 破產風險 (Risk of Ruin)</h1>
+
+<b>文章</b>：
+- <a href="https://thepayoutreport.com/risk-of-ruin-calculator/">Risk of Ruin Calculator - The Payout Report</a>
+- <a href="https://zh.wizardofodds.com/games/risk-of-ruin/calculator/">Risk of Ruin破產風險計算器 - Wizard of Odds</a>
+- <a href="https://www.cmoney.tw/learn/course/freeman/topic/3444">交易的期望值 - CMoney</a>
+- <a href="https://en.wikipedia.org/wiki/Kelly_criterion">Kelly Criterion - Wikipedia</a>
+
+---
+
+<h2>破產風險 (Risk of Ruin) 核心概念</h2>
+
+<h3>是什麼</h3>
+
+<b>破產風險</b>是指交易者虧光所有資金的機率。這是一個被嚴重低估的風險管理指標——很多交易者專注於勝率和報酬比，卻忽略了「帳戶存活率」這個更根本的問題。
+
+<b>核心問題</b>：即使你有一個正期望值的策略，如果每次交易風險太大，連續虧損仍然可能讓你破產。
+
+<h3>計算公式</h3>
+
+<b>簡化版公式（賭徒破產問題）</b>：
+<pre><code>Risk of Ruin = ((1 - Edge) / (1 + Edge))^Capital_Units</code></pre>
+
+<b>實務版公式（考慮勝率與賺賠比）</b>：
+<pre><code>Risk of Ruin ≈ ((1 - W) / W)^Capital_Units</code></pre>
+其中 W 為調整後的勝率，考慮賺賠比後計算
+
+<b>Wizard of Odds 版本</b>：
+需要三個參數：
+- <b>Advantage（優勢）</b>：期望值百分比，如 0.00762 代表 0.762% 優勢
+- <b>Standard Deviation（標準差）</b>：每次交易的波動
+- <b>Bankroll（資金單位）</b>：總資金 ÷ 每次下注金額
+
+<h3>實例計算</h3>
+
+<b>情境</b>：
+- 帳戶：100 萬元
+- 每筆交易風險：2%（2萬元）
+- 策略勝率：55%
+- 平均賺賠比：1.5:1（賺 1.5 元：賠 1 元）
+
+<b>計算</b>：
+- 調整後勝率 W = (1.5 × 0.55) ÷ [(1.5 × 0.55) + (1 × 0.45)] = 0.647
+- Risk of Ruin ≈ ((1 - 0.647) ÷ 0.647)^50 = (0.353 ÷ 0.647)^50 ≈ 0.00001%
+
+<b>但如果每次風險 5%</b>：
+- Risk of Ruin ≈ 0.35%，提升 350 倍！
+
+<h3>影響破產風險的三個關鍵變數</h3>
+
+<h4>1. 勝率 (Win Rate)</h4>
+
+<b>定義</b>：獲利交易佔總交易的百分比
+
+<b>影響</b>：勝率越高，破產風險越低
+
+<b>實例</b>：
+- 勝率 40%、賺賠比 2:1、風險 2%：破產風險約 3%
+- 勝率 55%、賺賠比 2:1、風險 2%：破產風險約 0.001%
+
+<h4>2. 賺賠比 (Win/Loss Ratio)</h4>
+
+<b>定義</b>：平均獲利金額 ÷ 平均虧損金額
+
+<b>關鍵洞察</b>：高賺賠比可以彌補較低的勝率
+
+<b>實例</b>：
+- 勝率 35%、賺賠比 3:1 → 期望值仍然為正
+- 但低勝率需要更大的心理承受力
+
+<h4>3. 每筆風險 (Risk Per Trade)</h4>
+
+<b>定義</b>：每筆交易所承擔的資金百分比
+
+<b>影響</b>：這是最直接可控的變數，降低風險是最快改善存活率的方法
+
+<b>實務建議</b>：
+<table><thead><tr><th>風險/筆</th><th>連虧10次剩餘</th><th>連虧20次剩餘</th><th>破產風險(估計)</th></tr></thead><tbody><tr><td>1%</td><td>90.4%</td><td>81.8%</td><td>極低</td></tr><tr><td>2%</td><td>81.7%</td><td>66.8%</td><td>低</td></tr><tr><td>5%</td><td>60.5%</td><td>35.8%</td><td>中</td></tr><tr><td>10%</td><td>34.9%</td><td>12.2%</td><td>高</td></tr><tr><td>20%</td><td>10.7%</td><td>1.2%</td><td>極高</td></tr></tbody></table>
+<h3>與凱利公式的關係</h3>
+
+<b>凱利公式</b>計算的是「最大化長期成長率」的下注比例，但：
+- <b>全凱利</b>：破產風險約 <b>5%</b>（對專業交易者來說太高）
+- <b>半凱利</b>：常被推薦，破產風險較低但仍需注意
+- <b>1/4 凱利</b>：保守做法，適合長期資金增長
+
+<b>關鍵提醒</b>：凱利公式假設你能精確知道勝率和賺賠比，但現實中這些都是估計值。估計錯誤會讓實際風險更高。
+
+<h3>期望值與破產風險的關係</h3>
+
+<b>期望值公式</b>：
+<pre><code>E = W × P - L × (1-P) - A</code></pre>
+- W：每筆獲利點數
+- L：每筆虧損點數
+- P：勝率
+- A：交易成本
+
+<b>存活關鍵</b>：找出期望值 > 0 的方法
+
+<b>提高期望值的途徑</b>：
+1. 提高勝率 P↑
+2. 增加每筆獲利 W↑
+3. 控制每筆虧損 L↓
+4. 降低交易成本 A↓
+
+<h3>實戰應用：五步驟降低破產風險</h3>
+
+<h4>步驟一：計算你的策略參數</h4>
+
+<b>怎麼做</b>：
+1. 統計最近 100 筆交易
+2. 計算勝率 = 獲利次數 ÷ 總次數
+3. 計算平均獲利和平均虧損
+4. 計算賺賠比 = 平均獲利 ÷ 平均虧損
+
+<b>實例</b>：
+- 100 筆交易：55 勝 45 敗
+- 平均獲利：15,000 元
+- 平均虧損：10,000 元
+- 勝率：55%
+- 賺賠比：1.5
+
+<h4>步驟二：計算期望值</h4>
+
+<pre><code>期望值 = 15,000 × 0.55 - 10,000 × 0.45 = 8,250 - 4,500 = 3,750 元/筆</code></pre>
+
+<b>判斷</b>：期望值為正，策略理論上可行
+
+<h4>步驟三：設定風險上限</h4>
+
+<b>建議</b>：
+- 單筆風險：帳戶的 0.5% ~ 2%
+- 總曝險（所有持倉加總）：不超過帳戶的 6%
+
+<b>情境</b>：
+- 帳戶：100 萬
+- 單筆風險 1% = 10,000 元
+- 停損設定在能虧 10,000 元的位置
+
+<h4>步驟四：模擬破產風險</h4>
+
+<b>方法</b>：
+- 使用線上 Risk of Ruin Calculator
+- 輸入勝率、賺賠比、每筆風險
+- 查看破產機率
+
+<b>實例結果</b>：
+- 勝率 55%、賺賠比 1.5、風險 1%
+- 破產風險 < 0.001%（非常安全）
+- 若風險改為 5%：破產風險 ≈ 0.3%（仍可接受）
+- 若風險改為 10%：破產風險 ≈ 5%（偏高危險）
+
+<h4>步驟五：監控與調整</h4>
+
+<b>監控指標</b>：
+- 連續虧損次數
+- 當前回撤百分比
+- 實際勝率 vs 預期勝率
+
+<b>調整時機</b>：
+- 實際勝率明顯下降 → 降低風險或暫停交易
+- 連虧超過 10 次 → 檢視策略是否失效
+- 帳戶回撤 > 20% → 啟動風險熔斷機制
+
+<h3>Risk of Ruin 計算器的實務建議</h3>
+
+1. <b>用真實數據</b>：不要用理想化的數據，用你的交易日誌實際數據
+2. <b>保守估計</b>：如果策略是 55% 勝率，用 50% 去算更安全
+3. <b>風險先砍</b>：如果破產風險太高，先降低風險，不要想著提高勝率
+4. <b>適用範圍</b>：外匯、黃金、期貨、Prop Firm 都適用
+
+<h3>常見誤解</h3>
+
+<h4>誤解一：「正期望值就不會破產」</h4>
+
+<b>錯</b>：正期望值只代表長期會賺，但短期連虧可能讓你先破產
+
+<b>實例</b>：
+- 期望值 +3,750 元/筆
+- 但如果連虧 50 次（機會小但存在）
+- 風險 2%，帳戶剩 36%
+- 風險 5%，帳戶剩 7.7%
+
+<h4>誤解二：「小帳戶風險比較高所以要下大注」</h4>
+
+<b>錯</b>：這是最危險的想法，小帳戶更應該保守
+
+<b>正確做法</b>：
+- 小帳戶 → 風險控制在 0.5% - 1%
+- 目標是「存活」而非「快速翻倍」
+
+<h4>誤解三：「用凱利公式就安全」</h4>
+
+<b>錯</b>：
+- 全凱利的破產風險約 5%
+- 而且凱利假設勝率和賺賠比是「已知固定」的
+- 現實中這些都是估計值，誤差會放大破產風險
+
+---
+
+<h2>心得</h2>
+
+終於講到這個被嚴重忽略的主題了。Risk of Ruin 根本是所有風險管理的「基石」——你可以在策略上花一堆時間研究勝率、賺賠比，但如果每筆交易風險太大，你就是會破產，正期望值救不了你。
+
+最有趣的是那個表格：每筆風險 5%，連虧 20 次後帳戶剩 35.8%。這聽起來好像還好，但換算一下：如果你帳戶 100 萬，剩 35.8 萬。虧損 64.2%。你知道回本需要賺多少嗎？180%。這就是為什麼「控制風險」比「找對標的」更重要。
+
+然後那個凱利公式 5% 破產風險的數字真的嚇人——專業交易者用全凱利居然有 5% 機率破產？這解釋了為什麼那麼多人推薦半凱利甚至 1/4 凱利。原來「數學最優解」跟「現實安全解」是兩回事。
+
+那句名言說得對：「降低風險是最快改善存活率的方法。」與其想辦法把勝率從 55% 提升到 60%，不如把風險從 5% 降到 2%。前者需要更厲害的策略，後者只需要一個決定。
+
+最後，這個概念對小帳戶的人特別重要。很多人覺得帳戶小就要「拚一把」下大注，這完全搞反了——帳戶越小，越需要保守，因為你承受不起任何「黑天鵝」。Risk of Ruin 就是告訴你：你是在玩一場無限遊戲，還是在賭一把大的然後退場。
+
+朝股票操作大師邁進中 📈
+
+<b>文章</b>：
+- <a href="https://billskitchen.medium.com/%E5%85%A8%E5%A4%A9%E5%80%99%E7%AD%96%E7%95%A5-e5feab3697dc">橋水基金-全天候策略</a>
+- <a href="https://www.stockfeel.com.tw/集中vs分散-投資組合的三種方式/">集中VS分散 投資組合的三種方式</a>
+- <a href="https://rich01.com/systematic-risk-and-unsystematic-risk-invest/">系統性風險是什麼？與非系統性風險的差別？</a>
+- <a href="https://vocus.cc/article/6378e457fd8978000109f85b">論投資分散的重要性--系統性風險與非系統性風險</a>
+
+---
+
+<h2>核心知識</h2>
+
+<h3>一、風險平價策略（Risk Parity）</h3>
+
+<b>是什麼</b>：與其平均分配「資金」，不如平均分配「風險」。讓每一項資產對整體投資組合的風險貢獻度維持相等。
+
+<b>怎麼做</b>：
+1. 計算每項資產的波動率（標準差）
+2. 波動大的資產放小部位，波動小的資產放大部位
+3. 使所有資產的風險貢獻度相等
+
+<b>實例</b>：
+- 股票波動率約 15%，債券波動率約 5%
+- 傳統 60/40 配置：股票貢獻 89% 風險，債券只貢獻 11%
+- 風險平價角度：要讓風險貢獻相等，債券部位要遠大於股票
+- 實際操作：債券加槓桿，抵押債券再買債券
+
+<b>適用時機</b>：
+- 想在不同經濟環境下都有穩定表現
+- 接受較低報酬換取更平衡的風險分布
+- 願意使用槓桿（這是風險平價的代價）
+
+---
+
+<h3>二、橋水基金全天候策略（All Weather）</h3>
+
+<b>是什麼</b>：Ray Dalio 設計的策略，目標是在任何經濟環境下都能穩定表現。核心是「配置風險，而不是配置資金」。
+
+<b>四個經濟節氣</b>：
+<table><thead><tr><th>經濟環境</th><th>受惠資產</th></tr></thead><tbody><tr><td>成長高於預期 + 通膨高於預期</td><td>股票、大宗商品</td></tr><tr><td>成長低於預期 + 通膨高於預期</td><td>黃金、大宗商品</td></tr><tr><td>成長高於預期 + 通膨低於預期</td><td>股票、債券</td></tr><tr><td>成長低於預期 + 通膨低於預期</td><td>債券</td></tr></tbody></table>
+<b>經典配置</b>：
+- 30% 股票（SPY）
+- 40% 長期債券（TLT）
+- 15% 中期債券（IEF）
+- 7.5% 黃金（GLD）
+- 7.5% 大宗商品（DBC）
+
+<b>失效風險</b>：
+- 股債相關性上升（同跌）
+- 債券波動度變大
+- 利率上升環境
+- 槓桿帶來的額外風險
+
+<b>2020新冠疫苗期間表現不佳原因</b>：
+各類資產都在劇烈波動，依照波動率越大的投資越要減碼的邏輯，被迫無差別減持所有資產。
+
+---
+
+<h3>三、部位配置三種方式</h3>
+
+<b>1. 等權重平均配置（Equal Position Weighted）</b>
+- <b>是什麼</b>：每檔股票放相同比例（如 10 檔各 10%）
+- <b>哲學</b>：承認能預測方向，但不能預測漲跌幅度
+- <b>缺點</b>：同質性高的「最佳預測」可能集中在同一產業
+
+<b>2. 風險平價（Risk Parity）</b>
+- <b>是什麼</b>：波動大的資產部位小，波動小的資產部位大
+- <b>實例</b>：特斯拉波動比通用汽車高，特斯拉放少一點、通用放多一點，使兩者風險貢獻接近
+- <b>缺點</b>：大部分資金會配置在低波動資產，可能壓低長期報酬
+
+<b>3. Alpha驅動配置</b>
+- <b>是什麼</b>：超配最有把握的標的
+- <b>哲學</b>：相信自己能精確預測方向和漲跌範圍
+- <b>這是巴菲特的選擇</b>：集中是精深者的搖錢树
+
+---
+
+<h3>四、系統性風險 vs 非系統性風險</h3>
+
+<b>投資總風險公式</b>：
+<pre><code>總風險 = 系統性風險 + 非系統性風險</code></pre>
+
+<h4>系統性風險（Systematic Risk）</h4>
+
+<b>是什麼</b>：影響整個市場的風險，無法透過分散投資消除。
+
+<b>涵蓋範圍</b>：
+- 利率變化
+- 通貨膨脹
+- 經濟衰退
+- 戰爭、天災
+- 政策變動
+
+<b>怎麼衡量</b>：Beta值（β）
+- β = 1：與大盤同步波動
+- β > 1：波動比大盤大（高風險高報酬）
+- β < 1：波動比大盤小（較穩定）
+- β < 0：與大盤反向（如避險資產）
+
+<b>怎麼應對</b>：
+- 無法透過分散消除
+- 可透過「資產配置」控制（股債配置、加入其他資產類別）
+
+<h4>非系統性風險（Unsystematic Risk）</h4>
+
+<b>是什麼</b>：個別公司或產業的特定風險，可透過分散投資降低。
+
+<b>涵蓋範圍</b>：
+- 公司財務狀況
+- 管理層變動
+- 產業競爭
+- 法律訴訟
+- 罷工、意外
+
+<b>怎麼衡量</b>：Alpha值（α）
+- 衡量「承擔相同Beta風險下，能多賺多少」
+- α > 0：擊敗大盤（超額報酬）
+- α = 0：等於大盤（被動投資）
+- α < 0：落後大盤
+
+<b>怎麼應對</b>：
+- 持有 20-30 檔不同產業股票可大幅降低
+- 持有 0050 等指數型產品可消除大部分非系統性風險
+
+---
+
+<h3>五、風險來源判斷實戰</h3>
+
+<b>情境分析</b>：
+<table><thead><tr><th>你做什麼</th><th>承擔的風險</th></tr></thead><tbody><tr><td>100% 主動選股</td><td>系統性風險 + 非系統性風險</td></tr><tr><td>100% 買 0050</td><td>主要承擔系統性風險</td></tr><tr><td>資產配置（股債商品）</td><td>降低部分系統性風險</td></tr></tbody></table>
+<b>實例</b>：
+- 2008 金融海嘯：系統性風險（幾乎所有股票都跌）
+- 某公司財報造假下市：非系統性風險（可透過分散避免）
+- 木頭姐 ARKK 2021-2022大跌：高Beta乘上壞環境（系統性風險放大）
+
+---
+
+<h3>六、夏普率（Sharpe Ratio）</h3>
+
+<b>是什麼</b>：衡量「每承擔 1% 風險，能得到多少報酬」。
+
+<b>公式</b>：
+<pre><code>夏普率 = (報酬率 - 無風險利率) / 標準差</code></pre>
+
+<b>實例</b>：
+- 夏普率 0.5：承擔 1% 波動風險，長期可創造 0.5% 報酬
+- 想得 5% 報酬：可預期過程有 10% 上下波動
+
+<b>股市經驗值</b>：純承擔系統風險、消除非系統風險，長期夏普率約 0.4-0.6。
+
+---
+
+<h2>心得</h2>
+
+原本以為「風險平價」就是簡單的「債券多一點、股票少一點」，沒想到核心是「風險貢獻相等」——要讓每個資產對組合的風險貢獻一樣，這跟單純看金額比例完全不同。
+
+橋水的全天候策略在 2020 也失效過，原因是「各類資產都在劇烈波動」＋「槓桿放大虧損」。這提醒我：<b>沒有完美策略，只有適合某個環境的策略</b>。風險平價高度依賴「股債負相關」和「債券低波動」兩個假設，當這兩個假設失效，策略就會失效。
+
+關於系統性風險和非系統性風險的分類，讓我更清楚「分散投資到底在分散什麼」。分散只能消除非系統性風險，系統性風險要靠資產配置。這解釋了為什麼買了 50 檔股票還是可能在金融海嘯時大賠——因為那個是系統性風險。
+
+未來在投資時，要問自己：
+1. 我承擔的是系統性風險還是非系統性風險？
+2. 這個風險值得嗎？（報酬風險比）
+3. 這個風險能分散嗎？
+
+朝股票操作大師邁進中 📈
+---
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>
