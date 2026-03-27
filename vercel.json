@@ -1,14 +1,23 @@
 {
-  "name": "stock-knowledge",
   "version": 2,
+  "public": false,
   "builds": [
     {
-      "src": "package.json",
+      "src": "docs/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/$1" }
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/docs/$1"
+    },
+    {
+      "src": "/",
+      "dest": "/docs/index.html"
+    }
   ]
 }
