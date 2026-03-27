@@ -1,0 +1,8 @@
+{
+  "name": "stock-knowledge-site",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "python3 generate_site.py",
+    "deploy": "vercel --prod"
+  }
+}
