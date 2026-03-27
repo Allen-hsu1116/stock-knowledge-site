@@ -5,84 +5,270 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>股票學習筆記</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>📈 股票學習筆記</h1>
-        <p class="subtitle">朝股票操作大師邁進中</p>
-        <nav>
-            <a href="index.html" class="active">總覽</a>
-            <a href="knowledge.html">知識庫</a>
-            <a href="history.html">學習記錄</a>
-        </nav>
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <span class="logo-text">股票學習筆記</span>
+            </a>
+            <nav>
+                <a href="index.html" class="active">儀表板</a>
+                <a href="knowledge.html">知識庫</a>
+                <a href="timeline.html">時間線</a>
+            </nav>
+        </div>
     </header>
-
-    <main>
-        <section class="stats">
-            <div class="stat-card">
-                <h3>學習回合</h3>
-                <p>11</p>
+    
+    <div class="container">
+        <!-- 統計儀表板 -->
+        <div class="stats-grid">
+            <div class="stat-card fade-in">
+                <div class="stat-icon">📚</div>
+                <div class="stat-value">11</div>
+                <div class="stat-label">學習回合</div>
             </div>
-            <div class="stat-card">
-                <h3>涵蓋主題</h3>
-                <p>6</p>
+            <div class="stat-card fade-in">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-value">6</div>
+                <div class="stat-label">涵蓋主題</div>
             </div>
-            <div class="stat-card">
-                <h3>最新學習</h3>
-                <p><a href="history/2026</p>
+            <div class="stat-card fade-in">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-value">9</div>
+                <div class="stat-label">連續天數</div>
             </div>
-        </section>
-
-        <section class="topics">
-            <h2>📚 依主題瀏覽</h2>
+            <div class="stat-card fade-in">
+                <div class="stat-icon">📊</div>
+                <div class="stat-value">1</div>
+                <div class="stat-label">平均每天</div>
+            </div>
+        </div>
+        
+        <!-- 學習進度 -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">📊 學習進度</h2>
+            </div>
+            <div class="progress-section">
+                
+        <div class="progress-card">
+            <div class="progress-header">
+                <span class="progress-icon">📊</span>
+                <div>
+                    <div class="progress-title">技術分析</div>
+                    <div class="progress-count">11 篇學習</div>
+                </div>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 100%; background: #6366f1"></div>
+            </div>
+        </div>
+        
+        <div class="progress-card">
+            <div class="progress-header">
+                <span class="progress-icon">🎯</span>
+                <div>
+                    <div class="progress-title">操作策略</div>
+                    <div class="progress-count">11 篇學習</div>
+                </div>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 100%; background: #ec4899"></div>
+            </div>
+        </div>
+        
+        <div class="progress-card">
+            <div class="progress-header">
+                <span class="progress-icon">⚠️</span>
+                <div>
+                    <div class="progress-title">風險管理</div>
+                    <div class="progress-count">11 篇學習</div>
+                </div>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 100%; background: #ef4444"></div>
+            </div>
+        </div>
+        
+        <div class="progress-card">
+            <div class="progress-header">
+                <span class="progress-icon">🧠</span>
+                <div>
+                    <div class="progress-title">交易心理</div>
+                    <div class="progress-count">11 篇學習</div>
+                </div>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 100%; background: #a855f7"></div>
+            </div>
+        </div>
+        
+        <div class="progress-card">
+            <div class="progress-header">
+                <span class="progress-icon">💰</span>
+                <div>
+                    <div class="progress-title">基本面分析</div>
+                    <div class="progress-count">10 篇學習</div>
+                </div>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 100%; background: #22c55e"></div>
+            </div>
+        </div>
+        
+        <div class="progress-card">
+            <div class="progress-header">
+                <span class="progress-icon">🎲</span>
+                <div>
+                    <div class="progress-title">籌碼面分析</div>
+                    <div class="progress-count">10 篇學習</div>
+                </div>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 100%; background: #f97316"></div>
+            </div>
+        </div>
+        
+            </div>
+        </div>
+        
+        <!-- 主題分類 -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">📖 主題分類</h2>
+            </div>
             <div class="topic-grid">
-                <a href="topics/technical.html" class="topic-card">
-                    <h3>📊 技術分析</h3>
-                    <p>K線、均線、支撐壓力</p>
-                </a>
-                <a href="topics/fundamental.html" class="topic-card">
-                    <h3>💰 基本面分析</h3>
-                    <p>財報、估值、產業</p>
-                </a>
-                <a href="topics/chips.html" class="topic-card">
-                    <h3>🎲 籌碼面分析</h3>
-                    <p>法人、主力、融資券</p>
-                </a>
-                <a href="topics/strategy.html" class="topic-card">
-                    <h3>🎯 操作策略</h3>
-                    <p>當沖、波段、價值投資</p>
-                </a>
-                <a href="topics/risk.html" class="topic-card">
-                    <h3>⚠️ 風險管理</h3>
-                    <p>停損停利、倉位控制</p>
-                </a>
-                <a href="topics/psychology.html" class="topic-card">
-                    <h3>🧠 交易心理</h3>
-                    <p>心態建設、認知偏誤</p>
-                </a>
+                
+        <a href="topic/technical.html" class="topic-card">
+            <span class="topic-icon">📊</span>
+            <div class="topic-name">技術分析</div>
+            <div class="topic-count">11 篇</div>
+        </a>
+        
+        <a href="topic/fundamental.html" class="topic-card">
+            <span class="topic-icon">💰</span>
+            <div class="topic-name">基本面分析</div>
+            <div class="topic-count">10 篇</div>
+        </a>
+        
+        <a href="topic/chips.html" class="topic-card">
+            <span class="topic-icon">🎲</span>
+            <div class="topic-name">籌碼面分析</div>
+            <div class="topic-count">10 篇</div>
+        </a>
+        
+        <a href="topic/strategy.html" class="topic-card">
+            <span class="topic-icon">🎯</span>
+            <div class="topic-name">操作策略</div>
+            <div class="topic-count">11 篇</div>
+        </a>
+        
+        <a href="topic/risk.html" class="topic-card">
+            <span class="topic-icon">⚠️</span>
+            <div class="topic-name">風險管理</div>
+            <div class="topic-count">11 篇</div>
+        </a>
+        
+        <a href="topic/psychology.html" class="topic-card">
+            <span class="topic-icon">🧠</span>
+            <div class="topic-name">交易心理</div>
+            <div class="topic-count">11 篇</div>
+        </a>
+        
             </div>
-        </section>
-
-        <section class="recent">
-            <h2>🕐 最近學習</h2>
-            <ul>
-                <li><a href="history/2026-03-27.html">2026-03-27 - 2026-03-27 00:13 - 交易心理學與心理制約法</a></li>
-                <li><a href="history/2026-03-26.html">2026-03-26 - 股票學習記錄 - 2026-03-26</a></li>
-                <li><a href="history/2026-03-26-summary.html">2026-03-26 - 2026-03-26 股票學習統整</a></li>
-                <li><a href="history/2026-03-25.html">2026-03-25 - 2026-03-25 籌碼面學習記錄</a></li>
-                <li><a href="history/2026-03-24.html">2026-03-24 - 2026-03-24 股票學習記錄</a></li>
-                <li><a href="history/2026-03-23.html">2026-03-23 - 2026-03-23 股票學習記錄</a></li>
-                <li><a href="history/2026-03-22.html">2026-03-22 - 股票學習記錄 - 2026-03-22</a></li>
-                <li><a href="history/2026-03-21.html">2026-03-21 - Stock Learning Log - 2026-03-2</a></li>
-                <li><a href="history/2026-03-20.html">2026-03-20 - 2026-03-20 股票學習記錄</a></li>
-                <li><a href="history/2026-03-19.html">2026-03-19 - 2026-03-19 股票學習記錄</a></li>
-            </ul>
-        </section>
-    </main>
-
+        </div>
+        
+        <!-- 最近學習 -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">🕐 最近學習</h2>
+                <a href="timeline.html" class="nav-link">查看全部 →</a>
+            </div>
+            <div class="timeline">
+                
+        <a href="history/2026-03-27.html" class="timeline-item fade-in">
+            <div class="timeline-date">2026-03-27</div>
+            <div class="timeline-title">2026-03-27 00:13 - 交易心理學與心理制約法</div>
+            <div class="timeline-excerpt">**文章**： - [交易心理學：超越基礎](https://www.ig.com/cn/master-your-trading-mind/managing-emotions/master-your-...</div>
+            <div class="tags"><span class="tag technical">📊 技術分析</span><span class="tag fundamental">💰 基本面分析</span><span class="tag chips">🎲 籌碼面分析</span></div>
+        </a>
+        
+        <a href="history/2026-03-26.html" class="timeline-item fade-in">
+            <div class="timeline-date">2026-03-26</div>
+            <div class="timeline-title">股票學習記錄 - 2026-03-26</div>
+            <div class="timeline-excerpt">**文章**： - [當沖零基礎？靠八大步驟建立屬於你的短線策略！](https://www.esunsec.com.tw/article/post/208) - [10個當沖9個輸？股票當沖技巧分享...</div>
+            <div class="tags"><span class="tag technical">📊 技術分析</span><span class="tag fundamental">💰 基本面分析</span><span class="tag chips">🎲 籌碼面分析</span></div>
+        </a>
+        
+        <a href="history/2026-03-26-summary.html" class="timeline-item fade-in">
+            <div class="timeline-date">2026-03-26</div>
+            <div class="timeline-title">2026-03-26 股票學習統整</div>
+            <div class="timeline-excerpt">**日期**: 2026-03-26（週四） **總計**: 22 回合學習，57 篇文章...</div>
+            <div class="tags"><span class="tag technical">📊 技術分析</span><span class="tag fundamental">💰 基本面分析</span><span class="tag chips">🎲 籌碼面分析</span></div>
+        </a>
+        
+        <a href="history/2026-03-25.html" class="timeline-item fade-in">
+            <div class="timeline-date">2026-03-25</div>
+            <div class="timeline-title">2026-03-25 籌碼面學習記錄</div>
+            <div class="timeline-excerpt">**文章**： - [董監改選題材正發酵，三檔標的輕鬆賺短線行情](https://www.cmoney.tw/notes/note-detail.aspx?nid=779761) - [台股籌碼策略...</div>
+            <div class="tags"><span class="tag technical">📊 技術分析</span><span class="tag fundamental">💰 基本面分析</span><span class="tag chips">🎲 籌碼面分析</span></div>
+        </a>
+        
+        <a href="history/2026-03-24.html" class="timeline-item fade-in">
+            <div class="timeline-date">2026-03-24</div>
+            <div class="timeline-title">2026-03-24 股票學習記錄</div>
+            <div class="timeline-excerpt">---...</div>
+            <div class="tags"><span class="tag technical">📊 技術分析</span><span class="tag fundamental">💰 基本面分析</span><span class="tag chips">🎲 籌碼面分析</span></div>
+        </a>
+        
+        <a href="history/2026-03-23.html" class="timeline-item fade-in">
+            <div class="timeline-date">2026-03-23</div>
+            <div class="timeline-title">2026-03-23 股票學習記錄</div>
+            <div class="timeline-excerpt">---...</div>
+            <div class="tags"><span class="tag technical">📊 技術分析</span><span class="tag strategy">🎯 操作策略</span><span class="tag risk">⚠️ 風險管理</span></div>
+        </a>
+        
+        <a href="history/2026-03-22.html" class="timeline-item fade-in">
+            <div class="timeline-date">2026-03-22</div>
+            <div class="timeline-title">股票學習記錄 - 2026-03-22</div>
+            <div class="timeline-excerpt">**文章**：[16種K線型態介紹｜墓碑線、吊人線、十字線、上影線、下影線｜K棒型態學（一）](https://quantpass.org/kbar-pattern-1/)...</div>
+            <div class="tags"><span class="tag technical">📊 技術分析</span><span class="tag fundamental">💰 基本面分析</span><span class="tag chips">🎲 籌碼面分析</span></div>
+        </a>
+        
+        <a href="history/2026-03-21.html" class="timeline-item fade-in">
+            <div class="timeline-date">2026-03-21</div>
+            <div class="timeline-title">Stock Learning Log - 2026-03-21</div>
+            <div class="timeline-excerpt">---...</div>
+            <div class="tags"><span class="tag technical">📊 技術分析</span><span class="tag fundamental">💰 基本面分析</span><span class="tag chips">🎲 籌碼面分析</span></div>
+        </a>
+        
+            </div>
+        </div>
+    </div>
+    
     <footer>
-        <p>由妖姬西打龍 🐍 自動生成</p>
-        <p>最後更新：2026-03-27 11:25</p>
+        <div class="footer-content">
+            <div class="footer-stats">
+                <div class="footer-stat">
+                    <div class="footer-stat-value">11</div>
+                    <div class="footer-stat-label">學習回合</div>
+                </div>
+                <div class="footer-stat">
+                    <div class="footer-stat-value">6</div>
+                    <div class="footer-stat-label">涵蓋主題</div>
+                </div>
+                <div class="footer-stat">
+                    <div class="footer-stat-value">9</div>
+                    <div class="footer-stat-label">連續天數</div>
+                </div>
+            </div>
+            <p class="footer-text">由妖姬西打龍 🐍 自動生成</p>
+            <p class="footer-text">最後更新：2026-03-27 18:43</p>
+        </div>
     </footer>
 </body>
 </html>
