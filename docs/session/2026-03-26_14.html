@@ -136,58 +136,70 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
                     <h1>03-26 19:13 - 選擇權 Theta 時間價值策略</h1>
                     <h1>2026-03-26 19:13 - 選擇權 Theta 時間價值策略</h1>
 
-<b>文章</b>：
-- <a href="https://opkevin.cc/深入了瞭解選擇權中的theta：時對選擇權價值的影響/">深入了解選擇權中的Theta：時間對選擇權價值的影響</a>
-- <a href="https://www.bituzi.com/2013/04/options-greeks-theta.html">選擇權希臘字母Theta篇</a>
-- <a href="https://vocus.cc/article/65defc0ffd8978000197cbd3">蘋果的啟示-選擇權交易中的Delta、Theta 和 Gamma</a>
-- <a href="https://blog.optionsuperman.com/高手不說的調單秘訣-週三選擇權賣方當沖策略/">高手不說的調單秘訣-週三選擇權賣方當沖策略</a>
-- <a href="https://rich01.com/9-exce/">勝率9成選擇權賣方策略</a>
+<p><b>文章</b>：</p>
 
----
+<ul>
+<li><a href="https://opkevin.cc/深入了瞭解選擇權中的theta：時對選擇權價值的影響/">深入了解選擇權中的Theta：時間對選擇權價值的影響</a></li>
+<li><a href="https://www.bituzi.com/2013/04/options-greeks-theta.html">選擇權希臘字母Theta篇</a></li>
+<li><a href="https://vocus.cc/article/65defc0ffd8978000197cbd3">蘋果的啟示-選擇權交易中的Delta、Theta 和 Gamma</a></li>
+<li><a href="https://blog.optionsuperman.com/高手不說的調單秘訣-週三選擇權賣方當沖策略/">高手不說的調單秘訣-週三選擇權賣方當沖策略</a></li>
+<li><a href="https://rich01.com/9-exce/">勝率9成選擇權賣方策略</a></li>
+</ul>
+
+<hr>
 
 <h2>Theta 時間價值完整解析</h2>
 
 <h3>Theta 是什麼</h3>
 
-<b>定義</b>：Theta（θ）衡量選擇權價格隨時間衰減的速度，即「每接近結算日一天，選擇權價值流失的點數」。
+<p><b>定義</b>：Theta（θ）衡量選擇權價格隨時間衰減的速度，即「每接近結算日一天，選擇權價值流失的點數」。</p>
 
-<b>核心概念</b>：
-- Theta 永遠是負數（對買方而言）
-- 買方的 Theta ≈ -時間價值衰減 = 付權利金的代價
-- 賣方的 Theta ≈ +時間價值收穫 = 收權利金的好處
+<p><b>核心概念</b>：</p>
 
----
+<ul>
+<li>Theta 永遠是負數（對買方而言）</li>
+<li>買方的 Theta ≈ -時間價值衰減 = 付權利金的代價</li>
+<li>賣方的 Theta ≈ +時間價值收穫 = 收權利金的好處</li>
+</ul>
+
+<hr>
 
 <h3>Theta 的三大特性</h3>
 
-<b>1. 到期時間關係</b>
-- 越接近到期日，Theta 絕對值越大
-- 時間價值在到期前最後幾天衰減最快
-- 「最後三天，平均每天消失的時間價值」是可以計算的
+<p><b>1. 到期時間關係</b></p>
 
-<b>2. 價平 vs 價外</b>
-- 價平（ATM）選擇權：Theta 最大
-- 價內（ITM）/ 價外（OTM）選擇權：Theta 相對較小
-- 原因：價平的不確定性最高，時間價值最高
+<ul>
+<li>越接近到期日，Theta 絕對值越大</li>
+<li>時間價值在到期前最後幾天衰減最快</li>
+<li>「最後三天，平均每天消失的時間價值」是可以計算的</li>
+</ul>
 
-<b>3. 實際案例理解</b>
+<p><b>2. 價平 vs 價外</b></p>
 
-> 假設台指 7918，賣出 7900 Call 在 47 點
-> - 內涵價值：7918 - 7900 = 18 點
-> - 時間價值：47 - 18 = 29 點
-> - 距離結算 3 天
-> - 平均每天消失：29 ÷ 3 ≈ 10 點（約 NT$500）
+<ul>
+<li>價平（ATM）選擇權：Theta 最大</li>
+<li>價內（ITM）/ 價外（OTM）選擇權：Theta 相對較小</li>
+<li>原因：價平的不確定性最高，時間價值最高</li>
+</ul>
 
-<b>結論</b>：如果未來三天大盤不動，賣方每天躺著賺 10 點！
+<p><b>3. 實際案例理解</b></p>
 
----
+<p>> 假設台指 7918，賣出 7900 Call 在 47 點<br>
+> - 內涵價值：7918 - 7900 = 18 點<br>
+> - 時間價值：47 - 18 = 29 點<br>
+> - 距離結算 3 天<br>
+> - 平均每天消失：29 ÷ 3 ≈ 10 點（約 NT$500）</p>
+
+<p><b>結論</b>：如果未來三天大盤不動，賣方每天躺著賺 10 點！</p>
+
+<hr>
 
 <h3>Theta 衰減的關鍵時機</h3>
 
-<b>時間價值衰減曲線</b>：
-```
-距離到期    Theta 大小    衰減速度
-30天以上     小           慢
+<p><b>時間價值衰減曲線</b>：<br>
+```<br>
+距離到期    Theta 大小    衰減速度<br>
+30天以上     小           慢</p>
                 </div>
             </div>
             </main>

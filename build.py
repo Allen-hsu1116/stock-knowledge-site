@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""股票學習筆記 - 網站生成器 v2"""
+"""
+股票學習筆記 - 網站生成器
+從 memory/stock-learning/*.md 生成靜態網站到 docs/
+
+使用方式：
+    python3 stock-knowledge-site-build.py
+
+此腳本由每天的凌晨統整任務自動執行，
+執行後會自動推送到 GitHub。
+"""
 
 import os
 import re
@@ -7,10 +16,12 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 
-BASE_DIR = Path(__file__).parent
-MEMORY_DIR = Path.home() / ".openclaw" / "workspace" / "memory"
+# 路徑設定
+WORKSPACE = Path.home() / ".openclaw" / "workspace"
+MEMORY_DIR = WORKSPACE / "memory"
 LEARNING_DIR = MEMORY_DIR / "stock-learning"
-OUTPUT_DIR = BASE_DIR / "docs"
+REPO_DIR = WORKSPACE / "stock-knowledge-site"
+OUTPUT_DIR = REPO_DIR / "docs"
 
 TOPICS = {
     "technical": {"name": "技術分析", "icon": "📊", "desc": "K線、均線、技術指標"},
@@ -69,7 +80,6 @@ main { padding: 40px 24px; }
 .section-title { font-size: 24px; font-weight: 600; }
 .section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
 
-/* Timeline - 依日期分組 */
 .date-group { margin-bottom: 32px; }
 .date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
 .date-header .date { color: var(--primary); }
@@ -92,7 +102,6 @@ main { padding: 40px 24px; }
 .summary-title { font-size: 14px; opacity: 0.9; }
 .summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
 
-/* Content */
 .content { background: var(--bg); max-width: 900px; margin: 0 auto; }
 .content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
 .content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
@@ -114,15 +123,6 @@ main { padding: 40px 24px; }
 .content tr:hover td { background: var(--bg-secondary); }
 .content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
 
-/* Session content */
-.session-block { margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
-.session-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.session-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
-.session-number { background: var(--primary); color: white; padding: 4px 12px; border-radius: 16px; font-size: 14px; font-weight: 600; }
-.session-info h2 { margin: 0; padding: 0; border: none; font-size: 20px; }
-.session-info .time { font-size: 14px; color: var(--text-muted); margin-top: 4px; }
-
-/* Knowledge page */
 .knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
 .knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
 .knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
@@ -158,63 +158,116 @@ def detect_topics(content):
                 found.append(t)
     return found
 
-def md_to_html(content):
-    # Code blocks first
-    content = re.sub(r"```(\w*)\n(.*?)\n```", r"<pre><code>\2</code></pre>", content, flags=re.DOTALL)
-    content = re.sub(r"`([^`]+)`", r"<code>\1</code>", content)
+def md_to_html(text):
+    """Convert Markdown to HTML with proper line breaks"""
+    # Save code blocks
+    code_blocks = []
+    def save_code(m):
+        code_blocks.append(m.group(0))
+        return f"\n__CODE{len(code_blocks)-1}__\n"
+    text = re.sub(r"```[\s\S]*?```", save_code, text)
     
-    # Headers
-    content = re.sub(r"^####\s+(.+)$", r"<h4>\1</h4>", content, flags=re.MULTILINE)
-    content = re.sub(r"^###\s+(.+)$", r"<h3>\1</h3>", content, flags=re.MULTILINE)
-    content = re.sub(r"^##\s+(.+)$", r"<h2>\1</h2>", content, flags=re.MULTILINE)
-    content = re.sub(r"^#\s+(.+)$", r"<h1>\1</h1>", content, flags=re.MULTILINE)
+    # Tables
+    def make_table(m):
+        lines = m.group(0).strip().split('\n')
+        if len(lines) < 2: return m.group(0)
+        h = [c.strip() for c in lines[0].split('|') if c.strip()]
+        rows = [[c.strip() for c in l.split('|') if c.strip()] for l in lines[2:] if l.strip()]
+        return '<table><thead><tr>' + ''.join(f'<th>{x}</th>' for x in h) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join(f'<td>{x}</td>' for x in r) + '</tr>' for r in rows) + '</tbody></table>'
+    text = re.sub(r"(\|.+\|\n)+(\|[-:| ]+\|\n)(\|.+\|[\s\S]*?)(?=\n\n|\n*$)", make_table, text)
     
-    # Bold and italic
-    content = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", content)
-    content = re.sub(r"\*(.+?)\*", r"<i>\1</i>", content)
+    # Split into blocks
+    lines = text.split('\n')
+    blocks = []
+    current_block = []
+    in_list = False
     
-    # Links
-    content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', content)
-    
-    # Lists
-    content = re.sub(r"^\*\s+(.+)$", r"<li>\1</li>", content, flags=re.MULTILINE)
-    content = re.sub(r"(^<li>.*</li>\n?)+", r"<ul>\g<0></ul>", content)
-    
-    # Tables - 改進版
-    def make_table(match):
-        lines = match.group(0).strip().split('\n')
-        if len(lines) < 2:
-            return match.group(0)
-        # Parse header
-        header = [c.strip() for c in lines[0].split('|') if c.strip()]
-        # Parse rows (skip separator line)
-        rows = []
-        for line in lines[2:]:
-            if line.strip():
-                row = [c.strip() for c in line.split('|') if c.strip()]
-                if row:
-                    rows.append(row)
+    for line in lines:
+        stripped = line.strip()
+        is_header = re.match(r'^#{1,4}\s+', stripped)
+        is_list_item = re.match(r'^[-*]\s+', stripped)
+        is_hr = stripped == '---'
+        is_empty = not stripped
+        is_table_row = stripped.startswith('|')
+        is_code_placeholder = '__CODE' in stripped
         
-        html = '<table><thead><tr>' + ''.join('<th>{}</th>'.format(h) for h in header) + '</tr></thead><tbody>'
-        for row in rows:
-            html += '<tr>' + ''.join('<td>{}</td>'.format(cell) for cell in row) + '</tr>'
-        html += '</tbody></table>'
-        return html
+        if is_list_item:
+            if not in_list and current_block:
+                blocks.append('\n'.join(current_block))
+                current_block = []
+            in_list = True
+            current_block.append(line)
+        elif in_list and not is_list_item and not is_empty:
+            blocks.append('\n'.join(current_block))
+            current_block = [line]
+            in_list = False
+        elif is_empty:
+            if current_block:
+                blocks.append('\n'.join(current_block))
+                current_block = []
+            in_list = False
+        else:
+            current_block.append(line)
     
-    content = re.sub(r"(\|.+\|[\r\n])+(\|[-:| ]+\|[\r\n])+(\|.+\|[\r\n]?)+", make_table, content)
+    if current_block:
+        blocks.append('\n'.join(current_block))
     
-    return content
+    # Process each block
+    result = []
+    for block in blocks:
+        block = block.strip()
+        if not block:
+            continue
+        
+        if re.match(r'^#{4}\s+', block):
+            result.append(re.sub(r'^#{4}\s+(.+)$', r'<h4>\1</h4>', block))
+        elif re.match(r'^#{3}\s+', block):
+            result.append(re.sub(r'^#{3}\s+(.+)$', r'<h3>\1</h3>', block))
+        elif re.match(r'^#{2}\s+', block):
+            result.append(re.sub(r'^#{2}\s+(.+)$', r'<h2>\1</h2>', block))
+        elif re.match(r'^#\s+', block):
+            result.append(re.sub(r'^#\s+(.+)$', r'<h1>\1</h1>', block))
+        elif block == '---':
+            result.append('<hr>')
+        elif re.match(r'^[-*]\s+', block, re.MULTILINE):
+            items = re.findall(r'^[-*]\s+(.+)$', block, re.MULTILINE)
+            def format_item(item):
+                item = re.sub(r'`([^`]+)`', r'<code>\1</code>', item)
+                item = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', item)
+                item = re.sub(r'\*(.+?)\*', r'<i>\1</i>', item)
+                item = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', item)
+                return item
+            html = '<ul>\n' + '\n'.join(f'<li>{format_item(item)}</li>' for item in items) + '\n</ul>'
+            result.append(html)
+        elif block.startswith('<table>'):
+            result.append(block)
+        elif '__CODE' in block:
+            result.append(block)
+        else:
+            block = re.sub(r'`([^`]+)`', r'<code>\1</code>', block)
+            block = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', block)
+            block = re.sub(r'\*(.+?)\*', r'<i>\1</i>', block)
+            block = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', block)
+            lines_in_block = [l.strip() for l in block.split('\n') if l.strip()]
+            if lines_in_block:
+                result.append('<p>' + '<br>\n'.join(lines_in_block) + '</p>')
+    
+    text = '\n\n'.join(result)
+    
+    for i, block in enumerate(code_blocks):
+        block = re.sub(r'^```\w*\n', '<pre><code>', block)
+        block = re.sub(r'\n```$', '</code></pre>', block)
+        text = text.replace(f'__CODE{i}__', block)
+    
+    return text
 
 def parse_session(content, session_num):
-    """解析單一學習回合"""
-    # 嘗試匹配標題格式：#1 或 #YYYY-MM-DD HH:MM - 標題
     title_match = re.search(r"^#\s*(\d+)\s*[-–]\s*(.+)$", content, re.MULTILINE)
     if not title_match:
-        title_match = re.search(r"^#\s*[\d-]+\s+[\d:]+\s*[-–]\s*(.+)$", content, re.MULTILINE)
+        title_match = re.search(r"^#\s*[\d-]+\s+[\d:]+\s*[-–](.+)$", content, re.MULTILINE)
     
     title = title_match.group(2).strip() if title_match else f"學習回合 {session_num}"
     
-    # 嘗試提取時間
     time_match = re.search(r"(\d{4}-\d{2}-\d{2})\s+(\d{1,2}:\d{2})", content)
     session_time = time_match.group(2) if time_match else ""
     
@@ -227,32 +280,26 @@ def parse_session(content, session_num):
     }
 
 def parse_daily_file(filepath):
-    """解析一天的學習檔案，分割成多個回合"""
     with open(filepath, encoding="utf-8") as f:
         content = f.read()
     
     date_match = re.search(r"(\d{4}-\d{2}-\d{2})", filepath.stem)
     date = date_match.group(1) if date_match else ""
     
-    # 檢查是否為 summary 檔案
     if "summary" in filepath.stem:
         return None
     
-    # 按回合分割（#1, #2, ... 或 #YYYY-MM-DD HH:MM - 標題）
-    # 使用正則找出所有回合開頭
     session_pattern = r"(^#?\s*\d+\s*[-–]\s*.+?$|^#\s*\d{4}-\d{2}-\d{2}\s+\d{1,2}:\d{2}\s*[-–].+?$)"
     session_starts = list(re.finditer(session_pattern, content, re.MULTILINE))
     
     sessions = []
     if session_starts:
-        # 有明確的回合標記
         for i, match in enumerate(session_starts):
             start = match.start()
             end = session_starts[i + 1].start() if i + 1 < len(session_starts) else len(content)
             session_content = content[start:end].strip()
             sessions.append(parse_session(session_content, i + 1))
     else:
-        # 沒有回合標記，整篇視為一個回合
         sessions.append({
             "num": 1,
             "title": f"{date} 學習記錄",
@@ -261,7 +308,6 @@ def parse_daily_file(filepath):
             "topics": detect_topics(content)
         })
     
-    # 提取日期標題（第一個 h1）
     first_title = re.search(r"^#\s+(.+)$", content, re.MULTILINE)
     day_title = first_title.group(1) if first_title else date
     
@@ -274,7 +320,6 @@ def parse_daily_file(filepath):
     }
 
 def get_weekday(date_str):
-    """取得星期幾"""
     try:
         d = datetime.strptime(date_str, "%Y-%m-%d")
         weekdays = ["週一", "週二", "週三", "週四", "週五", "週六", "週日"]
@@ -283,7 +328,6 @@ def get_weekday(date_str):
         return ""
 
 def HTML(body, title="股票學習筆記", depth=""):
-    """生成 HTML，depth 用於調整相對路徑"""
     nav_links = f'''
     <nav>
         <a href="{depth}index.html">首頁</a>
@@ -309,7 +353,7 @@ def main():
     (OUTPUT_DIR/"session").mkdir()
     (OUTPUT_DIR/"topic").mkdir()
     
-    # 解析所有學習記錄
+    # Parse all learning records
     all_files = sorted(LEARNING_DIR.glob("*.md"), reverse=True)
     daily_data = []
     all_sessions = []
@@ -328,7 +372,7 @@ def main():
                     "day_title": data["title"]
                 })
     
-    # 統計
+    # Stats
     stats = {
         "total_sessions": len(all_sessions),
         "total_days": len(daily_data),
@@ -340,7 +384,7 @@ def main():
             if t in stats["topics"]:
                 stats["topics"][t] += 1
     
-    # === 首頁 ===
+    # Index page
     stats_html = f'''
     <div class="stat-card"><div class="stat-value">{stats["total_sessions"]}</div><div class="stat-label">學習回合</div></div>
     <div class="stat-card"><div class="stat-value">{stats["total_days"]}</div><div class="stat-label">學習天數</div></div>
@@ -353,19 +397,15 @@ def main():
         count = stats["topics"].get(k, 0)
         topics_html += f'<a href="topic/{k}.html" class="topic-card"><div class="topic-icon">{v["icon"]}</div><div class="topic-name">{v["name"]}</div><div class="topic-desc">{v["desc"]}</div><div class="topic-count">{count} 回合</div></a>'
     
-    # 最近學習（按天分組，顯示每個回合）
     recent_html = ""
-    for day in daily_data[:5]:  # 最近 5 天
+    for day in daily_data[:5]:
         weekday = get_weekday(day["date"])
         recent_html += f'<div class="date-group"><div class="date-header"><span class="date">{day["date"]}</span><span class="weekday">{weekday}</span> · {len(day["sessions"])} 回合</div><div class="session-list">'
         
         for s in day["sessions"]:
             tags = "".join([f'<span class="tag">{TOPICS[t]["icon"]} {TOPICS[t]["name"]}</span>' for t in s["topics"] if t in TOPICS])
-            # 提取簡短摘要
-            excerpt = re.sub(r'[#*\[\]()]', '', s["content"][:200]).strip()
             recent_html += f'<a href="session/{day["file"]}_{s["num"]}.html" class="session-item"><div class="session-time">#{s["num"]} {s["time"]}</div><div class="session-title">{s["title"][:50]}</div><div class="tags">{tags}</div></a>'
         
-        # 檢查是否有當天的 summary
         summary_file = LEARNING_DIR / f"{day['date']}-summary.md"
         if summary_file.exists():
             recent_html += f'<div class="summary-card"><a href="session/{day["date"]}-summary.html"><div class="summary-title">📅 當日總結</div><div class="summary-link">查看 {day["date"]} 學習總結 →</div></a></div>'
@@ -382,31 +422,22 @@ def main():
     with open(OUTPUT_DIR/"index.html", "w", encoding="utf-8") as f:
         f.write(HTML(index_html))
     
-    # === 知識庫 ===
+    # Knowledge page
     kf = MEMORY_DIR / "stock-knowledge.md"
     khtml = md_to_html(kf.read_text(encoding="utf-8")) if kf.exists() else "<p>知識庫尚未建立</p>"
     
-    # 知識庫導航
     nav_html = '<div class="knowledge-nav">'
     for k, v in TOPICS.items():
         nav_html += f'<a href="#{k}">{v["icon"]} {v["name"]}</a>'
     nav_html += '</div>'
     
-    knowledge_html = f'''
-    <div class="content">
-        <div class="content-card">
-            <h1>📚 知識庫</h1>
-            {nav_html}
-            {khtml}
-        </div>
-    </div>
-    '''
+    knowledge_html = f'<div class="content"><div class="content-card"><h1>📚 知識庫</h1>{nav_html}{khtml}</div></div>'
     
     with open(OUTPUT_DIR/"knowledge.html", "w", encoding="utf-8") as f:
         f.write(HTML(knowledge_html, "知識庫"))
     
-    # === 時間線 ===
-    timeline_html = '<div class="content"><div class="content-card"><h1>📅 學習時間線</h1><p>共 {} 回合學習記錄</p></div></div>'.format(len(all_sessions))
+    # Timeline page
+    timeline_html = f'<div class="content"><div class="content-card"><h1>📅 學習時間線</h1><p>共 {len(all_sessions)} 回合學習記錄</p></div></div>'
     
     for day in daily_data:
         weekday = get_weekday(day["date"])
@@ -416,7 +447,6 @@ def main():
             tags = "".join([f'<span class="tag">{TOPICS[t]["icon"]}</span>' for t in s["topics"][:3] if t in TOPICS])
             timeline_html += f'<a href="session/{day["file"]}_{s["num"]}.html" class="session-item"><div class="session-time">#{s["num"]} {s["time"]}</div><div class="session-title">{s["title"][:60]}</div><div class="tags">{tags}</div></a>'
         
-        # Summary 連結
         summary_file = LEARNING_DIR / f"{day['date']}-summary.md"
         if summary_file.exists():
             timeline_html += f'<div class="summary-card"><a href="session/{day["date"]}-summary.html"><div class="summary-title">📅 當日總結</div><div class="summary-link">查看 {day["date"]} 學習總結 →</div></a></div>'
@@ -426,7 +456,7 @@ def main():
     with open(OUTPUT_DIR/"timeline.html", "w", encoding="utf-8") as f:
         f.write(HTML(timeline_html, "時間線"))
     
-    # === 主題頁 ===
+    # Topic pages
     for k, v in TOPICS.items():
         related = [s for s in all_sessions if k in s["topics"]]
         titems = ""
@@ -438,7 +468,7 @@ def main():
         with open(OUTPUT_DIR/"topic"/f"{k}.html", "w", encoding="utf-8") as f:
             f.write(HTML(topic_html, v["name"], "../"))
     
-    # === 學習回合頁 ===
+    # Session pages
     for day in daily_data:
         for s in day["sessions"]:
             html = md_to_html(s["content"])
@@ -459,7 +489,7 @@ def main():
             with open(OUTPUT_DIR/"session"/f"{day['file']}_{s['num']}.html", "w", encoding="utf-8") as f:
                 f.write(HTML(session_html, s["title"][:50], "../"))
     
-    # === 總結頁 ===
+    # Summary pages
     for f in all_files:
         if "summary" in f.stem:
             date_match = re.search(r"(\d{4}-\d{2}-\d{2})", f.stem)
@@ -482,7 +512,7 @@ def main():
             with open(OUTPUT_DIR/"session"/f"{date}-summary.html", "w", encoding="utf-8") as fh:
                 fh.write(HTML(summary_html, f"{date} 學習總結", "../"))
     
-    print("✅ 已生成 {} 個學習回合（{} 天）".format(len(all_sessions), len(daily_data)))
+    print(f"✅ 已生成 {len(all_sessions)} 個學習回合（{len(daily_data)} 天）")
 
 if __name__ == "__main__":
     main()
