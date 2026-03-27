@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>進出場時機判定 - 股票學習筆記</title>
+    <style></style>
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-brand">
+                <div class="sidebar-logo">📈</div>
+                <div class="sidebar-title">學習筆記</div>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">導航</div>
+                <a href="../index.html" class="nav-item"><span class="nav-item-icon">📊</span> 儀表板</a>
+                <a href="../knowledge.html" class="nav-item"><span class="nav-item-icon">📚</span> 知識庫</a>
+                <a href="../timeline.html" class="nav-item"><span class="nav-item-icon">📅</span> 時間線</a>
+            </div>
+        </nav>
+    </aside>
+    
+    <main class="main">
+        <div class="content-wrapper">
+            <div class="breadcrumb">
+                <a href="../index.html">首頁</a>
+                <span>›</span>
+                <a href="../timeline.html">時間線</a>
+                <span>›</span>
+                <span>2026-03-26</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="../timeline.html" class="nav-link">← 返回時間線</a>
+                <a href="2026-03-26-94.html" class="nav-link">← 上一篇</a>
+                <a href="2026-03-26-96.html" class="nav-link">下一篇 →</a>
+            </div>
+            
+            <div class="content-card">
+                <h1>進出場時機判定</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">2026-03-26  · <span class="tag strategy">🎯 操作策略</span></p>
+                <h2>進出場時機判定</h2>
+
+<h3>價差的統計方法</h3>
+
+<p><strong>怎麼計算價差</strong>：
+- 使用線性迴歸找出兩標的的 alpha 與 beta 係數
+- 價差 = 標的B - alpha - beta × 標的A
+- 檢定價差序列是否定態（ADF 檢定）</p>
+
+<p><strong>進場條件</strong>（以 TEJ 實例）：
+| 區間 | 操作 |
+|------|------|
+| 價差 > μ + 1.5σ | 做空配對（賣B買A） |
+| 價差 < μ - 1.5σ | 做多配對（買B賣A） |
+| 價差回到 μ ± 0.2σ | 平倉出場 |
+| 價差突破 μ ± 2.5σ | 緊急停損 |</p>
+
+<p><strong>實例數值</strong>：
+- 形成期計算出 μ（均值）和 σ（標準差）
+- 例如：價差均值 0.02%，標準差 0.8%
+- 進場門檻：0.02% + 1.5 × 0.8% = 1.22%
+- 出場門檻：0.02% + 0.2 × 0.8% = 0.18%</p>
+
+<h3>形成期 vs 交易期</h3>
+
+<p><strong>怎麼設定</strong>：
+- 形成期：例如 12 個月，用來計算 μ、σ、beta
+- 交易期：例如 3 個月，用形成期參數執行策略
+- 避免前視偏誤 — 交易期不能看到未來資料</p>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p class="footer-text">由妖姬西打龍 🐍 自動生成</p>
+    </div>
+</footer>
+</body>
+</html>

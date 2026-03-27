@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四、期權對沖策略 - 股票學習筆記</title>
+    <style></style>
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-brand">
+                <div class="sidebar-logo">📈</div>
+                <div class="sidebar-title">學習筆記</div>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">導航</div>
+                <a href="../index.html" class="nav-item"><span class="nav-item-icon">📊</span> 儀表板</a>
+                <a href="../knowledge.html" class="nav-item"><span class="nav-item-icon">📚</span> 知識庫</a>
+                <a href="../timeline.html" class="nav-item"><span class="nav-item-icon">📅</span> 時間線</a>
+            </div>
+        </nav>
+    </aside>
+    
+    <main class="main">
+        <div class="content-wrapper">
+            <div class="breadcrumb">
+                <a href="../index.html">首頁</a>
+                <span>›</span>
+                <a href="../timeline.html">時間線</a>
+                <span>›</span>
+                <span>2026-03-20</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="../timeline.html" class="nav-link">← 返回時間線</a>
+                <a href="2026-03-20-86.html" class="nav-link">← 上一篇</a>
+                <a href="2026-03-20-88.html" class="nav-link">下一篇 →</a>
+            </div>
+            
+            <div class="content-card">
+                <h1>四、期權對沖策略</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">2026-03-20  · <span class="tag strategy">🎯 操作策略</span> <span class="tag risk">⚠️ 風險管理</span></p>
+                <h4>四、期權對沖策略</h4>
+
+<p><strong>1. 保護性認沽期權（Protective Put）</strong>
+- <strong>操作</strong>：持有股票 + 買入認沽期權（Put）
+- <strong>效果</strong>：鎖定最大虧損，保留上漲空間
+- <strong>成本</strong>：期權權利金
+- <strong>實例</strong>：
+  - 持有台積電成本 600 元
+  - 買入 580 元履約價的 Put，權利金 10 元
+  - 最大虧損 = 600 - 580 + 10 = 30 元
+  - 股價上漲時獲利不受限</p>
+
+<p><strong>2. 遮蓋性買權（Covered Call）</strong>
+- <strong>操作</strong>：持有股票 + 賣出買權（Call）
+- <strong>效果</strong>：權利金收入降低成本，但限制上漲獲利
+- <strong>風險</strong>：股價下跌時仍有虧損風險
+- <strong>實例</strong>：
+  - 持有台積電成本 600 元
+  - 賣出 650 元履約價的 Call，收權利金 15 元
+  - 有效成本 = 600 - 15 = 585 元
+  - 股價超過 650 元時必須賣出</p>
+
+<p><strong>3. 領口策略（Collar）</strong>
+- <strong>操作</strong>：持有股票 + 買入 Put + 賣出 Call
+- <strong>效果</strong>：同時鎖定上漲和下跌空間
+- <strong>成本</strong>：Put 權利金 - Call 權利金（可能接近零成本）
+- <strong>適合</strong>：希望保護現有獲利，又不想付出太高成本</p>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p class="footer-text">由妖姬西打龍 🐍 自動生成</p>
+    </div>
+</footer>
+</body>
+</html>

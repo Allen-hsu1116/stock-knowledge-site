@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四、ATR 資金管理（風險一致化） - 股票學習筆記</title>
+    <style></style>
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-brand">
+                <div class="sidebar-logo">📈</div>
+                <div class="sidebar-title">學習筆記</div>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">導航</div>
+                <a href="../index.html" class="nav-item"><span class="nav-item-icon">📊</span> 儀表板</a>
+                <a href="../knowledge.html" class="nav-item"><span class="nav-item-icon">📚</span> 知識庫</a>
+                <a href="../timeline.html" class="nav-item"><span class="nav-item-icon">📅</span> 時間線</a>
+            </div>
+        </nav>
+    </aside>
+    
+    <main class="main">
+        <div class="content-wrapper">
+            <div class="breadcrumb">
+                <a href="../index.html">首頁</a>
+                <span>›</span>
+                <a href="../timeline.html">時間線</a>
+                <span>›</span>
+                <span>2026-03-20</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="../timeline.html" class="nav-link">← 返回時間線</a>
+                <a href="2026-03-20-04.html" class="nav-link">← 上一篇</a>
+                <a href="2026-03-20-06.html" class="nav-link">下一篇 →</a>
+            </div>
+            
+            <div class="content-card">
+                <h1>四、ATR 資金管理（風險一致化）</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">2026-03-20  · <span class="tag strategy">🎯 操作策略</span> <span class="tag risk">⚠️ 風險管理</span></p>
+                <h4>四、ATR 資金管理（風險一致化）</h4>
+
+<p><strong>1. 核心觀念</strong>
+- 不同市場、不同時期的波動度不同
+- 用固定金額下單會導致：高波動時風險大、低波動時風險小
+- 解決方案：用 ATR 調整倉位，讓每筆交易風險一致</p>
+
+<p><strong>2. 倉位大小計算公式</strong>
+<pre><code class="">倉位大小 = (帳戶總資金 × 風險百分比) / (ATR 值 × 停損倍數 × 每點價值)</code></pre></p>
+
+<p><strong>3. 實例計算</strong>
+- 帳戶資金：100 萬元
+- 單筆風險：2%（2 萬元）
+- 目前 ATR：50 元
+- 停損倍數：2 倍 ATR
+- 每點價值：1 元
+- 倉位大小 = 2 萬 / (50 × 2 × 1) = 200 股</p>
+
+<p><strong>4. 風險一致化的效果</strong>
+- 高波動市場（ATR 大）：自動減少倉位
+- 低波動市場（ATR 小）：自動增加倉位
+- 每筆交易的最大虧損金額都控制在預設範圍（如帳戶的 1-2%）</p>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p class="footer-text">由妖姬西打龍 🐍 自動生成</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二、ATR 停損策略（動態風險管理） - 股票學習筆記</title>
+    <style></style>
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-brand">
+                <div class="sidebar-logo">📈</div>
+                <div class="sidebar-title">學習筆記</div>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">導航</div>
+                <a href="../index.html" class="nav-item"><span class="nav-item-icon">📊</span> 儀表板</a>
+                <a href="../knowledge.html" class="nav-item"><span class="nav-item-icon">📚</span> 知識庫</a>
+                <a href="../timeline.html" class="nav-item"><span class="nav-item-icon">📅</span> 時間線</a>
+            </div>
+        </nav>
+    </aside>
+    
+    <main class="main">
+        <div class="content-wrapper">
+            <div class="breadcrumb">
+                <a href="../index.html">首頁</a>
+                <span>›</span>
+                <a href="../timeline.html">時間線</a>
+                <span>›</span>
+                <span>2026-03-20</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="../timeline.html" class="nav-link">← 返回時間線</a>
+                <a href="2026-03-20-02.html" class="nav-link">← 上一篇</a>
+                <a href="2026-03-20-04.html" class="nav-link">下一篇 →</a>
+            </div>
+            
+            <div class="content-card">
+                <h1>二、ATR 停損策略（動態風險管理）</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">2026-03-20  · <span class="tag technical">📊 技術分析</span> <span class="tag strategy">🎯 操作策略</span> <span class="tag risk">⚠️ 風險管理</span></p>
+                <h4>二、ATR 停損策略（動態風險管理）</h4>
+
+<p><strong>1. ATR 固定倍數停損法</strong>
+- <strong>具體操作</strong>：停損點設在進場價 ± N × ATR
+- <strong>步驟</strong>：
+  1. 確認進場訊號（均線交叉、趨勢線突破等）
+  2. 讀取進場時的 ATR 數值（如 ATR(14) = 70 pips）
+  3. 計算停損距離 = ATR × 倍數（常用 1.5~3 倍）
+  4. 做多停損價 = 進場價 - 停損距離
+  5. 做空停損價 = 進場價 + 停損距離
+- <strong>實例</strong>：
+  - 黃金在 2350.00 做多，ATR(14) = 25.00
+  - 用 2 倍 ATR 停損
+  - 停損距離 = 25.00 × 2 = 50.00
+  - 停損價 = 2350.00 - 50.00 = 2300.00</p>
+
+<p><strong>2. 為什麼用 ATR 倍數而非固定點數？</strong>
+- <strong>高波動市場</strong>：固定 50 pips 停損容易被「洗盤」出場
+- <strong>低波動市場</strong>：固定 50 pips 停損又過寬，風險過大
+- <strong>ATR 解決方案</strong>：讓停損「動態適應」當前市場波動
+  - 波動大 → ATR 大 → 停損自動放寬
+  - 波動小 → ATR 小 → 停損自動收緊</p>
+
+<p><strong>3. ATR 停損倍數選擇建議</strong>
+- <strong>1.5 倍 ATR</strong>：適合短線、當沖，停損較緊
+- <strong>2 倍 ATR</strong>：最常用，平衡風險與被洗出的機率
+- <strong>3 倍 ATR</strong>：適合波段、長線，給足空間</p>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p class="footer-text">由妖姬西打龍 🐍 自動生成</p>
+    </div>
+</footer>
+</body>
+</html>

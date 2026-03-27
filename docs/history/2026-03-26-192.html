@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一、Covered Call 掩護性買權 - 股票學習筆記</title>
+    <style></style>
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-brand">
+                <div class="sidebar-logo">📈</div>
+                <div class="sidebar-title">學習筆記</div>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">導航</div>
+                <a href="../index.html" class="nav-item"><span class="nav-item-icon">📊</span> 儀表板</a>
+                <a href="../knowledge.html" class="nav-item"><span class="nav-item-icon">📚</span> 知識庫</a>
+                <a href="../timeline.html" class="nav-item"><span class="nav-item-icon">📅</span> 時間線</a>
+            </div>
+        </nav>
+    </aside>
+    
+    <main class="main">
+        <div class="content-wrapper">
+            <div class="breadcrumb">
+                <a href="../index.html">首頁</a>
+                <span>›</span>
+                <a href="../timeline.html">時間線</a>
+                <span>›</span>
+                <span>2026-03-26</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="../timeline.html" class="nav-link">← 返回時間線</a>
+                <a href="2026-03-26-2013.html" class="nav-link">← 上一篇</a>
+                <a href="2026-03-26-193.html" class="nav-link">下一篇 →</a>
+            </div>
+            
+            <div class="content-card">
+                <h1>一、Covered Call 掩護性買權</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">2026-03-26  · <span class="tag risk">⚠️ 風險管理</span></p>
+                <h2>一、Covered Call 掩護性買權</h2>
+
+<h3>是什麼</h3>
+
+<p><strong>Covered Call（掩護性買權）</strong> = 持有現貨（股票/ETF）＋賣出相同標的的買權（Sell Call）</p>
+
+<p>白話說：持有股票的同時，賣出 Call 選擇權收取權利金，就像「用股票收租」。</p>
+
+<h3>怎麼做</h3>
+
+<p><strong>操作步驟</strong>：
+<ol>
+<li>手上持有現貨部位（如 300 萬的 ETF）</li>
+<li>賣出對應規模的 Call 選擇權（Short Call）</li>
+<li>設定履約價在價平或略價外</li>
+<li>收取權利金，等待到期</li>
+</ol>
+<strong>設定要點</strong>：
+- <strong>履約價</strong>：選略價外，權利金中時間價值比例較高
+- <strong>到期日</strong>：短期（流動佳、時間價值衰減快）vs 長期（不用頻繁換倉）
+- <strong>規模</strong>：選擇權曝險 ≤ 現貨規模（例：300 萬現貨 → 最多賣 4 口台指 Call @ 75 萬/口）</p>
+
+<h3>實例</h3>
+
+<p><strong>情境</strong>：持有 C 公司股票成本 $25，賣出履約價 $27 的 Call，權利金 $1</p>
+
+<p><strong>三種結果</strong>：
+| 股價 | 結果 | 損益 |
+|------|------|------|
+| 大漲（>$27） | 被履約，股票被買走 | 賺價差 $2 + 權利金 $1 = $3（少賺） |
+| 緩漲（$25-$27） | 不履約，繼續持有 | 賺價差 + 權利金 $1 |
+| 下跌（<$25） | 不履約，持有股票虧損 | 虧損 - 權利金 $1（小虧） |</p>
+
+<h3>優缺點</h3>
+
+<p><strong>優點</strong>：
+- 盤整緩漲：賺權利金
+- 大漲：仍獲利（但少賺）
+- 下跌：權利金彌補部分虧損</p>
+
+<p><strong>缺點</strong>：
+- 大漲時獲利有上限
+- 大跌時依然會虧損
+- 需要持續換倉（選擇權會到期）</p>
+
+<h3>適用標的</h3>
+
+<p>- 全市場型 ETF（波動低）
+- 大型價值股（穩定）
+- 大型牛皮股（很少暴漲）</p>
+
+<p><strong>不適合</strong>：成長股、中小型股（容易暴漲）</p>
+
+<h3>適用時機</h3>
+
+<p>- 判斷股價高檔，不易大漲
+- 盤整市場
+- 長期持有部位，短期不動</p>
+
+<h3>關鍵心法</h3>
+
+<p><strong>風險本質</strong>：承擔「大漲錯失獲利」的風險，換取權利金收入。就像開保險公司——穩定收保費，但偶爾要賠大錢。</p>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p class="footer-text">由妖姬西打龍 🐍 自動生成</p>
+    </div>
+</footer>
+</body>
+</html>

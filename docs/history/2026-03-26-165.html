@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇權賣方策略（高勝率策略） - 股票學習筆記</title>
+    <style></style>
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-brand">
+                <div class="sidebar-logo">📈</div>
+                <div class="sidebar-title">學習筆記</div>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">導航</div>
+                <a href="../index.html" class="nav-item"><span class="nav-item-icon">📊</span> 儀表板</a>
+                <a href="../knowledge.html" class="nav-item"><span class="nav-item-icon">📚</span> 知識庫</a>
+                <a href="../timeline.html" class="nav-item"><span class="nav-item-icon">📅</span> 時間線</a>
+            </div>
+        </nav>
+    </aside>
+    
+    <main class="main">
+        <div class="content-wrapper">
+            <div class="breadcrumb">
+                <a href="../index.html">首頁</a>
+                <span>›</span>
+                <a href="../timeline.html">時間線</a>
+                <span>›</span>
+                <span>2026-03-26</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="../timeline.html" class="nav-link">← 返回時間線</a>
+                <a href="2026-03-26-164.html" class="nav-link">← 上一篇</a>
+                <a href="2026-03-26-166.html" class="nav-link">下一篇 →</a>
+            </div>
+            
+            <div class="content-card">
+                <h1>選擇權賣方策略（高勝率策略）</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">2026-03-26  · <span class="tag strategy">🎯 操作策略</span> <span class="tag risk">⚠️ 風險管理</span> <span class="tag psychology">🧠 交易心理</span></p>
+                <h2>選擇權賣方策略（高勝率策略）</h2>
+
+<h3>策略核心概念</h3>
+
+<p><strong>是什麼</strong>：賣出深度價外的選擇權，賺取權利金。因為價外選擇權到期時大多會歸零，賣方可以穩穩收錢。</p>
+
+<p><strong>為什麼勝率高</strong>：
+- 價外選擇權變成價內的機率較低
+- 時間價值會隨著時間流逝，對賣方有利
+- 大多數時間市場是盤整或緩漲緩跌</p>
+
+<h3>深度價外賣方策略實戰</h3>
+
+<p><strong>操作方法</strong>：
+<ol>
+<li>每月第二週後，賣出下個月到期的選擇權</li>
+<li>履約價選擇價外 500 點以上（以台指為例）</li>
+<li>權利金需 20 點以上才進場</li>
+<li>到期結算，若未進入價內，全賺權利金</li>
+</ol>
+<strong>實例</strong>：
+- 情境：台指 18000 點
+- 操作：賣出台指 17500 Put（價外 500 點），收權利金 25 點
+- 保證金：約 20000 元/口
+- 最大獲利：25 × 50 = 1250 元/口
+- 到期後：指數沒跌破 17500，賺 1250 元
+- 風險：跌破 17500 要賠差價</p>
+
+<p><strong>回測數據（2011-2014 台指）</strong>：
+- 價外 500 點策略：勝率 85%，年化報酬 9.8%
+- 價外 300 點策略：勝率 79%，年化報酬 19%
+- 最大單筆虧損：可達一整年獲利（17%）</p>
+
+<h3>風險管理三大守則</h3>
+
+<p><strong>是什麼</strong>：賣方策略雖然勝率高，但風險無限，必須嚴格控管</p>
+
+<p><strong>怎麼做</strong>：</p>
+
+<ol>
+<li><strong>資金充足</strong></li>
+</ol>   - 保證金只是最低門檻，不是安全線
+   - 一口選擇權建議準備 5-10 萬以上資金
+   - 備用資金越多越好，像開保險公司一樣
+
+<ol>
+<li><strong>禁止加碼攤平</strong></li>
+</ol>   - 虧錢時加碼是最大致命傷
+   - 2011 年歐債危機，有高手加碼後賠掉好幾年獲利
+   - 正確做法：停損或買更價外的選擇權避險
+
+<ol>
+<li><strong>準備避險計畫</strong></li>
+</ol>   - 方法一：設定停損（如虧損達權利金 2 倍就出場）
+   - 方法二：買進更價外的選擇權做保護
+   - 方法三：期貨對沖（大行情時）
+
+<p><strong>適用時機</strong>：
+- 適合：盤整市、波動率低的環境
+- 不適合：重大事件前（選舉、央行會議）、波動率極高時</p>
+
+<p><strong>何時不用</strong>：資金不足、無法承受單筆大虧、心理素質不佳</p>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p class="footer-text">由妖姬西打龍 🐍 自動生成</p>
+    </div>
+</footer>
+</body>
+</html>

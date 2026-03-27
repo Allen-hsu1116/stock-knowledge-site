@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二、Straddle 與 Strangle（跨式與勒式） - 股票學習筆記</title>
+    <style></style>
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-brand">
+                <div class="sidebar-logo">📈</div>
+                <div class="sidebar-title">學習筆記</div>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">導航</div>
+                <a href="../index.html" class="nav-item"><span class="nav-item-icon">📊</span> 儀表板</a>
+                <a href="../knowledge.html" class="nav-item"><span class="nav-item-icon">📚</span> 知識庫</a>
+                <a href="../timeline.html" class="nav-item"><span class="nav-item-icon">📅</span> 時間線</a>
+            </div>
+        </nav>
+    </aside>
+    
+    <main class="main">
+        <div class="content-wrapper">
+            <div class="breadcrumb">
+                <a href="../index.html">首頁</a>
+                <span>›</span>
+                <a href="../timeline.html">時間線</a>
+                <span>›</span>
+                <span>2026-03-26</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="../timeline.html" class="nav-link">← 返回時間線</a>
+                <a href="2026-03-26-192.html" class="nav-link">← 上一篇</a>
+                <a href="2026-03-26-194.html" class="nav-link">下一篇 →</a>
+            </div>
+            
+            <div class="content-card">
+                <h1>二、Straddle 與 Strangle（跨式與勒式）</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">2026-03-26  · <span class="tag strategy">🎯 操作策略</span> <span class="tag risk">⚠️ 風險管理</span></p>
+                <h2>二、Straddle 與 Strangle（跨式與勒式）</h2>
+
+<h3>是什麼</h3>
+
+<p>這是<strong>波動率策略</strong>——不預測漲跌方向，只預測「波動大小」。</p>
+
+<p><strong>跨式 Straddle</strong>：買 / 賣同一履約價的 Call + Put
+<strong>勒式 Strangle</strong>：買 / 賣不同履約價的 Call + Put</p>
+
+<h3>四種策略總覽</h3>
+
+<p>| 策略 | 組成 | 使用時機 | 風險特性 |
+|------|------|----------|----------|
+| Long Straddle | 買 Call + 買 Put（同履約價） | 預期大波動 | 損失有限，成本高 |
+| Long Strangle | 買 Call + 買 Put（不同履約價） | 預期大波動 | 成本較低，需要更大波動 |
+| Short Straddle | 賣 Call + 賣 Put（同履約價） | 預期盤整 | 勝率高，風險無限 |
+| Short Strangle | 賣 Call + 賣 Put（不同履約價） | 預期盤整 | 勝率高，風險更大 |</p>
+
+<h3>Long Straddle 買進跨式</h3>
+
+<p><strong>使用時機</strong>：
+- 重大政策/經濟數據發布前（利率、失業率）
+- 重要選舉前
+- 重大意外後（可能繼續崩盤或大反彈）
+- 盤整末期（三角收斂快突破）</p>
+
+<p><strong>優點</strong>：
+- 不用賭方向，漲跌都賺
+- 大波動報酬可觀
+- 風險可預期（最大虧損 = 權利金）
+- 不需高保證金</p>
+
+<p><strong>缺點</strong>：
+- 成本是單邊兩倍
+- 雙倍時間價值衰減</p>
+
+<p><strong>實戰技巧</strong>：短期持有幾天就平倉，不必抱到結算。</p>
+
+<h3>Short Straddle 賣出跨式</h3>
+
+<p><strong>使用時機</strong>：
+- 預期進入盤整
+- 成交量低，預期小漲小跌</p>
+
+<p><strong>優點</strong>：
+- 勝率高，天天收時間價值
+- 盤整市場很常見</p>
+
+<p><strong>缺點</strong>：
+- 大漲大跌風險無限
+- 資金需求高
+- 太安逸容易忽視風險，一次意外就畢業</p>
+
+<p><strong>流動性風險</strong>：極端大跌時賣權變深價內，可能難以平倉。</p>
+
+<h3>Straddle vs Strangle 差異</h3>
+
+<p><strong>核心差異</strong>：履約價相同 vs 不同</p>
+
+<p>| | Straddle | Strangle |
+|---|----------|----------|
+| 履約價 | Call 和 Put 同一履約價 | Call 和 Put 不同履約價 |
+| 成本 | 較高 | 較低 |
+| 獲利門檻 | 波動較小即可獲利 | 需要更大波動 |
+| 風險（賣方） | 風險較集中 | 風險更分散但範圍更大 |</p>
+
+<h3>進階關聯</h3>
+
+<p>Short Straddle + 價外買 Call + 價外買 Put = <strong>Iron Condor（鐵兀鷹）</strong>
+Short Strangle + 價外買 Call + 價外買 Put = <strong>Butterfly（蝴蝶）</strong></p>
+
+<h3>實戰心法</h3>
+
+<p><strong>買方策略</strong>：重大事件前佈局，事件後平倉賺波動率上升。
+<strong>賣方策略</strong>：越接近結算，時間價值收越快，抱久一點（但看到危險要跑）。</p>
+
+<p><strong>近年變化</strong>：大家都事件前買雙買，事件後停損 → 隱波事件前上升、事件後下降。
+→ 實務改為：更早買進，事件前平倉；事件後改賣方賺權利金。</p>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p class="footer-text">由妖姬西打龍 🐍 自動生成</p>
+    </div>
+</footer>
+</body>
+</html>

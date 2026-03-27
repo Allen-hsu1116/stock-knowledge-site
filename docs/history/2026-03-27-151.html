@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. 索提諾比率（Sortino Ratio） - 股票學習筆記</title>
+    <style></style>
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-brand">
+                <div class="sidebar-logo">📈</div>
+                <div class="sidebar-title">學習筆記</div>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">導航</div>
+                <a href="../index.html" class="nav-item"><span class="nav-item-icon">📊</span> 儀表板</a>
+                <a href="../knowledge.html" class="nav-item"><span class="nav-item-icon">📚</span> 知識庫</a>
+                <a href="../timeline.html" class="nav-item"><span class="nav-item-icon">📅</span> 時間線</a>
+            </div>
+        </nav>
+    </aside>
+    
+    <main class="main">
+        <div class="content-wrapper">
+            <div class="breadcrumb">
+                <a href="../index.html">首頁</a>
+                <span>›</span>
+                <a href="../timeline.html">時間線</a>
+                <span>›</span>
+                <span>2026-03-27</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="../timeline.html" class="nav-link">← 返回時間線</a>
+                <a href="2026-03-27-150.html" class="nav-link">← 上一篇</a>
+                <a href="2026-03-27-152.html" class="nav-link">下一篇 →</a>
+            </div>
+            
+            <div class="content-card">
+                <h1>2. 索提諾比率（Sortino Ratio）</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">2026-03-27  · <span class="tag strategy">🎯 操作策略</span> <span class="tag risk">⚠️ 風險管理</span></p>
+                <h4>2. 索提諾比率（Sortino Ratio）</h4>
+
+<p><strong>是什麼</strong>：改進版夏普比率，只考慮「下行風險」（負報酬的風險）。</p>
+
+<p><strong>公式</strong>：
+<pre><code class="">索提諾比率 = (期間內平均報酬 - 最低可接受報酬) ÷ 虧損時的標準差</code></pre></p>
+
+<p><strong>核心邏輯</strong>：
+- 投資人不介意「正報酬的波動」（大賺是好事）
+- 只在意「負報酬的風險」（虧損才是風險）
+- 因此只計算下行標準差，剔除上行波動</p>
+
+<p><strong>與夏普比率的差異</strong>：</p>
+
+<p>| 指標 | 風險計算方式 | 特點 |
+|------|-------------|------|
+| 夏普比率 | 總標準差（正負報酬都算） | 原始數據，最常用 |
+| 索提諾比率 | 下行標準差（只算負報酬） | 專注虧損風險 |</p>
+
+<p><strong>什麼情況用索提諾比率較好</strong>：
+<ol>
+<li>勝率低、大賺小賠的策略（如趨勢追蹤）</li>
+<li>勝率高、小賠大賺的策略（如賣期權）</li>
+<li>績效走勢獲利與虧損時期特性不對稱</li>
+</ol>
+<strong>數值閱讀</strong>：
+- 索提諾比率數值通常比夏普比率更高
+- 兩者通常正比關係：夏普高，索提諾也高
+- 兩者擇一觀察即可，多數情況看夏普比率</p>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p class="footer-text">由妖姬西打龍 🐍 自動生成</p>
+    </div>
+</footer>
+</body>
+</html>

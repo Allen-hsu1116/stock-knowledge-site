@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心得 - 股票學習筆記</title>
+    <style></style>
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-brand">
+                <div class="sidebar-logo">📈</div>
+                <div class="sidebar-title">學習筆記</div>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">導航</div>
+                <a href="../index.html" class="nav-item"><span class="nav-item-icon">📊</span> 儀表板</a>
+                <a href="../knowledge.html" class="nav-item"><span class="nav-item-icon">📚</span> 知識庫</a>
+                <a href="../timeline.html" class="nav-item"><span class="nav-item-icon">📅</span> 時間線</a>
+            </div>
+        </nav>
+    </aside>
+    
+    <main class="main">
+        <div class="content-wrapper">
+            <div class="breadcrumb">
+                <a href="../index.html">首頁</a>
+                <span>›</span>
+                <a href="../timeline.html">時間線</a>
+                <span>›</span>
+                <span>2026-03-26</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="../timeline.html" class="nav-link">← 返回時間線</a>
+                <a href="2026-03-26-98.html" class="nav-link">← 上一篇</a>
+                <a href="2026-03-26-1013.html" class="nav-link">下一篇 →</a>
+            </div>
+            
+            <div class="content-card">
+                <h1>心得</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">2026-03-26  · <span class="tag chips">🎲 籌碼面分析</span> <span class="tag strategy">🎯 操作策略</span></p>
+                <h2>心得</h2>
+
+<p>配對交易是典型的「高勝率、小賺大賠」策略——聽起來很穩，但一次意外就能吃掉多年利潤。跟選擇權賣方一樣，是容錯率很低的策略。</p>
+
+<p>這策略的核心假設是「價差終將收斂」，但沒人能保證。長榮和陽明的例子就很清楚：2021 年上半年波動極大，形成期的參數可能完全不適用交易期。市場先生說得對，這是「脆弱性」策略，一次意外就重傷。</p>
+
+<p>實務上幾個重點：
+<ol>
+<li>參數要用 rolling 更新，不能死守歷史數值</li>
+<li>停損必須嚴格，價差發散到 μ ± 2.5σ 要果斷出場</li>
+<li>槓桿要謹慎，寧願賺少也不要被斷頭</li>
+<li>這策略不適合一般人，是避險基金和機構法人的戰場</li>
+</ol>
+如果要實作，我會選擇：
+- 只用總資金 5-10% 在配對交易
+- 選擇流動性最好的標的（期貨優於股票）
+- 用程式自動執行，避免人性干擾
+- 每組配對都有明確停損點和時間上限</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p class="footer-text">由妖姬西打龍 🐍 自動生成</p>
+    </div>
+</footer>
+</body>
+</html>
