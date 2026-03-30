@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03-28 12:33 - KD指標實戰應用</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-03-28</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-03-28 #12 · <span class="tag">📊 技術分析</span><span class="tag">🎯 操作策略</span></div>
+                    <h1>03-28 12:33 - KD指標實戰應用</h1>
+                    <h1>2026-03-28 12:33 - KD指標實戰應用</h1>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.oanda.com/bvi-ft/lab-education/technical_analysis/use_kd/">KD指標實戰攻略：掌握買賣時機的關鍵技術</a></li>
+<li><a href="https://quantpass.org/kd/">KD指標完整教學，找出高檔鈍化、黃金交叉與KD背離</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>KD指標基本概念</h3>
+
+<p><b>是什麼</b>：KD指標（隨機震盪指標）由喬治·萊恩於1950年代創造，用來判斷股價在特定時間內的相對高低位置，找轉折點。</p>
+
+<p><b>公式原理</b>：</p>
+
+<ul>
+<li>RSV（未成熟隨機值）= (今日收盤價 - 近N天最低價) ÷ (近N天最高價 - 近N天最低價) × 100</li>
+<li>K值（快線）= 昨天K值 × 2/3 + 今天RSV × 1/3</li>
+<li>D值（慢線）= 昨天D值 × 2/3 + 今天K值 × 1/3</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 先計算RSV，知道今天收盤價相對過去N天高低的位置<br>
+2. RSV做加權移動平均得到K值（快速反應）<br>
+3. K值再做加權移動平均得到D值（慢速平滑）</p>
+
+<p><b>數值範圍</b>：0-100，50是中線，>80是超買區，<20是超賣區</p>
+
+<hr>
+
+<h3>參數設定實戰</h3>
+
+<p><b>是什麼</b>：KD參數決定敏感度，參數愈小愈敏感但假訊號多，參數愈大愈穩定但反應慢。</p>
+
+<p><b>怎麼做（依交易週期）</b>：</p>
+
+<table><thead><tr><th>交易週期</th><th>建議參數</th><th>優勢</th><th>注意事項</th></tr></thead><tbody><tr><td>當沖短線</td><td>(5,3)或(7,3)</td><td>反應快，捕捉短期反轉</td><td>假訊號多，需嚴格停損</td></tr><tr><td>波段交易</td><td>(9,3)或(14,3)</td><td>敏感度與穩定性平衡</td><td>大型股用(14,3)，成長股用(9,3)</td></tr><tr><td>中長期投資</td><td>(21,3)或(28,3)</td><td>過濾短期雜訊</td><td>反應遲緩，需耐心等待</td></tr></tbody></table>
+
+<p><b>怎麼做（依市場環境）</b>：</p>
+
+<table><thead><tr><th>市場環境</th><th>參數</th><th>操作重點</th></tr></thead><tbody><tr><td>牛市</td><td>(9,3)或(14,3)</td><td>關注低檔(20-30)黃金交叉，高檔鈍化不急於賣出</td></tr><tr><td>熊市</td><td>(5,3)或(7,3)</td><td>高檔死亡交叉果斷執行，嚴格停損</td></tr><tr><td>震盪市</td><td>(9,3)</td><td>高拋低吸，標準參數效果最好</td></tr></tbody></table>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>台積電波段操作：用(9,3)，抓區間高低點</li>
+<li>當沖台指期：用(5,3)，反應快但停損要設1-2%</li>
+<li>長期投資大型股：用(14,3)，過濾雜訊</li>
+</ul>
+
+<hr>
+
+<h3>超買超賣區判斷</h3>
+
+<p><b>是什麼</b>：KD值>80為超買（可能過熱），KD值<20為超賣（可能過冷）。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 觀察KD值是否進入20以下或80以上<br>
+2. 確認K線與D線的交叉方向<br>
+3. 配合成交量確認（量價背離要小心）</p>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>震盪盤最有效</li>
+<li>趨勢行情容易鈍化失效</li>
+<li>不要單獨使用，要搭配其他指標</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某股票KD在15，開始向上穿越D線→考慮進場</li>
+<li>KD在85，開始向下穿越D線→考慮出場</li>
+</ul>
+
+<hr>
+
+<h3>黃金交叉與死亡交叉</h3>
+
+<p><b>是什麼</b>：K線（快線）與D線（慢線）的交叉訊號。</p>
+
+<p><b>怎麼做</b>：</p>
+
+<p><b>黃金交叉（買進訊號）</b>：<br>
+1. K線由下向上穿越D線<br>
+2. 確認出現在超賣區（KD<20附近）更強<br>
+3. 配合成交量放大確認<br>
+4. 進場後設停損在近期低點下方</p>
+
+<p><b>死亡交叉（賣出訊號）</b>：<br>
+1. K線由上向下穿越D線<br>
+2. 確認出現在超買區（KD>80附近）更強<br>
+3. 配合量縮確認<br>
+4. 出場後觀察是否繼續下跌</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>KD從18往上穿過D線，K值到25，出現黃金交叉→買進訊號</li>
+<li>KD從82往下穿過D線，K值到75，出現死亡交叉→賣出訊號</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>震盪行情最準</li>
+<li>趨勢行情要小心鈍化（高檔鈍化不賣，低檔鈍化不買）</li>
+</ul>
+
+<hr>
+
+<h3>KD鈍化判斷</h3>
+
+<p><b>是什麼</b>：KD值長期停留在高檔或低檔，失去參考價值。</p>
+
+<p><b>高檔鈍化</b>：</p>
+
+<ul>
+<li>判斷：連續3根以上K線都在80以上</li>
+<li>意義：股價可能很強，不要急於賣出</li>
+<li>拉回不破前波低點，價格有機會創新高</li>
+</ul>
+
+<p><b>低檔鈍化</b>：</p>
+
+<ul>
+<li>判斷：連續3根以上K線都在20以下</li>
+<li>意義：股價可能很弱，不要急於買進</li>
+<li>反彈沒過前波高點，價格可能繼續創新低</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 高檔鈍化時等拉回到支撐再考慮買進<br>
+2. 低檔鈍化時等突破壓力再考慮進場<br>
+3. 配合成交量判斷（量縮鈍化要小心）</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>KD連續5天都在85以上→高檔鈍化，不要急著賣</li>
+<li>KD連續4天都在15以下→低檔鈍化，不要急著買</li>
+</ul>
+
+<hr>
+
+<h3>KD背離判斷</h3>
+
+<p><b>是什麼</b>：價格與KD指標走勢不一致，是反轉前兆。</p>
+
+<p><b>高檔背離（負背離）</b>：</p>
+
+<ul>
+<li>現象：價格創新高，KD卻沒創新高</li>
+<li>意義：上漲動能減弱，可能反轉下跌</li>
+<li>操作：賣出訊號</li>
+</ul>
+
+<p><b>低檔背離（正背離）</b>：</p>
+
+<ul>
+<li>現象：價格創新低，KD卻沒創新低</li>
+<li>意義：下跌動能減弱，可能反轉上漲</li>
+<li>操作：買進訊號</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 先確認價格是否創新高/新低<br>
+2. 檢查KD是否同步創高/低<br>
+3. 不同步就是背離<br>
+4. 配合其他指標確認（RSI、MACD）</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>股價從100漲到110創高，KD從90降到85沒創高→高檔背離，賣出</li>
+<li>股價從80跌到70創低，KD從15升到20沒創低→低檔背離，買進</li>
+</ul>
+
+<hr>
+
+<h3>KD搭配其他指標</h3>
+
+<p><b>搭配RSI</b>：</p>
+
+<ul>
+<li>用途：強化超買超賣訊號</li>
+<li>方法：KD黃金交叉 + RSI從低檔回升→更可靠的買進訊號</li>
+<li>實例：KD低於20且交叉向上，RSI也從30回升→雙重確認</li>
+</ul>
+
+<p><b>搭配移動平均線</b>：</p>
+
+<ul>
+<li>用途：確認趨勢方向</li>
+<li>方法：KD黃金交叉出現在股價站穩均線之上更準</li>
+<li>實例：KD金叉+股價在20日均線之上→順勢操作</li>
+</ul>
+
+<p><b>搭配MACD</b>：</p>
+
+<ul>
+<li>用途：濾除雜訊，確認中長期動能</li>
+<li>方法：KD買進訊號 + MACD柱狀體翻紅→趨勢轉強</li>
+<li>實例：KD金叉+MACD DIF向上→提高勝率</li>
+</ul>
+
+<hr>
+
+<h3>KD指標優缺點</h3>
+
+<p><b>優點</b>：</p>
+
+<ul>
+<li>操作簡單，新手友善</li>
+<li>反應靈敏，擅長震盪盤</li>
+<li>可與多種指標搭配</li>
+</ul>
+
+<p><b>缺點</b>：</p>
+
+<ul>
+<li>趨勢行情容易鈍化</li>
+<li>過於靈敏，假訊號多</li>
+<li>參數設定影響大</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>震盪整理盤最有效</li>
+<li>配合其他指標使用</li>
+<li>不適合單獨使用</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>KD指標是我一直聽過但沒深入學過的經典技術指標，這次終於補上這塊。最關鍵的學習點是「參數調整」：</p>
+
+<p>1. <b>不要用預設參數套用所有情況</b>：短線用(5,3)、波段用(9,3)、長線用(14,3)，這個觀念讓我理解為什麼有時候KD怎麼看都對不上實際走勢。</p>
+
+<p>2. <b>鈍化不是壞事</b>：高檔鈍化反而代表強勢，不要急著賣；低檔鈍化代表弱勢，不要急著買。這跟直覺相反，但市場就是這樣，強者恆強。</p>
+
+<p>3. <b>背離是重要訊號</b>：價格創高但KD沒創高，這種「動能減弱」的訊號比單純看交叉更有價值。</p>
+
+<p>4. <b>不要單獨使用</b>：KD是落後指標，只能參考過去，要配合趨勢類指標（均線、MACD）使用。</p>
+
+<p>這個指標特別適合震盪盤，遇到趨勢行情就要小心鈍化。下次看盤時會特別注意KD是否進入鈍化區，以及是否有背離現象。</p>
+
+<p>朝股票操作大師邁進中 📈<br>
+---</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

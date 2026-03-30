@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03-30 股票學習記錄</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-03-30</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-03-30 #1 · <span class="tag">📊 技術分析</span><span class="tag">💰 基本面分析</span><span class="tag">🎲 籌碼面分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>03-30 股票學習記錄</h1>
+                    <h1>2026-03-30 股票學習記錄</h1>
+
+<hr>
+
+<h2>第 1 回合學習：技術分析：K線型態學實戰</h2>
+
+<p><b>學習時間</b>：01:03</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.oanda.com/bvi-ft/lab-education/technical_analysis/chart-pattern/">常見的K線型態有哪些？解說透過K線型態學掌握交易契機的方法 - OANDA Lab</a></li>
+<li><a href="https://www.ig.com/cn/trading-strategies/16-candlestick-patterns-every-trader-should-know-220323">16種最常見的K線型態以及如何使用 - IG</a></li>
+</ul>
+
+<hr>
+
+<h2>型態學核心概念</h2>
+
+<h3>什麼是型態學？</h3>
+
+<p><b>是什麼</b>：透過大量歷史統計彙整，用眼睛辨識K線組合成的圖形樣態，判讀市場趨勢方向的技術分析方法。</p>
+
+<p><b>三大觀察點</b>：<br>
+1. <b>波段趨勢方向</b>：下一個波段往哪走<br>
+2. <b>漲跌斜率與速度</b>：價格發展的快慢<br>
+3. <b>目標價測量</b>：估算漲跌空間滿足點</p>
+
+<h2>反轉型態：底部型態（買進訊號）</h2>
+
+<h3>W底（雙重底）</h3>
+
+<p><b>是什麼</b>：價格跌一段後反彈，再跌到前次低點附近，突破前高形成的W型態。</p>
+
+<p><b>判斷要點</b>：</p>
+
+<ul>
+<li>第2次低點通常高於第1次低點</li>
+<li>突破下降趨勢線 + 突破頸線</li>
+<li>成交量明顯放大才算確認</li>
+</ul>
+
+<pre><code>    頸線 ──────────────── 突破點 ★
+       \        /      \
+        \      /        \ 目標價 = 頸線 + (頸線-底部)
+         \    /          \
+          \  /            \
+           \/              \
+           底部              \ </code></pre>
+
+<p><b>目標價計算</b>：</p>
+
+<ul>
+<li>公式：目標價 = 頸線 + (頸線 - 底部)</li>
+<li>實例：頸線100元，底部80元 → 目標價 = 100 + (100-80) = 120元</li>
+</ul>
+
+<p><b>進場時機</b>：<br>
+1. 突破頸線確認後進場<br>
+2. 回測頸線獲支撐可加碼</p>
+
+<p><b>停損設定</b>：跌破頸線3%或前低</p>
+
+<h3>頭肩底</h3>
+
+<p><b>是什麼</b>：低檔位置形成的「頭」低於「兩肩」的反轉型態。</p>
+
+<p><b>結構組成</b>：</p>
+
+<ul>
+<li>左肩：第一波下跌反彈</li>
+<li>頭：跌破前低後回升</li>
+<li>右肩：第三波下跌但動能趨緩</li>
+</ul>
+
+<p><b>兩個買入訊號</b>：<br>
+1. 跌破下降趨勢線<br>
+2. 突破頸線（需放量確認）</p>
+
+<p><b>目標價計算</b>：</p>
+
+<ul>
+<li>公式：目標價 = 頸線 + (頸線 - 底部)</li>
+<li>實例：頸線100元，底部80元 → 目標價120元</li>
+</ul>
+
+<h2>反轉型態：頭部型態（賣出訊號）</h2>
+
+<h3>M頭（雙重頂）</h3>
+
+<p><b>是什麼</b>：價格上漲到一定價位後回跌，再漲到前波高點附近，第二次下跌跌破頸線。</p>
+
+<p><b>判斷要點</b>：</p>
+
+<ul>
+<li>兩個高點差不多等高</li>
+<li>低點連線就是「頸線」</li>
+<li>跌破頸線 = 趨勢反轉</li>
+</ul>
+
+<pre><code>    頭部 ────/\────
+              \  /\  
+               \/  \ 頸線
+                    \──────
+                     \      目標價 = 頸線 - (頭部-頸線)</code></pre>
+
+<p><b>目標價計算</b>：</p>
+
+<ul>
+<li>公式：目標價 = 頸線 - (頭部 - 頸線)</li>
+<li>實例：頸線100元，頭部120元 → 目標價 = 100 - (120-100) = 80元</li>
+</ul>
+
+<p><b>三個賣出訊號</b>：<br>
+1. 跌破上升趨勢線<br>
+2. 跌破頸線<br>
+3. 反彈測頸線失敗再跌</p>
+
+<h3>頭肩頂</h3>
+
+<p><b>是什麼</b>：高檔位置形成的「頭」高於「兩肩」的反轉型態。</p>
+
+<p><b>結構組成</b>：</p>
+
+<ul>
+<li>左肩：獲利了結後回檔</li>
+<li>頭：續創新高後回檔</li>
+<li>右肩：上漲動能減弱，低於頭部</li>
+</ul>
+
+<p><b>三個賣出訊號</b>：<br>
+1. 跌破上升趨勢線<br>
+2. 跌破頸線<br>
+3. 反彈回測頸線後續跌</p>
+
+<h2>K線單根型態：看漲型態</h2>
+
+<h3>錘形線（Hammer）</h3>
+
+<p><b>特徵</b>：短實體 + 長下影線，位於下降趨勢底部</p>
+
+<p><b>含義</b>：盤中賣壓強，但買壓最終推升價格回升</p>
+
+<p><b>實戰操作</b>：</p>
+
+<ul>
+<li>位置：下降趨勢末端</li>
+<li>確認：隔日開高收紅</li>
+<li>進場：確認日收盤前</li>
+<li>停損：錘形線最低價</li>
+</ul>
+
+<h3>倒錘形（Inverse Hammer）</h3>
+
+<p><b>特徵</b>：短實體 + 長上影線 + 短下影線</p>
+
+<p><b>含義</b>：賣壓不足以推動下跌，買盤重新控制市場</p>
+
+<h3>多頭吞噬（Bullish Engulfing）</h3>
+
+<p><b>特徵</b>：兩根K線，紅短實體被綠長實體完全吞沒</p>
+
+<p><b>含義</b>：開盤低但收盤高，買家明顯獲勝</p>
+
+<p><b>實戰操作</b>：</p>
+
+<ul>
+<li>確認：第二根K線收紅且實體大</li>
+<li>進場：型態完成後</li>
+<li>停損：第二根K線最低點</li>
+</ul>
+
+<h3>穿刺線（Piercing Line）</h3>
+
+<p><b>特徵</b>：長紅K + 長綠K，開盤有跳空缺口，收盤高於前一天中點</p>
+
+<p><b>含義</b>：買壓強勁，價格被推高至前一天中點以上</p>
+
+<h3>早晨之星（Morning Star）</h3>
+
+<p><b>特徵</b>：三根K線組合 - 長紅K + 短K線 + 長綠K</p>
+
+<p><b>含義</b>：賣壓消退，看漲趨勢來臨</p>
+
+<p><b>實戰要點</b>：</p>
+
+<ul>
+<li>中間的「星」通常有跳空缺口</li>
+<li>第三根K線收盤越高，訊號越強</li>
+</ul>
+
+<h3>白色三兵（Three White Soldiers）</h3>
+
+<p><b>特徵</b>：連續三根綠色長K線，開盤收盤都高於前一日</p>
+
+<p><b>含義</b>：下降趨勢後的強烈看漲訊號，買壓穩步上升</p>
+
+<h2>K線單根型態：看跌型態</h2>
+
+<h3>上吊線（Hanging Man）</h3>
+
+<p><b>特徵</b>：與錘形線形狀相同，但出現在上升趨勢頂部</p>
+
+<p><b>含義</b>：盤中有明顯拋壓，買家失去控制</p>
+
+<h3>射擊之星（Shooting Star）</h3>
+
+<p><b>特徵</b>：短實體 + 長上影線，出現在上升趨勢頂部</p>
+
+<p><b>含義</b>：開盤走高但收盤僅略高於開盤，如流星墜地</p>
+
+<h3>空頭吞噬（Bearish Engulfing）</h3>
+
+<p><b>特徵</b>：小綠實體被大紅實體吞沒，出現在上升趨勢頂部</p>
+
+<p><b>含義</b>：價格高峰，市場即將下滑</p>
+
+<h3>黃昏之星（Evening Star）</h3>
+
+<p><b>特徵</b>：長綠K + 短K線 + 長紅K</p>
+
+<p><b>含義</b>：上升趨勢反轉，第三根K線越大越強</p>
+
+<h3>三隻烏鴉（Three Black Crows）</h3>
+
+<p><b>特徵</b>：連續三根紅色長K線，影線很短或不存在</p>
+
+<p><b>含義</b>：賣壓連續三天超過買壓，下降趨勢開始</p>
+
+<h3>烏雲蓋頂（Dark Cloud Cover）</h3>
+
+<p><b>特徵</b>：兩根K線，紅K開盤高於綠K，收盤低於綠K中點</p>
+
+<p><b>含義</b>：空頭接管，價格大幅走低</p>
+
+<h2>整理型態</h2>
+
+<h3>十字星（Doji）</h3>
+
+<p><b>特徵</b>：開盤價 ≈ 收盤價，實體極短</p>
+
+<p><b>含義</b>：買賣雙方掙扎，未分勝負</p>
+
+<p><b>實戰操作</b>：</p>
+
+<ul>
+<li>單獨出現：中性訊號</li>
+<li>搭配反轉型態：確認訊號增強</li>
+</ul>
+
+<h3>紡錘線（Spinning Top）</h3>
+
+<p><b>特徵</b>：短實體 + 等長上下影線</p>
+
+<p><b>含義</b>：市場猶豫不決，盤整或休整期</p>
+
+<h3>下降三法（Falling Three Methods）</h3>
+
+<p><b>特徵</b>：長紅K + 三根小綠K + 長紅K，綠K被覆蓋在紅K範圍內</p>
+
+<p><b>含義</b>：多頭無力扭轉趨勢，空頭延續</p>
+
+<h3>上升三法（Rising Three Methods）</h3>
+
+<p><b>特徵</b>：長綠K + 三根小紅K + 長綠K，紅K被覆蓋在綠K範圍內</p>
+
+<p><b>含義</b>：賣壓存在，但買家仍保持控制</p>
+
+<h2>型態學六大常見誤區</h2>
+
+<h3>1. 型態強行對號入座</h3>
+
+<p><b>問題</b>：主觀套用型態，忽略圖形不完整</p>
+
+<p><b>正確做法</b>：</p>
+
+<ul>
+<li>確認型態要素是否完整</li>
+<li>檢查頸線是否明確</li>
+<li>時間對稱性是否合理</li>
+</ul>
+
+<h3>2. 忽略成交量確認</h3>
+
+<p><b>問題</b>：只看圖形突破，忽略量能</p>
+
+<p><b>正確做法</b>：</p>
+
+<ul>
+<li>W底突破頸線：必須爆量</li>
+<li>M頭跌破頸線：需有量能</li>
+<li>無量突破 = 假突破，觀望等待</li>
+</ul>
+
+<h3>3. 單一型態孤立判斷</h3>
+
+<p><b>問題</b>：只依型態決策，忽略大環境</p>
+
+<p><b>正確做法</b>：</p>
+
+<ul>
+<li>結合整體趨勢方向</li>
+<li>參考技術指標（RSI、MACD）</li>
+<li>注意消息面與資金動能</li>
+</ul>
+
+<h3>4. 忽略時間與比例對稱性</h3>
+
+<p><b>問題</b>：型態過於急促或變形</p>
+
+<p><b>正確做法</b>：</p>
+
+<ul>
+<li>W底：兩低點間距要合理</li>
+<li>頭肩型：左右肩要對稱</li>
+<li>比例失衡的型態可信度低</li>
+</ul>
+
+<h3>5. 忽視關鍵支撐/壓力位</h3>
+
+<p><b>問題</b>：型態成形但遇前波壓力區</p>
+
+<p><b>正確做法</b>：</p>
+
+<ul>
+<li>檢查頸線位置有無前波壓力</li>
+<li>注意跳空缺口位置</li>
+<li>結合技術位置判讀</li>
+</ul>
+
+<h3>6. 過度依賴歷史重複性</h3>
+
+<p><b>問題</b>：認為歷史會完全複製</p>
+
+<p><b>正確做法</b>：</p>
+
+<ul>
+<li>市場結構、資金流向不同會影響表現</li>
+<li>每次型態要重新評估當時背景</li>
+</ul>
+
+<h2>K線型態 + 技術指標搭配</h2>
+
+<h3>型態 + 成交量</h3>
+
+<p><b>應用</b>：所有反轉型態</p>
+
+<ul>
+<li>W底突破頸線：爆量確認買盤進場</li>
+<li>M頭跌破頸線：放量確認賣壓</li>
+<li>無量突破：假突破，觀望</li>
+</ul>
+
+<h3>型態 + RSI</h3>
+
+<p><b>應用</b>：低檔布局、過熱判斷</p>
+
+<ul>
+<li>W底 + RSI < 30：低檔反轉機率高</li>
+<li>M頭 + RSI > 70：超買，反轉機率大</li>
+</ul>
+
+<h3>型態 + MACD</h3>
+
+<p><b>應用</b>：確認動能支持</p>
+
+<ul>
+<li>W底突破 + MACD黃金交叉：強力買進訊號</li>
+<li>M頭跌破 + MACD死亡交叉：空頭確認</li>
+</ul>
+
+<h3>型態 + 均線</h3>
+
+<p><b>應用</b>：確認中線趨勢</p>
+
+<ul>
+<li>突破頸線 + 站上季線：趨勢轉強</li>
+<li>跌破頸線 + 跌破長期均線：空頭確認</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>型態學最怕「看圖說故事」——看到什麼就硬套成型態。這篇整理的重點在於：</p>
+
+<p>1. <b>成交量是關鍵</b>：沒有放量確認的突破，十有八九是假的。這跟之前學過的「量價關係」完全吻合。</p>
+
+<p>2. <b>目標價公式要記住</b>：</p>
+
+<ul>
+<li>反轉向上：目標 = 頸線 + (頸線 - 底部)</li>
+</ul>
+
+<p>這比憑感覺猜漲跌有依據多了。</p>
+
+<p>3. <b>不要單獨用型態</b>：要搭配均線、RSI、MACD一起看。型態是方向，指標是確認。</p>
+
+<p>4. <b>時間對稱性很重要</b>：左肩3週，右肩最好不要只有3天。失衡的型態容易失敗。</p>
+
+<p>5. <b>假突破/假跌破</b>：最常出現在型態未確認 + 無量突破的情況。寧可等確認後進場，不要搶在型態完成前。</p>
+
+<p>單根K線型態（錘形線、吞噬等）是型態學的基石，多根K線組合（W底、頭肩型）是進階。先搞懂單根，再玩組合。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+
+<h2>第 2 回合學習：技術分析：布林通道實戰操作</h2>
+
+<p><b>學習時間</b>：02:13</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://quantpass.org/bband/">布林通道完整教學 - 量化通 QuantPass</a></li>
+<li><a href="https://rich01.com/what-is-bollinger-band/">布林通道教學 - 市場先生</a></li>
+<li><a href="https://www.mitrade.com/zh/insights/others/technical-analysis/bollinger-bands-investment">布林通道10型態教學 - Mitrade</a></li>
+</ul>
+
+<hr>
+
+<h2>布林通道是什麼</h2>
+
+<p><b>定義</b>：由 John Bollinger 在 1980 年代發明的技術指標，用三條線組成的帶狀通道顯示價格波動範圍。</p>
+
+<p><b>三條線組成</b>：</p>
+
+<ul>
+<li><b>中軌</b>：20 日移動平均線（20MA），反映價格整體趨勢</li>
+<li><b>上軌</b>：中軌 + 2 個標準差（壓力線）</li>
+<li><b>下軌</b>：中軌 - 2 個標準差（支撐線）</li>
+</ul>
+
+<p><b>公式計算</b>：</p>
+
+<pre><code>中軌 = 20 日收盤價總和 ÷ 20
+上軌 = 中軌 + 2 × 標準差
+下軌 = 中軌 - 2 × 標準差</code></pre>
+
+<p><b>統計原理</b>：根據常態分配，95% 的價格會落在 2 個標準差範圍內，只有 5% 機率會跑到通道外。</p>
+
+<hr>
+
+<h2>兩大操作派別</h2>
+
+<h3>1. 逆勢觀點（均值回歸）</h3>
+
+<p><b>核心邏輯</b>：價格會回歸均值，95% 機率落在通道內，上下軌是極端價格。</p>
+
+<p><b>適用</b>：短週期、盤整市場</p>
+
+<p><b>參數</b>：N=20, K=2 或更大標準差倍數</p>
+
+<p><b>操作方式</b>：</p>
+
+<ul>
+<li>價格觸及上軌 → 考慮賣出</li>
+<li>價格觸及下軌 → 考慮買進</li>
+<li>價格回歸中軌時平倉</li>
+</ul>
+
+<h3>2. 順勢觀點（突破追勢）</h3>
+
+<p><b>核心邏輯</b>：當大趨勢發生時，股價會大幅偏離舊有通道區間，沿通道上沿或下沿發展。</p>
+
+<p><b>適用</b>：長週期、趨勢明確市場</p>
+
+<p><b>參數</b>：N 更長（如 50），通道更窄</p>
+
+<p><b>操作方式</b>：</p>
+
+<ul>
+<li>價格突破上軌且通道擴張 → 順勢做多</li>
+<li>價格跌破下軌且通道擴張 → 順勢做空</li>
+</ul>
+
+<hr>
+
+<h2>六種基本買賣訊號</h2>
+
+<table><thead><tr><th>訊號</th><th>判斷</th><th>操作</th></tr></thead><tbody><tr><td>股價由下往上穿越下線</td><td>可能短期反轉</td><td>觀察</td></tr><tr><td>股價由下往上穿越中線</td><td>可能加速向上</td><td>買進訊號</td></tr><tr><td>股價在中線與上線之間</td><td>多頭行情</td><td>持有多單</td></tr><tr><td>股價由上往下跌破上線</td><td>上漲趨勢結束</td><td>賣出訊號</td></tr><tr><td>股價由上往下跌破中線</td><td>可能下跌</td><td>賣出訊號</td></tr><tr><td>股價在中線與下線之間</td><td>空頭行情</td><td>持有空單</td></tr></tbody></table>
+
+<hr>
+
+<h2>十種布林通道型態</h2>
+
+<h3>1. 布林通道收縮（Bollinger Squeeze）</h3>
+
+<p><b>特徵</b>：上下軌極度收窄，波動性降至低點，市場進入盤整。</p>
+
+<p><b>實戰操作</b>：</p>
+
+<ul>
+<li>通道持續收窄 → 關注突破方向</li>
+<li>價格帶量突破上軌 → 順勢做多</li>
+<li>價格帶量跌破下軌 → 順勢做空</li>
+<li>止損設在突破起點或中軌</li>
+</ul>
+
+<p><b>注意</b>：收縮本身無法判斷突破方向，需等待確認。</p>
+
+<h3>2. 布林通道擴張（Bollinger Expansion）</h3>
+
+<p><b>特徵</b>：上下軌大幅張開，波動性急劇增加，伴隨強勢趨勢啟動。</p>
+
+<p><b>實戰操作</b>：</p>
+
+<ul>
+<li>確認價格趨勢方向（中軌之上做多、之下做空）</li>
+<li>價格穩定在中軌之上且通道擴張 → 買入訊號</li>
+<li>價格穩定在中軌之下且通道擴張 → 賣出訊號</li>
+</ul>
+
+<h3>3. 上軌觸碰或突破</h3>
+
+<p><b>特徵</b>：價格觸及或突破上軌，顯示超買或強勢。</p>
+
+<p><b>實戰判斷</b>：</p>
+
+<ul>
+<li><b>強勢上漲趨勢</b>：價格持續沿上軌運行 → 趨勢延續，可持有</li>
+<li><b>震盪或趨勢末期</b>：觸及上軌 → 可能回調，賣出或做空時機</li>
+</ul>
+
+<p><b>注意</b>：不能簡單將上軌突破等同於買入訊號，需結合趨勢判斷。</p>
+
+<h3>4. 下軌觸碰或突破</h3>
+
+<p><b>特徵</b>：價格觸及或跌破下軌，顯示超賣或強勢下跌。</p>
+
+<p><b>實戰判斷</b>：</p>
+
+<ul>
+<li><b>強勢下跌趨勢</b>：價格持續沿下軌運行 → 趨勢延續</li>
+<li><b>震盪或下跌末期</b>：觸及下軌 → 可能反彈，買進時機</li>
+</ul>
+
+<h3>5. W型底部（W-Bottom）</h3>
+
+<p><b>特徵</b>：在下軌附近形成「W」雙底，第二個底部高於第一個。</p>
+
+<p><b>實戰操作</b>：</p>
+
+<ul>
+<li>第一個底部觸及下軌</li>
+<li>第二個底部更高 + 動量指標（RSI/MACD）底背離</li>
+<li>價格突破頸線（兩個低點之間的反彈高點）→ 做多訊號</li>
+</ul>
+
+<h3>6. M型頂部（M-Top）</h3>
+
+<p><b>特徵</b>：在上軌附近形成「M」雙頂，第二個頂部低於第一個。</p>
+
+<p><b>實戰操作</b>：</p>
+
+<ul>
+<li>第一個頂部觸及上軌</li>
+<li>第二個頂部更低 + 動量指標頂背離</li>
+<li>價格跌破頸線 → 做空或離場訊號</li>
+</ul>
+
+<h3>7. 走廊運行（Walking the Bands）</h3>
+
+<p><b>特徵</b>：價格緊貼上軌或下軌持續運行，趨勢極端強勁。</p>
+
+<p><b>實戰操作</b>：</p>
+
+<ul>
+<li>沿上軌運行 → 強烈上漲，順勢持有</li>
+<li>沿下軌運行 → 強烈下跌，順勢做空</li>
+<li>不要逆勢猜頂摸底</li>
+<li>價格顯著脫離軌道回調至中軌 → 動能可能減弱</li>
+</ul>
+
+<h3>8. 布林反轉（Bollinger Bounce）</h3>
+
+<p><b>特徵</b>：價格觸及上下軌後像彈簧般快速反彈。</p>
+
+<p><b>實戰操作</b>：</p>
+
+<ul>
+<li>常見於盤整市場</li>
+<li>觸及下軌後反彈 → 買進訊號</li>
+<li>觸及上軌後回落 → 賣出訊號</li>
+<li>結合成交量或 RSI 確認</li>
+<li><b>不適用於強勢趨勢</b>（容易假突破）</li>
+</ul>
+
+<h3>9. 布林假突破（Bollinger Fakeout）</h3>
+
+<p><b>特徵</b>：價格短暫突破通道邊界後迅速反向回歸。</p>
+
+<p><b>識別方法</b>：</p>
+
+<ul>
+<li>以較小動能（縮量）刺穿軌道</li>
+<li>無法維持，快速收盤於通道內</li>
+<li>原突破方向力量衰竭</li>
+</ul>
+
+<p><b>實戰操作</b>：</p>
+
+<ul>
+<li>假突破後結合 K 線反轉信號（Pin Bar、吞沒）</li>
+<li>順勢反向操作</li>
+<li>目標看向通道另一側或中軌</li>
+</ul>
+
+<h3>10. 收縮性突破（Breakout After Squeeze）</h3>
+
+<p><b>特徵</b>：通道持續收窄後，價格帶量強勢突破。</p>
+
+<p><b>實戰操作</b>（高勝率訊號）：</p>
+
+<ul>
+<li>等待通道極度收縮</li>
+<li>確認帶量突破方向</li>
+<li>順勢入場</li>
+<li>止損設在突破起點或中軌</li>
+</ul>
+
+<hr>
+
+<h2>參數設定實戰</h2>
+
+<p><b>預設參數</b>：N=20, K=2（創始人設計，市場最常用）</p>
+
+<p><b>參數調整參考</b>：</p>
+
+<table><thead><tr><th>交易時間</th><th>N 參數</th><th>K 參數</th><th>特性</th></tr></thead><tbody><tr><td>短線</td><td>10-20</td><td>2-2.5</td><td>敏感度高，訊號多</td></tr><tr><td>日線（預設）</td><td>20</td><td>2</td><td>平衡敏感度與穩定性</td></tr><tr><td>周線及長線</td><td>20-50</td><td>2-3</td><td>減少噪音，方便趨勢判斷</td></tr></tbody></table>
+
+<p><b>核心建議</b>：使用預設參數 20 和 2，原因：<br>
+1. 避免過度擬合<br>
+2. 市場最多人使用的參數，會自我強化</p>
+
+<hr>
+
+<h2>布林通道優缺點</h2>
+
+<p><b>優點</b>：</p>
+
+<ul>
+<li>三條線都可作為交易訊號參考</li>
+<li>清楚反映安全震盪區間</li>
+<li>可用於設定停損停利點位</li>
+<li>結合均線和標準差，資訊豐富</li>
+</ul>
+
+<p><b>缺點</b>：</p>
+
+<ul>
+<li>市場劇烈震盪時可能無法及時反應</li>
+<li>短週期下帶寬變化大，參考價值降低</li>
+<li>開盤跳空會造成帶寬突然放大</li>
+<li>無法判斷未來價格走勢方向（需搭配基本面）</li>
+<li>不能單獨使用，需搭配其他指標（MACD、RSI、成交量）</li>
+</ul>
+
+<hr>
+
+<h2>實戰心法</h2>
+
+<h3>趨勢判斷</h3>
+
+<ul>
+<li>價格在中軌與上軌之間 → 多頭趨勢</li>
+<li>價格在中軌與下軌之間 → 空頭趨勢</li>
+<li>中軌方向向上 → 上漲趨勢</li>
+<li>中軌方向向下 → 下跌趨勢</li>
+</ul>
+
+<h3>入場時機</h3>
+
+<ul>
+<li>上下軌收窄時入場 → 降低浮虧風險</li>
+<li>等待突破確認 → 順勢操作</li>
+<li>結合成交量確認 → 提高勝率</li>
+</ul>
+
+<h3>風險管理</h3>
+
+<ul>
+<li>不逆勢交易（以中軌判斷趨勢）</li>
+<li>價格突破下軌不追空（潛在反彈風險）</li>
+<li>觸及上軌不追高（可能回調）</li>
+<li>搭配基本面判斷未來方向</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>布林通道的精華在於「波動性」的概念。它不是告訴你價格「會」往哪裡走，而是告訴你價格「現在」相對於平均的位置。</p>
+
+<p>最實用的場景是：<br>
+1. <b>通道收縮後的突破</b>：這是高勝率訊號，市場從盤整理轉趨勢<br>
+2. <b>走廊運行</b>：強勢股會沿著上軌跑，不要隨便摸頂<br>
+3. <b>假突破辨識</b>：縮量突破後快速回歸通道，是反向操作機會</p>
+
+<p>關鍵心法：布林通道是「波動率指標」不是「方向指標」。它告訴你價格是否偏離均值，但方向要靠趨勢（中軌方向）和基本面來判斷。</p>
+
+<p>另外，不要隨便改參數。20 和 2 是市場共識，共識越強，指標越有效。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+
+<h2>第 3 回合學習：技術分析：ATR 真實波動範圍</h2>
+
+<p><b>學習時間</b>：03:23</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://quantpass.org/atr/">ATR指標完整教學 - 量化通 QuantPass</a></li>
+<li><a href="https://www.oanda.com/bvi-ft/lab-education/technical_analysis/atr/">ATR指標教學：止損與部位計算 - OANDA Lab</a></li>
+<li><a href="https://www.tejwin.com/insight/tquant-lab-atr損失規避策略/">ATR 損失規避策略 - TEJ台灣經濟新報</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>ATR 基本概念</h3>
+
+<p><b>是什麼</b>：ATR（Average True Range，真實平均波動區間）是由技術分析大師 J. Welles Wilder 於 1970 年代開發的波動性指標，用來衡量價格在一段時間內的「真實」波動幅度。</p>
+
+<p><b>為什麼叫「真實」</b>：因為 TR（True Range）計算時納入了跳空因素，比單純用最高價減最低價更能反映實際波動。</p>
+
+<h3>TR（True Range）計算公式</h3>
+
+<p><b>三種情況取最大值</b>：<br>
+1. 當日最高價 - 當日最低價<br>
+2. |當日最高價 - 前日收盤價|（跳空高開）<br>
+3. |當日最低價 - 前日收盤價|（跳空低開）</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：某股票前日收盤 100 元，今日最高 108 元、最低 105 元</li>
+<li>TR = max(108-105=3, |108-100|=8, |105-100|=5) = 8 元</li>
+<li>因為跳空高開，TR 比日內波動 3 元更大</li>
+</ul>
+
+<h3>ATR 公式</h3>
+
+<p><b>計算方式</b>：</p>
+
+<pre><code>ATR = [(前一天 ATR × (n-1)) + 當天 TR] / n</code></pre>
+
+<p><b>參數設定</b>：</p>
+
+<ul>
+<li>預設週期：14 天</li>
+<li>建議搭配 20 日均線觀察</li>
+</ul>
+
+<hr>
+
+<h2>實戰應用</h2>
+
+<h3>一、波動性停損</h3>
+
+<p><b>怎麼做</b>：<br>
+1. 進場時記錄當時 ATR 值<br>
+2. 停損點 = 買進價 - k × ATR<br>
+3. k 值依波動度調整（波動大用大 k，波動小用小 k）</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：台積電 600 元買進，ATR = 15 元</li>
+<li>設定：k = 2（保守）</li>
+<li>停損點 = 600 - 2×15 = 570 元</li>
+<li>含義：股價跌破 570 元才停損，避免被正常波動震出</li>
+</ul>
+
+<p><b>棘輪止損法（移動停損）</b>：</p>
+
+<ul>
+<li>持倉期間，每增加 1 倍 ATR 獲利，上調停損</li>
+<li>公式：新停損 = 最近低點 + (持倉天數 × 0.05 × ATR)</li>
+<li>目的：鎖定浮動盈利，讓利潤奔跑</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：GBPUSD 在 1.30598 做多，ATR = 0.0072</li>
+<li>初始停損：1.30598 - 1×ATR = 1.29878</li>
+<li>持倉 20 天後，價格上漲</li>
+<li>調整後停損：1.29878 + (20×0.05×0.0072) = 1.30598</li>
+<li>若途中形成新低點 1.29822，則停損 = 1.29822 + (20×0.05×ATR)</li>
+</ul>
+
+<h3>二、資金管理（海龜交易法則）</h3>
+
+<p><b>怎麼做</b>：<br>
+1. 計算每個標的「美元計價波動性」= 點值 × ATR<br>
+2. 建倉單位 = 帳戶資金 × 1% ÷ 美元計價波動性</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>帳戶：200,000 美元</li>
+<li>GBPUSD：ATR = 0.0106，點值 = 10 美元/點 → 波動性 = 1060 美元</li>
+<li>NZDUSD：ATR = 0.0053，點值 = 10 美元/點 → 波動性 = 530 美元</li>
+<li>GBPUSD 建倉單位 = 2000 ÷ 1060 = 1.88 手</li>
+<li>NZDUSD 建倉單位 = 2000 ÷ 530 = 3.77 手</li>
+<li>結果：波動性大的標的部位小，波動性小的部位大</li>
+</ul>
+
+<h3>三、布林通道 + ATR 策略（TEJ 實測）</h3>
+
+<p><b>策略規則</b>：<br>
+1. 買進：收盤價跌破布林下軌<br>
+2. 加碼：跌破下軌 + 未跌破停損點（停損點 = 收盤價 - k×ATR）<br>
+3. 賣出：突破布林上軌<br>
+4. 停損：跌破停損點</p>
+
+<p><b>回測結果（台積電 2022-2023）</b>：</p>
+
+<ul>
+<li>實驗組（有 ATR 停損）：夏普比率 0.9，最大回撤 2.8%</li>
+<li>對照組（無停損）：夏普比率 0.1，最大回撤 7.14%</li>
+<li>結論：ATR 停損有效控制風險</li>
+</ul>
+
+<hr>
+
+<h2>ATR 優缺點</h2>
+
+<p><b>優點</b>：</p>
+
+<ul>
+<li>真實反映波動，納入跳空因素</li>
+<li>適用多種市場和時間週期</li>
+<li>新手也能理解</li>
+<li>可用於停損、停利、部位計算</li>
+</ul>
+
+<p><b>缺點</b>：</p>
+
+<ul>
+<li>低波動市場效果差（訊號不明顯）</li>
+<li>基於歷史數據，有滯後性</li>
+<li>不提供方向訊號（只告訴你波動多大）</li>
+<li>需要搭配其他指標使用</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>波動較大的市場</li>
+<li>趨勢行情</li>
+<li>需要動態調整停損時</li>
+</ul>
+
+<p><b>不適用時機</b>：</p>
+
+<ul>
+<li>極度平穩的盤整市</li>
+<li>極短線當沖（波動太小）</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>之前學了一堆停損方法（K 線停損、均線停損、支阻停損），但都沒講到「停損要設多遠」這個關鍵問題。ATR 解答了這個問題：<b>停損距離 = k × ATR</b>，讓停損隨市場波動自動調整，而不是憑感覺設固定百分比。</p>
+
+<p>最實用的是<b>棘輪止損法</b>，隨著價格往有利方向移動，逐步上調停損，既能保護盈利又不會太早被洗出場。這比死板板的「賺 10% 就停利」靈活多了。</p>
+
+<p>TEJ 的回測數據很有說服力：有 ATR 停損的夏普比率從 0.1 拉到 0.9，最大回撤從 7% 降到 3%。<b>風險調整後的報酬才是真理</b>，不是只看賺多少。</p>
+
+<p>下次要試著把 ATR 停損整合到現有的選股策略裡。布林通道買進、ATR 設停損，這個組合可以研究。</p>
+
+<hr>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+
+<h2>第 4 回合學習：技術分析：SAR拋物線指標</h2>
+
+<p><b>學習時間</b>：04:33</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.oanda.com/bvi-ft/lab-education/technical_analysis/parabolic/">顯示逆轉交易訊號的拋物線 - OANDA Lab</a></li>
+<li><a href="https://winsmart.tw/en/online_teaching/sar%E6%8B%8F%E7%89%A9%E7%B7%9A%E6%8C%87%E6%A8%99/">SAR拋物線指標：帶你在股票波段與期貨交易中狠狠獲利！ - WINSMART</a></li>
+<li><a href="https://www.pfcf.com.tw/product/detail/2627">技術分析-拋物線SAR指標 - 統一期貨</a></li>
+</ul>
+
+<hr>
+
+<h2>SAR拋物線指標核心概念</h2>
+
+<h3>什麼是SAR指標？</h3>
+
+<p><b>是什麼</b>：SAR（Stop and Reverse）指標由技術分析大師Wells Wilder發明，是一種趨勢追蹤指標，透過拋物線形狀的點位顯示停損與反轉位置。</p>
+
+<p><b>核心邏輯</b>：</p>
+
+<ul>
+<li>Stop：停損出場</li>
+<li>Reverse：反手做空（或做多）</li>
+<li>指標會自動追蹤價格，提供移動停利參考</li>
+</ul>
+
+<p><b>發明者背景</b>：Wells Wilder還發明了ATR、RSI、ADX、DMI等知名指標，SAR是其重要發明之一。</p>
+
+<hr>
+
+<h2>SAR指標公式與計算</h2>
+
+<h3>拋物線公式</h3>
+
+<p><b>買進訊號（多方SAR）</b>：</p>
+
+<pre><code>SAR今 = SAR昨 + AF × (最高價n日內 - SAR昨)</code></pre>
+
+<ul>
+<li>SAR起始點：n日內最低價</li>
+<li>AF起始值：0.02，每創新高加0.02，最大0.2</li>
+</ul>
+
+<p><b>賣出訊號（空方SAR）</b>：</p>
+
+<pre><code>SAR今 = SAR昨 + AF × (SAR昨 - 最低價n日內)</code></pre>
+
+<ul>
+<li>SAR起始點：n日內最高價</li>
+<li>AF起始值：0.02，每創新低加0.02，最大0.2</li>
+</ul>
+
+<h3>參數設定</h3>
+
+<p><b>n值（通常10）</b>：</p>
+
+<ul>
+<li>n值越大，SAR距離K線越遠，越不容易觸及</li>
+<li>長週期適合波段操作，短週期適合當沖</li>
+</ul>
+
+<p><b>AF加速因數</b>：</p>
+
+<ul>
+<li>預設0.02，最高0.2</li>
+<li>AF越大→圖形越貼近價格→越敏感</li>
+<li>AF越小→圖形越遠離價格→越不敏感</li>
+<li>調整為0.05會跟得更緊、反應更快</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>股價100元，SAR在95元（距離5%）</li>
+<li>AF=0.02，行情往上，SAR慢慢跟上到97元</li>
+<li>AF=0.05，SAR會更快跟上到98元附近</li>
+</ul>
+
+<hr>
+
+<h2>SAR指標解讀方法</h2>
+
+<h3>基本判讀</h3>
+
+<p><b>多方訊號（紅點）</b>：</p>
+
+<ul>
+<li>紅點出現在K線下方→上升趨勢</li>
+<li>紅點接觸到K線→多單出場訊號（翻空）</li>
+</ul>
+
+<p><b>空方訊號（綠點）</b>：</p>
+
+<ul>
+<li>綠點出現在K線上方→下降趨勢</li>
+<li>綠點接觸到K線→空單出場訊號（翻多）</li>
+</ul>
+
+<h3>多空翻轉判斷</h3>
+
+<p><b>翻多進場</b>：</p>
+
+<ul>
+<li>價格向上突破綠色SAR線（空方拋物線）</li>
+<li>綠點變紅點，SAR轉到K線下方</li>
+</ul>
+
+<p><b>翻空進場</b>：</p>
+
+<ul>
+<li>價格向下跌破紅色SAR線（多方拋物線）</li>
+<li>紅點變綠點，SAR轉到K線上方</li>
+</ul>
+
+<hr>
+
+<h2>SAR指標實戰操作</h2>
+
+<h3>進場三步驟</h3>
+
+<p><b>步驟一：等待翻轉訊號</b></p>
+
+<ul>
+<li>行情下跌後，等待價格突破綠色SAR</li>
+<li>撈底式進場：在下跌過程中持續觀察，看到翻多才進場</li>
+</ul>
+
+<p><b>步驟二：進場設停損</b></p>
+
+<ul>
+<li>多單進場後立刻設停損</li>
+<li>停損參考：可設在SAR位置或根據ATR設定（如ATR的20-25%）</li>
+<li>實例：最近波動240點，停損設50-60點</li>
+</ul>
+
+<p><b>步驟三：移動停利</b></p>
+
+<ul>
+<li>行情走出去，SAR隨價格上升</li>
+<li>紅點持續跟進，直到價格拉回打到SAR才出場</li>
+</ul>
+
+<h3>避開盤整陷阱</h3>
+
+<p><b>問題</b>：SAR在盤整盤會不斷翻轉，造成連續停損</p>
+
+<p><b>解決方法一：延遲啟動停利</b></p>
+
+<ul>
+<li>設定條件：移動停利價格超過進場成本價後才開始移動</li>
+<li>例子：股票100元買進，停利線等到價格超過100元才開始跟進</li>
+</ul>
+
+<p><b>解決方法二：區間K棒高低點</b></p>
+
+<ul>
+<li>用3根K棒高低點加5%當作出場條件</li>
+<li>比單純用SAR更穩定，避免盤整區被掃出場</li>
+</ul>
+
+<hr>
+
+<h2>SAR指標三大使用原則</h2>
+
+<h3>原則一：日K比小週期準</h3>
+
+<p><b>實務經驗</b>：</p>
+
+<ul>
+<li>日K層級SAR較可靠</li>
+<li>1分K、5分K因雜訊多，SAR容易被假突破</li>
+<li>小週期應優先看K棒型態，SAR為輔</li>
+</ul>
+
+<h3>原則二：適合趨勢盤，不適合盤整盤</h3>
+
+<p><b>特性</b>：</p>
+
+<ul>
+<li>趨勢明確時，SAR能「一波吃到底」</li>
+<li>盤整時會反覆翻轉，造成連續虧損</li>
+<li>需搭配趨勢判斷工具過濾盤整</li>
+</ul>
+
+<h3>原則三：參數可調整快慢</h3>
+
+<p><b>靈敏度調整</b>：</p>
+
+<ul>
+<li>AF=0.01：較慢，適合長波段</li>
+<li>AF=0.02（預設）：標準設定</li>
+<li>AF=0.05：較快，適合短線或期貨當沖</li>
+</ul>
+
+<hr>
+
+<h2>SAR搭配其他指標</h2>
+
+<h3>搭配移動平均線MA</h3>
+
+<p><b>方法</b>：</p>
+
+<ul>
+<li>均線多頭排列+SAR翻多→做多</li>
+<li>均線空頭排列+SAR翻空→做空</li>
+<li>均線糾結盤整時→不依SAR訊號進場</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>5日線>10日線>20日線（多頭排列）</li>
+<li>SAR從空翻多→進場做多</li>
+<li>做多後SAR翻空→只做「多單出場」，不做空</li>
+</ul>
+
+<h3>搭配MACD</h3>
+
+<p><b>方法</b>：</p>
+
+<ul>
+<li>MACD金叉+SAR翻多→買進</li>
+<li>MACD死叉+SAR翻空→賣出</li>
+<li>利用MACD確認趨勢方向，SAR提供進出點</li>
+</ul>
+
+<h3>搭配布林通道</h3>
+
+<p><b>方法</b>：</p>
+
+<ul>
+<li>通道寬幅收斂→盤整盤，暫停使用SAR</li>
+<li>通道寬幅放大→趨勢啟動，開始使用SAR</li>
+<li>用布林通道判斷是否進入趨勢盤</li>
+</ul>
+
+<hr>
+
+<h2>SAR實戰案例</h2>
+
+<h3>股票波段案例（鴻海）</h3>
+
+<p><b>進場</b>：</p>
+
+<ul>
+<li>行情下跌，SAR綠點接近K線</li>
+<li>價格突破綠色SAR，紅點出現在K線下方</li>
+<li>成本約在起漲點附近</li>
+</ul>
+
+<p><b>持有</b>：</p>
+
+<ul>
+<li>紅色SAR點隨價格上升</li>
+<li>行情橫盤整理時，停利線保持距離（用成本價當門檻）</li>
+<li>不參與盤整區的進出場</li>
+</ul>
+
+<p><b>出場</b>：</p>
+
+<ul>
+<li>價格拉回打到紅色SAR</li>
+<li>或用區間K棒高低點+5%設定</li>
+</ul>
+
+<p><b>實績</b>：</p>
+
+<ul>
+<li>風險約2萬元</li>
+<li>獲利約24萬元</li>
+<li>賺賠比10倍</li>
+</ul>
+
+<h3>期貨當沖案例（台指期）</h3>
+
+<p><b>設定</b>：</p>
+
+<ul>
+<li>週期：1分K</li>
+<li>AF參數：調為0.05（跟得更緊）</li>
+<li>停損：參考ATR的20-25%，約50-60點</li>
+<li>移動停利：6根K棒高低點+50點</li>
+</ul>
+
+<p><b>操作</b>：</p>
+
+<ul>
+<li>價格突破綠色SAR→進場做多</li>
+<li>設定初始停損</li>
+<li>行情走出去後，停利線開始跟進</li>
+<li>盤整區不進出，抱住部位</li>
+<li>最終獲利2萬6千元</li>
+</ul>
+
+<hr>
+
+<h2>SAR指標優缺點</h2>
+
+<h3>優點</h3>
+
+<p>1. <b>自帶停損停利</b>：不用手動計算，指標自動追蹤<br>
+2. <b>趨勢吃到底</b>：在明顯趨勢中能完整抱住波段<br>
+3. <b>客觀明確</b>：翻紅翻綠一目了然，沒有模糊空間<br>
+4. <b>反手機制</b>：出場後自動反手，不錯過反方向行情</p>
+
+<h3>缺點</h3>
+
+<p>1. <b>盤整必虧</b>：橫盤時會反覆翻轉，連續停損<br>
+2. <b>落後指標</b>：必須等價格突破才翻轉，無法買在最低點<br>
+3. <b>參數敏感</b>：不同參數效果差異大，需調整<br>
+4. <b>小週期失效</b>：短線太多雜訊，SAR容易誤判</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>SAR指標的核心不是參數或公式，而是「<b>停損+反手</b>」的交易邏輯。這跟之前學過的「移動停利」概念一樣，但SAR更極端——永遠持有部位，多空不斷翻轉。</p>
+
+<p>這讓我想到一個關鍵問題：<b>如果永遠持有部位，那什麼時候該停手？</b></p>
+
+<p>答案很清楚：SAR不適合盤整盤。文章中提到「雙八盤」會讓SAR不斷翻轉，這時候應該用其他條件過濾，而不是硬跟SAR訊號進出。結合之前學的布林通道、均線排列，就能判斷現在是不是趨勢盤。</p>
+
+<p>另外，WINSMART文章提到一個聰明做法：「<b>等移動停利價超越成本價才開始移動</b>」。這招可以直接避開盤整區被洗出場的問題——盤整時你還在成本附近震盪，停利線根本不動。</p>
+
+<p>最後，SAR的「反手」概念很重要。不是「停損出場就算了」，而是「停損出場+反手做空（或做多）」。這樣就算第一次看錯方向，後面行情反轉時你已經在對的方向了。這種<b>「永遠保持部位」</b>的思維，跟「選擇性持有」很不一樣，需要更大的心理資本來承受連續翻轉的虧損。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+
+<h2>第 5 回合學習：技術分析：支撐壓力判斷</h2>
+
+<p><b>學習時間</b>：05:43</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://learningpa.cc/support_resistance/">K棒如何看出支撐壓力？看懂它讓你先贏一半！</a></li>
+<li><a href="https://www.oanda.com/bvi-ft/lab-education/forex/surport_resistance_line/">「支撐線」與「壓力線」是什麼？檢視方法介紹</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>一、支撐壓力基本定義</h3>
+
+<p><b>是什麼</b>：</p>
+
+<ul>
+<li><b>支撐（Support）</b>：價格跌不破的價位，像地板一樣托住價格</li>
+<li><b>壓力（Resistance）</b>：價格漲不破的價位，像天花板一樣壓住價格</li>
+</ul>
+
+<p><b>形成原因</b>：</p>
+
+<ul>
+<li>有一群人或主力的成本在這個價位</li>
+<li>不希望價格攻破，否則會賠錢或白費工</li>
+<li>也是市場心理關卡：「一百大關」、「兩百大關」</li>
+</ul>
+
+<p><b>供需關係</b>：</p>
+
+<ul>
+<li>支撐：買方 > 賣方，價格容易上升</li>
+<li>壓力：賣方 > 買方，價格容易下跌</li>
+</ul>
+
+<hr>
+
+<h3>二、如何找出支撐壓力</h3>
+
+<h4>方法一：K棒影線與實體判斷</h4>
+
+<p><b>怎麼做</b>：<br>
+1. <b>影線法</b>：觀察K棒下影線，找出價格跌不破的價位<br>
+2. <b>實體法</b>：觀察K棒實體，找出價格漲不破的價位<br>
+3. <b>綜合法</b>：兩個都看，找出上下都有阻擋的區間</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：某股票在12.65元附近，K棒都沒有低於這個價格</li>
+<li>判斷：12.65元是支撐</li>
+<li>情境：某股票27元附近，K棒都沒超越這個價格</li>
+<li>判斷：27元是壓力</li>
+</ul>
+
+<h4>方法二：兩根K棒連線法</h4>
+
+<p><b>怎麼做</b>：<br>
+1. 找到至少2波的低點（畫支撐線）<br>
+2. 找到至少2波的高點（畫壓力線）<br>
+3. 將這些點連線，向右延伸</p>
+
+<p><b>有力程度判斷</b>：</p>
+
+<ul>
+<li>越多K棒連成的支撐壓力越有力</li>
+<li>觸及次數越多越可靠</li>
+<li>市場共識越強</li>
+</ul>
+
+<p><b>適用時機</b>：快速判斷、波段操作</p>
+
+<h4>方法三：跳空缺口法</h4>
+
+<p><b>怎麼做</b>：<br>
+1. 找出K棒之間的空白區間<br>
+2. 跳空下方的缺口可能形成支撐<br>
+3. 跳空上方的缺口可能形成壓力</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：兩根K棒之間有明顯空白</li>
+<li>判斷：空白區間形成有力支撐或壓力</li>
+</ul>
+
+<p><b>適用時機</b>：跳空型態、強勢趨勢</p>
+
+<hr>
+
+<h3>三、支撐壓力突破後的反應</h3>
+
+<h4>突破後的走勢</h4>
+
+<p><b>是什麼</b>：越有力的支撐壓力，被突破後漲跌幅度越大</p>
+
+<p><b>怎麼做</b>：<br>
+1. 觀察盤整理間長度：盤整越久，突破後衝勁越大<br>
+2. 觀察K棒數量：越多K棒連成的支撐壓力，突破後威力越大<br>
+3. 預期突破後的幅度</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：某股4-5月盤整理1.5個月，突破後漲300元</li>
+<li>情境：某股4-8月盤整理4個月，突破後半個月漲300元（更猛）</li>
+<li>判斷：盤整理越久，突破後爆發力越強</li>
+</ul>
+
+<h4>支撐變壓力、壓力變支撐</h4>
+
+<p><b>是什麼</b>：突破後角色互換</p>
+
+<p><b>怎麼做</b>：<br>
+1. 壓力被突破後 → 變成支撐（上方買盤成本區）<br>
+2. 支撐被跌破後 → 變成壓力（下方套牢區）<br>
+3. 觀察突破後的回測，尋找進出場點</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：股價突破100元壓力後</li>
+<li>操作：回測100元時買進（壓力變支撐）</li>
+<li>情境：股價跌破50元支撐後</li>
+<li>操作：反彈至50元時賣出（支撐變壓力）</li>
+</ul>
+
+<hr>
+
+<h3>四、支撐壓力找買賣點策略</h3>
+
+<h4>支撐線買點</h4>
+
+<p><b>怎麼做</b>：<br>
+1. 找出至少2波低點連成的支撐線<br>
+2. 價格觸及支撐線不跌破 → 準備進場<br>
+3. 價格漲破支撐線確認 → 買進<br>
+4. 未跌破支撐線 → 繼續持有</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：股價在50-60元區間盤整理</li>
+<li>操作：回測50元不破，買進</li>
+<li>停損：跌破50元</li>
+</ul>
+
+<p><b>適用時機</b>：區間操作、低接買點</p>
+
+<h4>壓力線賣點</h4>
+
+<p><b>怎麼做</b>：<br>
+1. 找出至少2波高點連成的壓力線<br>
+2. 價格觸及壓力線無法突破 → 準備賣出<br>
+3. 價格下跌確認 → 賣出或作空<br>
+4. 突破壓力線 → 反手作多</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：股價在100元壓力區三次無法突破</li>
+<li>操作：反彈至100元附近賣出</li>
+<li>停損：突破100元</li>
+</ul>
+
+<p><b>適用時機</b>：區間操作、高檔賣點</p>
+
+<hr>
+
+<h3>五、支撐壓力判斷注意事項</h3>
+
+<table><thead><tr><th>注意點</th><th>說明</th></tr></thead><tbody><tr><td>觸及次數</td><td>觸及越多越可靠</td></tr><tr><td>盤整理間</td><td>盤整理越久突破越有力</td></tr><tr><td>心理關卡</td><td>整數關卡（100、200）壓力大</td></tr><tr><td>角色互換</td><td>突破後支撐壓力互換</td></tr><tr><td>測試確認</td><td>觸及後快速回彈是測試，不是突破</td></tr></tbody></table>
+
+<hr>
+
+<h2>實戰心法</h2>
+
+<h3>三種找支撐壓力的方法</h3>
+
+<p>1. <b>影線實體法</b>：看K棒跌不破/漲不破的價位<br>
+2. <b>連線法</b>：至少2波低點/高點連線<br>
+3. <b>跳空法</b>：缺口區間形成有力支撐壓力</p>
+
+<h3>突破後的判斷</h3>
+
+<ul>
+<li><b>真突破</b>：突破後沒有回彈，繼續保持方向</li>
+<li><b>測試</b>：觸及後快速回彈，只是在測試關卡</li>
+</ul>
+
+<h3>角色互換運用</h3>
+
+<ul>
+<li>壓力突破後 → 變成支撐（買點）</li>
+<li>支撐跌破後 → 變成壓力（賣點）</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>支撐壓力是技術分析最基礎但最重要的工具。之前學了一大堆指標（KD、RSI、MACD、布林通道），回頭看才發現支撐壓力才是所有型態學的核心。</p>
+
+<p><b>關鍵體悟</b>：<br>
+1. <b>簡單但有效</b>：兩根K棒就能畫，越多人認同越有力<br>
+2. <b>盤整理久爆發越猛</b>：被困住的彈力球比喻很精準<br>
+3. <b>角色互換是精髓</b>：壓力變支撐、支撐變壓力，這是主力成本概念<br>
+4. <b>心理關卡</b>：100、200整數大關是市場共識</p>
+
+<p><b>實戰應用</b>：</p>
+
+<ul>
+<li>區間操作：支撐買、壓力賣</li>
+<li>突破操作：等壓力突破買進、支撐跌破賣出</li>
+<li>停損設定：支撐跌破停損、壓力突破停損（作空）</li>
+</ul>
+
+<p>這跟之前學的「真假突破判斷三大條件」、「突破買進vs拉回買進」是互補的概念。支撐壓力是基礎，其他技巧是疊加上去的。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+
+<h2>第 6 回合學習：技術分析：MACD 指標實戰應用</h2>
+
+<p><b>學習時間</b>：06:58</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.oanda.com/bvi-ft/lab-education/technical_analysis/what_is_macd/">看懂技術分析指標MACD-精準掌握買賣點 - OANDA Lab</a></li>
+<li><a href="https://research.titanfx.com/zh-hant/technical-analysis/macd/what-is-macd">MACD指標怎麼看？新手完整教學與圖解實例 - Titan FX 研究所</a></li>
+<li><a href="https://www.pfcf.com.tw/product/detail/2625">技術分析-MACD指標 - 統一期貨期添大勝網</a></li>
+<li><a href="https://quantpass.org/macd-2/">MACD指標完整教學，頂背離與黃金交叉應用 - 量化通 QuantPass</a></li>
+</ul>
+
+<hr>
+
+<h2>一、MACD 是什麼？</h2>
+
+<p><b>定義</b>：MACD（Moving Average Convergence / Divergence）全名為「指數平滑異同移動平均線」，由美國技術分析大師 Gerald Appel 於 1979 年提出。</p>
+
+<p><b>核心原理</b>：利用兩條速度不同的指數移動平均線（EMA）計算差離值，判斷市場趨勢變化與動能強弱。</p>
+
+<p><b>預設參數</b>：(12, 26, 9)</p>
+
+<ul>
+<li>快速 EMA：12 日</li>
+<li>慢速 EMA：26 日</li>
+<li>訊號線：9 日 EMA</li>
+</ul>
+
+<hr>
+
+<h2>二、MACD 指標組成</h2>
+
+<h3>MACD 線（快線 / DIF）</h3>
+
+<p><b>是什麼</b>：短期 EMA 與長期 EMA 的差值，反映短期價格變化的敏感度。</p>
+
+<p><b>公式</b>：</p>
+
+<pre><code>DIF = EMA(12) - EMA(26)</code></pre>
+
+<p><b>怎麼解讀</b>：</p>
+
+<ul>
+<li>DIF > 0：短期均線高於長期均線，上漲趨勢，多方主導</li>
+<li>DIF < 0：短期均線低於長期均線，下跌趨勢，空方主導</li>
+</ul>
+
+<hr>
+
+<h3>訊號線（慢線 / DEA）</h3>
+
+<p><b>是什麼</b>：DIF 的 9 日 EMA，用於平滑快線波動，捕捉較穩定的長期趨勢。</p>
+
+<p><b>公式</b>：</p>
+
+<pre><code>DEA = EMA(DIF, 9)</code></pre>
+
+<p><b>怎麼解讀</b>：</p>
+
+<ul>
+<li>反應速度較慢，作為訊號確認線</li>
+<li>DIF 穿越 DEA 時產生買賣訊號</li>
+</ul>
+
+<hr>
+
+<h3>MACD 柱狀圖</h3>
+
+<p><b>是什麼</b>：DIF 與 DEA 的差值，直觀反映市場動能強弱。</p>
+
+<p><b>公式</b>：</p>
+
+<pre><code>MACD 柱狀圖 = DIF - DEA
+或
+MACD 柱狀圖 = 2 ×（DIF - DEA）  // 部分軟體使用</code></pre>
+
+<p><b>怎麼解讀</b>：</p>
+
+<ul>
+<li>柱狀圖 > 0：DIF 高於 DEA，上漲動能增強</li>
+<li>柱狀圖 < 0：DIF 低於 DEA，下跌動能增強</li>
+<li>柱狀圖放大：動能增強，趨勢加速</li>
+<li>柱狀圖縮小：動能減弱，趨勢可能轉折</li>
+</ul>
+
+<hr>
+
+<h2>三、黃金交叉與死亡交叉</h2>
+
+<h3>黃金交叉（買進訊號）</h3>
+
+<p><b>是什麼</b>：DIF 由下往上穿越 DEA，或柱狀圖由負轉正。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 確認 DIF 向上突破 DEA<br>
+2. 觀察柱狀圖是否同步由負轉正<br>
+3. 搭配成交量和趨勢線確認<br>
+4. 若交叉點在 0 軸以上，後續漲勢更明顯</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：台股某檔股票 DIF = 0.5，DEA = 0.3</li>
+<li>操作：DIF 穿越 DEA 形成 黃金交叉，柱狀圖翻正，股價 50 元</li>
+<li>進場：50 元買進，停損設 48 元（-4%）</li>
+<li>目標：前波段高點 58 元（+16%）</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>多頭市場初期或中段</li>
+<li>趨勢明確時</li>
+<li>搭配支撐壓力位確認</li>
+</ul>
+
+<hr>
+
+<h3>死亡交叉（賣出訊號）</h3>
+
+<p><b>是什麼</b>：DIF 由上往下穿越 DEA，或柱狀圖由正轉負。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 確認 DIF 向下跌破 DEA<br>
+2. 觀察柱狀圖是否同步由正轉負<br>
+3. 若交叉點在 0 軸以下，後續跌幅更明顯<br>
+4. 考慮減碼或出場</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：DIF 從 0.8 跌至 0.2，DEA 維持在 0.4，形成死亡交叉</li>
+<li>柱狀圖：從 +0.4 變成 -0.2（翻負）</li>
+<li>操作：股價 60 元時減碼五成，跌破 55 元全出</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>空頭市場初期</li>
+<li>趨勢明確向下時</li>
+<li>搭配壓力位確認</li>
+</ul>
+
+<hr>
+
+<h2>四、MACD 背離訊號</h2>
+
+<h3>頂背離（賣出訊號）</h3>
+
+<p><b>是什麼</b>：價格創新高，但 MACD 指標未能創新高，反而下降。</p>
+
+<p><b>怎麼判斷</b>：<br>
+1. 股價第一波高點後回調<br>
+2. 股價第二波突破前高<br>
+3. DIF 或柱狀圖高點卻比前一波低<br>
+4. 柱狀圖逐步縮小</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：台積電第一波高點 600 元，DIF 高點 8；第二波高點 620 元，DIF 高點只有 5</li>
+<li>判讀：頂背離，買方力道衰竭</li>
+<li>操作：620 元附近減碼，停損設 630 元</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>多頭市場末升段</li>
+<li>連續上漲後動能減弱</li>
+<li>搭配成交量觀察</li>
+</ul>
+
+<hr>
+
+<h3>底背離（買進訊號）</h3>
+
+<p><b>是什麼</b>：價格創新低，但 MACD 指標未能創新低，反而上升。</p>
+
+<p><b>怎麼判斷</b>：<br>
+1. 股價第一波低點後反彈<br>
+2. 股價第二波跌破前低<br>
+3. DIF 或柱狀圖低點卻比前一波高<br>
+4. 柱狀圖負值逐步縮小</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：鴻海第一波低點 95 元，DIF 低點 -3；第二波低點 90 元，DIF 低點只有 -1.5</li>
+<li>判讀：底背離，賣方力道耗盡</li>
+<li>操作：90-95 元區間分批布局，停損設 88 元</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>空頭市場末跌段</li>
+<li>連續下跌後動能減弱</li>
+<li>搭配支撑位確認</li>
+</ul>
+
+<hr>
+
+<h2>五、MACD 參數調整技巧</h2>
+
+<h3>預設參數 (12, 26, 9)</h3>
+
+<p><b>適用時機</b>：一般行情，中長期投資</p>
+
+<hr>
+
+<h3>短線參數 (5, 13, 8)</h3>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>日內交易或短期波段</li>
+<li>波動較大的市場</li>
+<li>需要更靈敏訊號時</li>
+</ul>
+
+<p><b>優點</b>：反應快速，及時捕捉轉折<br>
+<b>缺點</b>：假訊號較多，需嚴格停損</p>
+
+<hr>
+
+<h3>長線參數 (24, 52, 18)</h3>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>週線或月線級別</li>
+<li>長期投資</li>
+<li>過濾雜訊</li>
+</ul>
+
+<p><b>優點</b>：訊號穩定，過濾雜訊<br>
+<b>缺點</b>：反應慢，可能錯過轉折點</p>
+
+<hr>
+
+<h2>六、MACD 實戰應用策略</h2>
+
+<h3>策略一：趨勢確認 + MACD 加碼</h3>
+
+<p><b>怎麼做</b>：<br>
+1. 先用均線判斷多空（多頭排列 / 空頭排列）<br>
+2. 多頭格局：MACD 在 0 軸附近出現 黃金交叉，考慮加碼<br>
+3. 空頭格局：MACD 在 0 軸附近出現死亡交叉，減碼或建立空單</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：5 日、10 日、20 日均線多頭排列</li>
+<li>MACD：DIF 在 0 軸附近，黃金交叉形成</li>
+<li>操作：順勢加碼，停損設前低</li>
+</ul>
+
+<hr>
+
+<h3>策略二：柱狀圖動能判斷</h3>
+
+<p><b>怎麼做</b>：<br>
+1. 柱狀圖 > 0 且放大：多頭動能增強，續抱或加碼<br>
+2. 柱狀圖 > 0 但縮小：動能減弱，準備減碼<br>
+3. 柱狀圖 < 0 且放大：空頭動能增強，避免進場<br>
+4. 柱狀圖 < 0 但縮小：動能減弱，準備布局</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：股價 100 元，柱狀圖從 +2 變成 +1.5 再變成 +1</li>
+<li>判讀：多頭動能減弱</li>
+<li>操作：100 元減碼三成，跌破 95 元再出</li>
+</ul>
+
+<hr>
+
+<h3>策略三：MACD 搭配其他指標</h3>
+
+<h4>MACD + RSI</h4>
+
+<p><b>怎麼做</b>：</p>
+
+<ul>
+<li>MACD 黃金交叉 + RSI < 30：較可靠的反轉訊號</li>
+<li>MACD 死亡交叉 + RSI > 70：較可靠的反轉訊號</li>
+</ul>
+
+<h4>MACD + 布林通道</h4>
+
+<p><b>怎麼做</b>：</p>
+
+<ul>
+<li>MACD 顯示多頭動能上升，價格未突破上軌：謹慎看待</li>
+<li>MACD 顯示空頭動能上升，價格未跌破下軌：謹慎看待</li>
+</ul>
+
+<h4>MACD + 成交量</h4>
+
+<p><b>怎麼做</b>：</p>
+
+<ul>
+<li>MACD 黃金交叉 + 成交量放大：趨勢可靠</li>
+<li>MACD 黃金交叉 + 成交量低迷：假訊號機率高</li>
+</ul>
+
+<hr>
+
+<h2>七、MACD 優缺點分析</h2>
+
+<h3>優點</h3>
+
+<p>1. <b>視覺清晰</b>：透過柱狀圖直觀呈現多空動能<br>
+2. <b>適用性廣</b>：股票、期貨、外匯、加密貨幣皆可<br>
+3. <b>跨週期</b>：短線、波段、長線皆適用<br>
+4. <b>順勢逆勢皆可用</b>：黃金交叉順勢，背離逆勢</p>
+
+<h3>缺點</h3>
+
+<p>1. <b>滯後性</b>：屬於落後指標，訊號延遲<br>
+2. <b>盤整失效</b>：震盪盤容易頻繁交叉，假訊號多<br>
+3. <b>參數需調整</b>：預設參數不適用所有市場<br>
+4. <b>無法預測幅度</b>：只能判斷方向，無法預測漲跌幅度</p>
+
+<hr>
+
+<h2>八、MACD 三大注意事項</h2>
+
+<h3>1. 不要單獨使用</h3>
+
+<p><b>問題</b>：單獨使用 MACD 容易假訊號<br>
+<b>解決</b>：搭配 RSI、布林通道、支撐壓力位確認</p>
+
+<h3>2. 盤整盡量避免使用</h3>
+
+<p><b>問題</b>：盤整時快慢線糾結，頻繁交叉<br>
+<b>解決</b>：先用趨勢指標確認方向，再使用 MACD</p>
+
+<h3>3. 參數需依市場調整</h3>
+
+<p><b>問題</b>：預設參數 (12,26,9) 不適用所有市場<br>
+<b>解決</b>：</p>
+
+<ul>
+<li>短線用 (5, 13, 8)</li>
+<li>長線用 (24, 52, 18)</li>
+<li>回測找出最佳參數</li>
+</ul>
+
+<hr>
+
+<h2>九、MACD vs 其他指標比較</h2>
+
+<table><thead><tr><th>指標</th><th>類型</th><th>優勢</th><th>劣勢</th><th>適用情境</th></tr></thead><tbody><tr><td>MACD</td><td>趨勢型</td><td>動能強弱清晰</td><td>滯後性</td><td>趨勢明確行情</td></tr><tr><td>RSI</td><td>震盪型</td><td>超買超賣明確</td><td>盤整失效</td><td>區間震盪行情</td></tr><tr><td>KD</td><td>震盪型</td><td>反應快速</td><td>假訊號多</td><td>短線波動</td></tr><tr><td>布林通道</td><td>波動型</td><td>區間清晰</td><td>方向不明</td><td>波動率判斷</td></tr></tbody></table>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>MACD 是技術分析的基礎指標，但很多人只用黃金交叉和死亡交叉，忽略了更重要的「動能」判斷。這次學習讓我有幾個體會：</p>
+
+<p>1. <b>柱狀圖比交叉更重要</b>：黃金交叉發生時，如果柱狀圖還在縮小，這個訊號可能很弱。真正強勢的多頭，柱狀圖應該要放大。</p>
+
+<p>2. <b>背離是反轉前的預警</b>：頂背離和底背離比交叉更早發出訊號，但要搭配其他指標確認，因為單獨背離也可能失敗。</p>
+
+<p>3. <b>趨勢優先，MACD 其次</b>：統一期貨文章提到一個重要觀念——MACD 是判斷「趨勢強度」，不是判斷「趨勢改變」。先用均線確定多空方向，再用 MACD 找進場點，這個順序不能顛倒。</p>
+
+<p>4. <b>0 軸是多空分水嶺</b>：柱狀圖在 0 軸之上和之下，代表的市場結構完全不同。黃金交叉在 0 軸以上，通常漲勢更明顯；死亡交叉在 0 軸以下，跌幅更大。</p>
+
+<p>5. <b>盤整理想不要用</b>：MACD 在趨勢行情好用，但在盤整時會不斷交叉，進出場都很尷尬。這時改用 RSI 或 KD 會更好。</p>
+
+<p>這次學習補足了技術分析拼圖的重要一塊。MACD 雖然是老指標，但動能判斷的核心概念到現在還是很實用。重點是用對地方——趨勢明確時用 MACD 找進場，盤整時改用震盪指標，這樣才能發揮各個指標的優勢。</p>
+
+<hr>
+
+<p>朝股票操作大師邁進中 📈<br>
+---</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>
