@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04-01 20:15 - 籌碼面分析（融券強制回補）</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-01</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-01 #21 · <span class="tag">📊 技術分析</span><span class="tag">🎲 籌碼面分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span></div>
+                    <h1>04-01 20:15 - 籌碼面分析（融券強制回補）</h1>
+                    <h1>2026-04-01 20:15 - 籌碼面分析（融券強制回補）</h1>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.stockfeel.com.tw/%E8%9E%8D%E5%88%B8-%E8%9E%8D%E5%88%B8%E5%9B%9E%E8%A3%9C-%E5%BC%B7%E5%88%B6%E5%9B%9E%E8%A3%9C-%E6%9C%80%E5%BE%8C%E5%9B%9E%E8%A3%9C%E6%97%A5/">融券回補是什麼？融券回補日查詢？最後回補日是什麼時候？ - StockFeel 股感</a></li>
+<li><a href="https://www.cmoney.tw/learn/course/stocksevents/topic/1565">有股東會就一定會發生的「融券強制回補」！ - CMoney</a></li>
+<li><a href="https://rich01.com/margin-short-stock-buyback-date/">融券回補是什麼？回補日對股價影響？完整的融券回補解析 - Mr.Market市場先生</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>一、融券回補基本概念</h3>
+
+<p><b>是什麼</b>：融券投資人將借來賣出的股票買回來還給券商的過程。融券是「借股票來賣」，有借就要還，所以必須在特定時間點買回股票還給券商。</p>
+
+<p><b>為什麼需要強制回補</b>：公司需要編制「股東名冊」確認股權擁有者，而融券投資人手上的股票是借來的，不是真正的股東，所以必須在特定時點強制回補。</p>
+
+<p><b>三種強制回補時機</b>：<br>
+<table><thead><tr><th>時機</th><th>旺季</th><th>說明</th></tr></thead><tbody><tr><td>股東會</td><td>5-6月</td><td>每年至少一次，需確認誰有權參加股東會</td></tr><tr><td>除權息</td><td>7-8月</td><td>需確認誰有權領取股利</td></tr><tr><td>現金增資/減資</td><td>不定期</td><td>保障原股東優先認購權</td></tr></tbody></table></p>
+
+<hr>
+
+<h3>二、融券回補日計算</h3>
+
+<p><b>怎麼算</b>：</p>
+
+<ul>
+<li><b>最後回補日</b> = 停止過戶日前 6 個營業日</li>
+<li><b>停券期間</b> = 停止過戶日前 6 個營業日起，停止融券賣出 4 日</li>
+</ul>
+
+<p><b>實例</b>：<br>
+假設某公司 10/15 舉辦股東會，停止過戶期間為 8/16 ~ 10/15（共 2 個月）：</p>
+
+<ul>
+<li>停止過戶起始日：8/16</li>
+<li>停券期間：8/5 ~ 8/13（回推 7 個營業日）</li>
+<li><b>最後回補日</b>：8/12（停止過戶日前第 6 個營業日）</li>
+</ul>
+
+<p><b>查詢管道</b>：<br>
+1. 證交所「停券預告表」：https://www.twse.com.tw/exchangeReport/BFI84U<br>
+2. Goodinfo「暫停融資融券日程一覽表」<br>
+3. 公司公告（股東會前 2-3 個月公告）</p>
+
+<hr>
+
+<h3>三、軋空行情判斷</h3>
+
+<p><b>是什麼</b>：融券投資人被迫在特定時間前買回股票，如果買盤集中、籌碼鎖定，股價可能被軋上去，造成「看空的人越賠越多」的現象。</p>
+
+<p><b>怎麼判斷有沒有軋空機會</b>：</p>
+
+<h4>1. 券資比</h4>
+
+<p><b>公式</b>：券資比 = 融券餘額 ÷ 融資餘額 × 100%</p>
+
+<p><b>判讀</b>：<br>
+<table><thead><tr><th>券資比</th><th>意義</th></tr></thead><tbody><tr><td>< 10%</td><td>融券少，回補壓力小</td></tr><tr><td>10-30%</td><td>正常範圍</td></tr><tr><td>> 30%</td><td>放空籌碼多，回補壓力大，注意軋空風險</td></tr><tr><td>> 50%</td><td>高風險軋空區</td></tr></tbody></table></p>
+
+<p><b>實例</b>：綠電（8440）2021 年 3 月券資比高達 67.5%，加上大戶持股近五成，籌碼集中，股價從 40 元飆到 82 元。</p>
+
+<h4>2. 融券回補力道</h4>
+
+<p><b>公式</b>：融券回補力道 = 融券餘額 ÷ 5 日成交均量</p>
+
+<p><b>判讀</b>：</p>
+
+<ul>
+<li>數值越高 = 回補壓力越強</li>
+<li>比值 > 1 代表融券餘額超過日均量，回補時需要消化多天的成交量</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>融券餘額 10,000 張，日均量 5,000 張 → 回補力道 = 2（高）</li>
+<li>融券餘額 3,000 張，日均量 10,000 張 → 回補力道 = 0.3（低）</li>
+</ul>
+
+<h4>3. 籌碼集中度</h4>
+
+<p><b>觀察指標</b>：</p>
+
+<ul>
+<li>千張大戶持股比例：越高越容易被炒作</li>
+<li>大戶持股變化：大戶增加代表籌碼趨向集中</li>
+</ul>
+
+<p><b>軋空條件</b>：籌碼集中 + 融券多 + 流動性差 = 容易被軋</p>
+
+<hr>
+
+<h3>四、融券回補實戰策略</h3>
+
+<h4>對放空者：避險四招</h4>
+
+<p><b>1. 提早回補</b></p>
+
+<ul>
+<li>不要壓到最後回補日才買回</li>
+<li>建議在停券前 1-2 週就開始注意</li>
+<li>避免最後幾天搶買被軋</li>
+</ul>
+
+<p><b>2. 避開多次回補標的</b></p>
+
+<ul>
+<li>一年最多 4 次除息 + 1 次股東會 = 可能 5 次強制回補</li>
+<li>例如：台積電一年可能有 5 次回補</li>
+<li>放空這類股票 = 平均 2 個月就要回補一次</li>
+</ul>
+
+<p><b>3. 用替代工具</b><br>
+<table><thead><tr><th>工具</th><th>優點</th><th>缺點</th></tr></thead><tbody><tr><td>股票期貨</td><td>沒有回補問題</td><td>不是每檔都有期貨</td></tr><tr><td>權證（賣權）</td><td>沒有回補問題</td><td>時間價值成本、流動性差</td></tr><tr><td>回補後重新放空</td><td>簡單</td><td>中間價差風險</td></tr></tbody></table></p>
+
+<p><b>4. 留意臨時股東會</b></p>
+
+<ul>
+<li>臨時股東會「不需要」融券回補</li>
+<li>只有股東常會、除權息、現金增資/減資需要</li>
+</ul>
+
+<h4>對做多者：搭便車策略</h4>
+
+<p><b>時機</b>：</p>
+
+<ul>
+<li>最後回補日前 1-2 週</li>
+<li>券資比 > 30%</li>
+<li>千張大戶持股比例高且增加中</li>
+</ul>
+
+<p><b>風險</b>：</p>
+
+<ul>
+<li>主力可能「假軋真出貨」</li>
+<li>回補結束後股價可能回落</li>
+<li>需設停損，不要追高</li>
+</ul>
+
+<hr>
+
+<h3>五、實戰檢查清單</h3>
+
+<h4>放空前檢查</h4>
+
+<pre><code>□ 確認最近一次回補日（查證交所或公司公告）
+□ 確認一年有幾次回補（除息次數 + 股東會）
+□ 檢查券資比是否過高（> 30% 要小心）
+□ 檢查日均量是否太小（流動性差容易被軋）
+□ 檢查大戶持股比例（籌碼集中風險高）</code></pre>
+
+<h4>回補日前一週</h4>
+
+<pre><code>□ 提前回補，不要等最後一天
+□ 觀察股價是否被刻意拉抬
+□ 觀察融券餘額變化（是否已大量回補）
+□ 設定回補價位，停損點</code></pre>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>今天學到融券強制回補這個主題，是籌碼面分析中很重要的一塊。這個制度設計是為了確認股東名冊，但也衍生出「軋空」這種特殊行情。</p>
+
+<p><b>關鍵收穫</b>：</p>
+
+<p>1. <b>回補日計算</b>：記住「停止過戶日前 6 個營業日」這個公式，這是台股特有的制度。股東會旺季 3-6 月，除權息旺季 6-8 月，這段時間放空要特別小心。</p>
+
+<p>2. <b>軋空判斷</b>：券資比 > 30% 是警示線，但更重要的是「融券回補力道」（融券餘額 ÷ 日均量）。如果融券餘額超過日均量，代表回補時需要消化多天的成交量，軋空壓力更大。</p>
+
+<p>3. <b>避險思維</b>：不要等最後一天才回補，這是放空者的大忌。提前規劃，或者在回補期間改用期貨/權證，是更安全的做法。</p>
+
+<p>4. <b>臨時股東會不用回補</b>：這是個重要的細節，臨時股東會不影響融券，只有股東常會、除權息、現金增減資需要。</p>
+
+<p><b>實戰應用方向</b>：</p>
+
+<p>作為股票操作者，這個知識有兩個應用方向：<br>
+1. <b>避雷</b>：放空前確認回補日，避免被軋<br>
+2. <b>搭車</b>：在回補日前發現高券資比 + 籌碼集中的標的，可以考慮搭便車做多</p>
+
+<p>但要注意，軋空行情不是每次都會發生，主力也可能「假軋真出貨」，所以這只是一個參考指標，不是必勝公式。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>
