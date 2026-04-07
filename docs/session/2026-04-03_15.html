@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04-03 16:09 - 交易期望值計算</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-03</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-03 #15 · <span class="tag">📊 技術分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span></div>
+                    <h1>04-03 16:09 - 交易期望值計算</h1>
+                    <h1>2026-04-03 16:09 - 交易期望值計算</h1>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.cmoney.tw/learn/course/freeman/topic/3444">交易的期望值 - CMoney</a></li>
+<li><a href="https://www.bituzi.com/2013/10/good-trading-system.html?m=1">正期望值交易系統 - 幣圖誌</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>一、期望值公式</h3>
+
+<p><b>是什麼</b>：計算每次交易平均能賺多少的數學公式。</p>
+
+<p><b>公式</b>：</p>
+
+<pre><code>期望值 E = W × P - L × (1-P) - A</code></pre>
+
+<ul>
+<li>W = 每筆交易獲利的點數（或金額）</li>
+<li>L = 每筆交易虧損的點數（或金額）</li>
+<li>P = 勝率（獲利交易佔總交易的比例）</li>
+<li>(1-P) = 失敗率</li>
+<li>A = 交易成本（手續費、滑價等）</li>
+</ul>
+
+<p><b>怎麼算</b>：<br>
+1. 假設勝率 40%，獲利時賺 500 點，虧損時賠 200 點，交易成本 5 點<br>
+2. 期望值 = 500 × 0.4 - 200 × 0.6 - 5 = 200 - 120 - 5 = 75 點<br>
+3. 每筆交易「期望」賺 75 點</p>
+
+<p><b>關鍵判斷</b>：</p>
+
+<ul>
+<li>E > 0：正期望值，長期有利可圖</li>
+<li>E = 0：期望值歸零，長期打平</li>
+<li>E < 0：負期望值，長期必虧</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：當沖策略，勝率 45%，獲利賺 3,000 元，虧損賠 2,000 元，成本 500 元</li>
+<li>計算：E = 3,000 × 0.45 - 2,000 × 0.55 - 500 = 1,350 - 1,100 - 500 = -250 元</li>
+<li>結論：看似還不錯的策略，其實是負期望值！要嘛提高勝率，要嘛拉大賠率。</li>
+</ul>
+
+<hr>
+
+<h3>二、正期望值系統判斷</h3>
+
+<p><b>是什麼</b>：用勝率和賠率的簡單乘積快速判斷是否有正期望值。</p>
+
+<p><b>怎麼判斷</b>：</p>
+
+<pre><code>勝率 × 賠率 > 0.5 → 正期望值</code></pre>
+
+<p><b>賠率定義</b>：</p>
+
+<ul>
+<li>賠率 = 平均獲利金額 / 平均虧損金額</li>
+<li>例：平均賺 10,000 元，平均賠 5,000 元 → 賠率 = 2</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>策略 A：勝率 40%，賠率 1.5 → 40% × 1.5 = 0.6 > 0.5 ✅ 正期望值</li>
+<li>策略 B：勝率 60%，賠率 0.7 → 60% × 0.7 = 0.42 < 0.5 ❌ 負期望值</li>
+<li>策略 C：勝率 35%，賠率 2.0 → 35% × 2.0 = 0.7 > 0.5 ✅ 正期望值</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>快速篩選策略是否有價值</li>
+<li>回測結果的初步檢驗</li>
+<li>注意：這是簡化判斷，正式評估還要加入交易成本</li>
+</ul>
+
+<hr>
+
+<h3>三、順勢 vs 逆勢交易的期望值特性</h3>
+
+<p><b>順勢交易</b>：</p>
+
+<ul>
+<li>勝率：< 50%（通常 30-45%）</li>
+<li>賠率：> 1（用低勝率換取大賺）</li>
+<li>型態：「小賠大賺」，靠少數大波段獲利</li>
+<li>損益分布：厚尾右偏（極端獲利多，虧損可控）</li>
+</ul>
+
+<p><b>逆勢交易</b>：</p>
+
+<ul>
+<li>勝率：> 50%（通常 55-70%）</li>
+<li>賠率：< 1（用高勝率換取小賺）</li>
+<li>型態：「常賺小賠」，靠頻繁小勝獲利</li>
+<li>損益分布：厚尾左偏（極端虧損風險）</li>
+</ul>
+
+<p><b>怎麼選擇</b>：<br>
+1. 性格匹配：能忍受連續虧損 → 順勢；喜歡勝率感 → 逆勢<br>
+2. 市場環境：有明顯趨勢 → 順勢；盤整震盪 → 逆勢<br>
+3. 風險承受：順勢的極端虧損可控；逆勢的極端虧損難預測</p>
+
+<hr>
+
+<h3>四、交易成本對期望值的殺傷力</h3>
+
+<p><b>外顯成本</b>：</p>
+
+<ul>
+<li>手續費：買賣都要付</li>
+<li>交易稅：賣出時要付</li>
+<li>例：台股當沖成本約 0.15%</li>
+</ul>
+
+<p><b>隱含成本</b>：</p>
+
+<ul>
+<li>滑價：下單到成交的價差</li>
+<li>市場影響：大單對價格的衝擊</li>
+<li>延遲成本：決策到執行的時間差</li>
+<li>例：大台指約 3-5 點，小台指約 4-6 點</li>
+</ul>
+
+<p><b>怎麼算影響</b>：</p>
+
+<pre><code>原始期望值 - 交易成本 = 實際期望值</code></pre>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>原始策略：勝率 47.69%，賠率 2.12，單筆期望值 6,214 元</li>
+<li>加成本（10 點）：勝率降為 42.69%，賠率降為 2.07，期望值剩 4,198 元</li>
+<li>結論：交易成本吃掉 32% 的期望值！</li>
+</ul>
+
+<p><b>改善方法</b>：<br>
+1. 降低交易次數（拉長週期、減少進出）<br>
+2. 提高單筆期望值（讓成本佔比變小）<br>
+3. 增加濾網（過濾低品質訊號）</p>
+
+<hr>
+
+<h3>五、逐筆損益 vs 逐日損益</h3>
+
+<p><b>逐筆損益</b>：</p>
+
+<ul>
+<li>以每筆交易為單位計算</li>
+<li>容易受極端單筆影響</li>
+<li>適合看「賺賠比」</li>
+</ul>
+
+<p><b>逐日損益</b>：</p>
+
+<ul>
+<li>以每個交易日為單位計算</li>
+<li>一筆交易持倉多天，損益分攤到各天</li>
+<li>較平滑，適合跨策略比較</li>
+<li>正期望值系統在逐日損益的勝率應接近 50%，賠率仍 > 1</li>
+</ul>
+
+<p><b>什麼情況用哪個</b>：</p>
+
+<ul>
+<li>回測看績效 → 逐筆損益</li>
+<li>比較不同週期策略 → 逐日損益</li>
+<li>評估每日壓力 → 逐日損益</li>
+<li>算期望值、賺賠比 → 逐筆損益</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>期望值是交易系統的「數學靈魂」，勝率和賠率是表象，期望值才是真相。</p>
+
+<p>我以前以為勝率高就是好策略，但其實勝率 35% 搭配賠率 2.0，期望值可以是正的；反而勝率 60% 搭配賠率 0.7，期望值是負的。這完全顛覆我對「高勝率 = 好策略」的迷思。</p>
+
+<p>另外交易成本這刀殺很大，光看原始績效很容易被騙，實際上場後成本會吃掉三成期望值。這讓我想到以前做當沖，回測很漂亮，實際跑下去手續費和滑價一扣就虧損——原來就是期望值被成本吃掉了。</p>
+
+<p>順勢交易的「低勝率高賠率」讓我很有共鳴，因為我現在的交易風格就是這樣：可以連續虧幾次，但抓到一波就夠。理解這個後，我不會再糾結「勝率怎麼這麼低」，因為那本來就是順勢交易的特性。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

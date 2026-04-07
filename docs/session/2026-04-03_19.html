@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04-03 21:09 - 風險管理（資產配置）</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-03</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-03 #19 · <span class="tag">📊 技術分析</span><span class="tag">💰 基本面分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>04-03 21:09 - 風險管理（資產配置）</h1>
+                    <h1>2026-04-03 21:09 - 風險管理（資產配置）</h1>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.cathayholdings.com/holdings/brand/assetmanagement/article_list/article_content?newsID=hMghL0ouIUeG76w2TNITXw">資產配置全解析：定義、比例分配及資產類型介紹</a></li>
+<li><a href="https://george-dewi.com/asset-allocation/">股票資產配置投資策略：5種你想輸錢都很難的投資組合</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>資產配置的關鍵：低相關性</h3>
+
+<p><b>是什麼</b>：把資金分配到「價格走勢不相關」的資產，當一個資產下跌時，其他資產不會同步下跌，達到分散風險的效果。</p>
+
+<p><b>為什麼重要</b>：</p>
+
+<ul>
+<li>Vanguard 研究顯示，資產配置決定了投資成果的 <b>88%</b></li>
+<li>三大資產（股票、債券、現金）歷史上從未同時大漲或大跌</li>
+<li>持有單一股票波動可能正負20萬，持有10檔以上可大幅降低波動</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 檢視現有持股的產業分布<br>
+2. 計算相關性（同產業股票相關性高）<br>
+3. 加入不同產業：科技+金融+民生用品+工業+能源<br>
+4. 定期再平衡（每半年或偏離5%時調整）</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>❌ 錯誤配置：中華電+遠傳+台灣大+鴻海（60%電信/科技相關）</li>
+<li>✅ 正確配置：台積電（科技）+國泰金（金融）+統一（民生）+中鋼（工業）+中油（能源）</li>
+</ul>
+
+<hr>
+
+<h3>零相關資產的威力（Ray Dalio 投資聖杯）</h3>
+
+<p><b>是什麼</b>：橋水基金創辦人 Ray Dalio 提出的概念—持有 15-20 種零相關資產，可將風險報酬率提升到 1.25。</p>
+
+<p><b>風險報酬率公式</b>：</p>
+
+<pre><code>風險報酬率 = 資產淨值增長率 ÷ 資產淨值標準差（波動）</code></pre>
+
+<p><b>數據對比</b>：<br>
+<table><thead><tr><th>風險報酬率</th><th>一年內虧損機率</th></tr></thead><tbody><tr><td>1.25（做好配置）</td><td>11%</td></tr><tr><td>0.25（沒做配置）</td><td>40%</td></tr></tbody></table></p>
+
+<p><b>怎麼做</b>：<br>
+1. 找出相關性低的資產類別<br>
+2. 每個類別挑選優質標的<br>
+3. 持有 15-20 種不同資產<br>
+4. 定期檢視相關性變化</p>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>長期投資者（3年以上）</li>
+<li>無法承受大幅波動者</li>
+<li>已有一定資本規模者</li>
+</ul>
+
+<hr>
+
+<h3>再平衡的三種方式</h3>
+
+<p><b>是什麼</b>：當資產配置比例因價格變動而偏離原始規劃時，調整回原始比例的動作。</p>
+
+<p><b>三種方法</b>：<br>
+1. <b>賣高買低</b>：賣掉佔比過高的資產，買入佔比過低的<br>
+2. <b>加碼不足</b>：用新資金買入佔比不足的資產<br>
+3. <b>股息再投入</b>：用現金流（股息、利息）買入不足的資產</p>
+
+<p><b>時機選擇</b>：</p>
+
+<ul>
+<li><b>定期法</b>：每半年或一年固定再平衡</li>
+<li><b>門檻法</b>：偏離原始比例 5% 以上時調整</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>原始配置：股票 60%、債券 40%</li>
+<li>股市大漲後變成：股票 70%、債券 30%</li>
+<li>操作：賣出部分股票，買入債券，恢復 60:40</li>
+</ul>
+
+<hr>
+
+<h3>四種常見資產配置策略</h3>
+
+#### 1. 100 法則（按年齡）
+**公式**：股票比例 = 100 - 年齡
+
+<table><thead><tr><th>年齡</th><th>建議股票比例</th><th>建議債券/現金比例</th></tr></thead><tbody><tr><td>25歲</td><td>75%</td><td>25%</td></tr><tr><td>40歲</td><td>60%</td><td>40%</td></tr><tr><td>60歲</td><td>40%</td><td>60%</td></tr></tbody></table>
+
+<p><b>核心邏輯</b>：年輕人有時間優勢可承受較高風險，年長者需要保本。</p>
+
+#### 2. 核心衛星策略
+**架構**：
+
+<ul>
+<li><b>核心資產</b>（50%以上）：低風險、穩定收益（如債券、大盤ETF）</li>
+<li><b>衛星資產</b>（50%以下）：高風險、追求超額報酬（如個股、產業ETF）</li>
+</ul>
+
+<p><b>優點</b>：在控制風險的同時，有機會獲取超額報酬</p>
+
+#### 3. 戰略 vs 戰術配置
+<table><thead><tr><th>戰略配置</th><th>戰術配置</th></tr></thead><tbody><tr><td>方式</td><td>維持固定比例</td><td>因應市場短期調整</td></tr><tr><td>優點</td><td>簡單好操作</td><td>靈活應對市場</td></tr><tr><td>缺點</td><td>較僵化</td><td>需要分析能力、手續費較高</td></tr></tbody></table>
+
+#### 4. 股債平衡ETF
+**常見代碼**：
+
+<ul>
+<li>AOA：80%股票 + 20%債券（積極型，年化~10%）</li>
+<li>AOR：60%股票 + 40%債券（成長型，年化~8%）</li>
+<li>AOM：40%股票 + 60%債券（穩健型，年化~6%）</li>
+<li>AOK：30%股票 + 70%債券（保守型，年化~4.4%）</li>
+</ul>
+
+<hr>
+
+<h3>資產配置常見錯誤</h3>
+
+<p><b>錯誤一：只存金融股</b></p>
+
+<ul>
+<li>第一金、合庫金、兆豐金都是好股票，但全壓金融股風險集中</li>
+<li>金融股與利率高度相關，利率變化會全面影響</li>
+</ul>
+
+<p><b>錯誤二：買太多科技股</b></p>
+
+<ul>
+<li>台股科技股佔比已很高，再買科技股會過度集中</li>
+<li>0050 的科技股+金融股比例高達 76%</li>
+</ul>
+
+<p><b>錯誤三：全壓特定ETF</b></p>
+
+<ul>
+<li>元大石油正2 就是教訓，看錯邊可能賠掉上百萬</li>
+<li>能源類ETF常涉及期貨，風險比一般股票ETF高</li>
+</ul>
+
+<p><b>錯誤四：單一股票壓身家</b></p>
+
+<ul>
+<li>30萬全壓鴻海，沒做配置</li>
+<li>帳面波動正負20萬，心理壓力大</li>
+</ul>
+
+<hr>
+
+<h3>實戰：建立自己的ETF</h3>
+
+<p><b>步驟</b>：<br>
+1. 從 S&P500 選擇可理解的產業類別<br>
+2. 各類別研究基本面，挑選優質公司<br>
+3. 選出 15-25 間不同產業的好公司<br>
+4. 資金分配，單一持股不超過 15%<br>
+5. 預留 40-60% 現金，等待加碼機會</p>
+
+<p><b>美股產業分類</b>（比台股更多元）：</p>
+
+<ul>
+<li>Technology 科技（軟體、半導體）</li>
+<li>Financial 金融（銀行、保險、支付）</li>
+<li>Healthcare 醫療（製藥、生物科技）</li>
+<li>Consumer Defensive 必須消費（菸草、飲料、零售）</li>
+<li>Industrial 工業（鐵路、軍火、材料）</li>
+<li>Energy 能源（石油、天然氣）</li>
+<li>Utilities 公共事業（水電）</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>資產配置不是「買很多股票」就好，關鍵在<b>相關性</b>。</p>
+
+<p>以前以為分散風險就是買 10 檔股票，結果買了中華電+遠傳+台灣大，以為有分散，實際上全是電信股，一個產業利空全部受傷。</p>
+
+<p>Ray Dalio 的「投資聖杯」概念很震撼—持有 15-20 種零相關資產，可以把虧損機率從 40% 壓到 11%。這不是運氣，是數學。</p>
+
+<p>另外學到一個重要觀念：<b>資產配置決定 88% 的投資成果</b>。選股固然重要，但配置才是大方向。方向對了，選股只是錦上添花；方向錯了，選股再強也會被系統性風險拖垮。</p>
+
+<p>台股的問題是產業集中，科技+金融就佔了 76%。如果只在台股做配置，效果有限。美股有 11 大類產業，適合做真正的資產配置。</p>
+
+<p>之後要檢視自己的持股，算一下產業相關性，避免「以為有分散，實際上沒有」的陷阱。</p>
+
+<hr>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04-03 02:09 - 風險管理：停利策略實戰</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-03</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-03 #2 · <span class="tag">📊 技術分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>04-03 02:09 - 風險管理：停利策略實戰</h1>
+                    <h1>2026-04-03 02:09 - 風險管理：停利策略實戰</h1>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://learningpa.cc/stop-profit/">由賺變賠？2個細節守住你的獲利！—停損停利的比例、分批停利</a></li>
+<li><a href="https://www.pfcf.com.tw/software/detail/2415">【單元10】萬用出場策略：基本停損停利、移動停損、時間出場</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>一、停損停利比例設定</h3>
+
+<p><b>是什麼</b>：停利與停損的金額或百分比比例，決定你的盈虧結構。</p>
+
+<p><b>為什麼重要</b>：</p>
+
+<ul>
+<li>停利設太少：賺3次賠1次就打平（如賺1千、停損3千）</li>
+<li>停利設太遠：根本等不到，只有一直被停損的份</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 建議比例：<b>1:2 或 1:3</b>（停損1份：停利2-3份）<br>
+2. 實例：停損500元，停利設1500元（1:3）<br>
+3. 若擔心停利太遠觸不到，可縮小金額但維持比例</p>
+
+<ul>
+<li>原本：虧1千、賺3千 → 改成：虧5百、賺1千5</li>
+</ul>
+
+<p><b>注意</b>：範圍不能縮太小</p>
+
+<ul>
+<li>台股跳動檔位：20元股票，一檔0.05元</li>
+<li>若設停損100元（約20檔），很容易被正常波動洗出去</li>
+</ul>
+
+<hr>
+
+<h3>二、分批停利策略</h3>
+
+<p><b>是什麼</b>：分兩次以上賣出，保留部分部位續抱。</p>
+
+<p><b>適用情境</b>：</p>
+
+<ul>
+<li>擔心賣太早，後續還有行情</li>
+<li>不確定會漲到哪，想先鎖定部分利潤</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 前提：至少買進2張（或零股2股以上）<br>
+2. 實例：</p>
+
+<ul>
+<li>20元買進2張，停利設25元</li>
+</ul>
+
+<p>3. <b>關鍵</b>：第二張的停損要設在「打平或小賺」</p>
+
+<ul>
+<li>最差設在進場價20元（打平出場）</li>
+</ul>
+
+<p><b>心態</b>：先賣的是「確定的獲利」，留的是「潛在的空間」</p>
+
+<hr>
+
+<h3>三、移動停損（Trailing Stop）</h3>
+
+<p><b>是什麼</b>：停損點跟著價格移動，兼具停損和移動停利效果。</p>
+
+<p><b>為什麼用</b>：</p>
+
+<ul>
+<li>解決「賺小賠大」問題</li>
+<li>方向正確時，停損點會往上移，變成移動停利</li>
+</ul>
+
+<p><b>怎麼做（K棒低點法）</b>：<br>
+1. 多單：停損設在「最近N根K棒低點」（如N=5）<br>
+2. 空單：停損設在「最近N根K棒高點」<br>
+3. 效果：</p>
+
+<ul>
+<li>價格上漲 → 低點跟著上移 → 停損變停利</li>
+</ul>
+
+<p><b>進階版：用 ATR（平均真實區間）</b></p>
+
+<ul>
+<li>停利：進場價 + N × ATR</li>
+<li>停損：進場價 - M × ATR</li>
+<li>優點：自動適應波動度，不用固定點數</li>
+</ul>
+
+<p><b>ATR 實例</b>：</p>
+
+<ul>
+<li>ATR = 150點，設定停利5倍、停損2倍</li>
+<li>多單進場18000，停利 = 18000 + 5×150 = 18750</li>
+<li>停損 = 18000 - 2×150 = 17700</li>
+</ul>
+
+<hr>
+
+<h3>四、時間出場策略</h3>
+
+<p><b>是什麼</b>：不靠價格，而是用時間來決定出場。</p>
+
+<p><b>適用情境</b>：<br>
+1. <b>當沖收盤前出場</b></p>
+
+<ul>
+<li>語法：<code>if time > 1320 then sell next bar at market</code></li>
+</ul>
+
+<p>2. <b>結算日前強制出場</b></p>
+
+<ul>
+<li>不想轉倉，直接在結算日前平倉</li>
+</ul>
+
+<p>3. <b>進場後N根K棒 + 損益兩平出場</b></p>
+
+<ul>
+<li>進場超過5根K棒且已有獲利 → 掛損益兩平單</li>
+</ul>
+
+<hr>
+
+<h3>五、停利三種設定方法</h3>
+
+<table><thead><tr><th>方法</th><th>說明</th><th>實例</th></tr></thead><tbody><tr><td>**數字停利**</td><td>固定金額或百分比</td><td>賺8%出場、賺3000元出場</td></tr><tr><td>**支撐/壓力停利**</td><td>技術位置</td><td>買進後漲到壓力區賣出</td></tr><tr><td>**進場理由消失**</td><td>技術訊號反轉</td><td>因突破買進，跌破支撐就賣</td></tr></tbody></table>
+
+<p><b>可自由搭配</b>：停損設「進場理由消失」，停利設「賺8%」</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>停利比停損更難，因為要對抗「貪婪」。停損是認賠，停利是「放棄更多可能」——這需要勇氣。</p>
+
+<p>今天學到最有價值的是 <b>分批停利</b> 和 <b>移動停損用 ATR</b>：</p>
+
+<ul>
+<li>分批停利解決了「賣太早後悔」和「等太晚變賠」的兩難</li>
+<li>ATR 讓停損停利自動適應波動，比固定點數更科學</li>
+</ul>
+
+<p>還有一個重要概念：<b>停損停利比例 1:2 或 1:3</b>。這不是隨便定的數字，而是數學期望值。如果勝率50%，賺3賠1，期望值 = 0.5×3 - 0.5×1 = 1（正期望）。但多數人是反過來：賺1賠3，期望值 = 0.5×1 - 0.5×3 = -1（負期望），難怪賠錢。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

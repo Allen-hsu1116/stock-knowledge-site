@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04-03 04:09 - 風險管理：連續虧損後的心理調整</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-03</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-03 #5 · <span class="tag">📊 技術分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>04-03 04:09 - 風險管理：連續虧損後的心理調整</h1>
+                    <h1>2026-04-03 04:09 - 風險管理：連續虧損後的心理調整</h1>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://money.udn.com/money/story/12040/7847757">10年老手談最大挫折「一次虧掉40%」：交易過程就是自我修練，停損才能在市場活下去</a></li>
+<li><a href="https://money.udn.com/money/story/12040/8773902">為何買的股票不會漎？他身價逾億看穿散戶常見五心態</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>一、停損心態：從40%虧損學到的教訓</h3>
+
+<p><b>10年老手的血淚經驗</b>：</p>
+
+<ul>
+<li>最高紀錄一次虧損 <b>40%</b>，「心裡非常的痛」</li>
+<li>爾後調整為 <b>5% 停損</b>，現在絕對遵守紀律</li>
+<li>關鍵：「圖形不對就走人，決不戀棧」</li>
+</ul>
+
+<p><b>怎麼做到</b>：<br>
+1. <b>停損設在 3%～10%</b>（太大會讓人麻痺）<br>
+2. <b>停損次數太多怎麼辦</b>：停下來檢討，下模擬單修正<br>
+3. <b>找更好的進場點位</b>：盤後選股，不要盤中追高</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：盤中漲 8% 才進場，震盪 5% 勢必先停損</li>
+<li>調整：盤前選股，在漲 3% 時提早進場</li>
+<li>結果：減少停損次數，提高勝率</li>
+</ul>
+
+<p><b>適用時機</b>：每筆交易進場前就要先設好停損點，不要等到虧損才在想怎麼辦。</p>
+
+<hr>
+
+<h3>二、散戶五大錯誤心態</h3>
+
+<h4>1. 只買自己喜歡的股票</h4>
+
+<p><b>問題</b>：你喜歡不代表市場喜歡。</p>
+
+<p><b>怎麼做</b>：買「多數人喜歡」的股票，龍頭股受市場追捧，漲幅大、時間長。</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>錯誤：買冷門股，覺得自己挖到寶</li>
+<li>正確：買當下最熱門的龍頭股，如台積電、AI概念股</li>
+</ul>
+
+<h4>2. 買只有自己知道的股票</h4>
+
+<p><b>問題</b>：流動性差，沒人接手。</p>
+
+<p><b>怎麼做</b>：每天掌握市場動態，專注熱門龍頭股。</p>
+
+<p><b>提醒</b>：股市是選美比賽，不是尋寶遊戲。</p>
+
+<h4>3. 買便宜股票</h4>
+
+<p><b>問題</b>：便宜的股票往往繼續跌，貴的股票可能還會漲。</p>
+
+<p><b>怎麼做</b>：</p>
+
+<ul>
+<li>短線操作：買已經上漲的龍頭股，強者恆強</li>
+<li>龍頭股回檔時一堆人等著加碼，支撐強</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>錯誤：AI 龍頭股漲了 50%，改買跌深的傳產股</li>
+<li>結果：AI 股續漲，傳產股續跌</li>
+</ul>
+
+<h4>4. 不知道什麼時候會漲</h4>
+
+<p><b>問題</b>：再好的股票也無法預測漲跌時機。</p>
+
+<p><b>怎麼做</b>：</p>
+
+<ul>
+<li>開盤後再觀察熱門題材和龍頭股</li>
+<li>不要預測，要反應</li>
+</ul>
+
+<h4>5. 習慣短期獲利，長期忍受虧損</h4>
+
+<p><b>問題</b>：損失規避避規避避傾向，賺一點就跑，賠錢就撐。</p>
+
+<p><b>怎麼做</b>：</p>
+
+<ul>
+<li>獲利股票抱久一點</li>
+<li>虧損股票立刻砍，不要「撐一下」</li>
+</ul>
+
+<p><b>關鍵觀念</b>：</p>
+
+<ul>
+<li>上漲的股票會持續上漲</li>
+<li>下跌的股票會持續下跌</li>
+<li>不要在虧損股票上加碼攤平</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：買了 A、B 兩股，A 漲 10%，B 跌 10%</li>
+<li>錯誤：賣 A 保住獲利，B 繼續撐</li>
+<li>正確：賣 B 停損，A 繼續抱</li>
+</ul>
+
+<hr>
+
+<h3>三、盤後練功 vs 盤中繳學費</h3>
+
+<p><b>高手三大缺失</b>：<br>
+1. 選股偏差：愛找飄股，成交量不夠被洗<br>
+2. 愛做逆勢：知道順勢賺錢快，但手癢做逆勢被軋空<br>
+3. 不做功課：盤中才選股，追高被洗</p>
+
+<p><b>怎麼做</b>：</p>
+
+<ul>
+<li>盤後走圖：了解每檔股票的股性</li>
+<li>盤前選股：準備好進場名單</li>
+<li>不要盤中急著進場</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>盤後練功：每天花 30 分鐘看線圖，找 10～15 檔候選股</li>
+<li>盤中執行：只在名單裡找進場點，不臨時選股</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>這兩篇文章狠狠打臉散戶心態，包括我。最大衝擊是「習慣短期獲利，長期忍受虧損」——這完全是人性，但也是賠錢的主因。</p>
+
+<p>那個 10 年老手虧 40% 的經驗告訴我們：<b>停損不是知道就會做，是要痛過才會學會。</b> 但與其用錢學教訓，不如現在就把紀律刻進骨子裡。</p>
+
+<p>還有「上漲股票會持續上漲，下跌股票會持續下跌」這句話，聽起來廢話，但真正執行的人少之又少。大家愛買跌深的股票覺得便宜，結果便宜還能更便宜。</p>
+
+<p>最後，盤後練功這件事真的重要。盤中選股根本是送錢，因為看到漲才想買，已經錯過最佳進場點。<b>寧願盤後多花時間研究，也不要盤中衝動進場繳學費。</b></p>
+
+<hr>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

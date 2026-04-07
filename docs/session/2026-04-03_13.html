@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04-03 13:09 - 風險管理（期貨保證金與安全槓桿設定）</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-03</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-03 #13 · <span class="tag">🎲 籌碼面分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>04-03 13:09 - 風險管理（期貨保證金與安全槓桿設定）</h1>
+                    <h1>2026-04-03 13:09 - 風險管理（期貨保證金與安全槓桿設定）</h1>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://rich01.com/maintenance-margin-0/">維持保證金是什麼？維持保證金/原始保證金要準備多少才安全？</a></li>
+<li><a href="https://quantpass.org/futures-margin/">期貨保證金－程式交易前必須知道的幾件事</a></li>
+<li><a href="https://stock-futures.com.tw/index.php/2023-11-15-08-13-05/85-2024-06-14-06-46-28">期貨保證金維持率是什麼？如何計算？小心斷頭風險</a></li>
+<li><a href="https://rich01.com/futures-least-margin-100/">期貨一口要多少錢？期貨保證金要放多少？交易期貨前沒搞懂 你100%會賠錢</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>原始保證金 vs 維持保證金</h3>
+
+<p><b>是什麼</b>：期貨交易的兩道安全門檻。原始保證金是進場門票，維持保證金是續命底線。</p>
+
+<p><b>怎麼做</b>：<br>
+1. <b>原始保證金</b>：交易前必須準備的最低金額，不繳就不能下單<br>
+2. <b>維持保證金</b>：約為原始保證金的 75%，低於此線就會收到追繳通知<br>
+3. <b>風險指標 25%</b>：盤中若低於原始保證金的 25%，期貨商直接強制平倉（斷頭）</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：大台原始保證金 265,000 元</li>
+<li>維持保證金：約 203,000 元（低於此線會追繳）</li>
+<li>斷頭點：66,250 元（265,000 × 25%）</li>
+<li>操作：若帳戶低於 66,250 元，期貨商直接砍倉</li>
+</ul>
+
+<p><b>適用時機</b>：所有期貨、選擇權、融資交易都適用此邏輯</p>
+
+<hr>
+
+<h3>追繳通知與斷頭機制</h3>
+
+<p><b>是什麼</b>：期貨商的風險控管流程，用來保護自己和你不會虧到負債。</p>
+
+<p><b>怎麼做</b>：<br>
+1. <b>盤中高風險警示</b>：權益數低於維持保證金，先發警告（還沒追繳）<br>
+2. <b>盤後追繳</b>：收盤結算後權益仍低於維持保證金，限期補錢<br>
+3. <b>補繳期限</b>：次一營業日中午 12 點前<br>
+4. <b>強制平倉</b>：期限內未補足，期貨商代為全部平倉</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：小台一口，原始保證金 66,250 元</li>
+<li>情況：帳戶權益剩 50,000 元</li>
+<li>操作：收到追繳通知，需在隔天 12 點前補足到 66,250 元</li>
+<li>風險：若不補，期貨商在隔天下午直接砍倉</li>
+</ul>
+
+<p><b>適用時機</b>：每日結算制度，每日都可能追繳</p>
+
+<hr>
+
+<h3>保證金安全倍數設定</h3>
+
+<p><b>是什麼</b>：判斷帳戶要放多少保證金才算「安全」的實務標準。</p>
+
+<p><b>怎麼做</b>：</p>
+
+<p><b>方法一：100% 保證金（1倍槓桿）</b></p>
+
+<ul>
+<li>準備等於合約價值的資金</li>
+<li>例：大台合約 220 萬，就放 220 萬保證金</li>
+<li>優點：最安全，等同現股操作</li>
+<li>缺點：資金效率低</li>
+</ul>
+
+<p><b>方法二：程式交易公式（1倍原始保證金 + 2倍 MDD）</b></p>
+
+<ul>
+<li>公式：原始保證金 + (策略 MDD × 2)</li>
+<li>例：小台策略 MDD 5 萬 → 66,250 + 50,000 × 2 = 166,250 元</li>
+<li>原因：MDD 是理論值，實務上破 2 倍 MDD 才算策略失效</li>
+</ul>
+
+<p><b>方法三：3倍原始保證金</b></p>
+
+<ul>
+<li>經驗法則：準備原始保證金的 3 倍</li>
+<li>例：小台 66,250 × 3 ≈ 200,000 元</li>
+<li>適用：不想算 MDD 的懶人包</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：想跑一口大台策略</li>
+<li>原始保證金：265,000 元</li>
+<li>策略 MDD：8 萬元</li>
+<li>安全保證金：265,000 + 80,000 × 2 = 425,000 元</li>
+</ul>
+
+<p><b>適用時機</b>：新手入場、程式交易、留倉過夜</p>
+
+<hr>
+
+<h3>槓桿倍數計算與風險</h3>
+
+<p><b>是什麼</b>：用保證金控制槓桿，槓桿越高波動越大。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 計算公式：槓桿倍數 = 合約價值 ÷ 保證金金額<br>
+2. 還原真實報酬：策略報酬 ÷ 槓桿倍數 = 無槓桿真實績效<br>
+3. 最大回撤放大：MDD × 槓桿倍數 = 實際最大虧損</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：大台合約 220 萬</li>
+<li>保證金 50 萬 → 槓桿 4.4 倍</li>
+<li>若策略 MDD 20% → 實際虧損 88%（接近歸零）</li>
+<li>還原：年報酬 45% ÷ 4.4 = 真實年報酬 10.2%</li>
+</ul>
+
+<p><b>適用時機</b>：評估任何期貨策略績效時，一定要還原槓桿</p>
+
+<hr>
+
+<h3>期貨保證金常見錯誤心態</h3>
+
+<p><b>是什麼</b>：散戶最容易犯的致命錯誤。</p>
+
+<p><b>怎麼做（避開錯誤）</b>：</p>
+
+<p><b>錯誤一：只準備原始保證金就進場</b></p>
+
+<ul>
+<li>問題：任何波動都可能觸及斷頭線</li>
+<li>正確：至少 3 倍原始保證金，或 100% 合約價值</li>
+</ul>
+
+<p><b>錯誤二：用最高槓桿追求報酬</b></p>
+
+<ul>
+<li>問題：22 倍槓桿 = 4.5% 回撤就歸零</li>
+<li>正確：新手用 1 倍槓桿，熟手最多 2-3 倍</li>
+</ul>
+
+<p><b>錯誤三：被「美化績效」騙了</b></p>
+
+<ul>
+<li>問題：45% 報酬可能是 4.5 倍槓桿，真實報酬只有 10%</li>
+<li>正確：永遠先問「用了幾倍槓桿？」</li>
+</ul>
+
+<p><b>錯誤四：收到追繳還想撐</b></p>
+
+<ul>
+<li>問題：低於風險指標 25% 直接砍倉，沒得商量</li>
+<li>正確：設定自己的停損線在維持保證金以上</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：50 萬保證金跑一口大台</li>
+<li>槓桿：約 4.4 倍（220 萬 ÷ 50 萬）</li>
+<li>一天跳空 1000 點 = 虧 20 萬 = 40% 帳戶</li>
+<li>風險：再跌 1000 點就直接斷頭</li>
+</ul>
+
+<p><b>適用時機</b>：每次開新倉前都要檢查</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>這回合學的是期貨保證金安全設定，核心觀念很簡單但很痛：<b>「大多數人賠錢不是策略爛，是槓桿開太大。」</b></p>
+
+<p>市場先生那句話很中肯：「無論多高報酬率，只要乘上一個『零』，最終結果都是零。」4 倍槓桿聽起來還好，但 MDD 放大後隨便就能把你掃出場。更扯的是很多「高績效策略」根本就是把低報酬策略放大槓桿，還原後可能輸給大盤。</p>
+
+<p>幾個實用結論：<br>
+1. 新手入場：100% 保證金（1 倍槓桿），不想算就放 3 倍原始保證金<br>
+2. 程式交易：原始保證金 + 2 倍 MDD 是安全公式<br>
+3. 看到策略績效：先問槓桿幾倍，再還原真實報酬<br>
+4. 追繳不是開玩笑：低於風險指標 25% 直接砍倉，沒機會補錢</p>
+
+<p>保證金制度是期貨商保護自己的手段，散戶要學會用保證金保護自己。<b>不要把最低門檻當成建議值，那是在危險邊緣試探。</b></p>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04-03 20:09 - 風險管理（回測與過擬合）</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-03</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-03 #18 · <span class="tag">📊 技術分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>04-03 20:09 - 風險管理（回測與過擬合）</h1>
+                    <h1>2026-04-03 20:09 - 風險管理（回測與過擬合）</h1>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.finlab.tw/backtesting-overfitting-probability/">策略優化 - 如何避免過擬合？ - FinLab</a></li>
+<li><a href="https://quantpass.org/strategy-and-backtesting/">交易策略與回測是什麼？用TradingView開始跑策略回測｜股票回測、台股回測工具 - 量化通 QuantPass</a></li>
+<li><a href="https://rich01.com/tradingview-how-to-backtesting/">TradingView回測教學－如何用策略測試器帶入內建策略進行回測？ - Mr.Market市場先生</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>回測（Backtesting）基礎</h3>
+
+<p><b>是什麼</b>：用歷史數據模擬策略在過去的表現，驗證策略是否有效的方法。</p>
+
+<p><b>為什麼重要</b>：<br>
+1. <b>驗證策略可行性</b> - 看策略在過去是否能獲利<br>
+2. <b>風險評估</b> - 了解最大虧損、波動性等風險指標<br>
+3. <b>參數優化</b> - 調整參數提高勝率<br>
+4. <b>排除主觀干擾</b> - 基於數據而非情緒做決策</p>
+
+<p><b>回測四大用途</b>：</p>
+
+<ul>
+<li>績效預期：預估可獲得的報酬和風險</li>
+<li>風險控管：了解最大回撤、波動性</li>
+<li>參數調整：優化策略參數</li>
+<li>客觀驗證：排除人為主觀意識</li>
+</ul>
+
+<hr>
+
+<h3>過擬合（Overfitting）陷阱</h3>
+
+<p><b>是什麼</b>：策略對歷史數據「過度最佳化」，結果是優化雜訊而非真正的價格規律。</p>
+
+<p><b>比喻理解</b>：</p>
+
+<ul>
+<li>中樂透的人很成功，但成功來自運氣而非能力</li>
+<li>參數調太多，就像買越多彩券，總會中獎</li>
+<li>歷史表現好 ≠ 未來表現好</li>
+</ul>
+
+<p><b>過擬合的徵兆</b>：<br>
+1. 歷史績效極佳，但實際交易虧損<br>
+2. 參數太針對特定時期優化<br>
+3. 策略太複雜、條件太多</p>
+
+<p><b>怎麼做</b>：避免過擬合的方法</p>
+
+<hr>
+
+<h3>Hold-Out 驗證法（樣本內外切分）</h3>
+
+<p><b>是什麼</b>：將歷史資料分成「樣本內（IS）」和「樣本外（OOS）」</p>
+
+<p><b>怎麼做</b>：<br>
+1. 用 IS 數據優化參數<br>
+2. 用 OOS 數據驗證績效<br>
+3. 如果 IS 最佳參數在 OOS 表現也前面 → 策略有效</p>
+
+<p><b>缺點</b>：</p>
+
+<ul>
+<li>IS 和 OOS 人為定義，優化多次後會對 OOS 越來越熟悉</li>
+<li>切分資料會減少可用數據量</li>
+<li>OOS 通常是近期資料，卻不能用來開發</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>樣本內：2015-2020 數據，找到最佳均線參數（20日、60日）</li>
+<li>樣本外：2021-2023 數據，驗證這組參數是否仍有效</li>
+<li>如果樣本外績效明顯變差 → 可能過擬合</li>
+</ul>
+
+<hr>
+
+<h3>交叉驗證法（CSCV）</h3>
+
+<p><b>是什麼</b>：更科學的驗證方法，產生多重 IS/OOS 組合</p>
+
+<p><b>怎麼做</b>：<br>
+1. 將績效時間序列切成 S 份<br>
+2. 任選 S/2 份當 IS，其他當 OOS<br>
+3. 產生大量組合（C(S, S/2) 種）<br>
+4. 觀察「最佳參數」在 OOS 的排名分布</p>
+
+<p><b>判斷標準</b>：</p>
+
+<ul>
+<li>過擬合機率 = 最佳參數在 OOS 表現低於中位數的比例</li>
+<li>好策略：過擬合機率 < 10%</li>
+<li>壞策略：過擬合機率 > 70%</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>100 個樣本中，74 個最佳化後效果低於中位數 → 74% 過擬合風險（壞策略）</li>
+<li>100 個樣本中，只有 4 個低於中位數 → 4% 過擬合風險（好策略）</li>
+</ul>
+
+<hr>
+
+<h3>回測核心指標</h3>
+
+<p><b>是什麼</b>：評估策略績效的關鍵數據</p>
+
+<p><b>怎麼看</b>：</p>
+
+<table><thead><tr><th>指標</th><th>意義</th><th>判斷標準</th></tr></thead><tbody><tr><td>淨利</td><td>總報酬金額</td><td>要扣掉手續費再看</td></tr><tr><td>勝率</td><td>獲利交易比例</td><td>不如賺賠比重要</td></tr><tr><td>盈虧比</td><td>平均獲利/平均虧損</td><td>> 1 才有正期望值</td></tr><tr><td>最大虧損（MDD）</td><td>歷史最大虧損幅度</td><td>不能超過心理承受範圍</td></tr><tr><td>夏普比率</td><td>報酬/波動比</td><td>越高代表波動越小</td></tr><tr><td>交易次數</td><td>樣本是否足夠</td><td>太少可能有運氣成分</td></tr></tbody></table>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>策略 A：勝率 60%，盈虧比 0.8 → 期望值 = 0.6×0.8 - 0.4×1 = 0.08（正但小）</li>
+<li>策略 B：勝率 40%，盈虧比 2 → 期望值 = 0.4×2 - 0.6×1 = 0.2（更高）</li>
+</ul>
+
+<p><b>適用時機</b>：比較不同策略時，不要只看勝率或淨利，要看完整指標</p>
+
+<hr>
+
+<h3>TradingView 回測操作步驟</h3>
+
+<p><b>是什麼</b>：TradingView 提供的免費回測工具</p>
+
+<p><b>怎麼做</b>：</p>
+
+<p>1. <b>選擇商品</b>：搜尋股票/期貨代碼<br>
+2. <b>設定時間週期</b>：日線、小時線等<br>
+3. <b>載入策略</b>：</p>
+
+<ul>
+<li>內建策略：策略測試器 → 技術 → 選擇策略</li>
+</ul>
+
+<p>4. <b>調整參數</b>：修改均線天數、停損點等<br>
+5. <b>設定成本</b>：手續費、滑價（建議先設 0，再逐步加入）<br>
+6. <b>查看結果</b>：</p>
+
+<ul>
+<li>概要：淨利、勝率、MDD</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>商品：SPX（S&P 500 指數）</li>
+<li>策略：雙均線交叉（20MA/60MA）</li>
+<li>時間：日線</li>
+<li>結果：458 次交易，淨利 0.08%</li>
+<li>判斷：交易次數多但報酬低，加入手續費後可能虧損</li>
+</ul>
+
+<p><b>注意事項</b>：</p>
+
+<ul>
+<li>免費版限制 5000 根 K 線</li>
+<li>不能上傳自己的歷史數據</li>
+<li>一次只能測一個市場</li>
+</ul>
+
+<hr>
+
+<h3>回測三大陷阱</h3>
+
+<p><b>是什麼</b>：常見的回測錯誤，導致結果失真</p>
+
+<p><b>怎麼避免</b>：</p>
+
+<table><thead><tr><th>陷阱</th><th>問題</th><th>解決方法</th></tr></thead><tbody><tr><td>未扣成本</td><td>手續費、滑價未計入</td><td>設定實際交易成本</td></tr><tr><td>未來函數</td><td>用當時不知道的數據</td><td>確保只用當下可得資訊</td></tr><tr><td>存活偏差</td><td>只測還存在的股票</td><td>包含已下市的股票</td></tr></tbody></table>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>收盤突破進場 → 當天收盤才知道突破，無法在收盤前進場</li>
+<li>正確做法：收盤確認突破，隔天開盤進場</li>
+</ul>
+
+<hr>
+
+<h3>指標 vs 策略差異</h3>
+
+<p><b>是什麼</b>：TradingView 中兩種不同功能的工具</p>
+
+<table><thead><tr><th>項目</th><th>指標（Indicator）</th><th>策略（Strategy）</th></tr></thead><tbody><tr><td>功能</td><td>畫圖、標記輔助線</td><td>模擬交易進出場</td></tr><tr><td>產出</td><td>視覺化數據</td><td>績效報告</td></tr><tr><td>回測</td><td>❌ 不能</td><td>✅ 可以</td></tr><tr><td>用途</td><td>分析判斷</td><td>驗證策略有效性</td></tr></tbody></table>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>指標：畫出 KD 線、均線交叉點</li>
+<li>策略：KD 黃金交叉買進、死亡交叉賣出 + 回測績效</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>回測不是為了找到「歷史最好的參數」，而是驗證「策略邏輯是否真的有效」。</p>
+
+<p>最關鍵的概念是過擬合檢測 — 很多策略歷史績效漂亮，實際用卻虧損，原因就是優化了雜訊。FinLab 那篇用「多重 IS/OOS 切分」的方法很實用，比單純切分樣本內外更嚴謹。</p>
+
+<p>實戰建議：<br>
+1. 先用簡單策略跑回測，確認基準線<br>
+2. 加入手續費和滑價，看績效還剩多少<br>
+3. 用不同時間區間驗證，避免只測牛市<br>
+4. 關鍵指標：盈虧比 > 勝率，MDD < 心理承受範圍</p>
+
+<p>TradingView 回測方便但不精確，真要跑策略還是要用專業回測軟體，但作為初步驗證已經足夠。</p>
+
+<hr>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>
