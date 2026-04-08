@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>波浪理論實戰</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-03-29</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-03-29 #12 · <span class="tag">📊 技術分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>波浪理論實戰</h1>
+                    <h2>第 12 回合學習 - 波浪理論實戰</h2>
+
+<p><b>學習時間</b>：13:15</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.stockfeel.com.tw/%E6%B3%A2%E6%B5%AA%E7%90%86%E8%AB%96-%E8%89%BE%E7%95%A5%E7%89%B9%E6%B3%A2%E6%B5%AA%E7%90%86%E8%AB%96-%E9%82%AA%E6%83%A1%E7%AC%AC%E4%BA%94%E6%B3%A2/">波浪理論是什麼？波浪理論計算方式？小心邪惡第五波！</a></li>
+<li><a href="https://www.cmoney.tw/learn/course/technicals/topic/1111">什麼是波浪理論？</a></li>
+<li><a href="https://tw.stock.yahoo.com/news/%E6%B3%A2%E6%B5%AA%E7%90%86%E8%AB%96%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F%E5%8F%B0%E8%82%A1%E9%80%B2%E5%85%A5%E3%80%8C%E9%82%AA%E6%83%A1%E7%AC%AC%E4%BA%94%E6%B3%A2%E3%80%8D%E4%BA%86%E5%97%8E%EF%BC%9F%E4%B8%80%E6%96%87%E7%9C%8B%E6%87%82%E6%8E%A8%E5%8B%95%E6%B3%A2%E8%88%87%E4%BF%AE%E6%AD%A3%E6%B3%A2%EF%BC%81-061724849.html">波浪理論是什麼？台股進入「邪惡第五波」了嗎？</a></li>
+</ul>
+
+<p><b>涵蓋主題</b>：</p>
+
+<ul>
+<li>波浪理論</li>
+<li>費波南希比例</li>
+<li>邪惡第五波</li>
+<li>技術分析</li>
+</ul>
+
+<hr>
+
+<h2>波浪理論核心概念</h2>
+
+### 「是什麼」
+波浪理論（艾略特波浪理論）由艾略特於1930年代提出，認為市場價格走勢呈現「5波上升、3波下降」的規律循環，反映投資人情緒的集體變化。
+
+<p>核心重點：<b>不是預測高點，而是掌握情緒循環節奏。</b></p>
+
+<hr>
+
+<h2>八波結構詳解</h2>
+
+<h3>推動波（上升五波）</h3>
+
+<table><thead><tr><th>波浪</th><th>名稱</th><th>特性</th><th>成交量</th><th>市場情緒</th></tr></thead><tbody><tr><td>波浪1</td><td>初升波</td><td>趨勢萌芽，利多不明顯</td><td>低</td><td>懷疑、保守</td></tr><tr><td>波浪2</td><td>回檔波</td><td>吃掉波浪1大部分漲幅，但不跌破起點</td><td>比波浪1小</td><td>悲觀</td></tr><tr><td>波浪3</td><td>主升波</td><td>**最強最長**，突破波浪1高點是買進訊號</td><td>最大</td><td>樂觀轉強</td></tr><tr><td>波浪4</td><td>整理波</td><td>橫盤或小回檔，底部高於波浪1高點</td><td>縮減</td><td>觀望</td></tr><tr><td>波浪5</td><td>末升波</td><td>情緒最高潮，技術指標常背離</td><td>大但量價背離</td><td>過熱</td></tr></tbody></table>
+
+<h3>修正波（下降三波）</h3>
+
+<table><thead><tr><th>波浪</th><th>特性</th><th>市場誤判</th></tr></thead><tbody><tr><td>波浪A</td><td>初次下跌</td><td>多數人以為只是暫時回檔</td></tr><tr><td>波浪B</td><td>假反彈</td><td>「多頭陷阱」，讓人以為多頭回來了</td></tr><tr><td>波浪C</td><td>全面下跌</td><td>真正的修正，破壞力最強</td></tr></tbody></table>
+
+<hr>
+
+<h2>波浪理論三鐵律</h2>
+
+<p><b>「怎麼做」— 判斷波浪是否正確的關鍵規則：</b></p>
+
+<p>1. <b>波浪2不可能完全回撤波浪1</b> — 波浪2的底不會跌破波浪1的起點<br>
+2. <b>波浪3不可能是驅動波中最短的</b> — 如果你的數浪中波浪3比波浪1和5都短，數法就錯了<br>
+3. <b>波浪4的低點不能與波浪1頂點重疊</b> — 波浪4的底要在波浪1的高點之上</p>
+
+<p><b>實例判斷：</b></p>
+
+<ul>
+<li>情境：某股票波浪1從100漲到120（漲20點），波浪2回檔到105</li>
+<li>驗證：105 > 100，符合鐵律1 ✓</li>
+<li>波浪3從105漲到145（漲40點），比波浪1長，符合鐵律2 ✓</li>
+<li>波浪4回檔到128，比波浪1高點120還高，符合鐵律3 ✓</li>
+</ul>
+
+<hr>
+
+<h2>費波南希比例計算</h2>
+
+<h3>上升五波計算</h3>
+
+<table><thead><tr><th>波浪</th><th>計算方式</th></tr></thead><tbody><tr><td>波浪2回檔</td><td>波浪1漲幅的 **38.2%～78.6%**</td></tr><tr><td>波浪3幅度</td><td>波浪1的 **1.618倍、2.62倍、或4.25倍**（最常見是1.618倍）</td></tr><tr><td>波浪4回檔</td><td>波浪3的 **23.6%或38.2%**</td></tr><tr><td>波浪5幅度</td><td>若波浪3延伸：波浪5 = 波浪1 或 波浪1 × 1.618</td></tr></tbody></table>
+
+<h3>修正波計算</h3>
+
+<table><thead><tr><th>波浪</th><th>計算方式</th></tr></thead><tbody><tr><td>波浪B反彈</td><td>波浪A的 **38.2%～78.6%**</td></tr><tr><td>波浪C幅度</td><td>波浪A的 **1.382倍或1.618倍**</td></tr></tbody></table>
+
+<hr>
+
+<h2>邪惡第五波</h2>
+
+### 「是什麼」
+波浪理論中最危險的一段，**第五波可能是最長的延伸波**，突破主升段波浪3，讓人以為多頭還沒結束，但隨後會迎來強烈反轉。
+
+### 「為什麼邪惡」
+1. **脫離常態** — 第五波可能走得比波浪3還強還長
+2. **情緒最高** — 散戶、擦鞋童都進場，市場一片樂觀
+3. **技術背離** — 量價背離、技術指標背離早已出現
+4. **反轉猛烈** — ABC修正波會快速吃掉前面漲幅
+
+<h3>「怎麼做」— 邪惡第五波操作策略</h3>
+
+<p><b>識別訊號：</b></p>
+
+<ul>
+<li>市場普遍亢奮，利多新聞滿天飛</li>
+<li>成交量放大但股價漲幅有限（量價背離）</li>
+<li>技術指標（RSI、MACD）出現頂背離</li>
+<li>散戶大量進場（街上人人談股票）</li>
+</ul>
+
+<p><b>操作原則：</b><br>
+1. <b>不追高</b> — 第五波雖然可能延伸，但風險報酬比已惡化<br>
+2. <b>逐步減碼</b> — 波段部位分批出場，不一次賣完<br>
+3. <b>嚴設停損</b> — 把停損設在前一波段重要轉折點<br>
+4. <b>避開槓桿</b> — 不要在末升段放大槓桿</p>
+
+<hr>
+
+<h2>波浪理論實戰應用</h2>
+
+<h3>進場時機</h3>
+
+<p><b>最佳進場點：波浪2結束、波浪3突破時</b></p>
+
+<p><b>「怎麼做」：</b><br>
+1. 觀察波浪1結束後的回檔<br>
+2. 用費波南希比例抓波浪2可能支撐（0.382、0.5、0.618）<br>
+3. 等波浪2回檔結束，波浪3突破波浪1高點時進場<br>
+4. 停損設在波浪2的低點下方</p>
+
+<p><b>實例：</b></p>
+
+<ul>
+<li>情境：台積電從500漲到600（波浪1），回檔到550（波浪2的0.5回檔）</li>
+<li>操作：在550附近觀察，若突破600，進場買進</li>
+<li>停損：設在540（波浪2低點下方）</li>
+</ul>
+
+<h3>第二進場點：波浪5初期</h3>
+
+<p><b>風險較高，但波浪3沒抓到時可用：</b></p>
+
+<p>1. 只有在波浪5突破波浪3時才進場<br>
+2. 停損要更嚴格，設在波浪4低點<br>
+3. 隨時準備出場，因為波浪5隨時可能結束</p>
+
+<h3>出場時機</h3>
+
+<p><b>波浪5或修正波C波階段：</b></p>
+
+<ul>
+<li>技術指標背離時逐步減碼</li>
+<li>不要貪戀最後一段漲幅</li>
+<li>現金為王，等待下一個循環</li>
+</ul>
+
+<hr>
+
+<h2>波浪理論三大注意事項</h2>
+
+### 1. 不能單獨使用
+波浪理論基於市場情緒，**必須搭配其他指標**：
+
+<ul>
+<li>成交量確認</li>
+<li>技術指標（RSI、MACD）背離</li>
+<li>總體經濟數據</li>
+<li>恐懼貪婪指數</li>
+</ul>
+
+### 2. 波浪數法有主觀性
+同一張圖，不同分析師可能數出不同的波浪。實務上要：
+
+<ul>
+<li>對照多種時間週期（日線、週線、月線）</li>
+<li>驗證是否符合三鐵律</li>
+<li>等待確認訊號再行動</li>
+</ul>
+
+### 3. 延伸波難以預測
+波浪3或波浪5都可能出現延伸波，讓幅度難以預測。處理方式：
+
+<ul>
+<li>用移動停利，讓獲利跟著走</li>
+<li>不要想抓最高點，分批出場</li>
+</ul>
+
+<hr>
+
+<h2>波浪理論優缺點</h2>
+
+### 優點
+<table><thead><tr><th>優點</th><th>說明</th></tr></thead><tbody><tr><td>趨勢框架</td><td>提供完整的市場循環視角</td></tr><tr><td>情緒解讀</td><td>幫助理解市場心理變化</td></tr><tr><td>費波南希比例</td><td>客觀的支撐壓力參考</td></tr></tbody></table>
+
+### 缺點
+<table><thead><tr><th>缺點</th><th>說明</th></tr></thead><tbody><tr><td>主觀性高</td><td>不同人數法可能不同</td></tr><tr><td>事後驗證</td><td>常常是「事後諸葛」才能確認波浪</td></tr><tr><td>不一定發生</td><td>並非所有走勢都符合5波3波模式</td></tr></tbody></table>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>波浪理論最有價值的概念不是「預測」而是<b>「判斷市場所處階段」</b>。知道現在在哪一波，比猜未來會怎麼走更重要。</p>
+
+<p>實戰上，我會特別注意幾個點：<br>
+1. <b>波浪3是最佳進場點</b> — 突破波浪1高點時進場，風險報酬比最好<br>
+2. <b>邪惡第五波要小心</b> — 市場一片樂觀時反而要準備撤退<br>
+3. <b>三鐵律是驗證工具</b> — 如果數出來的波浪違反三鐵律，代表數法錯了</p>
+
+<p>但波浪理論最大的問題是<b>事後驗證</b>，很多時候只有行情走完才能確認「喔！原來那個是波浪3」。所以實務上我會搭配：</p>
+
+<ul>
+<li>成交量確認（波浪3量最大）</li>
+<li>技術背離（波浪5常見背離）</li>
+<li>移動停利（不猜頭，讓市場告訴我何時出場）</li>
+</ul>
+
+<p>最後，邪惡第五波這個概念提醒我：<b>最後的瘋狂往往最致命</b>。當散戶都在談股票、擦鞋童都給明牌時，反轉就不遠了。</p>
+
+<p>朝股票操作大師邁進中 📈# 2026-03-29 14:25 - 波浪理論實戰操作法則</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.fishhuang.idv.tw/2024/04/Elliott-Wave-Principle-operating-rules-combat-articles.html">波浪理論 第12章 操作法則－波浪理論實戰篇</a></li>
+<li><a href="https://www.stockfeel.com.tw/%E6%B3%A2%E6%B5%AA%E7%90%86%E8%AB%96-%E8%89%BE%E7%95%A5%E7%89%B9%E6%B3%A2%E6%B5%AA%E7%90%86%E8%AB%96-%E9%82%AA%E6%83%A1%E7%AC%AC%E4%BA%94%E6%B3%A2/">波浪理論是什麼？波浪理論計算方式？小心邪惡第五波！</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>一、波浪理論七種進場時機（多頭市場）</h3>
+
+<h4>1. 第二波結束時進場買進</h4>
+
+<p><b>是什麼</b>：在第2波回檔結束時進場，準備賺取完整的第3波漲幅</p>
+
+<p><b>怎麼做</b>：<br>
+1. 確認左邊走勢已完成A-B-C回檔修正波<br>
+2. 確認緊接著的第1波可細分為5個上升小波<br>
+3. 觀察第2波回檔幅度：可能是第1波的0.382、0.5或0.618處<br>
+4. 用c波≒a波來找尋回檔低點進場</p>
+
+<p><b>停損設定</b>：</p>
+
+<ul>
+<li>設在比第1波起點低一點的地方</li>
+<li>第2波不會跌破第1波的起點（波浪理論三鐵律之一）</li>
+</ul>
+
+<p><b>獲利目標</b>：</p>
+
+<ul>
+<li>第3波整段漲幅（通常是最長的一波）</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：某股票從100元漲到120元（第1波），回檔到110元（第2波，回檔50%）</li>
+<li>操作：在110元附近進場</li>
+<li>停損：設在98元（低於第1波起點）</li>
+<li>目標：賺取完整第3波，假設第3波漲幅等於第1波的1.618倍，目標約142元</li>
+</ul>
+
+<hr>
+
+<h4>2. 在第三波之中進場買進</h4>
+
+<p><b>是什麼</b>：唯一「不等待低點」的進場時機，在第3波進行中跳空突破第1波高點時加碼</p>
+
+<p><b>怎麼做</b>：<br>
+1. 確認第2波已結束且進場作多無誤<br>
+2. 等待股價接近第1波頂點<br>
+3. 觀察是否跳空開高突破第1波頂點<br>
+4. 跳空當天進場加碼</p>
+
+<p><b>停損設定</b>（兩種方法）：<br>
+1. 設在略低於第1波頂點（因為第3波進行中不會回頭）<br>
+2. 設在略低於前一天高點</p>
+
+<p><b>獲利目標</b>：</p>
+
+<ul>
+<li>第3波整段漲幅，利潤最豐富且來得快</li>
+<li>第3波漲幅至少與第1波相等</li>
+</ul>
+
+<p><b>注意事項</b>：</p>
+
+<ul>
+<li>如果跳空當天就回補，須重新檢視波浪辨認是否有錯誤</li>
+<li>第3波爆發力最強</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：第1波高點120元，股價跳空開在122元</li>
+<li>操作：122元進場加碼</li>
+<li>停損：設在118元（低於第1波高點）</li>
+<li>風險：如果當天回補跌破120元，代表波浪判斷錯誤</li>
+</ul>
+
+<hr>
+
+<h4>3. 在第四波將結束時進場買進</h4>
+
+<p><b>是什麼</b>：在第4波修正尾聲進場，準備賺取第5波漲幅</p>
+
+<p><b>怎麼做</b>：<br>
+1. 確認已完成強勁的第3波（有跳空、比第1波長）<br>
+2. 觀察第4波低點是否高於第1波高點（波浪鐵律）<br>
+3. 尋找第4波結束點的5個線索：</p>
+
+<ul>
+<li>第4波低點可能是第3波回檔0.382處</li>
+</ul>
+
+<p><b>停損設定</b>：</p>
+
+<ul>
+<li>設在比第1波高點低一點的位置</li>
+</ul>
+
+<p><b>獲利目標</b>：</p>
+
+<ul>
+<li>第5波漲幅</li>
+<li>第5波長度可能：等於第1波，或=第1波起點至第3波高點的0.618倍</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：第1波高點120元，第3波高點180元，第4波回檔到145元</li>
+<li>進場：145元附近（第4波結束點）</li>
+<li>停損：118元（低於第1波高點）</li>
+<li>目標：145 + (180-100)×0.618 = 194元（第5波目標）</li>
+</ul>
+
+<hr>
+
+<h4>4. 在第五波高點賣出（放空）</h4>
+
+<p><b>是什麼</b>：在第5波結束時放空，賺取A-B-C修正波的跌幅</p>
+
+<p><b>怎麼做</b>：<br>
+1. 確認上升五波已完成<br>
+2. 用MACD背離輔助判斷第5波是否結束<br>
+3. 觀察是否有竭盡缺口出現<br>
+4. 等待竭盡缺口被回補或跳空下跌</p>
+
+<p><b>停損設定</b>（三種方法）：<br>
+1. 第3波漲幅以上一點<br>
+2. 第1波到第3波漲幅的0.618倍以上一點<br>
+3. 第5波高點以上一點</p>
+
+<p><b>獲利目標</b>：</p>
+
+<ul>
+<li>A-B-C波跌幅</li>
+<li>至少回檔到前上升五波的0.382處或第4波低點</li>
+</ul>
+
+<p><b>注意事項</b>：</p>
+
+<ul>
+<li>有摸頭探底之嫌，停損難設</li>
+<li>A波跌幅沒有固定標準，目標區最難確認</li>
+<li>B波反彈可能超過第5波高點（不規則修正）</li>
+</ul>
+
+<hr>
+
+<h4>5. 在B波結束時賣出（放空）</h4>
+
+<p><b>是什麼</b>：在修正波的B波反彈結束時放空，賺取C波跌幅</p>
+
+<p><b>怎麼做</b>：<br>
+1. 先算A波是三波下跌或五波下跌<br>
+2. A波五波段：B波反彈幅度是A波的0.382、0.5或0.618倍，不超過第5波高點<br>
+3. A波三波段：B波反彈幅度約為A波的1.236～1.382倍，可能超過第5波高點</p>
+
+<p><b>停損設定</b>：</p>
+
+<ul>
+<li>A波五波段：設在第5波高點以上</li>
+<li>A波三波段：設在A波跌幅×1.382以上</li>
+</ul>
+
+<p><b>獲利目標</b>：</p>
+
+<ul>
+<li>C波跌幅</li>
+<li>C波跌幅至少約略與A波相同</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：第5波高點200元，A波從200跌到160（五波段）</li>
+<li>B波反彈預期：160 + (200-160)×0.618 = 185元附近</li>
+<li>操作：185元附近放空</li>
+<li>停損：202元</li>
+<li>目標：160元以下（C波至少跌到與A波相同）</li>
+</ul>
+
+<hr>
+
+<h4>6. 在鋸齒型修正波之後下單</h4>
+
+<p><b>是什麼</b>：鋸齒型修正波的C波完成後進場</p>
+
+<p><b>怎麼做</b>：<br>
+1. 確認鋸齒型修正波（5-3-5結構）<br>
+2. C波要分為五波<br>
+3. 各種指標呈現極度超賣或超買<br>
+4. 確認鋸齒型修正波是第2波、第4波或B波</p>
+
+<p><b>注意事項</b>：</p>
+
+<ul>
+<li>鋸齒型修正波可能是第2波、第4波或B波</li>
+<li>如果是B波，最好場外觀望（B波最容易賠錢）</li>
+<li>C波跌幅可能是A波等長，或A波×1.618或×2.618</li>
+</ul>
+
+<hr>
+
+<h4>7. 在三角形整理區作單</h4>
+
+<p><b>是什麼</b>：在收斂三角形整理中作單，等待突破</p>
+
+<p><b>怎麼做</b>：<br>
+1. 確認價位帶愈來愈窄<br>
+2. 每一波幅度約為前一波的0.618倍<br>
+3. 三角形只出現在第4波或B波<br>
+4. 在三角形e波進場<br>
+5. 等待突破，通常會有跳空</p>
+
+<p><b>停損設定</b>：</p>
+
+<ul>
+<li>設在三角形c波以下</li>
+</ul>
+
+<p><b>獲利目標</b>：</p>
+
+<ul>
+<li>三角形整理突破後的漲跌幅度</li>
+<li>至少為三角形整理內最寬的距離</li>
+</ul>
+
+<hr>
+
+<h3>二、波浪理論計算實戰（費波南希比例）</h3>
+
+<h4>上升五波計算公式</h4>
+
+<table><thead><tr><th>波浪</th><th>計算方式</th></tr></thead><tbody><tr><td>第1波</td><td>基準波，作為計算基礎</td></tr><tr><td>第2波</td><td>回檔第1波的38.2%～78.6%</td></tr><tr><td>第3波</td><td>可能為第1波的1.618倍、2.62倍或4.25倍</td></tr><tr><td>第4波</td><td>回檔第3波的23.6%或38.2%或50%</td></tr><tr><td>第5波</td><td>若第3波≥1.618倍第1波：第5波=第1波或第1波×1.618或×2.62</td></tr></tbody></table>
+
+<h4>下降三波計算公式</h4>
+
+<table><thead><tr><th>波浪</th><th>計算方式</th></tr></thead><tbody><tr><td>A波</td><td>基準波</td></tr><tr><td>B波</td><td>回檔A波的38.2%～78.6%，或延伸至A波×1.272～1.382</td></tr><tr><td>C波</td><td>可能為A波×1.382或A波×1.618</td></tr></tbody></table>
+
+<hr>
+
+<h3>三、邪惡第五波識別</h3>
+
+<p><b>是什麼</b>：第5波產生很長的延伸波，幅度甚至超越第3波，隨後迎來強烈反轉</p>
+
+<p><b>特徵</b>：<br>
+1. 市場已大漲很長時間<br>
+2. 市場情緒高漲，新手紛紛進場<br>
+3. 第5波有延伸波（只在1、3、5波出現一次）<br>
+4. 漲幅可能超過第3波</p>
+
+<p><b>風險</b>：</p>
+
+<ul>
+<li>雖然利潤可能很大，但不一定能即時脫身</li>
+<li>後面的A-B-C修正波會殺得很兇</li>
+</ul>
+
+<p><b>應對策略</b>：<br>
+1. 用MACD背離輔助判斷第5波是否結束<br>
+2. 觀察竭盡缺口<br>
+3. 嚴設停損：第3波高點以上<br>
+4. 不要追高</p>
+
+<hr>
+
+<h3>四、波浪理論實戰三大注意事項</h3>
+
+<h4>1. 波浪鐵律</h4>
+
+<ul>
+<li>第2波不會跌破第1波起點</li>
+<li>第3波不會是最短的一波</li>
+<li>第4波低點不會低於第1波高點</li>
+</ul>
+
+<h4>2. 延伸波特性</h4>
+
+<ul>
+<li>延伸波只會出現一次</li>
+<li>通常出現在第3波（主升段）</li>
+<li>出現延伸波代表走勢非常強勁</li>
+</ul>
+
+<h4>3. 不能單獨使用</h4>
+
+<ul>
+<li>波浪理論依賴市場情緒</li>
+<li>必須搭配其他技術指標</li>
+<li>建議搭配：K線、型態學、成交量、MACD</li>
+<li>可參考恐懼貪婪指數判斷市場位階</li>
+</ul>
+
+<hr>
+
+<h3>五、波浪理論最佳進場時機</h3>
+
+<p><b>最佳時間：第3波剛形成</b></p>
+
+<ul>
+<li>第1波難以發現</li>
+<li>第2波結束後、第3波即將突破時進場</li>
+<li>第3波形成後有後續趨勢可賺</li>
+</ul>
+
+<p><b>第二選擇：第5波初期</b></p>
+
+<ul>
+<li>一定要在第5波超過第3波時進場</li>
+<li>風險較高，第5波隨時可能結束反轉</li>
+<li>嚴設停損</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>波浪理論最困難的是「數浪」——辨認現在是哪一波。這篇文章最可貴的是提供了七種具體的進場時機，每種都有明確的：<br>
+1. 先決條件（如何確認波浪位置）<br>
+2. 注意事項（觀察重點）<br>
+3. 停損位置（控制風險）<br>
+4. 獲利目標（設定停利）</p>
+
+<p>特別是「第3波之中進場」這個策略很有意思——這是唯一不等待低點的進場方式，因為第3波爆發力最強、不會回頭。如果跳空突破第1波高點，停損設在第1波高點下方就很安全。</p>
+
+<p>另外學到幾個關鍵點：<br>
+1. <b>費波南希比例不是隨意設定</b>：第2波回檔通常在38.2%～78.6%，不是傳統的50%而已<br>
+2. <b>第3波是主升段</b>：通常是最長的一波，至少不會是最短的<br>
+3. <b>邪惡第五波要小心</b>：延伸波可能讓人以為還會續漲，但隨後的反轉會很猛烈</p>
+
+<p>波浪理論不是精確科學，而是預測框架。實戰中要搭配MACD背離、成交量、其他技術指標一起看，才不會「數浪數到懷疑人生」。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

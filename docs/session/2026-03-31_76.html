@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03-31 15:01 - 基本面分析（營業利益率與三率判斷）</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-03-31</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-03-31 #76 · <span class="tag">📊 技術分析</span><span class="tag">💰 基本面分析</span></div>
+                    <h1>03-31 15:01 - 基本面分析（營業利益率與三率判斷）</h1>
+                    <h1>2026-03-31 15:01 - 基本面分析（營業利益率與三率判斷）</h1>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.stockfeel.com.tw/%E7%87%9F%E6%A5%AD%E5%88%A9%E7%9B%8A%E7%8E%87/">營業利益率（營益率）是什麼？營業利益率（營益率）越高越好嗎？</a></li>
+<li><a href="https://rich01.com/1-operating-profit-margin/">營業利益率(營益率)是什麼？如何用營業利益率評估公司的獲利效率</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>營業利益率（營益率）</h3>
+
+<p><b>是什麼</b>：每1元營業收入中，公司本業能賺取多少利潤的比率。公式：（營業利益 ÷ 營業收入）× 100%</p>
+
+<p><b>怎麼算</b>：</p>
+
+<pre><code>營業利益 = 營業收入 - 營業成本 - 營業費用
+營業利益率 = 營業利益 ÷ 營業收入 × 100%</code></pre>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：某公司營業收入70萬，營業成本20萬，營業費用30萬</li>
+<li>毛利率 = (70-20) ÷ 70 × 100% = 71.43%</li>
+<li>營業利益率 = (70-20-30) ÷ 70 × 100% = 28.57%</li>
+</ul>
+
+<p><b>與毛利率的差異</b>：</p>
+
+<ul>
+<li>毛利率只扣營業成本（變動成本），反映產品競爭力</li>
+<li>營業利益率還扣營業費用（固定成本），反映經營能力</li>
+<li>毛利率與營業利益率的差距 = 營業費用佔營收比例</li>
+</ul>
+
+<hr>
+
+<h3>三率關係：毛利率、營業利益率、淨利率</h3>
+
+<p><b>是什麼</b>：三率代表公司獲利能力的三個層次，由淺入深。</p>
+
+<p><b>計算邏輯</b>：</p>
+
+<pre><code>毛利率 = (營業收入 - 營業成本) ÷ 營業收入
+營業利益率 = (營業收入 - 營業成本 - 營業費用) ÷ 營業收入
+淨利率 = 稅後淨利 ÷ 營業收入</code></pre>
+
+<p><b>各率代表意義</b>：</p>
+
+<ul>
+<li>毛利率：產品競爭力、定價能力</li>
+<li>營業利益率：本業經營效率</li>
+<li>淨利率：整體獲利能力（含業外）</li>
+</ul>
+
+<p><b>實例判斷</b>：</p>
+
+<ul>
+<li>台積電毛利率50%+、營業利益率40%+ → 產品強、經營效率也高</li>
+<li>某公司毛利率70%、營業利益率10% → 產品有競爭力但費用控制差</li>
+</ul>
+
+<hr>
+
+<h3>營業利益率 vs 淨利率：關鍵差異</h3>
+
+<p><b>是什麼</b>：淨利率包含業外收支，營業利益率只看本業。</p>
+
+<p><b>怎麼判斷</b>：</p>
+
+<ul>
+<li>稅前純益 = 營業利益 + 業外收支</li>
+<li>稅後純益 = 稅前純益 - 所得稅</li>
+</ul>
+
+<p><b>業外收入來源</b>：</p>
+
+<ul>
+<li>出售土地、廠房</li>
+<li>投資收益</li>
+<li>匯兌利益</li>
+</ul>
+
+<p><b>為什麼要看營業利益率</b>：</p>
+
+<ul>
+<li>業外收入不穩定，不能當成常態收入</li>
+<li>公司賣土地獲利大增，EPS飆高，但本業可能虧損</li>
+<li>用營業利益率看本業，才不會被一次性收益誤導</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：某公司單季出售土地獲利10億，EPS從2元跳到8元</li>
+<li>錯誤判斷：看到EPS大增就買入</li>
+<li>正確判斷：看營業利益率發現本業其實虧損，這種獲利不可持續</li>
+</ul>
+
+<hr>
+
+<h3>用營業利益率選股的三種方法</h3>
+
+<p><b>方法一：穩定性篩選</b></p>
+
+<ul>
+<li>設定條件：最近6個月營業利益率皆大於15%</li>
+<li>目的：排除營益率波動大的公司</li>
+<li>適用：尋找獲利穩定的存股標的</li>
+</ul>
+
+<p><b>方法二：同業比較</b></p>
+
+<ul>
+<li>設定條件：同產業中營業利益率最高</li>
+<li>目的：找出該產業經營能力最強的公司</li>
+<li>注意：不同產業營益率差異大，不能跨業比較</li>
+</ul>
+
+<p><b>方法三：三率搭配</b></p>
+
+<ul>
+<li>同時看毛利率、營業利益率、淨利率</li>
+<li>判斷公司獲利結構是否健康</li>
+<li>避免單一指標失真</li>
+</ul>
+
+<hr>
+
+<h3>毛利率與營業利益率的綜合判斷</h3>
+
+<p><b>是什麼</b>：兩率差距反映營業費用控制能力。</p>
+
+<p><b>怎麼判斷</b>：<br>
+1. <b>工業產品型企業</b>：營業成本通常遠高於營業費用</p>
+
+<ul>
+<li>重點看毛利率變化</li>
+</ul>
+
+<p>2. <b>技術服務型企業</b>：營業費用（人才、研發、行銷）是主要支出</p>
+
+<ul>
+<li>重點看營業利益率</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：軟體公司毛利率80%，但營業利益率只有5%</li>
+<li>分析：研發和行銷費用吃掉大部分利潤</li>
+<li>判斷：要觀察這些費用是否帶來未來成長</li>
+</ul>
+
+<hr>
+
+<h3>營業利益率的常見陷阱</h3>
+
+<p><b>陷阱一：數值失真</b></p>
+
+<ul>
+<li>營業利益或營業費用出現負數</li>
+<li>導致營業利益率超過100%或為負值</li>
+<li>實例：晟德2021 Q3營益率151%，是失真非真實獲利</li>
+</ul>
+
+<p><b>陷阱二：只看單季</b></p>
+
+<ul>
+<li>單季營益率可能受一次性因素影響</li>
+<li>應看連續多季趨勢</li>
+</ul>
+
+<p><b>陷阱三：忽略產業特性</b></p>
+
+<ul>
+<li>不同產業營益率基準不同</li>
+<li>金融業、科技業、傳產的標準差異大</li>
+</ul>
+
+<p><b>陷阱四：只看營益率不看淨利率</b></p>
+
+<ul>
+<li>營業利益率高但淨利率低 → 可能有大量業外支出</li>
+<li>要綜合判斷</li>
+</ul>
+
+<hr>
+
+<h3>好的營業利益率特徵</h3>
+
+<p><b>特徵一：長期穩定</b></p>
+
+<ul>
+<li>多季維持在一定區間</li>
+<li>不會暴起暴落</li>
+</ul>
+
+<p><b>特徵二：與自身過去相比成長</b></p>
+
+<ul>
+<li>營益率逐年提升</li>
+<li>代表經營效率改善</li>
+</ul>
+
+<p><b>特徵三：與同業相比較高</b></p>
+
+<ul>
+<li>在同產業中有競爭優勢</li>
+<li>經營能力優於對手</li>
+</ul>
+
+<hr>
+
+<h2>實戰應用</h2>
+
+<h3>查詢管道</h3>
+
+<p><b>台股</b>：</p>
+
+<ul>
+<li>Goodinfo 台灣股市資訊網</li>
+<li>鉅亨網</li>
+<li>PChome 股市</li>
+<li>玩股網</li>
+</ul>
+
+<p><b>美股</b>：</p>
+
+<ul>
+<li>Morningstar</li>
+</ul>
+
+<h3>檢查清單</h3>
+
+<p>1. 營業利益率是否穩定（看6季以上）？<br>
+2. 毛利率與營業利益率差距是否合理？<br>
+3. 營業利益率與淨利率差距是否合理？<br>
+4. 與同業相比是否具優勢？<br>
+5. 是否有業外收入掩蓋本業虧損？</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>營業利益率比毛利率更能反映公司本業經營能力，因為它扣掉了營業費用（固定成本）。以前只看毛利率，覺得產品有競爭力就好，但忽略了一家毛利高但費用的公司可能比毛利低但費用控制好的公司更不會賺錢。</p>
+
+<p>「三率」的關係很值得深入研究：毛利率看產品、營業利益率看本業經營、淨利率看整體獲利。這三個數字要一起看才能看出一家公司的獲利結構健不健康。</p>
+
+<p>另外學到一個重點：不要被淨利率突然大增騙了，要去看是不是業外收入（賣土地、投資收益之類的）。用營業利益率看本業才不會被一次性收益誤導。這招很實用。</p>
+
+<p>最後，不同產業的營業利益率基準不同，不能跨業比較。科技業可能營益率30%才算正常，傳產可能10%就不錯了。選股要跟同業比，不是看絕對數字。</p>
+
+<p>朝股票操作大師邁進中 📈<br>
+---</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

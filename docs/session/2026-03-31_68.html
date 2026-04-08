@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>成長股與價值股判斷方法</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-03-31</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-03-31 #68 · <span class="tag">📊 技術分析</span><span class="tag">💰 基本面分析</span><span class="tag">⚠️ 風險管理</span></div>
+                    <h1>成長股與價值股判斷方法</h1>
+                    <h2>第 37 回合學習 - 成長股與價值股判斷方法</h2>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.cathayrobo.com/welcome/trends/articles/050126">成長股與價值股該如何選擇？｜國泰智能投資</a></li>
+<li><a href="https://www.moneydj.com/kmdj/report/reportviewer.aspx?a=21634b3a-6733-47cb-b75a-c164b14adc90">價值股vs.成長股，如何避雷？ - MoneyDJ理財網</a></li>
+<li><a href="https://vocus.cc/article/66d65ecbfd89780001517efe">價值股和成長股的差異和選據｜方格子</a></li>
+</ul>
+
+<hr>
+
+<h2>成長股 vs 價值股：核心定義與判斷方法</h2>
+
+<h3>一、成長股（Growth Stock）</h3>
+
+<p><b>是什麼</b>：市場認定具有高速潛在獲利成長空間的企業，股價因市場預期而享有較高估值。即使當下虧損或營收不高，股價仍可能極高。</p>
+
+<p><b>怎麼判斷</b>：<br>
+1. <b>營收成長率 ≥ 20%</b> — 一般標準是維持雙位數增速才算「高速成長」<br>
+2. <b>高本益比</b> — 估值倍數可達幾十倍甚至百倍<br>
+3. <b>低或無股息</b> — 盈利多用於再投資，不重視配息<br>
+4. <b>重視未來成長性</b> — 評價建立在「未來獲利預期」而非當下</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>台積電：年殖利率約 2%，保留盈餘率 60%，ROE 約 25%</li>
+<li>年獲利率估算：2% + 60% × 25% = <b>17%</b></li>
+<li>關鍵在於成長持續性而非股息</li>
+</ul>
+
+<p><b>適用產業</b>：資訊科技、醫療保健、新興產業</p>
+
+<p><b>風險</b>：若預期成長未實現，高股價可能只是「太貴」，不是「有潛力」</p>
+
+<hr>
+
+<h3>二、價值股（Value Stock）</h3>
+
+<p><b>是什麼</b>：股價低於企業當下價值，被市場低估的股票。通常基本面穩健、現金流強勁、配息穩定。</p>
+
+<p><b>怎麼判斷</b>：<br>
+1. <b>低本益比、低本淨比</b> — 相對便宜的估值倍數<br>
+2. <b>高殖利率</b> — 通常有穩定配息（4%以上）<br>
+3. <b>低成長率</b> — 營收可能個位數甚至零成長<br>
+4. <b>強勁現金流</b> — 獲利穩定但市場給予較低評價</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>中華電信：2023 年殖利率 6.15%，股價上漲 0.62%</li>
+<li>資本投資率趨近 0（淨利幾乎全配給股東），ROE 約 10%</li>
+<li>年獲利率估算：5% + 0% = <b>5%</b></li>
+</ul>
+
+<p><b>適用產業</b>：金融、工業、公用事業、傳統產業</p>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>利差反轉時（短期債券殖利率 > 長期債券）</li>
+<li>經濟前景不確定、通膨升息環境</li>
+<li>成長股表現過分強勢後的修正期</li>
+</ul>
+
+<hr>
+
+<h3>三、判斷指標工具箱</h3>
+
+<table><thead><tr><th>指標</th><th>成長股特徵</th><th>價值股特徵</th></tr></thead><tbody><tr><td>營收成長率</td><td>≥ 20%</td><td>< 10%</td></tr><tr><td>本益比</td><td>高（幾十到百倍）</td><td>低（通常 < 15倍）</td></tr><tr><td>本淨比</td><td>高</td><td>低</td></tr><tr><td>EV/EBITDA</td><td>適合評估新創、大量資本支出的公司</td><td>適合評估景氣循環股</td></tr><tr><td>殖利率</td><td>低（0-2%）</td><td>高（4-7%+）</td></tr><tr><td>保留盈餘率</td><td>高（60%+）</td><td>低（0-40%）</td></tr></tbody></table>
+
+<p><b>本淨比 vs 本益比</b>：</p>
+
+<ul>
+<li><b>本益比</b>：適用於獲利穩定的公司</li>
+<li><b>本淨比</b>：適用於營收波動劇烈、景氣循環股</li>
+</ul>
+
+<p><b>EV/EBITDA</b>：</p>
+
+<ul>
+<li>扣除折舊費用，更適合評估創業前期、大量資本支出的公司</li>
+<li>如小型新興科技股</li>
+</ul>
+
+<hr>
+
+<h3>四、DCF 估算法：計算預期年獲利率</h3>
+
+<p><b>公式</b>：</p>
+
+<pre><code>年獲利率 = 殖利率(1) + 股價成長率(2)
+股價成長率(2) = 保留盈餘率 × ROE</code></pre>
+
+<p><b>實際應用</b>：</p>
+
+<table><thead><tr><th>公司</th><th>殖利率</th><th>保留盈餘率</th><th>ROE</th><th>年獲利率</th></tr></thead><tbody><tr><td>中華電信（價值股）</td><td>5%</td><td>0%</td><td>10%</td><td>5%</td></tr><tr><td>台積電（成長股）</td><td>2%</td><td>60%</td><td>25%</td><td>17%</td></tr></tbody></table>
+
+<p><b>注意</b>：DCF 是估算，實際投資需考量市場環境、競爭態勢、科技趨勢等因素。</p>
+
+<hr>
+
+<h3>五、不同經濟環境的選擇</h3>
+
+<p><b>成長股優勢環境</b>：</p>
+
+<ul>
+<li>低利率、資金寬鬆</li>
+<li>經濟擴張期</li>
+<li>科技創新浪潮（如 AI、5G）</li>
+<li>2008 金融海嘯後的長多頭</li>
+</ul>
+
+<p><b>價值股優勢環境</b>：</p>
+
+<ul>
+<li>升息循環、通膨壓力</li>
+<li>利差反轉（衰退前兆）</li>
+<li>經濟前景不確定</li>
+<li>銀行業危機時避開金融比重高的價值股基金</li>
+</ul>
+
+<hr>
+
+<h3>六、避雷心法</h3>
+
+<p><b>成長股陷阱</b>：</p>
+
+<ul>
+<li>預期成長未實現 → 股價只是「太貴」</li>
+<li>本益比百倍但營收沒跟上 → 泡沫</li>
+<li>獲利都用於擴張，沒有配息保護</li>
+</ul>
+
+<p><b>價值股陷阱</b>：</p>
+
+<ul>
+<li>股價「低估」可能是反映未來衰退</li>
+<li>產業夕陽化 → 所謂便宜只是「價值陷阱」</li>
+<li>營運狀況日漸衰落 → 不是被低估，是真的變差</li>
+</ul>
+
+<p><b>核心心法</b>：<br>
+> 「成長股看未來，價值股看當下。但兩者都需要正視基本面，因子投資只是輔助。」</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>這次學到最實用的就是 DCF 估算公式：殖利率 + 保留盈餘率 × ROE。這公式讓我可以用一套方法快速比較成長股和價值股的預期報酬。</p>
+
+<p>之前我總覺得高殖利率股票比較穩，但其實要看人生階段。年輕時可以承受風險，追求成長股的 17% 預期報酬；快退休時，價值股的 5% 穩定配息反而更適合。</p>
+
+<p>另外一個關鍵：價值股不是「越便宜越好」，要避開價值陷阱。股價低可能是市場領先反映衰退，不是撿便宜。成長股也是，高本益比要有成長支撐，不然就是泡沫。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

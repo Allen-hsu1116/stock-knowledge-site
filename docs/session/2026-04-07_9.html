@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>基本面分析（股利政策與填息判斷）</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-07</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-07 #9 · <span class="tag">💰 基本面分析</span><span class="tag">⚠️ 風險管理</span></div>
+                    <h1>基本面分析（股利政策與填息判斷）</h1>
+                    <h2>第 9 回合學習 - 基本面分析（股利政策與填息判斷）</h2>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.stockfeel.com.tw/%E4%BB%80%E9%BA%BC%E6%98%AF%E3%80%8C%E9%99%A4%E6%AC%8A%E6%81%AF%E3%80%8D%E8%88%87%E3%80%8C%E5%A1%AB%E6%AC%8A%E6%81%AF%E3%80%8D%EF%BC%9F/">填息填權是什麼？填息天數重要嗎？一文讀懂填息意思！</a></li>
+<li><a href="https://rich01.com/stock-price-to-recover-ex-dividends/">填息是什麼？怎麼查？填息天數適合用來選股嗎？</a></li>
+<li><a href="https://rich01.com/what-payout-ratio/">什麼是股票的配息率(Payout Ratio)？公式如何計算、怎麼查詢？</a></li>
+<li><a href="https://rich01.com/what-is-retained-earnings/">保留盈餘是什麼？與股利的關係？</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>一、配息率（Payout Ratio）</h3>
+
+<p><b>是什麼</b>：公司從盈餘中拿多少出來配息的比例。</p>
+
+<p><b>公式</b>：<br>
+\<code>\</code>\<code><br>
+配息率 = 每股股利 ÷ 每股盈餘(EPS) × 100%<br>
+\</code>\<code>\</code></p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：A 公司 EPS 10 元，配發 8 元股利</li>
+<li>計算：配息率 = 8 ÷ 10 × 100% = 80%</li>
+<li>意義：公司把 80% 盈餘發給股東，20% 保留在公司</li>
+</ul>
+
+<p><b>配息率多少合理？</b></p>
+
+<table><thead><tr><th>公司類型</th><th>典型配息率</th><th>原因</th></tr></thead><tbody><tr><td>成長型公司</td><td>0~30%</td><td>需要資金擴張、研發</td></tr><tr><td>成熟型公司</td><td>50~70%</td><td>穩定現金流，投資機會較少</td></tr><tr><td>公用事業</td><td>70~90%</td><td>收入穩定，不需大量再投資</td></tr><tr><td>巴菲特波克夏</td><td>0%</td><td>資金在公司手上更有效率</td></tr></tbody></table>
+
+<p><b>配息率 > 100% 的情況</b>：</p>
+
+<ul>
+<li>公司動用「保留盈餘」或「法定盈餘公積」配息</li>
+<li>可能是為了維持「高殖利率政策」形象</li>
+<li>注意：EPS 1 元卻配 1.5 元，要警覺是否合理</li>
+</ul>
+
+<hr>
+
+<h3>二、填息與貼息</h3>
+
+<p><b>是什麼</b>：</p>
+
+<ul>
+<li><b>除息</b>：股價減去股利金額（如 95 元配 2 元 → 93 元）</li>
+<li><b>填息</b>：股價漲回除息前的價格（93 元漲回 95 元）</li>
+<li><b>貼息</b>：股價一直沒漲回去，領了股利卻賠價差</li>
+</ul>
+
+<p><b>填息天數</b>：除息後花了多少天漲回除息前價位。</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：XX 公司除息前收盤 95 元，配息 2 元</li>
+<li>除息參考價：93 元</li>
+<li>若 7 天後回到 95 元 → 填息天數 = 7 天</li>
+</ul>
+
+<p><b>填息天數重要嗎？</b></p>
+
+<p>市場先生觀點：<b>不適合用來選股</b>。</p>
+
+<p>原因：<br>
+1. <b>人為效應</b>：因為大家預期會填息所以買進 → 變成自我實現預言，不代表公司真的強<br>
+2. <b>空頭填息慢、多頭填息快</b>：填息天數反映的是大盤環境，不是公司體質<br>
+3. <b>短期現象</b>：填息快可能只是除息後幾天的短期價格波動<br>
+4. <b>買在高點風險</b>：預期填息搶買，可能買在高點</p>
+
+<p><b>何時參考填息天數</b>：</p>
+
+<ul>
+<li>了解個股過去的填息紀錄，作為是否參與除息的參考</li>
+<li>多頭市場中，填息機率較高</li>
+<li>空頭市場中，要更謹慎評估是否參與除息</li>
+</ul>
+
+<hr>
+
+<h3>三、保留盈餘與股利關係</h3>
+
+<p><b>是什麼</b>：公司營運產生的獲利，扣除股利後保留在公司的部分。</p>
+
+<p><b>公式</b>：<br>
+\<code>\</code>\<code><br>
+保留盈餘 = 期初保留盈餘 + 淨利潤 - 股利<br>
+\</code>\<code>\</code></p>
+
+<p><b>保留盈餘用途</b>：<br>
+1. 發放股利<br>
+2. 再投資擴大業務<br>
+3. 併購、收購<br>
+4. 股票回購<br>
+5. 償還債務</p>
+
+<p><b>巴菲特名言</b>：<br>
+> 「每保留 1 元盈餘，應該要能為投資人創造 1 元的市場價值。」</p>
+
+<p><b>保留盈餘高低判斷</b>：</p>
+
+<table><thead><tr><th>情況</th><th>可能問題</th></tr></thead><tbody><tr><td>保留盈餘過低</td><td>公司缺乏現金，投資不足，景氣不好時無法應對</td></tr><tr><td>保留盈餘過高</td><td>資金運用效率低，不如發還給股東</td></tr><tr><td>保留盈餘為負</td><td>當年虧損，要檢視公司營運與現金流</td></tr></tbody></table>
+
+<p><b>配息穩定不代表公司好</b>：</p>
+
+<ul>
+<li>台灣人喜歡配息穩定，公司會用保留盈餘維持配息</li>
+<li>但「配息是果，盈餘是因」</li>
+<li>應該關注盈餘是否穩定成長，而非配息是否穩定</li>
+</ul>
+
+<hr>
+
+<h3>四、高股息選股陷阱</h3>
+
+<p><b>為什麼高配息率不一定好</b>：</p>
+
+<p>1. <b>公司無法有效運用資金</b>：把錢發給股東，代表公司沒有更好的投資機會<br>
+2. <b>稅負問題</b>：股息要課稅，配息給股東反而讓股東繳稅<br>
+3. <b>成長受限</b>：公司把錢都發出去，缺乏擴張資金</p>
+
+<p><b>不發股息的成功案例</b>：</p>
+
+<ul>
+<li>亞馬遜（Amazon）：從不配息，保留盈餘再投資</li>
+<li>波克夏（BRK）：巴菲特不配息，資金在手上效率更高</li>
+</ul>
+
+<p><b>存股族判斷重點</b>：<br>
+1. 看「盈餘配發率是否穩定」而非「配息金額是否穩定」<br>
+2. 例如公股金控近五年配發率都在 80% 左右，較好預測<br>
+3. 關注公司是否能持續創造穩定盈餘</p>
+
+<hr>
+
+<h3>五、配息前買還是配息後買？</h3>
+
+<p><b>建議</b>：如果買進日期跟配息日期很接近，<b>配息後買較有利</b>。</p>
+
+<p>原因：<br>
+1. 配息前買進要課股利所得稅<br>
+2. 稅率雖不高，但仍會降低報酬<br>
+3. 除息後股價自動調整，買在較低價位</p>
+
+<p><b>例外</b>：長期投資者不受影響，重點是公司長期競爭力。</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>這回合學了股利政策的核心概念。最重要的收穫是「配息是果，盈餘是因」——很多存股族只看配息穩定，卻忽略公司可能用保留盈餘在硬撐配息。真正該看的是盈餘是否穩定成長。</p>
+
+<p>填息天數這指標，市場先生講得很白：不適合用來選股。多頭填息快、空頭填息慢，這是市場環境的問題，不是公司體質的問題。與其研究誰填息快，不如研究誰盈餘穩。</p>
+
+<p>另一個收穫是配息率的判斷：不是越高越好。成長型公司配息率低是合理的，因為資金在手上更有用。巴菲特和亞馬遜都不配息，這兩個例子很能說明問題。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

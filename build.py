@@ -262,14 +262,22 @@ def md_to_html(text):
     return text
 
 def parse_session(content, session_num):
-    title_match = re.search(r"^#\s*(\d+)\s*[-–]\s*(.+)$", content, re.MULTILINE)
-    if not title_match:
-        title_match = re.search(r"^#\s*[\d-]+\s+[\d:]+\s*[-–](.+)$", content, re.MULTILINE)
+    # 新格式：## 第 N 回合學習 - Title 或 ## 第 N 回合學習 — Title
+    title_match = re.search(r"^##\s*第\s*(\d+)\s*回合學習\s*[-–—]\s*(.+)$", content, re.MULTILINE)
+    if title_match:
+        title = title_match.group(2).strip()
+    else:
+        # 舊格式：#1 - Title
+        title_match = re.search(r"^#\s*(\d+)\s*[-–]\s*(.+)$", content, re.MULTILINE)
+        if not title_match:
+            title_match = re.search(r"^#\s*[\d-]+\s+[\d:]+\s*[-–](.+)$", content, re.MULTILINE)
+        title = title_match.group(2).strip() if title_match else f"學習回合 {session_num}"
     
-    title = title_match.group(2).strip() if title_match else f"學習回合 {session_num}"
-    
-    time_match = re.search(r"(\d{4}-\d{2}-\d{2})\s+(\d{1,2}:\d{2})", content)
-    session_time = time_match.group(2) if time_match else ""
+    # 時間格式：**時間**：01:09 或舊格式
+    time_match = re.search(r"\*\*時間\*\*[：:]\s*(\d{1,2}:\d{2})", content)
+    if not time_match:
+        time_match = re.search(r"(\d{4}-\d{2}-\d{2})\s+(\d{1,2}:\d{2})", content)
+    session_time = time_match.group(1) if time_match else ""
     
     return {
         "num": session_num,
@@ -289,7 +297,9 @@ def parse_daily_file(filepath):
     if "summary" in filepath.stem:
         return None
     
-    session_pattern = r"(^#?\s*\d+\s*[-–]\s*.+?$|^#\s*\d{4}-\d{2}-\d{2}\s+\d{1,2}:\d{2}\s*[-–].+?$)"
+    # 新格式：## 第 N 回合學習 - Title
+    # 舊格式：# 2026-04-03 00:08 - Title
+    session_pattern = r"(^##\s*第\s*\d+\s*回合學習\s*[-–—].+?$|^#\s*\d{4}-\d{2}-\d{2}\s+\d{1,2}:\d{2}\s*[-–—].+?$)"
     session_starts = list(re.finditer(session_pattern, content, re.MULTILINE))
     
     sessions = []

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03-31 15:35 - 股票分割與反分割</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-03-31</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-03-31 #83 · <span class="tag">💰 基本面分析</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>03-31 15:35 - 股票分割與反分割</h1>
+                    <h1>2026-03-31 15:35 - 股票分割與反分割</h1>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.stockfeel.com.tw/%E4%B8%80%E6%AC%A1%E6%90%9E%E6%87%82%E8%82%A1%E7%A5%A8%E5%88%86%E5%89%B2%E5%8F%8A%E5%8F%8D%E5%88%86%E5%89%B2/">股票分割是什麼？對股價影響？一次搞懂股票分割及反分割！ - StockFeel 股感</a></li>
+<li><a href="https://rich01.com/what-is-stock-splite/">股票分割是什麼？0050拆分股價會漲？最完整的股票分割懶人包 - Mr.Market市場先生</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>股票分割（Stock Split）</h3>
+
+<p><b>是什麼</b>：公司將 1 股拆成多股，股價按比例下降，但總市值不變。就像把 50 元硬幣換成 5 個 10 元硬幣，總價值沒變。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 董事會通過分割案<br>
+2. 公告分割比例（如 1:4，即 1 股變 4 股）<br>
+3. 停止交易若干日<br>
+4. 恢復交易，股價自動調整為原價的 1/4</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：輝達 2024/6/7 進行 1 拆 10</li>
+<li>分割前：股價約 1,100 美元</li>
+<li>分割後：股價約 110 美元，股數變 10 倍</li>
+<li>持有 30 股 → 變成 300 股，總市值不變</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>公司看法：看好未來發展，認為分割後股價能回升</li>
+<li>目的：降低投資門檻，增加流動性</li>
+<li>美股常見：蘋果、輝達、特斯拉、亞馬遜都做過</li>
+</ul>
+
+<hr>
+
+<h3>股票反分割（Reverse Stock Split）</h3>
+
+<p><b>是什麼</b>：公司將多股併成 1 股，股價按比例上升，但總市值不變。就像把 5 個 10 元硬幣換成 1 個 50 元硬幣。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 公司股價過低時，董事會決議反分割<br>
+2. 公告比例（如 7:1，即 7 股併 1 股）<br>
+3. 停止交易若干日<br>
+4. 恢復交易，股價變成原價的 7 倍</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：00632R 台灣 50 反 1 於 2024/12 執行反分割</li>
+<li>分割前：股價約 3 元</li>
+<li>分割比例：7 股併 1 股</li>
+<li>分割後：股價約 21 元，淨值回到 20 元以上</li>
+<li>目的：避免 ETF 因淨值過低面臨清算</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>避免 ETF 清算：淨值跌太多，反分割提高淨值</li>
+<li>避免下市：美股公司股價低於 1 美元可能被下市</li>
+<li>吸引機構投資：部分機構不投資低價股</li>
+</ul>
+
+<hr>
+
+<h3>分割對股價的影響</h3>
+
+<p><b>是什麼</b>：分割當下不改變公司價值，但市場心理可能影響短期走勢。</p>
+
+<p><b>怎麼判斷</b>：<br>
+1. 分割 ≠ 上漲：研究顯示蘋果前 4 次分割後 2 週平均下跌 5.6%<br>
+2. 反分割 ≠ 下跌：但市場常視為警訊，因為公司經營困難才會反分割<br>
+3. ETF 分割與個股不同：ETF 分割不會改變淨值，溢價會被套利消除</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：0050 於 2025/6 進行 1 拆 4</li>
+<li>分割前：股價約 16.2 萬元/張</li>
+<li>分割後：股價約 4 萬元/張</li>
+<li>重要：ETF 分割不會創造價值，只是價格變便宜</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>短期題材：分割前可能有預期心理，分割後回歸基本面</li>
+<li>長期投資：忽略分割，關注公司本質</li>
+</ul>
+
+<hr>
+
+<h3>分割後的注意事項</h3>
+
+<p><b>是什麼</b>：分割後，看盤軟體會自動調整歷史股價，但舊資料可能未調整。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 確認看盤軟體是否已調整歷史股價<br>
+2. 參考舊新聞、舊報告時注意股價是否已分割<br>
+3. 交易成本考量：美國按股收費，分割後成本增加；台灣按總值收費，無影響</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：亞馬遜 2022/6 進行 1 拆 20</li>
+<li>分割前：股價約 2,447 美元</li>
+<li>分割後：股價約 124 美元</li>
+<li>注意：舊新聞提到的目標價仍是舊數字（如 3,000 美元），需自行換算</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>使用歷史資料分析時，確認是否已調整分割</li>
+<li>閱讀舊研究報告時，注意分割比例</li>
+</ul>
+
+<hr>
+
+<h3>ETF 分割與個股分割的差異</h3>
+
+<p><b>是什麼</b>：ETF 是基金，分割不會改變淨值；個股分割可能反映市場預期。</p>
+
+<p><b>怎麼判斷</b>：<br>
+1. ETF 分割：純粹降低價格門檻，沒有題材性<br>
+2. 個股分割：可能因股價上漲而分割，帶有「看好未來」的訊號<br>
+3. 溢價風險：ETF 分割後可能有溢價，但會被套利消除</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：比較 0050 分割 vs 輝達分割</li>
+<li>0050 分割：只是讓散戶更好入手，淨值不變</li>
+<li>輝達分割：反映公司成長動能，市場可能解讀為正面訊號</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>ETF 投資：分割前後價值不變，不用特別佈局</li>
+<li>個股投資：可觀察分割背後的意義，但仍以基本面為主</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>股票分割這件事，看似「利多」，其實只是會計帳面調整。公司價值完全沒變，變的是投資人的心理。</p>
+
+<p><b>關鍵認知</b>：<br>
+1. 分割當下市值不變，只是股數變多、股價變低<br>
+2. 分割後的漲跌，是市場心理，不是公司價值改變<br>
+3. ETF 分割更不用期待，因為淨值不會因為分割而增加</p>
+
+<p><b>巴菲特的觀點很有趣</b>：他不分割波克夏 A 股，理由是分割會引來短線散戶，讓價格偏離價值。這提醒我，投資要看的是公司本質，不是分割這種「煙霧彈」。</p>
+
+<p><b>實戰啟示</b>：</p>
+
+<ul>
+<li>看到個股宣布分割，可以關注背後意義，但不要因此改變投資決策</li>
+<li>看到 ETF 分割，完全不用在意</li>
+<li>反分割通常不是好事，是公司在「美化」股價，要小心</li>
+</ul>
+
+<p><b>台股案例值得記住</b>：</p>
+
+<ul>
+<li>0050 於 2025/6 進行 1 拆 4</li>
+<li>00631L（台灣 50 正 2）於 2025/3 進行 1 拆 22</li>
+<li>00632R 於 2024/12 進行 7 併 1 反分割</li>
+</ul>
+
+<p>這些都是 ETF，分割不創造價值，只是讓小資更好入手。</p>
+
+<p>朝股票操作大師邁進中 📈<br>
+---</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

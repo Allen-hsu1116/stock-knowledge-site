@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主力操作手法與散戶對策（週日補強）</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-03-29</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-03-29 #7 · <span class="tag">📊 技術分析</span><span class="tag">💰 基本面分析</span><span class="tag">🎲 籌碼面分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span></div>
+                    <h1>主力操作手法與散戶對策（週日補強）</h1>
+                    <h2>第 7 回合學習 - 主力操作手法與散戶對策（週日補強）</h2>
+
+<p><b>學習時間</b>：07:24</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.stockfeel.com.tw/%E7%A0%B4%E8%A7%A3%E4%B8%BB%E5%8A%9B%E6%B4%97%E7%9B%A4%E6%89%8B%E6%B3%95/">主力是誰？主力進出怎麼看？一文看懂 5個主力洗盤手法和前兆！</a></li>
+<li><a href="https://efrontrade.com/2020/02/stock-4.html">主力的買進模式：4步驟教你跟著「最賺錢的主力」買股票</a></li>
+<li><a href="https://wealth.businessweekly.com.tw/GArticle.aspx?id=ARTL003010246">從籌碼嗅出飆股基因！三大法人、大戶、主力3大面向</a></li>
+</ul>
+
+<p><b>涵蓋主題</b>：</p>
+
+<ul>
+<li>主力六大類型與角色</li>
+<li>主力洗盤三大手法（短線拉回、K線洗盤、甩轎）</li>
+<li>主力買進四種模式</li>
+<li>出貨 vs 洗盤辨別五前兆</li>
+<li>籌碼分析三大面向</li>
+<li>防守線實戰判斷</li>
+<li>跟隨主力買點策略</li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>一、主力是誰？六大主力分類</h3>
+
+<p><b>是什麼</b>：主力是指擁有大量籌碼、足以影響短期股價的人或機構</p>
+
+<p><b>六大主力類型</b>：<br>
+1. <b>政府</b>：國安基金（黑天鵝事件護盤）<br>
+2. <b>外資</b>：影響大盤的主力<br>
+3. <b>投信</b>：法人主力<br>
+4. <b>自營商</b>：券商自營部門<br>
+5. <b>市場派</b>：市場大戶<br>
+6. <b>公司派</b>：公司內部人</p>
+
+<p><b>實務分類</b>：</p>
+
+<ul>
+<li><b>操控個股的主力</b>：三大法人與市場大戶，多著墨於小股本股票，可透過券商分點買賣超追蹤</li>
+<li><b>影響大盤的主力</b>：外資、券商、政府基金，特殊情況才會出現</li>
+</ul>
+
+<hr>
+
+<h3>二、主力洗盤五大手法</h3>
+
+<h4>1. 短線拉回洗盤</h4>
+
+<p><b>是什麼</b>：主升段常見的洗盤方式，追漲停買進後連續壓回4-5天</p>
+
+<p><b>怎麼做</b>：<br>
+1. 觀察第一防守線（長紅K線最低點）<br>
+2. 不跌破第一防守線 → 強勢整理，3-6天內拉長紅繼續上漲<br>
+3. 跌破第一防守線但守住第二防守線 → 較長時間震盪整理<br>
+4. MACD判斷：紅柱縮短再變長（強勢），或紅柱轉綠柱再轉紅柱（震盪）</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：佰研（3205）短線拉回守住第一防守線</li>
+<li>操作：股價拉回量縮、不跌破第一防守線時進場</li>
+<li>時間：3-6天內拉出長紅</li>
+</ul>
+
+<p><b>適用時機</b>：主升段追漲停後遭遇拉回時判斷是否續抱</p>
+
+<h4>2. K線洗盤（上影線洗盤）</h4>
+
+<p><b>是什麼</b>：利用長上影線製造「避雷針」假象嚇跑散戶</p>
+
+<p><b>怎麼做</b>：<br>
+1. 觀察是否守住第一防守線<br>
+2. 若守住第一防守線 → 續抱<br>
+3. 後續股價突破「突破線」（上影線最高點）→ 新一波行情啟動</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：利勤（4426）出現長上影線配合綠色巨量</li>
+<li>判斷：看似避雷針，但股價未跌破第一防守線</li>
+<li>操作：等股價穿越突破線再確認</li>
+</ul>
+
+<p><b>適用時機</b>：主升段出現大量長上影線時判斷真偽</p>
+
+<h4>3. 起漲前的甩轎</h4>
+
+<p><b>是什麼</b>：最兇猛的洗盤方式，盤整區突然長黑跌破再長紅吞噬</p>
+
+<p><b>怎麼做</b>：<br>
+1. 第一防守線被長黑跌破 → 先出場<br>
+2. 觀察後續是否止跌<br>
+3. 長紅吞噬長黑最高點 → 買回訊號</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：宏佳騰（1599）守住47.3第一防守線後突然長黑跌破</li>
+<li>操作：長黑跌破時先出場，不要賭它是甩轎</li>
+<li>買回條件：股價突破長黑最高點時買回</li>
+</ul>
+
+<p><b>風險警示</b>：不要去賭長黑是甩轎，萬一往下噴出會大賠</p>
+
+<hr>
+
+<h3>三、主力買進四種模式</h3>
+
+<h4>1. 中線波段上漲：階梯式放量突破</h4>
+
+<p><b>是什麼</b>：主力緩慢推高股價的建倉方式</p>
+
+<p><b>特徵</b>：</p>
+
+<ul>
+<li>與營收、財報、利多消息搭配</li>
+<li>技術面呈現箱型區間上漲</li>
+<li>每次區間整理平台不重疊</li>
+<li>箱底越墊越高、箱頂越墊越高</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：主力在換手過程中低買高賣降低持倉成本</li>
+<li>價格：箱型整理區間約10-15%波動</li>
+<li>時間：每次整理約1-3週</li>
+</ul>
+
+<h4>2. 長線波段上漲：量能萎縮、高檔橫盤</h4>
+
+<p><b>是什麼</b>：高殖利率成長股常見的建倉模式</p>
+
+<p><b>特徵</b>：</p>
+
+<ul>
+<li>低檔爆大量緩慢推升</li>
+<li>高檔長期橫盤</li>
+<li>橫盤中量能急速萎縮（低於1000張）</li>
+<li>多間券商合作買超</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：籌碼面徹底洗盤</li>
+<li>時間：橫盤可能持續數月</li>
+<li>量能：萎縮至1000張以下</li>
+</ul>
+
+<h4>3. 底部回升：法人買盤急增、爆量過季線</h4>
+
+<p><b>是什麼</b>：股價經過半年以上整理後的起漲模式</p>
+
+<p><b>特徵</b>：</p>
+
+<ul>
+<li>基本面充斥中立、利空消息</li>
+<li>股價創新低使散戶信心受打擊</li>
+<li>最後打壓洗盤創造最佳吃貨條件</li>
+<li>法人買超張數或持股比率上升</li>
+<li>技術面底部爆新高量起漲</li>
+</ul>
+
+<p><b>買點判斷</b>：<br>
+1. 「法人買超張數或持股比率」增加<br>
+2. 「技術面底部爆新高量起漲」</p>
+
+<h4>4. 法人認錯回補買盤</h4>
+
+<p><b>是什麼</b>：吃「法人豆腐」的特殊買點</p>
+
+<p><b>特徵</b>：</p>
+
+<ul>
+<li>法人因績效壓力賣出持股</li>
+<li>股價洗盤時用時間掃走沒耐心的人</li>
+<li>特定主力券商大力吃貨形成「籌碼換手訊號」</li>
+<li>原本賣出的法人發現看錯方向後回補</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：突發利空事件、大盤劇烈波動</li>
+<li>操作：觀察主力券商逆勢承接</li>
+<li>預期：法人發現看錯後買盤回補力道又急又猛</li>
+</ul>
+
+<hr>
+
+<h3>四、出貨 vs 洗盤辨別（五個前兆）</h3>
+
+<p><b>怎麼分辨</b>：洗盤與出貨的關鍵差異</p>
+
+<h4>出貨五前兆：</h4>
+
+<p>1. <b>成交量異常放大</b></p>
+
+<ul>
+<li>股價高位盤整時成交量突然放大但未創新高</li>
+</ul>
+
+<p>2. <b>股價疲弱震盪頻繁</b></p>
+
+<ul>
+<li>高位震盪但反彈無法突破前高</li>
+</ul>
+
+<p>3. <b>量價背離</b></p>
+
+<ul>
+<li>價格上漲但成交量萎縮</li>
+</ul>
+
+<p>4. <b>大單頻繁賣出、小單接手</b></p>
+
+<ul>
+<li>主力拆單出貨</li>
+</ul>
+
+<p>5. <b>利多消息頻繁但股價不漲</b></p>
+
+<ul>
+<li>財報亮眼、政策利多卻不推升股價</li>
+</ul>
+
+<hr>
+
+<h3>五、籌碼分析三大面向</h3>
+
+<h4>1. 三大法人</h4>
+
+<p><b>怎麼做</b>：</p>
+
+<ul>
+<li>觀察「上市外資買賣超金額」</li>
+<li>觀察「上市投信買賣超金額」</li>
+<li>觀察「上櫃外資買賣超金額」</li>
+<li>觀察「上櫃投信買賣超金額」</li>
+<li>確認股票是否在排行榜上</li>
+<li>確認外資、投信持股比率是否增加</li>
+</ul>
+
+<p><b>實務</b>：自營商通常略過不看（沒有明顯買賣趨勢）</p>
+
+<h4>2. 大戶持股</h4>
+
+<p><b>判斷標準</b>：</p>
+
+<ul>
+<li><b>高價位股票</b>：400張以上為大戶，50張以下為散戶</li>
+<li><b>中價位股票</b>：1000張以上為大戶，100張以下為散戶</li>
+</ul>
+
+<p><b>好現象</b>：</p>
+
+<ul>
+<li>大戶持股比率上升</li>
+<li>散戶持股比率下降</li>
+<li>表示籌碼集中在大戶手上</li>
+</ul>
+
+<h4>3. 主力分點</h4>
+
+<p><b>是什麼</b>：大量買賣超的券商分點</p>
+
+<p><b>怎麼做</b>：</p>
+
+<ul>
+<li>透過看盤軟體觀察特定券商買賣狀況</li>
+<li>可觀察1天、1週、30天、90天內的買賣張數</li>
+<li>追蹤哪個券商買最多、賣最多</li>
+</ul>
+
+<hr>
+
+<h3>六、實戰應用：跟隨主力的策略</h3>
+
+<h4>如何判斷買點位置</h4>
+
+<p><b>成本參考</b>：</p>
+
+<ul>
+<li>在主力成本尚未拉開20%處買進</li>
+<li>漲勢的80%~90%處獲利了結就是成功</li>
+<li>漲勢的50%處賣出也是成功</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：主力成本10元，目標20元</li>
+<li>買點：12元以下（成本未拉開20%）</li>
+<li>賣點：16-18元（漲勢的60%-90%）</li>
+</ul>
+
+<h4>出場時機</h4>
+
+<p><b>見好就收原則</b>：</p>
+
+<ul>
+<li>沒有人能從最低點買進、最高點賣出</li>
+<li>避開高處不勝寒的環境</li>
+<li>把行情看完告一段落即可</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>主力洗盤這檔事，教科書教的那套「五波上升、三波下降」現在已經不太適用了。台股早已是法人的市場，散戶如果只用技術指標分析很容易被當韭菜割。</p>
+
+<p>最有用的概念是「防守線」：</p>
+
+<ul>
+<li>第一防守線守住 = 短線洗盤3-6天會結束</li>
+<li>第二防守線守住 = 較長時間震盪，看MACD綠柱轉紅柱</li>
+</ul>
+
+<p>但要記住：「長黑跌破第一防守線時先出場，不要賭它是甩轎」。這句話很重要，萬一真的是往下噴出，會賠很慘。</p>
+
+<p>另外「量價背離」和「利多不漲」這兩個出貨前兆我之前沒特別注意，以後看到股價在高檔震盪、利多消息頻傳卻不漲，就要警戒是不是主力在倒貨。</p>
+
+<p>最後，籌碼分析要長時間觀察才有效果，不是看一天兩天就能下結論。重點是追蹤「法人買賣超」和「大戶持股比率」這兩個指標。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

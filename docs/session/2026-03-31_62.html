@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03-31 13:52 - 股利政策分析</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-03-31</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-03-31 #62 · <span class="tag">💰 基本面分析</span><span class="tag">🎯 操作策略</span></div>
+                    <h1>03-31 13:52 - 股利政策分析</h1>
+                    <h1>2026-03-31 13:52 - 股利政策分析</h1>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.ctbcsec.com/Article/Info/cc29079b-4461-42b9-9252-82921e385e23">存股族必看！除了殖利率更要掌握「盈餘分配率」｜中信亮點</a></li>
+<li><a href="https://wiki.mbalib.com/zh-tw/%E8%82%A1%E5%88%A9%E6%94%BF%E7%AD%96">股利政策 - MBA智库百科</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>一、股利政策四大類型</h3>
+
+<h4>1. 剩餘股利政策（Residual Dividend Approach）</h4>
+
+<p><b>是什麼</b>：公司優先滿足投資需求，有剩餘才發股利。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 確定公司的最佳資本結構<br>
+2. 確定下一年度的資金需求量<br>
+3. 按最佳資本結構，計算需增加的股東權益數額<br>
+4. 稅後利潤先滿足資金需求，剩餘才發現金股利</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：台積電每年需大量資本支出擴廠研發</li>
+<li>操作：2022年 EPS 29.4元，配息11元，盈餘分配率約37%</li>
+<li>判斷：盈餘分配率低是因為錢要投入下一輪資本支出</li>
+</ul>
+
+<p><b>適用時機</b>：成長期公司、資本密集產業<br>
+<b>不適用時機</b>：想吸引存股族的公司、成熟穩定產業</p>
+
+<hr>
+
+<h4>2. 穩定股利額政策（Constant Dividend）</h4>
+
+<p><b>是什麼</b>：每年發放固定金額的股利，不隨盈餘波動。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 設定一個可持續發放的固定股利金額<br>
+2. 不論當年獲利好壞，維持相同配息<br>
+3. 預留安全邊際，設定不宜過高</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：兆豐金近五年穩定配息</li>
+<li>操作：2022年 EPS 1.89元，配息1.4元，盈餘分配率74%</li>
+<li>判斷：金融業成熟穩定，配息率接近八成</li>
+</ul>
+
+<p><b>適用時機</b>：成熟產業、公用事業、金融業<br>
+<b>優點</b>：</p>
+
+<ul>
+<li>給市場穩定訊息，降低不確定性</li>
+<li>吸引追求穩定現金流的長期投資人</li>
+</ul>
+
+<p><b>注意</b>：設定金額不能太高，避免獲利不佳時無力支付</p>
+
+<hr>
+
+<h4>3. 固定股利率政策</h4>
+
+<p><b>是什麼</b>：每年按固定比例從稅後利潤支付股利。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 設定固定配息率（如60%、80%）<br>
+2. 每年按該比例計算股利金額<br>
+3. 股利金額隨獲利波動</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：某公司設定配息率70%</li>
+<li>操作：EPS 10元時配7元，EPS 5元時配3.5元</li>
+<li>判斷：金額波動大，市場可能解讀為不穩定</li>
+</ul>
+
+<p><b>適用時機</b>：極少公司採用<br>
+<b>缺點</b>：股利波動大，傳遞不穩定訊息給市場</p>
+
+<hr>
+
+<h4>4. 正常股利加額外股利政策</h4>
+
+<p><b>是什麼</b>：固定發放一筆「正常股利」，獲利佳時再加發「額外股利」。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 設定一個固定的「正常股利」金額<br>
+2. 評估當年度獲利狀況<br>
+3. 獲利佳、資金充裕時加發額外股利</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：某公司設定正常股利2元</li>
+<li>操作：正常年度配2元，獲利佳年度配2元+1元額外股利</li>
+<li>判斷：給投資人保底收入，景氣好還有驚喜</li>
+</ul>
+
+<p><b>適用時機</b>：獲利波動大、有保留盈餘可運用的公司<br>
+<b>優點</b>：平衡穩定與彈性</p>
+
+<hr>
+
+<h3>二、股利政策六大影響因素</h3>
+
+<h4>1. 契約約束</h4>
+
+<p><b>是什麼</b>：借款合約可能限制公司發放股利。</p>
+
+<p><b>怎麼判斷</b>：</p>
+
+<ul>
+<li>查看長期借款合約條款</li>
+<li>注意是否有「償還借款前不得發放股利」等限制</li>
+<li>注意是否要求維持一定流動比率</li>
+</ul>
+
+<p><b>實例</b>：公司有銀行借款，合約規定流動比率需維持1.5以上，大量配息可能影響比率。</p>
+
+<hr>
+
+<h4>2. 法律約束</h4>
+
+<p><b>是什麼</b>：公司法規定的利潤分配順序、資本充足性要求。</p>
+
+<p><b>怎麼判斷</b>：</p>
+
+<ul>
+<li>公司需先彌補虧損、提撥法定盈餘公積</li>
+<li>股利分配來自保留盈餘，不能動用資本</li>
+<li>台股限制：配息來源限於保留盈餘</li>
+</ul>
+
+<hr>
+
+<h4>3. 現金充裕性約束</h4>
+
+<p><b>是什麼</b>：發現金股利必須有足夠現金。</p>
+
+<p><b>怎麼判斷</b>：</p>
+
+<ul>
+<li>檢查現金流量表</li>
+<li>營業現金流是否穩定正值</li>
+<li>現金部位是否充足</li>
+<li>注意：EPS高不代表有現金（可能有大量應收帳款）</li>
+</ul>
+
+<p><b>實例</b>：某公司EPS 10元，但應收帳款占8元，實際現金只有2元，無法配息8元。</p>
+
+<hr>
+
+<h4>4. 投資機會</h4>
+
+<p><b>是什麼</b>：投資機會多的公司倾向保留盈餘再投資。</p>
+
+<p><b>怎麼判斷</b>：</p>
+
+<ul>
+<li>公司是否處於成長期？</li>
+<li>是否有擴廠、研發、併購計畫？</li>
+<li>資本支出佔營收比例是否逐年增加？</li>
+</ul>
+
+<p><b>實例</b>：台積電每年資本支出數千億，盈餘分配率自然較低。</p>
+
+<hr>
+
+<h4>5. 資本成本與償債能力</h4>
+
+<p><b>是什麼</b>：配息影響公司資本結構和償債能力。</p>
+
+<p><b>怎麼判斷</b>：</p>
+
+<ul>
+<li>配息後負債比率是否上升？</li>
+<li>流動比率、速動比率是否維持安全水準？</li>
+<li>公司是否有足夠儲備應對景氣波動？</li>
+</ul>
+
+<hr>
+
+<h4>6. 信息傳遞</h4>
+
+<p><b>是什麼</b>：股利政策傳遞公司前景訊息給市場。</p>
+
+<p><b>怎麼判斷</b>：</p>
+
+<ul>
+<li>增加配息：公司對未來有信心</li>
+<li>減少配息：可能獲利下滑或需保留資金</li>
+<li>穩定配息：營運穩定、財務健康</li>
+</ul>
+
+<p><b>注意</b>：市場會解讀股利變化，需考慮投資人反應。</p>
+
+<hr>
+
+<h3>三、盈餘分配率（配息率）</h3>
+
+<h4>公式</h4>
+
+<p><b>盈餘分配率 = 每股股利 ÷ 每股盈餘（EPS）× 100%</b></p>
+
+<p><b>與殖利率的差異</b>：</p>
+
+<ul>
+<li>盈餘分配率：看公司賺多少、配多少</li>
+<li>殖利率：看股價、配多少</li>
+</ul>
+
+<table><thead><tr><th>公式</th><th>分子</th><th>分母</th></tr></thead><tbody><tr><td>盈餘分配率</td><td>每股股利</td><td>EPS</td></tr><tr><td>殖利率</td><td>每股股利</td><td>股價</td></tr></tbody></table>
+
+<h4>如何判斷盈餘分配率</h4>
+
+<p><b>高配息率（70-90%）</b>：</p>
+
+<ul>
+<li>代表公司進入成熟期</li>
+<li>不需要大量資本支出</li>
+<li>適合存股族</li>
+</ul>
+
+<p><b>低配息率（30-50%）</b>：</p>
+
+<ul>
+<li>公司處於成長期</li>
+<li>需要保留盈餘再投資</li>
+<li>適合成長型投資人</li>
+</ul>
+
+<p><b>異常高配息率（>100%）</b>：</p>
+
+<ul>
+<li>可能動用過去保留盈餘</li>
+<li>獲利衰退但維持配息</li>
+<li>需注意是否可持續</li>
+</ul>
+
+<hr>
+
+<h3>四、存股三大條件</h3>
+
+<p>根據盈餘分配率判斷存股適合度：</p>
+
+<table><thead><tr><th>條件</th><th>標準</th><th>原因</th></tr></thead><tbody><tr><td>穩定EPS</td><td>近五年EPS不得為負</td><td>公司持續獲利</td></tr><tr><td>穩定配息率</td><td>近五年盈餘分配率 > 60%</td><td>願意分享利潤給股東</td></tr><tr><td>合理殖利率</td><td>殖利率 > 5%</td><td>優於定存、合理報酬</td></tr></tbody></table>
+
+<p><b>查詢工具</b>：Goodinfo台灣股市資訊網</p>
+
+<ul>
+<li>步驟1：輸入股票代號</li>
+<li>步驟2：左側選「股利政策」</li>
+<li>可查看歷年配股配息、EPS、盈餘分配率</li>
+</ul>
+
+<hr>
+
+<h3>五、不同產業的典型配息特徵</h3>
+
+<table><thead><tr><th>產業</th><th>典型配息率</th><th>原因</th></tr></thead><tbody><tr><td>金融業</td><td>70-90%</td><td>成熟產業、資本支出需求低</td></tr><tr><td>公用事業</td><td>70-90%</td><td>穩定現金流、成長空間有限</td></tr><tr><td>科技業</td><td>30-60%</td><td>需要大量研發、擴廠</td></tr><tr><td>成長型公司</td><td>0-30%</td><td>保留盈餘再投資</td></tr><tr><td>傳產龍頭</td><td>60-80%</td><td>穩定獲利、成熟市場</td></tr></tbody></table>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>股利政策不是「配越多越好」這麼簡單。這次學習最大的收穫是理解了「配息率高低反映公司發展階段」這個概念。</p>
+
+<p><b>成長期的公司配息率低是合理的</b>——台積電需要持續投入資本支出才能維持領先地位，把錢配掉反而害了公司。<b>成熟期的公司配息率高也是合理的</b>——金融業、公用事業已經不需要大量投資，把錢還給股東才是對的。</p>
+
+<p>投資人要問自己的是：<b>我要的是現金流還是資本增值？</b> 要現金流就找配息率60%以上的成熟公司；要資本增值就找配息率低但成長潛力大的公司。兩者都要？那是在做夢。</p>
+
+<p>另外，盈餘分配率 > 100% 是警訊，代表公司可能動用過去保留盈餘或在獲利衰退時硬配，這種配息不可持續，追高殖利率會被套。</p>
+
+<hr>
+
+<p>朝股票操作大師邁進中 📈<br>
+---</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

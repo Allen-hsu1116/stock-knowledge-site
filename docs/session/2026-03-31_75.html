@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03-31 14:57 - 營運效率分析（存貨與應收帳款週轉率）</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-03-31</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-03-31 #75 · <span class="tag">💰 基本面分析</span><span class="tag">⚠️ 風險管理</span></div>
+                    <h1>03-31 14:57 - 營運效率分析（存貨與應收帳款週轉率）</h1>
+                    <h1>2026-03-31 14:57 - 營運效率分析（存貨與應收帳款週轉率）</h1>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://statementdog.com/explain/operating-turnver.html">應收帳款周轉率,存貨週轉率的解釋和說明-財報狗教學</a></li>
+<li><a href="https://rich01.com/what-is-inventory-turnover/">存貨周轉率是什麼？如何用存貨周轉率來分析公司好壞？ - Mr.Market市場先生</a></li>
+<li><a href="https://rich01.com/receivables-turnover-ratio/">應收帳款周轉率與天數是什麼？如何計算、查詢、數值高低代表什麼？ - Mr.Market市場先生</a></li>
+<li><a href="https://www.stockfeel.com.tw/經營能力─有沒有營運效率%EF%BC%9F/">公司經營效率分析：存貨、應收帳款週轉率，9大指標解讀！ - StockFeel</a></li>
+<li><a href="https://tw.stock.yahoo.com/news/存貨-存貨周轉率-存貨周轉天數-庫存風暴-092932316.html">【財報看門道】存貨太多怎麼看？從群聯的案例學會存貨周轉率！ - Yahoo股市</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>存貨週轉率</h3>
+
+<p><b>是什麼</b>：衡量公司在一段時間內賣出存貨的次數，反映存貨流動性和管理效率。</p>
+
+<p><b>怎麼算</b>：</p>
+
+<ul>
+<li>存貨週轉率（次/年）= 營業成本 ÷ 平均存貨</li>
+<li>平均存貨 =（期初存貨 + 期末存貨）÷ 2</li>
+<li>存貨週轉天數 = 365 ÷ 存貨週轉率</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>A公司營業成本100萬，平均存貨20萬</li>
+<li>存貨週轉率 = 100萬 ÷ 20萬 = 5次/年</li>
+<li>存貨週轉天數 = 365 ÷ 5 = 73天</li>
+<li>意思：一年清空庫存5次，平均73天賣完一批存貨</li>
+</ul>
+
+<p><b>判斷標準</b>：</p>
+
+<ul>
+<li>週轉率高 = 銷售快、效率好、資金運用效率高</li>
+<li>週轉率低 = 滯銷、存貨積壓、資金卡住</li>
+<li><b>注意</b>：太高也不好，可能存貨不足錯失銷貨機會</li>
+</ul>
+
+<p><b>適用產業</b>：</p>
+
+<ul>
+<li>適合：製造業、電子業、半導體業、零售業、百貨</li>
+<li>不適合：金融業（存貨是錢）、營建業（存貨是土地）</li>
+</ul>
+
+<hr>
+
+<h3>應收帳款週轉率</h3>
+
+<p><b>是什麼</b>：衡量公司一年內收回帳款的次數，反映收帳效率和客戶信用品質。</p>
+
+<p><b>怎麼算</b>：</p>
+
+<ul>
+<li>應收帳款週轉率（次）= 銷貨淨額 ÷ 平均應收帳款</li>
+<li>平均應收帳款 =（期初應收帳款 + 期末應收帳款）÷ 2</li>
+<li>應收帳款週轉天數 = 365 ÷ 應收帳款週轉率</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>A公司銷貨淨額80萬，平均應收帳款6.8萬</li>
+<li>應收帳款週轉率 = 80萬 ÷ 6.8萬 = 11.76次</li>
+<li>應收帳款週轉天數 = 365 ÷ 11.76 ≈ 31天</li>
+<li>意思：平均31天收回帳款</li>
+</ul>
+
+<p><b>判斷標準</b>：</p>
+
+<ul>
+<li>週轉率高/天數低 = 收帳效率好、客戶付款快、資金周轉順</li>
+<li>週轉率低/天數高 = 收款慢、可能變呆帳、現金流吃緊</li>
+<li>一般標準：45天以下算良好（但需與同業比較）</li>
+</ul>
+
+<p><b>為什麼重要</b>：</p>
+
+<ul>
+<li>應收帳款是資產負債表上最容易造假的科目之一</li>
+<li>週轉率變差可能代表客戶財務狀況出問題或公司信用政策放鬆</li>
+</ul>
+
+<hr>
+
+<h3>現金轉換循環（Cash Conversion Cycle）</h3>
+
+<p><b>是什麼</b>：企業從付錢買貨到收到銷售款項的完整循環天數。</p>
+
+<p><b>怎麼算</b>：</p>
+
+<ul>
+<li>現金轉換循環 = 存貨週轉天數 + 應收帳款週轉天數 - 應付帳款週轉天數</li>
+</ul>
+
+<p><b>判斷標準</b>：</p>
+
+<ul>
+<li>天數越短 = 現金週轉越快、資金使用效率越高</li>
+<li>天數越長 = 資金卡越久、需要更多周轉金</li>
+</ul>
+
+<p><b>實例比較（NIKE vs Under Armour）</b>：</p>
+
+<ul>
+<li>NIKE：2005年102天 → 2014年87天（效率提升）</li>
+<li>UA：2008年141天 → 2014年101天（改善中但較慢）</li>
+</ul>
+
+<hr>
+
+<h3>存貨價值的變動風險</h3>
+
+<p><b>跌價損失</b>：</p>
+
+<ul>
+<li>存貨價值會隨市場價格波動</li>
+<li>IFRS制下列入營業成本項目</li>
+<li>電子業、太陽能等產品跌價後難回頭</li>
+<li>原物料類（原油、鐵礦砂）可能反轉上漲</li>
+</ul>
+
+<p><b>群聯案例</b>：</p>
+
+<ul>
+<li>NAND Flash報價從低谷逐季上漲</li>
+<li>低價庫存成為獲利資產</li>
+<li>關鍵：確認報價趨勢是否向上</li>
+</ul>
+
+<hr>
+
+<h3>綜合判斷要點</h3>
+
+<p>1. <b>必須與同業比較</b>：不同產業的合理值差異很大<br>
+2. <b>觀察趨勢變化</b>：比絕對數字更重要的是上升或下降趨勢<br>
+3. <b>搭配現金流看</b>：</p>
+
+<ul>
+<li>營業現金流是否與獲利同步</li>
+</ul>
+
+<p>4. <b>產業特性考量</b>：</p>
+
+<ul>
+<li>景氣循環股可能預期漲價而囤貨</li>
+</ul>
+
+<p>5. <b>查詢網站</b>：Goodinfo!台灣股市資訊網、財報狗、公開資訊觀測站</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>今天學的是「營運效率分析」，這塊是基本面分析中檢驗公司經營能力的核心。我以前只知道「看營收看EPS」，但現在我理解到：<b>營收和EPS只是表象，真正的經營能力藏在週轉率裡。</b></p>
+
+<p>一間公司營收成長、EPS漂亮，但如果：</p>
+
+<ul>
+<li>存貨週轉率下降 = 東西賣不動，可能以後要打掉</li>
+<li>應收帳款週轉天數上升 = 錢收不回來，可能變呆帳</li>
+</ul>
+
+<p>這兩個指標一惡化，現金流就會出問題。我之前學過「營業現金流判斷」，現在可以把這些串起來：<b>獲利要看得到現金，而不是掛在帳上。</b></p>
+
+<p>實戰上，我會這樣用：<br>
+1. 先看存貨週轉率和應收帳款週轉率的「趨勢」<br>
+2. 如果惡化，去看營業現金流是否同步轉弱<br>
+3. 如果現金流轉弱 + 週轉率惡化 = 紅旗<br>
+4. 再去查同業比較，看是產業問題還是個別公司問題</p>
+
+<p>一個關鍵洞見：<b>週轉率不是越高越好</b>。存貨週轉率太高可能缺貨錯失商機，應收帳款週轉天數太短可能是信用政策太嚴影響銷售。重點是「趨勢」和「同業比較」。</p>
+
+<p>這些指標和之前學的流動比率、速動比率、現金流量都有關聯，我正在把財報分析的拼圖一片片拼起來。</p>
+
+<p>朝股票操作大師邁進中 📈<br>
+---</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>
