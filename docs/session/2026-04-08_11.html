@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>集保庫存與股權分散表</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-08</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-08 #11 · <span class="tag">📊 技術分析</span><span class="tag">🎲 籌碼面分析</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>集保庫存與股權分散表</h1>
+                    ## 第 11 回合學習 - 集保庫存與股權分散表
+**時間**：:
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.cmoney.tw/notes/note-detail.aspx?nid=15601">你不可不知道的 集保庫存與股權分散表</a></li>
+</ul>
+
+<hr>
+
+<h2>集保庫存與股權分散表實戰指南</h2>
+
+<h3>一、什麼是集保庫存</h3>
+
+<p><b>定義</b>：</p>
+
+<ul>
+<li>股票所有人將持有股票，經證券商轉存至集中保管公司（TDCC）</li>
+<li>早期小股東把股票鎖在家裡保險箱，現在統一由電腦管理</li>
+</ul>
+
+<p><b>三大優點</b>：<br>
+1. <b>防盜防挪用</b>：避免股票被挪用、盜賣及偽造<br>
+2. <b>減少遺失風險</b>：買賣成交後憑「證券集保存摺」辦理交割，不用攜帶實體股票<br>
+3. <b>電腦記錄準確</b>：對股票進出、持有股數一目瞭然</p>
+
+<hr>
+
+<h3>二、股權分散表怎麼看</h3>
+
+<p><b>查詢管道</b>：</p>
+
+<ul>
+<li>TDCC 臺灣集中保管結算所：http://www.tdcc.com.tw/smWeb/QryStock.jsp</li>
+<li>每月公布一次（每月一號）</li>
+</ul>
+
+<p><b>表格結構</b>：</p>
+
+<table><thead><tr><th>欄位</th><th>說明</th></tr></thead><tbody><tr><td>持股分級</td><td>1-999股、1,000-5,000股...到1,000,001股以上</td></tr><tr><td>人數</td><td>該級距的持有者人數</td></tr><tr><td>股數</td><td>該級距持有的總股數</td></tr><tr><td>佔集保庫存比例</td><td>該級距股數佔整體的百分比</td></tr></tbody></table>
+
+<hr>
+
+<h3>三、籌碼面判斷實戰</h3>
+
+<h4>判斷方法一：大股東持股比例</h4>
+
+<p><b>核心邏輯</b>：</p>
+
+<ul>
+<li>持股 1,000,001 股以上（大戶）比例越高 → 籌碼越穩定 → 股價容易上漲</li>
+<li>持股 1-999 股（散戶）比例越高 → 籌碼散亂 → 股價容易下跌</li>
+</ul>
+
+<p><b>實例（台積電 2330）</b>：</p>
+
+<ul>
+<li>散戶（1-999股）：156,097 人，佔比 0.13%</li>
+<li>大戶（1,000,001股以上）：1,364 人，佔比 91.39%</li>
+</ul>
+
+<p><b>解讀</b>：</p>
+
+<ul>
+<li>散戶人數多但持股比例極低 → 散戶影響力小</li>
+<li>大戶人數少但持股比例極高 → 籌碼集中、穩定</li>
+<li>結論：台積電籌碼面穩定，適合中長期持有</li>
+</ul>
+
+<h4>判斷方法二：集保庫存變化</h4>
+
+<p><b>注意事項</b>：</p>
+
+<ul>
+<li>近年來散戶也開了集保帳戶，已較難看出大股東持股變化</li>
+<li>但「集保庫存量過低」仍需留意：可能是大股東質壓或擔保</li>
+</ul>
+
+<p><b>警示訊號</b>：</p>
+
+<ul>
+<li>大股東持股大幅減少 → 可能有利空或大股東看壞</li>
+<li>集保庫存突然下降 → 大股東可能提出質壓（資金需求）</li>
+</ul>
+
+<hr>
+
+<h3>四、實戰應用步驟</h3>
+
+<p><b>步驟一</b>：查詢目標股票<br>
+1. 到 TDCC 網站輸入股票代號<br>
+2. 選擇日期（看最新月份）</p>
+
+<p><b>步驟二</b>：重點看三個數字<br>
+1. <b>1,000,001股以上比例</b>：大戶集中度<br>
+2. <b>1-999股比例</b>：散戶比例<br>
+3. <b>人數變化</b>：與上月比較</p>
+
+<p><b>步驟三</b>：綜合判斷</p>
+
+<ul>
+<li>大戶比例 > 70%：籌碼穩定，股價支撐強</li>
+<li>散戶比例 > 30%：籌碼散亂，波動大</li>
+<li>大戶比例連續增加：主力進駐，偏多</li>
+<li>大戶比例連續減少：主力出貨，偏空</li>
+</ul>
+
+<hr>
+
+<h3>五、配合其他籌碼指標</h3>
+
+<p><b>搭配使用</b>：<br>
+1. <b>三大法人買賣超</b>：看外資、投信進出<br>
+2. <b>融資券變化</b>：看散戶多空情緒<br>
+3. <b>券商分點</b>：看主力進出分點</p>
+
+<p><b>完整判斷流程</b>：</p>
+
+<pre><code>股權分散表 → 大戶持股比例高
+    ↓
+三大法人買超 → 法人也看好
+    ↓
+融資減少 → 散戶賣出
+    ↓
+綜合判斷：籌碼面偏多</code></pre>
+
+<hr>
+
+<h3>六、注意陷阱</h3>
+
+<p><b>陷阱一</b>：集保庫存量過低</p>
+
+<ul>
+<li>可能是大股東質壓股票換資金</li>
+<li>需留意公司資金狀況</li>
+</ul>
+
+<p><b>陷阱二</b>：時間落差</p>
+
+<ul>
+<li>股權分散表每月更新一次</li>
+<li>資料有時間落差，不能當短線依據</li>
+</ul>
+
+<p><b>陷阱三</b>：散戶都開集保了</p>
+
+<ul>
+<li>現代散戶也會開集保帳戶</li>
+<li>無法完全區分「大股東」vs「散戶」</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>股權分散表是籌碼面分析的基礎工具，但現代市場結構已改變，散戶也使用集保，讓判斷變複雜了。</p>
+
+<p><b>實戰價值</b>：<br>
+1. <b>看大戶集中度</b>：判斷籌碼穩定度<br>
+2. <b>看月變化</b>：追蹤大戶進出趨勢<br>
+3. <b>搭配其他指標</b>：法人買賣、融資券一起看</p>
+
+<p><b>使用限制</b>：</p>
+
+<ul>
+<li>資料有時間落差（每月一次）</li>
+<li>不能當短線買賣依據</li>
+<li>適合中長期方向判斷</li>
+</ul>
+
+<p><b>我的判斷</b>：<br>
+股權分散表是「輔助工具」，不是「主要訊號」。真正的主力動向要看法人買賣超、券商分點。股權分散表告訴你的是「籌碼穩不穩」，而不是「何時買賣」。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>
