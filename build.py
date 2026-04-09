@@ -13,6 +13,7 @@
 import os
 import re
 import shutil
+import json
 from pathlib import Path
 from datetime import datetime
 
@@ -126,6 +127,20 @@ main { padding: 40px 24px; }
 .knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
 .knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
 .knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* 推薦追蹤頁面 */
+.rec-list { display: flex; flex-direction: column; gap: 8px; }
+.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
+.rec-item:hover { border-color: var(--primary); }
+.rec-item.checked { background: var(--bg-tertiary); }
+.rec-item .stock { flex: 1; font-weight: 500; }
+.rec-item .score { color: var(--text-muted); margin-right: 16px; }
+.rec-item .result { font-weight: 600; }
+.rec-item .result.success { color: var(--success); }
+.rec-item .result.danger { color: var(--danger); }
+.rec-item .result.pending { color: var(--text-muted); }
+.stats-section { margin-bottom: 32px; }
+.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
 
 .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
 .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
@@ -343,6 +358,7 @@ def HTML(body, title="股票學習筆記", depth=""):
         <a href="{depth}index.html">首頁</a>
         <a href="{depth}knowledge.html">知識庫</a>
         <a href="{depth}timeline.html">時間線</a>
+        <a href="{depth}recommendations.html">推薦追蹤</a>
     </nav>'''
     
     return f'''<!DOCTYPE html>
@@ -353,6 +369,109 @@ def HTML(body, title="股票學習筆記", depth=""):
 <main class="container">{body}</main>
 <footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
 </body></html>'''
+
+def generate_recommendations_page():
+    """生成推薦追蹤頁面"""
+    tracker_file = WORKSPACE / "stock-picker" / "history" / "tracking.json"
+    
+    if not tracker_file.exists():
+        return None
+    
+    try:
+        with open(tracker_file, encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception as e:
+        print(f"⚠️ 讀取追蹤資料失敗: {e}")
+        return None
+    
+    # 推薦列表
+    recommendations = data.get("recommendations", {})
+    
+    if not recommendations:
+        return None
+    
+    # 按日期分組
+    by_date = {}
+    for key, rec in recommendations.items():
+        date = rec.get("date", "未知")
+        if date not in by_date:
+            by_date[date] = []
+        by_date[date].append(rec)
+    
+    # 計算整體統計
+    total = len(recommendations)
+    checked = [rec for rec in recommendations.values() if rec.get("checked") and rec.get("result")]
+    
+    if checked:
+        results = [rec["result"] for rec in checked]
+        avg_return = sum(r["return_pct"] for r in results) / len(results)
+        win_rate = sum(1 for r in results if r["return_pct"] > 0) / len(results) * 100
+        stats = {
+            "total_recommendations": total,
+            "overall_avg_return": round(avg_return, 2),
+            "overall_win_rate": round(win_rate, 1)
+        }
+    else:
+        stats = {"total_recommendations": total, "message": "尚無已檢查的推薦"}
+    
+    # 按日期排序
+    sorted_dates = sorted(by_date.keys(), reverse=True)
+    
+    # 生成 HTML
+    items_html = ""
+    for date in sorted_dates[:30]:  # 只顯示最近 30 天
+        recs = by_date[date]
+        weekday = get_weekday(date)
+        
+        recs_html = ""
+        for rec in recs:
+            stock_id = rec.get("stock_id", "")
+            stock_name = rec.get("stock_name", "")[:6]
+            score = rec.get("score", 0)
+            result = rec.get("result")
+            
+            if result:
+                # 已檢查
+                return_pct = result.get("return_pct", 0)
+                color = "success" if return_pct > 0 else "danger"
+                icon = "📈" if return_pct > 0 else "📉"
+                recs_html += f'<div class="rec-item checked"><span class="stock">{stock_id} {stock_name}</span><span class="score">{score:.0f}分</span><span class="result {color}">{icon} {return_pct:+.2f}%</span></div>'
+            else:
+                # 未檢查
+                recs_html += f'<div class="rec-item"><span class="stock">{stock_id} {stock_name}</span><span class="score">{score:.0f}分</span><span class="result pending">⏳ 待檢查</span></div>'
+        
+        items_html += f'<div class="date-group"><div class="date-header"><span class="date">{date}</span><span class="weekday">{weekday}</span> · {len(recs)} 支</div><div class="rec-list">{recs_html}</div></div>'
+    
+    # 整體統計
+    stats_html = ""
+    if stats and "message" not in stats:
+        stats_html = f'''
+        <div class="stats-section">
+            <h2>📊 整體統計</h2>
+            <div class="stats-grid">
+                <div class="stat-card"><div class="stat-value">{stats.get("total_recommendations", 0)}</div><div class="stat-label">總推薦數</div></div>
+                <div class="stat-card"><div class="stat-value">{stats.get("overall_avg_return", 0):+.2f}%</div><div class="stat-label">平均報酬</div></div>
+                <div class="stat-card"><div class="stat-value">{stats.get("overall_win_rate", 0):.1f}%</div><div class="stat-label">勝率</div></div>
+            </div>
+        </div>
+        '''
+    
+    html = f'''
+    <div class="content">
+        <div class="content-card">
+            <h1>🎯 推薦追蹤</h1>
+            <p>追蹤每日推薦股票的 5 日表現</p>
+        </div>
+    </div>
+    {stats_html}
+    <div class="section">
+        <h2>📅 歷史推薦</h2>
+        {items_html}
+    </div>
+    '''
+    
+    return html
+
 
 def main():
     print("生成網站...")
@@ -523,6 +642,14 @@ def main():
                 fh.write(HTML(summary_html, f"{date} 學習總結", "../"))
     
     print(f"✅ 已生成 {len(all_sessions)} 個學習回合（{len(daily_data)} 天）")
+    
+    # 推薦追蹤頁面
+    rec_html = generate_recommendations_page()
+    if rec_html:
+        with open(OUTPUT_DIR/"recommendations.html", "w", encoding="utf-8") as f:
+            f.write(HTML(rec_html, "推薦追蹤"))
+        print("✅ 已生成推薦追蹤頁面")
+
 
 if __name__ == "__main__":
     main()

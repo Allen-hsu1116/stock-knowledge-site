@@ -95,6 +95,20 @@ main { padding: 40px 24px; }
 .knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
 .knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
 
+/* 推薦追蹤頁面 */
+.rec-list { display: flex; flex-direction: column; gap: 8px; }
+.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
+.rec-item:hover { border-color: var(--primary); }
+.rec-item.checked { background: var(--bg-tertiary); }
+.rec-item .stock { flex: 1; font-weight: 500; }
+.rec-item .score { color: var(--text-muted); margin-right: 16px; }
+.rec-item .result { font-weight: 600; }
+.rec-item .result.success { color: var(--success); }
+.rec-item .result.danger { color: var(--danger); }
+.rec-item .result.pending { color: var(--text-muted); }
+.stats-section { margin-bottom: 32px; }
+.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
+
 .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
 .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
 .breadcrumb a:hover { color: var(--primary); }
@@ -115,6 +129,7 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
         <a href="index.html">首頁</a>
         <a href="knowledge.html">知識庫</a>
         <a href="timeline.html">時間線</a>
+        <a href="recommendations.html">推薦追蹤</a>
     </nav></div></header>
 <main class="container"><div class="content"><div class="content-card"><h1>📚 知識庫</h1><div class="knowledge-nav"><a href="#technical">📊 技術分析</a><a href="#fundamental">💰 基本面分析</a><a href="#chips">🎲 籌碼面分析</a><a href="#strategy">🎯 操作策略</a><a href="#risk">⚠️ 風險管理</a><a href="#psychology">🧠 交易心理</a></div><h1>股票操作知識庫</h1>
 
