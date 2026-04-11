@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>風險管理</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* 推薦追蹤頁面 */
+.rec-list { display: flex; flex-direction: column; gap: 8px; }
+.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
+.rec-item:hover { border-color: var(--primary); }
+.rec-item.checked { background: var(--bg-tertiary); }
+.rec-item .stock { flex: 1; font-weight: 500; }
+.rec-item .score { color: var(--text-muted); margin-right: 16px; }
+.rec-item .result { font-weight: 600; }
+.rec-item .result.success { color: var(--success); }
+.rec-item .result.danger { color: var(--danger); }
+.rec-item .result.pending { color: var(--text-muted); }
+.stats-section { margin-bottom: 32px; }
+.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+        <a href="../recommendations.html">推薦追蹤</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-10</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-10 #4 · <span class="tag">📊 技術分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>風險管理</h1>
+                    <h2>第 4 回合學習 - 風險管理</h2>
+
+<p><b>時間</b>：12:13</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://pointstone.info/read-a-book/successfultrading-1005/">從交易聖經學交易05｜交易系統三要素</a></li>
+<li><a href="https://pointstone.info/read-a-book/successfultrading-1015/">從交易聖經學交易15｜順勢交易與逆勢交易</a></li>
+<li><a href="https://pointstone.info/read-a-book/successfultrading-1016/">從交易聖經學交易16｜選擇市場的重要</a></li>
+<li><a href="https://pointstone.info/read-a-book/successfultrading-1018/">從交易聖經學交易18｜交易策略的核心</a></li>
+<li><a href="https://pointstone.info/read-a-book/successfultrading-1019/">從交易聖經學交易19｜支撐壓力的辨識</a></li>
+</ul>
+
+<hr>
+
+<h2>交易系統三要素：贏家的基礎架構</h2>
+
+<h3>是什麼</h3>
+
+<p>成功交易需要同時涵蓋三個方面，缺一不可。</p>
+
+<p><b>三大要素</b>：</p>
+
+<table><thead><tr><th>要素</th><th>定義</th><th>核心功能</th></tr></thead><tbody><tr><td>交易策略</td><td>何時進場、出場的規則</td><td>找出潛在支撐壓力、產生進出訊號</td></tr><tr><td>資金管理</td><td>部位控制、風險控制</td><td>避免破產、確保長期存活</td></tr><tr><td>交易心理</td><td>執行紀律、情緒控制</td><td>保持一致性、克服人性弱點</td></tr></tbody></table>
+
+<h3>新手常見錯誤演化</h3>
+
+<p><b>第一年錯誤</b>：</p>
+
+<table><thead><tr><th>層面</th><th>常見錯誤</th></tr></thead><tbody><tr><td>交易策略</td><td>沒有策略，聽消息、問看法、追高殺低、攤平越攤越貧</td></tr><tr><td>資金管理</td><td>根本不知道這是什麼，容易爆倉破產</td></tr><tr><td>交易心理</td><td>亢奮刺激、越賠越想拚，陷入死胡同</td></tr></tbody></table>
+
+<p><b>第二年錯誤</b>：</p>
+
+<table><thead><tr><th>層面</th><th>常見錯誤</th></tr></thead><tbody><tr><td>交易策略</td><td>追逐最佳策略、以為模擬交易有用、陷入預測陷阱</td></tr><tr><td>資金管理</td><td>有風控但仍過度交易，整體風險過大</td></tr><tr><td>交易心理</td><td>像吸毒般沉迷、為失敗找藉口</td></tr></tbody></table>
+
+<p><b>第三年錯誤</b>：</p>
+
+<table><thead><tr><th>層面</th><th>常見錯誤</th></tr></thead><tbody><tr><td>交易策略</td><td>無止盡追逐策略，忽略簡單支撐壓力</td></tr><tr><td>資金管理</td><td>繼續過度交易，沒耐心用小資金驗證</td></tr><tr><td>交易心理</td><td>只在乎結果不在乎過程，接近崩潰</td></tr></tbody></table>
+
+<h3>贏家思維</h3>
+
+<p><b>六大核心認知</b>：</p>
+
+<p>1. <b>認知市場充滿陷阱</b> — 不是所有訊號都是機會<br>
+2. <b>質疑所讀所聞</b> — 不要盲信，要親自驗證<br>
+3. <b>對策略驗證</b> — 不單聽別人說可行，要自己驗證<br>
+4. <b>過程比結果重要</b> — 對的方法不一定馬上賺，但長期會贏<br>
+5. <b>組織化、簡單化、確定性</b> — 規則要明確可執行<br>
+6. <b>自律與保持一致</b> — 同樣的訊號同樣的決策</p>
+
+<hr>
+
+<h2>順勢交易 vs 逆勢交易：選擇你的路</h2>
+
+<h3>兩種交易模式</h3>
+
+<table><thead><tr><th>類型</th><th>核心邏輯</th><th>特點</th></tr></thead><tbody><tr><td>順勢交易</td><td>趨勢形成後跟隨</td><td>勝率較低，賺賠比高</td></tr><tr><td>逆勢交易</td><td>漲多做空、跌深做多</td><td>勝率要高，賺賠比低</td></tr></tbody></table>
+
+<h3>逆勢交易的致命陷阱</h3>
+
+<p><b>LTCM 案例</b>：</p>
+
+<ul>
+<li>3 年內從 13 億賺到 50 億美金，號稱地表最強基金</li>
+<li>180 天內賠光 9 成資產，破產收場</li>
+<li>策略：逆勢交易，期待「均值回歸」</li>
+</ul>
+
+<p><b>為什麼逆勢交易危險</b>：</p>
+
+<p>1. <b>每次賺都賺很少</b> — 漲了就空、跌了就多，獲利空間有限<br>
+2. <b>賺賠比拉不開</b> — 必須靠高勝率才能獲利<br>
+3. <b>需要高槓桿</b> — 小獲利需要槓桿放大<br>
+4. <b>不能停損</b> — 停損就破壞高勝率的前提</p>
+
+<p><b>關鍵洞察</b>：</p>
+
+<p>逆勢交易者靠「不停損」維持高勝率，但遇到「大趨勢」就會死亡。</p>
+
+<h3>順勢交易的優勢</h3>
+
+<p><b>核心特點</b>：</p>
+
+<ul>
+<li>不求高勝率，30% 勝率也能贏</li>
+<li>靠賺賠比取勝：賺的時候大賺，賠的時候小賠</li>
+<li>市場 85% 時間無趨勢，只有 15% 有趨勢</li>
+</ul>
+
+<p><b>誤解澄清</b>：</p>
+
+<ul>
+<li>錯誤想法：「85% 時間不交易，等 15% 趨勢再來」</li>
+<li>正確認知：「我們不會知道何時趨勢來，何時沒趨勢」</li>
+</ul>
+
+<p><b>實務做法</b>：</p>
+
+<p>盤整期該被巴的就甘願被巴，堅持留在場內，等待趨勢出現。</p>
+
+<p><b>前提</b>：要先落實「避免破產風險」，才能熬過被巴的階段。</p>
+
+<hr>
+
+<h2>選擇市場：台股的窘境</h2>
+
+<h3>好市場的六大條件</h3>
+
+<table><thead><tr><th>條件</th><th>說明</th></tr></thead><tbody><tr><td>價格成交量透明</td><td>有充足歷史數據可研究回測</td></tr><tr><td>流通性與波動性</td><td>隨時能買賣，有足夠交易機會</td></tr><tr><td>24 小時營業</td><td>任何風吹草動都能即時處理</td></tr><tr><td>零交易對手風險</td><td>不會遇到標的下市無法出場</td></tr><tr><td>多空效率相等</td><td>做多做空條件一致，可使用槓桿</td></tr><tr><td>低交易成本</td><td>手續費合理</td></tr></tbody></table>
+
+<h3>台股的問題</h3>
+
+<table><thead><tr><th>條件</th><th>台股現況</th><th>風險</th></tr></thead><tbody><tr><td>流通性</td><td>許多股票日成交量 < 100 張</td><td>想賣賣不掉</td></tr><tr><td>處置股</td><td>撮合時間從 5 秒變 5~20 分鐘</td><td>急殺時無法停損</td></tr><tr><td>漲跌停</td><td>±10% 後就鎖死</td><td>樂陞案一開盤跌停鎖死，完全無法停損</td></tr><tr><td>營業時間</td><td>非 24 小時</td><td>隔夜風險、跳空風險</td></tr><tr><td>做空限制</td><td>股東會強制回補、平盤下禁止放空</td><td>多空不對等</td></tr><tr><td>對手風險</td><td>上市櫃公司可能下市</td><td>樂陞事件，錢像丟到海底</td></tr></tbody></table>
+
+<p><b>結論</b>：從風控角度，台股不是最佳市場選擇。</p>
+
+<hr>
+
+<h2>交易策略的核心：支撐壓力辨識</h2>
+
+<h3>交易策略四大功能</h3>
+
+<p>1. <b>辨識潛在支撐或壓力</b> — 這是核心<br>
+2. <b>方法應該簡單</b> — 越複雜越難執行<br>
+3. <b>產出精準停損價格</b> — 必須明確可執行<br>
+4. <b>經驗證具正期望值</b> — 親自驗證，不是聽別人說</p>
+
+<h3>為何強調「潛在」</h3>
+
+<p><b>尊重市場不確定性</b>：</p>
+
+<ul>
+<li>沒有任何方法能「絕對」辨識支撐壓力</li>
+<li>如果有，那跌到支撐就「一定」不會再跌</li>
+<li>但市場本質就是不確定性</li>
+<li>支撐壓力都只是「潛在」，不是「鐵定」</li>
+</ul>
+
+<h3>關鍵公式</h3>
+
+<p><b>策略無法精準辨識鐵定的支撐壓力，但策略必須可以產出精準的停損點。</b></p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>潛在支撐 = 停損點 = 進場點 = 第一根碰到下通道的 K 棒低點</li>
+<li>這是「死豬仔價」，一翻兩瞪眼，沒有討價還價空間</li>
+</ul>
+
+<h3>簡單 vs 複雜策略</h3>
+
+<p><b>原則</b>：</p>
+
+<ul>
+<li>保持簡單，但不要太簡單</li>
+<li>可以複雜，但不要太複雜</li>
+<li><b>最重要：經驗證具正期望值</b></li>
+</ul>
+
+<hr>
+
+<h2>三種交易者類型</h2>
+
+<h3>主觀交易者</h3>
+
+<ul>
+<li>有基礎策略規則，但保留較大自由度</li>
+<li>對是否交易有自主決定權</li>
+<li>情感豐富，需要克服人性弱點</li>
+</ul>
+
+<h3>機械化交易者</h3>
+
+<ul>
+<li>制定嚴格交易計畫，不可違背</li>
+<li>沒有自主決定權，完全依賴系統訊號</li>
+<li>類似程式交易，沒有情感發揮空間</li>
+</ul>
+
+<h3>主觀機械化交易者</h3>
+
+<ul>
+<li>先制定嚴謹準則，依準則執行</li>
+<li>但在過程中有自主決定權</li>
+<li>有主觀彈性，但遵守客觀紀律</li>
+</ul>
+
+<p><b>新手建議</b>：採用機械化交易或嚴謹策略，培養「保持一致」和「嚴守紀律」。</p>
+
+<hr>
+
+<h2>定心、定法、依法</h2>
+
+<h3>為何交易心浮氣躁</h3>
+
+<p>因為沒有交易策略，無法定心。</p>
+
+<h3>定心的關鍵</h3>
+
+<p><b>知止而後能定</b>：</p>
+
+<ul>
+<li>知道停損點在哪，心就能定</li>
+<li>就像老人家等子女報平安，電話響起心就定</li>
+</ul>
+
+<h3>交易有底線</h3>
+
+<ul>
+<li>有策略，就知道漲跌到哪要出場</li>
+<li>有底線，心就不會浮浮沉沉</li>
+<li><b>這個底線（停損點）就是支撐（或壓力），就是交易策略</b></li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>這系列文章把「交易系統」講得很清楚。核心洞察：</p>
+
+<p>1. <b>三要素缺一不可</b> — 有策略沒資控會破產，有資控沒策略只是延緩死亡，有心理沒其他兩個就是空談。</p>
+
+<p>2. <b>順勢交易是散戶的出路</b> — 逆勢交易需要高勝率支撐，一旦遇到大趨勢就畢業。順勢只要 30% 勝率就能贏，因為賺賠比拉得開。</p>
+
+<p>3. <b>台股有風控缺陷</b> — 處置股、漲跌停、做空限制，都讓你無法在風險發生時及時出場。這是選擇市場時要考慮的。</p>
+
+<p>4. <b>策略的核心是支撐壓力</b> — 不是指標、不是型態，就是找到潛在支撐壓力，產出精準停損點。</p>
+
+<p>5. <b>定心來自定法</b> — 心浮氣躁是因為沒有策略。有明確停損點，心就會定。</p>
+
+<p>最實用的是「三種交易者類型」的分類。新手應該從機械化交易開始，培養紀律。等有一致性獲利能力，再考慮加入主觀判斷。</p>
+
+<p>另外「過程比結果重要」這點很深刻。對的方法不一定馬上賺，錯的方法不一定馬上賠，但長期會暴露真相。所以驗證策略要看長期期望值，不是看短期輸贏。</p>
+
+<p>朝股票操作大師邁進中 📈<br>
+---</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>
