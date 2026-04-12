@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2026-04-12 學習總結</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* 推薦追蹤頁面 */
+.rec-list { display: flex; flex-direction: column; gap: 8px; }
+.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
+.rec-item:hover { border-color: var(--primary); }
+.rec-item.checked { background: var(--bg-tertiary); }
+.rec-item .stock { flex: 1; font-weight: 500; }
+.rec-item .score { color: var(--text-muted); margin-right: 16px; }
+.rec-item .result { font-weight: 600; }
+.rec-item .result.success { color: var(--success); }
+.rec-item .result.danger { color: var(--danger); }
+.rec-item .result.pending { color: var(--text-muted); }
+.stats-section { margin-bottom: 32px; }
+.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+        <a href="../recommendations.html">推薦追蹤</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-12</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <h1>📅 2026-04-12 學習總結</h1>
+                    <h1>2026-04-12 股票學習統整</h1>
+
+<p><b>日期</b>: 2026-04-12（週六）<br>
+<b>總計</b>: 18 回合學習，18 篇文章</p>
+
+<hr>
+
+<h2>📊 今日核心知識提煉</h2>
+
+<h3>1. OBV 能量潮指標實戰</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>OBV 將成交量累積化為趨勢線，核心邏輯「量先價行」</li>
+<li>四大訊號：頂背離（賣）、底背離（買）、多頭同步（加碼）、空頭同步（觀望）</li>
+<li>OBV 急速上升 = 買盤過度集中，鋸狀曲線轉向才是明確訊號</li>
+</ul>
+
+<p><b>實戰應用</b>:<br>
+<table><thead><tr><th>訊號</th><th>判斷</th><th>操作</th></tr></thead><tbody><tr><td>股價創高 + OBV 沒創高</td><td>頂背離</td><td>分批出場</td></tr><tr><td>股價創低 + OBV 沒創低</td><td>底背離</td><td>準備進場</td></tr><tr><td>OBV 急升後鋸狀轉下</td><td>警戒</td><td>逢高賣出</td></tr></tbody></table></p>
+
+<p><b>注意</b>: 不適用冷門股、低量股、當沖短線</p>
+
+<hr>
+
+<h3>2. 波段交易進階技巧</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>四大策略：突破/跌破（右側）、盤整區間操作、反轉行情、回撤加碼</li>
+<li>量價四型態：價漲量增（多頭）、價跌量縮（洗盤）、價漲量縮（背離）、價跌量增（空頭）</li>
+<li>大成交量區間帶可作為支撐壓力判斷</li>
+</ul>
+
+<p><b>實戰重點</b>:</p>
+
+<ul>
+<li>盤整區間操作最適合新手，突破後要換策略</li>
+<li>反轉操作風險最高，要等確認後再進場</li>
+<li>箱型理論適用：大型股、多頭環境、順勢做多</li>
+</ul>
+
+<hr>
+
+<h3>3. 多重時間框架分析</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>大週期看位置、中週期判趨勢、小週期找入場</li>
+<li>時間框架比例建議 1:4 或 1:6</li>
+<li>用小週期停損 + 大週期停利，盈虧比可拉到 5-10 倍以上</li>
+</ul>
+
+<p><b>實戰設定</b>:<br>
+<table><thead><tr><th>交易風格</th><th>大週期</th><th>中週期</th><th>小週期</th></tr></thead><tbody><tr><td>波段交易</td><td>日線</td><td>4小時</td><td>1小時</td></tr><tr><td>當沖交易</td><td>1小時</td><td>15分鐘</td><td>5分鐘</td></tr></tbody></table></p>
+
+<p><b>注意</b>: 不要看太多時間框架，固定三個即可</p>
+
+<hr>
+
+<h3>4. 突破回踩確認策略</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>突破後等回踩確認，避免假突破，勝率更高</li>
+<li>六步驟：識別盤整 → 等突破 → 找回踩 → 執行交易 → 設停損停利 → 監控</li>
+</ul>
+
+<p><b>回踩低吸三條件</b>:<br>
+1. 下方有獲利籌碼峰作為依託<br>
+2. 結合趨勢線或均線共振<br>
+3. 板塊指數時間共振（大盤不好時 80% 股票都不好）</p>
+
+<p><b>注意</b>: 回踩不會每次出現，有時價格直接續漲</p>
+
+<hr>
+
+<h3>5. 主力鎖碼股判斷技巧</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>三大指標：主力買賷超（連續正數）、買賣家數差（連續負數）、籌碼集中度（上升）</li>
+<li>黃金組合：三者同時出現 = 大戶集中吃貨</li>
+</ul>
+
+<p><b>融資鎖碼三特徵</b>:<br>
+1. 融資使用率 > 20%（大戶用融資鎖碼）<br>
+2. 融資暴增（短時間突然增加）<br>
+3. 籌碼趨向集中（區分主力鎖碼 vs 散戶攤平）</p>
+
+<p><b>四步驟選股</b>: 買賣家數差七成為負 + 融資近20日暴增10% + 融資使用率 > 20% + 股價在融資成本線上<br>
+<b>回測績效</b>: 上漲機率 77.8%，平均報酬 19.26%</p>
+
+<hr>
+
+<h3>6. 股息貴族與高股息投資策略</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>股息貴族：S&P 500 成分股中連續 25 年增加配息</li>
+<li>股息國王：連續 50 年以上增加配息（更嚴格）</li>
+<li>DRIP 股息再投資實現複利效應</li>
+</ul>
+
+<p><b>三種選股策略</b>:<br>
+1. 殖利率排行法（殖利率 3-8%）<br>
+2. 配息成長法（連續 10 年配息成長 > 5%）<br>
+3. 價值低估法（合理價 vs 當前價有安全邊際）</p>
+
+<p><b>三大風險</b>: 高殖利率陷阱、配息來自借債（配息率 > 100%）、股息刪減</p>
+
+<hr>
+
+<h3>7. 配對交易策略</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>市場中性策略：做多一邊、放空另一邊，賺價差收斂或發散</li>
+<li>兩種獲利方式：價差收斂（主流）、價差發散（變化型）</li>
+<li>需要兩倍資金但只賺價差，報酬相對小</li>
+</ul>
+
+<p><b>進場判斷三方法</b>:<br>
+1. 歷史經驗判斷<br>
+2. 布林通道判林通道判斷（價格比例穿越通道後回歸）<br>
+3. 共整合檢定（進階，ADF 單根檢定確認定態性）</p>
+
+<p><b>致命傷</b>: 盈虧比極低（小賺大賠），類似選擇權賣方策略，一次意外可能永久性損傷</p>
+
+<hr>
+
+<h3>8. K 線組合型態實戰判斷</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>多根 K 線組合比單根 K 線訊號更可靠，觀察「多空轉化過程」</li>
+<li>三根組合：早晨之星（空轉多）、黃昏之星（多轉空）、紅三兵、黑三兵</li>
+<li>兩根組合：多頭吞噬、空頭吞噬、烏雲罩頂、貫穿型態、母子型態</li>
+</ul>
+
+<p><b>心理解讀</b>: 趨勢 → 猶豫 → 反轉（三階段轉化過程）<br>
+<b>注意</b>: 在支撐壓力關鍵位置出現型態才可靠，確認成交量配合</p>
+
+<hr>
+
+<h3>9. ROE/ROA 獲利能力分析 + 杜邦分析法</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>ROE 衡量用股東資本賺錢的能力；ROA 衡量用全部資產賺錢的能力</li>
+<li><b>同樣的 ROE，背後的故事可能完全不同</b></li>
+<li>杜邦分析拆解：ROE = 淨利率 × 總資產週轉率 × 權益乘數</li>
+</ul>
+
+<p><b>三種 ROE 推升來源</b>:<br>
+<table><thead><tr><th>來源</th><th>代表</th><th>評價</th></tr></thead><tbody><tr><td>淨利率推升</td><td>公司體質變好</td><td>✅ 最理想</td></tr><tr><td>週轉率推升</td><td>可能薄利多銷</td><td>⚠️ 要留意</td></tr><tr><td>權益乘數推升</td><td>高槓桿假象</td><td>🚨 風險增加</td></tr></tbody></table></p>
+
+<p><b>選股標準</b>: 最近 10 年 ROE > 8%、最近 3 年 ROE > 15%、高負債產業用 ROA > 6-7%</p>
+
+<hr>
+
+<h3>10. EPS 每股盈餘 + 三率三升 + 營收年增率</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>EPS 灌水三大陷阱：業外收益、庫藏股買回、景氣循環假象</li>
+<li>基本 EPS vs 稀釋 EPS 差距 > 10% 要用稀釋 EPS</li>
+</ul>
+
+<p><b>三率三升</b>: 毛利率、營業利益率、稅後淨利率同步上升 = 最強基本面訊號</p>
+
+<ul>
+<li>三率同步上升才是真成長，單一率上升可能是假象</li>
+</ul>
+
+<p><b>營收年增率三大陷阱</b>: 基期效應、成長品質（營收增+毛利降=殺價搶單）、單一指標盲點</p>
+
+<hr>
+
+<h3>11. 多維度選股系統：三合一整合</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>基本面選「買什麼」→ 籌碼面確認「誰在買」→ 技術面決定「何時買」→ 風險評估「買多少」→ 持續追蹤「何時賣」</li>
+</ul>
+
+<p><b>三面訊號衝突處理</b>:<br>
+<table><thead><tr><th>衝突</th><th>處理方式</th></tr></thead><tbody><tr><td>基本面好 + 技術面弱</td><td>長投可加碼，波段要等</td></tr><tr><td>技術面強 + 基本面差</td><td>可短打但停損要嚴</td></tr><tr><td>籌碼面好 + 技術面未發動</td><td>放觀察名單，等突破</td></tr><tr><td>三面都好</td><td>最佳進場時機</td></tr></tbody></table></p>
+
+<p><b>實戰 Checklist</b>: 21 項檢查，通過 15 項以上才進場</p>
+
+<hr>
+
+<h3>12. 漲停板操作 + ETF 投資配置</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>漲停能追的條件：突破型、有量、籌碼乾淨（無隔日沖）、均線支撐</li>
+<li>絕對不要追：連續多日漲停、隔日沖券商大量買超、無量漲停</li>
+</ul>
+
+<p><b>ETF 配置建議</b>:</p>
+
+<ul>
+<li>核心部位 60-70%（市值型 ETF）</li>
+<li>衛星部位 20-30%（主題型 ETF）</li>
+<li>避險部位 10%（債券 ETF）</li>
+</ul>
+
+<hr>
+
+<h3>13. 分批進場 vs 單筆買進 + 隔日沖券商判斷</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>分批進場 ≠ 定期定額，資金邏輯完全不同</li>
+<li>歷史回歷史回測：單筆投入勝率 75-100%（台股 0050、台積電）</li>
+<li>分批進場的「報酬率陷阱」：分母要用總資金，不是已投入金額</li>
+</ul>
+
+<p><b>隔日沖券商名單</b>: 凱基-松山、凱基-台北、元大-土城永寧、國票-敦北法人、富國-建邦<br>
+<b>應對三招</b>: 隔天開盤 4% 分水嶺、尾盤再行動、長期投資者不受影響</p>
+
+<hr>
+
+<h3>14. 權證操作實戰</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>權證 = 負和遊戲，券商賺價差 + 時間價值</li>
+<li>最大陷阱：隱含波動率調降（BIV 下降直接虧損 5%+）</li>
+<li>五大選權證原則：價平價內、到期日長、流動性好、買賣價差小、實質槓桿高</li>
+</ul>
+
+<p><b>避坑</b>: 選隱波穩定不降的券商、避開價外權證、設好出場時間不長抱、資金控制在小額</p>
+
+<hr>
+
+<h3>15. 融券強制回補 + Put Call Ratio</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>三大強制回補時機：股東會前、除權息前、現金增減資</li>
+<li>軋空行情四指標：融券張數、融券佔成交量比、券資比 > 30%、大戶持股 > 40%</li>
+</ul>
+
+<p><b>PCR 當散戶指標</b>:</p>
+
+<ul>
+<li>PCR > 140% = 散戶極度恐慌 = 可能底部</li>
+<li>PCR < 100% = 散戶極度樂觀 = 可能頭部</li>
+<li>搭配大額交易人持倉做反向操作，訊號更可靠</li>
+</ul>
+
+<hr>
+
+<h3>16. 鐵兀鷹 Iron Condor 選擇權策略</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>買權空頭價差 + 賣權多頭價差 = 不預測方向，賭區間盤整</li>
+<li>Delta 中立比距離中立更重要</li>
+<li>獲利 50% 平倉是鐵律（時間價值衰減前半快、後半慢）</li>
+</ul>
+
+<p><b>三種被貫穿應對</b>: 小台避險、Rolling 調倉、轉倉換時間<br>
+<b>適用時機</b>: VIX 高位時建倉、盤整市、週三新合約後建倉</p>
+
+<hr>
+
+<h3>17. 蝶式價差 Butterfly Spread + 減資操作策略</h3>
+
+<p><b>核心概念（蝶式）</b>:</p>
+
+<ul>
+<li>三個等距履約價、四口選擇權，風險有限（=建倉成本）</li>
+<li>用「利潤壓縮」換「風險控制」，是跨式的安全版</li>
+<li>Butterfly vs Condor：確定中心用蝶式，確定區間用兀鷹</li>
+</ul>
+
+<p><b>核心概念（減資）</b>:</p>
+
+<ul>
+<li>三種減資：一般（打消虧損）、現金（退還股款）、庫藏股（回購註銷）</li>
+<li><b>非現金減資非常危險</b>：每 4 檔就有 1 檔虧 50%+，浴火重生機率僅 15%</li>
+<li>減資後股價調升 ≠ 賺錢（只是數學結果）</li>
+</ul>
+
+<hr>
+
+<h3>18. DMI 趨向指標與 ADX 趨勢強度</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>+DI 衡量買方力道、-DI 衡量賣方力道、ADX 衡量趨勢強度（不看方向）</li>
+<li>ADX < 20 = 盤整，不做順勢交易；ADX > 25 = 趨勢形成，可進場</li>
+<li>ADX 突破 25 + +DI/-DI 交叉 = 高勝率進場訊號</li>
+</ul>
+
+<p><b>六大交易訊號</b>:<br>
+1. +DI 上穿 -DI + ADX 上升 → 最強做多<br>
+2. +DI 跌破 -DI + ADX 上升 → 最強做空<br>
+3. ADX 從低檔轉折向上 → 趨勢正在形成<br>
+4. ADX 從高檔回落 → 趨勢減弱，開始減碼<br>
+5. +DI/-DI 背離 → 趨勢即將反轉<br>
+6. +DI/-DI 頻繁交叉 + ADX < 20 → 盤整，不操作</p>
+
+<hr>
+
+<h2>🎯 明日（週一）主題</h2>
+
+<p><b>技術分析 - K線、均線、支撐壓力</b>:</p>
+
+<ul>
+<li>複習 K 線組合型態與多重時間框架</li>
+<li>練習用 ADX 過濾假突破</li>
+<li>串接 OBV + DMI 的趨勢確認組合</li>
+<li>實戰：用三合一 Checklist 練習選股</li>
+</ul>
+
+<hr>
+
+<h2>📁 知識歸檔</h2>
+
+<ul>
+<li><code>memory/stock-learning/2026-04-12.md</code> - 完整 18 回合記錄</li>
+<li><code>memory/stock-knowledge.md</code> - 核心知識庫（已更新章節）</li>
+<li><code>MEMORY.md</code> - 學習進度更新</li>
+</ul>
+
+<hr>
+
+<p><b>朝股票操作大師邁進中</b> 📈</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

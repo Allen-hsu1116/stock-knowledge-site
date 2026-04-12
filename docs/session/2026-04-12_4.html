@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>突破回踩確認策略</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* 推薦追蹤頁面 */
+.rec-list { display: flex; flex-direction: column; gap: 8px; }
+.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
+.rec-item:hover { border-color: var(--primary); }
+.rec-item.checked { background: var(--bg-tertiary); }
+.rec-item .stock { flex: 1; font-weight: 500; }
+.rec-item .score { color: var(--text-muted); margin-right: 16px; }
+.rec-item .result { font-weight: 600; }
+.rec-item .result.success { color: var(--success); }
+.rec-item .result.danger { color: var(--danger); }
+.rec-item .result.pending { color: var(--text-muted); }
+.stats-section { margin-bottom: 32px; }
+.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+        <a href="../recommendations.html">推薦追蹤</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-12</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-12 #4 · <span class="tag">📊 技術分析</span><span class="tag">🎲 籌碼面分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>突破回踩確認策略</h1>
+                    <h2>第 4 回合學習 - 突破回踩確認策略</h2>
+
+<p><b>時間</b>：04:13</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.hstong.com/news/detail/25082523515720952">夜读 \| 突破回踩全解析：技术派交易者不可忽视的高胜率入场法则！</a></li>
+<li><a href="https://www.ttyfp.com/chaogu/30244.html">如何判断回踩成功？股票回踩低吸买点与支撑位</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>突破回踩策略（Breakout-Pullback）</h3>
+
+<p><b>是什麼</b>：價格突破阻力或支撐後，回到突破點進行「回踩測試」，確認突破有效後才進場。這是技術派交易者最推崇的高勝率入場法則。</p>
+
+<p><b>核心邏輯</b>：</p>
+
+<ul>
+<li>突破後，原本的阻力會變成新的支撐（反之亦然）</li>
+<li>回踩確認突破有效性，避免假突破陷阱</li>
+<li>等待回踩才進場，風險更低、勝率更高</li>
+</ul>
+
+<hr>
+
+<h3>突破回踩六步驟實戰</h3>
+
+<h4>步驟一：識別盤整區間</h4>
+
+<p><b>怎麼做</b>：<br>
+1. 找出明確的支撐位和阻力位<br>
+2. 確認價格在一個相對狹窄的區間內波動<br>
+3. 用水平線標出盤整區域</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某股在 100-110 元區間震盪三週</li>
+<li>標記支撐 100、阻力 110</li>
+<li>這是「突破回踩之前的寧靜時刻」</li>
+</ul>
+
+<hr>
+
+<h4>步驟二：等待突破出現</h4>
+
+<p><b>怎麼做</b>：<br>
+1. 觀察價格突破阻力或跌破支撐<br>
+2. 此時「不要急著進場」<br>
+3. 警惕假突破，等待確認</p>
+
+<p><b>注意</b>：</p>
+
+<ul>
+<li>突破發生時，原本支撐變阻力、阻力變支撐</li>
+<li>這只是形態剛出現，還不成熟</li>
+</ul>
+
+<hr>
+
+<h4>步驟三：尋找回踩機會</h4>
+
+<p><b>怎麼做</b>：<br>
+1. 觀察價格是否回到突破點<br>
+2. 確認價格在原阻力/支撐位獲得支撐<br>
+3. 出現反轉訊號（如看漲 K 線）</p>
+
+<p><b>看漲突破回踩原理</b>：</p>
+
+<ul>
+<li>買盤湧入 → 價格上漲 → 觸發買入止損單</li>
+<li>空頭開始賣出 → 價格略微回落</li>
+<li>價格回到支撐位 → 看漲交易者再次進場 → 價格繼續上漲</li>
+</ul>
+
+<hr>
+
+<h4>步步驟四：執行交易</h4>
+
+<p><b>怎麼做</b>：<br>
+1. 確認回踩成功（價格在原阻力位止穩）<br>
+2. 出現反轉訊號（K 線、量能放大）<br>
+3. 進場做多或做空</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某股突破 110 阻力後，回踩到 110 附近</li>
+<li>在 110 出現看漲吞沒線 + 量能放大</li>
+<li>進場價：111</li>
+<li>這是高勝率的入場點</li>
+</ul>
+
+<hr>
+
+<h4>步驟五：設置停損與停利</h4>
+
+<p><b>怎麼做</b>：<br>
+1. 停損設在回踩點下方 2-3%<br>
+2. 停利設在前波高點或阻力位<br>
+3. 確保盈虧比至少 2:1</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>進場價：111</li>
+<li>停損：108（約 2.7%）</li>
+<li>停利：120（約 8%）</li>
+<li>盈虧比：8% ÷ 2.7% ≈ 3:1</li>
+</ul>
+
+<hr>
+
+<h4>步驟六：監控交易</h4>
+
+<p><b>怎麼做</b>：<br>
+1. 持續觀察價格動態<br>
+2. 記錄交易表現<br>
+3. 檢討停損停利是否適當</p>
+
+<p><b>關鍵問題</b>：</p>
+
+<ul>
+<li>停損是否留出足夠空間讓價格完成回踩？</li>
+<li>停利是否設得太保守？</li>
+<li>每次覆盤都是成長機會</li>
+</ul>
+
+<hr>
+
+<h3>回踩低吸買點三條件</h3>
+
+<h4>條件一：下方有獲利籌碼峰作為依託</h4>
+
+<p><b>怎麼做</b>：<br>
+1. 查看籌碼分佈圖<br>
+2. 找出獲利籌碼集中的價位<br>
+3. 回踩到籌碼峰附近 = 有支撐</p>
+
+<hr>
+
+<h4>條件二：結合趨勢線或均線共振</h4>
+
+<p><b>怎麼做</b>：<br>
+1. 畫出趨勢支撐線（連接低點）<br>
+2. 或參考重要均線（MA5/MA13/MA144）<br>
+3. 回踩同時觸及趨勢線 + 均線 = 強支撐</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某股市場平均成本 17.57 元</li>
+<li>MA13 均線位置 17.61 元</li>
+<li>回踩到 17.5-18 元區間 = 低吸買點</li>
+</ul>
+
+<hr>
+
+<h4>條件三：板塊指數時間共振</h4>
+
+<p><b>怎麼做</b>：<br>
+1. 參考對應板塊指數<br>
+2. 確認板塊指數也處於支撐位或拐點<br>
+3. 個股 + 板塊同時止跌 = 高勝率</p>
+
+<p><b>重要性</b>：</p>
+
+<ul>
+<li>大盤不好時，80% 的股票都不好</li>
+<li>結合時間維度，勝率提高不是一點半點</li>
+</ul>
+
+<hr>
+
+<h3>突破回踩的圖表形態</h3>
+
+<h4>1. 盤整區間</h4>
+
+<p><b>特徵</b>：價格在狹窄區間波動，支撐阻力明確</p>
+
+<p><b>怎麼做</b>：</p>
+
+<ul>
+<li>用水平線標出支撐阻力</li>
+<li>等待突破和回踩確認</li>
+</ul>
+
+<hr>
+
+<h4>2. 通道形態</h4>
+
+<p><b>特徵</b>：價格在略微傾斜的狹窄範圍內波動</p>
+
+<p><b>注意</b>：</p>
+
+<ul>
+<li>斜向通道也可能出現突破回踩</li>
+<li>識別難度較高，需要更多練習</li>
+</ul>
+
+<hr>
+
+<h4>3. 楔形形態</h4>
+
+<p><b>特徵</b>：支撐線和阻力線斜率不同，逐漸收斂</p>
+
+<p><b>怎麼做</b>：</p>
+
+<ul>
+<li>收斂 = 趨勢可能減弱或反轉</li>
+<li>楔形突破後常伴隨回踩</li>
+</ul>
+
+<hr>
+
+<h4>4. 三角形形態</h4>
+
+<p><b>上升三角形</b>：</p>
+
+<ul>
+<li>水平阻力 + 逐漸抬高的低點</li>
+<li>偏向看漲突破</li>
+</ul>
+
+<p><b>下降三角形</b>：</p>
+
+<ul>
+<li>水平支撐 + 逐漸降低的高點</li>
+<li>偏向看跌突破</li>
+</ul>
+
+<p><b>對稱三角形</b>：</p>
+
+<ul>
+<li>兩條收斂的趨勢線</li>
+<li>方向不明確，視為「觀望訊號」</li>
+</ul>
+
+<hr>
+
+<h3>突破回踩策略的優缺點</h3>
+
+<h4>優勢</h4>
+
+<table><thead><tr><th>優勢</th><th>說明</th></tr></thead><tbody><tr><td>進出場點清晰</td><td>明確的入場與出場標準</td></tr><tr><td>高概率交易機會</td><td>回踩確認大大提高勝率</td></tr><tr><td>適用範圍廣泛</td><td>適用股票、外匯、期貨等多市場</td></tr><tr><td>依賴價格行為</td><td>不需要複雜的技術指標</td></tr></tbody></table>
+
+<h4>缺點</h4>
+
+<table><thead><tr><th>缺點</th><th>說明</th></tr></thead><tbody><tr><td>假突破</td><td>回踩無法完全防止假突破</td></tr><tr><td>錯失機會</td><td>有時回踩不會出現，價格直接續漲</td></tr><tr><td>主觀性強</td><td>畫線容易受個人期望影響</td></tr><tr><td>波動干擾</td><td>高波動市場會讓圖形混亂難辨</td></tr></tbody></table>
+
+<hr>
+
+<h3>常見錯誤與避免方法</h3>
+
+<h4>執行層面錯誤</h4>
+
+<table><thead><tr><th>錯誤</th><th>避免方法</th></tr></thead><tbody><tr><td>時機錯誤</td><td>等待回踩確認，不要搶突破進場</td></tr><tr><td>忽略數據</td><td>關注成交量，確認高量突破</td></tr><tr><td>誤判回踩</td><td>回踩尚未形成時不要急著進場</td></tr></tbody></table>
+
+<h4>心態層面錯誤</h4>
+
+<table><thead><tr><th>錯誤</th><th>避免方法</th></tr></thead><tbody><tr><td>缺乏計畫</td><td>進場前明確停損停利和盈虧比目標</td></tr><tr><td>過度興奮</td><td>有耐心，只抓高質量確認訊號</td></tr></tbody></table>
+
+<hr>
+
+<h3>AMC 實戰案例</h3>
+
+<p><b>情境</b>：</p>
+
+<ul>
+<li>AMC 在 15 美元附近形成阻力位</li>
+<li>突破阻力後，最終上漲至 72 美元</li>
+<li>漲幅近 400%</li>
+</ul>
+
+<p><b>關鍵</b>：</p>
+
+<ul>
+<li>識別盤整區間（15 美元阻力）</li>
+<li>等待突破和回踩確認</li>
+<li>在回踩確認後進場</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>突破回踩是技術分析的經典戰法，核心概念很簡單：「突破後別急，等回踩確認」。</p>
+
+<p>以前常犯的錯誤是看到突破就想追，結果常常被假突破騙。現在知道要等價格回到突破點測試，確認支撐有效才進場。這樣雖然可能錯過一些直接續漲的機會，但勝率會高很多。</p>
+
+<p>最實用的是「三條件共振」：籌碼峰 + 趨勢線/均線 + 板塊指數。以前只看價格支撐，忽略了籌碼和大環境的配合。現在做回踩低吸會先查籌碼分佈，再看均線和板塊指數是否同步。</p>
+
+<p>另外一個重點是「時間維度共振」。大盤不好時，80% 的股票都不好，這句話要記住。不要想著「輕大盤重個股」，那是給自己找麻煩。</p>
+
+<p>下次實戰：找出幾檔剛突破前高的股票，設好警示等待回踩。進場前確認三三條件：籌碼峰支撐、均線共振、板塊同步。</p>
+
+<hr>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>
