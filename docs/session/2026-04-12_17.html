@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>推薦追蹤</title><style>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>一目均衡表 Ichimoku 實戰操作</title><style>
 :root {
     --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
     --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
@@ -124,34 +124,106 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 @media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
 </style></head>
 <body>
-<header><div class="header-inner"><a href="index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
     <nav>
-        <a href="index.html">首頁</a>
-        <a href="knowledge.html">知識庫</a>
-        <a href="timeline.html">時間線</a>
-        <a href="recommendations.html">推薦追蹤</a>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+        <a href="../recommendations.html">推薦追蹤</a>
     </nav></div></header>
 <main class="container">
-    <div class="content">
-        <div class="content-card">
-            <h1>🎯 推薦追蹤</h1>
-            <p>追蹤每日推薦股票的 5 日表現</p>
-        </div>
-    </div>
-    
-        <div class="stats-section">
-            <h2>📊 整體統計</h2>
-            <div class="stats-grid">
-                <div class="stat-card"><div class="stat-value">47</div><div class="stat-label">總推薦數</div></div>
-                <div class="stat-card"><div class="stat-value">+1.05%</div><div class="stat-label">平均報酬</div></div>
-                <div class="stat-card"><div class="stat-value">55.6%</div><div class="stat-label">勝率</div></div>
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-12</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-12 #17 · <span class="tag">📊 技術分析</span><span class="tag">🎯 操作策略</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>一目均衡表 Ichimoku 實戰操作</h1>
+                    <h2>第 17 回合學習 - 一目均衡表 Ichimoku 實戰操作</h2>
+
+<p><b>時間</b>：23:13</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.oanda.com/bvi-ft/lab-education/technical_analysis/ichimoku/">使用一目均衡表(ichimoku)的交易方法 - OANDA Lab</a></li>
+<li><a href="https://www.oanda.com/bvi-ft/lab-education/technical_analysis/ichimoku-2/">什麼是一目均衡表？解讀方法、雲區使用、設定方法 - OANDA Lab</a></li>
+<li><a href="https://www.tejwin.com/insight/%E4%B8%80%E7%9B%AE%E5%9D%87%E8%A1%A1%E8%A1%A8%E7%AD%96%E7%95%A5/">TQuant Lab 一目均衡表策略 - TEJ</a></li>
+<li><a href="https://rich01.com/oanda-index-chimoku-3/">OANDA一目均衡表三役好轉/三役逆轉 - Mr.Market市場先生</a></li>
+</ul>
+
+<hr>
+
+<h3>一目均衡表是什麼？</h3>
+
+<p>由日本記者細田悟一（筆名一目山人）發明的技術分析系統，1975 年公開發表。不是單一指標，而是一套自成體系的交易系統，一眼判斷趨勢、支撐壓力、進出場時機。核心理念：價格變化受時間影響，市場有週期性規律。</p>
+
+<h3>五條線</h3>
+
+<p>1. <b>轉換線（Tenkan-sen）</b>：（9天最高+最低）÷2，短期趨勢<br>
+2. <b>基準線（Kijun-sen）</b>：（26天最高+最低）÷2，中期趨勢+支撐壓力<br>
+3. <b>先行帶 A（Senkou Span A）</b>：（轉換線+基準線）÷2，平移26天，雲區上緣<br>
+4. <b>先行帶 B（Senkou Span B）</b>：（52天最高+最低）÷2，平移26天，雲區下緣<br>
+5. <b>延遲線（Chikou Span）</b>：當天收盤價後移26天，趨勢確認</p>
+
+<h3>雲區（Kumo）— 判斷核心</h3>
+
+<ul>
+<li>價格在雲區上方 → 多頭，下方 → 空頭，內部 → 盤整不要進場</li>
+<li>厚雲支撐強突破難，薄雲容易突破</li>
+<li>雲區轉向（A/B交叉）= 趨勢反轉反轉訊號，暫停交易</li>
+</ul>
+
+<h3>三役好轉（買進）</h3>
+
+<p>1. 轉換線 > 基準線<br>
+2. 延遲線 > K線收盤價<br>
+3. 價格 > 雲區上方</p>
+
+<p>三條件同時滿足 → 買進，停損設基準線或雲區上緣</p>
+
+<h3>三役逆轉（賣出）</h3>
+
+<p>1. 轉換線 < 基準線<br>
+2. 延遲線 < K線收盤價<br>
+3. 價格 < 雲區下方</p>
+
+<p>但<b>不要用三役逆轉出場</b>，改用移動停損效果更好（會吃掉波段利潤）</p>
+
+<h3>四道防線</h3>
+
+<p>多頭排列：轉換線 → 基準線 → 先行帶A → 先行帶B<br>
+依序跌破 = 分批出場框架：跌破轉換線觀察，基準線減碼，雲區全出</p>
+
+<h3>三大理論</h3>
+
+<ul>
+<li><b>時間論</b>：9、17、26天容易變盤</li>
+<li><b>波動論</b>：I型、V型、N型波動，N型是基本型態</li>
+<li><b>水平論</b>：N/E/V/NT計算值推算目標價</li>
+</ul>
+
+<h3>TEJ 回測（2019-2024）</h3>
+
+<p>三役好轉進場 + ATR移動停損出場：年化23.55%、夏普1.38、Beta 0.66</p>
+
+<h3>實戰要點</h3>
+
+<p>1. 不要在雲區內交易<br>
+2. 雲區轉向時暫停<br>
+3. 三役好轉加過濾：轉換線 > 基準線 × 1.01<br>
+4. 出場用移動停損，不用三役逆轉<br>
+5. 雲區厚度判斷突破強弱<br>
+6. 四道防線分批出場<br>
+7. 時間論搭配第9/17/26日變盤<br>
+8. 預設參數9/26/52不用改 — 40年驗證的數字</p>
+
+<h3>心得</h3>
+
+<p>一目均衡表是完整系統而非單一指標，五標，五條線+雲區一次看短中长期+未来支撐壓力。雲區厚度概念比單一均線更有說服力。進場和出場邏輯不必對稱 — 三役好轉進場+移動停損出場勝過對稱策略。四道防線提供分批出場框架。9/26/52參數不需調整，避免過度優化。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+                </div>
             </div>
-        </div>
-        
-    <div class="section">
-        <h2>📅 歷史推薦</h2>
-        <div class="date-group"><div class="date-header"><span class="date">2026-04-14</span><span class="weekday">週二</span> · 10 支</div><div class="rec-list"><div class="rec-item"><span class="stock">3231 緯創資通股份</span><span class="score">62分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2382 廣達電腦股份</span><span class="score">62分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">3037 欣興電子股份</span><span class="score">61分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2308 台達電子工業</span><span class="score">60分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">3034 聯詠科技股份</span><span class="score">60分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2454 聯發科技股份</span><span class="score">59分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2317 鴻海精密工業</span><span class="score">58分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">6669 緯穎科技服務</span><span class="score">58分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2303 聯華電子股份</span><span class="score">58分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2330 台灣積體電路</span><span class="score">57分</span><span class="result pending">⏳ 待檢查</span></div></div></div><div class="date-group"><div class="date-header"><span class="date">2026-04-13</span><span class="weekday">週一</span> · 19 支</div><div class="rec-list"><div class="rec-item"><span class="stock">2382 廣達電腦股份</span><span class="score">66分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">3231 緯創資通股份</span><span class="score">65分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2317 鴻海精密工業</span><span class="score">62分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2882 國泰金融控股</span><span class="score">61分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2379 瑞昱半導體股</span><span class="score">61分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">3037 欣興電子股份</span><span class="score">62分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2303 聯華電子股份</span><span class="score">60分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">3711 日月光投資控</span><span class="score">59分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2383 台光電子材料</span><span class="score">58分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2357 華碩電腦股份</span><span class="score">58分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">1301 台灣塑膠工業</span><span class="score">65分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">3714 富采控股股份</span><span class="score">62分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2337 旺宏電子股份</span><span class="score">62分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2327 國巨股份有限</span><span class="score">62分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">1326 台灣化學纖維</span><span class="score">61分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">2449 京元電子股份</span><span class="score">61分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">1717 長興材料工業</span><span class="score">61分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">6442 光紅建聖股份</span><span class="score">60分</span><span class="result pending">⏳ 待檢查</span></div><div class="rec-item"><span class="stock">1303 南亞塑膠工業</span><span class="score">60分</span><span class="result pending">⏳ 待檢查</span></div></div></div><div class="date-group"><div class="date-header"><span class="date">2026-04-09</span><span class="weekday">週四</span> · 18 支</div><div class="rec-list"><div class="rec-item checked"><span class="stock">2382 廣達電腦股份</span><span class="score">67分</span><span class="result success">📈 +1.92%</span></div><div class="rec-item checked"><span class="stock">3037 欣興電子股份</span><span class="score">64分</span><span class="result success">📈 +0.16%</span></div><div class="rec-item checked"><span class="stock">3711 日月光投資控</span><span class="score">65分</span><span class="result success">📈 +9.01%</span></div><div class="rec-item checked"><span class="stock">3231 緯創資通股份</span><span class="score">64分</span><span class="result success">📈 +1.51%</span></div><div class="rec-item checked"><span class="stock">2303 聯華電子股份</span><span class="score">63分</span><span class="result danger">📉 -0.33%</span></div><div class="rec-item checked"><span class="stock">2882 國泰金融控股</span><span class="score">63分</span><span class="result danger">📉 -2.44%</span></div><div class="rec-item checked"><span class="stock">2881 富邦金融控股</span><span class="score">61分</span><span class="result danger">📉 -2.80%</span></div><div class="rec-item checked"><span class="stock">3189 景碩科技股份</span><span class="score">61分</span><span class="result danger">📉 -5.30%</span></div><div class="rec-item checked"><span class="stock">2379 瑞昱半導體股</span><span class="score">60分</span><span class="result success">📈 +3.96%</span></div><div class="rec-item checked"><span class="stock">2308 台達電子工業</span><span class="score">58分</span><span class="result success">📈 +4.50%</span></div><div class="rec-item checked"><span class="stock">8046 南亞電路板股</span><span class="score">60分</span><span class="result danger">📉 -2.09%</span></div><div class="rec-item checked"><span class="stock">2409 友達光電股份</span><span class="score">63分</span><span class="result danger">📉 -4.26%</span></div><div class="rec-item checked"><span class="stock">2886 兆豐金融控股</span><span class="score">61分</span><span class="result danger">📉 -1.26%</span></div><div class="rec-item checked"><span class="stock">1717 長興材料工業</span><span class="score">62分</span><span class="result success">📈 +9.35%</span></div><div class="rec-item checked"><span class="stock">4958 臻鼎科技控股</span><span class="score">60分</span><span class="result success">📈 +4.04%</span></div><div class="rec-item checked"><span class="stock">2002 中國鋼鐵股份</span><span class="score">61分</span><span class="result danger">📉 +0.00%</span></div><div class="rec-item checked"><span class="stock">1303 南亞塑膠工業</span><span class="score">58分</span><span class="result success">📈 +0.71%</span></div><div class="rec-item checked"><span class="stock">2360 致茂電子股份</span><span class="score">60分</span><span class="result success">📈 +2.17%</span></div></div></div>
-    </div>
-    </main>
+            </main>
 <footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
 </body></html>

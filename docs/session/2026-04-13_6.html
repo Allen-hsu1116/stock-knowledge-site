@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>波浪理論調整浪深度解析：鋸齒形、平台形、三角形與複合修正</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* 推薦追蹤頁面 */
+.rec-list { display: flex; flex-direction: column; gap: 8px; }
+.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
+.rec-item:hover { border-color: var(--primary); }
+.rec-item.checked { background: var(--bg-tertiary); }
+.rec-item .stock { flex: 1; font-weight: 500; }
+.rec-item .score { color: var(--text-muted); margin-right: 16px; }
+.rec-item .result { font-weight: 600; }
+.rec-item .result.success { color: var(--success); }
+.rec-item .result.danger { color: var(--danger); }
+.rec-item .result.pending { color: var(--text-muted); }
+.stats-section { margin-bottom: 32px; }
+.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+        <a href="../recommendations.html">推薦追蹤</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-13</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-13 #6 · <span class="tag">📊 技術分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>波浪理論調整浪深度解析：鋸齒形、平台形、三角形與複合修正</h1>
+                    <h2>第 6 回合學習 - 波浪理論調整浪深度解析：鋸齒形、平台形、三角形與複合修正</h2>
+
+<p><b>時間</b>：06:13</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.oanda.com/bvi-ft/lab-education/technical_analysis/elliott-wave_serrated/">艾略特波浪解說（第七回）鋸齒形和平台形調整波 - OANDA Lab</a></li>
+<li><a href="https://www.oanda.com/bvi-ft/lab-education/technical_analysis/elliott-wave_triangle/">艾略特波浪解說（第八回）三角形與複合修正 - OANDA Lab</a></li>
+<li><a href="https://www.fishhuang.idv.tw/2024/04/Elliott-Wave-Principle-operating-rules-combat-articles.html">波浪理論操作法則實戰篇 - FishHuang</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>一、鋸齒形（Zigzag）調整波</h3>
+
+<p><b>是什麼</b>：鋸齒形是波浪理論中最常見的調整波型態，由 ABC 三個波動組成。A 浪是推動波（5 波結構），B 浪是調整波，C 浪是推動波（5 波結構）。整體走勢像鋸齒一樣「急跌—反彈—再跌」。</p>
+
+<p><b>結構特徵</b>：</p>
+
+<ul>
+<li>A 浪 = 衝擊波或楔形（5 波下跌）</li>
+<li>B 浪 = 任何調整波型態（鋸齒形、平台形、三角形皆可）</li>
+<li>C 浪 = 衝擊波或楔形（5 波下跌）</li>
+<li><b>B 浪不會超過 A 浪的起點</b>（這是鐵律）</li>
+</ul>
+
+<p><b>出現位置</b>：</p>
+
+<ul>
+<li>推動波的第 2 波和第 4 波（最常見）</li>
+<li>楔形的 1、3、5 浪（作為附次級浪，與主要趨勢同向！）</li>
+<li>平台形的 A 浪（與主要趨勢同向）</li>
+<li>三角形的子波</li>
+</ul>
+
+<p><b>怎麼做（實戰操作）</b>：<br>
+1. 識別鋸齒形：A 浪是 5 波下跌 → B 浪反彈但不超過 A 浪起點 → C 浪又是 5 波下跌<br>
+2. 在 C 浪完成時進場：C 浪幅度 ≈ A 浪幅度（或 C = A × 1.618、C = A × 2.618）<br>
+3. 用 C 浪的 5 波細分結構確認末端：C 浪本身也是衝擊波，可在 C-5 完成時買入<br>
+4. 停損設在 C 浪低點下方<br>
+5. 目標：下一波推動波的全段漲幅</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某股第 1 浪從 50 漲到 80（漲幅 30），第 2 浪開始調整</li>
+<li>A 浪從 80 跌到 65（跌 15），B 浪反彈到 72（不超過 80），C 浪從 72 跌到 55（C ≈ A 的 1.13 倍）</li>
+<li>C 浪完成時 RSI 超賣 + 出現錘子線 → 在 55 附近買入</li>
+<li>停損：50 下方（第 1 浪起點，鐵律：第 2 浪不跌破第 1 浪起點）</li>
+<li>目標：第 3 浪整段漲幅，至少等於第 1 浪的 30 元</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>上升趨勢中的第 2 波回檔（深幅調整，常回測 0.618）</li>
+<li>下跌趨勢中的反彈放空</li>
+<li>⚠️ B 浪中交易最容易賠錢——不確定性最高，最好等 C 浪完成</li>
+</ul>
+
+<hr>
+
+<h3>二、雙重鋸齒形與三重鋸齒形</h3>
+
+<p><b>是什麼</b>：當一個鋸齒形調整完畢但市場仍需更多時間整理，會出現兩個或三個鋸齒形連接。雙重鋸齒形 = W + X + Y；三重鋸齒形 = W + X + Y + X + Z。</p>
+
+<p><b>結構</b>：</p>
+
+<ul>
+<li>W 浪 = 鋸齒形</li>
+<li>X 浪 = 任何調整波（連接用）</li>
+<li>Y 浪 = 鋸齒形</li>
+<li>Z 浪 = 鋸齒形（三重時才有）</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 當你以為鋸齒形 C 浪結束了，結果又出現一段下跌 → 可能是雙重鋸齒形<br>
+2. 不要急著進場，等整個 W-X-Y 結構完成<br>
+3. Y 浪的 C 浪完成時才是真正的買點<br>
+4. 雙重鋸齒形性質與單一鋸齒形相同，只是調整更深、時間更長</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>台股指數從 20000 跌到 18500（W 浪鋸齒形），反彈到 19200（X 浪），再跌到 18000（Y 浪鋸齒形）</li>
+<li>整個雙重鋸齒形完成 → 在 18000 附近買入</li>
+<li>停損：17500 下方</li>
+<li>目標：回到 20000 以上</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>替代單一鋸齒形出現（當單一鋸齒形不足以完成調整時）</li>
+<li>大級別的調整波中較常出現</li>
+</ul>
+
+<hr>
+
+<h3>三、平台形（Flat）調整波</h3>
+
+<p><b>是什麼</b>：平台形同樣由 ABC 三波組成，但與鋸齒形不同——A 浪是 3 波結構（調整波），B 浪幾乎完全回補 A 浪，C 浪是推動波。整體走勢接近「橫向波動」，調整幅度比鋸齒形淺。</p>
+
+<p><b>四種平台形型態</b>：</p>
+
+<p><b>1. 常態平台（Regular Flat）</b>：</p>
+
+<ul>
+<li>B 浪終點 ≈ A 浪起點</li>
+<li>C 浪終點 ≈ A 浪終點</li>
+<li>像矩形整理</li>
+</ul>
+
+<p><b>2. 非常態/擴張平台（Irregular/Expanded Flat）</b>：</p>
+
+<ul>
+<li>B 浪超越 A 浪起點（創新高或新低！）</li>
+<li>C 浪也超越 A 浪終點</li>
+<li><b>最容易出現的平台形型態</b></li>
+<li>B 浪至少要回補 A 浪的 90% 以上</li>
+</ul>
+
+<p><b>3. C 浪超級擴張平台</b>：</p>
+
+<ul>
+<li>C 浪遠超過 A 浪的終點</li>
+<li>極端行情中出現</li>
+</ul>
+
+<p><b>4. 順勢/強勢平台（Running Flat）</b>：</p>
+
+<ul>
+<li>B 浪超越 A 浪起點</li>
+<li>C 浪未到達 A 浪終點</li>
+<li>趨勢極度強勢時出現</li>
+</ul>
+
+<p><b>怎麼做（實戰操作）</b>：<br>
+1. <b>判斷 A 浪結構是關鍵</b>：A 浪是 3 波 → 整體是平台形；A 浪是 5 波 → 整體是鋸齒形<br>
+2. A 浪三波下跌後，B 浪反彈可達 A 浪的 90%～123.6%<br>
+3. 若 A 浪是三波 → B 浪可能超過第 5 浪高點（不規則修正）<br>
+4. 在 C 浪 5 波完成時反向操作</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某股第 3 浪高點 100，A 浪三波跌到 90，B 浪反彈到 102（超過前高！擴張平台）</li>
+<li>C 浪從 102 跌到 88（超過 A 浪終點 90）</li>
+<li>C 浪 5 波完成 + RSI 背離 → 在 88 買入</li>
+<li>停損：85 下方</li>
+<li>目標：第 5 浪漲幅</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>推動波的第 4 波（常見型態：第 2 波鋸齒形，第 4 波平台形）</li>
+<li>橫向盤整時間長但幅度淺</li>
+<li>⚠️ 擴張平台的 B 浪創新高會讓人誤以為趨勢繼續——這是最危險的陷阱！</li>
+</ul>
+
+<hr>
+
+<h3>四、三角形（Triangle）調整波</h3>
+
+<p><b>是什麼</b>：由 ABCDE 五個波組成的收斂型態，每一波都是鋸齒狀（雙鋸齒結構）。E 波最常出現三角形。三角形是調整波，原則上只出現在第 4 波或 B 波。</p>
+
+<p><b>四種三角形模式</b>：<br>
+1. <b>收縮三角形（Converging）</b>：高點降低、低點升高，逐漸收斂<br>
+2. <b>障礙三角形（Barrier）</b>：B-D 呈水平線，另一邊收斂<br>
+3. <b>擴張三角形（Expanding）</b>：高點升高、低點降低，逐漸擴張<br>
+4. <b>持續三角形（Running）</b>：整體偏離主要趨勢方向</p>
+
+<p><b>結構特徵</b>：</p>
+
+<ul>
+<li>每一波幅度約為前一波的 0.618 倍</li>
+<li>每一波多分三波進行</li>
+<li>E 波可能在 A-C 連線上結束、提前結束、或稍微超出</li>
+</ul>
+
+<p><b>怎麼做（實戰操作）</b>：<br>
+1. <b>三角形通常是事後才確認</b>：進行到一半才發現是三角形<br>
+2. <b>E 波完成時進場</b>：這是最佳進場點<br>
+3. <b>突破確認</b>：價格突破 C 浪高點（或跌破 C 浪低點）+ 常伴隨跳空缺口<br>
+4. <b>目標計算</b>：突破後的漲跌幅至少 = 三角形最寬處的距離<br>
+5. <b>三角形完成 = 大級別波浪即將結束的訊號</b>：如果三角形在第 4 波，第 5 波完成後趨勢即告一段落</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>台積電第 3 浪高點 1000 後，第 4 波進入三角形整理</li>
+<li>A = 920、B = 970、C = 930、D = 960、E = 935</li>
+<li>三角形最寬處 = 970 − 920 = 50</li>
+<li>E 波完成後向上突破，跳空越過 960（D 浪高點）</li>
+<li>目標 = 935 + 50 = 985（第 5 波目標）</li>
+<li>第 5 波完成後 → 趨勢即將反轉，準備 ABC 修正</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>第 4 波或 B 波的整理區</li>
+<li>⚠️ 不會出現在第 2 波（鐵律）</li>
+<li>三角形完成 = 「最後一波」的警報器</li>
+<li>在三角形內操作利潤小、風險低，但手續費可能是負擔</li>
+</ul>
+
+<hr>
+
+<h3>五、複合修正（Combination）</h3>
+
+<p><b>是什麼</b>：把多個調整波連接在一起的複雜結構。分兩大類：</p>
+
+<p><b>1. 鋸齒類複合修正</b>：</p>
+
+<ul>
+<li>雙重鋸齒形（W-X-Y）</li>
+<li>三重鋸齒形（W-X-Y-X-Z）</li>
+<li>性質與鋸齒形相同，只是規模更大</li>
+</ul>
+
+<p><b>2. 平台形複合修正</b>：</p>
+
+<ul>
+<li>雙重三波（Double Three = W-X-Y）</li>
+<li>三重三波（Triple Three = W-X-Y-X-Z）</li>
+<li>性質與平台形相同，是橫向持平的修正</li>
+<li><b>只會出現一處鋸齒狀</b></li>
+<li>W、Y、Z 是作用波（Action wave），X 是反應波（Reaction wave）</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 遇到複雜的橫向整理 → 先歸類為「平台形或複合修正」<br>
+2. 不需要把每一個子波都算清楚——把持平部分整體看待即可<br>
+3. 等整個複合修正完成後再進場<br>
+4. 雙重鋸齒 = 取代鋸齒形；雙重三波 = 取代平台形</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>道瓊指數 1937-1942 年的第 4 波 = 長達約 15 年的持平修正波</li>
+<li>分析為平台形 + 三角形的複合修正</li>
+<li>完成後展開超級第 5 浪上升</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>當調整波看起來太複雜、無法用單一型態解釋時</li>
+<li>大級別調整中常出現</li>
+<li>⚠️ 不需過度分析細部結構，抓大方向即可</li>
+</ul>
+
+<hr>
+
+<h3>六、波浪理論七大操作法則（實戰總整理）</h3>
+
+<p><b>法則一：第二波結束時進場買進</b></p>
+
+<ul>
+<li>先決條件：ABC 調整完成 + 出現 5 波上升的第 1 浪</li>
+<li>第 2 波回檔目標：0.382、0.5、0.618</li>
+<li>停損：第 1 浪起點下方</li>
+<li>目標：第 3 浪全段漲幅</li>
+</ul>
+
+<p><b>法則二：第三波之中進場買進（唯一不抄底的進場法）</b></p>
+
+<ul>
+<li>先決條件：第 2 波結束確認 + 價格跳空突破第 1 浪高點</li>
+<li>停損①：第 1 浪高點下方；停損②：前一天高點下方</li>
+<li>目標：第 3 浪全段漲幅（至少等於第 1 浪）</li>
+<li>⚠️ 跳空當天回補 = 波浪辨認可能錯誤</li>
+</ul>
+
+<p><b>法則三：第四波將結束時進場</b></p>
+
+<ul>
+<li>五個買點指引：</li>
+</ul>
+
+<p>1. 第 4 波低點 > 第 1 波高點（鐵律）<br>
+2. 第 4 波回檔 = 第 3 波的 0.382<br>
+3. 第 4 波長度 ≈ 第 2 波長度<br>
+4. 第 4 波回檔到 3-4 波低點附近<br>
+5. 第 4 波鋸齒形時，C ≈ A</p>
+
+<ul>
+<li>買點愈聚集 → 信心愈高</li>
+<li>停損：第 1 波高點下方</li>
+<li>目標：第 5 波漲幅</li>
+</ul>
+
+<p><b>法則四：第五波高點放空（最危險的操作）</b></p>
+
+<ul>
+<li>確認訊號：竭盡缺口出現 + 被回補</li>
+<li>第 5 波目標價：</li>
+</ul>
+
+<p>① = 第 1 浪漲幅<br>
+② = 第 1 浪到第 3 浪漲幅的 0.618 倍</p>
+
+<ul>
+<li>⚠️ 竭盡缺口未回補前，可能不是第 5 浪而是第 3 浪延長——此時放空是自殺</li>
+<li>停損：第 5 波高點上方一點</li>
+<li>目標：ABC 修正的 0.382 回檔位</li>
+</ul>
+
+<p><b>法則五：B 波結束時放空（關鍵在 A 波結構）</b></p>
+
+<ul>
+<li>A 浪 5 波下跌 → B 浪不會超過第 5 浪高點</li>
+<li>A 浪 3 波下跌 → B 浪可能超過第 5 浪高點（不規則修正）</li>
+<li>停損：A 浪最低 + A 浪跌幅 × 1.382 以上</li>
+</ul>
+
+<p><b>法則六：鋸齒形之後進場</b></p>
+
+<ul>
+<li>鋸齒形可能是更大級別的第 2、4 或 B 波</li>
+<li>⚠️ 如果是 B 波 → 不進場（B 波中交易最危險）</li>
+<li>C 浪完成時各指標極度超賣 → 反向操作</li>
+<li>C 浪可能 = A 浪、A × 1.618、A × 2.618</li>
+</ul>
+
+<p><b>法則七：三角形整理區操作</b></p>
+
+<ul>
+<li>三角形通常是進行一半才被發現</li>
+<li>E 波完成時進場</li>
+<li>突破 C 浪高/低點 + 跳空 = 確認訊號</li>
+<li>目標 = 三角形最寬處距離</li>
+<li>⚠️ 三角形完成 → 後面只剩最後一波</li>
+</ul>
+
+<p><b>盈虧比要求</b>：進場前計算賺賠比 ≥ 3 才進場，否則繼續觀望。</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>這回合把波浪理論最讓人頭痛的部分——調整浪——整個拆解了一遍。之前學的「八大波浪結構」只是骨架，這次才是真正的血肉。</p>
+
+<p>最核心的體悟：<b>A 浪的結構決定一切</b>。A 浪是 5 波還是 3 波，決定了後面 B 浪和 C 浪的行為模式。A 浪 5 波 = 鋸齒形（深幅調整，B 浪反彈有限）；A 浪 3 波 = 平台形（淺幅調整，B 浪可能創新高）。這個判斷做對了，後面的操作就有依據；做錯了，就會在擴張平台的 B 浪創新高時以為趨勢繼續，結果 C 浪一殺下來直接被抬出去。</p>
+
+<p>三角形是另一個大收穫——它不只是整理型態，更是「最後一波」的警報器。當第 4 波出現三角形，第 5 波完成後趨勢就要反轉了。這跟之前學的「竭盡缺口」和「MACD 背離」可以互相印證：三角形完成 → 第 5 波啟動 → 第 5 波出現竭盡缺口 + MACD 背離 → 確認趨勢反轉。三重確認比單一訊號可靠太多了。</p>
+
+<p>操作法則中，最實用的是「法則三：第四波將結束時進場」——五個買點指引愈聚集，信心愈高。這概念跟之前學的「斐波那契群聚」一模一樣：多種方法指向同一個價位，那個價位就值得信賴。波浪理論的鐵律（第 4 波不跌破第 1 波高點、第 2 波不跌破第 1 波起點）則提供了客觀的停損位，不用再憑感覺設停損。</p>
+
+<p>最後一個教訓：<b>永遠不要在 B 波中交易</b>。這是所有操作法則中最一致的警告。B 浪的不確定性最高——你不知道它是鋸齒形的 B、平台形的 B、還是三角形的 B，每一種的行為完全不同。等 C 浪完成再進場，少賺一點但活得久。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

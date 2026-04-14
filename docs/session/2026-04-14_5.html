@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>基本面分析：股東權益變動表閱讀與存貨計價方法</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* 推薦追蹤頁面 */
+.rec-list { display: flex; flex-direction: column; gap: 8px; }
+.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
+.rec-item:hover { border-color: var(--primary); }
+.rec-item.checked { background: var(--bg-tertiary); }
+.rec-item .stock { flex: 1; font-weight: 500; }
+.rec-item .score { color: var(--text-muted); margin-right: 16px; }
+.rec-item .result { font-weight: 600; }
+.rec-item .result.success { color: var(--success); }
+.rec-item .result.danger { color: var(--danger); }
+.rec-item .result.pending { color: var(--text-muted); }
+.stats-section { margin-bottom: 32px; }
+.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+        <a href="../recommendations.html">推薦追蹤</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-14</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-14 #5 · <span class="tag">📊 技術分析</span><span class="tag">💰 基本面分析</span><span class="tag">🎲 籌碼面分析</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>基本面分析：股東權益變動表閱讀與存貨計價方法</h1>
+                    <h2>第 8 回合學習 - 基本面分析：股東權益變動表閱讀與存貨計價方法</h2>
+
+<p><b>時間</b>：08:30</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://vocus.cc/article/636712b9fd89780001a75959">誰偷吃了你的批薩?請看權益變動表｜股本｜資本公積｜盈餘</a></li>
+<li><a href="https://medium.com/%E5%93%AA%E8%A3%A1%E5%AD%B8%E8%B2%A1%E6%9C%83/%E8%AE%80%E5%BE%97%E6%87%82%E7%9A%84%E8%B2%A1%E5%8B%99%E5%A0%B1%E8%A1%A803-%E8%82%A1%E6%9D%B1%E6%AC%8A%E7%9B%8A%E8%A1%A8-d0cf987899eb">讀得懂的財務報表03｜股東權益表</a></li>
+<li><a href="https://vocus.cc/article/64389841fd897800010fd230">如何決定存貨的成本?掌握先進先出法與平均法的計算方式</a></li>
+<li><a href="https://www.3people.com.tw/%E7%9F%A5%E8%AD%98/%E5%AD%98%E8%B2%A8-/%E9%87%91%E8%9E%8D%E8%AD%89%E7%85%A7-%E8%AD%89%E5%88%B8%E5%95%86/aafc7453-ff65-4d7b-a919-574dc6824b58">存貨(二) - 三民輔考</a></li>
+</ul>
+
+<hr>
+
+<h2>一、股東權益變動表</h2>
+
+<h3>1. 股東權益變動表是什麼？</h3>
+
+<p><b>是什麼</b>：呈現公司在一段期間內，股東權益各組成項目的增減變動。是最容易被投資人忽略的財報，但卻是「跟股東最相關的一張表」。</p>
+
+<p><b>白話解釋</b>：四大財報中，資產負債表看體質，損益表看獲利，現金流量表看現金，而股東權益變動表看的是——你的權益有沒有被動手腳。就像分披薩，你要知道披薩有多大、被切成幾片、有沒有人偷吃你的份。</p>
+
+<h3>2. 股東權益的六大組成項目</h3>
+
+<table><thead><tr><th>項目</th><th>內容</th><th>投資人該看的重點</th></tr></thead><tbody><tr><td>股本（法定資本）</td><td>已發行股數 × 面額（台灣通常每股10元）</td><td>股本規模影響盈餘波動和股價波動</td></tr><tr><td>資本公積</td><td>股票溢價發行的金額、處分資產利益等</td><td>溢價程度反映市場對公司的評價</td></tr><tr><td>保留盈餘</td><td>累積未分配的淨利，含法定盈餘公積、特別盈餘公積、未分配盈餘</td><td>保留盈餘佔股東權益比重越高越好</td></tr><tr><td>庫藏股</td><td>公司買回自己股票的成本（權益減項）</td><td>買回價格是否合理？是否為護盤？</td></tr><tr><td>累計其他綜合損益</td><td>匯率、證券價格波動造成的未實現損益</td><td>大幅波動可能影響真實淨值</td></tr><tr><td>非控制權益</td><td>子公司少數股東的權益（合併報表才會出現）</td><td>影響歸屬母公司淨利的計算</td></tr></tbody></table>
+
+<h3>3. 股本的三個關鍵概念</h3>
+
+<p><b>怎麼做</b>：</p>
+
+<p>1. <b>核定股本</b>：公司向政府註冊的可發行上限，不是實際流通的股數<br>
+2. <b>實收股本（已發行股本）</b>：實際發行出去且收足股款的資本，這才是報表上的數字<br>
+3. <b>流通在外股數</b>：已發行股數 − 庫藏股股數 = 真正在市場上流通的股數</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某公司核定股本 50 億元，實收股本 30 億元，庫藏股 2 億元</li>
+<li>流通在外股數 = 30 億 − 2 億 = 28 億元（面額）</li>
+<li>EPS 計算時分母用流通在外股數 28 億元，不是實收股本 30 億元</li>
+<li><b>投資人要看的是流通在外股數</b>，這才是「跟你分披薩的人數」</li>
+</ul>
+
+<h3>4. 保留盈餘佔股東權益比率——判斷「真胖還是虛胖」</h3>
+
+<p><b>是什麼</b>：保留盈餘佔股東權益的比率，反映公司淨值增長是靠「自己賺的」還是「跟別人拿的」。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 計算保留盈餘 ÷ 股東權益 × 100%<br>
+2. 比率高 → 淨值成長來自公司獲利累積，品質好<br>
+3. 比率低 → 淨值成長來自現金增資，股數被稀釋，每股價值下降</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>A 公司：股東權益 100 億，保留盈餘 70 億 → 佔比 70%</li>
+<li>B 公司：股東權益 100 億，保留盈餘 20 億，資本公積 60 億（現金增資）→ 保留盈餘佔比 20%</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>✅ 判斷公司是否靠自身獲利成長</li>
+<li>✅ 檢查公司是否過度依賴現金增資</li>
+<li>❌ 金融業、營建業不適用（產業特性不同）</li>
+</ul>
+
+<h3>5. 影響股東權益變動的常見因素</h3>
+
+<table><thead><tr><th>事件</th><th>對權益的影響</th></tr></thead><tbody><tr><td>本期淨利</td><td>保留盈餘增加 → 權益增加</td></tr><tr><td>本期淨損</td><td>保留盈餘減少 → 權益減少</td></tr><tr><td>發放現金股利</td><td>保留盈餘減少 → 權益減少</td></tr><tr><td>現金增資</td><td>股本 + 資本公積增加 → 權益增加</td></tr><tr><td>員工執行認股權</td><td>股本 + 資本公積增加 → 權益增加</td></tr><tr><td>可轉債轉換</td><td>股本 + 資本公積增加 → 權益增加</td></tr><tr><td>現金減資</td><td>股本減少 → 權益減少</td></tr><tr><td>買回庫藏股</td><td>庫藏股增加（權益減項）→ 權益減少</td></tr><tr><td>匯率波動</td><td>累計其他綜合損益變動 → 權益增減</td></tr></tbody></table>
+
+<p><b>關鍵觀察</b>：公司給外界的說明可能是真的，也可能是煙幕彈。投資人要揣摩隱藏背後的真實意圖：</p>
+
+<ul>
+<li>現金減資：是「把錢還給股東」還是「找不到投資機會」？</li>
+<li>庫藏股買回：是「看好公司前景」還是「護盤撐股價」？</li>
+<li>現金增資：是「為了擴張」還是「公司缺錢」？</li>
+</ul>
+
+<h3>6. 股票股利對權益的影響</h3>
+
+<p><b>是什麼</b>：盈餘轉增資或資本公積轉增資，會讓保留盈餘或資本公積減少、股本同額增加，但股東權益總額不變。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 盈餘轉增資：保留盈餘減少、股本增加、流通在外股數增加<br>
+2. 資本公積轉增資：資本公積減少、股本增加、流通在外股數增加<br>
+3. 兩者都不影響股東權益總額<br>
+4. 但 EPS 會被稀釋（分母變大，若盈餘沒同步成長）</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某公司股本 10 億元，EPS 2 元，配發股票股利 1 元</li>
+<li>盈餘轉增資 1 億元 → 股本變成 11 億元</li>
+<li>如果淨利不變，EPS = 2 × 10 ÷ 11 ≈ 1.82 元（被稀釋）</li>
+<li><b>結論</b>：股票股利不會讓你的財富增加，只是把披薩切成更多片</li>
+</ul>
+
+<hr>
+
+<h2>二、存貨計價方法</h2>
+
+<h3>1. 為什麼存貨計價方法重要？</h3>
+
+<p><b>是什麼</b>：存貨計價方法決定了「賣出去的商品算多少成本」，直接影響銷貨成本、期末存貨、毛利、淨利和所得稅。</p>
+
+<p><b>白話解釋</b>：同一批貨，進貨時間不同、價格不同。賣出去的算哪一批的價格？這就是存貨計價方法要解決的問題。不同的算法會讓損益表和資產負債表呈現完全不同的結果。</p>
+
+<h3>2. 四種存貨計價方法</h3>
+
+<h4>方法一：個別認定法</h4>
+
+<p><b>是什麼</b>：每個商品按實際進貨成本認列。</p>
+
+<p><b>適用情境</b>：不可替換的存貨（如珠寶、藝術品、客製化產品）</p>
+
+<p><b>優點</b>：最符合實際狀況<br>
+<b>缺點</b>：可替換且同質性高的存貨容易被管理層操縱損益</p>
+
+<h4>方法二：先進先出法（FIFO）</h4>
+
+<p><b>是什麼</b>：先買進的商品先賣出，銷貨成本用較早期的成本計算。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 假設最早買進的存貨最先賣出<br>
+2. 銷貨成本 = 早期較便宜的成本（物價上漲時）<br>
+3. 期末存貨 = 最近較昂貴的成本</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：某公司進貨三批巧克力餅乾</li>
+<li>FIFO 下銷貨成本 = 150×80 + 700×90 + 150×100 = 12,000 + 63,000 + 15,000 = 90,000 元</li>
+<li>期末存貨 = 250×100 = 25,000 元</li>
+</ul>
+
+<p><b>物價上漲期間的影響</b>：</p>
+
+<ul>
+<li>銷貨成本較低（早期便宜的成本先認列）</li>
+<li>毛利和淨利較高</li>
+<li>所得稅較高</li>
+<li>期末存貨較接近市價</li>
+</ul>
+
+<p><b>物價下跌期間的影響</b>：完全相反</p>
+
+<h4>方法三：加權平均法（定期盤存制）</h4>
+
+<p><b>是什麼</b>：將期初存貨和本期進貨的成本加總後，除以總數量，得到平均單位成本。</p>
+
+<p><b>公式</b>：</p>
+
+<pre><code>加權平均單位成本 = (期初存貨成本 + 本期進貨成本) ÷ (期初存貨數量 + 本期進貨數量)</code></pre>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>承上例</li>
+<li>加權平均單位成本 = (12,000 + 63,000 + 40,000) ÷ (150 + 700 + 400) = 115,000 ÷ 1,250 = 92 元</li>
+<li>期末存貨 = 250 × 92 = 23,000 元</li>
+<li>銷貨成本 = 1,000 × 92 = 92,000 元</li>
+</ul>
+
+<p><b>特點</b>：消除了特定時期進貨成本波動的影響，但可能與實際情況偏離</p>
+
+<h4>方法四：移動平均法（永續盤存制）</h4>
+
+<p><b>是什麼</b>：每次進貨後重新計算平均單位成本，每次銷售都用當時的平均成本認列。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 每次進貨後，重新計算平均單位成本<br>
+2. 銷售時，以當時的平均成本認列銷貨成本<br>
+3. 下次進貨後再重新計算</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>4/4 進貨後：平均成本 = (12,000 + 63,000) ÷ (150 + 700) = 88.235 元/盒</li>
+<li>4/9 賣出 800 盒：銷貨成本 = 800 × 88.235 = 70,588 元</li>
+<li>4/15 進貨後：新的平均成本 = (4,412 + 40,000) ÷ (50 + 400) = 98.693 元/盒</li>
+<li>4/23 賣出 200 盒：銷貨成本 = 200 × 98.693 = 19,739 元</li>
+<li>全月銷貨成本合計 = 70,588 + 19,739 = 90,327 元</li>
+<li>期末存貨 = 250 × 98.693 = 24,673 元</li>
+</ul>
+
+<h3>3. 三種方法對財報的影響比較（物價上漲期間）</h3>
+
+<table><thead><tr><th>項目</th><th>FIFO</th><th>加權平均法</th><th>移動平均法</th></tr></thead><tbody><tr><td>期末存貨</td><td>最高（接近市價）</td><td>中間</td><td>略高於加權平均</td></tr><tr><td>銷貨成本</td><td>最低</td><td>中間</td><td>略低於加權平均</td></tr><tr><td>毛利/淨利</td><td>最高</td><td>中間</td><td>中間</td></tr><tr><td>所得稅</td><td>最高</td><td>中間</td><td>中間</td></tr><tr><td>現金流量（稅後）</td><td>最低</td><td>中間</td><td>中間</td></tr></tbody></table>
+
+<h3>4. IFRS 規定：台灣不能用 LIFO</h3>
+
+<p><b>重要</b>：台灣自 2013 年採用 IFRS 後，<b>禁止使用後進先出法（LIFO）</b>。目前台股公司只能使用：</p>
+
+<ul>
+<li>個別認定法</li>
+<li>先進先出法（FIFO）</li>
+<li>加權平均法</li>
+<li>移動平均法</li>
+</ul>
+
+<p><b>LIFO 為什麼被禁</b>：</p>
+
+<ul>
+<li>LIFO 在物價上漲時，銷貨成本較高、淨利較低、所得稅較少</li>
+<li>但期末存貨反映的是早期低成本，與市價嚴重脫離</li>
+<li>管理層可利用 LIFO 操縱損益：年末大量高價進貨，拉高銷貨成本，壓低淨利</li>
+<li>IFRS 認為存貨應反映接近市價的成本</li>
+</ul>
+
+<h3>5. 存貨計價方法變更的陷阱</h3>
+
+<p><b>是什麼</b>：公司一旦選定存貨計價方法，通常不能輕易變更，以確保財報一致性。</p>
+
+<p><b>為什麼重要</b>：</p>
+
+<ul>
+<li>變更計價方法 = 管理層可能要操縱損益</li>
+<li>從 FIFO 改成加權平均法：物價上漲時，銷貨成本增加、淨利下降、所得稅減少</li>
+<li>從加權平均法改成 FIFO：物價上漲時，銷貨成本減少、淨利上升、所得稅增加</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 查財報附註，確認公司使用的存貨計價方法<br>
+2. 如果方法變更，要看變更對損益的影響數<br>
+3. 變更方法那年，要特別小心 EPS 是否被人為調整<br>
+4. 同產業的公司用不同計價方法，毛利率比較會失真</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>A 公司用 FIFO，B 公司用加權平均法</li>
+<li>物價上漲期間，A 公司毛利率會比 B 公司高</li>
+<li>但這不代表 A 公司真的比 B 公司會做生意，只是會計方法不同</li>
+<li><b>必須把存貨計價方法差異調整後再比較</b></li>
+</ul>
+
+<h3>6. 存貨錯誤對財報的連鎖效應</h3>
+
+<p><b>是什麼</b>：存貨數字錯了，不只是資產負債表有問題，還會連鎖影響損益表。</p>
+
+<p><b>怎麼做</b>：</p>
+
+<p><b>期末存貨高估</b>：</p>
+
+<ul>
+<li>銷貨成本低估 → 毛利高估 → 淨利高估 → 保留盈餘高估</li>
+<li>下期：期初存貨高估 → 銷貨成本高估 → 毛利低估 → 淨利低估</li>
+<li>兩期自動抵銷，對保留盈餘無影響</li>
+</ul>
+
+<p><b>期末存貨低估</b>：</p>
+
+<ul>
+<li>銷貨成本高估 → 毛利低估 → 淨利低估 → 保留盈餘低估</li>
+<li>下期：期初存貨低估 → 銷貨成本低估 → 毛利高估 → 淨利高估</li>
+<li>兩期自動抵銷，對保留盈餘無影響</li>
+</ul>
+
+<p><b>投資實戰意義</b>：</p>
+
+<ul>
+<li>單一年度的存貨數字可能有誤差（故意或無意）</li>
+<li>但下一年度會自動修正</li>
+<li>如果看到某公司毛利率突然大幅改善，先確認是不是存貨計價方法變更或存貨認列方式的調整</li>
+</ul>
+
+<h3>7. 存貨後續評價：成本與淨變現價值孰低法</h3>
+
+<p><b>是什麼</b>：IFRS 規定，期末存貨必須以「成本」與「淨變現價值」孰低者認列。如果存貨跌價了，必須認列跌價損失。</p>
+
+<p><b>公式</b>：</p>
+
+<pre><code>淨變現價值 = 估計售價 − 至完工尚須投入成本 − 銷售費用</code></pre>
+
+<p><b>怎麼做</b>：<br>
+1. 逐一比較每項存貨的成本與淨變現價值<br>
+2. 如果成本 > 淨變現價值，認列跌價損失（列入銷貨成本）<br>
+3. 如果之後淨變現價值回升，可以在原沖減金額範圍內迴轉<br>
+4. <b>不得使用總額比較法</b>（不能把所有存貨加起來一起比）</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某電子零件公司期末存貨成本 5,000 萬</li>
+<li>其中 A 零件成本 2,000 萬，淨變現價值 1,500 萬 → 跌價 500 萬</li>
+<li>B 零件成本 3,000 萬，淨變現價值 3,200 萬 → 無跌價</li>
+<li>應認列跌價損失 500 萬</li>
+<li>期末存貨認列金額 = 1,500 + 3,000 = 4,500 萬</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>股東權益變動表真的是被嚴重低估的一張報表。大部分投資人盯著損益表看 EPS，盯著資產負債表看淨值，但很少人去追蹤「這些數字是怎麼來的」。保留盈餘佔股東權益的比率這個指標很犀利——同樣是淨值 100 億的公司，保留盈餘佔 70% 和佔 20% 的品質完全不同。前者是自己賺來的，後者是跟股東募資來的。一個是披薩上有料，一個是只有麵皮。</p>
+
+<p>股票股利那個「披薩切更多片」的比喻也太精準了。很多人看到配股票股利就覺得「賺到了」，但實際上 EPS 被稀釋了，你持有的比例不變、總價值不變，只是手上的股數變多。真正要關注的是公司能不能把保留下來的盈餘有效再投資——如果 1 元保留盈餘能創造超過 1 元的市值，那不配息反而是好事。</p>
+
+<p>存貨計價方法的影響比想像中大。同一家公司用 FIFO 跟加權平均法，在物價上漲期間毛利率可以差 2-5 個百分點，這不是小數字。更值得注意的是，台灣已經不能用 LIFO 了，所以如果看到有公司宣稱用 LIFO，那是財報有問題。但美股還是可以用 LIFO（美國 GAAP 允許），看美股財報時要特別注意這個差異。兩家同產業公司如果一個用 FIFO 一個用 LIFO，毛利率根本不能直接比較，要先調整。</p>
+
+<p>最後，存貨錯誤的連鎖效應值得記住——本期存貨高估，本期淨利就高估，但下期會自動抵銷。所以如果看到某公司某一季毛利率異常飆高，別急著進場，先查查是不是存貨認列方式動了手腳。</p>
+
+<p>朝股票操作大師邁進中 📈## 第 9 回合學習 - 基本面分析：無形資產辨識攤銷與遞延所得稅資產/負債</p>
+
+<p><b>時間</b>：09:30</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://vocus.cc/article/6726e32efd89780001ac317f">從零開始了解無形資產</a></li>
+<li><a href="http://accountingkid.blogspot.com/2013/12/2_13.html">白話會計：什麼是遞延所得稅資產/負債</a></li>
+<li><a href="https://www.cscpa.com.tw/_i/assets/upload/files/Comment/article/202108/11008%E9%9B%99%E6%9C%88%E5%88%8A_%E9%BB%83%E7%AB%91%E5%82%91_%E9%81%9E%E5%BB%B6%E6%89%80%E5%BE%97%E7%A8%85%E8%B3%87%E7%94%A2%E8%88%87%E8%B2%A0%E5%82%B5%E8%AA%8D%E5%88%97%E6%83%85%E5%BD%A2%E5%AF%A6%E5%8B%99%E6%8E%A2%E8%A8%8E.pdf">遞延所得稅資產與負債認列與衡量情形實務探討</a></li>
+</ul>
+
+<hr>
+
+<h2>一、無形資產辨識與攤銷</h2>
+
+<h3>1. 無形資產是什麼？</h3>
+
+<p><b>是什麼</b>：不具有實際形體的資產，所有權屬於企業，預期可在未來帶來經濟效益。通常是一種權利或某種競爭優勢。</p>
+
+<p><b>特質</b>：</p>
+
+<ul>
+<li>未來效益的不確定性較高，效益期間不好估計</li>
+<li>價值常有劇烈波動（此消彼長的競爭狀態）</li>
+<li>某些無形資產只對特定企業有價值</li>
+</ul>
+
+<h3>2. 無形資產三種分類方式</h3>
+
+<p><b>分類一：可辨認與否</b></p>
+
+<table><thead><tr><th>類型</th><th>說明</th><th>例子</th></tr></thead><tbody><tr><td>可辨認無形資產</td><td>可與其他資產分離、獨立辨認和定價</td><td>專利權、著作權、商標權、特許權、租賃權</td></tr><tr><td>不可辨認無形資產</td><td>無法獨立分離，跟公司整體一起存在</td><td>商譽（Goodwill）</td></tr></tbody></table>
+
+<p><b>分類二：取得來源</b></p>
+
+<table><thead><tr><th>來源</th><th>說明</th><th>重點</th></tr></thead><tbody><tr><td>外部取得-單獨購買</td><td>買價+可直接歸屬成本</td><td>最容易認列</td></tr><tr><td>外部取得-企業合併</td><td>以收購日公允價值認列（商譽除外）</td><td>併購溢價=商譽</td></tr><tr><td>外部取得-政府補助</td><td>以公允價值認列</td><td>政府補助收入另計</td></tr><tr><td>外部取得-資產交換</td><td>優先用公允價值</td><td>缺乏商業實質才用帳面值</td></tr><tr><td>內部產生-不可辨認</td><td>相關支出直接費用化</td><td>商譽絕不能自己認列</td></tr><tr><td>內部產生-可辨認</td><td>研究階段費用化，發展階段符合條件才能資本化</td><td>條件嚴格</td></tr></tbody></table>
+
+<p><b>分類三：預期效益期間</b></p>
+
+<table><thead><tr><th>類型</th><th>說明</th><th>例子</th></tr></thead><tbody><tr><td>有限耐用年限</td><td>因經濟、合約或法律因素，只在有限年限產生效益</td><td>專利權（通常20年）、版權</td></tr><tr><td>非確定耐用年限</td><td>可無限展期或永久有效</td><td>商標權（可無限展期）、商譽</td></tr></tbody></table>
+
+<h3>3. 內部產生無形資產的關鍵：研究 vs 發展</h3>
+
+<p><b>是什麼</b>：公司自己研發的無形資產，會計處理分兩階段。</p>
+
+<p><b>怎麼做</b>：<br>
+1. <b>研究階段</b>：支出全部費用化（直接認列為當期研發費用）</p>
+
+<ul>
+<li>原因：無法確定是否能帶來未來經濟效益</li>
+</ul>
+
+<p>2. <b>發展階段</b>：符合以下所有條件才能資本化（認列為無形資產）：</p>
+
+<ul>
+<li>技術可行性已確定</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某藥廠研發新藥，臨床試驗前的研究支出 → 費用化</li>
+<li>臨床試驗成功、取得藥證後的發展支出 → 資本化為無形資產</li>
+<li>投資人注意：研發費用全部費用化的公司（如台積電），獲利品質比大量資本化的公司更高</li>
+</ul>
+
+<h3>4. 無形資產攤銷規則</h3>
+
+<p><b>是什麼</b>：類似固定資產的折舊，但用在無形資產上叫「攤銷」。</p>
+
+<p><b>怎麼做</b>：</p>
+
+<p><b>有限耐用年限</b>：<br>
+1. 估計耐用年限<br>
+2. 決定可攤銷金額（成本 − 殘值，通常殘值為零）<br>
+3. 選擇攤銷方法（直線法或生產數量法）<br>
+4. 每期認列攤銷費用</p>
+
+<p><b>非確定耐用年限</b>：</p>
+
+<ul>
+<li><b>不攤銷</b>！但每年要做減損測試</li>
+<li>如果發現耐用年限變成有限的，轉為有限耐用年限後才開始攤銷</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>A 公司花 300 萬取得電台執照，每 4 年可低成本換發 → 非確定耐用年限 → 不攤銷</li>
+<li>後來主管機關規定改為競標取得，A 執照剩 3 年 → 轉為有限耐用年限</li>
+<li>帳面值 30 萬，可回收金額 18 萬 → 先認列減損損失 12 萬</li>
+<li>之後每年攤銷 = 18 萬 ÷ 3 年 = 6 萬</li>
+</ul>
+
+<h3>5. 無形資產減損測試</h3>
+
+<p><b>是什麼</b>：期末評估無形資產的可回收金額是否低於帳面值。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 有限耐用年限：每年評估耐用年限、攤銷方法、殘值是否需修正 + 評估減損<br>
+2. 非確定耐用年限：每年至少做一次減損測試<br>
+3. 可回收金額 < 帳面值 → 認列減損損失<br>
+4. 減損後的帳面值成為新的成本基礎</p>
+
+<p><b>投資人實戰注意</b>：</p>
+
+<ul>
+<li>無形資產佔總資產比例 > 20% 要警覺（商譽已學過）</li>
+<li>大量資本化研發支出的公司，要看攤銷費用是否合理</li>
+<li>減損測試有管理層主觀判斷空間，可能延遲認列減損</li>
+</ul>
+
+<h3>6. 無形資產實戰五步驟</h3>
+
+<p>1. <b>查無形資產組成</b>：資產負債表上看「無形資產」項目，查附註看明細（商譽、專利權、軟體等）<br>
+2. <b>算佔比</b>：無形資產 ÷ 總資產，> 20% 警覺，> 50% 高風險<br>
+3. <b>區分商譽與可辨認無形資產</b>：商譽減損風險最大（已學過），可辨認無形資產至少有明確效益年限<br>
+4. <b>看攤銷政策</b>：攤銷年限是否合理？是否突然延長（可能是延後認列費用的手法）<br>
+5. <b>搭配研發費用看</b>：研發費用高但無形資產低 = 保守會計；研發費用低但無形資產高 = 可能有大量資本化</p>
+
+<hr>
+
+<h2>二、遞延所得稅資產（DTA）與遞延所得稅負債（DTL）</h2>
+
+<h3>1. 為什麼會有遞延所得稅？</h3>
+
+<p><b>是什麼</b>：公司「會計利潤」（財報上的淨利）和「課稅所得」（國稅局認定的應稅收入）通常不一樣，這叫「財稅差」。財稅差分兩種：</p>
+
+<table><thead><tr><th>差異類型</th><th>說明</th><th>例子</th></tr></thead><tbody><tr><td>永久性差異</td><td>永遠不會消失，會計和稅法永遠不同</td><td>證券交易所得（會計認列，稅法免稅）、交際費超限（稅法不認列）</td></tr><tr><td>暫時性差異</td><td>現在不同，但未來會反轉</td><td>加速折舊（現在少繳，以後多繳）、產品保固費用（會計先認列，稅法實際支出才認列）</td></tr></tbody></table>
+
+<p><b>暫時性差異就是 DTA 和 DTL 的來源。</b></p>
+
+<h3>2. 遞延所得稅負債（DTL）</h3>
+
+<p><b>是什麼</b>：本來該繳的稅，因為暫時性差異延後到未來才繳。對公司來說，這是一項「負債」——以後還是要吐回去給國稅局的。</p>
+
+<p><b>公式</b>：</p>
+
+<pre><code>DTL = 應納稅暫時性差異 × 適用稅率</code></pre>
+
+<p><b>怎麼產生</b>：<br>
+1. 加速折舊：稅法折舊 > 會計折舊 → 前幾年少繳稅、後幾年多繳 → 產生 DTL<br>
+2. 投資未實現利益：會計認列利益但稅法尚未實現 → 未來賣出時要繳稅 → 產生 DTL<br>
+3. 併購資產重估增值：公允價值 > 課稅基礎 → 未來處分要繳更多稅 → 產生 DTL</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>公司買一台車 100 萬，無殘值，4 年</li>
+<li>會計用直線法：每年折舊 25 萬</li>
+<li>稅法用年數合計法：第一年折舊 40 萬</li>
+<li>第一年：稅法折舊比會計多 15 萬 → 課稅所得少 15 萬 → 少繳稅 15 萬 × 17% = 25,500</li>
+<li>這 25,500 不是不用繳，是以後要還的 → 認列 DTL 25,500</li>
+</ul>
+
+<p><b>白話解釋</b>：DTL = 你現在欠國稅局的「稅債」，先欠著、以後要還。</p>
+
+<h3>3. 遞延所得稅資產（DTA）</h3>
+
+<p><b>是什麼</b>：本來以後才要繳的稅，因為暫時性差異提前繳了。對公司來說，這是一項「資產」——未來可以用來抵減所得稅。</p>
+
+<p><b>公式</b>：</p>
+
+<pre><code>DTA = 可減除暫時性差異 × 適用稅率</code></pre>
+
+<p><b>怎麼產生</b>：<br>
+1. 產品保固費用：會計先認列費用，稅法要實際發生才能扣 → 現在多繳稅、未來少繳 → 產生 DTA<br>
+2. 營業虧損遞抵：公司虧損可抵未來獲利 → 產生 DTA<br>
+3. 備抵呆帳：會計認列但稅法尚未認列 → 產生 DTA</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>公司認列產品保固費用 200 萬（會計上認列了）</li>
+<li>但國稅局說：還沒實際發生，不能扣抵</li>
+<li>稅法課稅所得比會計利潤多 200 萬 → 今年多繳 200 萬 × 17% = 34 萬</li>
+<li>這 34 萬不是白繳的，以後保固費用實際發生時可以抵稅 → 認列 DTA 34 萬</li>
+</ul>
+
+<p><b>白話解釋</b>：DTA = 你已經多繳給國稅局的「稅金存款」，以後可以抵用。</p>
+
+<h3>4. DTA 和 DTL 對投資人的實戰意義</h3>
+
+<p><b>DTA 的投資判斷</b>：</p>
+
+<table><thead><tr><th>情況</th><th>判斷</th></tr></thead><tbody><tr><td>DTA 來自營業虧損遞抵</td><td>⚠️ 公司曾經虧損，要看能否在期限內（台灣10年）用完</td></tr><tr><td>DTA 來自保固費用、備抵呆帳</td><td>✅ 正常營運產生，不太需要擔心</td></tr><tr><td>DTA 金額持續增加</td><td>⚠️ 可能公司一直虧損或費用超前認列</td></tr><tr><td>DTA 佔資產比重大</td><td>⚠️ 如果公司持續虧損無法獲利，DTA 可能無法使用而需減損</td></tr></tbody></table>
+
+<p><b>DTL 的投資判斷</b>：</p>
+
+<table><thead><tr><th>情況</th><th>判斷</th></tr></thead><tbody><tr><td>DTL 來自加速折舊</td><td>✅ 合理的稅務規劃，延後繳稅等於無息借款</td></tr><tr><td>DTL 來自投資未實現利益</td><td>⚠️ 利益實現時要繳稅，要注意時間點</td></tr><tr><td>DTL 金額持續增加</td><td>可能是公司大量投資（折舊差異擴大），不一定是壞事</td></tr><tr><td>DTL 佔負債比重大</td><td>要看來源：折舊差異可接受，投資利益要注意</td></tr></tbody></table>
+
+<h3>5. DTA 最大的陷阱：可能永遠用不到</h3>
+
+<p><b>是什麼</b>：DTA 能存在的前提是「公司未來會賺錢、能繳稅」，這樣 DTA 才有價值。如果公司持續虧損，DTA 就是廢紙。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 檢查 DTA 來源（虧損遞抵 vs 保固費用）<br>
+2. 虧損遞抵的 DTA：公司必須在 10 年內（台灣）轉虧為盈，否則 DTA 歸零<br>
+3. 評估公司是否有可能在期限內獲利<br>
+4. 如果不太可能，DTA 應該認列減損（估值備抵）<br>
+5. 主管機關會要求公司對 DTA 提出「實現可能性」的說明</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某面板廠連續虧損 5 年，帳上 DTA 有 50 億（來自虧損遞抵）</li>
+<li>如果再虧 5 年，這 50 億的 DTA 就要全數減損</li>
+<li>投資人看到這種公司，要自己判斷 DTA 是否「真的能用」</li>
+</ul>
+
+<h3>6. DTL 最大的陷阱：隱形稅債</h3>
+
+<p><b>是什麼</b>：DTL 是未來要繳的稅，雖然現在不用付，但遲早要付。投資人算淨值時，不應忽略 DTL。</p>
+
+<p><b>怎麼做</b>：<br>
+1. DTL 是「真正的負債」，不是會計遊戲<br>
+2. 算調整後淨值 = 帳面淨值 − DTL<br>
+3. 如果調整後淨值大幅縮水，代表公司有很大一塊價值是「欠國稅局的」<br>
+4. 特別注意 DTL 來自投資未實現利益的公司：一旦獲利了結，稅就要繳</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某投資公司帳面淨值 100 億，DTL 30 億（來自未實現投資利益）</li>
+<li>調整後淨值 = 100 − 30 = 70 億</li>
+<li>本淨比看似 1.2 倍（便宜），但扣掉 DTL 後實際是 1.7 倍（不便宜）</li>
+</ul>
+
+<h3>7. 實戰分析流程</h3>
+
+<p><b>怎麼做</b>：</p>
+
+<p>1. <b>查資產負債表</b>：找 DTA 和 DTL 的金額<br>
+2. <b>查附註</b>：看 DTA/DTL 的來源明細<br>
+3. <b>評估 DTA 品質</b>：</p>
+
+<ul>
+<li>來自虧損遞抵 → 要判斷公司能否在期限內獲利</li>
+</ul>
+
+<p>4. <b>評估 DTL 影響</b>：</p>
+
+<ul>
+<li>來自折舊差異 → 合理的稅務規劃</li>
+</ul>
+
+<p>5. <b>看趨勢</b>：DTA/DTL 是否持續增加？原因是什麼？</p>
+
+<p><b>查詢工具</b>：</p>
+
+<ul>
+<li>公開資訊觀測站 → 資產負債表 → 遞延所得稅資產/負債</li>
+<li>Goodinfo → 資產負債表</li>
+<li>財報附註：查 DTA/DTL 的組成明細</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>無形資產這東西就像海市蜃樓——看得到摸不到，而且你不知道它什麼時候會消失。最關鍵的分類是「可辨認」vs「不可辨認」：可辨認的至少有明確的權利和年限（專利權20年、版權有期限），但不可辨認的商譽就是一團模糊的「公司整體素質」，一旦併購看走眼，減損就是幾百億的事。</p>
+
+<p>內部產生無形資產的規則也很值得記住：研究階段全部費用化，發展階段才能資本化。這意味著，如果一家公司把大量研發支出資本化為無形資產，要特別小心——這可能是管理層在「美化」損益，把本該當期認列的費用藏到資產負債表上，以後再慢慢攤銷。反之，像台積電這種研發費用全部費用化的公司，損益品質更高。</p>
+
+<p>DTA 和 DTL 則是財報裡最容易讓投資人搞混的兩個項目。最簡單的記法：DTL = 你欠國稅局的（以後要還），DTA = 國稅局欠你的（以後能抵）。但關鍵陷阱是：DTA 不是真的現金！如果公司持續虧損，DTA 就是一張永遠無法兌現的支票。很多面板廠、太陽能廠帳上大筆 DTA，看起來資產很多，但如果公司一直虧下去，那些 DTA 遲早要減損歸零。</p>
+
+<p>最實用的做法是把 DTL 從淨值中扣除、重新算本淨比。很多投資公司看起來本淨比很低（便宜），但扣掉 DTL 之後其實一點也不便宜。這就像買一間房子，看起來淨值很高，但裡面有 30% 是欠國家的稅，真正屬於你的遠比帳面上少。</p>
+
+<p>朝股票操作大師邁進中 📈## 第 6 回合學習 - 基本面分析：合併報表與非控制權益</p>
+
+<p><b>時間</b>：10:30</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.tron-island.com/blog/long-term-investment">長投的會計及稅務觀念（採權益法之投資）</a></li>
+<li><a href="https://tkuewlch.pixnet.net/blog/post/38849351">合併報表之少數股權問題</a></li>
+<li><a href="https://redhouse.statementdog.com/archives/387">圖解新制財報選好股：合併報表不是一加一等於二</a></li>
+<li><a href="https://www.cmoney.com.tw/ADV/130509ifrs-merger/ifrs-merger.html">CMoney IFRS 合併報表篇：如何看出合併營收是否虛胖？</a></li>
+</ul>
+
+<hr>
+
+<h2>一、長期股權投資三種評價方式</h2>
+
+<h3>1. 持股比例決定會計處理方式</h3>
+
+<p><b>是什麼</b>：你持有別家公司多少股份，決定這筆投資在財報上怎麼呈現。不同持股比例對應不同的會計處理，影響你看到的數字真實度。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 持股 < 20%：列為「透過損益按公允價值衡量之金融資產」或「以成本衡量之金融資產」，被投資公司賺賠跟你財報無關，只有收到股利才認列收入<br>
+2. 持股 20%～50%：採用「權益法」，被投資公司賺多少你就按比例認列投資收益，虧多少你也按比例認列損失，不用等發股利<br>
+3. 持股 > 50%：仍用權益法，但必須編製「合併報表」，把子公司營收、資產、負債全部併進來</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：A公司持有B公司 60% 股權，B公司今年稅後淨利 200 萬</li>
+<li>權益法認列：A公司認列投資收益 = 200 萬 × 60% = 120 萬</li>
+<li>如果 B 公司配發 180 萬股利（200 萬淨利提 10% 法定盈餘公積後分配）</li>
+<li>A公司收到現金股利 = 180 萬 × 60% = 108 萬</li>
+<li>重要：收到股利不是認列收入，而是「減少長投帳面金額」——因為獲利已經在前面認列過了</li>
+</ul>
+
+<p><b>適用時機</b>：讀財報時看到「採權益法之投資」科目，一定要去看被投資公司的經營狀況，因為損益已經即時反映在你關心的公司財報上了。</p>
+
+<h3>2. 權益法核心等式</h3>
+
+<p><b>是什麼</b>：長投的帳面金額 = 被投資公司的淨值 × 持股比例。這個等式在任何時間點都成立，是理解權益法的鑰匙。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 初始投資：長投 = 投資金額（通常 = 被投資公司淨值 × 持股比）<br>
+2. 被投資公司賺錢：長投增加，認列「採權益法認列之投資利益」<br>
+3. 被投資公司虧錢：長投減少，認列「採權法認列之投資損失」<br>
+4. 收到股利：長投減少，借記現金（不是認列收入！）<br>
+5. 被投資公司增資但你沒參加：持股比例改變，調整長投，差額計入資本公積或保留盈餘</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：投資 600 萬取得 60% 股權，被投資公司股本 1,000 萬</li>
+<li>第一年獲利 200 萬：長投 = (1,000 + 200) × 60% = 720 萬（認列收益 120 萬）</li>
+<li>分配股利 180 萬：長投 = (1,000 + 20 法盈 + 180 未分配 - 180 分配) × 60% = 612 萬（長投減少 108 萬）</li>
+<li>驗證：720 - 108 = 612 ✅</li>
+</ul>
+
+<p><b>適用時機</b>：當你看到公司長投科目大幅增減時，用這個等式回推被投資公司的經營狀況。</p>
+
+<h3>3. 買貴了怎麼辦？商譽與廉價購買</h3>
+
+<p><b>是什麼</b>：投資成本 ≠ 被投資公司淨值 × 持股比時，差額不是憑空消失，而是有去處的。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 投資成本 > 被投資公司淨值 × 持股比：多付的 = 商譽（放在等式右邊，不攤銷但需做減損測試）<br>
+2. 投資成本 < 被投資公司淨值 × 持股比：少付的 = 廉價購買利益（當期認列收益）</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：花 800 萬買 60% 股權，被投資公司淨值 1,000 萬</li>
+<li>正常長投 = 1,000 × 60% = 600 萬，但你付了 800 萬</li>
+<li>差額 200 萬 = 商譽（你可能買到了品牌價值、客戶關係等看不到的價值）</li>
+<li>反之如果 500 萬就買到，100 萬差額 = 廉價購買利益，當期認列獲利</li>
+</ul>
+
+<p><b>適用時機</b>：併購案要看投資成本和淨值的差異，商譽太高可能是買貴了，未來減損風險大。</p>
+
+<hr>
+
+<h2>二、合併報表不是 1+1=2</h2>
+
+<h3>1. 合併報表的編製邏輯</h3>
+
+<p><b>是什麼</b>：持股超過 50% 的子公司，營收、資產、負債全部併入母公司報表，但母子公司之間的交易要沖銷，所以合併數字不是簡單相加。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 合併資產 = 母公司資產 + 子公司資產 - 母公司長投（長投被子公司淨值取代）<br>
+2. 合併負債 = 母公司負債 + 子公司負債<br>
+3. 合併股東權益 = 母公司股東權益 + 非控制權益（子公司中非你持有的部分）<br>
+4. 內部交易全部沖銷：母子公司間的買賣、借貸、股利都不能重複計算</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：母公司營收 200，持股 60% 子公司營收 100，成本費用為 0</li>
+<li>合併營收 = 200 + 100 = 300（子公司 100% 營收都併入）</li>
+<li>合併稅後純益 = 300</li>
+<li>歸屬母公司稅後純益 = 200 + 100 × 60% = 260</li>
+<li>非控制權益 = 100 × 40% = 40</li>
+<li>重點：合併營收 300 裡，有 40 是別人的！</li>
+</ul>
+
+<p><b>適用時機</b>：看合併報表時，營收和獲利數字都可能包含你不擁有的部分，一定要看「歸屬於母公司業主」那行。</p>
+
+<h3>2. 非控制權益（少數股權）的稀釋效應</h3>
+
+<p><b>是什麼</b>：合併報表裡的營收、毛利率、營益率、稅後淨利率，全都包含了非控制權益的份額，但到最後一行「稅後淨利」才把非控制權益扣除。這會嚴重高估你以為屬於母公司的獲利。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 看合併損益表最下方的「歸屬於母公司淨利」和「非控制權益淨利」<br>
+2. 計算「母公司佔比」= 歸屬母公司淨利 ÷ 合併總淨利<br>
+3. 如果母公司佔比遠低於持股比例，代表子公司裡的少數股東分走了不成比例的利潤<br>
+4. 進一步追查：是哪個子公司？為什麼利潤分配如此不均？</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>葡萄王(1707) 2012 Q3 合併報表：</li>
+</ul>
+
+<p><b>適用時機</b>：非控制權益佔比高的公司（如控股公司、集團企業），一定要拆開看。如果少數股東權益小但分走的利潤大，可能是公司治理問題。</p>
+
+<h3>3. 兩大虛胖偵測指標</h3>
+
+<p><b>是什麼</b>：判斷合併報表數字有沒有「灌水」的兩個關鍵比率。</p>
+
+<p><b>怎麼做</b>：<br>
+1. <b>母公司營收佔合併營收比重</b> = 母公司營收 ÷ 合併營收</p>
+
+<ul>
+<li>比重越高 → 公司靠本業賺錢，數字紮實</li>
+</ul>
+
+<p>2. <b>歸屬母公司淨利佔合併總淨利比重</b> = 歸屬母公司淨利 ÷ 合併總淨利</p>
+
+<ul>
+<li>比重越高 → 錢多半進母公司口袋</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>台積電(2330)：母公司營收佔合併營收 98.34%，歸屬母公司淨利佔比 99.79%</li>
+</ul>
+
+<p>→ 幾乎全部都是本業貢獻，數字非常紮實</p>
+
+<ul>
+<li>如果某公司母公司營收佔比只有 40%，歸屬母公司淨利佔比 55%</li>
+</ul>
+
+<p>→ 60% 營收來自子公司，45% 利潤分給少數股東，合併數字嚴重虛胖</p>
+
+<p><b>適用時機</b>：每次看合併報表，先用這兩個指標掃一遍。低於 70% 就要警覺，低於 50% 基本上是控股公司形態，需要逐家拆解子公司。</p>
+
+<h3>4. 合併後仍殘留「長期投資」的警訊</h3>
+
+<p><b>是什麼</b>：合併報表已經把持股 > 50% 的子公司併進來了，如果資產負債表上還有「長期投資」科目，代表還有持股 20%～50% 的關聯企業沒被併入。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 看合併資產負債表的「採權益法之投資」科目<br>
+2. 計算長投佔總資產比例<br>
+3. 比例 > 20%：高度依賴轉投資，透明度差，要看投資收益明細<br>
+4. 比例 > 40%：基本上是控股公司，跟本業脫鉤，風險極高</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：某公司合併總資產 100 億，長投 30 億</li>
+<li>長投佔比 = 30%，代表 30% 的資產放在你看不到詳細的地方</li>
+<li>損益表上的「採權益法認列之投資收益」會影響淨利，但你無法看到被投資公司的營收、成本結構</li>
+</ul>
+
+<p><b>適用時機</b>：選股時優先選長投佔總資產比低的公司，資訊透明度佳。長投佔比高的公司，你等於在看一個黑盒子。</p>
+
+<hr>
+
+<h2>三、成本法 vs 權益法差異比較</h2>
+
+<table><thead><tr><th>項目</th><th>成本法（持股 < 20%）</th><th>權益法（持股 > 20%）</th></tr></thead><tbody><tr><td>被投資公司獲利</td><td>不做處理</td><td>按比例認列投資收益</td></tr><tr><td>被投資公司虧損</td><td>不做處理</td><td>按比例認列投資損失</td></tr><tr><td>收到股利</td><td>認列股利收入</td><td>減少長投帳面金額</td></tr><tr><td>被投資公司增資</td><td>不做處理</td><td>調整長投，認列資本公積</td></tr><tr><td>資訊透明度</td><td>低（只看得到股利）</td><td>中（損益即時反映）</td></tr></tbody></table>
+
+<p><b>投資判斷要點</b>：</p>
+
+<ul>
+<li>成本法的公司，你只看得到股利，看不到被投資公司真實經營狀況</li>
+<li>權益法的公司，損益即時反映，但如果你不追蹤被投資公司，可能被一次性的處分利益/損失騙到</li>
+<li>最好的情況：合併報表中長投佔比極低，大部分利潤來自本業</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>今天這個主題太重要了。合併報表是 IFRS 上路後每季唯一看得到的財報，但你看到的數字可能灌了嚴重的水。</p>
+
+<p>最讓我震撼的是葡萄王的案例——非控制權益只佔股東權益 10%，卻吃掉 27% 的稅後淨利。這代表合併損益表上你看到的毛利率、營益率、淨利率，全部都包含了不屬於你的份額，但你可能從來沒想過要扣掉。</p>
+
+<p>以後看財報的 SOP：<br>
+1. 先看「母公司營收佔合併營收比重」和「歸屬母公司淨利佔比」<br>
+2. 兩個比重都 > 90% 才算紮實<br>
+3. 低於 70% 就要拆開看子公司<br>
+4. 合併報表還有長投殘留的，計算長投佔總資產比<br>
+5. 不要直接拿合併稅後淨利率算 EPS，要用「歸屬母公司淨利」算</p>
+
+<p>這五步不只是看財報的技巧，更是避開地雷的方法。一家公司如果合併營收很漂亮但母公司佔比很低，那個成長可能是虛的。</p>
+
+<p>朝股票操作大師邁進中 📈## 第 6 回合學習 - 基本面分析：會計政策變更、會計估計變動與營運部門報告</p>
+
+<p><b>時間</b>：11:30</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://fmstudio.blog/acct-policy-change-guide-2025/">什麼是會計政策變更？投資者必讀的財報分析指南</a></li>
+<li><a href="https://marketing.ares.com.tw/newsletter/2010-07/ifrs">IFRS 8 營運部門報導</a></li>
+<li><a href="https://www.deloitte.com.tw/ifrs/NewInfoPDF/N005.pdf">IFRS 8 營運部門 - 勤業眾信</a></li>
+</ul>
+
+<hr>
+
+<h2>一、會計政策變更 vs 會計估計變動</h2>
+
+<h3>1. 會計政策是什麼？</h3>
+
+<p><b>是什麼</b>：企業編製財報時遵循的「語言文法」——收入怎麼認列、存貨怎麼計價、折舊怎麼提，這些都是會計政策。</p>
+
+<p><b>核心範疇</b>：</p>
+
+<ul>
+<li><b>收入認列方法</b>：交付時認列？合約期間分攤？影響營收呈現時點與金額</li>
+<li><b>存貨計價方法</b>：FIFO、加權平均法等，直接衝擊銷貨成本與毛利率</li>
+<li><b>固定資產折舊方法</b>：直線法 vs 加速折舊法，影響淨利與資產帳面價值</li>
+<li><b>投資性不動產後續衡量</b>：成本模式 vs 公允價值模式，波動直接計入損益</li>
+</ul>
+
+<h3>2. 會計政策變更 vs 會計估計變動：天壤之別</h3>
+
+<table><thead><tr><th>項目</th><th>會計政策變更</th><th>會計估計變動</th></tr></thead><tbody><tr><td>**本質**</td><td>換了一把尺——從一種會計原則換成另一種</td><td>用同一把尺，但看得更清楚了——基於新資訊修正判斷</td></tr><tr><td>**例子**</td><td>存貨從加權平均法改為 FIFO；折舊從直線法改為加速折舊法</td><td>固定資產耐用年限從 5 年改為 8 年；應收帳款呆帳率從 2% 調為 3%</td></tr><tr><td>**會計處理**</td><td>**追溯適用**：重編前期財報，維持可比性</td><td>**推延適用**：只影響當期及未來，不重編前期</td></tr><tr><td>**對投資人的意義**</td><td>需重算歷史數據，確保比較基礎一致</td><td>前後期數據可能斷裂，短期內降低可比性</td></tr></tbody></table>
+
+<p><b>怎麼做</b>：</p>
+
+<p>1. 看到財報附註有「會計政策變更」→ 找出追溯調整影響數，用舊政策重算 EPS、毛利率<br>
+2. 看到「會計估計變動」→ 評估變動是否合理（同業比較），估算對未來獲利的影響金額<br>
+3. 當毛利率、ROA 等關鍵比率突然大幅變動但業務沒有明顯改變 → 回頭查是否會計政策或估計變了</p>
+
+<h3>3. 會計政策變更的四大動機</h3>
+
+<p><b>動機一：遵循新規範</b>（善意）</p>
+
+<ul>
+<li>IFRS 15 收入認列、IFRS 16 租賃等新準則上路，整個產業一起改，屬中性調整</li>
+</ul>
+
+<p><b>動機二：提升公允性與可比性</b>（善意）</p>
+
+<ul>
+<li>改用更貼近商業實質的方法，或與同業看齊提升可比性</li>
+</ul>
+
+<p><b>動機三：反映商業模式轉變</b>（中性）</p>
+
+<ul>
+<li>軟體公司從賣斷授權轉型 SaaS 訂閱制，收入認列方式必須跟著改</li>
+</ul>
+
+<p><b>動機四：併購整合</b>（中性）</p>
+
+<ul>
+<li>被收購公司改用母公司一致的會計政策，便於編製合併報表</li>
+</ul>
+
+<p><b>⚠️ 警訊</b>：如果公司頻繁變更會計政策，且結果總是美化財報（提高利潤、降低負債），可能是<b>盈餘管理</b>的徵兆。</p>
+
+<h3>4. 常見會計政策變更類型與對投資人的訊號</h3>
+
+<table><thead><tr><th>變更類型</th><th>主要影響科目</th><th>潛在訊號</th></tr></thead><tbody><tr><td>收入認列方法</td><td>營收、稅前淨利、應收帳款</td><td>營收穩定性與可預測性改變</td></tr><tr><td>存貨計價方法</td><td>銷貨成本、毛利、淨利</td><td>物價上漲時改 FIFO → 帳面毛利虛增，需留意現金流是否同步</td></tr><tr><td>折舊方法</td><td>折舊費用、營業利益、資產淨額</td><td>加速折舊改直線法 → 前期淨利美化，後期承壓</td></tr><tr><td>研發支出資本化</td><td>研發費用、淨利、無形資產</td><td>當期淨利提高，但研發失敗面臨大額減損風險</td></tr></tbody></table>
+
+<h3>5. 投資人四步判斷法</h3>
+
+<p><b>第一步：辨識動機</b></p>
+
+<ul>
+<li>善意：遵循新準則、與同業看齊、更貼近商業實質</li>
+<li>警訊：營運沒變卻頻繁改政策，且結果總是有利於美化財報</li>
+</ul>
+
+<p><b>第二步：量化影響，重算關鍵指標</b></p>
+
+<ul>
+<li>用附註的「追溯適用影響數」算出：如果沿用舊政策，EPS 會是多少？毛利率會是多少？</li>
+<li>區分「會計上的增長」vs「實質營運的增長」</li>
+</ul>
+
+<p><b>第三步：同業比較，評估合理性</b></p>
+
+<ul>
+<li>整個產業都在改 → 合理</li>
+<li>只有它一家改 → 可靠性打折</li>
+</ul>
+
+<p><b>第四步：結合現金流綜合判斷</b></p>
+
+<ul>
+<li>即使會計政策變更提高了帳面利潤，但營運現金流持續惡化 → 這種「獲利」不可靠</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：某科技公司將研發支出從費用化改為資本化</li>
+<li>操作：原本費用 10 億研發費 → 資本化後只認列 2 億攤銷，當期淨利增加 8 億</li>
+<li>判斷：必須追蹤資本化的無形資產是否真的產生未來收益，否則只是把費用遞延</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>每次閱讀財報時，先掃附註有無會計政策變更或估計變動</li>
+<li>關鍵比率突然大幅變動時，先排除會計變更因素再下結論</li>
+<li>同業比較時，確認各公司採用的會計政策是否一致</li>
+</ul>
+
+<hr>
+
+<h2>二、會計估計變動實戰判斷</h2>
+
+<h3>1. 什麼是會計估計變動？</h3>
+
+<p><b>是什麼</b>：企業根據新資訊或新經驗，對先前估計的修正。例如固定資產耐用年限從 5 年改為 8 年、應收帳款呆帳率從 2% 調為 3%。</p>
+
+<p><b>怎麼做</b>：</p>
+
+<p>1. <b>找出估計變動項目</b>：財報附註「重大會計判斷、估計及假設不確定性」段落<br>
+2. <b>計算影響金額</b>：</p>
+
+<ul>
+<li>耐用年限延長 → 折舊費用減少 → 淨利增加</li>
+</ul>
+
+<p>3. <b>判斷合理性</b>：同業的估計是多少？是否有客觀依據？</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：某航空公司將飛機耐用年限從 20 年延長至 25 年</li>
+<li>操作：年折舊費用從 5 億降為 4 億，淨利增加 1 億（稅前）</li>
+<li>判斷：飛機真的能用 25 年嗎？同業的估計呢？這 1 億的利潤增加是真實的還是會計調整？</li>
+</ul>
+
+<p><b>常見會計估計變動的紅旗</b>：</p>
+
+<ul>
+<li>公司虧損時突然延長耐用年限 → 很可能是為了避免連續虧損</li>
+<li>呆帳率連續調降但應收帳款持續增加 → 可能低估壞帳風險</li>
+<li>礦藏開採年限大幅延長但無新探勘數據 → 需要警惕</li>
+</ul>
+
+<hr>
+
+<h2>三、營運部門報告（IFRS 8 Segment Reporting）</h2>
+
+<h3>1. 營運部門報告是什麼？</h3>
+
+<p><b>是什麼</b>：IFRS 8 要求公開發行公司揭露各營運部門的財務資訊，讓投資人能看到企業內部各業務線的真實表現，而不是只看一個合併的大數字。</p>
+
+<p><b>核心定義</b>：營運部門必須符合三個條件：<br>
+1. 從事可能賺取收入並發生費用的經營活動<br>
+2. 營運結果定期由主要經營決策者（CODM）覆核，用於資源分配與績效評估<br>
+3. 具有個別分離的財務資訊</p>
+
+<h3>2. 為什麼投資人要看部門報告？</h3>
+
+<p><b>是什麼</b>：一家公司的合併營收可能持續成長，但成長來源可能完全不同——A 部門衰退 20%、B 部門成長 80%，合併起來看起來還不錯，但 A 部門的問題被掩蓋了。</p>
+
+<p><b>怎麼做</b>：</p>
+
+<p>1. <b>看各部門營收佔比</b>：哪個部門是主力？營收是否過度集中？<br>
+2. <b>看各部門獲利率</b>：高毛利部門是否衰退？低毛利部門是否擴張？<br>
+3. <b>看部門間移轉定價</b>：內部交易是否扭曲了部門獲利？<br>
+4. <b>看地區別資訊</b>：單一市場風險是否過高？</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：某電子公司合併營收 1,000 億，年增 5%</li>
+<li>部門拆解：</li>
+<li>判斷：合併數字掩蓋了手機部門的衰退和伺服器部門的成長動能，投資決策應該看部門而非合併數字</li>
+</ul>
+
+<h3>3. 部門報告的投資判斷五步驟</h3>
+
+<p><b>步驟一：確認部門劃分方式</b></p>
+
+<ul>
+<li>IFRS 8 採「管理法」，按內部管理報告劃分，而非固定按產業或地區</li>
+<li>注意：公司有裁量權決定怎麼分，劃分方式可能影響揭露的詳細程度</li>
+</ul>
+
+<p><b>步驟二：計算各部門營收佔比與趨勢</b></p>
+
+<ul>
+<li>哪個部門貢獻最多營收？成長趨勢如何？</li>
+<li>營收集中度過高 → 單一部門衰退衝擊大</li>
+</ul>
+
+<p><b>步驟三：比較各部門獲利率</b></p>
+
+<ul>
+<li>高毛利部門 vs 低毛利部門的消長</li>
+<li>部門利潤率趨勢是改善還是惡化</li>
+</ul>
+
+<p><b>步驟四：注意部門間交易與移轉定價</b></p>
+
+<ul>
+<li>內部交易是否消除？部門利潤是否被移轉定價扭曲？</li>
+<li>看部門損益時要確認是否為「對外交易」的獲利</li>
+</ul>
+
+<p><b>步驟五：結合地區別資訊判斷風險</b></p>
+
+<ul>
+<li>單一國家或地區營收占比過高 → 地緣政治、匯率風險大</li>
+<li>新興市場占比高 → 成長動能強但風險也高</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>閱讀財報時，先看合併數字，再看部門別拆解，找出隱藏的風險與機會</li>
+<li>多角化公司尤其重要，不看部門別等於瞎子摸象</li>
+<li>併購後的公司要看部門別才能評估併購效益是否實現</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>會計政策變更跟會計估計變動這兩個東西，以前我根本分不清，覺得都是「改數字」。但搞懂之後才發現，這根本是兩把不同的尺——政策變更是「換尺」，要重編歷史；估計變動是「同一把尺讀數更精確」，只影響未來。這個區分太重要了，因為追溯適用 vs 推延適用，對投資人判斷的影響完全不同。</p>
+
+<p>最值得警覺的是那種頻繁變更會計政策的公司——如果每次變更的結果都剛好美化財報，這不是巧合，是盈餘管理。尤其是把研發支出從費用化改成資本化、延長耐用年限這類操作，表面上看 EPS 變漂亮了，但現金流沒有同步改善，就是紙上富貴。</p>
+
+<p>營運部門報告則是拆穿合併數字假象的利器。一家公司合併營收成長 5%，拆開來看可能主力部門衰退 10%，只是另一個部門暴增 80% 在撐場面。不看部門別，你永遠不知道真正的成長引擎和衰退風險在哪裡。</p>
+
+<p>下一步要學的是：看到財報附註有會計政策變更時，實際動手重算 EPS 和毛利率的差異，這才是真正的實戰能力。</p>
+
+<p>朝股票操作大師邁進中 📈## 第 13 回合學習 - 基本面分析：IFRS 16 租賃會計與關係人交易</p>
+
+<p><b>時間</b>：12:30</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.jwcpas.com.tw/publicationsBook3-show2.php?book3p_id=498&b3t=18">IFRS 16 承租人會計簡介｜嘉威聯合會計師事務所</a></li>
+<li><a href="https://www.tejwin.com/insight/%E6%B7%BA%E6%9E%90ifrs-16%E5%B0%8D%E4%BC%81%E6%A5%AD%E8%A9%95%E5%83%B9%E4%B9%8B%E5%BD%B1%E9%9F%BF/">淺析 IFRS 16 對企業評價之影響｜TEJ 台灣經濟新報</a></li>
+<li><a href="https://lookitsmathbook.blogspot.com/2020/02/ifrs-16.html">睇年報 做股東 講財商 - 數簿：IFRS 16 使用權資產的影響</a></li>
+</ul>
+
+<hr>
+
+<h2>一、IFRS 16 租賃會計：表外負債無所遁形</h2>
+
+<h3>1. IFRS 16 為什麼重要？</h3>
+
+<p><b>是什麼</b>：2019年1月1日生效的 IFRS 16，要求承租人幾乎所有租賃（除短期租賃和低價值資產租賃外）都要在資產負債表上認列「使用權資產」和「租賃負債」。過去經營租賃是「表外項目」，只認列租金費用，現在全部要入帳。</p>
+
+<p><b>白話解釋</b>：以前公司租店面、租飛機，只需要每期認列租金費用，資產負債表上看不出來。這讓租很多東西的公司看起來負債很少，但其實有大量未來租金義務。IFRS 16 把這些「隱形負債」全部攤在陽光下。</p>
+
+<p><b>為什麼投資人要懂</b>：航空業、零售業、餐飲業這些大量租賃的行業，IFRS 16 前後的財報數字會劇烈變化——資產暴增、負債暴增、EBITDA 暴增、但現金流其實沒變。如果不懂 IFRS 16，很容易被財報數字的變化誤導。</p>
+
+<h3>2. IFRS 16 前後對照：三大報表影響</h3>
+
+<p><b>資產負債表</b>：</p>
+
+<ul>
+<li>新增「使用權資產」（Right-of-use Asset）：使用租賃資產的權利</li>
+<li>新增「租賃負債」（Lease Liability）：未來租金給付的現值</li>
+<li>負債比率大幅上升（因為租賃負債入帳）</li>
+</ul>
+
+<p><b>損益表</b>：</p>
+
+<ul>
+<li>過去：租金費用（每月固定）</li>
+<li>現在：折舊費用（使用權資產折舊）+ 利息費用（租賃負債利息）</li>
+<li>前期總費用 > 後期總費用（因為利息遞減，折舊固定）</li>
+<li>EBITDA 大幅增加（租金費用從 EBITDA 之上移到之下）</li>
+</ul>
+
+<p><b>現金流量表</b>：</p>
+
+<ul>
+<li>過去：租金全部列為營業活動現金流出（CFO）</li>
+<li>現在：本金償還列為融資活動（CFF），利息列為營業或融資活動</li>
+<li>營業現金流（CFO）看起來變好了，但其實現金流出總額沒變</li>
+<li>⚠️ 這是最容易被誤導的地方！</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：某公司租店面 5 年，每年租金 50 萬，年初付款，折現率 3%</li>
+<li>IFRS 16 前：每年損益表認列租金 50 萬，CFO 扣 50 萬</li>
+<li>IFRS 16 後：</li>
+</ul>
+
+<h3>3. 使用權資產與租賃負債的計算</h3>
+
+<p><b>使用權資產初始認列</b>：</p>
+
+<pre><code>使用權資產 = 租賃負債原始金額
+            + 租賃開始日前已支付的租金
+            - 租賃誘因（房東補貼）
+            + 原始直接成本（仲介費等）
+            + 除役成本（復原、拆除估計成本現值）</code></pre>
+
+<p><b>租賃負債初始認列</b>：</p>
+
+<pre><code>租賃負債 = 未來租金給付的現值
+         = Σ（每期租金 × 折現因子）
+折現率 = 出租人隱含利率（若已知）
+       或 承租人增額借款利率（若不知隱含利率）</code></pre>
+
+<p><b>怎麼做</b>：<br>
+1. 找到公司所有租賃合約的租金、租期資訊<br>
+2. 用適當折現率（通常 3%~6%）計算現值<br>
+3. 認列使用權資產和租賃負債<br>
+4. 每期：折舊費用（直線法）+ 利息費用（遞減法）<br>
+5. 租賃負債按利息法逐期減少</p>
+
+<p><b>重要豁免</b>：</p>
+
+<ul>
+<li><b>短期租賃</b>：租期 ≤ 12 個月，可選擇不認列使用權資產，直接認列租金費用</li>
+<li><b>低價值資產租賃</b>：全新價值 ≤ USD 5,000，可不認列</li>
+</ul>
+
+<h3>4. IFRS 16 對財務比率的影響</h3>
+
+<table><thead><tr><th>指標</th><th>IFRS 16 前</th><th>IFRS 16 後</th><th>影響</th></tr></thead><tbody><tr><td>負債比率</td><td>較低</td><td>上升</td><td>租賃負債入帳</td></tr><tr><td>資產周轉率</td><td>較高</td><td>下降</td><td>使用權資產增加分母</td></tr><tr><td>EBITDA</td><td>較低</td><td>上升</td><td>租金從 EBITDA 上方移到下方</td></tr><tr><td>EBIT</td><td>不變或微變</td><td>不變或微變</td><td>折舊+利息 ≈ 租金</td></tr><tr><td>淨利（前期）</td><td>不變</td><td>微降</td><td>前期利息+折舊 > 租金</td></tr><tr><td>營業現金流 CFO</td><td>較低</td><td>上升</td><td>租金本金從 CFO 移到 CFF</td></tr><tr><td>ROA</td><td>較高</td><td>下降</td><td>資產增加，淨利不變或微降</td></tr><tr><td>ROE</td><td>較高</td><td>下降</td><td>淨利不變或微降，權益不變</td></tr></tbody></table>
+
+<p><b>投資人最常犯的錯誤</b>：</p>
+
+<ul>
+<li>看到 EBITDA 大增就以為獲利能力提升了 → 其實只是會計分類改變</li>
+<li>看到 CFO 改善就以為營運現金流變好了 → 其實只是租金從 CFO 移到 CFF</li>
+<li>看到負債比率上升就以為財務風險增加 → 其實只是「隱形負債」浮出水面，真實風險沒變</li>
+</ul>
+
+<h3>5. IFRS 16 實戰分析五步驟</h3>
+
+<p><b>步驟一：調整比較基準</b></p>
+
+<ul>
+<li>比較 IFRS 16 前後數字時，必須把以前的營業租賃租金加回 EBITDA</li>
+<li>方法：租金支出 × 調整乘數（通常 6~8 倍，視租期而定）</li>
+<li>才能正確比較同一家公司 IFRS 16 前後的 EBITDA</li>
+</ul>
+
+<p><b>步驟二：分辨真實現金流 vs 會計數字</b></p>
+
+<ul>
+<li>折舊 + 利息 = 會計上的租賃費用</li>
+<li>但現金流只有一筆：租金</li>
+<li>前期會計費用 > 租金，後期會計費用 < 租金</li>
+<li>現金流沒變，只是會計分類改變</li>
+</ul>
+
+<p><b>步驟三：調整後負債比率的判斷</b></p>
+
+<ul>
+<li>IFRS 16 後負債比上升是正常的，不是公司變差了</li>
+<li>要跟同業的 IFRS 16 後數字比較才有意義</li>
+<li>重點看「租賃負債佔總負債比重」，判斷公司對租賃的依賴程度</li>
+</ul>
+
+<p><b>步驟四：產業特性判斷</b></p>
+
+<ul>
+<li>航空業：租賃負債可能佔總負債 40% 以上，IFRS 16 影響極大</li>
+<li>零售業：大量店面租賃，使用權資產是最大的資產項目之一</li>
+<li>科技業：租賃相對少，影響較小</li>
+<li>營建業：IFRS 16 影響有限</li>
+</ul>
+
+<p><b>步驟五：計算調整後 EV/EBITDA</b></p>
+
+<ul>
+<li>EV 要加上租賃負債的現值（IFRS 16 後已在負債中）</li>
+<li>EBITDA 要加上以前年度的營業租賃支出（比較時）</li>
+<li>不同公司 IFRS 16 適用前後的 EV/EBITDA 不能直接比較</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>✅ 比較 IFRS 16 前後財報數字</li>
+<li>✅ 分析大量租賃的公司（航空、零售、餐飲）</li>
+<li>✅ 計算 EV/EBITDA 時調整租賃影響</li>
+<li>❌ 不需要對租賃極少的公司特別調整</li>
+</ul>
+
+<hr>
+
+<h2>二、關係人交易：財報裡的暗門</h2>
+
+<h3>1. 什麼是關係人交易？</h3>
+
+<p><b>是什麼</b>：公司與其關係人之間的買賣、借貸、擔保等交易。關係人包括：母公司、子公司、關聯企業、董事、監察人、經理人、大股東及其親屬。</p>
+
+<p><b>白話解釋</b>：就是公司跟「自己人」做生意。不是說跟自己人做生意一定是壞事，但透明度低、利益衝突可能性高，投資人必須特別注意。</p>
+
+<p><b>IFRS 24 定義</b>：判斷關係人時，應注意「實質關係」而非「法律形式」。也就是說，即使法律上不是關係人，只要實質上有控制、聯合控制或重大影響，就應視為關係人。</p>
+
+<h3>2. 關係人交易的四大類型</h3>
+
+<p><b>類型一：進銷貨交易</b></p>
+
+<ul>
+<li>公司向關係人進貨或銷貨</li>
+<li>風險：定價可能不公允（高價買進、低價賣出，利潤移轉給關係人）</li>
+</ul>
+
+<p><b>類型二：資金融通</b></p>
+
+<ul>
+<li>公司向關係人借款或貸款給關係人</li>
+<li>風險：低利借款、高利貸款、甚至變相掏空</li>
+</ul>
+
+<p><b>類型三：背書保證</b></p>
+
+<ul>
+<li>公司為關係人做擔保</li>
+<li>風險：關係人違約時，公司要承擔連帶賠償責任</li>
+</ul>
+
+<p><b>類型四：資產交易</b></p>
+
+<ul>
+<li>公司向關係人購買或出售資產</li>
+<li>風險：高價買進劣質資產、低價賣出優質資產</li>
+</ul>
+
+<h3>3. 關係人交易五大警訊</h3>
+
+<p><b>警訊一：關係人交易佔比過高</b></p>
+
+<ul>
+<li>進貨或銷貨超過總額 30% 就要警覺</li>
+<li>超過 50% 基本上是關係人撐起來的營收</li>
+<li>超過 70% 以上要高度懷疑利益輸送</li>
+</ul>
+
+<p><b>警訊二：關係人交易毛利率異常</b></p>
+
+<ul>
+<li>關係人銷貨毛利率遠低於非關係人 → 可能低價出售給關係人</li>
+<li>關係人進貨毛利率遠低於非關係人 → 可能高價向關係人進貨</li>
+<li>交易條件明顯偏離市場行情</li>
+</ul>
+
+<p><b>警訊三：關係人應收帳款回收天數過長</b></p>
+
+<ul>
+<li>關係人 DSO 遠高於非關係人 → 可能是虛假交易或資金滯留</li>
+<li>正常客戶 30 天收款，關係人 180 天才收款 → 這不是做生意，是借錢給關係人</li>
+</ul>
+
+<p><b>警訊四：關係人背書保證金額過大</b></p>
+
+<ul>
+<li>背書保證金額超過公司淨值 50% → 極高風險</li>
+<li>被保證人財務狀況不佳 → 隨時可能觸發代償責任</li>
+<li>交叉保證（互保）→ 一家出事，全部連鎖反應</li>
+</ul>
+
+<p><b>警訊五：關係人交易突然大幅增加</b></p>
+
+<ul>
+<li>某年度關係人交易突然從 10% 增加到 40% → 可能是為了美化營收</li>
+<li>新增的關係人交易客戶 → 查清楚是否為實質關係人</li>
+<li>透過境外公司或人頭公司進行交易 → 實質關係人交易的典型手法</li>
+</ul>
+
+<h3>4. 關係人交易實戰分析五步驟</h3>
+
+<p><b>步驟一：查財報附註「關係人交易」段落</b></p>
+
+<ul>
+<li>公開資訊觀測站 → 財務報告 → 附註 → 關係人交易</li>
+<li>看進貨、銷貨、應收帳款、應付帳款、借款、背書保證的關係人明細</li>
+</ul>
+
+<p><b>步驟二：計算關係人交易佔比</b></p>
+
+<ul>
+<li>關係人銷貨 ÷ 合併營收 × 100%</li>
+<li>關係人進貨 ÷ 總進貨 × 100%</li>
+<li>關係人應收帳款 ÷ 總應收帳款 × 100%</li>
+<li>佔比 > 30% 警覺、> 50% 高度關注、> 70% 避開</li>
+</ul>
+
+<p><b>步驟三：比較關係人 vs 非關係人交易條件</b></p>
+
+<ul>
+<li>毛利率差異</li>
+<li>收款天數差異</li>
+<li>交易價格與市場行情差異</li>
+<li>任何明顯偏離市場的條件都要深入追查</li>
+</ul>
+
+<p><b>步驟四：查背書保證明細</b></p>
+
+<ul>
+<li>被保證公司名稱、關係、保證金額、期間</li>
+<li>保證金額 ÷ 公司淨值 × 100%</li>
+<li>被保證公司的財務狀況</li>
+<li>交叉保證（互保）情況</li>
+</ul>
+
+<p><b>步驟五：追查實質關係人</b></p>
+
+<ul>
+<li>董監事兼任其他公司董監事</li>
+<li>大股東的關聯企業</li>
+<li>境外公司（免稅天堂註冊的公司特別注意）</li>
+<li>公司登記地址相同或電話相同的關聯公司</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：A 公司合併營收 100 億，其中關係人銷貨 65 億</li>
+<li>關係人銷貨佔比 65% → 🚨 高度警覺</li>
+<li>關係人毛利率 8% vs 非關係人毛利率 25% → 🚨 利潤可能被轉移</li>
+<li>關係人應收帳款回收天數 180 天 vs 非關係人 45 天 → 🚨 資金被關係人佔用</li>
+<li>結論：這家公司的「真實」營運狀況遠不如合併數字所示</li>
+</ul>
+
+<h3>5. 財報附註怎麼看關係人交易</h3>
+
+<p><b>怎麼做</b>：<br>
+1. 公開資訊觀測站 → 財務報告 → 電子書 → 附註<br>
+2. 找「重大交易事項：關係人交易」段落<br>
+3. 看四個關鍵表格：</p>
+
+<ul>
+<li>關係人進銷貨明細</li>
+</ul>
+
+<p>4. 每一項都要算佔比，跟非關係人條件比較</p>
+
+<p><b>常見的實質關係人手法</b>：</p>
+
+<ul>
+<li>透過海外免稅天堂公司（BVI、開曼群島等）進行交易</li>
+<li>董監事親屬名下的公司</li>
+<li>員工或前員工設立的公司</li>
+<li>公司地址或聯絡人相同的「獨立」公司</li>
+<li>交易條件明顯偏離市場行情的「非關係人」</li>
+</ul>
+
+<p><b>查詢工具</b>：</p>
+
+<ul>
+<li>公開資訊觀測站（mops.twse.com.tw）</li>
+<li>Goodinfo 台灣股市資訊網</li>
+<li>財報狗（關係人交易專區）</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>IFRS 16 根本就是財報的「卸妝油」——把過去隱藏在表外的租賃負債全部洗出來了。以前看航空公司的財報，負債比好像還行，現在一認列租賃負債，負債比直接飆上去。但這不是公司變差了，是以前沒看清楚而已。</p>
+
+<p>最關鍵的陷阱是 EBITDA 和 CFO 的「假性改善」。IFRS 16 之後 EBITDA 變大了（因為租金從 EBITDA 上方移到下方），CFO 也變大了（因為租金本金從營業活動移到融資活動）。但公司的現金流總額根本沒變！所以如果你看到某公司 IFRS 16 之後 EBITDA 成長 30%，先別急著恭喜，要確認是不是只是會計分類改變帶來的。</p>
+
+<p>做跨期比較的時候，一定要把以前的營業租賃支出加回 EBITDA，才能得到可比較的數字。EV/EBITDA 也是一樣，分子要加租賃負債現值，分母要加回以前的租金支出。</p>
+
+<p>關係人交易則是財報裡的「暗門」。大部分公司的關係人交易是正常的商業行為，但當佔比超過 30%、毛利率明顯偏低、應收帳款天數異常長的時候，就必須追查了。最經典的手法是透過境外公司或人頭公司進行實質關係人交易，表面上查不到關聯，但交易條件遠離市場行情。這時候就要看交易對象的登記地址、董監事名單、交易條件是否合理。</p>
+
+<p>兩個主題的共同點是：都在告訴投資人「財報數字不等於真相」。IFRS 16 讓你看到以前看不到的負債，關係人交易讓你看到數字背後的利益輸送。投資人要做的不是相信數字，而是穿透數字看到實質。</p>
+
+<p>朝股票操作大師邁進中 📈## 第 6 回合學習 - 基本面分析：IAS 36 資產減損與投資人判讀</p>
+
+<p><b>時間</b>：13:30</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://mammonacad.com/asset-impairment-revitalization-guide/">資產減損影響全解析：從財報地雷到資產活化案例的實戰攻略</a></li>
+<li><a href="https://www.tejwin.com/news/%E8%B3%87%E7%94%A2%E6%B8%9B%E6%90%8D%E6%B8%AC%E8%A9%A6%E8%88%87%E8%A9%95%E5%83%B9%E6%9C%8D%E5%8B%99-ias-36_tej">IAS 36 資產減損測試與評價服務</a></li>
+<li><a href="http://commercialreport.blogspot.com/2013/12/36-ias-36-ias-36-ias-36-ias-36-ias-2.html">國際會計準則第36號─資產減損</a></li>
+<li><a href="https://www.angle.com.tw/accounting/gazette/post.aspx?ipost=8039">IAS 36 資產減損 月旦會計財稅網</a></li>
+</ul>
+
+<hr>
+
+<h2>一、資產減損是什麼？投資人為什麼要懂？</h2>
+
+<h3>核心定義</h3>
+
+<p><b>是什麼</b>：當一項資產的「可回收金額」低於「帳面價值」時，公司必須認列差額為損失。這不是折舊，而是計劃外的價值暴跌。</p>
+
+<p><b>公式</b>：</p>
+
+<pre><code>可回收金額 = MAX(公允價值減出售成本, 使用價值)
+減損損失 = 帳面價值 - 可回收金額（當帳面 > 可回收時）</code></pre>
+
+<p><b>白話</b>：資產帳面上寫 6000 萬，但賣掉只能拿 3000 萬、繼續用只能產生 4000 萬現金流，可回收金額取高的 4000 萬，所以要認列 2000 萬減損損失。</p>
+
+<hr>
+
+<h2>二、可回收金額的兩種計算方式</h2>
+
+<h3>1. 公允價值減出售成本（Fair Value Less Cost of Disposal）</h3>
+
+<p><b>是什麼</b>：把資產賣掉能拿到的淨錢。</p>
+
+<p><b>怎麼算</b>：<br>
+1. 找到資產在市場上的公允價值<br>
+2. 扣掉出售時的直接成本（仲介費、搬遷費等，不含所得稅與財務成本）</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某公司閒置廠房市場估價 5000 萬</li>
+<li>仲介費 200 萬、搬遷費 100 萬</li>
+<li>公允價值減出售成本 = 5000 - 200 - 100 = 4700 萬</li>
+</ul>
+
+<p><b>適用時機</b>：資產有活絡市場、公司打算出售時優先用此法</p>
+
+<h3>2. 使用價值（Value in Use, VIU）</h3>
+
+<p><b>是什麼</b>：繼續使用該資產，未來能產生的現金流折現值。</p>
+
+<p><b>怎麼算</b>：<br>
+1. 預估資產剩餘耐用年限內的未來現金流入<br>
+2. 預估未來現金流出（維護、操作成本等）<br>
+3. 淨現金流 = 現金流入 - 現金流出<br>
+4. 用適當折現率折現為現值</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某機器設備剩餘 5 年使用年限</li>
+<li>每年淨現金流入 800 萬</li>
+<li>折現率 10%</li>
+<li>使用價值 = 800 萬 × PVIFA(10%, 5) = 800 × 3.7908 = 3033 萬</li>
+</ul>
+
+<p><b>適用時機</b>：資產無活絡市場、公司打算繼續使用時優先用此法</p>
+
+<p><b>投資人注意</b>：使用價值高度依賴管理層的假設（成長率、折現率、現金流預測），這裡面可以做的手腳很多。折現率調低 1%、現金流多估 10%，結果就差十萬八千里。</p>
+
+<hr>
+
+<h2>三、減損跡象判斷：什麼時候要測試？</h2>
+
+<h3>強制性減損測試（每年必做）</h3>
+
+<p><b>適用對象</b>：</p>
+
+<ul>
+<li>商譽（企業併購產生的）</li>
+<li>非確定耐用年限的無形資產</li>
+<li>尚未可供使用的無形資產</li>
+</ul>
+
+<p><b>怎麼做</b>：無論有沒有減損跡象，每年至少測試一次。</p>
+
+<h3>觸發性減損測試（有跡象才做）</h3>
+
+<p><b>外部跡象</b>：<br>
+1. 資產市場價值當期大幅下跌（超過正常折舊幅度）<br>
+2. 產業技術、市場、經濟或法律環境發生不利重大變動<br>
+3. 市場利率大幅上升（影響折現率 → 降低可回收金額）<br>
+4. <b>企業淨資產帳面金額 > 總市值</b> ← 投資人最容易觀察的指標！</p>
+
+<p><b>內部跡象</b>：<br>
+1. 資產過時或實體毀損的證據<br>
+2. 資產閒置、計畫停止、提前處分<br>
+3. 內部報告顯示經濟績效不如預期</p>
+
+<p><b>投資人實戰</b>：</p>
+
+<ul>
+<li>看到「淨值 > 市值」的公司，就要警覺可能有資產減損風險</li>
+<li>看到公司公告「進行減損測試」，先別慌，要看減損金額和原因</li>
+<li>產業反轉時（如 DRAM 景氣循環下行），相關公司幾乎都要做減損測試</li>
+</ul>
+
+<hr>
+
+<h2>四、資產減損對財報的四大衝擊</h2>
+
+<h3>1. 損益表：直接吃掉獲利</h3>
+
+<p><b>怎麼影響</b>：減損損失列入營業外支出或營業費用，直接減少稅前淨利和稅後淨利。</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某公司本業賺 5 億</li>
+<li>認列商譽減損 20 億</li>
+<li>稅後淨利從 +5 億變成 -15 億</li>
+<li>EPS 從 +2 元變成 -6 元</li>
+</ul>
+
+<h3>2. 資產負債表：總資產縮水</h3>
+
+<p><b>怎麼影響</b>：資產帳面價值調降至可回收金額，總資產減少、股東權益下降、每股淨值跟著掉。</p>
+
+<h3>3. 財務比率失真：投資人最容易上當</h3>
+
+<p><b>怎麼影響</b>：</p>
+
+<ul>
+<li><b>ROA 虛胖</b>：分母（總資產）變小，ROA 看起來變好，但不是因為經營效率提升</li>
+<li><b>負債比率虛增</b>：總資產下降但負債不變，負債比看起來變高</li>
+<li><b>淨值比虛降</b>：股東權益減少，PB 看起來變便宜，但可能是價值陷阱</li>
+</ul>
+
+<p><b>投資人判斷</b>：看到公司大幅減損後的年度，ROA、ROE 改善要追問「是真改善還是分母效應」？</p>
+
+<h3>4. 未來折舊降低：洗大澡後的好處</h3>
+
+<p><b>怎麼影響</b>：減損後資產帳面金額降低，未來折舊費用減少，利潤率看起來改善。</p>
+
+<p><b>洗大澡（Big Bath）</b>：</p>
+
+<ul>
+<li>管理層可能在換人那年一次認列大量減損</li>
+<li>把所有壞消息一次出清，基期壓低</li>
+<li>隔年開始因折舊降低而獲利「大幅改善」</li>
+<li>新 CEO 就能宣稱「在我帶領下公司轉虧為盈」</li>
+</ul>
+
+<p><b>投資人判斷</b>：看到某年突然大額減損，接著隔年獲利大增，要冷靜分析「是本業真改善，還是會計效果」。</p>
+
+<hr>
+
+<h2>五、減損損失的迴轉：好消息還是陷阱？</h2>
+
+<h3>迴轉規則</h3>
+
+<p><b>商譽減損</b>：絕對不能迴轉！一旦認列就永遠認了。</p>
+
+<p><b>其他資產減損</b>：可以迴轉，但有上限。</p>
+
+<p><b>迴轉上限</b>：不得超過「假設以前年度未認列減損時的帳面金額（扣除折舊後）」。</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某機器設備減損後帳面金額 117 萬</li>
+<li>假設從未減損，現在帳面金額應為 230 萬</li>
+<li>現在可回收金額 280 萬</li>
+<li>迴轉金額 = 230 - 117 = 113 萬（不是 280 - 117 = 163 萬！）</li>
+<li>超過 230 萬的部分不能迴轉</li>
+</ul>
+
+<h3>投資人判斷</h3>
+
+<ul>
+<li>減損迴轉列入「減損迴轉利益」，會讓當期獲利增加</li>
+<li>但這不是本業賺的錢，評估時要扣除</li>
+<li>商譽減損不能迴轉 = 併購決策錯誤是永遠的傷疤</li>
+</ul>
+
+<hr>
+
+<h2>六、現金產生單位（CGU）：減損分攤的關鍵</h2>
+
+<h3>什麼是 CGU？</h3>
+
+<p><b>是什麼</b>：能產生獨立現金流入的最小資產群組。個別資產無法單獨計算可回收金額時，就要以 CGU 為單位測試。</p>
+
+<h3>減損分攤順序</h3>
+
+<p>當 CGU 發生減損時，損失按以下順序分攤：</p>
+
+<p>1. <b>先沖商譽</b>（商譽最沒有保障，先認賠）<br>
+2. <b>再按帳面金額比例分攤給其他資產</b><br>
+3. 個別資產減損上限 = 該資產帳面金額 - 公允價值（如果可取得）</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>CGU 總帳面 450 萬，可回收金額 391.5 萬</li>
+<li>減損損失 = 58.5 萬</li>
+<li>甲機器帳面 100 萬、公允價值 90 萬（最多減 10 萬）</li>
+<li>甲應分攤 = 58.5 × (100/450) = 13 萬，但上限 10 萬</li>
+<li>多出的 3 萬由乙、丙按比例吸收</li>
+</ul>
+
+<hr>
+
+<h2>七、投資人實戰檢查清單</h2>
+
+<h3>看到減損公告時，問自己五個問題：</h3>
+
+<p>1. <b>減損原因是什麼？</b></p>
+
+<ul>
+<li>產業結構性改變 → 可能真的價值沒了</li>
+</ul>
+
+<p>2. <b>減損金額合理嗎？</b></p>
+
+<ul>
+<li>對比同業是否也減損、減損金額是否差異過大</li>
+</ul>
+
+<p>3. <b>是商譽減損還是其他資產？</b></p>
+
+<ul>
+<li>商譽減損 = 併購失敗，不能迴轉，是永久性傷害</li>
+</ul>
+
+<p>4. <b>對財務比率的影響？</b></p>
+
+<ul>
+<li>減損後 ROA、ROE 改善是假的還是真的？</li>
+</ul>
+
+<p>5. <b>管理層意圖？</b></p>
+
+<ul>
+<li>換 CEO 那年大額減損 → 洗大澡嫌疑</li>
+</ul>
+
+<h3>淨值 > 市值的警訊</h3>
+
+<p>當公司淨資產帳面金額超過總市值時，IAS 36 明確指出這是減損跡象之一。</p>
+
+<p><b>實戰做法</b>：<br>
+1. 篩選 PB < 1 的公司<br>
+2. 不是所有 PB < 1 都是撿便宜，要先確認資產是不是真的值那個價<br>
+3. 如果資產主要是現金和短期投資 → PB < 1 可能真便宜<br>
+4. 如果資產主要是商譽和固定資產 → PB < 1 可能是價值陷阱</p>
+
+<hr>
+
+<h2>八、資產活化：減損後的轉機</h2>
+
+<h3>三種活化模式</h3>
+
+<p>1. <b>開發與再利用</b>：舊廠房改建商辦、商場、文創園區</p>
+
+<ul>
+<li>實例：南港輪胎「世界明珠」開發案，舊廠區變商辦豪宅，預計數百億收益</li>
+</ul>
+
+<p>2. <b>出售或售後租回</b>：賣掉不動產拿現金，再租回來繼續用</p>
+
+<ul>
+<li>好處：立即取得大筆現金流、重資產轉輕資產</li>
+</ul>
+
+<p>3. <b>證券化</b>：將不動產打包成 REITs 上市</p>
+
+<ul>
+<li>適合：有穩定租金收入的商用不動產</li>
+</ul>
+
+<p><b>投資人判斷</b>：看到公司認列大額減損後，如果同時宣布資產活化計畫，反而可能是利空出盡的轉折點。重點看活化計畫的具體內容和時間表，而不是只看減損數字。</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>資產減損這東西，說穿了就是「承認自己買貴了或投資失敗了」。但人性就是不想認賠，所以管理層有各種動機拖延減損或操弄假設。身為投資人，看到減損不用怕，怕的是該減損的不減損，那就真的地雷了。</p>
+
+<p>最值得記住的一點：<b>淨值 > 市值就是減損跡象</b>。PB < 1 不一定是便宜，可能只是市場在告訴你「這些資產不值帳面上那個價」。反過來說，如果資產主要是現金和短期投資，PB < 1 就可能是真便宜。</p>
+
+<p>另外，商譽減損不能迴轉這件事太重要了。併購溢價打水漂就是打水漂，沒有回頭路。所以看到公司商譽佔總資產比重很高的，就要特別小心。之前學過的商譽佔總資產比判斷風險，跟今天學的 IAS 36 商譽強制每年減損測試，剛好可以串起來用。</p>
+
+<p>朝股票操作大師邁進中 📈<br>
+---</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>
