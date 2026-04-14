@@ -428,17 +428,34 @@ def generate_recommendations_page():
             stock_id = rec.get("stock_id", "")
             stock_name = rec.get("stock_name", "")[:6]
             score = rec.get("score", 0)
+            entry_price = rec.get("entry_price", 0)
+            stop_loss = rec.get("stop_loss", 0)
+            stop_gain = rec.get("stop_gain", 0)
             result = rec.get("result")
+            
+            # 進場價位區塊
+            price_info = f'<div class="price-info"><span>推薦進場: {entry_price:.1f}</span>'
+            price_info += f'<span>停損: {stop_loss:.1f}</span>'
+            price_info += f'<span>停利: {stop_gain:.1f}</span></div>'
             
             if result:
                 # 已檢查
                 return_pct = result.get("return_pct", 0)
+                current_price = result.get("current_price", entry_price)
+                max_return = result.get("max_return_pct", 0)
+                max_drawdown = result.get("max_drawdown_pct", 0)
+                
                 color = "success" if return_pct > 0 else "danger"
                 icon = "📈" if return_pct > 0 else "📉"
-                recs_html += f'<div class="rec-item checked"><span class="stock">{stock_id} {stock_name}</span><span class="score">{score:.0f}分</span><span class="result {color}">{icon} {return_pct:+.2f}%</span></div>'
+                
+                # 實際進場價（當天收盤）
+                actual_entry = f'<div class="actual-price">實際進場: {entry_price:.1f} → 現價: {current_price:.1f}</div>'
+                max_info = f'<div class="max-info">最高: {max_return:+.2f}% / 最大回撤: {max_drawdown:.2f}%</div>'
+                
+                recs_html += f'<div class="rec-item checked"><div class="rec-header"><span class="stock">{stock_id} {stock_name}</span><span class="score">{score:.0f}分</span></div>{price_info}{actual_entry}{max_info}<span class="result {color}">{icon} {return_pct:+.2f}%</span></div>'
             else:
                 # 未檢查
-                recs_html += f'<div class="rec-item"><span class="stock">{stock_id} {stock_name}</span><span class="score">{score:.0f}分</span><span class="result pending">⏳ 待檢查</span></div>'
+                recs_html += f'<div class="rec-item"><div class="rec-header"><span class="stock">{stock_id} {stock_name}</span><span class="score">{score:.0f}分</span></div>{price_info}<span class="result pending">⏳ 待檢查</span></div>'
         
         items_html += f'<div class="date-group"><div class="date-header"><span class="date">{date}</span><span class="weekday">{weekday}</span> · {len(recs)} 支</div><div class="rec-list">{recs_html}</div></div>'
     
@@ -457,6 +474,13 @@ def generate_recommendations_page():
         '''
     
     html = f'''
+    <style>
+    .rec-header {{ display: flex; justify-content: space-between; margin-bottom: 8px; }}
+    .price-info {{ font-size: 12px; color: #6b7280; margin-bottom: 4px; }}
+    .price-info span {{ margin-right: 12px; }}
+    .actual-price {{ font-size: 13px; color: #374151; margin-bottom: 2px; }}
+    .max-info {{ font-size: 11px; color: #9ca3af; }}
+    </style>
     <div class="content">
         <div class="content-card">
             <h1>🎯 推薦追蹤</h1>
