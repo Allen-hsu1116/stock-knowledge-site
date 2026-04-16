@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>加碼哲學與部位動態調整策略</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* 推薦追蹤頁面 */
+.rec-list { display: flex; flex-direction: column; gap: 8px; }
+.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
+.rec-item:hover { border-color: var(--primary); }
+.rec-item.checked { background: var(--bg-tertiary); }
+.rec-item .stock { flex: 1; font-weight: 500; }
+.rec-item .score { color: var(--text-muted); margin-right: 16px; }
+.rec-item .result { font-weight: 600; }
+.rec-item .result.success { color: var(--success); }
+.rec-item .result.danger { color: var(--danger); }
+.rec-item .result.pending { color: var(--text-muted); }
+.stats-section { margin-bottom: 32px; }
+.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+        <a href="../recommendations.html">推薦追蹤</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-16</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-16 #2 · <span class="tag">📊 技術分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>加碼哲學與部位動態調整策略</h1>
+                    <h2>第 2 回合學習 - 加碼哲學與部位動態調整策略</h2>
+
+<p><b>時間</b>：01:30</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://abbymt4mt5.com/%E4%BA%A4%E6%98%93%E5%96%AE%E5%8A%A0%E7%A2%BC%E7%9A%84%E8%A7%A3%E6%9E%90%E8%88%87%E9%87%8F%E5%8C%96/">逆勢加碼還是順勢加碼賺比較多？程式交易加碼單的解析與量化</a></li>
+<li><a href="https://vocus.cc/article/67fb4646fd89780001fd522f">山間小屋風雨夜論道：加碼哲學與資金管理</a></li>
+<li><a href="https://www.esunsec.com.tw/article/post/55">技術分析找買點：順勢交易、逆勢交易</a></li>
+</ul>
+
+<hr>
+
+<h2>一、順勢加碼 vs 逆勢加碼</h2>
+
+<h3>1. 順勢加碼（正確做法）</h3>
+
+<p><b>是什麼</b>：前面的單子已經獲利時，才沿著同方向再加碼。行情上漲時加碼做多，行情下跌時加碼做空。</p>
+
+<p><b>怎麼做</b>：<br>
+1. <b>核心原則</b>：只加碼獲利的部位——這是加碼的黃金法則<br>
+2. <b>進場邏輯</b>：初始單有浮盈 → 趨勢確認 → 在回調或突破關鍵位時加碼<br>
+3. <b>風險控制</b>：浮盈增加保證金維持率，加碼幾乎不可能爆倉<br>
+4. <b>出場邏輯</b>：追蹤停損隨價格上移，保護已有獲利</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：台積電(2330)在600元建立多頭部位，漲到630元出現回調到620元</li>
+<li>操作：620元回調支撐確認後加碼，停損統一設610元（前低點下方）</li>
+<li>900點趨勢實例：初始1單位賺900點 + 第一次加碼賺600點 + 第二次加碼賺300點 = 總計1800點，是單持初始部位的2倍</li>
+</ul>
+
+<p><b>適用時機</b>：波段趨勢明確時，搭配順勢策略效果最好；盤整行情不適用</p>
+
+<p><b>優缺點</b>：</p>
+
+<ul>
+<li>✅ 風險低、小賠大賺、長期期望值高</li>
+<li>❌ 勝率低（30-40%）、獲利慢、有獲利回吐的「雙倍痛苦」</li>
+</ul>
+
+<h3>2. 逆勢加碼（攤平，高風險）</h3>
+
+<p><b>是什麼</b>：前面的單子虧損時，反而加碼——行情下跌時加碼做多（攤平成本），行情上漲時加碼做空。</p>
+
+<p><b>怎麼做（如果你硬要做）</b>：<br>
+1. <b>必須設停損</b>：不是凹單，是事先計算好最大可承受虧損<br>
+2. <b>計算總風險</b>：所有加碼單的潛在虧損總和不得超過資金的5-10%<br>
+3. <b>BE點思維</b>：加碼後計算損益兩平點，知道價格回到哪裡就能打平</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：500元買入1張，跌到400元再加碼1張</li>
+<li>BE點 = (500×1 + 400×1) / 2 = 450元</li>
+<li>若400元加碼2張：BE點 = (500×1 + 400×2) / 3 = 433元</li>
+<li>風險：若價格繼續跌到300元，1張加碼虧200元、2張加碼虧400元</li>
+</ul>
+
+<p><b>適用時機</b>：嚴格說不建議。若使用，必須有明確停損且可接受該虧損金額</p>
+
+<p><b>優缺點</b>：</p>
+
+<ul>
+<li>✅ 勝率高（60-70%）、心理感覺較舒服</li>
+<li>❌ 容易凹單越攤越平、風險不可控、一次大行情可能爆倉</li>
+</ul>
+
+<h3>3. 順勢 vs 逆勢期望值比較</h3>
+
+<p><b>是什麼</b>：評估加碼方式好壞的終極標準不是勝率，是期望值。</p>
+
+<p><b>怎麼做</b>：<br>
+1. <b>順勢交易期望值</b>：勝率30%，每次賺500元或虧100元 → 期望值 = 500×0.3 - 100×0.7 = 80元/次<br>
+2. <b>逆勢交易期望值</b>：勝率70%，每次賺100元或虧100元 → 期望值 = 100×0.7 - 100×0.3 = 40元/次<br>
+3. <b>結論</b>：勝率高不代表賺得多，賺賠比才是決定期望值的關鍵</p>
+
+<p><b>適用時機</b>：每次評估策略時都應計算期望值，而非只看勝率</p>
+
+<hr>
+
+<h2>二、加碼量三種模式</h2>
+
+<h3>4. 正金字塔加碼（推薦）</h3>
+
+<p><b>是什麼</b>：每次加碼的量遞減，越加越小。初始倉位最大，後續加碼逐步縮小。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 初始倉位：1單位<br>
+2. 第一次加碼：0.7單位（乘以0.7）<br>
+3. 第二次加碼：0.49單位（乘以0.7）<br>
+4. 第三次加碼：0.34單位（乘以0.7）<br>
+5. 搭配追蹤停損，整體風險可控</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：100萬資金，初始投入20萬，第一次加碼14萬，第二次9.8萬，第三次6.9萬</li>
+<li>總投入：50.7萬，但最新加碼部位最小</li>
+<li>好處：行情反轉時獲利回吐最少，因為越高的價位部位越小</li>
+</ul>
+
+<p><b>適用時機</b>：順勢加碼的最佳搭檔，適合怕獲利回吐的交易者</p>
+
+<h3>5. 倒金字塔加碼（危險）</h3>
+
+<p><b>是什麼</b>：每次加碼量遞增，越加越大。這就是馬丁格爾策略的加碼方式。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 初始：1單位<br>
+2. 第一次加碼：2單位<br>
+3. 第二次加碼：4單位<br>
+4. 第三次加碼：8單位</p>
+
+<p><b>風險</b>：</p>
+
+<ul>
+<li>順勢用倒金字塔：趨勢稍微反轉就虧掉前面所有利潤</li>
+<li>逆勢用倒金字塔（攤平）：價格一去不回頭就爆倉</li>
+</ul>
+
+<p><b>適用時機</b>：不建議。逆勢攤平如果硬要做，至少要設總停損</p>
+
+<h3>6. 固定交易量加碼</h3>
+
+<p><b>是什麼</b>：每次加碼量與初始單相同，簡單直接。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 初始：1單位<br>
+2. 每次加碼：1單位<br>
+3. 搭配追蹤停損，每張單給相同的追蹤停損</p>
+
+<p><b>適用時機</b>：固定點數停損策略時自然產生；簡單好執行</p>
+
+<hr>
+
+<h2>三、BE點（損益兩平點）計算與應用</h2>
+
+<h3>7. BE點是加碼的核心概念</h3>
+
+<p><b>是什麼</b>：所有加碼單合併計算後的均價，也就是整體部位損益兩平的價格。</p>
+
+<p><b>怎麼做</b>：<br>
+1. <b>公式</b>：BE點 = (手數1×價格1 + 手數2×價格2 + ...) / 總手數<br>
+2. <b>實務意義</b>：不用一筆一筆算盈虧，直接看市價與BE點的距離就知道整體盈虧<br>
+3. <b>加碼決策</b>：加碼會改變BE點，順勢加碼會墊高BE點（多單），逆勢加碼會拉低BE點</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：600元買1張台積電，630元加碼1張，650元再加碼1張</li>
+<li>BE點 = (600+630+650) / 3 = 626.7元</li>
+<li>停損設在BE點下方3% = 607.9元，確保即使反轉也不虧太多</li>
+</ul>
+
+<p><b>適用時機</b>：每次加碼後都要重新計算BE點，據此調整停損</p>
+
+<hr>
+
+<h2>四、條件式加碼進階</h2>
+
+<h3>8. 單純條件式加碼</h3>
+
+<p><b>是什麼</b>：只要技術訊號出現就直接加碼，不看價格距離。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 首次出現黃金交叉 → 買進第一張<br>
+2. 第二次出現黃金交叉 → 買進第二張<br>
+3. 第三次出現黃金交叉 → 買進第三張</p>
+
+<p><b>風險</b>：盤整時可能連續在差不多的價位出現交叉訊號，變成在同一個價格疊加部位</p>
+
+<p><b>適用時機</b>：趨勢明確時；盤整時容易過度加碼</p>
+
+<h3>9. 條件式＋距離加碼（推薦）</h3>
+
+<p><b>是什麼</b>：加碼必須同時滿足「技術訊號」和「與上一張單拉開足夠距離」兩個條件。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 首次黃金交叉 → 買進第一張（600元）<br>
+2. 第二次黃金交叉 + 價格必須高於上一張單至少3% → 才加碼（620元以上）<br>
+3. 第三次黃金交叉 + 價格必須高於第二張單至少3% → 才加碼（640元以上）</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>盤整時黃金交叉出現在605元，距離上一張單600元只有0.8% → 不加碼</li>
+<li>趨勢展開後黃金交叉出現在625元，距離上一張600元有4.2% → 加碼</li>
+</ul>
+
+<p><b>適用時機</b>：所有條件式加碼都應加入距離條件，避免盤整中過度加碼</p>
+
+<hr>
+
+<h2>五、加碼時機四大黃金位</h2>
+
+<h3>10. 最佳加碼進場點</h3>
+
+<p><b>是什麼</b>：刀疤老二提出的加碼時機選擇，決定了加碼策略的成敗。</p>
+
+<p><b>怎麼做</b>：<br>
+1. <b>趨勢確認後的第一次回調</b>：多頭趨勢中第一次拉回支撐位 → 最佳加碼點<br>
+2. <b>突破關鍵阻力後的回測</b>：帶量突破前高後回測不破 → 加碼做多<br>
+3. <b>突破支撐後的回測</b>：帶量跌破前低後反彈不過 → 加碼做空<br>
+4. <b>均線回踩確認</b>：價格回踩20MA或60MA獲得支撐 → 加碼做多</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：聯發科(2454)從800元突破前高830元，回測835元不破</li>
+<li>操作：835元加碼做多，停損設825元（回測前高下方），目標880元</li>
+<li>風報比：10:1（風險10元，目標45元）</li>
+</ul>
+
+<p><b>適用時機</b>：搭配正金字塔加碼，在低風險高回報的位置加碼</p>
+
+<hr>
+
+<h2>六、加碼常見三大錯誤</h2>
+
+<h3>11. 避開這三個坑</h3>
+
+<p><b>是什麼</b>：刀疤老二指出的加碼三大致命錯誤。</p>
+
+<p><b>怎麼做（避免方法）</b>：<br>
+1. <b>逆勢加碼</b>（最大殺手）：虧損部位絕不加碼，這是李佛摩的核心教訓<br>
+2. <b>過早加碼</b>：趨勢尚未確立就急於擴大倉位 → 等趨勢確認後才加碼<br>
+3. <b>情緒化加碼</b>：恐懼錯過行情（FOMO）或想要快速翻本 → 建立加碼SOP，不憑感覺加碼</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>錯誤：600元買進，跌到580元「攤平」再加1張，跌到560元又加2張 → BE點586元，價格繼續跌到500元虧損86元×3=258元</li>
+<li>正確：600元買進，漲到630元回調620元加碼 → 即使跌回600元也只是獲利回吐，不會虧到本金</li>
+</ul>
+
+<p><b>適用時機</b>：每次想加碼前都要問自己「這是獲利加碼還是虧損攤平？」</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>今天學的加碼哲學雖然之前有學過金字塔加碼，但這次深入到「方向」和「量」兩個維度，收穫很大：</p>
+
+<p>1. <b>順勢加碼vs逆勢加碼不是選擇題，是生死題</b>。逆勢加碼（攤平）的本質是放任風險擴大、賺錢時急著收，這跟所有正期望值系統背道而馳。順勢加碼雖然有獲利回吐的雙倍痛苦，但那是「正確的痛苦」——你在對的方向承受波動，而不是在錯的方向越陷越深。</p>
+
+<p>2. <b>正金字塔加碼是最務實的選擇</b>。越加越小不是因為不夠勇敢，而是因為趨勢越走越遠時繼續前進的機率在降低。這跟「承認不確定性」的思維一致——你對近端有信心，對遠端要保持敬畏。</p>
+
+<p>3. <b>BE點是加碼的靈魂</b>。不管加了幾張單，全部簡化成一個均價來看盈虧。這讓複雜的多單管理變得清晰——停損就設在BE點下方一定比例，不用一筆一筆算。</p>
+
+<p>4. <b>條件式加碼一定要加距離條件</b>。單純看訊號加碼，盤整時會在同一價格附近越加越多，風險全部堆在一起。加了距離條件後，只有在真正展開的行情才會加碼，盤整時自動過濾。</p>
+
+<p>5. <b>加碼前提：你已經能穩定執行停損</b>。刀疤老二說得好——加碼是為了放大成功，不是彌補失敗。如果你連單筆停損都執行不好，加碼只會加速你的死亡。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+
+<hr>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>
