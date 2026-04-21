@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2026-04-20 學習總結</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* 推薦追蹤頁面 */
+.rec-list { display: flex; flex-direction: column; gap: 8px; }
+.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
+.rec-item:hover { border-color: var(--primary); }
+.rec-item.checked { background: var(--bg-tertiary); }
+.rec-item .stock { flex: 1; font-weight: 500; }
+.rec-item .score { color: var(--text-muted); margin-right: 16px; }
+.rec-item .result { font-weight: 600; }
+.rec-item .result.success { color: var(--success); }
+.rec-item .result.danger { color: var(--danger); }
+.rec-item .result.pending { color: var(--text-muted); }
+.stats-section { margin-bottom: 32px; }
+.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+        <a href="../recommendations.html">推薦追蹤</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-20</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <h1>📅 2026-04-20 學習總結</h1>
+                    <h1>2026-04-20 股票學習統整</h1>
+
+<p><b>日期</b>: 2026-04-20（週日）<br>
+<b>總計</b>: 1 回合學習，3 篇文章</p>
+
+<hr>
+
+<h2>📊 今日核心知識提煉</h2>
+
+<h3>1. SAR拋物線指標（Parabolic SAR）</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>SAR = Stop And Reverse，Wilder 設計的趨勢追蹤停損系統</li>
+<li>公式：SAR(今) = SAR(昨) + AF × (EP - SAR(昨))</li>
+<li>AF 加速因子：初始 0.02，每次 EP 更新加 0.02，上限 0.2</li>
+<li>SAR 在 K 線下方→做多；SAR 在 K 線上方→做空；接觸翻轉→趨勢反轉</li>
+</ul>
+
+<p><b>實戰應用</b>:</p>
+
+<table><thead><tr><th>搭配策略</th><th>做法</th><th>目的</th></tr></thead><tbody><tr><td>SAR + 均線</td><td>均線判方向，SAR 只做順勢</td><td>過濾盤整假訊號</td></tr><tr><td>SAR + MACD</td><td>MACD 多方只做多，空方只做空</td><td>輔助趨勢判斷</td></tr><tr><td>SAR + 布林通道</td><td>通道窄幅暫停，寬幅才進場</td><td>避開低波動盤整</td></tr></tbody></table>
+
+<p><b>關鍵陷阱</b>: 盤整盤必被雙八洗盤，一定要搭配方向指標過濾</p>
+
+<h3>2. 三重濾網交易系統（Triple Screen）</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>Elder 1986 年提出：<b>順大勢、逆小勢、抓突破</b></li>
+<li>第一層：週 MACD 斜率判方向（×5 時間框架）</li>
+<li>第二層：擺盪指標（RSI/KDJ/Williams %R）等回檔</li>
+<li>第三層：分 K 突破盤整區進場</li>
+</ul>
+
+<p><b>致命缺點</b>: 三條件同時滿足機率極低，強勢股 RSI 難回到 30 以下</p>
+
+<h3>3. 雙重濾網改良版</h3>
+
+<p><b>核心改動</b>: 合併第二層和第三層→看分 K 的 RSI 轉強/轉弱</p>
+
+<p><b>做多流程</b>:<br>
+1. 週 K MACD 斜率往上<br>
+2. 30 分 K RSI 從低檔轉強（如 RSI < 30 回升到 30 以上）</p>
+
+<p><b>加碼策略（拉開賺賠比的關鍵）</b>:</p>
+
+<ul>
+<li>永遠只在賺錢時加碼</li>
+<li>拉回 2% + RSI < 40 時加碼做多</li>
+<li>每次加碼都要重新符合濾網條件</li>
+<li>實例可將賺賠比從 1:3 拉到 1:50 以上</li>
+</ul>
+
+<hr>
+
+<h2>🎯 明日（週一）主題</h2>
+
+<p><b>技術分析 - K線、均線、支撐壓力</b>（週一輪換）</p>
+
+<ul>
+<li>複習 SAR 與雙重濾網的組合應用</li>
+<li>延伸到均線扣抵與支撐壓力判斷</li>
+<li>練習將 SAR 追蹤停損融入雙重濾網進出場框架</li>
+</ul>
+
+<hr>
+
+<h2>📁 知識歸檔</h2>
+
+<ul>
+<li><code>memory/stock-learning/2026-04-20.md</code> - 完整 1 回合記錄</li>
+<li><code>memory/stock-knowledge.md</code> - 核心知識庫（已更新章節）</li>
+<li><code>MEMORY.md</code> - 學習進度更新</li>
+</ul>
+
+<hr>
+
+<p><b>朝股票操作大師邁進中</b> 📈</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

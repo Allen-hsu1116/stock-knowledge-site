@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>基本面分析：盈餘品質與Sloan應計項目異象</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* 推薦追蹤頁面 */
+.rec-list { display: flex; flex-direction: column; gap: 8px; }
+.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
+.rec-item:hover { border-color: var(--primary); }
+.rec-item.checked { background: var(--bg-tertiary); }
+.rec-item .stock { flex: 1; font-weight: 500; }
+.rec-item .score { color: var(--text-muted); margin-right: 16px; }
+.rec-item .result { font-weight: 600; }
+.rec-item .result.success { color: var(--success); }
+.rec-item .result.danger { color: var(--danger); }
+.rec-item .result.pending { color: var(--text-muted); }
+.stats-section { margin-bottom: 32px; }
+.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+        <a href="../recommendations.html">推薦追蹤</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-21</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-21 #10 · <span class="tag">📊 技術分析</span><span class="tag">💰 基本面分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>基本面分析：盈餘品質與Sloan應計項目異象</h1>
+                    <h2>第 10 回合學習 - 基本面分析：盈餘品質與Sloan應計項目異象</h2>
+
+<p><b>時間</b>：19:22</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://vocus.cc/article/63b3c99ffd89780001ed6c88">學會這招每年績效升高2%——盈餘品質對股票報酬影響</a></li>
+<li><a href="https://trvanalyzer.com/sloan-ratio-why-investors-should-care-about-accruals-earnings-quality/">Sloan Ratio - Why investors should care about accruals & earnings quality</a></li>
+<li><a href="https://www.oldschoolvalue.com/stock-valuation/how-to-beat-the-market-with-the-sloan-ratio/">How to Use the Sloan Ratio to Beat the Market</a></li>
+<li><a href="https://quantpedia.com/strategies/accrual-anomaly">Accrual Anomaly - Quantpedia</a></li>
+</ul>
+
+<hr>
+
+<h2>一、盈餘品質是什麼？為什麼重要？</h2>
+
+<p><b>核心觀念</b>：$1盈餘 ≠ $1現金。</p>
+
+<p>會計制度採用「應計基礎」（Accrual Basis），公司帳面上的盈餘包含了大量非現金項目，這些叫<b>應計項目（Accruals）</b>。包括：</p>
+
+<ul>
+<li>應收帳款增加（東西賣了但錢還沒收到）</li>
+<li>折舊攤銷（非現金費用）</li>
+<li>存貨增加（買了但還沒賣出）</li>
+</ul>
+
+<p><b>盈餘品質（Earnings Quality）</b>就是在問：這家公司的盈餘，有多少是真的現金流入？還是只是帳面上的數字遊戲？</p>
+
+<h2>二、Sloan 應計項目異象（Accrual Anomaly）</h2>
+
+<h3>發現者：Richard Sloan（1996年）</h3>
+
+<p>Sloan 在 1996 年的論文發現了一個驚人的事實：</p>
+
+<p>> <b>應計項目高的公司，未來股價表現差；應計項目低的公司，未來股價表現好。</b></p>
+
+<p>這個現象被稱為「應計項目異象」，是市場中最被廣泛研究且持久的市場異常現象之一。</p>
+
+<h3>歷史回測數據</h3>
+
+<ul>
+<li><b>1962-2001年</b>（美股市場，40年）：買入最低應計項目公司 + 做空最高應計項目公司 → <b>年均複合報酬率 18%</b>，同期 S&P 500 僅 7.4%</li>
+<li><b>台股回測</b>（曹壽民等，2008）：台股也存在應計項目高估現象</li>
+<li><b>全球市場</b>（LaFond，17國研究）：應計項目異象是全球性現象</li>
+</ul>
+
+<h3>為什麼會存在？</h3>
+
+<p><b>盈餘 fixation 假說（Earnings Fixation Hypothesis）</b>：<br>
+1. 投資人過度關注「盈餘」這個單一數字<br>
+2. 忽略了盈餘中的「現金流」和「應計項目」兩個組成部分的差異<br>
+3. 現金流部分是未來盈餘的更好預測因子，應計項目的持續性較差<br>
+4. 結果：投資人對高應計項目公司過度樂觀（高估），對低應計項目公司過度悲觀（低估）</p>
+
+<h2>三、Sloan Ratio 三種計算法</h2>
+
+<h3>方法一：Sloan Ratio（現金流量法）</h3>
+
+<p>> <b>Sloan Ratio = (Net Income − CFO − CFI) / Total Assets</b></p>
+
+<ul>
+<li>CFO = 營業現金流</li>
+<li>CFI = 投資現金流</li>
+<li>Total Assets = 總資產</li>
+</ul>
+
+<p><b>判讀標準</b>：</p>
+
+<table><thead><tr><th>Sloan Ratio</th><th>判斷</th></tr></thead><tbody><tr><td>-10% ~ +10%</td><td>✅ 安全區 — 盈餘品質良好</td></tr><tr><td>-25% ~ -10% 或 +10% ~ +25%</td><td>⚠️ 警告區 — 應計項目累積中</td></tr><tr><td>< -25% 或 > +25%</td><td>🔴 危險區 — 盈餘很可能由應計項目組成</td></tr></tbody></table>
+
+<p><b>注意</b>：如果 Sloan Ratio 連續多季或多年處於危險區，那幾乎可以確定公司在玩會計遊戲。</p>
+
+<h3>方法二：資產負債表應計比率（Balance Sheet Accrual Ratio）</h3>
+
+<p><b>步驟</b>：<br>
+1. 計算淨營業資產（NOA）：<br>
+> NOA = (流動資產 − 現金) + (非流動資產) − (流動負債 − 短期借款) − (非流動負債)</p>
+
+<p>2. 計算應計項目：<br>
+> BS Accruals = 當期 NOA − 前期 NOA</p>
+
+<p>3. 計算比率：<br>
+> BS Accrual Ratio = BS Accruals / 平均 NOA</p>
+
+<h3>方法三：Sloan 原始公式（學術版）</h3>
+
+<p>> <b>Accruals = [(Δ流動資產 − Δ現金) − (Δ流動負債 − Δ短期借款 − Δ應付所得稅) − 折舊費用] / 前期總資產</b></p>
+
+<p>Δ = 與去年同期的變動數</p>
+
+<h3>方法四：財報狗簡易法</h3>
+
+<p>> <b>(營業現金流 − 淨利) / 總資產</b></p>
+
+<p>或更直觀的：<br>
+> <b>營業現金流 / 淨利</b></p>
+
+<p>這個方法最簡單，但 Sloan 原始公式的選股效果更好（回測顯示排除高應計項目後，投資組合報酬比未調整前高出 2% 以上，夏普值也大幅改善）。</p>
+
+<h2>四、Sloan Ratio 實戰選股策略</h2>
+
+<h3>策略一：排除法（最簡單、最實用）</h3>
+
+<p><b>怎麼做</b>：<br>
+1. 每年5月（所有公司年報出爐後），計算所有股票的 Sloan Ratio<br>
+2. <b>排除</b> Sloan Ratio > 10% 的公司（約占整體的 30%）<br>
+3. 在剩餘的 70% 中做選股</p>
+
+<p><b>回測效果</b>：</p>
+
+<ul>
+<li>排除高應計項目公司後，每年預期報酬提高約 2%</li>
+<li>夏普值大幅改善</li>
+<li>不需要做空，只需「不買」爛的</li>
+</ul>
+
+<h3>策略二：多空策略（機構級）</h3>
+
+<p><b>怎麼做</b>：<br>
+1. 將所有股票按 Sloan Ratio 分成十等分（Decile）<br>
+2. 做多最低應計項目的 10%（第十組）<br>
+3. 做空最高應計項目的 10%（第一組）<br>
+4. 每年5月再平衡</p>
+
+<p><b>回測效果</b>（1966-2003年美股）：</p>
+
+<ul>
+<li>年化報酬：7.5%</li>
+<li>年化波動：10.26%</li>
+<li>最大回撤：-35.58%</li>
+<li>夏普比率：0.34</li>
+</ul>
+
+<h3>策略三：結合其他指標（最推薦）</h3>
+
+<p><b>Sloan Ratio 不是單獨使用的指標，而是過濾器！</b></p>
+
+<p><b>實戰 SOP</b>：<br>
+1. 用 Sloan Ratio 過濾掉盈餘品質差的公司（Sloan Ratio > 10%）<br>
+2. 在剩餘股票中用其他選股條件篩選：</p>
+
+<ul>
+<li>PEG < 1（成長合理價）</li>
+</ul>
+
+<p>3. 每年5月重新篩選</p>
+
+<h2>五、應計項目的紅旗訊號</h2>
+
+<p>以下情況出現時，要特別警覺：</p>
+
+<p>1. <b>盈餘跳增但 Sloan Ratio 也跳增</b> → 盈餘成長是假的，靠應計項目撐出來的<br>
+2. <b>營收成長率高於產業平均 + Sloan Ratio 也高於產業平均</b> → 可能是通路塞貨<br>
+3. <b>高資產負債表應計項目</b> → 公司快速擴張資產基礎，可能來自併購或過度投資<br>
+4. <b>高應計項目的公司通常有高 ROE</b> → 但這個 ROE 是虛的，不可持續<br>
+5. <b>低應計項目的公司 ROE 低於平均</b> → 分析師可能低估了，反而是撿便宜的機會<br>
+6. <b>低應計項目的公司在縮減資產</b> → 可能是分拆、回購或大額減損，這些通常是好信號</p>
+
+<h2>六、應計項目異象的兩種類型</h2>
+
+<p>Detzel, Schabel & Strauss（2017）發現，應計項目異象其實是<b>兩個不同的現象</b>：</p>
+
+<table><thead><tr><th>類型</th><th>來源</th><th>性質</th><th>市場情緒關係</th></tr></thead><tbody><tr><td>投資相關應計項目</td><td>併購、資本支出、擴張</td><td>風險溢價</td><td>與市場情緒負相關</td></tr><tr><td>非投資應計項目</td><td>應收帳款、存貨、遞延收入</td><td>錯誤定價</td><td>與市場情緒正相關</td></tr></tbody></table>
+
+<p><b>實戰意義</b>：</p>
+
+<ul>
+<li>非投資應計項目的異象更像是「錯誤定價」，可以用來選股獲利</li>
+<li>投資相關應計項目的異象更像是「風險溢價」，不一定是套利機會</li>
+<li><b>優先關注非投資應計項目</b>（應收帳款暴增、存貨暴增）</li>
+</ul>
+
+<h2>七、異象的衰減與復甦</h2>
+
+<ul>
+<li><b>1962-2002年</b>：異象穩定存在，顯著超額報酬</li>
+<li><b>2003年後</b>：隨著分析師現金流預測普及，異象有所減弱</li>
+<li><b>2008年後</b>：金融海嘯後，盈餘品質信號強勁回歸</li>
+</ul>
+
+<p><b>原因</b>：分析師開始提供現金流預測，市場對應計項目的定價效率提高了。但高應計項目公司通常是小盤股、流動性差、交易成本高，機構不願意碰，所以異象仍存在。</p>
+
+<h2>八、台股實戰案例</h2>
+
+<h3>假設情境：某電子股</h3>
+
+<table><thead><tr><th>項目</th><th>數值</th></tr></thead><tbody><tr><td>淨利</td><td>50億</td></tr><tr><td>營業現金流</td><td>20億</td></tr><tr><td>投資現金流</td><td>-5億</td></tr><tr><td>總資產</td><td>400億</td></tr></tbody></table>
+
+<p><b>Sloan Ratio</b> = (50 − 20 − (−5)) / 400 = 35 / 400 = <b>8.75%</b></p>
+
+<p>✅ 在安全區（< 10%），但接近警告邊界，值得持續追蹤。</p>
+
+<h3>如果營業現金流只有 5 億呢？</h3>
+
+<p><b>Sloan Ratio</b> = (50 − 5 − (−5)) / 400 = 50 / 400 = <b>12.5%</b></p>
+
+<p>⚠️ 進入警告區！盈餘有大量應計項目支撐，品質堪慮。</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>這個 Sloan Ratio 真的是個被低估的武器。大多數投資人只看 EPS 和營收成長率，但完全不關心這些盈餘背後有多少是真的現金。這就像一個人月薪 10 萬但 7 萬都是欠條——看起來收入很高，實際口袋裡沒幾塊錢。</p>
+
+<p>最實用的方式就是把 Sloan Ratio 當成過濾器：不需要做空，只要<b>不買 Sloan Ratio > 10% 的公司</b>，就能每年多賺 2%。這個動作幾乎零成本，但長期效果顯著。</p>
+
+<p>另外一個重要洞察：高應計項目的公司通常也有高 ROE。所以如果只看 ROE 選股，很可能選到「看起來很會賺但其盈餘品質很差」的公司。這解釋了為什麼有些 ROE 很高的公司股價就是不漲——市場最終會看穿這些「紙上富貴」。</p>
+
+<p>結合之前學過的 F-Score、FCF 選股、Beneish M-Score，現在可以組成一個多層盈餘品質檢查：<br>
+1. Sloan Ratio < 10%（應計項目正常）<br>
+2. F-Score ≥ 7（財務趨勢改善）<br>
+3. FCF為正且FCF Margin > 5%（真的有現金進來）<br>
+4. Beneish M-Score < -1.78（沒有造假跡象）</p>
+
+<p>這四道關卡全過的公司，盈餘品質才真正靠譜。</p>
+
+<p>朝股票操作大師邁進中 📈## 第 20 回合學習 - 基本面分析：P/S股價營收比估值、可轉換公司債投資實戰</p>
+
+<p><b>時間</b>：20:22</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://rich01.com/what-is-ps-ratio/">股價營收比是什麼？股價營收比和本益比差在哪？ - Mr.Market市場先生</a></li>
+<li><a href="https://www.stockfeel.com.tw/%E5%82%B5%E5%88%B8-%E5%8F%AF%E8%BD%89%E5%82%B5-cb/">可轉債｜可轉債是什麼？如何影響股價？一文認識可轉換公司債！ - StockFeel</a></li>
+<li><a href="https://vocus.cc/article/6847c43ffd89780001713071">可轉債結構系列 EP 08 | 轉換價格的數學 - Rex大叔</a></li>
+<li><a href="https://www.stockfeel.com.tw/10-%E7%A8%AE%E5%BF%85%E7%9F%A5%E7%9A%84%E5%85%AC%E5%8F%B8%E4%BC%B0%E5%80%BC%E6%96%B9%E6%B3%95/">股票估值怎麼算？10種必知的公司估值方法！ - StockFeel</a></li>
+</ul>
+
+<hr>
+
+<h2>一、P/S股價營收比（Price-to-Sales Ratio）— 本益比不能用的時候，靠它估值</h2>
+
+<h3>是什麼</h3>
+
+<p>股價營收比（P/S Ratio，又稱市銷率、PSR）= 市值 ÷ 年營業收入，或等價地 = 每股股價 ÷ 每股營收。</p>
+
+<p>告訴你：投資人願意為每1元營收支付多少元。</p>
+
+<p><b>由Kenneth L. Fisher（成長股大師Philip Fisher的兒子）在1984年《Super Stocks》一書中提出</b>，專門用來識別被低估的股票。</p>
+
+<h3>為什麼需要P/S？本益比不能用的三種情境</h3>
+
+<p><b>情境一：公司虧損中</b></p>
+
+<ul>
+<li>EPS為負 → 本益比算不出來或為負值</li>
+<li>例子：Amazon 1997-2003年連續虧損，PE完全失靈</li>
+<li>但營收永遠為正 → P/S可以正常計算</li>
+</ul>
+
+<p><b>情境二：獲利波動劇烈</b></p>
+
+<ul>
+<li>景氣循環股盈餘大起大落，PE忽高忽低</li>
+<li>營收相對穩定 → P/S判斷更可靠</li>
+</ul>
+
+<p><b>情境三：高成長公司大量再投資</b></p>
+
+<ul>
+<li>成長型公司把利潤全部再投資，EPS極低</li>
+<li>PE可能幾百倍，看不出估值意義</li>
+<li>P/S直接看市場給多少「營收溢價」</li>
+</ul>
+
+<h3>P/S計算公式</h3>
+
+<p>> P/S = 市值 ÷ 年營業收入<br>
+> P/S = 每股股價 ÷ 每股營收</p>
+
+<p><b>怎麼做</b>：<br>
+1. 取得公司最新市值（股價 × 在外流通股數）<br>
+2. 取得近四季或年度營業收入<br>
+3. 兩者相除即得P/S</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>Amazon 2003年：市值約140億美元，年營收約75億美元 → P/S ≈ 1.9</li>
+<li>Amazon 1999年（泡沫高峰）：P/S曾接近40倍 → 嚴重高估</li>
+<li>Amazon 成熟期：P/S穩定在1.5~3倍之間</li>
+</ul>
+
+<h3>P/S判讀 — 沒有絕對標準，只能相對比較</h3>
+
+<p><b>關鍵原則</b>：P/S沒有像PE那樣的「合理區間」，因為不同產業的淨利率天差地遠。</p>
+
+<table><thead><tr><th>產業</th><th>淨利率</th><th>合理P/S範圍</th><th>原因</th></tr></thead><tbody><tr><td>軟體SaaS</td><td>20-40%</td><td>5-15倍</td><td>淨利率高，1元營收利潤多</td></tr><tr><td>半導體</td><td>15-30%</td><td>3-8倍</td><td>高毛利但資本支出大</td></tr><tr><td>消費品</td><td>5-15%</td><td>1-3倍</td><td>穩定但利潤薄</td></tr><tr><td>零售/電商</td><td>1-5%</td><td>0.3-1倍</td><td>利潤極薄但週轉快</td></tr><tr><td>生技（虧損中）</td><td>N/A</td><td>看管線價值</td><td>沒有營收或利潤為負</td></tr></tbody></table>
+
+<p><b>怎麼做</b>：<br>
+1. 先確認產業的合理P/S範圍<br>
+2. 與同業比較：同產業同淨利率的公司互相比較<br>
+3. 與自身歷史比較：P/S在歷史區間的位置<br>
+4. 搭配淨利率一起看</p>
+
+<h3>P/S與淨利率的關係 — 為什麼不能跨產業比較</h3>
+
+<p>P/S和淨利率之間有一個重要的理論關係：</p>
+
+<p>> P/S ≈ 本益比 × 淨利率</p>
+
+<p>推導：P/S = 股價/營收 = (股價/EPS) × (EPS/營收) = PE × 淨利率</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>A公司：淨利率20%、PE 15倍 → P/S = 15 × 20% = 3倍</li>
+<li>B公司：淨利率3%、PE 15倍 → P/S = 15 × 3% = 0.45倍</li>
+</ul>
+
+<p>同樣PE 15倍，A公司P/S是3倍、B公司P/S是0.45倍——差距6.7倍！所以跨產業比P/S毫無意義。</p>
+
+<h3>P/S的五大使用陷阱</h3>
+
+<p><b>陷阱一：P/S低≠便宜</b></p>
+
+<ul>
+<li>低P/S可能是因為市場正確地看壞公司前景</li>
+<li>營收衰退的公司，低P/S只是在反映未來營收將下滑</li>
+<li>一定要搭配營收成長率一起看</li>
+</ul>
+
+<p><b>陷阱二：P/S不考慮利潤率和負債</b></p>
+
+<ul>
+<li>兩家P/S相同的公司，淨利率差5倍，估值意義完全不同</li>
+<li>高負債公司的低P/S可能是因為債務風險壓抑了市值</li>
+</ul>
+
+<p><b>陷阱三：營收可以灌水</b></p>
+
+<ul>
+<li>本益比用的是稅後淨利，已扣掉所有費用</li>
+<li>P/S用的是營收，公司可以透過總額法認列灌水</li>
+<li>一定要確認營收認列方式（總額法 vs 淨額法）</li>
+</ul>
+
+<p><b>陷阱四：併購會扭曲營收</b></p>
+
+<ul>
+<li>併購後營收暴增，P/S突然下降，但這不代表變便宜</li>
+<li>併購前的P/S和併購後的P/S不可直接比較</li>
+</ul>
+
+<p><b>陷阱五：成長性才是關鍵</b></p>
+
+<ul>
+<li>P/S用的是過去營收，但決定股價的是未來預期</li>
+<li>衰退中的公司P/S低，是因為營收持續萎縮</li>
+<li>成長中的公司P/S高，是因為市場預期營收會大幅增長</li>
+</ul>
+
+<h3>P/S實戰選股SOP</h3>
+
+<p><b>怎麼做（三步篩選法）</b>：</p>
+
+<p>1. <b>第一步：與同業比較P/S</b></p>
+
+<ul>
+<li>找出同產業、淨利率相近的公司</li>
+</ul>
+
+<p>2. <b>第二步：確認營收成長率</b></p>
+
+<ul>
+<li>營收年增率 > 15% + P/S低於同業 → 值得深入研究</li>
+</ul>
+
+<p>3. <b>第三步：交叉驗證其他指標</b></p>
+
+<ul>
+<li>P/S搭配PE：如果P/S低但PE合理 → 獲利能力正常，可能被低估</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>成長型公司（虧損中但有營收）→ P/S是首選估值指標</li>
+<li>景氣循環股（盈餘波動大）→ P/S比PE更穩定</li>
+<li>搭配PE和PBR使用，形成完整的估值框架</li>
+</ul>
+
+<hr>
+
+<h2>二、可轉換公司債（Convertible Bond, CB）— 進可攻退可守的投資工具</h2>
+
+<h3>是什麼</h3>
+
+<p>可轉換公司債（CB）是企業發行的債券，同時具備「債券」和「股票」雙重特性：</p>
+
+<ul>
+<li><b>債券特性</b>：定期領息、到期還本，下檔有保護</li>
+<li><b>股票特性</b>：可在約定條件下轉換為發行公司的股票，上檔有參與</li>
+</ul>
+
+<p><b>核心邏輯</b>：股價下跌時，持有到期領回本金+利息（抗跌）；股價大漲時，轉換成股票賺取價差（跟漲）。</p>
+
+<h3>CB三大核心要素</h3>
+
+<p><b>1. 轉換價格（Conversion Price）</b></p>
+
+<ul>
+<li>可轉債轉換為股票的約定價格</li>
+<li>發行時就確定，不會隨意改變</li>
+<li>除非發生除權息、減資、增資等事件才會調整</li>
+</ul>
+
+<p><b>2. 轉換比率（Conversion Ratio）</b></p>
+
+<ul>
+<li>一張可轉債可以換多少股股票</li>
+<li>公式：轉換比率 = 可轉債面額（10萬元）÷ 轉換價格</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>轉換價格20元 → 可換 100,000 ÷ 20 = 5,000股 = 5張股票</li>
+<li>轉換價格50元 → 可換 100,000 ÷ 50 = 2,000股 = 2張股票</li>
+<li>轉換價格100元 → 可換 100,000 ÷ 100 = 1,000股 = 1張股票</li>
+</ul>
+
+<p><b>3. 轉換價值（Conversion Value）</b></p>
+
+<ul>
+<li>可轉債轉換成股票後的市值</li>
+<li>公式：轉換價值 = 股價 × 轉換比率</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>轉換價格50元，可換2,000股</li>
+<li>當股價60元時：轉換價值 = 60 × 2,000 = 120,000元</li>
+<li>當股價40元時：轉換價值 = 40 × 2,000 = 80,000元</li>
+</ul>
+
+<h3>CB的定價邏輯 — 債券底線 + 股票選擇權</h3>
+
+<p>可轉債的價值 = max(債券價值, 轉換價值) + 選擇權時間價值</p>
+
+<p><b>三種狀態</b>：</p>
+
+<table><thead><tr><th>狀態</th><th>條件</th><th>CB行為</th><th>投資策略</th></tr></thead><tbody><tr><td>深度價外</td><td>股價遠低於轉換價格</td><td>CB像純債券，價格接近債券底線</td><td>領息為主，等待反轉</td></tr><tr><td>價平附近</td><td>股價接近轉換價格</td><td>CB同時受債券和股票影響</td><td>最佳投資區間</td></tr><tr><td>深度價內</td><td>股價遠高於轉換價格</td><td>CB像股票，價格跟隨股價</td><td>已有轉換利潤，注意贖回風險</td></tr></tbody></table>
+
+<h3>距離比例 — CB投資時機的關鍵指標</h3>
+
+<p>> 距離比例 = 股價 ÷ 轉換價格</p>
+
+<p><b>最佳投資區間：距離比例 0.8 ~ 0.95</b></p>
+
+<ul>
+<li>距離比例 0.5：股價要漲100%才能到轉換價格，難度太高</li>
+<li>距離比例 0.8：股價再漲25%就到轉換價格，CP值高</li>
+<li>距離比例 0.95：股價接近轉換價格，上檔空間近</li>
+<li>距離比例 1.3：股價已超過轉換價格30%，要小心公司執行贖回條款</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 找出有發行可轉債的公司<br>
+2. 計算距離比例 = 現股價 ÷ 轉換價格<br>
+3. 篩選距離比例在0.8-0.95的標的<br>
+4. 進一步分析公司基本面和產業前景<br>
+5. 基本面看好 + 距離比例適中 → 買進CB</p>
+
+<h3>轉換溢價率 — CB是否值得買的量化判斷</h3>
+
+<p>> 轉換溢價率 = (CB市價 - 轉換價值) ÷ 轉換價值 × 100%</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>CB市價 110,000元，轉換價值 100,000元</li>
+<li>轉換溢價率 = (110,000 - 100,000) ÷ 100,000 × 100% = 10%</li>
+</ul>
+
+<p><b>判讀</b>：</p>
+
+<ul>
+<li>溢價率 0-5%：CB接近轉換價值，接近「價內」，投資價值高</li>
+<li>溢價率 5-15%：適度溢價，為選擇權付出的合理代價</li>
+<li>溢價率 15-30%：溢價偏高，需要更大的股價漲幅才能回本</li>
+<li>溢價率 > 30%：嚴重溢價，投資價值低</li>
+</ul>
+
+<h3>CB投資的四大陷阱</h3>
+
+<p><b>陷阱一：虛假的低轉換價格</b></p>
+
+<ul>
+<li>公司股價5元，轉換價格6元，看起來很近</li>
+<li>但如果基本面差，股價可能繼續跌到3元、2元</li>
+<li>轉換價格再低，也要搭配基本面分析</li>
+</ul>
+
+<p><b>陷阱二：過高的轉換溢價率</b></p>
+
+<ul>
+<li>溢價率超過15%，股價要漲很多才有轉換價值</li>
+<li>等於花很多錢買一個可能不值得的選擇權</li>
+</ul>
+
+<p><b>陷阱三：即將到期的遠價外CB</b></p>
+
+<ul>
+<li>剩餘時間短 + 股價遠低於轉換價格 = 時間價值快歸零</li>
+<li>除非有事件催化，否則只能當普通債券持有到期</li>
+</ul>
+
+<p><b>陷阱四：忽略信用風險</b></p>
+
+<ul>
+<li>CB本質上還是債券，公司倒閉就拿不回本金</li>
+<li>投資前必須確認發行公司的財務狀況</li>
+<li>信用評等低的公司，CB的債券保護力也低</li>
+</ul>
+
+<h3>CB對股價的影響 — 轉換價格是天花板</h3>
+
+<p>當股價超過轉換價格時，可轉債投資人會轉換成股票並賣出，形成短期賣壓。</p>
+
+<p><b>怎麼做</b>：<br>
+1. 查詢公司可轉債的轉換價格和到期日<br>
+2. 當股價接近轉換價格時，預期賣壓增加<br>
+3. 轉換價格往往成為短期壓力區（天花板效應）<br>
+4. 股價突破轉換價格後，可轉債大量轉換會稀釋EPS</p>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>看到中小型股股價在特定價位遇到壓力 → 查是否有可轉債轉換壓力</li>
+<li>公司發行可轉債的目的：利率低+不用還債（轉換後股本膨脹）</li>
+<li>財務吃緊的公司可能炒作股價讓CB轉換 → 對股票投資人不利</li>
+</ul>
+
+<h3>CB除權息調整機制</h3>
+
+<p>轉換價格不是一成不變的。當公司除權息時，轉換價格會自動調整：</p>
+
+<p>> 新轉換價格 = 原轉換價格 × (1 - 現金股利 ÷ 每股時價)</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>轉換價格100元，公司每股配息3元，除息前股價100元</li>
+<li>新轉換價格 = 100 × (1 - 3/100) = 97元</li>
+<li>除息後股價變97元，轉換價格也變97元 → 投資人權益獲得保護</li>
+</ul>
+
+<p><b>重要提醒</b>：</p>
+
+<ul>
+<li>重設條款（股價下跌時重新設定更低的轉換價格）已經不再使用</li>
+<li>目前市面上的CB都沒有重設條款</li>
+<li>轉換價格只會因除權息等事件調整，不會因股價下跌而自動下修</li>
+</ul>
+
+<h3>CB投資策略總結</h3>
+
+<p><b>策略一：價外CB + 基本面看好 = 低風險高報酬</b></p>
+
+<ul>
+<li>距離比例0.8-0.95，公司基本面佳</li>
+<li>最壞情況：持有到期拿回本金+利息</li>
+<li>最好情況：股價上漲，轉換賺價差</li>
+</ul>
+
+<p><b>策略二：價內CB = 股票替代品</b></p>
+
+<ul>
+<li>距離比例>1.0，CB價格跟隨股價</li>
+<li>優點：下檔有債券保護</li>
+<li>缺點：溢價已反映，上漲空間有限</li>
+</ul>
+
+<p><b>策略三：CB套利</b></p>
+
+<ul>
+<li>當CB市價低於轉換價值時，買入CB同時放空股票</li>
+<li>獲利 = 轉換價值 - CB市價 - 交易成本</li>
+<li>需要考慮流動性和融券成本</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>今天學了兩個主題，一個是估值工具箱裡的P/S Ratio，一個是進可攻退可守的可轉債。</p>
+
+<p>P/S最核心的概念是：<b>當本益比不能用時，P/S是你的替代方案</b>。虧損中的公司、高成長公司、景氣循環股——這些PE失靈的場景，P/S依然有效。但P/S最大的陷阱就是「低P/S=便宜」的直覺，因為不同產業的淨利率天差地遠，軟體公司P/S 5倍可能比零售公司P/S 0.5倍還便宜。記住 P/S ≈ PE × 淨利率 這個公式，就能理解為什麼跨產業比P/S沒意義。</p>
+
+<p>Kenneth Fisher提出P/S的初衷，其實就是為了抓到Amazon這種「營收在長但利潤被再投資吃掉」的公司。Amazon在2003年P/S約1.9倍，看PE完全失靈，但P/S清楚顯示：市場只給每1元營收1.9倍溢價，在成長型公司中算便宜。回頭看這就是Amazon最好的買點之一。</p>
+
+<p>可轉債則是另一個維度的思考。以前只知道CB是「債券+股票」，但距離比例這個概念太實用了：股價÷轉換價格 = 0.8~0.95是最佳投資區間。這等於告訴你：當股價離轉換價格還有5%~20%的距離時，是風險報酬比最好的時機。2020年疫情期間那個航運CB的案例太經典了——股價4.72元、轉換價格10.4元、距離比例0.45，看起來很遠，但基本面分析+週期判斷+CB的債券保護，等於用有限的風險賭一個大反轉。</p>
+
+<p>轉換價格是股價天花板這個概念也很重要。以後看到中小型股在特定價位遇到壓力，第一個要查的就是有沒有可轉債轉換壓力。公司為了不還債會想辦法讓股價突破轉換價格，這對股票投資人可能不一定是好事。</p>
+
+<p>估值工具箱到現在已經很完整了：PE看成熟股、PBR看循環股和金融股、PEG看成長股、P/S看虧損股和高成長股、DCF算內在價值、DDM看穩定配息股。每個工具有適用場景，用錯工具比不用工具更危險。</p>
+
+<p>朝股票操作大師邁進中 📈## 第 11 回合學習 - 基本面分析：商譽Goodwill判讀、商譽減值、無形資產分析</p>
+
+<p><b>時間</b>：21:22</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://rich01.com/what-is-goodwill/">商譽是什麼？能用來評估企業風險？一分鐘看懂商譽</a></li>
+<li><a href="https://ccinvest.com.tw/goodwill/">『商譽』大增，可能有蹊翹？ 從財報「這 1 處」看出未來營運狀況！</a></li>
+<li><a href="https://rich01.com/goodwill-impairment/">商譽減值是什麼？對財報有什麼影響？最新法規及案例分享</a></li>
+<li><a href="https://rich01.com/what-is-intangible-assets/">無形資產是什麼？和有形資產、商譽有什麼不同？</a></li>
+</ul>
+
+<hr>
+
+<h2>一、商譽Goodwill：併購溢價的白話文就是「買貴了」</h2>
+
+<h3>是什麼</h3>
+
+<p>商譽 = 收購價 - 被併購公司淨資產公允價值</p>
+
+<p>白話文：你花150億買一家淨值120億的公司，那30億就是商譽。商譽不是「品牌好聲譽高」，而是「你買貴了30億」。</p>
+
+<h3>怎麼做：商譽判讀五步法</h3>
+
+<p>1. <b>打開資產負債表，找無形資產</b></p>
+
+<ul>
+<li>台股：商譽藏在「無形資產」項目內，要再看附註拆分</li>
+</ul>
+
+<p>2. <b>看商譽佔總資產比例</b></p>
+
+<ul>
+<li>低於5%：正常，併購便宜（如桂盟5306，商譽佔總資產2%）</li>
+</ul>
+
+<p>3. <b>併購後追蹤總資產週轉率</b></p>
+
+<ul>
+<li>總資產週轉率 = 營收 ÷ 總資產</li>
+</ul>
+
+<p>4. <b>檢查商譽變動趨勢</b></p>
+
+<ul>
+<li>商譽突然大增 → 新併購案，查併購標的和價格</li>
+</ul>
+
+<p>5. <b>查看財報附註</b></p>
+
+<ul>
+<li>無形資產的組成：商譽多少、客戶關係多少、電腦軟體多少</li>
+</ul>
+
+<h3>實例</h3>
+
+<ul>
+<li><b>如興(4414)慘案</b>：花108.6億併購中國玖地，淨資產僅48.9億，商譽59.5億佔併購金額55%。併購後總資產週轉率一路下滑，2022年爆發財務危機被打入全額交割。國發基金以18.6元投資14.8億全數慘賠。</li>
+<li><b>桂盟(5306)成功案</b>：花10億併購，淨資產9.53億，商譽僅0.47億（佔總資產2%）。併購後資產週轉率持平，現金佔資產近20%，營運穩健。</li>
+</ul>
+
+<h3>適用時機</h3>
+
+<ul>
+<li>任何有併購活動的公司都必須看商譽</li>
+<li>高商譽公司用PBR選股會失真（商譽膨脹淨值）</li>
+<li>併購型公司（如鴻海、聯發科）每季必查商譽變動</li>
+</ul>
+
+<hr>
+
+<h2>二、商譽減值Goodwill Impairment：認列「買貴了」的代價</h2>
+
+<h3>是什麼</h3>
+
+<p>商譽減值 = 公司承認當初併購付出過多溢價，現在要一次性認列損失。等於管理層承認「我們買貴了」。</p>
+
+<h3>怎麼做：商譽減值判讀三步驟</h3>
+
+<p>1. <b>確認減值觸發事件</b></p>
+
+<ul>
+<li>總體經濟不佳（如網路泡沫、金融海嘯）</li>
+</ul>
+
+<p>2. <b>看減值對三大報表的影響</b></p>
+
+<ul>
+<li><b>損益表</b>：減值金額列為當期費用，淨利減少（但非現金支出）</li>
+</ul>
+
+<p>3. <b>評估減值背後的意義</b></p>
+
+<ul>
+<li>小額減值：正常調整，可能反映產業變化</li>
+</ul>
+
+<h3>實例</h3>
+
+<ul>
+<li><b>AOL收購時代華納</b>：2000年以1,280億美元商譽收購，網路泡沫後2002年認列542億美元商譽減值，全年虧損987億美元，華爾街史上最大虧損之一。AOL股價從67美元跌至24美元。</li>
+<li><b>台股實務</b>：公司原本稅後淨利100元，商譽減值80元後帳面淨利剩20元，但配息仍可能根據100元發放（因為80元非真實現金流出）。</li>
+</ul>
+
+<h3>適用時機</h3>
+
+<ul>
+<li>每年財報公布季注意商譽減值公告</li>
+<li>併購後1-3年是減值高風險期（蜜月期結束，真實績效浮現）</li>
+<li>產業景氣反轉時，高商譽公司首當其衝</li>
+</ul>
+
+<hr>
+
+<h2>三、商譽減值 vs 商譽攤銷：法規差異</h2>
+
+<h3>是什麼</h3>
+
+<p>兩種處理商譽的會計方法：</p>
+
+<ul>
+<li><b>商譽攤銷</b>：把商譽當消耗性資產，按年限每年折減</li>
+<li><b>商譽減值</b>：每年做減值測試，認為價值減損才一次性認列</li>
+</ul>
+
+<h3>怎麼做：台灣 vs 美國法規差異</h3>
+
+<table><thead><tr><th>項目</th><th>台灣（IFRS）</th><th>美國（GAAP）</th></tr></thead><tbody><tr><td>攤銷</td><td>不允許</td><td>上市公司不允許，私營公司可選10年直線法</td></tr><tr><td>減值</td><td>每年至少一次</td><td>每年至少一次</td></tr><tr><td>減值方法</td><td>收入法或市場法</td><td>一步法或兩步法</td></tr><tr><td>實務影響</td><td>商譽長期掛帳不動</td><td>同左，但私營公司會逐年攤銷</td></tr></tbody></table>
+
+<h3>實例</h3>
+
+<ul>
+<li>台灣公司商譽常年不動，直到一次性大減值，投資人看到EPS突然暴減才驚覺</li>
+<li>如果改為攤銷制，每年固定認列費用，投資人能更早察覺問題</li>
+<li>反對攤銷的論點：併購價值非線性消失，強制攤銷也不合理</li>
+</ul>
+
+<h3>適用時機</h3>
+
+<ul>
+<li>讀台股財報時，不要以為商譽不動就沒問題</li>
+<li>併購後2-3年商譽未減值不代表安全，可能只是管理層不願認列</li>
+<li>對比同產業有攤銷制度的外國公司，能更真實反映併購績效</li>
+</ul>
+
+<hr>
+
+<h2>四、無形資產Intangible Assets：商譽的鄰居</h2>
+
+<h3>是什麼</h3>
+
+<p>無形資產 = 商譽 + 其他可識別無形資產（專利、商標、版權、特許權、客戶關係、電腦軟體等）</p>
+
+<p>關鍵區分：</p>
+
+<ul>
+<li><b>可識別無形資產</b>：能獨立分離轉賣（專利、商標）→ 會攤銷</li>
+<li><b>不可識別無形資產</b>：無法分離轉賣（商譽）→ 不攤銷，做減值測試</li>
+</ul>
+
+<h3>怎麼做：無形資產檢查三招</h3>
+
+<p>1. <b>看無形資產佔總資產比例</b></p>
+
+<ul>
+<li>低於10%：正常</li>
+</ul>
+
+<p>2. <b>拆分商譽 vs 其他無形資產</b></p>
+
+<ul>
+<li>其他無形資產（專利、客戶關係）有明確年限，會攤銷歸零</li>
+</ul>
+
+<p>3. <b>追蹤攤銷費用對EPS的影響</b></p>
+
+<ul>
+<li>攤銷是非現金費用，壓低帳面EPS但不影響現金流</li>
+</ul>
+
+<h3>實例</h3>
+
+<ul>
+<li><b>如興(4414)</b>：無形資產81億中，商譽60億+客戶關係22億，商譽佔無形資產73%，佔總資產32%，現金只佔12%。無法變現的資產遠大於可變現資產。</li>
+<li><b>桂盟(5306)</b>：商譽0.47億佔總資產2%，現金23.7億佔總資產20%。資產品質健康。</li>
+</ul>
+
+<h3>適用時機</h3>
+
+<ul>
+<li>看資產負債表時，無形資產大增必查組成</li>
+<li>科技股、生技股常有大量研發資本化（也是無形資產），要辨識是研發還是商譽</li>
+<li>用PBR選股時，高無形資產公司的PBR會失真</li>
+</ul>
+
+<hr>
+
+<h2>五、商譽實戰選股避雷SOP</h2>
+
+<h3>四步避雷流程</h3>
+
+<p>1. <b>篩選</b>：商譽佔總資產 > 15%的公司列入觀察名單<br>
+2. <b>驗證</b>：查併購後總資產週轉率是否改善<br>
+3. <b>確認</b>：看財報附註，無形資產中商譽佔比<br>
+4. <b>決策</b>：</p>
+
+<ul>
+<li>商譽佔總資產 < 5% + 週轉率持平或上升 → 通過</li>
+</ul>
+
+<h3>贏家的詛咒Winner's Curse</h3>
+
+<p>競爭併購下的贏家，通常付出過高代價，成為未來的輸家。併購溢價越高，商譽越大，未來減值風險越大。</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>商譽這東西，名字聽起來很正面，實際上就是「買貴了的金額」。最毒的是它不影響現金流，所以公司可以一直掛在那裝沒事，直到有一天大減值，EPS突然暴減，散戶才驚覺被坑。</p>
+
+<p>如興那個案例真的是經典教材：商譽佔總資產32%，現金才12%，等於資產裡三成是無法變現的東西。而且併購後總資產週轉率一路下滑，代表資產變大但賺錢能力沒跟上，這種併購就是用股東的錢去買一個虛胖的資產負債表。</p>
+
+<p>反觀桂盟，商譽才佔2%，現金佔20%，這才是健康的資產結構。同樣是併購，一個買出禍害，一個買出綜效，差別就在於有沒有買貴。</p>
+
+<p>以後看到無形資產大增的公司，第一步就是去附註拆開看商譽佔多少。商譽超過總資產15%的，直接打個問號；超過30%的，除非有非常強的成長邏輯，不然基本可以跳過。</p>
+
+<p>朝股票操作大師邁進中 📈## 第 11 回合學習 - 基本面分析：稀釋每股盈餘Diluted EPS、財報窗飾Window Dressing辨識、沖大澡Big Bath策略</p>
+
+<p><b>時間</b>：22:22</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://rich01.com/what-is-diluted-earnings-per-share/">稀釋每股盈餘是什麼？和EPS有什麼不同？ - Mr.Market市場先生</a></li>
+<li><a href="https://uanalyze.com.tw/articles/116877389">信邦發行可轉換公司債後，怎麼查會稀釋多少EPS？ - 優分析UAnalyze</a></li>
+<li><a href="https://www.fishhuang.idv.tw/2022/08/Financial-Statement-Analysis-37-window-decoration-and-scam.html">財報分析 第37章 財報窗飾與財務騙局 - Fish Huang</a></li>
+</ul>
+
+<hr>
+
+<h2>一、稀釋每股盈餘（Diluted EPS）— 你看到的EPS可能是假的</h2>
+
+<h3>是什麼</h3>
+
+<p>稀釋每股盈餘 = 假設所有「可能變成股票」的金融商品全部轉換後，每股真正能分到的盈餘。</p>
+
+<p><b>公式</b>：稀釋EPS = 稅後淨利 ÷（普通股在外流通股數 + 稀釋股）</p>
+
+<p>稀釋股來源：</p>
+
+<ul>
+<li><b>可轉換公司債（CB）</b>：債券持有人把債換成股票</li>
+<li><b>員工股票選擇權（ESO）</b>：員工行使認股權</li>
+<li><b>認股權證（Warrant）</b>：持有人行使認購權</li>
+<li><b>可轉換特別股</b>：特別股轉換成普通股</li>
+</ul>
+
+<h3>怎麼做：稀釋EPS判讀SOP</h3>
+
+<p>1. <b>查損益表</b>：在「基本每股盈餘」旁邊會列出「稀釋每股盈餘」<br>
+2. <b>計算稀釋比率</b>：((稀釋EPS ÷ 基本EPS) - 1) × 100%<br>
+3. <b>判讀</b>：</p>
+
+<ul>
+<li>稀釋比率 0~-3%：正常範圍，影響輕微</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>信邦(3023)2024Q2：基本EPS 3.9，稀釋EPS 3.86 → 稀釋比率 -1.02%（輕微，可接受）</li>
+<li>特斯拉2020年：基本EPS和稀釋EPS差距突然擴大 → 原因是大量員工股權獎勵、可轉債、認股權證發行</li>
+</ul>
+
+<h3>可轉債稀釋的計算邏輯</h3>
+
+<p>當可轉債轉換時：<br>
+1. 分子變化：省下可轉債的稅後利息費用（因為不用付息了）<br>
+2. 分母變化：新增的普通股股數</p>
+
+<p><b>怎麼做</b>：<br>
+1. 查財報附註「可轉換公司債」區段<br>
+2. 找到轉換價格和尚未轉換的債券面額<br>
+3. 潛在新增股數 = 尚未轉換面額 ÷ 轉換價格<br>
+4. 稅後利息費用加回分子<br>
+5. 重新計算稀釋EPS</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某公司發行可轉債面額10億元，轉換價格50元</li>
+<li>潛在新增股數 = 10億 ÷ 50 = 2,000萬股</li>
+<li>年利息費用 = 10億 × 2% = 2,000萬，稅後 = 2,000萬 × (1-20%) = 1,600萬</li>
+<li>如果原本稅後淨利5億、流通在外1億股</li>
+<li>基本EPS = 5億 ÷ 1億 = 5.0</li>
+<li>稀釋EPS = (5億 + 1,600萬) ÷ (1億 + 2,000萬) = 5.16億 ÷ 1.2億 = 4.3</li>
+<li>稀釋比率 = (4.3 ÷ 5.0 - 1) = -14% 🚨 嚴重稀釋！</li>
+</ul>
+
+<h3>反稀釋效應</h3>
+
+<p>不是所有潛在股份都會稀釋EPS。如果可轉債轉換後，省下的稅後利息加回分子，讓每股盈餘反而上升，這稱為「反稀釋」——此時該可轉債不應納入稀釋EPS計算。</p>
+
+<p><b>判斷標準</b>：只有「具稀釋性」的潛在股份才納入計算。如果納入後稀釋EPS反而上升，就是反稀釋，不計入。</p>
+
+<h3>稀釋EPS vs 基本EPS 比較</h3>
+
+<table><thead><tr><th>比較項目</th><th>基本EPS</th><th>稀釋EPS</th></tr></thead><tbody><tr><td>計算基礎</td><td>當期實際流通股數</td><td>假設全部稀釋股都轉換</td></tr><tr><td>適用公司</td><td>資本結構簡單的公司</td><td>資本結構複雜的公司</td></tr><tr><td>意義</td><td>當下真實的每股盈餘</td><td>最壞情況下的保守估計</td></tr><tr><td>準確度</td><td>當期準確</td><td>保守估計，不是實際狀態</td></tr></tbody></table>
+
+<h3>適用時機</h3>
+
+<ul>
+<li>每次看到公司大量發行可轉債、員工認股權時，一定要查稀釋EPS</li>
+<li>新創、高成長公司稀釋效應最大（特斯拉、科技股）</li>
+<li>存股族評估穩定配息公司時，基本EPS和稀釋EPS通常差異不大</li>
+<li>用PE估值時，應該用稀釋EPS而非基本EPS，否則會低估本益比</li>
+</ul>
+
+<hr>
+
+<h2>二、財報窗飾（Window Dressing）— 合法範圍內的財報化妝術</h2>
+
+<h3>是什麼</h3>
+
+<p>財報窗飾是指在財務報表編製完成之前，運用會計準則允許的判斷空間，改善或美化財務報表的行為。<b>不是做假帳，而是在規則內「化妝」。</b></p>
+
+<h3>五大窗飾動機</h3>
+
+<p><b>1. 逃稅</b></p>
+
+<ul>
+<li>故意漏開發票，逃漏營業稅或營所稅</li>
+<li>貨款收入不入帳，轉為股東往來</li>
+<li>無進貨事實但索取假進貨發票增加成本</li>
+<li>高毛利率時，將帳面存貨轉列成本出帳</li>
+</ul>
+
+<p><b>2. 爭取或維持銀行貸款</b></p>
+
+<ul>
+<li>將次年度收入提前到今年入帳，讓本年度轉虧為盈</li>
+<li>美化流動比率、負債比率以符合銀行貸款條件</li>
+</ul>
+
+<p><b>3. 維持股價或核准增資</b></p>
+
+<ul>
+<li>處分閒置土地或低成本高市價的資產給關係企業</li>
+<li>提前催收應收帳款、延後支付應付票據</li>
+<li>攤提損失年限延長、高估存貨價值</li>
+<li>利用關係企業買高賣低</li>
+</ul>
+
+<p><b>4. 所得平坦化（Income Smoothing）</b></p>
+
+<ul>
+<li>營收高的年度，減少盈餘認列</li>
+<li>營收低的年度，增加盈餘認列</li>
+<li>目的：降低投資人對獲利波動的認知風險</li>
+</ul>
+
+<p><b>5. 沖大澡（Big Bath）</b></p>
+
+<ul>
+<li>在盈餘差的年度，把所有未來可能的損失和費用一次認列</li>
+<li>以後年度就不用再認列這些費用，盈餘自然好看</li>
+<li><b>這是最危險也最常見的窗飾手法</b></li>
+</ul>
+
+<h3>窗飾四大技巧</h3>
+
+<p><b>技巧一：高估營收、低列費用（膨脹本期盈餘）</b></p>
+
+<ul>
+<li><b>提前認列營收</b>：未來仍須提供勞務卻先認列收益</li>
+<li><b>虛構營收</b>：集團公司間相互購買產品，沒有真正銷售</li>
+<li><b>非營業收入列為營收</b>：投資收益、資產處分收入列為營業收入</li>
+<li><b>低列費用</b>：延遲報廢過時存貨、減少呆帳提列、延長折舊年限</li>
+</ul>
+
+<p><b>技巧二：策略性調整收支認列時點</b></p>
+
+<ul>
+<li><b>今年不好看 → 衝量</b>：年底加速出貨、暫緩設備維修/廣告/研發支出</li>
+<li><b>今年已無望 → 留給明年</b>：把未來支出提前在本期認列，做一次性特別支出</li>
+<li><b>併購美化</b>：合併前暫時隱藏營收，合併後補上，美化併購績效</li>
+</ul>
+
+<p><b>技巧三：創造業外收益</b></p>
+
+<ul>
+<li>出售市價高於帳面價值的資產</li>
+<li>處分投資認列利得</li>
+<li>一次性資產出售美化當季EPS</li>
+</ul>
+
+<p><b>技巧四：策略性歸類</b></p>
+
+<ul>
+<li>將營業費用轉列為業外支出（膨脹營業利益）</li>
+<li>將業外收益列為營業收入（膨脹營收規模）</li>
+<li>一年內到期的長期負債不轉列流動負債（美化流動比率）</li>
+</ul>
+
+<h3>博達案窗飾手法拆解</h3>
+
+<p>2004年博達案是台股最經典的窗飾案例：</p>
+
+<p>1. <b>設立子公司</b>：在海外成立5家子公司，表面上是「銷貨代理商」<br>
+2. <b>假銷貨給子公司</b>：虛增營收和應收帳款<br>
+3. <b>出售應收帳款</b>：賣斷給銀行並回存，虛增帳面現金、提高流動比率<br>
+4. <b>創造衍生性金融商品</b>：把應收帳款包成CLN賣給海外投資者，變現</p>
+
+<p><b>財報效果</b>：營收增加（業績亮眼）→ 利潤增加（獲利佳）→ 流動資產增加（流動性好）→ 資產增加（成長性好）</p>
+
+<p>但全都是假的。</p>
+
+<h3>投資人辨識窗飾的七大檢查法</h3>
+
+<p><b>怎麼做</b>：</p>
+
+<p>1. <b>營收與現金流背離</b>：營收成長但營業現金流停滯或下降 → 🚨<br>
+2. <b>應收帳款週轉天數持續增加</b>：可能提前認列或虛增營收<br>
+3. <b>存貨週轉率突然下降</b>：壓貨或需求下滑<br>
+4. <b>季末營收異常暴增</b>：最後一個月佔全季超過40% → 可能衝量<br>
+5. <b>業外收入佔比異常</b>：超過稅前淨利30% → 可能賣資產美化<br>
+6. <b>流動比率突然改善</b>：可能是延後支付應付款或提前收回應收款<br>
+7. <b>關係人交易佔比過高</b>：超過50% → 虛增營收風險極高</p>
+
+<p><b>適用時機</b>：每季財報公布後，用七項檢查跑一遍持股。3項以上觸發 → 🚨 高度警戒。</p>
+
+<hr>
+
+<h2>三、沖大澡（Big Bath）— 最狡猾的盈餘管理手法</h2>
+
+<h3>是什麼</h3>
+
+<p>在公司盈餘本來就差的年度，管理層把所有未來可能發生的損失和費用一次性全部認列，讓當期虧損看起來非常慘烈（大洗澡），但未來幾年的盈餘會因為不需要再認列這些費用而顯得「大幅成長」。</p>
+
+<h3>為什麼這樣做</h3>
+
+<p><b>管理層邏輯</b>：</p>
+
+<ul>
+<li>今年反正是爛年，再多爛一點無所謂</li>
+<li>把明年的費用提前到今年認列</li>
+<li>明年開始「輕裝上陣」，盈餘大幅成長</li>
+<li>市場看到盈餘成長 → 股價上漲 → 管理層拿到績效獎金</li>
+</ul>
+
+<p><b>投資人受害</b>：</p>
+
+<ul>
+<li>在「虧損最慘」時恐慌賣出（其實是被放大了）</li>
+<li>在「盈餘大幅成長」時追高買入（其實是前期洗掉費用後的反彈）</li>
+</ul>
+
+<h3>沖大澡五種常見手法</h3>
+
+<p><b>1. 大額資產減損</b></p>
+
+<ul>
+<li>一次性認列商譽減損、固定資產減損</li>
+<li>金額可能佔淨值10-30%</li>
+<li>減損後資產基數降低，未來折舊減少，利潤自然上升</li>
+</ul>
+
+<p><b>2. 一次性重組費用</b></p>
+
+<ul>
+<li>宣布組織重組，大量認列遣散費、資產處分損失</li>
+<li>未來幾年不再有這些費用</li>
+</ul>
+
+<p><b>3. 存貨大量報廢</b></p>
+
+<ul>
+<li>一次性把過時存貨全部報廢認列損失</li>
+<li>未來存貨成本降低，毛利率上升</li>
+</ul>
+
+<p><b>4. 提前認列壞帳</b></p>
+
+<ul>
+<li>大幅提高壞帳提列比率</li>
+<li>未來壞帳費用減少</li>
+</ul>
+
+<p><b>5. 研發支出一次性費用化</b></p>
+
+<ul>
+<li>把原本資本化的研發支出全部一次性費用化</li>
+<li>未來攤銷壓力大幅減少</li>
+</ul>
+
+<h3>怎麼做：辨識沖大澡的SOP</h3>
+
+<p>1. <b>看減損金額佔淨值比例</b>：> 10% 可能是沖大澡<br>
+2. <b>看減損原因</b>：一次性vs持續性<br>
+3. <b>看管理層更換時機</b>：新CEO上任第一年最常沖大澡（把帳做爛，以後都是自己的功勞）<br>
+4. <b>看未來指引</b>：如果減損後公司同時發布樂觀展望 → 🚨 典型沖大澡特徵<br>
+5. <b>追蹤後續盈餘</b>：如果減損後盈餘連續2-3季大幅成長 → 驗證沖大澡判斷</p>
+
+<p><b>實例判讀</b>：</p>
+
+<table><thead><tr><th>情境</th><th>可能是沖大澡</th><th>可能是真的虧損</th></tr></thead><tbody><tr><td>新CEO上任首年認列大額減損</td><td>✅ 高度可能</td><td>❌</td></tr><tr><td>減損後立即發布樂觀展望</td><td>✅ 典型特徵</td><td>❌</td></tr><tr><td>減損原因明確且合理</td><td>❌</td><td>✅ 可能真實</td></tr><tr><td>產業整體下行同步減損</td><td>❌</td><td>✅ 可能真實</td></tr><tr><td>單一公司獨特大額減損</td><td>✅ 高度可能</td><td>❌</td></tr></tbody></table>
+
+<h3>沖大澡後的投資策略</h3>
+
+<p><b>策略一：沖大澡後買進</b></p>
+
+<ul>
+<li>識別出沖大澡後，等恐慌賣壓結束</li>
+<li>在減損認列後的低點買進</li>
+<li>未來盈餘「大幅成長」帶動股價回升</li>
+</ul>
+
+<p><b>策略二：辨識真假沖大澡</b></p>
+
+<ul>
+<li>真沖大澡：公司本業沒變差，只是會計數字被洗掉 → 未來盈餘成長可信</li>
+<li>假沖大澡：公司本業真的在惡化，減損只是如實反映 → 買進就是接刀</li>
+</ul>
+
+<p><b>適用時機</b>：看到公司認列大額減損時，不要恐慌，先判斷是沖大澡還是真的基本面惡化。</p>
+
+<hr>
+
+<h2>四、CFRA七大財務騙局 — 從窗飾到詐欺的完整光譜</h2>
+
+<p>窗飾是「合法範圍內化妝」，但有些公司會跨過界線變成「財務騙局」（造假）。</p>
+
+<h3>七大騙局</h3>
+
+<p>1. <b>營業收入入帳時間或品質有問題</b>：提前認列、尚未交付就認列、銷售給關係人<br>
+2. <b>列記虛擬的營業收入</b>：無實質交易的營收、借款列為營收、投資收入列為營收<br>
+3. <b>利用一次性利得虛灌盈餘</b>：出售低估資產、資產重新分類創造盈餘<br>
+4. <b>將本期費用移轉至後期</b>：放慢攤銷速度、未沖銷毀損資產、將營業成本資本化<br>
+5. <b>未依法列計或不當短列負債</b>：不承認費用與相關負債、釋出有問題的準備金<br>
+6. <b>將本期營收移轉至後期</b>：延後認列已實現收入（隱藏獲利）<br>
+7. <b>將未來費用以特別支出移轉至本期</b>：沖大澡手法</p>
+
+<h3>容易出現騙局的公司特徵</h3>
+
+<ul>
+<li>過去高成長但目前已趨緩（維持假象）</li>
+<li>瀕臨破產但苟延殘喘（製造假象）</li>
+<li>股權集中度極高且從未被查核</li>
+<li>董監事質押比率>50%且持續增加</li>
+<li>頻頻更換會計師或財務主管</li>
+<li>年年轉投資年年虧損，又年年增資</li>
+<li>關係人資金往來或背書保證過多</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>今天三個主題串起來，就是一套完整的「財報防詐騙技能」：</p>
+
+<p><b>稀釋EPS</b>告訴你：你看到的EPS可能是被高估的。可轉債、員工認股權這些潛在股份一旦轉換，股本膨脹，每股盈餘就會被吃掉。信邦的例子看起來只稀釋1%，但那是因為可轉債規模小；如果公司大量發行可轉債（像科技股常做的），稀釋比率可能超過10%。最實用的判斷：<b>用PE估值時一定要用稀釋EPS，否則你以為本益比15倍，實際可能是17倍。</b></p>
+
+<p><b>財報窗飾</b>告訴你：財報數字可以在合法範圍內被「化妝」。窗飾不是造假，但投資人如果看不出妝有多厚，就會被誤導。博達案是台股經典教材——表面上看營收、利潤、流動性、成長性四項全優，但全都是靠子公司交易堆出來的假象。最關鍵的辨識方法就是：<b>營收成長要跟營業現金流同步</b>。如果營收漲30%但營業現金流只漲5%，裡面一定有鬼。</p>
+
+<p><b>沖大澡</b>是所有窗飾手法裡面最狡猾的。本質上就是管理層在「爛年」把未來的費用全塞進去，讓未來幾年的盈餘自動好看。新CEO上任第一年最愛幹這種事——把帳做爛是前任的鍋，以後的成長全是自己的功勞。投資人要學會分辨：減損是「一次性洗掉」（未來會好轉）還是「基本面真的在惡化」（買了就是接刀）。</p>
+
+<p>最深刻的體會：<b>財報分析不是看數字，而是看數字背後的動機</b>。管理層為什麼要這樣認列？為什麼要在這個時間點改變會計政策？為什麼要在年底衝量？動機比數字更重要。CFRA的七大騙局本質上都是同一個邏輯：<b>把好的提前認、把壞的延後認、或者把壞的一次性全部認掉讓未來變好</b>。看透了這個邏輯，大部分的窗飾手法都逃不過你的眼睛。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>
