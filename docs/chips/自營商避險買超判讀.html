@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自營商避險買超判讀 - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class=" active">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>自營商避險買超判讀</h1>
+            <h1>自營商避險買超判讀</h1>
+
+<blockquote>自營商避險買超是「被動買進」，隔天大概率賣出，看到長紅K棒別急著追——先看買盤是誰</blockquote>
+
+<h2>核心概念</h2>
+
+<h3>自營商的兩種買賣</h3>
+
+<p>自營商買賣超分為兩種：</p>
+
+<ul><li><strong>自行買賣</strong>：自營商主動看好/看壞而進出，帶有方向性判斷</li>
+<li><strong>避險買賣</strong>：因為發行權證而被動買進標的股現貨，不是自己想買</li>
+</ul>
+
+<h3>避險怎麼來的？</h3>
+
+<p>自營商是權證的發行者（造市商）。當投資人買進認購權證，如果標的股上漲，投資人賺、自營商賠。為了不讓自己裸露風險，自營商必須買進對應數量的標的股現貨避險：</p>
+
+<ul><li>賣出 delta=1 的認購權證 → 買進1張標的股避險</li>
+<li>賣出認售權證 → 放空或賣出標的股避險</li>
+</ul>
+
+<p><strong>關鍵</strong>：避險買超 = 散戶買權證的鏡像。自營商買賣超的避險部分，其實可以解讀成散戶投資人的買賣動向。</p>
+
+<h2>實戰應用</h2>
+
+<h3>1. 避險買超隔天會賣</h3>
+
+<p>自營商避險買進的股票，隔天通常會賣出。這是因為：
+<ul><li>避險部位是動態調整的，權證到期或投資人賣回權證，自營商就會減少避險部位</li>
+<li>避險買盤不是基於看好基本面，而是被動跟隨</li>
+</ul></p>
+
+<p><strong>實戰</strong>：看到個股長紅K棒，先查買盤來源。如果是自營商避險買超佔大宗，隔天不要追高買進。</p>
+
+<h3>2. 盤中判斷是否為避險買盤</h3>
+
+<p>投資人如果看到盤中有大單敲進，可以到個股的權證明細看大單敲進前是否有人大量買進權證。這樣盤中就能判斷是否為自營商避險買盤。</p>
+
+<h3>3. 自營商自行買賣才有參考價值</h3>
+
+<p>要判斷自營商真正看法，要看「自行買賣」部分，而非避險部分。但自營商資金量小、進出快且難以捉摸，所以訊息價值有限，不宜單獨作為進場依據。</p>
+
+<h3>4. 避險買超 vs 隔日沖</h3>
+
+<p>兩者都會在隔天賣出，但來源不同：
+<ul><li>避險買超：被動買進（權證避險需要），賣出時間不一定</li>
+<li>隔日沖券商：主動短線進出，隔天開盤就賣</li>
+</ul></p>
+
+<h2>注意事項</h2>
+
+<h3>陷阱一：看到長紅K棒就追</h3>
+如果長紅K棒的主要買盤是自營商避險或隔日沖券商，隔天極易下跌。必須先確認買盤結構。
+
+<h3>陷阱二：把避險買超當作看好訊號</h3>
+避險買超不代表自營商看好該股，而是代表散戶買了很多該股的權證。散戶大量買權證反而可能是反向訊號。
+
+<h3>陷阱三：忽略自行買賣</h3>
+自營商避險買超的金額通常遠大於自行買賣，如果只看總買賣超會被誤導。要分開看。
+
+<h3>陷阱四：自營商資金量小影響有限</h3>
+自營商扣除避險後的金額約佔大盤日成交1-2%（約20-40億），遠小於外資（40-60%）和投信（5%），對大盤影響有限，但對個股仍有影響力。
+
+<h2>相關主題</h2>
+
+<ul><li><a class="wikilink" href="institutional-investors.html">三大法人特性</a></li>
+<li><span class="wikilink disabled">自營商避險盤判讀</span></li>
+<li><span class="wikilink disabled">隔日沖券商辨識</span></li>
+<li><span class="wikilink disabled">隔日沖應對策略</span></li>
+<li><span class="wikilink disabled">主力分點追蹤</span></li>
+<li><a class="wikilink" href="margin-maintenance-calls.html">融資維持率與斷頭</a></li>
+<li><span class="wikilink disabled">K線三招判讀顏色實體影線</span></li>
+</ul>
+
+<h2>來源</h2>
+
+<ul><li><a href="../raw/2026-04-29/自營商避險買超判讀.md">為什麼自營商要避險？破解股票籌碼的六大盲點</a></li>
+</ul>
+<li><a href="../raw/2026-04-29/自營商避險買超判讀.md">自營商是什麼？自營商買賣超與避險的意義？- CMoney</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="institutional-investors.html">三大法人特性</a></p>
+        </article>
+    </main>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
+</body>
+</html>
