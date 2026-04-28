@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>倉位管理 - 股票知識庫</title>
+    <title>均線判斷 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -89,96 +89,62 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class=" active">風險管理</a></nav>
+            <nav><a href="../technical.html" class=" active">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
         <article class="article-content">
-            <h1>倉位管理</h1>
-            <h1>倉位管理</h1>
+            <h1>均線判斷</h1>
+            <h1>均線判斷</h1>
 
-<blockquote>單筆風險 1-2%，這是生存的關鍵。</blockquote>
+<blockquote>均線是市場成本線，價格在均線上代表過去一段時間買者賺錢。</blockquote>
 
 <h2>核心概念</h2>
 
-<p>倉位大小 = (總資金 × 風險比例) / (進場價 - 停損價)</p>
+<h3>均線種類</h3>
 
-<h2>五種倉位管理方法</h2>
+<table><tr><th>種類</th><th>計算方式</th><th>特點</th></tr></table>
+<h3>常用均線週期</h3>
 
-<h3>1. 固定百分比法</h3>
-
-<pre><code class="">倉位大小 = 總資金 × 風險比例 / (進場價 - 停損價)
-</code></pre>
-<ul><li>單筆風險：1-2% 總資金</li>
-<li>適用：長期穩健增長型交易者</li>
-</ul>
-
-<h3>2. ATR 波動率法</h3>
-
-<pre><code class="">倉位大小 = (帳戶資金 × 風險%) / (ATR × 停損倍數 × 每點價值)
-</code></pre>
-<ul><li>高波動自動縮小倉位</li>
-<li>適用：追求與市場波動同步</li>
-</ul>
-
-<h3>3. 凱利公式（Kelly Criterion）</h3>
-
-<pre><code class="">f* = (p × b - q) / b
-</code></pre>
-<ul><li>f* = 最佳下注比例，p = 勝率，q = 敗率，b = 盈虧比</li>
-<li>實務建議：使用「半凱利」更安全</li>
-<li>適用：勝率與盈虧比穩定的策略</li>
-</ul>
-
-<h3>4. 金字塔加碼法</h3>
-
-<ul><li>趨勢確認後初始倉位</li>
-<li>獲利後回調時加碼</li>
-<li>每次加碼金額遞減</li>
-<li>適用：趨勢跟隨策略</li>
-</ul>
-
-<h3>5. 固定金額法</h3>
-
-<ul><li>每筆交易固定風險金額</li>
-<li>計算簡單但帳戶波動後不靈活</li>
-<li>適用：小型帳戶</li>
-</ul>
-
+<table><tr><th>週期</th><th>名稱</th><th>用途</th></tr></table>
 <h2>實戰應用</h2>
 
-<h3>單筆風險控制</h3>
+<h3>1. 價格突破均線</h3>
 
-<ul><li><strong>華爾街標準</strong>：單筆不超過 10%</li>
-<li><strong>一般建議</strong>：固定 1-2% 總資金</li>
-<li><strong>絕對上限</strong>：任何情況下單筆不超過 5%</li>
+<ul><li>收盤價 > 10MA → 過去10天進場者賺錢</li>
+<li>收盤價 < 20MA → 過去20天進場者賠錢</li>
 </ul>
 
-<h3>動態調整</h3>
+<h3>2. 黃金交叉與死亡交叉</h3>
 
-<ul><li>連續虧損後：降低風險比例到 0.5-1%</li>
-<li>連續獲利後：可提升到 2-3%</li>
-<li>高波動期：自動降低倉位</li>
+<table><tr><th>交叉類型</th><th>定義</th><th>訊號</th></tr></table>
+<h3>3. 多頭排列與空頭排列</h3>
+
+<table><tr><th>排列型態</th><th>定義</th><th>訊號</th></tr></table>
+<h3>動態支撐壓力</h3>
+
+<ul><li>上升趨勢中：均線作為支撐</li>
+<li>下降趨勢中：均線作為壓力</li>
 </ul>
 
 <h2>注意事項</h2>
 
-<ul><li>不要因為「看好」而過度加碼</li>
-<li>連續虧損時要減碼，不是加碼攤平</li>
-<li>帳戶總風險控制在 6-10% 以內</li>
+<ul><li><strong>盤整時頻繁交叉</strong>：會被來回洗刷，造成虧損</li>
+<li><strong>均線是落後指標</strong>：反應慢半拍，短線精確度有限</li>
+<li><strong>搭配成交量確認</strong>：突破需要量能配合</li>
 </ul>
 
 <h2>相關主題</h2>
 
-<ul><li><a class="wikilink" href="停損方法.html">停損方法</a></li>
-<li><a class="wikilink" href="風險報酬比.html">風險報酬比</a></li>
-<li><a class="wikilink" href="凱利公式.html">凱利公式</a></li>
+<ul><li><a class="wikilink" href="K線型態.html">K線型態</a></li>
+<li><a class="wikilink" href="支撐壓力.html">支撐壓力</a></li>
+<li><a class="wikilink" href="停損方法.html">停損方法</a></li>
 </ul>
 
 <h2>來源</h2>
 
 <li>stock-knowledge.md（2026-04-28 遷移）</li>
-            <h2>相關主題</h2><p><a href="../technical/K線型態.html" class="wikilink">K線型態</a>, <a href="../risk/停利方法.html" class="wikilink">停利方法</a></p>
+            <h2>相關主題</h2><p><a href="../technical/support-resistance.html" class="wikilink">支撐壓力</a>, <a href="../technical/k-patterns.html" class="wikilink">K線型態</a>, <a href="../technical/k-patterns.html" class="wikilink">K線型態</a></p>
         </article>
     </main>
     <footer>

@@ -32,6 +32,20 @@ TOPICS = {
     "風險管理": {"id": "risk", "icon": "⚠️", "desc": "停損停利、倉位控制"},
 }
 
+# 中文標題對應英文 slug
+TITLE_SLUGS = {
+    "K線型態": "k-patterns",
+    "均線判斷": "moving-averages",
+    "支撐壓力": "support-resistance",
+    "財報假帳偵測": "financial-fraud-detection",
+    "盈餘品質分析": "earnings-quality",
+    "三大法人特性": "institutional-investors",
+    "當沖操作": "day-trading",
+    "停損方法": "stop-loss",
+    "停利方法": "take-profit",
+    "倉位管理": "position-sizing",
+}
+
 CSS = '''
 :root {
     --primary: #6366f1;
@@ -111,6 +125,11 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 '''
 
 
+def get_slug(title: str) -> str:
+    """取得標題對應的英文 slug"""
+    return TITLE_SLUGS.get(title, title.lower().replace(" ", "-").replace("/", "-"))
+
+
 def parse_wiki_article(filepath: Path) -> dict:
     """解析 wiki 文章"""
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -132,7 +151,8 @@ def parse_wiki_article(filepath: Path) -> dict:
         "summary": summary,
         "keywords": keywords,
         "content": content,
-        "filename": filepath.stem,
+        "filename": get_slug(title),  # 使用英文 slug
+        "original_filename": filepath.stem,  # 保留原始檔名
         "category": filepath.parent.name
     }
 
