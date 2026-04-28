@@ -8,7 +8,6 @@
 :root {
     --primary: #6366f1;
     --primary-light: #818cf8;
-    --primary-dark: #4f46e5;
     --bg: #ffffff;
     --bg-secondary: #f9fafb;
     --bg-tertiary: #f3f4f6;
@@ -27,7 +26,7 @@ header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px sol
 .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
 .logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
 nav { display: flex; gap: 8px; }
-nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
 nav a:hover { background: var(--bg-tertiary); color: var(--text); }
 nav a.active { background: var(--primary); color: white; }
 
@@ -43,7 +42,7 @@ main { padding: 40px 24px; }
 .stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
 
 .topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
-.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
 .topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
 .topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
 .topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
@@ -63,20 +62,20 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
-.wikilink.disabled { color: var(--text-muted); cursor: default; }
-.wikilink.disabled:hover { text-decoration: none; }
+.wikilink.disabled { color: var(--text-muted); }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
 .article-content h3 { font-size: 18px; margin: 24px 0 12px; }
 .article-content p { margin-bottom: 16px; }
-.article-content ul { margin: 16px 0; padding-left: 24px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
 .article-content li { margin-bottom: 8px; }
 .article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
 .article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
-.article-content th { background: var(--bg-secondary); }
-.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
 .article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
 .article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
 
 footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
@@ -111,64 +110,70 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h3>單根K線型態</h3>
 
-<p>| 型態 | 定義 | 市場訊號 |
-|------|------|----------|
-| <strong>大紅K</strong> | 收盤遠高於開盤，實體長，影線<20% | 多頭強勢，後市看漲 |
-| <strong>大黑K</strong> | 收盤遠低於開盤，實體長，影線<20% | 空頭強勢，後市看跌 |
-| <strong>十字線</strong> | 開盤≈收盤，長上下影線 | 多空勢均力敵 |
-| <strong>鎚子線</strong> | 短實體+長下影線（無上影線） | 下檔有支撐 |
-| <strong>倒鎚線/墓碑線</strong> | 短實體+長上影線（無下影線） | 上檔有壓力 |
-| <strong>紡錘線</strong> | 短實體+上下影線 | 市場猶豫 |</p>
-
+<table>
+<tr><th>型態</th><th>定義</th><th>市場訊號</th></tr>
+<tr><td>------</td><td>------</td><td>----------</td></tr>
+<tr><td><strong>大紅K</strong></td><td>收盤遠高於開盤，實體長，影線<20%</td><td>多頭強勢，後市看漲</td></tr>
+<tr><td><strong>大黑K</strong></td><td>收盤遠低於開盤，實體長，影線<20%</td><td>空頭強勢，後市看跌</td></tr>
+<tr><td><strong>十字線</strong></td><td>開盤≈收盤，長上下影線</td><td>多空勢均力敵</td></tr>
+<tr><td><strong>鎚子線</strong></td><td>短實體+長下影線（無上影線）</td><td>下檔有支撐</td></tr>
+<tr><td><strong>倒鎚線/墓碑線</strong></td><td>短實體+長上影線（無下影線）</td><td>上檔有壓力</td></tr>
+<tr><td><strong>紡錘線</strong></td><td>短實體+上下影線</td><td>市場猶豫</td></tr>
+</table>
 <h3>看漲反轉型態</h3>
 
-<p>| 型態 | 組成 | 訊號 |
-|------|------|------|
-| <strong>錘形線</strong> | 單根K線，短實體長下影線，位於下降趨勢底部 | 拋售壓力後買壓推升，看漲 |
-| <strong>多頭吞噬</strong> | 兩根K線，短紅K被長綠K完全吞沒 | 買家明顯獲勝，看漲 |
-| <strong>早晨之星</strong> | 三根K線：長紅-短K-長綠 | 賣壓消退，看漲 |
-| <strong>白色三兵</strong> | 三根連續長紅K，開盤收盤均高於前日 | 買壓穩步上升，強烈看漲 |</p>
-
+<table>
+<tr><th>型態</th><th>組成</th><th>訊號</th></tr>
+<tr><td>------</td><td>------</td><td>------</td></tr>
+<tr><td><strong>錘形線</strong></td><td>單根K線，短實體長下影線，位於下降趨勢底部</td><td>拋售壓力後買壓推升，看漲</td></tr>
+<tr><td><strong>多頭吞噬</strong></td><td>兩根K線，短紅K被長綠K完全吞沒</td><td>買家明顯獲勝，看漲</td></tr>
+<tr><td><strong>早晨之星</strong></td><td>三根K線：長紅-短K-長綠</td><td>賣壓消退，看漲</td></tr>
+<tr><td><strong>白色三兵</strong></td><td>三根連續長紅K，開盤收盤均高於前日</td><td>買壓穩步上升，強烈看漲</td></tr>
+</table>
 <h3>看跌反轉型態</h3>
 
-<p>| 型態 | 組成 | 訊號 |
-|------|------|------|
-| <strong>上吊線</strong> | 單根K線，短實體長下影線，位於上升趨勢頂部 | 拋售明顯，多頭失控，看跌 |
-| <strong>射擊之星</strong> | 單根K線，短實體長上影線，位於上升趨勢頂部 | 流星墜地，看跌 |
-| <strong>空頭吞噬</strong> | 兩根K線，短綠K被長紅K完全吞沒 | 價格高峰，看跌 |
-| <strong>黃昏之星</strong> | 三根K線：長綠-短K-長紅 | 上升趨勢反轉，看跌 |
-| <strong>三隻烏鴉</strong> | 三根連續長紅K，影線短或無 | 賣方力量連續超越買方，看跌 |</p>
-
+<table>
+<tr><th>型態</th><th>組成</th><th>訊號</th></tr>
+<tr><td>------</td><td>------</td><td>------</td></tr>
+<tr><td><strong>上吊線</strong></td><td>單根K線，短實體長下影線，位於上升趨勢頂部</td><td>拋售明顯，多頭失控，看跌</td></tr>
+<tr><td><strong>射擊之星</strong></td><td>單根K線，短實體長上影線，位於上升趨勢頂部</td><td>流星墜地，看跌</td></tr>
+<tr><td><strong>空頭吞噬</strong></td><td>兩根K線，短綠K被長紅K完全吞沒</td><td>價格高峰，看跌</td></tr>
+<tr><td><strong>黃昏之星</strong></td><td>三根K線：長綠-短K-長紅</td><td>上升趨勢反轉，看跌</td></tr>
+<tr><td><strong>三隻烏鴉</strong></td><td>三根連續長紅K，影線短或無</td><td>賣方力量連續超越買方，看跌</td></tr>
+</table>
 <h3>K線組合型態</h3>
 
 <p><strong>雙K型態</strong>：
-| 型態 | 組成 | 訊號 |
-|------|------|------|
-| <strong>多頭吞噬</strong> | 短紅K被長綠K完全吞沒 | 買家明顯獲勝，看漲 |
-| <strong>空頭吞噬</strong> | 短綠K被長紅K完全吞沒 | 價格高峰，看跌 |
-| <strong>烏雲罩頂</strong> | 長紅K後開高收跌，跌破紅K一半 | 空頭訊號 |
-| <strong>貫穿型態</strong> | 長黑K後開低收紅，站回黑K一半 | 多頭訊號 |
-| <strong>母子型態</strong> | 大K線包覆小K線 | 趨勢暫止，等方向確認 |</p>
-
-<p><strong>三K型態</strong>：
-| 型態 | 組成 | 訊號 |
-|------|------|------|
-| <strong>晨星</strong> | 長黑K + 小K/十字 + 長紅K | 空轉多，強烈買進 |
-| <strong>夜星</strong> | 長紅K + 小K/十字 + 長黑K | 多轉空，強烈賣出 |
-| <strong>紅三兵</strong> | 三根連續紅K，收盤墊高 | 趨勢延續，看漲 |
-| <strong>黑三兵</strong> | 三根連續黑K，收盤走低 | 趨勢延續，看跌 |</p>
-
-<h2>實戰應用</h2>
+<table>
+<tr><th>型態</th><th>組成</th><th>訊號</th></tr>
+<tr><td>------</td><td>------</td><td>------</td></tr>
+<tr><td><strong>多頭吞噬</strong></td><td>短紅K被長綠K完全吞沒</td><td>買家明顯獲勝，看漲</td></tr>
+<tr><td><strong>空頭吞噬</strong></td><td>短綠K被長紅K完全吞沒</td><td>價格高峰，看跌</td></tr>
+<tr><td><strong>烏雲罩頂</strong></td><td>長紅K後開高收跌，跌破紅K一半</td><td>空頭訊號</td></tr>
+<tr><td><strong>貫穿型態</strong></td><td>長黑K後開低收紅，站回黑K一半</td><td>多頭訊號</td></tr>
+<tr><td><strong>母子型態</strong></td><td>大K線包覆小K線</td><td>趨勢暫止，等方向確認</td></tr>
+</table>
+<strong>三K型態</strong>：
+<table>
+<tr><th>型態</th><th>組成</th><th>訊號</th></tr>
+<tr><td>------</td><td>------</td><td>------</td></tr>
+<tr><td><strong>晨星</strong></td><td>長黑K + 小K/十字 + 長紅K</td><td>空轉多，強烈買進</td></tr>
+<tr><td><strong>夜星</strong></td><td>長紅K + 小K/十字 + 長黑K</td><td>多轉空，強烈賣出</td></tr>
+<tr><td><strong>紅三兵</strong></td><td>三根連續紅K，收盤墊高</td><td>趨勢延續，看漲</td></tr>
+<tr><td><strong>黑三兵</strong></td><td>三根連續黑K，收盤走低</td><td>趨勢延續，看跌</td></tr>
+</table>
+<h2>實戰應用</h2></p>
 
 <h3>K線影線比例判斷法</h3>
 
-<p>| 影線比例 | 意義 |
-|---------|------|
-| 影線佔整體 20% 以內 | 阻力小，趨勢延續機率高 |
-| 影線佔整體 20%-50% | 阻力不小，趨勢不明朗 |
-| 影線佔整體 50% 以上 | 阻力極大，多空激戰，應謹慎 |</p>
-
-<p><strong>實戰口訣</strong>：長實體 + 短影線 → 趨勢延續性高；短實體 + 長影線 → 趨勢延續性低</p>
+<table>
+<tr><th>影線比例</th><th>意義</th></tr>
+<tr><td>---------</td><td>------</td></tr>
+<tr><td>影線佔整體 20% 以內</td><td>阻力小，趨勢延續機率高</td></tr>
+<tr><td>影線佔整體 20%-50%</td><td>阻力不小，趨勢不明朗</td></tr>
+<tr><td>影線佔整體 50% 以上</td><td>阻力極大，多空激戰，應謹慎</td></tr>
+</table>
+<strong>實戰口訣</strong>：長實體 + 短影線 → 趨勢延續性高；短實體 + 長影線 → 趨勢延續性低
 
 <h2>注意事項</h2>
 
@@ -182,19 +187,17 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h2>相關主題</h2>
 
-<ul><li><a class="wikilink" href="../moving-averages.html">均線判斷</a></li>
-<li><a class="wikilink" href="../support-resistance.html">支撐壓力</a></li>
-<li><a class="wikilink" href="../stop-loss.html">停損方法</a></li>
+<ul><li><a class="wikilink" href="moving-averages.html">均線判斷</a></li>
+<li><a class="wikilink" href="support-resistance.html">支撐壓力</a></li>
+<li><a class="wikilink" href="../risk/stop-loss.html">停損方法</a></li>
 </ul>
 
 <h2>來源</h2>
 
 <li>stock-knowledge.md（2026-04-28 遷移）</li>
-            <h2>相關主題</h2><p><a class="wikilink" href="../support-resistance.html">支撐壓力</a>, <a class="wikilink" href="../moving-averages.html">均線判斷</a>, <a class="wikilink" href="../moving-averages.html">均線判斷</a></p>
+            <h2>相關主題</h2><p><a class="wikilink" href="moving-averages.html">均線判斷</a>, <a class="wikilink" href="support-resistance.html">支撐壓力</a>, <a class="wikilink" href="../risk/stop-loss.html">停損方法</a></p>
         </article>
     </main>
-    <footer>
-        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
-    </footer>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
 </body>
 </html>

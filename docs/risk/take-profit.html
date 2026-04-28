@@ -8,7 +8,6 @@
 :root {
     --primary: #6366f1;
     --primary-light: #818cf8;
-    --primary-dark: #4f46e5;
     --bg: #ffffff;
     --bg-secondary: #f9fafb;
     --bg-tertiary: #f3f4f6;
@@ -27,7 +26,7 @@ header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px sol
 .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
 .logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
 nav { display: flex; gap: 8px; }
-nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
 nav a:hover { background: var(--bg-tertiary); color: var(--text); }
 nav a.active { background: var(--primary); color: white; }
 
@@ -43,7 +42,7 @@ main { padding: 40px 24px; }
 .stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
 
 .topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
-.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
 .topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
 .topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
 .topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
@@ -63,20 +62,20 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
-.wikilink.disabled { color: var(--text-muted); cursor: default; }
-.wikilink.disabled:hover { text-decoration: none; }
+.wikilink.disabled { color: var(--text-muted); }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
 .article-content h3 { font-size: 18px; margin: 24px 0 12px; }
 .article-content p { margin-bottom: 16px; }
-.article-content ul { margin: 16px 0; padding-left: 24px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
 .article-content li { margin-bottom: 8px; }
 .article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
 .article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
-.article-content th { background: var(--bg-secondary); }
-.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
 .article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
 .article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
 
 footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
@@ -105,13 +104,14 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h2>四種停利方法</h2>
 
-<p>| 方法 | 操作方式 | 優點 | 缺點 | 適用場景 |
-|------|----------|------|------|----------|
-| <strong>固定百分比停利</strong> | 達到目標百分比出場 | 簡單明確 | 可能過早出場 | 短線（10-20%）、新手 |
-| <strong>移動停利（回檔比例）</strong> | 從最高點回檔 X% 出場 | 鎖定獲利、讓利潤奔跑 | 需監控最高點 | 波段、趨勢 |
-| <strong>壓力位停利</strong> | 到達技術壓力位觀察轉折 | 符合技術邏輯、目標明確 | 需判斷壓力位準確性 | 短線、前高附近 |
-| <strong>乖離率停利</strong> | 乖離率超過閾值分批出場 | 避免回檔吞噬獲利 | 需設定合理乖離閾值 | 波段、防止過熱 |</p>
-
+<table>
+<tr><th>方法</th><th>操作方式</th><th>優點</th><th>缺點</th><th>適用場景</th></tr>
+<tr><td>------</td><td>----------</td><td>------</td><td>------</td><td>----------</td></tr>
+<tr><td><strong>固定百分比停利</strong></td><td>達到目標百分比出場</td><td>簡單明確</td><td>可能過早出場</td><td>短線（10-20%）、新手</td></tr>
+<tr><td><strong>移動停利（回檔比例）</strong></td><td>從最高點回檔 X% 出場</td><td>鎖定獲利、讓利潤奔跑</td><td>需監控最高點</td><td>波段、趨勢</td></tr>
+<tr><td><strong>壓力位停利</strong></td><td>到達技術壓力位觀察轉折</td><td>符合技術邏輯、目標明確</td><td>需判斷壓力位準確性</td><td>短線、前高附近</td></tr>
+<tr><td><strong>乖離率停利</strong></td><td>乖離率超過閾值分批出場</td><td>避免回檔吞噬獲利</td><td>需設定合理乖離閾值</td><td>波段、防止過熱</td></tr>
+</table>
 <h2>實戰應用</h2>
 
 <h3>停利建議</h3>
@@ -136,19 +136,17 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h2>相關主題</h2>
 
-<ul><li><a class="wikilink" href="../stop-loss.html">停損方法</a></li>
+<ul><li><a class="wikilink" href="stop-loss.html">停損方法</a></li>
 <li><span class="wikilink disabled">風險報酬比</span></li>
-<li><a class="wikilink" href="../support-resistance.html">支撐壓力</a></li>
+<li><a class="wikilink" href="../technical/support-resistance.html">支撐壓力</a></li>
 </ul>
 
 <h2>來源</h2>
 
 <li>stock-knowledge.md（2026-04-28 遷移）</li>
-            <h2>相關主題</h2><p><a class="wikilink" href="../k-patterns.html">K線型態</a>, <a class="wikilink" href="../stop-loss.html">停損方法</a>, <a class="wikilink" href="../k-patterns.html">K線型態</a></p>
+            <h2>相關主題</h2><p><a class="wikilink" href="stop-loss.html">停損方法</a>, <a class="wikilink" href="../technical/support-resistance.html">支撐壓力</a></p>
         </article>
     </main>
-    <footer>
-        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
-    </footer>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
 </body>
 </html>

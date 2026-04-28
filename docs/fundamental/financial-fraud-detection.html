@@ -8,7 +8,6 @@
 :root {
     --primary: #6366f1;
     --primary-light: #818cf8;
-    --primary-dark: #4f46e5;
     --bg: #ffffff;
     --bg-secondary: #f9fafb;
     --bg-tertiary: #f3f4f6;
@@ -27,7 +26,7 @@ header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px sol
 .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
 .logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
 nav { display: flex; gap: 8px; }
-nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
 nav a:hover { background: var(--bg-tertiary); color: var(--text); }
 nav a.active { background: var(--primary); color: white; }
 
@@ -43,7 +42,7 @@ main { padding: 40px 24px; }
 .stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
 
 .topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
-.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
 .topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
 .topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
 .topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
@@ -63,20 +62,20 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
-.wikilink.disabled { color: var(--text-muted); cursor: default; }
-.wikilink.disabled:hover { text-decoration: none; }
+.wikilink.disabled { color: var(--text-muted); }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
 .article-content h3 { font-size: 18px; margin: 24px 0 12px; }
 .article-content p { margin-bottom: 16px; }
-.article-content ul { margin: 16px 0; padding-left: 24px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
 .article-content li { margin-bottom: 8px; }
 .article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
 .article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
-.article-content th { background: var(--bg-secondary); }
-.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
 .article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
 .article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
 
 footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
@@ -103,25 +102,27 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h3>假帳五大動機</h3>
 
-<p>| 動機 | 說明 |
-|------|------|
-| 順利上市上櫃 | 為了符合上市櫃標準，美化財報 |
-| 掩飾本業衰退 | 怕財報難看導致股價下跌或銀行抽銀根 |
-| 避免大股東破產 | 大股東股票質押成數高（>60%），股價不能跌 |
-| 操縱股價 | 先低價買進，再假帳拉抬股價，最後高賣 |
-| 掏空公司 | 把公司資產搬進自己口袋 |</p>
-
+<table>
+<tr><th>動機</th><th>說明</th></tr>
+<tr><td>------</td><td>------</td></tr>
+<tr><td>順利上市上櫃</td><td>為了符合上市櫃標準，美化財報</td></tr>
+<tr><td>掩飾本業衰退</td><td>怕財報難看導致股價下跌或銀行抽銀根</td></tr>
+<tr><td>避免大股東破產</td><td>大股東股票質押成數高（>60%），股價不能跌</td></tr>
+<tr><td>操縱股價</td><td>先低價買進，再假帳拉抬股價，最後高賣</td></tr>
+<tr><td>掏空公司</td><td>把公司資產搬進自己口袋</td></tr>
+</table>
 <h3>財報假帳六大特徵</h3>
 
-<p>| 特徵 | 判斷標準 | 原理 |
-|------|----------|------|
-| 應收帳款天數過高 | > 90天 | 假交易利潤藏在應收帳款銷不掉 |
-| 存貨天數過低 | < 10天且異於同業 | 虛增營收但存貨沒增加 |
-| 不動產過高 | 週轉率低於同業 | 應收帳款轉入不動產消化 |
-| 長期投資過高 | 未上市櫃公司投資多 | 難驗證的資產藏假 |
-| 現金過高 | 現金高但借款也高 | 現金可能被限制（博達案） |
-| 雜項資產過高 | 其他應收款、預付款高 | 雜項科目藏假 |</p>
-
+<table>
+<tr><th>特徵</th><th>判斷標準</th><th>原理</th></tr>
+<tr><td>------</td><td>----------</td><td>------</td></tr>
+<tr><td>應收帳款天數過高</td><td>> 90天</td><td>假交易利潤藏在應收帳款銷不掉</td></tr>
+<tr><td>存貨天數過低</td><td>< 10天且異於同業</td><td>虛增營收但存貨沒增加</td></tr>
+<tr><td>不動產過高</td><td>週轉率低於同業</td><td>應收帳款轉入不動產消化</td></tr>
+<tr><td>長期投資過高</td><td>未上市櫃公司投資多</td><td>難驗證的資產藏假</td></tr>
+<tr><td>現金過高</td><td>現金高但借款也高</td><td>現金可能被限制（博達案）</td></tr>
+<tr><td>雜項資產過高</td><td>其他應收款、預付款高</td><td>雜項科目藏假</td></tr>
+</table>
 <h2>實戰應用</h2>
 
 <h3>假帳偵測心法</h3>
@@ -137,16 +138,17 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h3>非財務警訊</h3>
 
-<p>| 警訊 | 判斷方式 |
-|------|----------|
-| 老闆誠信被質疑 | 質押成數 > 80% = 很缺錢 |
-| 經營階層變動 | 財務長、獨董、董事接連離職 |
-| 股價異常飆漲 | 漲幅遠超同業且無基本面支撐 |
-| 利多消息不斷 | 頻繁發布利多、澄清「不予置評」太多 |</p>
-
+<table>
+<tr><th>警訊</th><th>判斷方式</th></tr>
+<tr><td>------</td><td>----------</td></tr>
+<tr><td>老闆誠信被質疑</td><td>質押成數 > 80% = 很缺錢</td></tr>
+<tr><td>經營階層變動</td><td>財務長、獨董、董事接連離職</td></tr>
+<tr><td>股價異常飆漲</td><td>漲幅遠超同業且無基本面支撐</td></tr>
+<tr><td>利多消息不斷</td><td>頻繁發布利多、澄清「不予置評」太多</td></tr>
+</table>
 <h2>相關主題</h2>
 
-<ul><li><a class="wikilink" href="../earnings-quality.html">盈餘品質分析</a> - 用七項指標量化驗證盈餘真實性，是假帳偵測的進階版</li>
+<ul><li><a class="wikilink" href="earnings-quality.html">盈餘品質分析</a> - 用七項指標量化驗證盈餘真實性，是假帳偵測的進階版</li>
 <li><span class="wikilink disabled">企業掏空識別</span></li>
 <li><span class="wikilink disabled">會計師查核報告判讀</span></li>
 <li><span class="wikilink disabled">管理階層品質評估</span></li>
@@ -155,11 +157,9 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <h2>來源</h2>
 
 <li>stock-knowledge.md（2026-04-28 遷移）</li>
-            
+            <h2>相關主題</h2><p><a class="wikilink" href="earnings-quality.html">盈餘品質分析</a></p>
         </article>
     </main>
-    <footer>
-        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
-    </footer>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
 </body>
 </html>

@@ -8,7 +8,6 @@
 :root {
     --primary: #6366f1;
     --primary-light: #818cf8;
-    --primary-dark: #4f46e5;
     --bg: #ffffff;
     --bg-secondary: #f9fafb;
     --bg-tertiary: #f3f4f6;
@@ -27,7 +26,7 @@ header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px sol
 .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
 .logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
 nav { display: flex; gap: 8px; }
-nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
 nav a:hover { background: var(--bg-tertiary); color: var(--text); }
 nav a.active { background: var(--primary); color: white; }
 
@@ -43,7 +42,7 @@ main { padding: 40px 24px; }
 .stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
 
 .topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
-.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
 .topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
 .topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
 .topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
@@ -63,20 +62,20 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
-.wikilink.disabled { color: var(--text-muted); cursor: default; }
-.wikilink.disabled:hover { text-decoration: none; }
+.wikilink.disabled { color: var(--text-muted); }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
 .article-content h3 { font-size: 18px; margin: 24px 0 12px; }
 .article-content p { margin-bottom: 16px; }
-.article-content ul { margin: 16px 0; padding-left: 24px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
 .article-content li { margin-bottom: 8px; }
 .article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
 .article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
-.article-content th { background: var(--bg-secondary); }
-.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
 .article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
 .article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
 
 footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
@@ -101,20 +100,22 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h2>核心概念</h2>
 
-<p>| 類型 | 定義 | 特性 |
-|------|------|------|
-| <strong>支撐線</strong> | 價格停止下跌並反彈的位置 | 買方多於賣方，價格上升 |
-| <strong>壓力線</strong> | 價格停止上漲並下跌的位置 | 賣方多於買方，價格下跌 |</p>
-
+<table>
+<tr><th>類型</th><th>定義</th><th>特性</th></tr>
+<tr><td>------</td><td>------</td><td>------</td></tr>
+<tr><td><strong>支撐線</strong></td><td>價格停止下跌並反彈的位置</td><td>買方多於賣方，價格上升</td></tr>
+<tr><td><strong>壓力線</strong></td><td>價格停止上漲並下跌的位置</td><td>賣方多於買方，價格下跌</td></tr>
+</table>
 <h2>實戰應用</h2>
 
 <h3>如何畫線</h3>
 
-<p>| 類型 | 畫法 |
-|------|------|
-| <strong>支撐線</strong> | 連接至少 2 波低點，向右延伸 |
-| <strong>壓力線</strong> | 連接至少 2 波高點，向右延伸 |</p>
-
+<table>
+<tr><th>類型</th><th>畫法</th></tr>
+<tr><td>------</td><td>------</td></tr>
+<tr><td><strong>支撐線</strong></td><td>連接至少 2 波低點，向右延伸</td></tr>
+<tr><td><strong>壓力線</strong></td><td>連接至少 2 波高點，向右延伸</td></tr>
+</table>
 <h3>強度判斷</h3>
 
 <ul><li><strong>觸及次數越多</strong>：支撐/壓力越可靠</li>
@@ -130,12 +131,13 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h3>交易策略</h3>
 
-<p>| 情境 | 支撐線操作 | 壓力線操作 |
-|------|------------|------------|
-| 價格觸及 | 考慮買進 | 考慮賣出 |
-| 價格突破 | 賣出或觀望 | 準備作多 |
-| 價格回測 | 買進機會 | 賣出訊號 |</p>
-
+<table>
+<tr><th>情境</th><th>支撐線操作</th><th>壓力線操作</th></tr>
+<tr><td>------</td><td>------------</td><td>------------</td></tr>
+<tr><td>價格觸及</td><td>考慮買進</td><td>考慮賣出</td></tr>
+<tr><td>價格突破</td><td>賣出或觀望</td><td>準備作多</td></tr>
+<tr><td>價格回測</td><td>買進機會</td><td>賣出訊號</td></tr>
+</table>
 <h3>K棒判斷支撐壓力</h3>
 
 <p>1. <strong>觀察上下影線</strong>：影線尖端常是支撐/壓力位置
@@ -151,19 +153,17 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h2>相關主題</h2>
 
-<ul><li><a class="wikilink" href="../k-patterns.html">K線型態</a></li>
-<li><a class="wikilink" href="../moving-averages.html">均線判斷</a></li>
-<li><a class="wikilink" href="../stop-loss.html">停損方法</a></li>
+<ul><li><a class="wikilink" href="k-patterns.html">K線型態</a></li>
+<li><a class="wikilink" href="moving-averages.html">均線判斷</a></li>
+<li><a class="wikilink" href="../risk/stop-loss.html">停損方法</a></li>
 </ul>
 
 <h2>來源</h2>
 
 <li>stock-knowledge.md（2026-04-28 遷移）</li>
-            <h2>相關主題</h2><p><a class="wikilink" href="../moving-averages.html">均線判斷</a>, <a class="wikilink" href="../k-patterns.html">K線型態</a>, <a class="wikilink" href="../k-patterns.html">K線型態</a></p>
+            <h2>相關主題</h2><p><a class="wikilink" href="k-patterns.html">K線型態</a>, <a class="wikilink" href="moving-averages.html">均線判斷</a>, <a class="wikilink" href="../risk/stop-loss.html">停損方法</a></p>
         </article>
     </main>
-    <footer>
-        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
-    </footer>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
 </body>
 </html>

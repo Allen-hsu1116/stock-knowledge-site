@@ -8,7 +8,6 @@
 :root {
     --primary: #6366f1;
     --primary-light: #818cf8;
-    --primary-dark: #4f46e5;
     --bg: #ffffff;
     --bg-secondary: #f9fafb;
     --bg-tertiary: #f3f4f6;
@@ -27,7 +26,7 @@ header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px sol
 .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
 .logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
 nav { display: flex; gap: 8px; }
-nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
 nav a:hover { background: var(--bg-tertiary); color: var(--text); }
 nav a.active { background: var(--primary); color: white; }
 
@@ -43,7 +42,7 @@ main { padding: 40px 24px; }
 .stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
 
 .topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
-.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
 .topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
 .topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
 .topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
@@ -63,20 +62,20 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
-.wikilink.disabled { color: var(--text-muted); cursor: default; }
-.wikilink.disabled:hover { text-decoration: none; }
+.wikilink.disabled { color: var(--text-muted); }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
 .article-content h3 { font-size: 18px; margin: 24px 0 12px; }
 .article-content p { margin-bottom: 16px; }
-.article-content ul { margin: 16px 0; padding-left: 24px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
 .article-content li { margin-bottom: 8px; }
 .article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
 .article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
-.article-content th { background: var(--bg-secondary); }
-.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
 .article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
 .article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
 
 footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
@@ -114,45 +113,46 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h3>投信作帳行情操作法</h3>
 
-<p>#### Step 1：選出同類型排行前幾名的基金
-績效好的基金才有動力作帳，績效差的基金根本沒拉抬必要。例如股票型基金前10名、科技股基金前5名。</p>
+<h4>Step 1：選出同類型排行前幾名的基金</h4>
+績效好的基金才有動力作帳，績效差的基金根本沒拉抬必要。例如股票型基金前10名、科技股基金前5名。
 
-<p>#### Step 2：找「我有你沒有」的股票
-避開大多基金都買的股票（股本大、難拉抬），找只有特定基金持有的獨特持股。因為基金經理人要拉抬的是對手沒買的股票，才能拉開績效差距。</p>
+<h4>Step 2：找「我有你沒有」的股票</h4>
+避開大多基金都買的股票（股本大、難拉抬），找只有特定基金持有的獨特持股。因為基金經理人要拉抬的是對手沒買的股票，才能拉開績效差距。
 
-<p>#### Step 3：看進場時機
+<h4>Step 3：看進場時機</h4>
 <ul><li><strong>5、6月</strong>就開始布局（提前布局型）</li>
 <li><strong>10月</strong>進場的可能是王牌持股（最後衝刺型）</li>
 <li>篩選條件：投信突然連續買超 + 持股比例不高 + 漲幅不超過30%</li>
-</ul></p>
+</ul>
 
-<p>#### 投信掛單手法識別
+<h4>投信掛單手法識別</h4>
 <ul><li><strong>假賣單</strong>：大單掛在外盤整數價位，看起來是壓力，其實是吸籌碼。等籌碼吸夠撤單，行情飆漲</li>
 <li><strong>假買單</strong>：大單掛在內盤，看起來是支撐，其實是倒貨。投信在偷偷出貨</li>
-</ul></p>
+</ul>
 
-<p>#### 投信持股警戒線
+<h4>投信持股警戒線</h4>
 <ul><li>單一基金持股上限 10%（金管會規定）</li>
 <li><strong>總投信持股超過 15%</strong> → 留意出貨風險</li>
 <li>持股超過 20% → 高風險，隨時可能集體出脫</li>
-</ul></p>
+</ul>
 
 <h3>自營商結帳行情操作法</h3>
 
 <p><strong>投信 vs 自營商關鍵差異</strong>：</p>
 
-<p>| | 投信作帳 | 自營商結帳 |
-|--|----------|------------|
-| 目的 | 帳面績效好看 | 實際獲利入袋 |
-| 要的是 | 未實現數字 | 已實現金額 |
-| 季底行為 | 繼續拉抬持股 | 逢高調節賣出 |
-| 投資人策略 | 搭轎 | 搭轎+提早下車 |</p>
-
-<p><strong>操作時機</strong>：
+<table>
+<tr><th>投信作帳</th><th>自營商結帳</th></tr>
+<tr><td>--</td><td>----------</td><td>------------</td></tr>
+<tr><td>目的</td><td>帳面績效好看</td><td>實際獲利入袋</td></tr>
+<tr><td>要的是</td><td>未實現數字</td><td>已實現金額</td></tr>
+<tr><td>季底行為</td><td>繼續拉抬持股</td><td>逢高調節賣出</td></tr>
+<tr><td>投資人策略</td><td>搭轎</td><td>搭轎+提早下車</td></tr>
+</table>
+<strong>操作時機</strong>：
 <ul><li>每季第一個月（1月、4月、7月、10月）看自營商大買的個股</li>
 <li>最好該月股價橫向整理，順勢進場搭轎</li>
 <li>第二個月股價拉了一波後，第三個月（季底月）就要揮手下車</li>
-</ul></p>
+</ul>
 
 <h3>集團作帳行情</h3>
 
@@ -173,18 +173,16 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 </ul>
 
 <h2>相關主題</h2>
-<ul><li><a class="wikilink" href="../institutional-investors.html">三大法人特性</a></li>
-<li><a class="wikilink" href="../foreign-futures-oi.html">外資期貨未平倉判讀</a></li>
-<li><a class="wikilink" href="../margin-maintenance-calls.html">融資維持率與斷頭</a></li>
+<ul><li><a class="wikilink" href="institutional-investors.html">三大法人特性</a></li>
+<li><a class="wikilink" href="foreign-futures-oi.html">外資期貨未平倉判讀</a></li>
+<li><a class="wikilink" href="margin-maintenance-calls.html">融資維持率與斷頭</a></li>
 </ul>
 
 <h2>來源</h2>
 <li><a href="../raw/2026-04-29/作帳行情投信自營商集團作帳.md">作帳行情投信自營商集團作帳</a></li>
-            <h2>相關主題</h2><p><a class="wikilink" href="../margin-maintenance-calls.html">融資維持率與斷頭</a>, <a class="wikilink" href="../institutional-investors.html">三大法人特性</a>, <a class="wikilink" href="../institutional-investors.html">三大法人特性</a></p>
+            <h2>相關主題</h2><p><a class="wikilink" href="institutional-investors.html">三大法人特性</a>, <a class="wikilink" href="foreign-futures-oi.html">外資期貨未平倉判讀</a>, <a class="wikilink" href="margin-maintenance-calls.html">融資維持率與斷頭</a></p>
         </article>
     </main>
-    <footer>
-        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
-    </footer>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
 </body>
 </html>

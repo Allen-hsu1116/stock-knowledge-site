@@ -8,7 +8,6 @@
 :root {
     --primary: #6366f1;
     --primary-light: #818cf8;
-    --primary-dark: #4f46e5;
     --bg: #ffffff;
     --bg-secondary: #f9fafb;
     --bg-tertiary: #f3f4f6;
@@ -27,7 +26,7 @@ header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px sol
 .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
 .logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
 nav { display: flex; gap: 8px; }
-nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
 nav a:hover { background: var(--bg-tertiary); color: var(--text); }
 nav a.active { background: var(--primary); color: white; }
 
@@ -43,7 +42,7 @@ main { padding: 40px 24px; }
 .stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
 
 .topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
-.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
 .topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
 .topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
 .topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
@@ -63,20 +62,20 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
-.wikilink.disabled { color: var(--text-muted); cursor: default; }
-.wikilink.disabled:hover { text-decoration: none; }
+.wikilink.disabled { color: var(--text-muted); }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
 .article-content h3 { font-size: 18px; margin: 24px 0 12px; }
 .article-content p { margin-bottom: 16px; }
-.article-content ul { margin: 16px 0; padding-left: 24px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
 .article-content li { margin-bottom: 8px; }
 .article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
 .article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
-.article-content th { background: var(--bg-secondary); }
-.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
 .article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
 .article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
 
 footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
@@ -103,22 +102,24 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h3>均線種類</h3>
 
-<p>| 種類 | 計算方式 | 特點 |
-|------|----------|------|
-| <strong>SMA（簡單移動平均）</strong> | 收盤價算術平均 | 權重相等，最常用 |
-| <strong>EMA（指數移動平均）</strong> | 近期價格權重較高 | 對價格波動敏感 |</p>
-
+<table>
+<tr><th>種類</th><th>計算方式</th><th>特點</th></tr>
+<tr><td>------</td><td>----------</td><td>------</td></tr>
+<tr><td><strong>SMA（簡單移動平均）</strong></td><td>收盤價算術平均</td><td>權重相等，最常用</td></tr>
+<tr><td><strong>EMA（指數移動平均）</strong></td><td>近期價格權重較高</td><td>對價格波動敏感</td></tr>
+</table>
 <h3>常用均線週期</h3>
 
-<p>| 週期 | 名稱 | 用途 |
-|------|------|------|
-| <strong>5MA</strong> | 周線 | 短線/當沖 |
-| <strong>10MA</strong> | 雙周線 | 短線 |
-| <strong>20MA</strong> | 月線 | 波段（最重要） |
-| <strong>60MA</strong> | 季線 | 中期 |
-| <strong>120MA</strong> | 半年線 | 中長期 |
-| <strong>240MA</strong> | 年線 | 長期 |</p>
-
+<table>
+<tr><th>週期</th><th>名稱</th><th>用途</th></tr>
+<tr><td>------</td><td>------</td><td>------</td></tr>
+<tr><td><strong>5MA</strong></td><td>周線</td><td>短線/當沖</td></tr>
+<tr><td><strong>10MA</strong></td><td>雙周線</td><td>短線</td></tr>
+<tr><td><strong>20MA</strong></td><td>月線</td><td>波段（最重要）</td></tr>
+<tr><td><strong>60MA</strong></td><td>季線</td><td>中期</td></tr>
+<tr><td><strong>120MA</strong></td><td>半年線</td><td>中長期</td></tr>
+<tr><td><strong>240MA</strong></td><td>年線</td><td>長期</td></tr>
+</table>
 <h2>實戰應用</h2>
 
 <h3>1. 價格突破均線</h3>
@@ -129,18 +130,20 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h3>2. 黃金交叉與死亡交叉</h3>
 
-<p>| 交叉類型 | 定義 | 訊號 |
-|----------|------|------|
-| <strong>黃金交叉</strong> | 短均線向上突破長均線 | 看漲，多單進場訊號 |
-| <strong>死亡交叉</strong> | 短均線向下跌破長均線 | 看跌，空單進場訊號 |</p>
-
+<table>
+<tr><th>交叉類型</th><th>定義</th><th>訊號</th></tr>
+<tr><td>----------</td><td>------</td><td>------</td></tr>
+<tr><td><strong>黃金交叉</strong></td><td>短均線向上突破長均線</td><td>看漲，多單進場訊號</td></tr>
+<tr><td><strong>死亡交叉</strong></td><td>短均線向下跌破長均線</td><td>看跌，空單進場訊號</td></tr>
+</table>
 <h3>3. 多頭排列與空頭排列</h3>
 
-<p>| 排列型態 | 定義 | 訊號 |
-|----------|------|------|
-| <strong>多頭排列</strong> | 短均線在上，長均線在下（5>10>20>60） | 趨勢強勁上升 |
-| <strong>空頭排列</strong> | 短均線在下，長均線在上（5<10<20<60） | 趨勢疲弱下跌 |</p>
-
+<table>
+<tr><th>排列型態</th><th>定義</th><th>訊號</th></tr>
+<tr><td>----------</td><td>------</td><td>------</td></tr>
+<tr><td><strong>多頭排列</strong></td><td>短均線在上，長均線在下（5>10>20>60）</td><td>趨勢強勁上升</td></tr>
+<tr><td><strong>空頭排列</strong></td><td>短均線在下，長均線在上（5<10<20<60）</td><td>趨勢疲弱下跌</td></tr>
+</table>
 <h3>動態支撐壓力</h3>
 
 <ul><li>上升趨勢中：均線作為支撐</li>
@@ -156,19 +159,17 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h2>相關主題</h2>
 
-<ul><li><a class="wikilink" href="../k-patterns.html">K線型態</a></li>
-<li><a class="wikilink" href="../support-resistance.html">支撐壓力</a></li>
-<li><a class="wikilink" href="../stop-loss.html">停損方法</a></li>
+<ul><li><a class="wikilink" href="k-patterns.html">K線型態</a></li>
+<li><a class="wikilink" href="support-resistance.html">支撐壓力</a></li>
+<li><a class="wikilink" href="../risk/stop-loss.html">停損方法</a></li>
 </ul>
 
 <h2>來源</h2>
 
 <li>stock-knowledge.md（2026-04-28 遷移）</li>
-            <h2>相關主題</h2><p><a class="wikilink" href="../support-resistance.html">支撐壓力</a>, <a class="wikilink" href="../k-patterns.html">K線型態</a>, <a class="wikilink" href="../k-patterns.html">K線型態</a></p>
+            <h2>相關主題</h2><p><a class="wikilink" href="k-patterns.html">K線型態</a>, <a class="wikilink" href="support-resistance.html">支撐壓力</a>, <a class="wikilink" href="../risk/stop-loss.html">停損方法</a></p>
         </article>
     </main>
-    <footer>
-        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
-    </footer>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
 </body>
 </html>
