@@ -277,7 +277,7 @@ def generate_category_page(category: str, articles: list) -> str:
             </div>
             <div class="article-excerpt">{article["summary"]}</div>
             <div class="article-meta">
-                {f'<span>相關：{", ".join([f"<a class=\"wikilink\" href=\"{k}.html\">{k}</a>" for k in article["keywords"][:3]])}</span>' if article["keywords"] else ''}
+                {f'<span>相關：{", ".join([f"<a class=\"wikilink\" href=\"{get_slug(k)}.html\">{k}</a>" for k in article["keywords"][:3]])}</span>' if article["keywords"] else ''}
             </div>
         </div>'''
     
