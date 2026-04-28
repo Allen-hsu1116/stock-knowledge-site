@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>期貨未平倉量判讀 - 股票知識庫</title>
+    <title>停利方法 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -63,6 +63,8 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); cursor: default; }
+.wikilink.disabled:hover { text-decoration: none; }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
@@ -83,81 +85,70 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="technical.html" class="">技術分析</a><a href="fundamental.html" class="">基本面分析</a><a href="chips.html" class=" active">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class="">風險管理</a></nav>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class=" active">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
         <article class="article-content">
-            <h1>期貨未平倉量判讀</h1>
-            <h1>期貨未平倉量判讀</h1>
+            <h1>停利方法</h1>
+            <h1>停利方法</h1>
 
-<blockquote>價格+成交量+未平倉三維判讀，OI增加代表趨勢有燃料，OI減少代表趨勢快沒油了</blockquote>
+<blockquote>讓利潤奔跑，但要用移動停利鎖住獲利。</blockquote>
 
 <h2>核心概念</h2>
 
-<p>期貨未平倉口數（Open Interest, OI）是指做多或做空的期貨契約在還沒到期且尚未出場的口數。期貨市場是零和市場，多頭未平倉 = 空頭未平倉。</p>
+<p>停利比停損更難，因為貪婪會讓你不想賣。設定規則，紀律執行。</p>
 
-<p><strong>OI 變化三規則</strong>：
-<ul><li>多單進場 + 空單進場 → OI +1（新多空對決，趨勢啟動）</li>
-<li>多單進場 + 多單平倉 → OI 不變（換手，一方接另一方）</li>
-<li>空單平倉 + 多單平倉 → OI -1（雙方都走人，趨勢結束）</li>
-</ul></p>
+<h2>四種停利方法</h2>
 
-<p>成交量 = 當天成交強弱程度（瞬間力道）
-未平倉量 = 未來續航動能（持續性燃料）</p>
+<p>| 方法 | 操作方式 | 優點 | 缺點 | 適用場景 |
+|------|----------|------|------|----------|
+| <strong>固定百分比停利</strong> | 達到目標百分比出場 | 簡單明確 | 可能過早出場 | 短線（10-20%）、新手 |
+| <strong>移動停利（回檔比例）</strong> | 從最高點回檔 X% 出場 | 鎖定獲利、讓利潤奔跑 | 需監控最高點 | 波段、趨勢 |
+| <strong>壓力位停利</strong> | 到達技術壓力位觀察轉折 | 符合技術邏輯、目標明確 | 需判斷壓力位準確性 | 短線、前高附近 |
+| <strong>乖離率停利</strong> | 乖離率超過閾值分批出場 | 避免回檔吞噬獲利 | 需設定合理乖離閾值 | 波段、防止過熱 |</p>
 
 <h2>實戰應用</h2>
 
-<h3>六種價量OI組合判讀</h3>
+<h3>停利建議</h3>
 
-<p>| 價格 | 成交量 | 未平倉 | 解讀 | 操作 |
-|------|--------|--------|------|------|
-| ↑ | ↑ | ↑ | 多方強勢進場，趨勢最健康 | 順勢做多 |
-| ↑ | ↑ | ↓ | 多方獲利了結，空方停損 | 觀望，可能反轉 |
-| ↑ | ↓ | ↓ | 力道減弱，漲勢虛弱 | 不追多 |
-| ↓ | ↓ | ↓ | 空方獲利了結，多方停損 | 觀望，可能反轉 |
-| ↓ | ↑ | ↑ | 空方強勢進場，趨勢最健康 | 順勢做空 |
-| ↓ | ↑ | ↓ | 多方停損出場，空方獲利了結 | 觀望 |</p>
-
-<p><strong>最可靠的訊號</strong>：價格 + 成交量 + OI 三同向 = 趨勢有燃料</p>
-
-<h3>偏多偏空快速判斷</h3>
-
-<ul><li><strong>偏多</strong>：價格上升 + 成交量增加 + OI增加</li>
-<li><strong>偏空</strong>：價格下跌 + 成交量增加 + OI增加</li>
+<ul><li>短線：10-20% 固定停利或回檔 5-10%</li>
+<li>中線：30-50% 或乖離率 15-25%</li>
+<li>移動停利：從最高點回檔 10% 出場</li>
 </ul>
 
-<h3>正逆價差注意</h3>
+<h3>移動停利執行</h3>
 
-<p>台指期大部分時間呈現逆價差（除權息旺季更明顯），正逆價差不代表偏多偏空。結算日時正逆價差會趨近於零。</p>
+<p>1. 股價上漲後，設定移動停利觸發點
+2. 從最高點回檔 10% 時自動賣出
+3. 鎖住大部分獲利，避免回吐</p>
 
 <h2>注意事項</h2>
 
-<ul><li>OI 本身是中性的，必須搭配價格和成交量一起判讀</li>
-<li>OI 增加代表「趨勢有燃料」但方向要看價格</li>
-<li>OI 減少代表「燃料消耗中」，趨勢可能即將反轉</li>
-<li>法人 OI 公布有落後性，盤後才能看到</li>
-<li>外資 OI 可能包含套利部位，不一定是純方向看法</li>
-<li>建議搭配 <a class="wikilink" href="foreign-futures-oi.html">外資期貨未平倉判讀</a> 看大小外資結構</li>
+<ul><li>不要因為貪心而忽略停利訊號</li>
+<li>分批出場可以降低心理壓力</li>
+<li>搭配風險報酬比：至少 1:2</li>
 </ul>
 
 <h2>相關主題</h2>
-<ul><li><a class="wikilink" href="foreign-futures-oi.html">外資期貨未平倉判讀</a></li>
-<li><a class="wikilink" href="institutional-investors.html">三大法人特性</a></li>
-<li><a class="wikilink" href="quarterly-window-dressing.html">作帳行情</a></li>
+
+<ul><li><a class="wikilink" href="../stop-loss.html">停損方法</a></li>
+<li><span class="wikilink disabled">風險報酬比</span></li>
+<li><a class="wikilink" href="../support-resistance.html">支撐壓力</a></li>
 </ul>
 
 <h2>來源</h2>
-<li><a href="../raw/2026-04-29/期貨未平倉主力動向.md">期貨未平倉主力動向</a></li>
-            <h2>相關主題</h2><p><a class="wikilink" href="quarterly-window-dressing.html">作帳行情</a>, <a class="wikilink" href="quarterly-window-dressing.html">作帳行情</a>, <a class="wikilink" href="quarterly-window-dressing.html">作帳行情</a>, <a class="wikilink" href="institutional-investors.html">三大法人特性</a></p>
+
+<li>stock-knowledge.md（2026-04-28 遷移）</li>
+            <h2>相關主題</h2><p><a class="wikilink" href="../k-patterns.html">K線型態</a>, <a class="wikilink" href="../stop-loss.html">停損方法</a>, <a class="wikilink" href="../k-patterns.html">K線型態</a></p>
         </article>
     </main>
     <footer>
-        <p>股票知識庫 · <a href="index.html">返回首頁</a></p>
+        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>

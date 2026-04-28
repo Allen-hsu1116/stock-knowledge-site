@@ -63,6 +63,8 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); cursor: default; }
+.wikilink.disabled:hover { text-decoration: none; }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
@@ -96,17 +98,17 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
         <div class="section">
         <div class="article-card">
             <div class="article-title">
-                <a href="financial-fraud-detection.html">財報假帳偵測</a>
+                <a href="fundamental/financial-fraud-detection.html">財報假帳偵測</a>
             </div>
             <div class="article-excerpt">先看老闆質押，再看應收帳款天數，這兩個是最大的警訊。</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="earnings-quality.html">盈餘品質分析</a>, <a class="wikilink" href="企業掏空識別.html">企業掏空識別</a>, <a class="wikilink" href="會計師查核報告判讀.html">會計師查核報告判讀</a></span></div>
+            <div class="article-meta"><span>相關：<a class="wikilink" href="earnings-quality.html">盈餘品質分析</a>, <span class="wikilink disabled">企業掏空識別</span>, <span class="wikilink disabled">會計師查核報告判讀</span></span></div>
         </div>
         <div class="article-card">
             <div class="article-title">
-                <a href="earnings-quality.html">盈餘品質分析</a>
+                <a href="fundamental/earnings-quality.html">盈餘品質分析</a>
             </div>
             <div class="article-excerpt">帳面EPS好看不等於公司真的賺到錢——盈餘品質衡量帳面盈餘有多少是「真實現金」，有多少只是會計調整。</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="financial-fraud-detection.html">財報假帳偵測</a>, <a class="wikilink" href="杜邦分析.html">杜邦分析</a>, <a class="wikilink" href="應計項目異象.html">應計項目異象</a></span></div>
+            <div class="article-meta"><span>相關：<a class="wikilink" href="financial-fraud-detection.html">財報假帳偵測</a>, <span class="wikilink disabled">杜邦分析</span>, <span class="wikilink disabled">應計項目異象</span></span></div>
         </div></div>
     </main>
     <footer>

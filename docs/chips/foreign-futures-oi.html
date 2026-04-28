@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K線型態 - 股票知識庫</title>
+    <title>外資期貨未平倉判讀 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -63,6 +63,8 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); cursor: default; }
+.wikilink.disabled:hover { text-decoration: none; }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
@@ -83,116 +85,89 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="technical.html" class=" active">技術分析</a><a href="fundamental.html" class="">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class="">風險管理</a></nav>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class=" active">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
         <article class="article-content">
-            <h1>K線型態</h1>
-            <h1>K線型態</h1>
+            <h1>外資期貨未平倉判讀</h1>
+            <h1>外資期貨未平倉判讀</h1>
 
-<blockquote>K線是技術分析的基礎語言，每一根K線都在說一個多空交戰的故事。</blockquote>
+<blockquote>大外資看中期方向，小外資看短線靈敏度，兩者同向偏多才是真多</blockquote>
 
 <h2>核心概念</h2>
 
-<p>每根K線由四個價格組成：開盤價（Open）、最高價（High）、最低價（Low）、收盤價（Close）。</p>
+<p>外資期貨未平倉口數是台股指數期貨市場最重要的籌碼指標之一。外資在台指期的多空部位，直接反映其對大盤方向的預期。</p>
 
-<p><strong>解讀三要素</strong>：
-<ul><li><strong>顏色</strong>：紅K（上漲）vs 黑K（下跌）</li>
-<li><strong>實體長度</strong>：趨勢強度（長實體 = 趨勢明顯）</li>
-<li><strong>影線長度</strong>：多空交戰激烈程度（長影線 = 阻力大）</li>
-</ul></p>
+<p><strong>關鍵區分：大外資 vs 小外資</strong></p>
 
-<h3>單根K線型態</h3>
+<ul><li><strong>大外資（五大特定人）</strong>：市場最大的五位法人部位，通常就是外資中最大的幾家。部位大，無法短線操作，期貨部位通常代表中期看法（數週到數月）</li>
+<li><strong>小外資</strong>：外資總部位扣除五大外資後的淨額。部位較小，短線操作更靈活，對行情變化更敏感</li>
+</ul>
 
-<p>| 型態 | 定義 | 市場訊號 |
-|------|------|----------|
-| <strong>大紅K</strong> | 收盤遠高於開盤，實體長，影線<20% | 多頭強勢，後市看漲 |
-| <strong>大黑K</strong> | 收盤遠低於開盤，實體長，影線<20% | 空頭強勢，後市看跌 |
-| <strong>十字線</strong> | 開盤≈收盤，長上下影線 | 多空勢均力敵 |
-| <strong>鎚子線</strong> | 短實體+長下影線（無上影線） | 下檔有支撐 |
-| <strong>倒鎚線/墓碑線</strong> | 短實體+長上影線（無下影線） | 上檔有壓力 |
-| <strong>紡錘線</strong> | 短實體+上下影線 | 市場猶豫 |</p>
-
-<h3>看漲反轉型態</h3>
-
-<p>| 型態 | 組成 | 訊號 |
-|------|------|------|
-| <strong>錘形線</strong> | 單根K線，短實體長下影線，位於下降趨勢底部 | 拋售壓力後買壓推升，看漲 |
-| <strong>多頭吞噬</strong> | 兩根K線，短紅K被長綠K完全吞沒 | 買家明顯獲勝，看漲 |
-| <strong>早晨之星</strong> | 三根K線：長紅-短K-長綠 | 賣壓消退，看漲 |
-| <strong>白色三兵</strong> | 三根連續長紅K，開盤收盤均高於前日 | 買壓穩步上升，強烈看漲 |</p>
-
-<h3>看跌反轉型態</h3>
-
-<p>| 型態 | 組成 | 訊號 |
-|------|------|------|
-| <strong>上吊線</strong> | 單根K線，短實體長下影線，位於上升趨勢頂部 | 拋售明顯，多頭失控，看跌 |
-| <strong>射擊之星</strong> | 單根K線，短實體長上影線，位於上升趨勢頂部 | 流星墜地，看跌 |
-| <strong>空頭吞噬</strong> | 兩根K線，短綠K被長紅K完全吞沒 | 價格高峰，看跌 |
-| <strong>黃昏之星</strong> | 三根K線：長綠-短K-長紅 | 上升趨勢反轉，看跌 |
-| <strong>三隻烏鴉</strong> | 三根連續長紅K，影線短或無 | 賣方力量連續超越買方，看跌 |</p>
-
-<h3>K線組合型態</h3>
-
-<p><strong>雙K型態</strong>：
-| 型態 | 組成 | 訊號 |
-|------|------|------|
-| <strong>多頭吞噬</strong> | 短紅K被長綠K完全吞沒 | 買家明顯獲勝，看漲 |
-| <strong>空頭吞噬</strong> | 短綠K被長紅K完全吞沒 | 價格高峰，看跌 |
-| <strong>烏雲罩頂</strong> | 長紅K後開高收跌，跌破紅K一半 | 空頭訊號 |
-| <strong>貫穿型態</strong> | 長黑K後開低收紅，站回黑K一半 | 多頭訊號 |
-| <strong>母子型態</strong> | 大K線包覆小K線 | 趨勢暫止，等方向確認 |</p>
-
-<p><strong>三K型態</strong>：
-| 型態 | 組成 | 訊號 |
-|------|------|------|
-| <strong>晨星</strong> | 長黑K + 小K/十字 + 長紅K | 空轉多，強烈買進 |
-| <strong>夜星</strong> | 長紅K + 小K/十字 + 長黑K | 多轉空，強烈賣出 |
-| <strong>紅三兵</strong> | 三根連續紅K，收盤墊高 | 趨勢延續，看漲 |
-| <strong>黑三兵</strong> | 三根連續黑K，收盤走低 | 趨勢延續，看跌 |</p>
+<p>計算方式：小外資 = 外資總未平倉淨額 − 五大外資淨額</p>
 
 <h2>實戰應用</h2>
 
-<h3>K線影線比例判斷法</h3>
+<h3>大小外資同向判斷法</h3>
 
-<p>| 影線比例 | 意義 |
-|---------|------|
-| 影線佔整體 20% 以內 | 阻力小，趨勢延續機率高 |
-| 影線佔整體 20%-50% | 阻力不小，趨勢不明朗 |
-| 影線佔整體 50% 以上 | 阻力極大，多空激戰，應謹慎 |</p>
+<p>| 大外資 | 小外資 | 判斷 |
+|--------|--------|------|
+| 偏多 | 偏多 | 行情偏多看待，最可靠訊號 |
+| 偏多 | 偏空 | 中期偏多但短線有雜音，留意短期回調 |
+| 偏空 | 偏多 | 中期偏空但短線反彈，搶短要快 |
+| 偏空 | 偏空 | 行情偏空看待，最危險組合 |</p>
 
-<p><strong>實戰口訣</strong>：長實體 + 短影線 → 趨勢延續性高；短實體 + 長影線 → 趨勢延續性低</p>
+<p><strong>核心原則</strong>：大、小外資沒有人翻空單之前，行情不太會有太大的翻轉變動。</p>
+
+<h3>小外資領先訊號</h3>
+
+<p>小外資比大外資更敏感，在一波下跌後小外資較快翻多，在一波上漲後也較快翻空。因此：
+<ul><li>想看短線變化 → 參考小外資部位</li>
+<li>想看中期趨勢 → 參考大外資部位</li>
+<li>最強訊號 = 小外資領先翻多 + 大外資維持偏多</li>
+</ul></p>
+
+<h3>結算日參考</h3>
+
+<p>外資台指期空單加碼 → 預期大盤下跌 → 結算日壓低結算機率較高
+外資台指期多單加碼 → 預期大盤上漲 → 結算日拉高結算機率較高</p>
+
+<p>但籌碼面與行情相關性不是 100%，需搭配其他因素綜合判斷。</p>
+
+<h3>常見誤區</h3>
+
+<p>1. <strong>把外資當反指標</strong>：當外資空單增加但行情卻上漲時，不要急著認定外資是反指標。可能只是小外資已經翻多但大外資還沒跟上
+2. <strong>只看外資總部位</strong>：外資總部位包含幾十家機構，大小外資可能方向不同，總量會掩蓋真相
+3. <strong>忽略套利部位</strong>：外資可能同時持有現貨多單和期貨空單做套利，單看期貨空單會誤判</p>
 
 <h2>注意事項</h2>
 
-<ul><li><strong>單根K線不構成訊號</strong>：需搭配前後K線一起判斷</li>
-<li><strong>影線透露過程，實體透露結果</strong>：長影線 = 激烈交戰，長實體 = 明確趨勢</li>
-<li><strong>型態位置很重要</strong>：同樣型態在高位和低位意義不同</li>
-<li><strong>反轉型態要在趨勢末端才有效</strong></li>
-<li><strong>停損永遠設在型態極端點</strong></li>
-<li><strong>三K比雙K更可靠</strong>（多了確認K線）</li>
+<ul><li>外資在各國交易策略多元，期貨部位不一定純粹是方向性看法</li>
+<li>五大特定人數據有落後性，盤後才公布</li>
+<li>結算日效應雖有參考價值，但不保證準確</li>
+<li>建議搭配 <a class="wikilink" href="../futures-open-interest.html">期貨未平倉量判讀</a>、<a class="wikilink" href="../institutional-investors.html">三大法人特性</a> 綜合判斷</li>
 </ul>
 
 <h2>相關主題</h2>
-
-<ul><li><a class="wikilink" href="moving-averages.html">均線判斷</a></li>
-<li><a class="wikilink" href="support-resistance.html">支撐壓力</a></li>
-<li><a class="wikilink" href="stop-loss.html">停損方法</a></li>
+<ul><li><a class="wikilink" href="../institutional-investors.html">三大法人特性</a></li>
+<li><a class="wikilink" href="../futures-open-interest.html">期貨未平倉量判讀</a></li>
+<li><a class="wikilink" href="../quarterly-window-dressing.html">作帳行情</a></li>
 </ul>
 
 <h2>來源</h2>
-
-<li>stock-knowledge.md（2026-04-28 遷移）</li>
-            <h2>相關主題</h2><p><a class="wikilink" href="support-resistance.html">支撐壓力</a>, <a class="wikilink" href="moving-averages.html">均線判斷</a>, <a class="wikilink" href="moving-averages.html">均線判斷</a></p>
+<ul><li><a href="../raw/2026-04-29/正確解讀大小外資期貨買賣超.md">正確解讀大小外資期貨買賣超</a></li>
+</ul>
+<li><a href="../raw/2026-04-29/期貨未平倉主力動向.md">期貨未平倉主力動向</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="../institutional-investors.html">三大法人特性</a>, <a class="wikilink" href="../quarterly-window-dressing.html">作帳行情</a>, <a class="wikilink" href="../quarterly-window-dressing.html">作帳行情</a>, <a class="wikilink" href="../institutional-investors.html">三大法人特性</a>, <a class="wikilink" href="../institutional-investors.html">三大法人特性</a></p>
         </article>
     </main>
     <footer>
-        <p>股票知識庫 · <a href="index.html">返回首頁</a></p>
+        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>

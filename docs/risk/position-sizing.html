@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>停利方法 - 股票知識庫</title>
+    <title>倉位管理 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -63,6 +63,8 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); cursor: default; }
+.wikilink.disabled:hover { text-decoration: none; }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
@@ -83,70 +85,104 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="technical.html" class="">技術分析</a><a href="fundamental.html" class="">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class=" active">風險管理</a></nav>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class=" active">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
         <article class="article-content">
-            <h1>停利方法</h1>
-            <h1>停利方法</h1>
+            <h1>倉位管理</h1>
+            <h1>倉位管理</h1>
 
-<blockquote>讓利潤奔跑，但要用移動停利鎖住獲利。</blockquote>
+<blockquote>單筆風險 1-2%，這是生存的關鍵。</blockquote>
 
 <h2>核心概念</h2>
 
-<p>停利比停損更難，因為貪婪會讓你不想賣。設定規則，紀律執行。</p>
+<p>倉位大小 = (總資金 × 風險比例) / (進場價 - 停損價)</p>
 
-<h2>四種停利方法</h2>
+<h2>五種倉位管理方法</h2>
 
-<p>| 方法 | 操作方式 | 優點 | 缺點 | 適用場景 |
-|------|----------|------|------|----------|
-| <strong>固定百分比停利</strong> | 達到目標百分比出場 | 簡單明確 | 可能過早出場 | 短線（10-20%）、新手 |
-| <strong>移動停利（回檔比例）</strong> | 從最高點回檔 X% 出場 | 鎖定獲利、讓利潤奔跑 | 需監控最高點 | 波段、趨勢 |
-| <strong>壓力位停利</strong> | 到達技術壓力位觀察轉折 | 符合技術邏輯、目標明確 | 需判斷壓力位準確性 | 短線、前高附近 |
-| <strong>乖離率停利</strong> | 乖離率超過閾值分批出場 | 避免回檔吞噬獲利 | 需設定合理乖離閾值 | 波段、防止過熱 |</p>
+<h3>1. 固定百分比法</h3>
+
+<pre><code class="">倉位大小 = 總資金 × 風險比例 / (進場價 - 停損價)
+</code></pre>
+<ul><li>單筆風險：1-2% 總資金</li>
+<li>適用：長期穩健增長型交易者</li>
+</ul>
+
+<h3>2. ATR 波動率法</h3>
+
+<pre><code class="">倉位大小 = (帳戶資金 × 風險%) / (ATR × 停損倍數 × 每點價值)
+</code></pre>
+<ul><li>高波動自動縮小倉位</li>
+<li>適用：追求與市場波動同步</li>
+</ul>
+
+<h3>3. 凱利公式（Kelly Criterion）</h3>
+
+<pre><code class="">f* = (p × b - q) / b
+</code></pre>
+<ul><li>f* = 最佳下注比例，p = 勝率，q = 敗率，b = 盈虧比</li>
+<li>實務建議：使用「半凱利」更安全</li>
+<li>適用：勝率與盈虧比穩定的策略</li>
+</ul>
+
+<h3>4. 金字塔加碼法</h3>
+
+<ul><li>趨勢確認後初始倉位</li>
+<li>獲利後回調時加碼</li>
+<li>每次加碼金額遞減</li>
+<li>適用：趨勢跟隨策略</li>
+</ul>
+
+<h3>5. 固定金額法</h3>
+
+<ul><li>每筆交易固定風險金額</li>
+<li>計算簡單但帳戶波動後不靈活</li>
+<li>適用：小型帳戶</li>
+</ul>
 
 <h2>實戰應用</h2>
 
-<h3>停利建議</h3>
+<h3>單筆風險控制</h3>
 
-<ul><li>短線：10-20% 固定停利或回檔 5-10%</li>
-<li>中線：30-50% 或乖離率 15-25%</li>
-<li>移動停利：從最高點回檔 10% 出場</li>
+<ul><li><strong>華爾街標準</strong>：單筆不超過 10%</li>
+<li><strong>一般建議</strong>：固定 1-2% 總資金</li>
+<li><strong>絕對上限</strong>：任何情況下單筆不超過 5%</li>
 </ul>
 
-<h3>移動停利執行</h3>
+<h3>動態調整</h3>
 
-<p>1. 股價上漲後，設定移動停利觸發點
-2. 從最高點回檔 10% 時自動賣出
-3. 鎖住大部分獲利，避免回吐</p>
+<ul><li>連續虧損後：降低風險比例到 0.5-1%</li>
+<li>連續獲利後：可提升到 2-3%</li>
+<li>高波動期：自動降低倉位</li>
+</ul>
 
 <h2>注意事項</h2>
 
-<ul><li>不要因為貪心而忽略停利訊號</li>
-<li>分批出場可以降低心理壓力</li>
-<li>搭配風險報酬比：至少 1:2</li>
+<ul><li>不要因為「看好」而過度加碼</li>
+<li>連續虧損時要減碼，不是加碼攤平</li>
+<li>帳戶總風險控制在 6-10% 以內</li>
 </ul>
 
 <h2>相關主題</h2>
 
-<ul><li><a class="wikilink" href="stop-loss.html">停損方法</a></li>
-<li><a class="wikilink" href="風險報酬比.html">風險報酬比</a></li>
-<li><a class="wikilink" href="support-resistance.html">支撐壓力</a></li>
+<ul><li><a class="wikilink" href="../stop-loss.html">停損方法</a></li>
+<li><span class="wikilink disabled">風險報酬比</span></li>
+<li><span class="wikilink disabled">凱利公式</span></li>
 </ul>
 
 <h2>來源</h2>
 
 <li>stock-knowledge.md（2026-04-28 遷移）</li>
-            <h2>相關主題</h2><p><a class="wikilink" href="k-patterns.html">K線型態</a>, <a class="wikilink" href="stop-loss.html">停損方法</a>, <a class="wikilink" href="k-patterns.html">K線型態</a></p>
+            <h2>相關主題</h2><p><a class="wikilink" href="../k-patterns.html">K線型態</a>, <a class="wikilink" href="../take-profit.html">停利方法</a></p>
         </article>
     </main>
     <footer>
-        <p>股票知識庫 · <a href="index.html">返回首頁</a></p>
+        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>

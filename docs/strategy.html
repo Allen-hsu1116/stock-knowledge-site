@@ -63,6 +63,8 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); cursor: default; }
+.wikilink.disabled:hover { text-decoration: none; }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
@@ -96,10 +98,10 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
         <div class="section">
         <div class="article-card">
             <div class="article-title">
-                <a href="day-trading.html">當沖操作</a>
+                <a href="strategy/day-trading.html">當沖操作</a>
             </div>
             <div class="article-excerpt">散戶當沖從未轉正，外資賺 194 億、散戶賠 291 億。</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="波段操作.html">波段操作</a>, <a class="wikilink" href="stop-loss.html">停損方法</a>, <a class="wikilink" href="institutional-investors.html">三大法人特性</a></span></div>
+            <div class="article-meta"><span>相關：<span class="wikilink disabled">波段操作</span>, <a class="wikilink" href="stop-loss.html">停損方法</a>, <a class="wikilink" href="institutional-investors.html">三大法人特性</a></span></div>
         </div></div>
     </main>
     <footer>

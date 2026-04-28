@@ -63,6 +63,8 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); cursor: default; }
+.wikilink.disabled:hover { text-decoration: none; }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
@@ -83,11 +85,11 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="technical.html" class="">技術分析</a><a href="fundamental.html" class=" active">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class="">風險管理</a></nav>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class=" active">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
@@ -289,10 +291,10 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h2>相關主題</h2>
 
-<ul><li><a class="wikilink" href="financial-fraud-detection.html">財報假帳偵測</a> - 盈餘品質差是假帳的前兆，兩者交叉驗證效果最強</li>
-<li><a class="wikilink" href="杜邦分析.html">杜邦分析</a> - 拆解ROE的組成，與盈餘品質互補</li>
-<li><a class="wikilink" href="應計項目異象.html">應計項目異象</a> - 高應計項目公司的系統性低估現象</li>
-<li><a class="wikilink" href="營業現金流分析.html">營業現金流分析</a> - 盈餘品質的關鍵驗證指標</li>
+<ul><li><a class="wikilink" href="../financial-fraud-detection.html">財報假帳偵測</a> - 盈餘品質差是假帳的前兆，兩者交叉驗證效果最強</li>
+<li><span class="wikilink disabled">杜邦分析</span> - 拆解ROE的組成，與盈餘品質互補</li>
+<li><span class="wikilink disabled">應計項目異象</span> - 高應計項目公司的系統性低估現象</li>
+<li><span class="wikilink disabled">營業現金流分析</span> - 盈餘品質的關鍵驗證指標</li>
 </ul>
 
 <h2>來源</h2>
@@ -302,7 +304,7 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
         </article>
     </main>
     <footer>
-        <p>股票知識庫 · <a href="index.html">返回首頁</a></p>
+        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>

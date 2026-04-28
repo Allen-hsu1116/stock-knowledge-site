@@ -63,6 +63,8 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); cursor: default; }
+.wikilink.disabled:hover { text-decoration: none; }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
@@ -83,11 +85,11 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="technical.html" class="">技術分析</a><a href="fundamental.html" class=" active">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class="">風險管理</a></nav>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class=" active">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
@@ -144,10 +146,10 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <h2>相關主題</h2>
 
-<ul><li><a class="wikilink" href="earnings-quality.html">盈餘品質分析</a> - 用七項指標量化驗證盈餘真實性，是假帳偵測的進階版</li>
-<li><a class="wikilink" href="企業掏空識別.html">企業掏空識別</a></li>
-<li><a class="wikilink" href="會計師查核報告判讀.html">會計師查核報告判讀</a></li>
-<li><a class="wikilink" href="管理階層品質評估.html">管理階層品質評估</a></li>
+<ul><li><a class="wikilink" href="../earnings-quality.html">盈餘品質分析</a> - 用七項指標量化驗證盈餘真實性，是假帳偵測的進階版</li>
+<li><span class="wikilink disabled">企業掏空識別</span></li>
+<li><span class="wikilink disabled">會計師查核報告判讀</span></li>
+<li><span class="wikilink disabled">管理階層品質評估</span></li>
 </ul>
 
 <h2>來源</h2>
@@ -157,7 +159,7 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
         </article>
     </main>
     <footer>
-        <p>股票知識庫 · <a href="index.html">返回首頁</a></p>
+        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>

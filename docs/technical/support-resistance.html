@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作帳行情 - 股票知識庫</title>
+    <title>支撐壓力 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -63,6 +63,8 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); cursor: default; }
+.wikilink.disabled:hover { text-decoration: none; }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
@@ -83,106 +85,85 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="technical.html" class="">技術分析</a><a href="fundamental.html" class="">基本面分析</a><a href="chips.html" class=" active">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class="">風險管理</a></nav>
+            <nav><a href="../technical.html" class=" active">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
         <article class="article-content">
-            <h1>作帳行情</h1>
-            <h1>作帳行情</h1>
+            <h1>支撐壓力</h1>
+            <h1>支撐壓力</h1>
 
-<blockquote>投信作帳是「把帳面做漂亮」，自營商結帳是「把錢放進口袋」，集團作帳靠交叉持股和利多消息</blockquote>
+<blockquote>觸及次數越多越可靠，支撐壓力是心理關卡。</blockquote>
 
 <h2>核心概念</h2>
 
-<p>作帳行情是指法人或集團在季底、半年底、年底為了美化績效或財報，積極拉抬個股股價，使個股短線出現一波漲勢的現象。</p>
-
-<p><strong>三種作帳行情</strong>：
-1. <strong>投信作帳</strong>：拉抬基金持股推升淨值，追求「未實現獲利」最大化
-2. <strong>自營商結帳</strong>：賣出獲利持股實現利潤，追求「已實現獲利」最大化
-3. <strong>集團作帳</strong>：透過交叉持股和利多消息，美化集團帳面價值</p>
-
-<p><strong>時間點重要性</strong>：年底 > 半年底 > 季底</p>
+<p>| 類型 | 定義 | 特性 |
+|------|------|------|
+| <strong>支撐線</strong> | 價格停止下跌並反彈的位置 | 買方多於賣方，價格上升 |
+| <strong>壓力線</strong> | 價格停止上漲並下跌的位置 | 賣方多於買方，價格下跌 |</p>
 
 <h2>實戰應用</h2>
 
-<h3>投信作帳行情操作法</h3>
+<h3>如何畫線</h3>
 
-<p>#### Step 1：選出同類型排行前幾名的基金
-績效好的基金才有動力作帳，績效差的基金根本沒拉抬必要。例如股票型基金前10名、科技股基金前5名。</p>
+<p>| 類型 | 畫法 |
+|------|------|
+| <strong>支撐線</strong> | 連接至少 2 波低點，向右延伸 |
+| <strong>壓力線</strong> | 連接至少 2 波高點，向右延伸 |</p>
 
-<p>#### Step 2：找「我有你沒有」的股票
-避開大多基金都買的股票（股本大、難拉抬），找只有特定基金持有的獨特持股。因為基金經理人要拉抬的是對手沒買的股票，才能拉開績效差距。</p>
+<h3>強度判斷</h3>
 
-<p>#### Step 3：看進場時機
-<ul><li><strong>5、6月</strong>就開始布局（提前布局型）</li>
-<li><strong>10月</strong>進場的可能是王牌持股（最後衝刺型）</li>
-<li>篩選條件：投信突然連續買超 + 持股比例不高 + 漲幅不超過30%</li>
-</ul></p>
-
-<p>#### 投信掛單手法識別
-<ul><li><strong>假賣單</strong>：大單掛在外盤整數價位，看起來是壓力，其實是吸籌碼。等籌碼吸夠撤單，行情飆漲</li>
-<li><strong>假買單</strong>：大單掛在內盤，看起來是支撐，其實是倒貨。投信在偷偷出貨</li>
-</ul></p>
-
-<p>#### 投信持股警戒線
-<ul><li>單一基金持股上限 10%（金管會規定）</li>
-<li><strong>總投信持股超過 15%</strong> → 留意出貨風險</li>
-<li>持股超過 20% → 高風險，隨時可能集體出脫</li>
-</ul></p>
-
-<h3>自營商結帳行情操作法</h3>
-
-<p><strong>投信 vs 自營商關鍵差異</strong>：</p>
-
-<p>| | 投信作帳 | 自營商結帳 |
-|--|----------|------------|
-| 目的 | 帳面績效好看 | 實際獲利入袋 |
-| 要的是 | 未實現數字 | 已實現金額 |
-| 季底行為 | 繼續拉抬持股 | 逢高調節賣出 |
-| 投資人策略 | 搭轎 | 搭轎+提早下車 |</p>
-
-<p><strong>操作時機</strong>：
-<ul><li>每季第一個月（1月、4月、7月、10月）看自營商大買的個股</li>
-<li>最好該月股價橫向整理，順勢進場搭轎</li>
-<li>第二個月股價拉了一波後，第三個月（季底月）就要揮手下車</li>
-</ul></p>
-
-<h3>集團作帳行情</h3>
-
-<ul><li>透過旗下公司交叉持股拉抬股價</li>
-<li>在媒體釋出利多消息（如打入供應鏈、新產品等）</li>
-<li>常作帳集團：台塑、華新麗華、鴻海、統一、國巨、聯電</li>
-<li>比法人作帳更難捉摸，因為沒有像投信持股的公開數據</li>
+<ul><li><strong>觸及次數越多</strong>：支撐/壓力越可靠</li>
+<li><strong>時間越久</strong>：心理認同越強</li>
+<li><strong>成交量越大</strong>：該位置越重要</li>
 </ul>
+
+<h3>角色互換</h3>
+
+<ul><li><strong>支撐線被跌破</strong> → 轉變為壓力線</li>
+<li><strong>壓力線被突破</strong> → 轉變為支撐線</li>
+</ul>
+
+<h3>交易策略</h3>
+
+<p>| 情境 | 支撐線操作 | 壓力線操作 |
+|------|------------|------------|
+| 價格觸及 | 考慮買進 | 考慮賣出 |
+| 價格突破 | 賣出或觀望 | 準備作多 |
+| 價格回測 | 買進機會 | 賣出訊號 |</p>
+
+<h3>K棒判斷支撐壓力</h3>
+
+<p>1. <strong>觀察上下影線</strong>：影線尖端常是支撐/壓力位置
+2. <strong>觀察實體密集區</strong>：大量K棒實體疊加的區間
+3. <strong>整數關卡</strong>：如 100 元、1000 點等心理關卡</p>
 
 <h2>注意事項</h2>
 
-<ul><li>自營商喜好「股性活潑」的小型股，常見隔日沖操作</li>
-<li>作帳行情之後必定有結帳潮，不會永遠漲</li>
-<li>股價最終回歸基本面，基本面不夠強的作帳行情只是曇花一現</li>
-<li>投信持股資訊有落後性，只能從籌碼面推測</li>
-<li>年底作帳行情從 10 月就可能開始發動，不要等到 12 月才追</li>
-<li>5、6 月布局比 10 月布局風險更低（提前布局 vs 王牌衝刺）</li>
+<ul><li><strong>假突破要防範</strong>：突破需要確認（收盤站上、成交量放大）</li>
+<li><strong>越多觸及越可靠</strong>：2-3 次以上測試才確認有效</li>
+<li><strong>時間框架要匹配</strong>：日線支撐壓力比分線更重要</li>
 </ul>
 
 <h2>相關主題</h2>
-<ul><li><a class="wikilink" href="institutional-investors.html">三大法人特性</a></li>
-<li><a class="wikilink" href="foreign-futures-oi.html">外資期貨未平倉判讀</a></li>
-<li><a class="wikilink" href="margin-maintenance-calls.html">融資維持率與斷頭</a></li>
+
+<ul><li><a class="wikilink" href="../k-patterns.html">K線型態</a></li>
+<li><a class="wikilink" href="../moving-averages.html">均線判斷</a></li>
+<li><a class="wikilink" href="../stop-loss.html">停損方法</a></li>
 </ul>
 
 <h2>來源</h2>
-<li><a href="../raw/2026-04-29/作帳行情投信自營商集團作帳.md">作帳行情投信自營商集團作帳</a></li>
-            <h2>相關主題</h2><p><a class="wikilink" href="margin-maintenance-calls.html">融資維持率與斷頭</a>, <a class="wikilink" href="institutional-investors.html">三大法人特性</a>, <a class="wikilink" href="institutional-investors.html">三大法人特性</a></p>
+
+<li>stock-knowledge.md（2026-04-28 遷移）</li>
+            <h2>相關主題</h2><p><a class="wikilink" href="../moving-averages.html">均線判斷</a>, <a class="wikilink" href="../k-patterns.html">K線型態</a>, <a class="wikilink" href="../k-patterns.html">K線型態</a></p>
         </article>
     </main>
     <footer>
-        <p>股票知識庫 · <a href="index.html">返回首頁</a></p>
+        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>

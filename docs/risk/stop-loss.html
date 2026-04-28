@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>融資維持率與斷頭 - 股票知識庫</title>
+    <title>停損方法 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -63,6 +63,8 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); cursor: default; }
+.wikilink.disabled:hover { text-decoration: none; }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
@@ -83,102 +85,76 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="technical.html" class="">技術分析</a><a href="fundamental.html" class="">基本面分析</a><a href="chips.html" class=" active">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class="">風險管理</a></nav>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class=" active">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
         <article class="article-content">
-            <h1>融資維持率與斷頭</h1>
-            <h1>融資維持率與斷頭</h1>
+            <h1>停損方法</h1>
+            <h1>停損方法</h1>
 
-<blockquote>維持率低於130%被追繳，T+2補不回來T+3斷頭，融資餘額大減才是底部訊號</blockquote>
+<blockquote>進場前就設好，不得更改。收盤跌破停損價 → 次日開盤立即出場。</blockquote>
 
 <h2>核心概念</h2>
 
-<p>融資是向券商借錢買股票的槓桿工具。融資維持率是券商的保護機制，用來確保借出的錢能收回來。</p>
+<p>停損是生存的關鍵，不是為了提升績效，是為了控制情緒、保護資金。</p>
 
-<p><strong>融資成數</strong>：
-<ul><li>上市股票：融資 60%，自備 40%（槓桿 2.5 倍）</li>
-<li>上櫃股票：融資 50%，自備 50%（槓桿 2 倍）</li>
-</ul></p>
+<h2>七種停損方法</h2>
 
-<p><strong>融資維持率公式</strong>：
-融資維持率 = 股票現值 ÷ 融資金額 × 100%</p>
-
-<p>範例：一張 100 元股票（市值 10 萬），融資 6 萬 → 維持率 = 10萬 / 6萬 = 167%</p>
-
-<p><strong>融資利息</strong>：年利率 6～7%，每日計算（例假日也照算）</p>
+<p>| 方法 | 操作方式 | 優點 | 缺點 | 適用場景 |
+|------|----------|------|------|----------|
+| <strong>K 線停損法</strong> | 以進場日 K 線最低點為停損 | 簡單明確 | 盤整易觸發 | 短線、當沖 |
+| <strong>趨勢停損法</strong> | 停損設在轉折波低點 | 順勢操作 | 需識別轉折 | 趨勢明確行情 |
+| <strong>均線停損法</strong> | 以進場均線價為停損 | 客觀標準 | 震盪易被洗 | 均線操作者 |
+| <strong>固定比例停損法</strong> | 買進價 × (1 - 停損%) | 最簡單 | 難適應波動 | 新手 |
+| <strong>支阻停損法</strong> | 跌破關鍵支撐停損 | 符合技術邏輯 | 需判斷關鍵位 | 技術分析者 |
+| <strong>移動停損法（N K 棒）</strong> | 最近 N 根 K 棒最低點 | 兼具停損停利 | 需持續監控 | 波段操作 |
+| <strong>ATR 動態停損法</strong> | 進場價 ± N × ATR | 反映當下波動 | 計算較複雜 | 高波動標的 |</p>
 
 <h2>實戰應用</h2>
 
-<h3>融資斷頭三階段</h3>
+<h3>絕對停損原則（5 種必須停損）</h3>
 
-<p>| 階段 | 維持率 | 時間 | 動作 |
-|------|--------|------|------|
-| 正常 | >166% | — | 安心持有 |
-| 追繳 | 130%～166% | T日收到通知 | T+2收盤前補錢或抵押 |
-| 斷頭 | <130%且未補 | T+3日 | 券商強制賣出 |</p>
+<p>1. 跌破盤整區 → 絕對停損
+2. 趨勢反轉確認 → 絕對停損
+3. 虧損超過 10% → 絕對停損
+4. 逆勢單反轉 → 立刻停損
+5. 關鍵支撐跌破 → 絕對停損</p>
 
-<p><strong>追繳後三種結果</strong>：
-1. 補到 166% 以上 → 追繳令消失，最安全
-2. 維持在 130%～166% → 追繳令不消失，之後再跌破需當天補
-3. 低於 130% 沒補錢 → T+3 強制賣出 = 斷頭</p>
+<h3>停損核心原則</h3>
 
-<h3>融資餘額判讀（散戶指標）</h3>
-
-<ul><li><strong>融資餘額增加</strong> → 散戶進場，通常不是好訊號</li>
-<li><strong>融資餘額過高</strong> → 太多散戶進場，籌碼不穩</li>
-<li><strong>融資餘額大減</strong> → 散戶斷頭離場，反彈機會較高！</li>
+<ul><li>華爾街標準：單筆不超過 10%</li>
+<li>一般建議：固定 5% 停損</li>
+<li>進場前就設好，不得更改</li>
+<li>收盤跌破停損價 → 次日開盤立即出場</li>
 </ul>
-
-<p><strong>實戰原則</strong>：一波顯著回檔，要等到不理性賣壓出籠、融資斷頭後，才容易見到短線底部。</p>
-
-<h3>除權息假追繳</h3>
-
-<p>遇到除權息，股價會在除息日調整（變低），券商可能在事前就試算後先發出追繳通知，俗稱「假除權息」。融資戶要特別注意除權息前後的維持率變化。</p>
-
-<h3>現股抵押提升維持率</h3>
-
-<p>不想賣掉融資部位也不想補現金時，可以將持有的其他股票作為抵押品：
-<ul><li>分子（股票市價 + 抵押品價值）變大 → 維持率提高</li>
-<li>注意：抵押的現股若下跌，會進一步影響維持率</li>
-</ul></p>
-
-<h3>融資使用率判讀</h3>
-
-<p>融資使用率 = 融資餘額 ÷ 融資限額 × 100%
-<ul><li>使用率 > 60%：高風險，斷頭壓力大</li>
-<li>使用率 < 1%：非常健康（如台積電）</li>
-<li>使用率 80% 以上：極度危險，股價下跌 20% 就可能斷頭</li>
-</ul></p>
 
 <h2>注意事項</h2>
 
-<ul><li>融資利率 6～7% 偏高，不適合長期持有（利息會吃掉利潤）</li>
-<li>融資是雙面刃，賺錢放大獲利，賠錢放大虧損</li>
-<li>斷頭是被迫賣出，不像現股可以一直放著等回來</li>
-<li>融資斷頭潮會形成連鎖賣壓（A斷頭 → 股價跌 → B也斷頭）</li>
-<li>融資餘額只是散戶指標，不要單獨使用，需搭配法人籌碼</li>
-<li>假除權息的追繳要提前準備，不要等到除息日才措手不及</li>
+<ul><li>停損點不得更改，否則等於沒設</li>
+<li>單筆風險控制在總資金 1-2%</li>
+<li>MDD 教訓：跌 50% 需漲 100% 回本，控制回撤比追求報酬更重要</li>
 </ul>
 
 <h2>相關主題</h2>
-<ul><li><a class="wikilink" href="institutional-investors.html">三大法人特性</a></li>
-<li><a class="wikilink" href="quarterly-window-dressing.html">作帳行情</a></li>
-<li><a class="wikilink" href="stop-loss.html">停損方法</a></li>
+
+<ul><li><a class="wikilink" href="../take-profit.html">停利方法</a></li>
+<li><a class="wikilink" href="../position-sizing.html">倉位管理</a></li>
+<li><span class="wikilink disabled">風險報酬比</span></li>
 </ul>
 
 <h2>來源</h2>
-<li><a href="../raw/2026-04-29/融資維持率斷頭與除權息.md">融資維持率斷頭與除權息</a></li>
-            <h2>相關主題</h2><p><a class="wikilink" href="quarterly-window-dressing.html">作帳行情</a>, <a class="wikilink" href="institutional-investors.html">三大法人特性</a>, <a class="wikilink" href="k-patterns.html">K線型態</a></p>
+
+<li>stock-knowledge.md（2026-04-28 遷移）</li>
+            <h2>相關主題</h2><p><a class="wikilink" href="../take-profit.html">停利方法</a></p>
         </article>
     </main>
     <footer>
-        <p>股票知識庫 · <a href="index.html">返回首頁</a></p>
+        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>

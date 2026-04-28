@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>停損方法 - 股票知識庫</title>
+    <title>三大法人特性 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -63,6 +63,8 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); cursor: default; }
+.wikilink.disabled:hover { text-decoration: none; }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
@@ -83,76 +85,85 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="technical.html" class="">技術分析</a><a href="fundamental.html" class="">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class=" active">風險管理</a></nav>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class=" active">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
         <article class="article-content">
-            <h1>停損方法</h1>
-            <h1>停損方法</h1>
+            <h1>三大法人特性</h1>
+            <h1>三大法人特性</h1>
 
-<blockquote>進場前就設好，不得更改。收盤跌破停損價 → 次日開盤立即出場。</blockquote>
+<blockquote>外資看中長線、投信做波段、自營商做短線，跟單優先順序：投信 > 外資 > 自營商。</blockquote>
 
 <h2>核心概念</h2>
 
-<p>停損是生存的關鍵，不是為了提升績效，是為了控制情緒、保護資金。</p>
-
-<h2>七種停損方法</h2>
-
-<p>| 方法 | 操作方式 | 優點 | 缺點 | 適用場景 |
-|------|----------|------|------|----------|
-| <strong>K 線停損法</strong> | 以進場日 K 線最低點為停損 | 簡單明確 | 盤整易觸發 | 短線、當沖 |
-| <strong>趨勢停損法</strong> | 停損設在轉折波低點 | 順勢操作 | 需識別轉折 | 趨勢明確行情 |
-| <strong>均線停損法</strong> | 以進場均線價為停損 | 客觀標準 | 震盪易被洗 | 均線操作者 |
-| <strong>固定比例停損法</strong> | 買進價 × (1 - 停損%) | 最簡單 | 難適應波動 | 新手 |
-| <strong>支阻停損法</strong> | 跌破關鍵支撐停損 | 符合技術邏輯 | 需判斷關鍵位 | 技術分析者 |
-| <strong>移動停損法（N K 棒）</strong> | 最近 N 根 K 棒最低點 | 兼具停損停利 | 需持續監控 | 波段操作 |
-| <strong>ATR 動態停損法</strong> | 進場價 ± N × ATR | 反映當下波動 | 計算較複雜 | 高波動標的 |</p>
+<p>| 法人 | 資金規模 | 操作偏好 | 參考價值 | 實戰要點 |
+|------|----------|----------|----------|----------|
+| <strong>外資</strong> | 40-60%成交 | 大型權值股、中長期 | 高（續買率74%） | 創新高時站在買方，從買轉賣/從賣轉買是重要轉折 |
+| <strong>投信</strong> | ~5%成交 | 中小型股、波段 | 中（留意季底作帳） | 左側交易者，下跌時買進、高檔時賣出 |
+| <strong>自營商</strong> | 1-2%成交 | 短線、避險 | 低（進出快） | 高檔時幾乎都是賣超，買ETF為主 |</p>
 
 <h2>實戰應用</h2>
 
-<h3>絕對停損原則（5 種必須停損）</h3>
+<h3>跟單優先順序</h3>
 
-<p>1. 跌破盤整區 → 絕對停損
-2. 趨勢反轉確認 → 絕對停損
-3. 虧損超過 10% → 絕對停損
-4. 逆勢單反轉 → 立刻停損
-5. 關鍵支撐跌破 → 絕對停損</p>
+<p>| 法人 | 推薦度 | 原因 |
+|------|--------|------|
+| <strong>投信</strong> | ★★★ 最適合 | 目的明確（賺股價上漲）、週期數日到數月、善於挖掘中小型飆股 |
+| <strong>外資</strong> | ★★ 次之 | 資金龐大玩法多（套利、領股息）、不一定要股價上漲才能賺、有凹單本錢 |
+| <strong>自營商</strong> | ★ 最不建議 | 追求絕對報酬、當日虧損>1%被傳喚、盤後看到隔天已出場 |</p>
 
-<h3>停損核心原則</h3>
+<h3>外資連續買超判斷</h3>
 
-<ul><li>華爾街標準：單筆不超過 10%</li>
-<li>一般建議：固定 5% 停損</li>
-<li>進場前就設好，不得更改</li>
-<li>收盤跌破停損價 → 次日開盤立即出場</li>
+<ul><li>建議觀察 3-5 天確認趨勢</li>
+<li>買賣超金額至少要達「億」級別才有參考價值</li>
+<li>選擇大型股（外資偏好權值股）</li>
+<li>注意「假外資」：操作期間短、偏好中小型股、隔日沖</li>
 </ul>
+
+<h3>最佳進場點</h3>
+
+<p>外資「連賣轉買」的轉折點，但不要第一天就進場，觀察 5 天確認。</p>
+
+<h3>法人同步買超訊號</h3>
+
+<p>| 同步情況 | 訊號強度 | 意義 |
+|---------|---------|------|
+| 三大法人同步買超 | 最強 | 市場高度共識 |
+| 外資+投信同步買超 | 強 | 中長期看好 |
+| 僅外資買超 | 中 | 需觀察連續性 |
+| 僅自營商買超 | 弱 | 可能短線操作 |</p>
 
 <h2>注意事項</h2>
 
-<ul><li>停損點不得更改，否則等於沒設</li>
-<li>單筆風險控制在總資金 1-2%</li>
-<li>MDD 教訓：跌 50% 需漲 100% 回本，控制回撤比追求報酬更重要</li>
+<ul><li>法人買超 = 必漲？錯，可能是避險部位</li>
+<li>外資買了、股價有漲才算數</li>
+<li>投信跟單特徵：突然連續買超、過去沒買突然大買 = 有原因</li>
 </ul>
 
 <h2>相關主題</h2>
 
-<ul><li><a class="wikilink" href="take-profit.html">停利方法</a></li>
-<li><a class="wikilink" href="position-sizing.html">倉位管理</a></li>
-<li><a class="wikilink" href="風險報酬比.html">風險報酬比</a></li>
+<ul><li><span class="wikilink disabled">主力買賣超</span></li>
+<li><span class="wikilink disabled">融資融券</span></li>
+<li><span class="wikilink disabled">千張大戶持股分析</span></li>
+<li><a class="wikilink" href="../foreign-futures-oi.html">外資期貨未平倉判讀</a></li>
+<li><a class="wikilink" href="../futures-open-interest.html">期貨未平倉量判讀</a></li>
+<li><a class="wikilink" href="../quarterly-window-dressing.html">作帳行情</a></li>
+<li><a class="wikilink" href="../margin-maintenance-calls.html">融資維持率與斷頭</a></li>
 </ul>
 
 <h2>來源</h2>
 
 <li>stock-knowledge.md（2026-04-28 遷移）</li>
-            <h2>相關主題</h2><p><a class="wikilink" href="take-profit.html">停利方法</a></p>
+            <h2>相關主題</h2><p><a class="wikilink" href="../quarterly-window-dressing.html">作帳行情</a>, <a class="wikilink" href="../foreign-futures-oi.html">外資期貨未平倉判讀</a></p>
         </article>
     </main>
     <footer>
-        <p>股票知識庫 · <a href="index.html">返回首頁</a></p>
+        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>

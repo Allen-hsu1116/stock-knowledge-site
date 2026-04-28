@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>支撐壓力 - 股票知識庫</title>
+    <title>融資維持率與斷頭 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -63,6 +63,8 @@ main { padding: 40px 24px; }
 
 .wikilink { color: var(--primary); text-decoration: none; }
 .wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); cursor: default; }
+.wikilink.disabled:hover { text-decoration: none; }
 
 .article-content { max-width: 800px; }
 .article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
@@ -83,85 +85,102 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="technical.html" class=" active">技術分析</a><a href="fundamental.html" class="">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class="">風險管理</a></nav>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class=" active">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
         <article class="article-content">
-            <h1>支撐壓力</h1>
-            <h1>支撐壓力</h1>
+            <h1>融資維持率與斷頭</h1>
+            <h1>融資維持率與斷頭</h1>
 
-<blockquote>觸及次數越多越可靠，支撐壓力是心理關卡。</blockquote>
+<blockquote>維持率低於130%被追繳，T+2補不回來T+3斷頭，融資餘額大減才是底部訊號</blockquote>
 
 <h2>核心概念</h2>
 
-<p>| 類型 | 定義 | 特性 |
-|------|------|------|
-| <strong>支撐線</strong> | 價格停止下跌並反彈的位置 | 買方多於賣方，價格上升 |
-| <strong>壓力線</strong> | 價格停止上漲並下跌的位置 | 賣方多於買方，價格下跌 |</p>
+<p>融資是向券商借錢買股票的槓桿工具。融資維持率是券商的保護機制，用來確保借出的錢能收回來。</p>
+
+<p><strong>融資成數</strong>：
+<ul><li>上市股票：融資 60%，自備 40%（槓桿 2.5 倍）</li>
+<li>上櫃股票：融資 50%，自備 50%（槓桿 2 倍）</li>
+</ul></p>
+
+<p><strong>融資維持率公式</strong>：
+融資維持率 = 股票現值 ÷ 融資金額 × 100%</p>
+
+<p>範例：一張 100 元股票（市值 10 萬），融資 6 萬 → 維持率 = 10萬 / 6萬 = 167%</p>
+
+<p><strong>融資利息</strong>：年利率 6～7%，每日計算（例假日也照算）</p>
 
 <h2>實戰應用</h2>
 
-<h3>如何畫線</h3>
+<h3>融資斷頭三階段</h3>
 
-<p>| 類型 | 畫法 |
-|------|------|
-| <strong>支撐線</strong> | 連接至少 2 波低點，向右延伸 |
-| <strong>壓力線</strong> | 連接至少 2 波高點，向右延伸 |</p>
+<p>| 階段 | 維持率 | 時間 | 動作 |
+|------|--------|------|------|
+| 正常 | >166% | — | 安心持有 |
+| 追繳 | 130%～166% | T日收到通知 | T+2收盤前補錢或抵押 |
+| 斷頭 | <130%且未補 | T+3日 | 券商強制賣出 |</p>
 
-<h3>強度判斷</h3>
+<p><strong>追繳後三種結果</strong>：
+1. 補到 166% 以上 → 追繳令消失，最安全
+2. 維持在 130%～166% → 追繳令不消失，之後再跌破需當天補
+3. 低於 130% 沒補錢 → T+3 強制賣出 = 斷頭</p>
 
-<ul><li><strong>觸及次數越多</strong>：支撐/壓力越可靠</li>
-<li><strong>時間越久</strong>：心理認同越強</li>
-<li><strong>成交量越大</strong>：該位置越重要</li>
+<h3>融資餘額判讀（散戶指標）</h3>
+
+<ul><li><strong>融資餘額增加</strong> → 散戶進場，通常不是好訊號</li>
+<li><strong>融資餘額過高</strong> → 太多散戶進場，籌碼不穩</li>
+<li><strong>融資餘額大減</strong> → 散戶斷頭離場，反彈機會較高！</li>
 </ul>
 
-<h3>角色互換</h3>
+<p><strong>實戰原則</strong>：一波顯著回檔，要等到不理性賣壓出籠、融資斷頭後，才容易見到短線底部。</p>
 
-<ul><li><strong>支撐線被跌破</strong> → 轉變為壓力線</li>
-<li><strong>壓力線被突破</strong> → 轉變為支撐線</li>
-</ul>
+<h3>除權息假追繳</h3>
 
-<h3>交易策略</h3>
+<p>遇到除權息，股價會在除息日調整（變低），券商可能在事前就試算後先發出追繳通知，俗稱「假除權息」。融資戶要特別注意除權息前後的維持率變化。</p>
 
-<p>| 情境 | 支撐線操作 | 壓力線操作 |
-|------|------------|------------|
-| 價格觸及 | 考慮買進 | 考慮賣出 |
-| 價格突破 | 賣出或觀望 | 準備作多 |
-| 價格回測 | 買進機會 | 賣出訊號 |</p>
+<h3>現股抵押提升維持率</h3>
 
-<h3>K棒判斷支撐壓力</h3>
+<p>不想賣掉融資部位也不想補現金時，可以將持有的其他股票作為抵押品：
+<ul><li>分子（股票市價 + 抵押品價值）變大 → 維持率提高</li>
+<li>注意：抵押的現股若下跌，會進一步影響維持率</li>
+</ul></p>
 
-<p>1. <strong>觀察上下影線</strong>：影線尖端常是支撐/壓力位置
-2. <strong>觀察實體密集區</strong>：大量K棒實體疊加的區間
-3. <strong>整數關卡</strong>：如 100 元、1000 點等心理關卡</p>
+<h3>融資使用率判讀</h3>
+
+<p>融資使用率 = 融資餘額 ÷ 融資限額 × 100%
+<ul><li>使用率 > 60%：高風險，斷頭壓力大</li>
+<li>使用率 < 1%：非常健康（如台積電）</li>
+<li>使用率 80% 以上：極度危險，股價下跌 20% 就可能斷頭</li>
+</ul></p>
 
 <h2>注意事項</h2>
 
-<ul><li><strong>假突破要防範</strong>：突破需要確認（收盤站上、成交量放大）</li>
-<li><strong>越多觸及越可靠</strong>：2-3 次以上測試才確認有效</li>
-<li><strong>時間框架要匹配</strong>：日線支撐壓力比分線更重要</li>
+<ul><li>融資利率 6～7% 偏高，不適合長期持有（利息會吃掉利潤）</li>
+<li>融資是雙面刃，賺錢放大獲利，賠錢放大虧損</li>
+<li>斷頭是被迫賣出，不像現股可以一直放著等回來</li>
+<li>融資斷頭潮會形成連鎖賣壓（A斷頭 → 股價跌 → B也斷頭）</li>
+<li>融資餘額只是散戶指標，不要單獨使用，需搭配法人籌碼</li>
+<li>假除權息的追繳要提前準備，不要等到除息日才措手不及</li>
 </ul>
 
 <h2>相關主題</h2>
-
-<ul><li><a class="wikilink" href="k-patterns.html">K線型態</a></li>
-<li><a class="wikilink" href="moving-averages.html">均線判斷</a></li>
-<li><a class="wikilink" href="stop-loss.html">停損方法</a></li>
+<ul><li><a class="wikilink" href="../institutional-investors.html">三大法人特性</a></li>
+<li><a class="wikilink" href="../quarterly-window-dressing.html">作帳行情</a></li>
+<li><a class="wikilink" href="../stop-loss.html">停損方法</a></li>
 </ul>
 
 <h2>來源</h2>
-
-<li>stock-knowledge.md（2026-04-28 遷移）</li>
-            <h2>相關主題</h2><p><a class="wikilink" href="moving-averages.html">均線判斷</a>, <a class="wikilink" href="k-patterns.html">K線型態</a>, <a class="wikilink" href="k-patterns.html">K線型態</a></p>
+<li><a href="../raw/2026-04-29/融資維持率斷頭與除權息.md">融資維持率斷頭與除權息</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="../quarterly-window-dressing.html">作帳行情</a>, <a class="wikilink" href="../institutional-investors.html">三大法人特性</a>, <a class="wikilink" href="../k-patterns.html">K線型態</a></p>
         </article>
     </main>
     <footer>
-        <p>股票知識庫 · <a href="index.html">返回首頁</a></p>
+        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>
