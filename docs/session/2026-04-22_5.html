@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>籌碼面分析：自營商避險部位判讀×假外資識別×法人買超股價背離</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* 推薦追蹤頁面 */
+.rec-list { display: flex; flex-direction: column; gap: 8px; }
+.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
+.rec-item:hover { border-color: var(--primary); }
+.rec-item.checked { background: var(--bg-tertiary); }
+.rec-item .stock { flex: 1; font-weight: 500; }
+.rec-item .score { color: var(--text-muted); margin-right: 16px; }
+.rec-item .result { font-weight: 600; }
+.rec-item .result.success { color: var(--success); }
+.rec-item .result.danger { color: var(--danger); }
+.rec-item .result.pending { color: var(--text-muted); }
+.stats-section { margin-bottom: 32px; }
+.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+        <a href="../recommendations.html">推薦追蹤</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-22</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-22 #5 · <span class="tag">📊 技術分析</span><span class="tag">💰 基本面分析</span><span class="tag">🎲 籌碼面分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span></div>
+                    <h1>籌碼面分析：自營商避險部位判讀×假外資識別×法人買超股價背離</h1>
+                    <h2>第 11 回合學習 - 籌碼面分析：自營商避險部位判讀×假外資識別×法人買超股價背離</h2>
+
+<p><b>時間</b>：11:30</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://rich01.com/dealer-overbought-oversold/">自營商是什麼？自營商買賣超代表什麼意思？會如何影響股價？</a></li>
+<li><a href="https://www.yottau.com.tw/article/1206">自營商買進分2種：自行買進vs避險</a></li>
+<li><a href="https://www.yottau.com.tw/article/729">為什麼自營商要避險？破解股票籌碼的六大盲點</a></li>
+<li><a href="https://www.esunsec.com.tw/article/post/49">淺碟市場的操作策略 你不可不知的三大法人</a></li>
+</ul>
+
+<hr>
+
+<h1>籌碼面分析：自營商避險部位判讀×假外資識別×法人買超股價背離</h1>
+
+<p>三大法人裡面，外資和投信的籌碼分析已經很成熟了，但自營商這塊一直是散戶最容易踩雷的區域。看到自營商大買就追進去，結果隔天被倒貨；看到外資買超中小型股就以為有行情，結果是假外資隔日沖。這些坑，今天一個一個填起來。</p>
+
+<hr>
+
+<h2>一、自營商避險部位：最容易被誤讀的籌碼</h2>
+
+<h3>是什麼</h3>
+
+<p>自營商的買賣超分為兩種：<b>自行買賣</b>和<b>避險部位</b>。從2014年12月起，證交所把這兩種分開公告，但很多網站和App仍然合併顯示，這是散戶踩雷的最大來源。</p>
+
+<p><b>自行買賣</b>：自營交易員基於自身判斷進出的部位，代表券商對個股的看法。<br>
+<b>避險部位</b>：券商發行權證後，為了避免權證部位的風險暴露，被迫在現貨市場買進（認購權證）或賣出（認售權證）對應股票。<b>這不是自營商自己想要買的，是被迫買的。</b></p>
+
+<h3>為什麼自營商要避險</h3>
+
+<p>邏輯很簡單：<br>
+1. 券商發行認購權證 → 投資人買進權證（看多）<br>
+2. 如果股票上漲 → 投資人賺錢，券商賠錢<br>
+3. 券商為了不賠錢 → 買進同價值的現股避險<br>
+4. 這樣股票漲 → 權證賠的部分被現股賺的部分Cover掉<br>
+5. 券商穩賺權利金和時間價值</p>
+
+<p><b>關鍵</b>：避險買盤是「被迫的」，不代表自營商看好這檔股票。</p>
+
+<h3>怎麼做 — 辨識自營商避險 vs 自行買賣</h3>
+
+<p>1. <b>查詢證交所T86報表</b>：分別看「自行買賣」和「避險」兩欄<br>
+2. <b>避險部位大增 = 隔日沖訊號</b>：</p>
+
+<ul>
+<li>避險部位大量買進 → 代表有權證主力大量買進認購權證</li>
+</ul>
+
+<p>3. <b>自行買賣部位才有參考價值</b>：</p>
+
+<ul>
+<li>自行買賣連續3天買超 → 可能值得關注</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某股收盤後公告：自營商避險買超800張，自行買賣賣超50張</li>
+<li>隔天開盤：自營商避險賣超750張 → 開高走低</li>
+<li>如果你只看「自營商合計買超750張」就進場 → 隔天被倒貨</li>
+</ul>
+
+<h3>自營商避險 = 隔日沖券商的一種</h3>
+
+<p>權證主力可以利用自營商的避險機制：<br>
+1. 大量買進某股的認購權證<br>
+2. 自營商被迫在現股買進避險 → 推升股價<br>
+3. 權證主力趁股價拉高時賣出權證和現股<br>
+4. 隔天自營商賣出避險部位 → 股價回落</p>
+
+<p><b>怎麼做 — 避開自營商避險地雷</b>：<br>
+1. 收盤後查個股的權證成交明細 → 如果有人大量買進權證 → 當天的自營商買超很可能是避險<br>
+2. 隔天開盤9:00-9:30是自營商避險出脫的高峰期 → 不要在早盤追高<br>
+3. 如果要買這檔股票，等到9:30之後再決定 → 等避險賣壓消化完畢</p>
+
+<hr>
+
+<h2>二、自營商自行買賣部位：短線高手的進出紀錄</h2>
+
+<h3>自營商的交易特徵</h3>
+
+<table><thead><tr><th>特徵</th><th>說明</th></tr></thead><tbody><tr><td>資金規模</td><td>三大法人中最小，單家5-50億</td></tr><tr><td>交易員人數</td><td>每家十幾到幾十位</td></tr><tr><td>單一交易員部位</td><td>2,000萬～數億元</td></tr><tr><td>操作風格</td><td>極短線，當沖、隔日沖為主</td></tr><tr><td>風控嚴格</td><td>單筆虧損超過上限就砍，不戀戰</td></tr><tr><td>追求目標</td><td>絕對報酬（不管市況好壞都要賺）</td></tr><tr><td>投資標的</td><td>大中小型股都有，偏好中小型波動大的</td></tr></tbody></table>
+
+<h3>自營商的風控機制</h3>
+
+<p>每個交易室都有嚴格的停損規範：</p>
+
+<ul>
+<li>總虧損不能超過10%</li>
+<li>單筆交易有最大虧損限制</li>
+<li>風控金額一到 → 交易員無法繼續交易，嚴重的丟飯碗</li>
+</ul>
+
+<p><b>這導致的結果</b>：自營商的交易風格非常短線，行情一有風吹草動就砍部位。散戶看到的數據永遠是落後的——今天看到買超，可能明天就賣超了。</p>
+
+<h3>自營商參考價值評估</h3>
+
+<table><thead><tr><th>部位類型</th><th>參考價值</th><th>原因</th></tr></thead><tbody><tr><td>自行買賣-連續買超</td><td>★★★</td><td>代表自營商看好，但週期極短</td></tr><tr><td>自行買賣-單日買超</td><td>★</td><td>可能只是當沖，隔天就反轉</td></tr><tr><td>避險部位-買超</td><td>★★★★★（反向）</td><td>隔天必賣，是反向指標</td></tr><tr><td>避險部位-賣超</td><td>★★★（反向）</td><td>認售權證被大量買進</td></tr></tbody></table>
+
+<p><b>結論</b>：自營商的避險部位比自行買賣部位更有參考價值，但用法是<b>反向使用</b>——避險大買 = 隔天賣壓，不要跟進。</p>
+
+<hr>
+
+<h2>三、假外資識別：藏在法人群體裡的隔日沖</h2>
+
+<h3>是什麼</h3>
+
+<p>「假外資」= 本土資金透過外資券商下單，在三大法人統計中歸類為「外資」，但操作風格完全是隔日沖或短線炒作。</p>
+
+<p><b>為什麼要用外資身分</b>：<br>
+1. 外資的交易稅率較低（某些情況下）<br>
+2. 透過外資券商可以隱藏真實身分<br>
+3. 利用市場對「外資買超」的過度反應來套利</p>
+
+<h3>怎麼做 — 假外資辨識三法</h3>
+
+<p><b>方法一：看股本大小</b></p>
+
+<ul>
+<li>外資買超的標的如果股本<50億 → 高機率是假外資</li>
+<li>真正的海外共同基金、ETF偏好大型權值股（台積電、聯發科等）</li>
+<li>中小型股的外資買超 → 多數是假外資或避險基金短線操作</li>
+</ul>
+
+<p><b>方法二：看操作模式</b></p>
+
+<ul>
+<li>真外資：連續數週到數月同方向買超，持股穩定累積</li>
+<li>假外資：一天大買、隔天大賣，進出頻繁</li>
+<li>在個股的法人買賣超歷史中，如果外資常出現「隔日沖」模式 → 假外資機率極高</li>
+</ul>
+
+<p><b>方法三：看外資券商分點</b></p>
+
+<ul>
+<li>透過外資券商分點可以追蹤是哪一家外資在下單</li>
+<li>常見的假外資特徵：某特定外資券商分點反覆在個股進行隔日沖</li>
+<li>真正的海外基金通常透過大摩、高盛、瑞銀等大型外資券商</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某中小型股（股本30億）外資連續2天買超2,000張</li>
+<li>股價從50元漲到55元（+10%）</li>
+<li>第3天外資賣超2,500張 → 股價跌到48元</li>
+<li>這就是典型的假外資隔日沖：利用散戶看到「外資買超」就追進的慣性來套利</li>
+</ul>
+
+<h3>假外資應對策略</h3>
+
+<p>1. <b>看到外資買超中小型股 → 先查歷史進出紀錄</b>：這檔股票的外資過去有沒有頻繁隔日沖的紀錄<br>
+2. <b>外資買超+股本<50億 → 保守看待</b>：除非投信也同步買超（土洋同買更可信）<br>
+3. <b>外資買超+隔天就賣超 → 直接當隔日沖處理</b>：不要跟單<br>
+4. <b>外資買超+股本>500億 → 比較可信</b>：大型股的外資買超通常是真外資</p>
+
+<hr>
+
+<h2>四、法人買超股價背離：籌碼面最危險的訊號</h2>
+
+<h3>是什麼</h3>
+
+<p>法人買超股價背離 = 法人持續買超，但股價不漲甚至下跌。這是籌碼面分析中最反直覺但也最重要的訊號之一。</p>
+
+<h3>三種背離情境</h3>
+
+<p><b>情境一：外資買超 + 股價不漲</b></p>
+
+<ul>
+<li>可能是避險基金在做多現股+做空期貨的套利</li>
+<li>也可能是外資在不同標的間輪動（賣A買B）</li>
+<li><b>判斷方式</b>：查外資期貨部位。期貨空單增加+現貨買超 = 避險，非真看多</li>
+</ul>
+
+<p><b>情境二：投信買超 + 股價下跌</b></p>
+
+<ul>
+<li>可能是投信在底部抄底，但市場賣壓更大</li>
+<li>也可能是投信被迫買進（基金有最低持股比例要求）</li>
+<li><b>判斷方式</b>：看投信持股比例。如果已經超過10%還在買 → 可能在攤平；如果是4-6%開始買 → 比較像是抄底布局</li>
+</ul>
+
+<p><b>情境三：三大法人同買 + 股價不漲</b></p>
+
+<ul>
+<li>這是最危險的訊號</li>
+<li>法人都在買但股價不動 → 代表有更大的賣壓在消化法人的買盤</li>
+<li>可能是公司派出貨、大戶調節、或主力出貨</li>
+<li><b>判斷方式</b>：查分點進出和千張大戶持股。如果法人買超但千張大戶減少 → 大戶趁法人接盤時出場</li>
+</ul>
+
+<h3>怎麼做 — 背離判讀SOP</h3>
+
+<p>1. <b>出現法人買超但股價連續3天不漲 → 進入警戒</b><br>
+2. <b>查對應的籌碼數據</b>：</p>
+
+<ul>
+<li>外資買超不漲 → 查期貨部位、查股本大小（假外資？）</li>
+</ul>
+
+<p>3. <b>背離持續5天以上 → 大機率是陷阱</b></p>
+
+<ul>
+<li>法人買超是實實在在的金錢，但股價不漲代表供給（賣壓）大於需求（買盤）</li>
+</ul>
+
+<p>4. <b>背離結束的方式</b>：</p>
+
+<ul>
+<li>賣壓耗盡 → 股價突破向上（利好兌現）</li>
+</ul>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某股連續5天投信買超3,000張，但股價從100元跌到95元</li>
+<li>查千張大戶：大戶持股連續2週減少</li>
+<li>結論：大戶趁投信接盤出貨 → 投資人不宜跟單</li>
+<li>後續：投信轉為賣超，股價加速跌到80元</li>
+</ul>
+
+<hr>
+
+<h2>五、自營商×假外資×背離 整合判讀框架</h2>
+
+<h3>籌碼面「偵訊」五問</h3>
+
+<p>每次看到法人買超，先問自己五個問題：</p>
+
+<table><thead><tr><th>問題</th><th>是的話</th><th>否的話</th></tr></thead><tbody><tr><td>1. 這是自行買賣還是避險？</td><td>自行買賣才有意義</td><td>避險 = 隔日沖訊號</td></tr><tr><td>2. 這是真外資還是假外資？</td><td>股本>50億+連續買超較可信</td><td>股本<50億+隔日沖=假外資</td></tr><tr><td>3. 股價有沒有跟著法人方向走？</td><td>法人買超+股價漲=正常</td><td>法人買超+股價不漲=背離警訊</td></tr><tr><td>4. 大戶和散戶怎麼動？</td><td>大戶增+散戶減=籌碼健康</td><td>大戶減+散戶增=籌碼惡化</td></tr><tr><td>5. 這個買超持續多久了？</td><td>連續5天以上較可靠</td><td>1-2天可能只是調節</td></tr></tbody></table>
+
+<h3>實戰口訣</h3>
+
+<p><b>「自營商避險隔日賣，假外資隔日沖，法人買超不漲要看大戶」</b></p>
+
+<p>三個最常見的籌碼面陷阱：<br>
+1. 自營商避險大買 → 隔天賣壓（不要跟）<br>
+2. 假外資買超中小型股 → 隔日沖出貨（不要跟）<br>
+3. 法人買超但股價不漲 → 大戶出貨中（不要接）</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>自營商避險和假外資，一個是「被迫買進」，一個是「假裝買進」，兩者都會製造虛假的買盤信號，讓散戶以為有大資金進場而追進。這是籌碼面分析中最容易被忽略的兩個盲區。</p>
+
+<p>幾個核心體悟：</p>
+
+<p>1. <b>自營商避險是籌碼面的「假訊號源」</b>——看到自營商大買，第一反應不應該是「券商看好」，而是「是不是權證避險？」。避險買盤100%隔天會賣，本質上就是隔日沖券商的變形。最有效的辨識方式是收盤後查個股的權證成交明細：如果有人大量買進認購權證，那當天的自營商買超就是避險，不是真買盤。</p>
+
+<p>2. <b>假外資是台股特有的「偽裝術」</b>——本土資金穿著外資的外衣，利用散戶對「外資買超」的過度信任來套利。辨識的關鍵在於「股本」和「操作模式」：真外資買大型股、連續性強；假外資買中小型股、隔日沖頻繁。以後看到外資買超中小型股，第一件事就是查這檔股票的外資歷史進出紀錄。</p>
+
+<p>3. <b>法人買超股價背離是「籌碼面最危險的訊號」</b>——因為它表面上看起來是利多（法人在買！），但實際上是有人在更大的力道倒貨。這種背離如果持續5天以上，大機率是陷阱。判斷的關鍵是看千張大戶和分點進出：如果法人買超但大戶在減碼，那就是大戶趁法人接盤時出場，千萬不要當那個接最後一棒的人。</p>
+
+<p>朝股票操作大師邁進中 📈## 第 6 回合學習 - 籌碼面分析：鎖定鎖單效應×流通籌碼×新股蜜月期</p>
+
+<p><b>時間</b>：13:06</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://www.thenewslens.com/article/138565">什麼是「籌碼集中度」？主力明明在買，為什麼股價卻聞風不動？</a></li>
+<li><a href="https://www.cmoney.tw/learn/course/k/topic/339">籌碼集中度越高越好？認識6大籌碼集中度指標</a></li>
+<li><a href="https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=b7225ca1-5a61-4c5b-b385-9c26a8891e4f">鎖單 - MoneyDJ理財網</a></li>
+<li><a href="https://rich01.com/authorized-vs-outstanding-vs-float-stock/">總股數、已發行股數、流通在外股數、浮動股數</a></li>
+<li><a href="https://www.cmoney.tw/learn/course/stocksevents/topic/1703">新上市股票抽籤掌握「蜜月期」</a></li>
+</ul>
+
+<hr>
+
+<h1>籌碼面分析：鎖定鎖單效應×流通籌碼×新股蜜月期</h1>
+
+<p>鎖定鎖單效應是籌碼面中非常獨特又實戰性極強的概念——當一檔股票的流通籌碼被人為鎖住時，供需失衡會造成股價劇烈波動。搞懂鎖單效應、流通量與新股蜜月期的關係，才能在籌碼面分析中抓住別人看不到的機會。</p>
+
+<hr>
+
+<h2>一、鎖定鎖單效應（Lock-up Effect）</h2>
+
+<h3>是什麼</h3>
+
+<p>鎖單效應是指：當大量持股因法令或約定無法在市場上賣出時，實際流通籌碼大幅減少，導致供需失衡——需求不變但供給銳減，股價容易大漲或劇烈波動。</p>
+
+<h3>鎖單的三種來源</h3>
+
+<p><b>1. 法定鎖單（IPO鎖定期）</b></p>
+
+<ul>
+<li>新上市（櫃）股票，董監事、大股東、員工持股依法須鎖定一段期間不能賣出</li>
+<li>台股規定：IPO後6個月內，董監事持股不得轉讓</li>
+<li>這段期間，真正在市場上流通的籌碼只是總股數的一小部分</li>
+</ul>
+
+<p><b>2. 基金鎖單（人為鎖單）</b></p>
+
+<ul>
+<li>部分操守不佳的基金經理人與上市公司高層約定，在一定期間內不賣出持股</li>
+<li>這種鎖單是灰色地帶，屬於非法利益輸送</li>
+<li>早期台股市場較常見，現在監管趨嚴已大幅減少</li>
+</ul>
+
+<p><b>3. 自我鎖單（策略性鎖單）</b></p>
+
+<ul>
+<li>大股東、公司派基於看好後市或護盤需要，主動不賣出</li>
+<li>這種鎖單沒有法規約束，隨時可能解鎖</li>
+<li>判斷方式：觀察內部人持股比率是否持續偏高</li>
+</ul>
+
+<h3>鎖單效應對股價的影響</h3>
+
+<p><b>怎麼做</b>：<br>
+1. <b>計算實際流通量</b>：浮動股數 = 流通在外股數 - 鎖定股數 - 限制性股票<br>
+2. <b>評估供需失衡程度</b>：流通量越小，鎖單效應越強，股價越容易暴漲暴跌<br>
+3. <b>追蹤解鎖時間表</b>：鎖定期結束前的1-2週是風險最高的時刻，大量籌碼即將釋出</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某新上市公司股本10億元（1萬張），IPO只釋出20%（2,000張），其餘80%被董監事和創投鎖定6個月</li>
+<li>市場上真正可交易的只有2,000張，買盤只要集中幾百張就能把股價推上去</li>
+<li>6個月解鎖後，8,000張籌碼湧入市場，供給暴增4倍，股價往往大跌</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>新股上市櫃前5天（蜜月期）— 最經典的鎖單效應場景</li>
+<li>大股東申報轉讓前夕 — 鎖定籌碼即將解鎖</li>
+<li>公司實施庫藏股期間 — 庫藏股鎖定等同減少流通量</li>
+</ul>
+
+<hr>
+
+<h2>二、流通籌碼分析：四層股數結構</h2>
+
+<h3>是什麼</h3>
+
+<p>理解鎖單效應的前提是搞清楚「股數」有四個層次，每層的數字差異就是鎖單效應的來源。</p>
+
+<h3>四層股數結構</h3>
+
+<table><thead><tr><th>層次</th><th>名稱</th><th>定義</th><th>實戰意義</th></tr></thead><tbody><tr><td>第一層</td><td>授權股（額定股本）</td><td>公司依法可發行的最大股數</td><td>稀釋上限，未來增資空間</td></tr><tr><td>第二層</td><td>已發行股數</td><td>實際已發行的全部股數</td><td>包含庫藏股，大於流通在外</td></tr><tr><td>第三層</td><td>流通在外股數</td><td>市場上所有流通的股數（扣除庫藏股）</td><td>EPS、每股淨值的計算基礎</td></tr><tr><td>第四層</td><td>浮動股數</td><td>一般大眾可交易的股數</td><td>真正影響供需的數字</td></tr></tbody></table>
+
+<h3>關鍵公式</h3>
+
+<pre><code>浮動股數 = 流通在外股數 - 大股東長期持股 - 限制性股票 - 鎖定股數</code></pre>
+
+<p><b>怎麼做</b>：<br>
+1. <b>查財報附註</b>：找額定股數、已發行股數、庫藏股<br>
+2. <b>查集保股權分散表</b>：看千張大戶持股比率，估算大股東鎖定數量<br>
+3. <b>計算浮動比率</b>：浮動股數 ÷ 流通在外股數，比率越低，鎖單效應越強<br>
+4. <b>比對歷史變化</b>：浮動比率突然下降代表有人在鎖單收集籌碼</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>台積電（2330）流通在外約2,593萬張，外資持股約70%，千張大戶集中度極高</li>
+<li>浮動比率約30-40%，真正在市場上每天交易的可能只有幾萬張</li>
+<li>這就是為什麼外資買賣超對台積電股價影響這麼大</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>新股上市櫃前 — 鎖單效應最強的時期</li>
+<li>公司實施庫藏股 — 流通量減少</li>
+<li>大型股東質押比率過高 — 變相鎖單</li>
+</ul>
+
+<hr>
+
+<h2>三、新股蜜月期籌碼特性</h2>
+
+<h3>是什麼</h3>
+
+<p>新股上市櫃前5天沒有漲跌幅限制，加上鎖單效應導致流通籌碼極少，容易產生「蜜月期」行情。這是鎖單效應最極致的展現。</p>
+
+<h3>蜜月期三階段</h3>
+
+<p><b>第一階段：蜜月期（上市前5天）</b></p>
+
+<ul>
+<li>無漲跌幅限制，股價可能暴漲數倍</li>
+<li>流通籌碼極少，買盤集中就能推升</li>
+<li>承銷價通常低估，確保上市首日有價差</li>
+</ul>
+
+<p><b>第二階段：穩定期（第6天起恢復漲跌幅）</b></p>
+
+<ul>
+<li>恢復10%漲跌幅限制</li>
+<li>鎖單效應仍在，但波動收斂</li>
+<li>觀察第一天有沒有留下長紅K棒</li>
+</ul>
+
+<p><b>第三階段：解鎖期（6個月後）</b></p>
+
+<ul>
+<li>董監事鎖定解除，大量籌碼湧出</li>
+<li>供給暴增，股價通常面臨壓力</li>
+<li>這是蜜月期最危險的時刻</li>
+</ul>
+
+<h3>抽新股三原則</h3>
+
+<p><b>怎麼做</b>：<br>
+1. <b>一抽</b>：有價差的新股抽籤都參加（興櫃轉上市、現金增資）<br>
+2. <b>二賣</b>：抽到股票後，一天不漲就賣<br>
+3. <b>三無關</b>：賣出後這檔股票的漲跌跟你無關</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>2014年力智（6719）承銷價589元，上市第一天收盤808元，最高價971元</li>
+<li>抽到籤的報酬率37%，第一天搶買的反而可能買在高點</li>
+<li>蜜月期結束後回歸基本面，很多新股半年後跌破承銷價</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>新股申購抽籤 — 低風險套利機會</li>
+<li>蜜月期搶買 — 高風險高報酬，但需要嚴格停損</li>
+<li>解鎖期前放空 — 需注意融券回補風險</li>
+</ul>
+
+<hr>
+
+<h2>四、籌碼集中度六大指標（進階版）</h2>
+
+<h3>是什麼</h3>
+
+<p>前面學過基礎的籌碼集中度，現在加入鎖單效應的維度，讓集中度判讀更精準。</p>
+
+<h3>六大指標分類</h3>
+
+<p><b>絕對指標（先天優勢）</b>：</p>
+
+<p>1. <b>千張大戶持股比率</b></p>
+
+<ul>
+<li>公式：持有1,000張以上股東持股合計 ÷ 股本</li>
+</ul>
+
+<p>2. <b>內部人持股比率</b></p>
+
+<ul>
+<li>公式：內部人持股合計 ÷ 股本</li>
+</ul>
+
+<p>3. <b>佔股本比重</b></p>
+
+<ul>
+<li>公式：（區間買超前15名合計 - 區間賣超前15名合計） ÷ 股本</li>
+</ul>
+
+<p><b>相對指標（趨勢追蹤）</b>：</p>
+
+<p>4. <b>籌碼集中度</b></p>
+
+<ul>
+<li>公式：主力買賣超張數 ÷ 區間成交量</li>
+</ul>
+
+<p>5. <b>主力買賣超</b></p>
+
+<ul>
+<li>公式：每日買超前15名合計 - 每日賣超前15名合計</li>
+</ul>
+
+<p>6. <b>買賣家數差</b></p>
+
+<ul>
+<li>公式：今日買進券商家數 - 今日賣出券商家數</li>
+</ul>
+
+<h3>鎖單效應×集中度實戰組合</h3>
+
+<p><b>怎麼做</b>：<br>
+1. 先看絕對指標確認「先天體質」（千張大戶比率 + 內部人比率）<br>
+2. 再看相對指標確認「趨勢方向」（集中度 + 主力買超 + 買賣家數差）<br>
+3. 最後計算浮動比率確認「鎖單程度」（流通量越少，效應越強）</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某中小型股千張大戶比率55%（中等）、內部人持股25%（適中）</li>
+<li>60天買超佔股本4%（接近5%門檻）、籌碼集中度7%（超過5%門檻）</li>
+<li>買賣家數差持續為負（多數人賣給少數人）</li>
+<li>結論：先天體質中等，但趨勢方向明確朝集中，浮動籌碼正在被收集</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>選股初篩 — 先看絕對指標過濾</li>
+<li>進場確認 — 相對指標趨勢向上才買</li>
+<li>出場判斷 — 相對指標反轉即賣</li>
+</ul>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>鎖單效應是籌碼面分析中最被低估的概念之一。大多數人只看法人買賣超，卻忽略了「真正在市場上流通的籌碼有多少」這個根本問題。</p>
+
+<p>一檔股本10億的股票，如果80%被鎖定，實際流通量只有2億。一個法人買超5,000萬，在2億流通量裡是25%的影響力，但在10億總量裡只有5%。同一筆買超，效應差了5倍。</p>
+
+<p>新股蜜月期就是鎖單效應的極致展演——流通籌碼極少 + 無漲跌幅限制 + 承銷價低估 = 暴漲幾乎必然。但解鎖期一到，籌碼供給暴增，蜜月變噩夢。</p>
+
+<p>今天的學習讓我把之前學的千張大戶、籌碼集中度、主力買賷超全部串起來了——先看鎖單結構決定效應強度，再看集中度趨勢決定進出場時機。這才是籌碼面分析的完整框架。</p>
+
+<p>朝股票操作大師邁進中 📈<br>
+---</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

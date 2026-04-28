@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>風險管理：相關性風險×分散失效×壓力測試實戰</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* 推薦追蹤頁面 */
+.rec-list { display: flex; flex-direction: column; gap: 8px; }
+.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
+.rec-item:hover { border-color: var(--primary); }
+.rec-item.checked { background: var(--bg-tertiary); }
+.rec-item .stock { flex: 1; font-weight: 500; }
+.rec-item .score { color: var(--text-muted); margin-right: 16px; }
+.rec-item .result { font-weight: 600; }
+.rec-item .result.success { color: var(--success); }
+.rec-item .result.danger { color: var(--danger); }
+.rec-item .result.pending { color: var(--text-muted); }
+.stats-section { margin-bottom: 32px; }
+.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+        <a href="../recommendations.html">推薦追蹤</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-24</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-24 #6 · <span class="tag">📊 技術分析</span><span class="tag">💰 基本面分析</span><span class="tag">🎲 籌碼面分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span><span class="tag">🧠 交易心理</span></div>
+                    <h1>風險管理：相關性風險×分散失效×壓力測試實戰</h1>
+                    <h2>第 8 回合學習 - 風險管理：相關性風險×分散失效×壓力測試實戰</h2>
+
+<p><b>時間</b>：08:40</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://tacticalinvestor.com/diversification-failure-when-your-portfolio-falls-apart-together/">Diversification Failure: When Your Portfolio Falls Apart Together</a></li>
+<li><a href="https://www.finlab.tw/risk-of-diversification/">分散風險的迷思？當心「攤薄」效應！- FinLab</a></li>
+<li><a href="https://www.phoenixstrategy.group/blog/stress-testing-for-portfolio-risk-management">Stress Testing for Portfolio Risk Management - Phoenix Strategy Group</a></li>
+<li><a href="https://www.phoenixstrategy.group/blog/5-scenarios-to-stress-test-portfolio-volatility">5 Scenarios to Stress Test Portfolio Volatility - Phoenix Strategy Group</a></li>
+</ul>
+
+<hr>
+
+<h1>相關性風險×分散失效×壓力測試實戰</h1>
+
+<h2>一、相關性風險（Correlation Risk）</h2>
+
+### 是什麼
+相關性風險是指「你以為分散了，但其實沒有」的風險。在正常時期，不同資產的相關係數可能很低（如股票0.3、商品0.2），讓你覺得組合很分散。但危機來時，所有相關係數急速飆升趨近1，所有資產同時下跌，分散完全失效。
+
+<h3>為什麼相關性會在危機時飆升？</h3>
+
+<p><b>流動性機制</b>：</p>
+
+<ul>
+<li>危機時，投資人面臨追繳保證金（Margin Call），需要現金</li>
+<li>他們不是「想賣什麼」就賣什麼，而是「能賣什麼」就賣什麼</li>
+<li>有流動性的資產首先被拋售（不論基本面），因為急需變現</li>
+<li>所有資產通過同一個管道——「對現金的迫切需求」——被連結在一起</li>
+</ul>
+
+<p><b>歷史證據</b>：</p>
+
+<ul>
+<li><b>2008年金融海嘯</b>：股票跌、債券跌、商品跌、房地產崩、新興市場崩。原本相關係數0.3的資產飆到0.9以上</li>
+<li><b>2020年3月</b>：S&P 500三週跌34%，投資級公司債同時下跌，黃金也下跌，連美國公債都出現異常波動</li>
+<li><b>結論</b>：危機時，相關性趨近1是常態而非例外</li>
+</ul>
+
+<h3>相關性矩陣的謊言</h3>
+
+<p><b>怎麼做</b>：<br>
+1. 你用歷史數據算出來的相關性矩陣，絕大部分來自正常市場環境<br>
+2. 平靜的日子遠多於危機的日子，所以平均相關性被「正常日」稀釋<br>
+3. 你用正常時期的數據設計防護，卻在危機時期需要這個防護——這就是矛盾</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：你計算股票與商品的相關係數為0.3，覺得分散效果不錯</li>
+<li>現實：0.3是正常時期的數值，危機時可能變成0.9</li>
+<li>你以為的分散：0.3相關性 → 風險降低70%</li>
+<li>實際的分散：危機時0.9相關性 → 風險幾乎沒降低</li>
+<li><b>你的相關性矩陣量測的是「沒事發生時」的行為，卻用來防護「出事時」的情境</b></li>
+</ul>
+
+<h3>風險平價基金的致命缺陷</h3>
+
+<ul>
+<li>風險平價策略對低波動資產（如債券）加槓桿，使風險貢獻與高波動資產（如股票）相等</li>
+<li>危機時波動率飆升，必須同時減碼所有資產</li>
+<li>這個「同時減碼」行為本身就是一種強制賣壓，讓相關性進一步飆升</li>
+<li><b>越是精巧的風險平價策略，在危機時越是加劇相關性飆升</b></li>
+</ul>
+
+<p><b>適用時機</b>：每個投資人都必須理解相關性風險，特別是在建構投資組合時</p>
+
+<hr>
+
+<h2>二、分散失效（Diversification Failure）</h2>
+
+### 是什麼
+分散失效是指「理論上分散的組合，在危機時全部一起下跌」的現象。這不是理論上的擔憂，而是歷史上反覆出現的紀錄。
+
+<h3>三次危機的教訓</h3>
+
+<p><b>1929年大蕭條</b>：</p>
+
+<ul>
+<li>存活者的特徵：持有現金或短期政府票券</li>
+<li>他們不需要在底部賣出股票，因為有其他流動性來源</li>
+<li>分散不是跨資產類別（這些類別會一起下跌），而是跨流動性特徵</li>
+</ul>
+
+<p><b>2008年金融海嘯</b>：</p>
+
+<ul>
+<li>表現最好的組合：要麼持有明確的尾部避險工具（如VIX Call），要麼持有同儕認為「過多」的現金</li>
+<li>這些現金部位在牛市時看起來是拖累，在崩盤時成為生存保障</li>
+<li>分散失效打擊了所有假設相關性會保持穩定的人</li>
+</ul>
+
+<p><b>2020年疫情崩盤</b>：</p>
+
+<ul>
+<li>最快復甦的組合：能在下跌時加碼的組合（有乾火藥）</li>
+<li>能進攻的前提：在危機前就有防禦性配置</li>
+<li>那些滿倉的人承受了完整的回撤</li>
+</ul>
+
+### 共同特徵
+三個歷史案例的共同教訓：
+1. **不依賴相關性假設在壓力下維持穩定**
+2. **維持流動性緩衝，避免被迫賣出**
+3. **持有結構性避險工具，專為相關性飆升而設計**
+
+<h3>過度分散的陷阱（Diworsification）</h3>
+
+<p><b>是什麼</b>：過度分散在相同類型的標的上，結果Alpha被稀釋，風險卻沒有進一步降低。</p>
+
+<p><b>怎麼做（正確的分散）</b>：<br>
+1. <b>每種策略內精選標的</b>：只挑最有信心的5-10支股票，不是什麼都買一點<br>
+2. <b>跨策略分散</b>：在不同類型的Alpha之間分散（動能、價值、趨勢追蹤、套利等）<br>
+3. <b>追求低相關性的策略組合</b>：不同策略之間相關性低，才是真正的分散</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>❌ 錯誤分散：持有30支科技股 → 相關性極高，分散效果差</li>
+<li>✅ 正確分散：持有5支精選科技股 + 5支精選金融股 + 5支精選消費股 + 短期公債 + 黃金 → 跨產業、跨資產類別，真正分散</li>
+</ul>
+
+<p><b>數學基礎</b>：</p>
+
+<ul>
+<li>Grinold的主動管理基本法則：IR = IC × √BR</li>
+<li>關鍵：BR是「獨立」機會數，不是持股數</li>
+<li>30支同產業股票的BR可能只有5-10，因為它們高度相關</li>
+</ul>
+
+<p><b>研究證據</b>：</p>
+
+<ul>
+<li>哈佛商學院研究：基金經理的「最佳點子」股票，每年超額報酬比其他持股高2.8-4.5%</li>
+<li>AQR研究：結合5個低相關性因子策略，夏普比率約1.4，遠高於單一策略的0.7</li>
+<li>結論：<b>分散的正確做法是「每個籃子裝最優質的雞蛋，同時放在不同類型的籃子裡」</b></li>
+</ul>
+
+<hr>
+
+<h2>三、壓力測試實戰（Stress Testing）</h2>
+
+### 是什麼
+壓力測試是模擬極端但合理的市場情境，評估你的投資組合在這些情境下的表現。不是預測未來，而是**確認你的組合在最壞情況下能不能活下來**。
+
+### 為什麼需要壓力測試？
+1. 回測只告訴你「過去的平均表現」，壓力測試告訴你「極端情況會多慘」
+2. VaR（風險值）假設常態分布，但極端事件不是常態的
+3. 相關性在壓力時會飆升，只有壓力測試能模擬這種情境
+
+<h3>五大壓力情境</h3>
+
+<h4>情境1：股市崩盤</h4>
+
+<p><b>模擬方式</b>：</p>
+
+<ul>
+<li>股票下跌30-50%</li>
+<li>公司債利差擴大200-400基點</li>
+<li>黃金上漲5-15%（避險需求）</li>
+<li>政府公債初期波動，後期穩定（資金避風港）</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 計算你的股票部位在下跌40%時的虧損金額<br>
+2. 計算債券部位能否提供足夠緩衝<br>
+3. 計算整體組合的回撤是否超過你能承受的範圍<br>
+4. 如果超過，減少股票曝險或增加避險部位</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：投資組合60%股票、30%債券、10%黃金</li>
+<li>股票跌40% → 整體虧損60%×40% = 24%</li>
+<li>債券跌5% → 整體虧損30%×5% = 1.5%</li>
+<li>黃金漲10% → 整體獲利10%×10% = 1%</li>
+<li>組合總回撤：-24% - 1.5% + 1% = -24.5%</li>
+<li>判斷：如果你的最大可承受回撤是20%，這個組合需要調整</li>
+</ul>
+
+<h4>情境2：利率急升</h4>
+
+<p><b>模擬方式</b>：</p>
+
+<ul>
+<li>利率上升200-300基點</li>
+<li>債券價格下跌（長期債跌幅更大）</li>
+<li>成長股因折現率上升而大跌</li>
+<li>金融股可能受益（利差擴大）</li>
+<li>房地產面臨更高融資成本</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 計算債券部位的存續期間（Duration）<br>
+2. 存續期間×利率變動 = 大約的價格變動<br>
+3. 例：存續期間7年的債券，利率上升2% → 價格下跌約14%<br>
+4. 評估你的成長股曝險是否過高</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：持有100萬長期公債ETF（存續期間7年）和50萬科技股</li>
+<li>利率上升3%：公債下跌約21%（7×3%），虧損21萬</li>
+<li>科技股下跌約25%，虧損12.5萬</li>
+<li>總虧損：33.5萬，佔總資金150萬的22.3%</li>
+<li>修正：降低長期債部位，增加短期債和浮動利率債</li>
+</ul>
+
+<h4>情境3：地緣政治衝突</h4>
+
+<p><b>模擬方式</b>：</p>
+
+<ul>
+<li>油價飆漲50-100%</li>
+<li>相關區域股市暴跌</li>
+<li>避險貨幣（日圓、瑞士法郎）升值</li>
+<li>黃金上漲</li>
+<li>軍工和能源股受益</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 評估你的區域曝險比例<br>
+2. 評估能源和原物料曝險<br>
+3. 確認是否有足夠的避險資產（黃金、避險貨幣）<br>
+4. 確認流動性緩衝是否足夠</p>
+
+<h4>情境4：經濟長期衰退</h4>
+
+<p><b>模擬方式</b>：</p>
+
+<ul>
+<li>股票持續下跌2-3年</li>
+<li>企業獲利大幅下降</li>
+<li>失業率飆升</li>
+<li>流動性枯竭，信用利差擴大</li>
+<li>資產相關性飆升</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 計算你的組合在連續3年負報酬下的資金狀況<br>
+2. 評估你是否需要在不利的時間點被迫賣出資產<br>
+3. 確認你的現金緩衝能否支撐2-3年的生活開銷<br>
+4. 評估你的配息收入是否會被削減</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>情境：退休族，靠配息生活，年支出60萬</li>
+<li>組合：500萬股票ETF（配息率3%）+ 300萬債券ETF（配息率2.5%）+ 200萬現金</li>
+<li>股票3年跌40%，配息率從3%降到1.5%</li>
+<li>債券配息穩定但價格下跌</li>
+<li>年配息收入從22.5萬降到14.25萬</li>
+<li>需從本金提取45.75萬/年，3年共137.25萬</li>
+<li>200萬現金只夠撐4.3年 → 安全邊際不足，需要調整</li>
+</ul>
+
+<h4>情境5：黑天鵝事件</h4>
+
+<p><b>模擬方式</b>：</p>
+
+<ul>
+<li>所有資產同時下跌（相關性趨近1）</li>
+<li>流動性瞬間蒸發</li>
+<li>市場暫停交易可能</li>
+<li>融資強制平倉</li>
+</ul>
+
+<p><b>怎麼做</b>：<br>
+1. 模擬你的組合在所有資產同時下跌30%時的損失<br>
+2. 這是最壞情況下的壓力測試<br>
+3. 如果你使用融資，計算是否會被強制平倉<br>
+4. 評估你的現金能否在市場暫停時支撐生活</p>
+
+<h3>壓力測試SOP</h3>
+
+<p><b>Step 1：列出所有部位</b></p>
+
+<ul>
+<li>股票、債券、ETF、選擇權、現金等</li>
+<li>計算每個部位的佔比和相關性</li>
+</ul>
+
+<p><b>Step 2：選擇3-5個壓力情境</b></p>
+
+<ul>
+<li>至少包含：股市崩盤、利率急升、黑天鵝</li>
+<li>根據你持有的標的加入特定情境（如持有大量科技股就加科技泡沫情境）</li>
+</ul>
+
+<p><b>Step 3：計算每個情境下的損益</b></p>
+
+<ul>
+<li>使用歷史數據或假設數值</li>
+<li>重點看最大回撤和流動性影響</li>
+<li>危機時相關性要設為0.8-1.0（不是平時的0.3）</li>
+</ul>
+
+<p><b>Step 4：評估可承受性</b></p>
+
+<ul>
+<li>最大回撤是否超過你的承受範圍？</li>
+<li>是否會被迫在不利的時間點賣出？</li>
+<li>是否有足夠的現金緩衝？</li>
+</ul>
+
+<p><b>Step 5：調整組合</b></p>
+
+<ul>
+<li>如果某個情境的損失不可承受，減少該風險因子的曝險</li>
+<li>增加在危機時表現良好的資產（現金、短期公債、避險工具）</li>
+<li>確保每個情境下你都能活下來</li>
+</ul>
+
+<hr>
+
+<h2>四、危機組合設計：兩種市場，兩種架構</h2>
+
+<h3>正常市場架構</h3>
+
+<ul>
+<li>最佳化夏普比率和平滑報酬</li>
+<li>跨資產分散，追求風險調整後報酬最大化</li>
+<li>這是多數人熟悉的投資組合理論</li>
+</ul>
+
+<h3>危機市場架構</h3>
+
+<ul>
+<li>最佳化最大回撤限制和避免被迫賣出</li>
+<li>現金部位比「最佳化」告訴你的還要多</li>
+<li>持有在正常時期看似「浪費」的避險工具</li>
+<li>牛市時會落後同儕，但崩盤時會存活</li>
+</ul>
+
+<p><b>兩種架構的選擇不是二選一，而是同時存在</b>：</p>
+
+<ul>
+<li>核心組合（80-90%）：正常市場架構，追求合理報酬</li>
+<li>避險組合（10-20%）：危機市場架構，確保生存</li>
+<li>這跟之前學的槓鈴策略完全一致</li>
+</ul>
+
+<h3>危機時真正有效的避險工具</h3>
+
+<table><thead><tr><th>工具</th><th>正常時期成本</th><th>危機時表現</th><th>機制</th></tr></thead><tbody><tr><td>現金</td><td>機會成本（低於通膨）</td><td>不跌就是贏</td><td>不與任何資產相關</td></tr><tr><td>短期公債</td><td>低於長期債報酬</td><td>流動性避風港</td><td>政府可印鈔，不會違約</td></tr><tr><td>黃金</td><td>不生息</td><td>避險需求上漲</td><td>數千年價值儲存</td></tr><tr><td>VIX Call</td><td>時間價值衰減</td><td>暴漲5-10倍</td><td>波動率本身是獨立資產類別</td></tr><tr><td>虛價賣權</td><td>權利金成本</td><td>限額保險</td><td>非對稱報酬結構</td></tr></tbody></table>
+
+<p><b>關鍵原則</b>：有效的避險是在正常時期「看起來浪費」的，這正是它的代價。如果你不願意支付這個代價，你就沒有真正的避險。</p>
+
+<hr>
+
+<h2>五、壓力測試 vs 回測：互補而非替代</h2>
+
+<table><thead><tr><th>比較</th><th>回測</th><th>壓力測試</th></tr></thead><tbody><tr><td>目的</td><td>策略在過去環境的表現</td><td>組合在極端情境的表現</td></tr><tr><td>假設</td><td>歷史會重複</td><td>歷史不一定重複，但極端事件會發生</td></tr><tr><td>相關性</td><td>使用歷史相關性</td><td>模擬危機相關性（0.8-1.0）</td></tr><tr><td>覆蓋</td><td>平均情況</td><td>尾部風險</td></tr><tr><td>限制</td><td>過度擬合風險</td><td>情境選擇的主觀性</td></tr></tbody></table>
+
+<p><b>怎麼做</b>：<br>
+1. 回測告訴你「平均來說能賺多少」<br>
+2. 壓力測試告訴你「最壞情況會虧多少」<br>
+3. 兩者結合才能做完整的風險評估<br>
+4. 只有回測沒有壓力測試，就像只知道平均體重但不知道最重的能有多重</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>今天學到的最有衝擊力的概念是「相關性矩陣的謊言」。我們用歷史數據算出的相關性，絕大部分來自正常市場環境。但在危機時——也就是我們最需要分散保護的時候——相關性飆升到接近1，分散完全失效。這就像買了一把傘，晴天時看起來很好用，下雨時卻發現傘是紙做的。</p>
+
+<p>這跟之前學的槓鈴策略完美呼應。塔雷伯說中間風險最危險，現在我理解為什麼了——中間風險的資產在正常時期看似分散，危機時卻跟股票一起跌。真正有效的分散不是「買一堆不同的股票」，而是「持有在危機時行為不同的資產」：現金、短期公債、黃金、VIX。這些在正常時期看起來是「拖累」，但在危機時是「救命」。</p>
+
+<p>過度分散（Diworsification）的概念也讓我重新思考。FinLab那篇研究說得很清楚：30支科技股的分散效果可能不如5支精選科技股+5支精選金融股+5支精選消費股。真正的分散是「跨策略、跨因子」的分散，不是「同類標的越多越好」。Grinold的基本法則IR = IC × √BR告訴我們，增加持股數如果相關性高，獨立投注數（BR）不會增加，IR也不會提升。</p>
+
+<p>壓力測試則是把之前學的「最壞情況會多糟」具體化。以前只在腦中想「如果股市大跌怎麼辦」，現在有了系統化的框架：選情境、算損益、評可承受性、調組合。特別是「危機時相關性設為0.8-1.0」這個原則，比用歷史相關性更能反映真實風險。</p>
+
+<p>最後，三個世紀的危機教訓都指向同一個結論：<b>先求生存，再求報酬</b>。1929年的存活者有現金，2008年的存活者有尾部避險，2020年的存活者有乾火藥可以加碼。設計組合時，先把最壞情況想清楚，確保活下來，然後才追求最佳化報酬。這不是悲觀，是數學。</p>
+
+<p>朝股票操作大師邁進中 📈<br>
+---</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

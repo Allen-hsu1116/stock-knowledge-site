@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>籌碼面分析：違約交割×融資維持率×斷頭連鎖效應</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* 推薦追蹤頁面 */
+.rec-list { display: flex; flex-direction: column; gap: 8px; }
+.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
+.rec-item:hover { border-color: var(--primary); }
+.rec-item.checked { background: var(--bg-tertiary); }
+.rec-item .stock { flex: 1; font-weight: 500; }
+.rec-item .score { color: var(--text-muted); margin-right: 16px; }
+.rec-item .result { font-weight: 600; }
+.rec-item .result.success { color: var(--success); }
+.rec-item .result.danger { color: var(--danger); }
+.rec-item .result.pending { color: var(--text-muted); }
+.stats-section { margin-bottom: 32px; }
+.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+        <a href="../recommendations.html">推薦追蹤</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-22</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <div class="meta">2026-04-22 #2 · <span class="tag">📊 技術分析</span><span class="tag">🎲 籌碼面分析</span><span class="tag">🎯 操作策略</span><span class="tag">⚠️ 風險管理</span></div>
+                    <h1>籌碼面分析：違約交割×融資維持率×斷頭連鎖效應</h1>
+                    <h2>第 4 回合學習 - 籌碼面分析：違約交割×融資維持率×斷頭連鎖效應</h2>
+
+<p><b>時間</b>：03:25</p>
+
+<p><b>文章</b>：</p>
+
+<ul>
+<li><a href="https://rich01.com/what-stock-default-trade/">違約交割是什麼？違約交割會怎樣？後續如何處理？- 市場先生</a></li>
+<li><a href="https://www.money101.com.tw/blog/%E8%9E%8D%E8%B3%87-%E8%9E%8D%E8%B3%87%E6%96%B7%E9%A0%AD-%E8%9E%8D%E8%B3%87%E7%B6%AD%E6%8C%81%E7%8E%87-%E8%9E%8D%E8%B3%87%E8%BF%BD%E7%B9%B3%E4%BB%A4-%E8%82%A1%E7%A5%A8">收到「融資追繳令」怎麼辦？如何計算融資維持率避免被斷頭？- Money101</a></li>
+<li><a href="https://www.big-econ.com/?sec=article&ID=3221">融資、融券、借券代表的意義 - BigEcon</a></li>
+</ul>
+
+<hr>
+
+<h2>核心知識</h2>
+
+<h3>一、違約交割 Default Settlement Failure</h3>
+
+<p><b>是什麼</b>：股票成交後，在 T+2 早上 10:00 前交割帳戶餘額不足，導致扣款失敗。</p>
+
+<p><b>兩種類型</b>：</p>
+
+<ul>
+<li><b>買方違約</b>：T+2 早上 10:00 前帳戶錢不夠（最常見）</li>
+<li><b>賣方違約</b>：交割期限內交不出股票</li>
+</ul>
+
+<p><b>怎麼做 — 違約交割六層後果</b>：<br>
+1. <b>信用記錄</b>：計入個人信用評分，影響房貸、信用卡、信貸<br>
+2. <b>帳戶註銷</b>：通報後 3 個營業日未清償，證券帳戶被註銷<br>
+3. <b>違約金</b>：券商可收最高成交金額 7% 的違約金<br>
+4. <b>強制賣股</b>：券商直接賣出違約股票償債，不夠繼續追討<br>
+5. <b>5 年禁開戶</b>：違約未結案且未滿 5 年，所有券商不得開戶或交易<br>
+6. <b>刑事責任</b>：情節重大影響市場秩序，最高 3～10 年有期徒刑，得併科 1,000 萬～2 億罰金</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>2022/7/11：單一投資人當沖違約 6.6 億元，佔當日總違約金額 7 億的 95%</li>
+<li>2024/8/2：台股重挫 1,004 點，10 家券商通報 13 戶違約交割 2.3 億</li>
+</ul>
+
+<p><b>下錯單補救</b>：</p>
+
+<ul>
+<li>收盤前發現 → 現股當沖反向賣出抵銷，或賣其他持股籌錢</li>
+<li>收盤後發現 → 趕快籌錢，T+1 立刻賣出股票還款</li>
+</ul>
+
+<p><b>適用時機</b>：每個用信用交易的人都必須了解，這是底線知識。行情劇烈波動時特別容易觸發。</p>
+
+<hr>
+
+<h3>二、融資維持率 Margin Maintenance Ratio</h3>
+
+<p><b>是什麼</b>：衡量融資帳戶擔保品是否足夠的比率，低於 130% 就會被追繳。</p>
+
+<p><b>公式</b>：</p>
+
+<pre><code>融資維持率 = 股票現值 / 融資金額
+整戶擔保維持率 = (融資擔保證券市值 + 原融券擔保價款及保證金) / (原融資金融 + 融券證券市值) × 100%</code></pre>
+
+<p><b>怎麼做 — 維持率三段判讀</b>：<br>
+1. <b>166% 以上</b>：安全區，初始融資維持率即為 166%（100%/60%）<br>
+2. <b>130%～166%</b>：警戒區，券商盯著你，跌破 130% 當日就要補錢<br>
+3. <b>低於 130%</b>：危險區，券商發出追繳令，2 日內補到 166% 以上才撤銷</p>
+
+<p><b>實例 — 台積電</b>：</p>
+
+<ul>
+<li>買進價 815 元，融資自備 40% = 32.6 萬，融資借款 60% = 48.9 萬</li>
+<li>維持率 166% = 81.5 萬 / 48.9 萬</li>
+<li>股價跌到 635 元以下（約買價 78 折）→ 維持率跌破 130% → 收到追繳令</li>
+<li>跌幅約 22% 就觸發追繳，這就是融資的風險</li>
+</ul>
+
+<p><b>追繳令三階段處理</b>：<br>
+1. <b>2 日內補到 166% 以上</b> → 撤銷追繳令，回歸正常<br>
+2. <b>2 日內只補到 130%～166%</b> → 不強制斷頭，但追繳令仍在，再跌破 130% 當日必須補錢<br>
+3. <b>3 日內未補到 130%</b> → T+3 開盤強制賣股（斷頭）</p>
+
+<p><b>適用時機</b>：使用融資的交易者必懂。大盤重挫時，整戶維持率是觀察斷頭賣壓的關鍵指標。</p>
+
+<hr>
+
+<h3>三、斷頭連鎖效應 Forced Liquidation Cascade</h3>
+
+<p><b>是什麼</b>：融資維持率跌破門檻 → 券商強制賣股 → 賣壓加劇 → 更多帳戶維持率跌破 → 更多斷頭，形成惡性循環。</p>
+
+<p><b>怎麼做 — 連鎖效應三階段</b>：<br>
+1. <b>觸發期</b>：大盤或個股急跌，融資維持率跌破 130%，追繳令大量發出<br>
+2. <b>擴散期</b>：被追繳者無力補錢或選擇不補，T+3 強制賣股 → 賣壓推動股價續跌 → 觸發更多追繳<br>
+3. <b>結束期</b>：融資餘額大幅下降（散戶被洗出場）或政府/主力進場護盤，賣壓耗盡</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>2024/8/2 台股重挫 1,004 點 → 違約交割 2.3 億 → 若持續下跌恐引發連鎖斷頭</li>
+<li>歷史經驗：融資餘額高的個股，單日跌停可能引發連續跌停（融資斷頭排隊）</li>
+</ul>
+
+<p><b>觀察指標 — 如何判斷斷頭壓力大小</b>：</p>
+
+<ul>
+<li><b>融資使用率</b>：融資餘額 / 融資限額，超過 30% 就要小心</li>
+<li><b>融資維持率分布</b>：看整戶維持率在 130%～140% 附近的帳戶數量，越多危險</li>
+<li><b>融資餘額增減趨勢</b>：融資持續增加 + 股價下跌 = 籌碼從強者轉弱者，後續壓力大</li>
+</ul>
+
+<p><b>適用時機</b>：</p>
+
+<ul>
+<li>大盤重挫時，觀察融資維持率判斷斷頭壓力</li>
+<li>個股融資使用率高時，避開或做好避險</li>
+<li>逆向思考：斷頭賣壓耗盡後，可能是撿便宜的好時機</li>
+</ul>
+
+<hr>
+
+<h3>四、融資量×融券量×借券量 籌碼面三指標</h3>
+
+<p><b>是什麼</b>：信用交易三個核心指標，分別反映散戶看多、散戶看空、法人看空的程度。</p>
+
+<p><b>怎麼做 — 三指標判讀邏輯</b>：</p>
+
+<table><thead><tr><th>指標</th><th>使用者</th><th>增加代表</th><th>實戰意義</th></tr></thead><tbody><tr><td>融資量</td><td>散戶為主</td><td>散戶看多</td><td>法人賣超+融資增加=籌碼弱手，股價偏跌</td></tr><tr><td>融券量</td><td>散戶為主</td><td>散戶看空</td><td>融券暴增=潛在軋空燃料，回補日有軋空行情</td></tr><tr><td>借券賣出餘額</td><td>法人為主</td><td>法人看空</td><td>借券賣出增加=外資避險或看空，減少=偏多</td></tr></tbody></table>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>某股融資量大增 + 主力賣超 → 籌碼從大戶轉散戶 → 股價下跌機率高</li>
+<li>某股融券量暴增 + 即將回補 → 回補日前 5～10 天可能是軋空行情</li>
+<li>借券賣出餘額從 60 增加到 80 → 看空力量增加，股價偏跌</li>
+</ul>
+
+<p><b>重要區別</b>：</p>
+
+<ul>
+<li>借券餘額 ≠ 借券賣出餘額（借到不一定賣）</li>
+<li>借券賣出餘額才是真正做空的量</li>
+<li>融券利率約 0.04%～0.08%（很低），借券利率由出借人決定（可達 3%）</li>
+</ul>
+
+<p><b>適用時機</b>：選股時交叉驗證籌碼面，不要只看價量。融資增加+法人賣超是最危險的組合。</p>
+
+<hr>
+
+<h3>五、違約交割×斷頭 散戶地雷完整避險 SOP</h3>
+
+<p><b>是什麼</b>：結合違約交割和融資斷頭的完整風險管理流程。</p>
+
+<p><b>怎麼做 — 五步避險</b>：<br>
+1. <b>下單前確認帳戶餘額</b>：確保 T+2 扣款前帳戶有足夠資金<br>
+2. <b>設定自動停損</b>：用融資的斷頭機制當自動停損，但不要讓它真正觸發<br>
+3. <b>監控整戶維持率</b>：每天收盤後計算，150% 以下就開始警戒<br>
+4. <b>大盤重挫時降部位</b>：維持率在 140% 附近就主動減碼，不要等到 130% 被追繳<br>
+5. <b>避免融資買高波動股</b>：跌幅 22% 就追繳，高波動股很容易觸發</p>
+
+<p><b>實例</b>：</p>
+
+<ul>
+<li>用融資買台積電 815 元 → 自備款 32.6 萬</li>
+<li>設定主動停損線：維持率 150% 對應股價約 733 元（跌 10%）</li>
+<li>股價到 733 元就主動賣出，比等到 635 元被斷頭好得多</li>
+<li>主動賣出 vs 被斷頭：主動賣出可以選價格，斷頭是開盤市價全倒</li>
+</ul>
+
+<p><b>適用時機</b>：每個使用信用交易的人都應該有這個 SOP。不融資的人也該懂，因為大盤斷頭壓力會影響所有持股。</p>
+
+<hr>
+
+<h2>心得</h2>
+
+<p>今天學了違約交割和融資維持率的實戰判讀，說真的，這是那種「最好永遠不要用到但必須懂」的知識。</p>
+
+<p>幾個關鍵體悟：</p>
+
+<p>1. <b>融資是雙面刃，跌幅 22% 就追繳</b>：以台積電 815 元為例，跌到 635 元就觸發，這距離其實不遠。很多人以為融資只是「借錢放大報酬」，但忽略了虧損也被放大，而且是被動放大的——你不是自己決定停損，是券商幫你決定。</p>
+
+<p>2. <b>違約交割的代價遠超想像</b>：不只是罰錢，信用記錄影響 5 年以上，情節重大還有刑責。2022 年那個 6.6 億的案例，一個人當沖失控就搞出這種規模，真的是玩命。</p>
+
+<p>3. <b>斷頭連鎖效應是系統性風險</b>：大盤重挫時，融資維持率低於 130% 的帳戶全部被追繳，沒補到就 T+3 強制賣 → 賣壓更重 → 更多斷頭。這不是個股問題，是市場結構問題。懂這個邏輯，在暴跌時才不會慌，甚至可以逆向等待斷頭壓力耗盡後進場。</p>
+
+<p>4. <b>主動停損永遠優於被動斷頭</b>：被斷頭是開盤市價全倒，完全無法控制價格。在維持率 150% 就主動減碼，比等到 130% 被追繳好太多。這個差異，就是專業和業餘的分界線。</p>
+
+<p>朝股票操作大師邁進中 📈</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>

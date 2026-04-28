@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2026-04-22 學習總結</title><style>
+:root {
+    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
+    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
+    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
+    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
+.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-title { font-size: 24px; font-weight: 600; }
+.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+
+.date-group { margin-bottom: 32px; }
+.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.date-header .date { color: var(--primary); }
+.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+
+.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.session-item:hover { border-color: var(--primary); }
+.session-time { font-size: 12px; color: var(--text-muted); }
+.session-title { font-size: 16px; font-weight: 600; }
+.session-item:hover .session-title { color: var(--primary); }
+.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+
+.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.summary-card a { color: white; text-decoration: none; display: block; }
+.summary-card:hover { opacity: 0.95; }
+.summary-title { font-size: 14px; opacity: 0.9; }
+.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
+.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
+.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
+.content p { margin-bottom: 16px; color: var(--text-secondary); }
+.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--primary); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+.content pre code { background: none; padding: 0; }
+.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
+.content tr:hover td { background: var(--bg-secondary); }
+.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+
+.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* 推薦追蹤頁面 */
+.rec-list { display: flex; flex-direction: column; gap: 8px; }
+.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
+.rec-item:hover { border-color: var(--primary); }
+.rec-item.checked { background: var(--bg-tertiary); }
+.rec-item .stock { flex: 1; font-weight: 500; }
+.rec-item .score { color: var(--text-muted); margin-right: 16px; }
+.rec-item .result { font-weight: 600; }
+.rec-item .result.success { color: var(--success); }
+.rec-item .result.danger { color: var(--danger); }
+.rec-item .result.pending { color: var(--text-muted); }
+.stats-section { margin-bottom: 32px; }
+.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary); }
+
+.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
+.footer-text { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+</style></head>
+<body>
+<header><div class="header-inner"><a href="../index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>
+    <nav>
+        <a href="../index.html">首頁</a>
+        <a href="../knowledge.html">知識庫</a>
+        <a href="../timeline.html">時間線</a>
+        <a href="../recommendations.html">推薦追蹤</a>
+    </nav></div></header>
+<main class="container">
+            <div class="content">
+                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>2026-04-22</span></div>
+                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
+                <div class="content-card">
+                    <h1>📅 2026-04-22 學習總結</h1>
+                    <h1>2026-04-22 股票學習統整</h1>
+
+<p><b>日期</b>: 2026-04-22（週三）<br>
+<b>總計</b>: 6 回合學習，6 篇文章，全部主題為籌碼面分析</p>
+
+<hr>
+
+<h2>📊 今日核心知識提煉</h2>
+
+<h3>1. 作帳行情×結帳行情×集團作帳</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>投信作帳：季底拉抬持股美化帳面，選「我有你沒有」的中小型股，持股>15%危險</li>
+<li>自營商結帳：季底賣出實現獲利，每季首月買進末月賣出</li>
+<li>集團作帳：交叉持股+利多消息拉抬集團股，比投信更難預測</li>
+<li>口訣：投信作帳要搭車，自營商結帳要下車</li>
+</ul>
+
+<p><b>實戰應用</b>:<br>
+<table><thead><tr><th>類型</th><th>進場時機</th><th>出場時機</th></tr></thead><tbody><tr><td>投信作帳</td><td>5-6月開始追蹤持股變化</td><td>投信買超轉賣超</td></tr><tr><td>自營商搭車</td><td>每季首月(1/4/7/10)追蹤</td><td>進入每季末月</td></tr><tr><td>集團作帳</td><td>10月觀察歷史作帳集團</td><td>利多出盡+集團股轉弱</td></tr></tbody></table></p>
+
+<hr>
+
+<h3>2. 外資期貨未平倉×選擇權籌碼分析</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>外資期貨部位年勝率100%，月勝率72%</li>
+<li>大外資看中期趨勢（慢但準），小外資看短線（快但波動大）</li>
+<li>選擇權OI以賣方角度解讀：Call OI大量區=壓力，Put OI大量區=支撐</li>
+<li>PCR是散戶反指標：PCR>1.2散戶恐慌偏多，PCR<0.7散戶貪婪偏空</li>
+<li>三道濾網：外資期貨方向→選擇權OI支撐壓力→PCR極端值確認</li>
+</ul>
+
+<p><b>實戰應用</b>:<br>
+<table><thead><tr><th>指標</th><th>偏多訊號</th><th>偏空訊號</th><th>參考價值</th></tr></thead><tbody><tr><td>外資期貨淨部位</td><td>淨多單增加</td><td>淨空單增加</td><td>★★★★★</td></tr><tr><td>大外資部位</td><td>偏多</td><td>偏空</td><td>★★★★</td></tr><tr><td>選擇權最大OI</td><td>Put支撐上移</td><td>Call壓力下移</td><td>★★★★</td></tr><tr><td>PCR</td><td>>1.2（散戶恐慌）</td><td><0.7（散戶貪婪）</td><td>★★★</td></tr></tbody></table></p>
+
+<hr>
+
+<h3>3. 融券回補×軋空行情×內部人持股</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>融券回補四大觸發：股東會、除息、除權、現金增資（臨時股東會不需要）</li>
+<li>軋空三大條件：高融券餘額（>日均量3倍）、低流動性、近回補日</li>
+<li>內部人持股>40%正面、<15%負面，但公告有最長45天時間差</li>
+<li>董監設質比率>50%高風險，>70%極高風險</li>
+<li>高融券+內部人加碼+即將回補=軋空候選股</li>
+</ul>
+
+<p><b>實戰應用</b>:<br>
+<table><thead><tr><th>組合訊號</th><th>判讀</th><th>行動</th></tr></thead><tbody><tr><td>高融券+內部人加碼</td><td>軋空一觸即發</td><td>做多，回補日前5-10日進場</td></tr><tr><td>低融券+內部人加碼</td><td>基本面看好</td><td>按基本面操作</td></tr><tr><td>高融券+內部人減碼</td><td>矛盾訊號</td><td>觀望</td></tr><tr><td>低融券+內部人減碼</td><td>雙重看空</td><td>做空或迴避</td></tr></tbody></table></p>
+
+<hr>
+
+<h3>4. 違約交割×融資維持率×斷頭連鎖效應</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>違約交割代價：信用記錄受損+5年禁開戶+最高10年有期徒刑</li>
+<li>融資維持率166%安全、130%追繳、跌破130%斷頭</li>
+<li>股價跌約22%就觸發追繳（以815元台積電為例）</li>
+<li>斷頭連鎖：觸發→擴散→結束，融資減少金額遞減=底部接近</li>
+<li>主動停損（維持率150%）永遠優於被動斷頭（130%）</li>
+</ul>
+
+<p><b>實戰應用</b>:<br>
+<table><thead><tr><th>維持率區間</th><th>動作</th></tr></thead><tbody><tr><td>>166%</td><td>安全，正常操作</td></tr><tr><td>150-166%</td><td>警戒，開始規劃減碼</td></tr><tr><td>130-150%</td><td>高危，主動減碼</td></tr><tr><td><130%</td><td>追繳令，2日內補到166%</td></tr></tbody></table></p>
+
+<hr>
+
+<h3>5. 主力出貨手法辨識×洗盤vs出貨×防守線系統</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>四種出貨手法：拉高、震盪、打壓、反彈（遞進過程）</li>
+<li>黃韋中四模式：反轉型、解套型（7成誤判）、末升段、急拉型</li>
+<li>洗盤vs出貨：位置決定一切！高檔下跌=出貨，低檔下跌=洗盤</li>
+<li>防守線系統：第一防守線=起漲長紅最低點，跌破先出場</li>
+<li>出貨五道紅旗：量價背離、利多不漲、主力賣超、防守線跌破、均線破壞</li>
+<li>主力作價六部曲：吃→脫→洗→拉→誘→嘎</li>
+</ul>
+
+<p><b>實戰應用</b>:<br>
+<table><thead><tr><th>紅旗數量</th><th>行動</th></tr></thead><tbody><tr><td>1-2面</td><td>提高警覺，觀察為主</td></tr><tr><td>3面</td><td>開始減碼，設好停損</td></tr><tr><td>4面以上</td><td>果斷出場</td></tr></tbody></table></p>
+
+<hr>
+
+<h3>6. 期貨正逆價差×外資期貨部位×價差收斂策略</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>台指期70%時間處於逆價差，這是常態不是看空訊號</li>
+<li>除息季逆價差要扣除除息點數才是「真實逆價差」</li>
+<li>外資期貨跟單效果2011年後衰退，只看台指期會漏掉摩台、選擇權、借券</li>
+<li>價差收斂策略：逆價差大時做多遠月合約，即使現貨不漲也能賺收斂</li>
+<li>三維驗證：期貨價差+外資期貨部位+外資現貨買賣超</li>
+</ul>
+
+<hr>
+
+<h3>7. 主力成本線判讀×法人成本價推算×成本區進出場策略</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>四種成本線：融資（短線散戶）、投信（中線）、外資（長線）、主力（最核心）</li>
+<li>40MA主力成本線操作法：站上買、跌破賣，微星實例獲利57.5%</li>
+<li>投信持股比例五段判讀：0-4%低檔→4-6%升溫→6-10%加碼→10-15%高檔→>15%危險</li>
+<li>XQ主力作多成本公式：Σ(主力買張×日均價) / Σ(主力買張)</li>
+<li>成本線核心應用：股價拉回到成本線附近，看主力「加碼防守」還是「認賠出場」</li>
+<li>多條成本線共振確認最強訊號</li>
+</ul>
+
+<hr>
+
+<h3>8. 多維度籌碼整合SOP×看法歧異度×實戰選股流程</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>看法歧異度（Belief Dispersion）：散戶增加→報酬負面，大戶增加→報酬正面</li>
+<li>大盤籌碼判斷大環境多空，個股籌碼找進出場時機（兩個層次不可混談）</li>
+<li>六大籌碼陷阱：法人買超≠必漲、主力連買≠安全、籌碼集中≠利多、高融券≠看空、只看籌碼不看圖、短線過度解讀</li>
+<li>籌碼面實戰選股五步流程：大盤環境→法人篩選→大戶確認→成本線驗證→出場設定</li>
+<li>出場條件比進場條件更重要：五個出場訊號任一觸發就走</li>
+</ul>
+
+<hr>
+
+<h3>9. 土洋對作辨識與實戰策略</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>土洋對作六種型態：外資賣+投信買（最常見）、外資買+投信賣、三法同買（最強）、三法同賣（最弱）等</li>
+<li>三大判斷準則（楊惠宇）：籌碼在誰手中、產業有沒有前景、股價合不合理</li>
+<li>外資行為底層邏輯：美元指數走多→熱錢流出→外資賣超，反之亦然</li>
+<li>外資重押三現象：留倉最大+暴增2倍+多空開口擴大</li>
+<li>假外資辨識：股本<50億+隔日沖+中小型券商分點</li>
+</ul>
+
+<hr>
+
+<h3>10. 自營商避險部位×假外資×法人買超股價背離</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>自營商買賣超分兩種：自行買賣（有參考價值）和避險部位（隔日100%賣出，反向指標）</li>
+<li>避險機制：券商發權證→被迫買現股避險→隔天賣出→形成賣壓</li>
+<li>假外資三辨識法：股本<50億、短進短出隔日沖、小規模外資券商</li>
+<li>法人買超股價背離是「籌碼面最危險訊號」：法人在買但股價不漲=有人更大力倒貨</li>
+<li>籌碼面偵訊五問：避險or自行？真假外資？股價有跟嗎？大戶怎麼動？持續多久？</li>
+</ul>
+
+<hr>
+
+<h3>11. 鎖定鎖單效應×流通籌碼×新股蜜月期</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>鎖單三來源：法定鎖單（IPO 6個月）、基金鎖單（灰色地帶）、自我鎖單（策略性）</li>
+<li>四層股數結構：授權股→已發行→流通在外→浮動股數（真正影響供需）</li>
+<li>新股蜜月期三階段：蜜月（前5天無漲跌幅）→穩定（恢復10%）→解鎖（6個月後供給暴增）</li>
+<li>抽新股三原則：一抽二賣三無關</li>
+<li>鎖單效應×集中度組合：先看先天體質→再看趨勢方向→最後算浮動比率</li>
+</ul>
+
+<hr>
+
+<h3>12. 主力躲避追蹤手法×聲東擊西×分點遷移追蹤對策</h3>
+
+<p><b>核心概念</b>:</p>
+
+<ul>
+<li>聲東擊西：A分點大買吸引注意，B/C/D分點小賣出貨</li>
+<li>假外資：本土大戶穿外資皮，利用散戶對「外資買超」的過度信任套利</li>
+<li>分點遷移：主力發現被追蹤後換分點操作，舊地址守株待兔</li>
+<li>分散進貨集中出貨：進貨時5-10個分點各買100-200張，出貨時1-3個分點大賣</li>
+<li>多維度反制：多分點交叉驗證、地緣券商確認、三大法人比對、歷史行為比對、量價確認</li>
+</ul>
+
+<hr>
+
+<h2>🎯 明日（週四）主題</h2>
+
+<p><b>操作策略進階</b>：根據主題輪換，週四為操作策略日。今日籌碼面分析已建立完整框架，明日可結合籌碼面與操作策略，實戰演練多維度選股流程。</p>
+
+<p>重點方向：</p>
+
+<ul>
+<li>籌碼面×技術面×基本面三合一確認的進場實戰</li>
+<li>土洋對作情境下的操作策略調整</li>
+<li>主力出貨辨識後的避險操作</li>
+<li>成本線系統搭配停損停利的完整操作框架</li>
+</ul>
+
+<hr>
+
+<h2>📁 知識歸檔</h2>
+
+<ul>
+<li><code>memory/stock-learning/2026-04-22.md</code> - 完整 6 回合記錄</li>
+<li><code>memory/stock-knowledge.md</code> - 核心知識庫（已更新籌碼面進階章節）</li>
+<li><code>MEMORY.md</code> - 學習進度更新</li>
+</ul>
+
+<hr>
+
+<p><b>朝股票操作大師邁進中</b> 📈</p>
+                </div>
+            </div>
+            </main>
+<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
+</body></html>
