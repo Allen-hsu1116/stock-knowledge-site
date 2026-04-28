@@ -44,6 +44,10 @@ TITLE_SLUGS = {
     "停損方法": "stop-loss",
     "停利方法": "take-profit",
     "倉位管理": "position-sizing",
+    "期貨未平倉量判讀": "futures-open-interest",
+    "外資期貨未平倉判讀": "foreign-futures-oi",
+    "作帳行情": "quarterly-window-dressing",
+    "融資維持率與斷頭": "margin-maintenance-calls",
 }
 
 CSS = '''
@@ -333,8 +337,13 @@ def markdown_to_html(content: str) -> str:
     # 連結
     content = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', content)
     
-    # wiki 連結 [[主題]]
-    content = re.sub(r'\[\[([^\]]+)\]\]', r'<a class="wikilink" href="\1.html">\1</a>', content)
+    # wiki 連結 [[主題]] - 使用英文 slug
+    def replace_wikilink(match):
+        title = match.group(1)
+        slug = get_slug(title)
+        return f'<a class="wikilink" href="{slug}.html">{title}</a>'
+    
+    content = re.sub(r'\[\[([^\]]+)\]\]', replace_wikilink, content)
     
     # 無序列表
     content = re.sub(r'^- (.+)$', r'<li>\1</li>', content, flags=re.MULTILINE)
