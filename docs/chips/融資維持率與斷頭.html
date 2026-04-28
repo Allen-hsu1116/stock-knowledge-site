@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>基本面分析 - 股票知識庫</title>
+    <title>融資維持率與斷頭 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -85,40 +85,97 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="technical.html" class="">技術分析</a><a href="fundamental.html" class=" active">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class="">風險管理</a></nav>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class=" active">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
-        <h1 class="section-title">💰 基本面分析</h1>
-        <p style="color: var(--text-muted); margin-bottom: 32px;">財報、估值、產業分析</p>
-        <div class="section">
-            
-        <div class="article-card">
-            <div class="article-title">
-                <a href="fundamental/financial-fraud-detection.html">財報假帳偵測</a>
-            </div>
-            <div class="article-excerpt">先看老闆質押，再看應收帳款天數，這兩個是最大的警訊。</div>
-            <div class="article-meta">
-                <span>相關：<a class="wikilink" href="盈餘品質分析.html">盈餘品質分析</a>, <a class="wikilink" href="企業掏空識別.html">企業掏空識別</a>, <a class="wikilink" href="會計師查核報告判讀.html">會計師查核報告判讀</a></span>
-            </div>
-        </div>
-        <div class="article-card">
-            <div class="article-title">
-                <a href="fundamental/earnings-quality.html">盈餘品質分析</a>
-            </div>
-            <div class="article-excerpt">帳面EPS好看不等於公司真的賺到錢——盈餘品質衡量帳面盈餘有多少是「真實現金」，有多少只是會計調整。</div>
-            <div class="article-meta">
-                <span>相關：<a class="wikilink" href="財報假帳偵測.html">財報假帳偵測</a>, <a class="wikilink" href="杜邦分析.html">杜邦分析</a>, <a class="wikilink" href="應計項目異象.html">應計項目異象</a></span>
-            </div>
-        </div>
-        </div>
+        <article class="article-content">
+            <h1>融資維持率與斷頭</h1>
+            <h1>融資維持率與斷頭</h1>
+
+<blockquote>維持率低於130%被追繳，T+2補不回來T+3斷頭，融資餘額大減才是底部訊號</blockquote>
+
+<h2>核心概念</h2>
+
+<p>融資是向券商借錢買股票的槓桿工具。融資維持率是券商的保護機制，用來確保借出的錢能收回來。</p>
+
+<p><strong>融資成數</strong>：
+<ul><li>上市股票：融資 60%，自備 40%（槓桿 2.5 倍）</li>
+<li>上櫃股票：融資 50%，自備 50%（槓桿 2 倍）</li>
+</ul></p>
+
+<p><strong>融資維持率公式</strong>：
+融資維持率 = 股票現值 ÷ 融資金額 × 100%</p>
+
+<p>範例：一張 100 元股票（市值 10 萬），融資 6 萬 → 維持率 = 10萬 / 6萬 = 167%</p>
+
+<p><strong>融資利息</strong>：年利率 6～7%，每日計算（例假日也照算）</p>
+
+<h2>實戰應用</h2>
+
+<h3>融資斷頭三階段</h3>
+
+<table><tr><th>階段</th><th>維持率</th><th>時間</th><th>動作</th></tr></table>
+<strong>追繳後三種結果</strong>：
+1. 補到 166% 以上 → 追繳令消失，最安全
+2. 維持在 130%～166% → 追繳令不消失，之後再跌破需當天補
+3. 低於 130% 沒補錢 → T+3 強制賣出 = 斷頭
+
+<h3>融資餘額判讀（散戶指標）</h3>
+
+<ul><li><strong>融資餘額增加</strong> → 散戶進場，通常不是好訊號</li>
+<li><strong>融資餘額過高</strong> → 太多散戶進場，籌碼不穩</li>
+<li><strong>融資餘額大減</strong> → 散戶斷頭離場，反彈機會較高！</li>
+</ul>
+
+<p><strong>實戰原則</strong>：一波顯著回檔，要等到不理性賣壓出籠、融資斷頭後，才容易見到短線底部。</p>
+
+<h3>除權息假追繳</h3>
+
+<p>遇到除權息，股價會在除息日調整（變低），券商可能在事前就試算後先發出追繳通知，俗稱「假除權息」。融資戶要特別注意除權息前後的維持率變化。</p>
+
+<h3>現股抵押提升維持率</h3>
+
+<p>不想賣掉融資部位也不想補現金時，可以將持有的其他股票作為抵押品：
+<ul><li>分子（股票市價 + 抵押品價值）變大 → 維持率提高</li>
+<li>注意：抵押的現股若下跌，會進一步影響維持率</li>
+</ul></p>
+
+<h3>融資使用率判讀</h3>
+
+<p>融資使用率 = 融資餘額 ÷ 融資限額 × 100%
+<ul><li>使用率 > 60%：高風險，斷頭壓力大</li>
+<li>使用率 < 1%：非常健康（如台積電）</li>
+<li>使用率 80% 以上：極度危險，股價下跌 20% 就可能斷頭</li>
+</ul></p>
+
+<h2>注意事項</h2>
+
+<ul><li>融資利率 6～7% 偏高，不適合長期持有（利息會吃掉利潤）</li>
+<li>融資是雙面刃，賺錢放大獲利，賠錢放大虧損</li>
+<li>斷頭是被迫賣出，不像現股可以一直放著等回來</li>
+<li>融資斷頭潮會形成連鎖賣壓（A斷頭 → 股價跌 → B也斷頭）</li>
+<li>融資餘額只是散戶指標，不要單獨使用，需搭配法人籌碼</li>
+<li>假除權息的追繳要提前準備，不要等到除息日才措手不及</li>
+</ul>
+
+<h2>相關主題</h2>
+<ul><li><a class="wikilink" href="三大法人特性.html">三大法人特性</a></li>
+<li><a class="wikilink" href="作帳行情.html">作帳行情</a></li>
+<li><a class="wikilink" href="停損方法.html">停損方法</a></li>
+</ul>
+
+<h2>來源</h2>
+<li><a href="../raw/2026-04-29/融資維持率斷頭與除權息.md">融資維持率斷頭與除權息</a></li>
+            <h2>相關主題</h2><p><a href="../chips/作帳行情.html" class="wikilink">作帳行情</a>, <a href="../chips/institutional-investors.html" class="wikilink">三大法人特性</a>, <a href="../technical/k-patterns.html" class="wikilink">K線型態</a></p>
+        </article>
     </main>
     <footer>
-        <p>股票知識庫 · 每小時自動學習，每天自動編譯</p>
+        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>

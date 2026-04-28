@@ -269,7 +269,7 @@ def generate_category_page(category: str, articles: list) -> str:
         article_list += f'''
         <div class="article-card">
             <div class="article-title">
-                <a href="{article["filename"]}.html">{article["title"]}</a>
+                <a href="{cat_info["id"]}/{article["filename"]}.html">{article["title"]}</a>
             </div>
             <div class="article-excerpt">{article["summary"]}</div>
             <div class="article-meta">

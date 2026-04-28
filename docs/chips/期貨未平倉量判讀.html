@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>基本面分析 - 股票知識庫</title>
+    <title>期貨未平倉量判讀 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -85,40 +85,73 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="technical.html" class="">技術分析</a><a href="fundamental.html" class=" active">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class="">風險管理</a></nav>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class=" active">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
-        <h1 class="section-title">💰 基本面分析</h1>
-        <p style="color: var(--text-muted); margin-bottom: 32px;">財報、估值、產業分析</p>
-        <div class="section">
-            
-        <div class="article-card">
-            <div class="article-title">
-                <a href="fundamental/financial-fraud-detection.html">財報假帳偵測</a>
-            </div>
-            <div class="article-excerpt">先看老闆質押，再看應收帳款天數，這兩個是最大的警訊。</div>
-            <div class="article-meta">
-                <span>相關：<a class="wikilink" href="盈餘品質分析.html">盈餘品質分析</a>, <a class="wikilink" href="企業掏空識別.html">企業掏空識別</a>, <a class="wikilink" href="會計師查核報告判讀.html">會計師查核報告判讀</a></span>
-            </div>
-        </div>
-        <div class="article-card">
-            <div class="article-title">
-                <a href="fundamental/earnings-quality.html">盈餘品質分析</a>
-            </div>
-            <div class="article-excerpt">帳面EPS好看不等於公司真的賺到錢——盈餘品質衡量帳面盈餘有多少是「真實現金」，有多少只是會計調整。</div>
-            <div class="article-meta">
-                <span>相關：<a class="wikilink" href="財報假帳偵測.html">財報假帳偵測</a>, <a class="wikilink" href="杜邦分析.html">杜邦分析</a>, <a class="wikilink" href="應計項目異象.html">應計項目異象</a></span>
-            </div>
-        </div>
-        </div>
+        <article class="article-content">
+            <h1>期貨未平倉量判讀</h1>
+            <h1>期貨未平倉量判讀</h1>
+
+<blockquote>價格+成交量+未平倉三維判讀，OI增加代表趨勢有燃料，OI減少代表趨勢快沒油了</blockquote>
+
+<h2>核心概念</h2>
+
+<p>期貨未平倉口數（Open Interest, OI）是指做多或做空的期貨契約在還沒到期且尚未出場的口數。期貨市場是零和市場，多頭未平倉 = 空頭未平倉。</p>
+
+<p><strong>OI 變化三規則</strong>：
+<ul><li>多單進場 + 空單進場 → OI +1（新多空對決，趨勢啟動）</li>
+<li>多單進場 + 多單平倉 → OI 不變（換手，一方接另一方）</li>
+<li>空單平倉 + 多單平倉 → OI -1（雙方都走人，趨勢結束）</li>
+</ul></p>
+
+<p>成交量 = 當天成交強弱程度（瞬間力道）
+未平倉量 = 未來續航動能（持續性燃料）</p>
+
+<h2>實戰應用</h2>
+
+<h3>六種價量OI組合判讀</h3>
+
+<table><tr><th>價格</th><th>成交量</th><th>未平倉</th><th>解讀</th><th>操作</th></tr></table>
+<strong>最可靠的訊號</strong>：價格 + 成交量 + OI 三同向 = 趨勢有燃料
+
+<h3>偏多偏空快速判斷</h3>
+
+<ul><li><strong>偏多</strong>：價格上升 + 成交量增加 + OI增加</li>
+<li><strong>偏空</strong>：價格下跌 + 成交量增加 + OI增加</li>
+</ul>
+
+<h3>正逆價差注意</h3>
+
+<p>台指期大部分時間呈現逆價差（除權息旺季更明顯），正逆價差不代表偏多偏空。結算日時正逆價差會趨近於零。</p>
+
+<h2>注意事項</h2>
+
+<ul><li>OI 本身是中性的，必須搭配價格和成交量一起判讀</li>
+<li>OI 增加代表「趨勢有燃料」但方向要看價格</li>
+<li>OI 減少代表「燃料消耗中」，趨勢可能即將反轉</li>
+<li>法人 OI 公布有落後性，盤後才能看到</li>
+<li>外資 OI 可能包含套利部位，不一定是純方向看法</li>
+<li>建議搭配 <a class="wikilink" href="外資期貨未平倉判讀.html">外資期貨未平倉判讀</a> 看大小外資結構</li>
+</ul>
+
+<h2>相關主題</h2>
+<ul><li><a class="wikilink" href="外資期貨未平倉判讀.html">外資期貨未平倉判讀</a></li>
+<li><a class="wikilink" href="三大法人特性.html">三大法人特性</a></li>
+<li><a class="wikilink" href="作帳行情.html">作帳行情</a></li>
+</ul>
+
+<h2>來源</h2>
+<li><a href="../raw/2026-04-29/期貨未平倉主力動向.md">期貨未平倉主力動向</a></li>
+            <h2>相關主題</h2><p><a href="../chips/作帳行情.html" class="wikilink">作帳行情</a>, <a href="../chips/作帳行情.html" class="wikilink">作帳行情</a>, <a href="../chips/作帳行情.html" class="wikilink">作帳行情</a>, <a href="../chips/institutional-investors.html" class="wikilink">三大法人特性</a></p>
+        </article>
     </main>
     <footer>
-        <p>股票知識庫 · 每小時自動學習，每天自動編譯</p>
+        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>
