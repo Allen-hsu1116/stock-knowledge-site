@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>當沖操作 - 股票知識庫</title>
+    <title>停損方法 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -16,10 +16,8 @@
     --text-secondary: #4b5563;
     --text-muted: #9ca3af;
     --border: #e5e7eb;
-    --shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
 .container { max-width: 1200px; margin: 0 auto; }
 
@@ -85,87 +83,76 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="../index.html" class="logo">
+            <a href="index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class=" active">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+            <nav><a href="technical.html" class="">技術分析</a><a href="fundamental.html" class="">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class=" active">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
         <article class="article-content">
-            <h1>當沖操作</h1>
-            <h1>當沖操作</h1>
+            <h1>停損方法</h1>
+            <h1>停損方法</h1>
 
-<blockquote>散戶當沖從未轉正，外資賺 194 億、散戶賠 291 億。</blockquote>
+<blockquote>進場前就設好，不得更改。收盤跌破停損價 → 次日開盤立即出場。</blockquote>
 
 <h2>核心概念</h2>
 
-<p><strong>定義</strong>：當天買進當天賣出，不留倉過夜。</p>
+<p>停損是生存的關鍵，不是為了提升績效，是為了控制情緒、保護資金。</p>
 
-<p><strong>申請條件</strong>：
-<ul><li>年滿 20 歲</li>
-<li>開戶滿 3 個月</li>
-<li>近 1 年成交 10 筆以上</li>
-</ul></p>
+<h2>七種停損方法</h2>
 
-<h2>優勢</h2>
-
-<ul><li>時間短，不用長時間等待結果</li>
-<li>門檻低，不用負擔股票本金</li>
-<li>降低心理負擔，避免收盤後負面新聞影響</li>
-<li>證交稅減半：0.3% → 0.15%</li>
-</ul>
-
-<h2>風險</h2>
-
-<ul><li>交易頻繁，手續費成本高</li>
-<li>需要盯盤，上班族不方便</li>
-<li>高槓桿（約 290 倍），可能誤把投資當賭場</li>
-<li>需有波動幅度的股票才划算</li>
-</ul>
+<p>| 方法 | 操作方式 | 優點 | 缺點 | 適用場景 |
+|------|----------|------|------|----------|
+| <strong>K 線停損法</strong> | 以進場日 K 線最低點為停損 | 簡單明確 | 盤整易觸發 | 短線、當沖 |
+| <strong>趨勢停損法</strong> | 停損設在轉折波低點 | 順勢操作 | 需識別轉折 | 趨勢明確行情 |
+| <strong>均線停損法</strong> | 以進場均線價為停損 | 客觀標準 | 震盪易被洗 | 均線操作者 |
+| <strong>固定比例停損法</strong> | 買進價 × (1 - 停損%) | 最簡單 | 難適應波動 | 新手 |
+| <strong>支阻停損法</strong> | 跌破關鍵支撐停損 | 符合技術邏輯 | 需判斷關鍵位 | 技術分析者 |
+| <strong>移動停損法（N K 棒）</strong> | 最近 N 根 K 棒最低點 | 兼具停損停利 | 需持續監控 | 波段操作 |
+| <strong>ATR 動態停損法</strong> | 進場價 ± N × ATR | 反映當下波動 | 計算較複雜 | 高波動標的 |</p>
 
 <h2>實戰應用</h2>
 
-<h3>當沖選股三條件</h3>
+<h3>絕對停損原則（5 種必須停損）</h3>
 
-<p>1. <strong>流動性</strong>：成交量 > 2000 張
-2. <strong>波動性</strong>：日均波動 > 3%
-3. <strong>題材性</strong>：有熱門題材支撐</p>
+<p>1. 跌破盤整區 → 絕對停損
+2. 趨勢反轉確認 → 絕對停損
+3. 虧損超過 10% → 絕對停損
+4. 逆勢單反轉 → 立刻停損
+5. 關鍵支撐跌破 → 絕對停損</p>
 
-<h3>當沖三模式</h3>
+<h3>停損核心原則</h3>
 
-<table><tr><th>模式</th><th>報酬目標</th><th>操作方式</th></tr></table>
-<h3>交易成本計算</h3>
-
-<ul><li>買進手續費：成交金額 × 0.1425%</li>
-<li>賣出手續費：成交金額 × 0.1425%</li>
-<li>證交稅：成交金額 × 0.15%</li>
-<li>股價上漲 2%，扣掉成本後實際獲利約 1.56%</li>
+<ul><li>華爾街標準：單筆不超過 10%</li>
+<li>一般建議：固定 5% 停損</li>
+<li>進場前就設好，不得更改</li>
+<li>收盤跌破停損價 → 次日開盤立即出場</li>
 </ul>
 
 <h2>注意事項</h2>
 
-<ul><li>散戶當沖賠錢比例高達 90-95%</li>
-<li>一天操作次數不用多，有賺就好</li>
-<li>沒連續性走勢果斷停損</li>
+<ul><li>停損點不得更改，否則等於沒設</li>
+<li>單筆風險控制在總資金 1-2%</li>
+<li>MDD 教訓：跌 50% 需漲 100% 回本，控制回撤比追求報酬更重要</li>
 </ul>
 
 <h2>相關主題</h2>
 
-<ul><li><a class="wikilink" href="波段操作.html">波段操作</a></li>
-<li><a class="wikilink" href="stop-loss.html">停損方法</a></li>
-<li><a class="wikilink" href="institutional-investors.html">三大法人特性</a></li>
+<ul><li><a class="wikilink" href="take-profit.html">停利方法</a></li>
+<li><a class="wikilink" href="position-sizing.html">倉位管理</a></li>
+<li><a class="wikilink" href="風險報酬比.html">風險報酬比</a></li>
 </ul>
 
 <h2>來源</h2>
 
 <li>stock-knowledge.md（2026-04-28 遷移）</li>
-            <h2>相關主題</h2><p><a href="../technical/k-patterns.html" class="wikilink">K線型態</a>, <a href="../chips/quarterly-window-dressing.html" class="wikilink">作帳行情</a></p>
+            <h2>相關主題</h2><p><a class="wikilink" href="take-profit.html">停利方法</a></p>
         </article>
     </main>
     <footer>
-        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
+        <p>股票知識庫 · <a href="index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>

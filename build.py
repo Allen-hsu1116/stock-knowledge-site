@@ -3,11 +3,7 @@
 股票知識庫 - 網站生成器
 從 stock-knowledge-base/wiki/ 生成靜態網站到 docs/
 
-使用方式：
-    python3 build.py
-
-此腳本由每天的學習任務自動執行，
-執行後會自動推送到 GitHub。
+扁平化結構：所有文章放在根目錄，避免路徑問題
 """
 
 import os
@@ -62,10 +58,8 @@ CSS = '''
     --text-secondary: #4b5563;
     --text-muted: #9ca3af;
     --border: #e5e7eb;
-    --shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
 .container { max-width: 1200px; margin: 0 auto; }
 
@@ -139,15 +133,12 @@ def parse_wiki_article(filepath: Path) -> dict:
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # 提取標題
     title_match = re.search(r'^# (.+)$', content, re.MULTILINE)
     title = title_match.group(1) if title_match else filepath.stem
     
-    # 提取摘要（> 開頭的行）
     summary_match = re.search(r'^> (.+)$', content, re.MULTILINE)
     summary = summary_match.group(1) if summary_match else ""
     
-    # 提取關鍵字
     keywords = re.findall(r'\[\[([^\]]+)\]\]', content)
     
     return {
@@ -155,21 +146,18 @@ def parse_wiki_article(filepath: Path) -> dict:
         "summary": summary,
         "keywords": keywords,
         "content": content,
-        "filename": get_slug(title),  # 使用英文 slug
-        "original_filename": filepath.stem,  # 保留原始檔名
+        "slug": get_slug(title),
         "category": filepath.parent.name
     }
 
 
 def generate_index_page(articles: list) -> str:
     """生成首頁"""
-    # 統計各類別文章數
     category_counts = {}
     for article in articles:
         cat = article["category"]
         category_counts[cat] = category_counts.get(cat, 0) + 1
     
-    # 生成主題卡片
     topic_cards = ""
     for cat_name, info in TOPICS.items():
         count = category_counts.get(cat_name, 0)
@@ -181,14 +169,13 @@ def generate_index_page(articles: list) -> str:
             <div class="topic-count">{count} 篇文章</div>
         </a>'''
     
-    # 生成最新文章列表
     recent_articles = ""
     for article in articles[:10]:
         cat_info = TOPICS.get(article["category"], {"id": "other", "icon": "📄"})
         recent_articles += f'''
         <div class="article-card">
             <div class="article-title">
-                <a href="{cat_info["id"]}/{article["filename"]}.html">{article["title"]}</a>
+                <a href="{article["slug"]}.html">{article["title"]}</a>
             </div>
             <div class="article-excerpt">{article["summary"]}</div>
             <div class="article-meta">
@@ -196,8 +183,6 @@ def generate_index_page(articles: list) -> str:
                 {f'<span>相關：{", ".join(article["keywords"][:3])}</span>' if article["keywords"] else ''}
             </div>
         </div>'''
-    
-    total_articles = len(articles)
     
     return f'''<!DOCTYPE html>
 <html lang="zh-TW">
@@ -216,7 +201,6 @@ def generate_index_page(articles: list) -> str:
             </a>
             <nav>
                 <a href="index.html" class="active">首頁</a>
-                <a href="https://github.com/" target="_blank">GitHub</a>
             </nav>
         </div>
     </header>
@@ -228,7 +212,7 @@ def generate_index_page(articles: list) -> str:
         
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-value">{total_articles}</div>
+                <div class="stat-value">{len(articles)}</div>
                 <div class="stat-label">篇文章</div>
             </div>
             <div class="stat-card">
@@ -270,15 +254,21 @@ def generate_category_page(category: str, articles: list) -> str:
     
     article_list = ""
     for article in cat_articles:
+        # 關鍵字連結 - 直接用 slug，所有文章都在根目錄
+        keywords_html = ""
+        if article["keywords"]:
+            keywords_html = '<span>相關：' + ", ".join([
+                f'<a class="wikilink" href="{get_slug(k)}.html">{k}</a>' 
+                for k in article["keywords"][:3]
+            ]) + '</span>'
+        
         article_list += f'''
         <div class="article-card">
             <div class="article-title">
-                <a href="{cat_info["id"]}/{article["filename"]}.html">{article["title"]}</a>
+                <a href="{article["slug"]}.html">{article["title"]}</a>
             </div>
             <div class="article-excerpt">{article["summary"]}</div>
-            <div class="article-meta">
-                {f'<span>相關：{", ".join([f"<a class=\"wikilink\" href=\"{get_slug(k)}.html\">{k}</a>" for k in article["keywords"][:3]])}</span>' if article["keywords"] else ''}
-            </div>
+            <div class="article-meta">{keywords_html}</div>
         </div>'''
     
     if not article_list:
@@ -310,9 +300,7 @@ def generate_category_page(category: str, articles: list) -> str:
     <main class="container">
         <h1 class="section-title">{cat_info["icon"]} {category}</h1>
         <p style="color: var(--text-muted); margin-bottom: 32px;">{cat_info["desc"]}</p>
-        <div class="section">
-            {article_list}
-        </div>
+        <div class="section">{article_list}</div>
     </main>
     <footer>
         <p>股票知識庫 · 每小時自動學習，每天自動編譯</p>
@@ -322,63 +310,33 @@ def generate_category_page(category: str, articles: list) -> str:
 
 
 def markdown_to_html(content: str) -> str:
-    """將 Markdown 轉換為 HTML（簡化版）"""
-    # 標題
+    """將 Markdown 轉換為 HTML"""
     content = re.sub(r'^### (.+)$', r'<h3>\1</h3>', content, flags=re.MULTILINE)
     content = re.sub(r'^## (.+)$', r'<h2>\1</h2>', content, flags=re.MULTILINE)
     content = re.sub(r'^# (.+)$', r'<h1>\1</h1>', content, flags=re.MULTILINE)
-    
-    # 引用
     content = re.sub(r'^> (.+)$', r'<blockquote>\1</blockquote>', content, flags=re.MULTILINE)
-    
-    # 粗體
     content = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', content)
-    
-    # 連結
     content = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', content)
     
-    # wiki 連結 [[主題]] - 使用英文 slug
+    # wiki 連結 [[主題]] - 轉成 slug
     def replace_wikilink(match):
         title = match.group(1)
         slug = get_slug(title)
         return f'<a class="wikilink" href="{slug}.html">{title}</a>'
-    
     content = re.sub(r'\[\[([^\]]+)\]\]', replace_wikilink, content)
     
-    # 無序列表
     content = re.sub(r'^- (.+)$', r'<li>\1</li>', content, flags=re.MULTILINE)
     content = re.sub(r'(<li>.*</li>\n)+', r'<ul>\g<0></ul>\n', content)
     
-    # 表格（簡化）
-    def replace_table(match):
-        table_content = match.group(1)
-        rows = table_content.strip().split('\n')
-        html = '<table>'
-        for i, row in enumerate(rows):
-            cells = row.split('|')
-            cells = [c.strip() for c in cells if c.strip()]
-            if cells:
-                tag = 'th' if i == 0 else 'td'
-                html += '<tr>' + ''.join(f'<{tag}>{c}</{tag}>' for c in cells) + '</tr>'
-        html += '</table>'
-        return html
-    
-    content = re.sub(r'\|(.+)\|\n(\|.+\|\n)+', replace_table, content)
-    
-    # 程式碼區塊
     content = re.sub(r'```(\w+)?\n(.+?)```', r'<pre><code class="\1">\2</code></pre>', content, flags=re.DOTALL)
-    
-    # 行內程式碼
     content = re.sub(r'`([^`]+)`', r'<code>\1</code>', content)
     
-    # 段落
     paragraphs = content.split('\n\n')
     html_paragraphs = []
     for p in paragraphs:
         p = p.strip()
         if not p:
             continue
-        # 如果已經是 HTML 標籤，就不加 <p>
         if not re.match(r'^<(h[1-6]|ul|ol|li|table|blockquote|pre)', p):
             p = f'<p>{p}</p>'
         html_paragraphs.append(p)
@@ -395,8 +353,8 @@ def generate_article_page(article: dict, all_articles: list) -> str:
     related = ""
     for keyword in article["keywords"][:5]:
         for a in all_articles:
-            if a["filename"] != article["filename"] and keyword in a["keywords"]:
-                related += f'<a href="../{TOPICS.get(a["category"], {"id": "other"})["id"]}/{a["filename"]}.html" class="wikilink">{a["title"]}</a>, '
+            if a["slug"] != article["slug"] and keyword in a["keywords"]:
+                related += f'<a class="wikilink" href="{a["slug"]}.html">{a["title"]}</a>, '
                 break
     
     if related:
@@ -405,7 +363,7 @@ def generate_article_page(article: dict, all_articles: list) -> str:
     nav_items = ""
     for cat_name, info in TOPICS.items():
         active = " active" if cat_name == article["category"] else ""
-        nav_items += f'<a href="../{info["id"]}.html" class="{active}">{cat_name}</a>'
+        nav_items += f'<a href="{info["id"]}.html" class="{active}">{cat_name}</a>'
     
     return f'''<!DOCTYPE html>
 <html lang="zh-TW">
@@ -418,7 +376,7 @@ def generate_article_page(article: dict, all_articles: list) -> str:
 <body>
     <header>
         <div class="header-inner">
-            <a href="../index.html" class="logo">
+            <a href="index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
@@ -433,7 +391,7 @@ def generate_article_page(article: dict, all_articles: list) -> str:
         </article>
     </main>
     <footer>
-        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
+        <p>股票知識庫 · <a href="index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>'''
@@ -451,7 +409,6 @@ def main():
     
     # 讀取所有 wiki 文章
     articles = []
-    
     for category in TOPICS.keys():
         cat_dir = WIKI_DIR / category
         if cat_dir.exists():
@@ -462,28 +419,21 @@ def main():
     print(f"找到 {len(articles)} 篇文章")
     
     # 生成首頁
-    index_html = generate_index_page(articles)
-    (OUTPUT_DIR / "index.html").write_text(index_html, encoding='utf-8')
+    (OUTPUT_DIR / "index.html").write_text(generate_index_page(articles), encoding='utf-8')
     print("✅ 生成首頁")
     
     # 生成類別頁面
     for category, info in TOPICS.items():
-        cat_dir = OUTPUT_DIR / info["id"]
-        cat_dir.mkdir(exist_ok=True)
-        
-        # 類別索引頁
         cat_html = generate_category_page(category, articles)
         (OUTPUT_DIR / f"{info['id']}.html").write_text(cat_html, encoding='utf-8')
-        
-        # 類別內文章頁面
-        for article in articles:
-            if article["category"] == category:
-                article_html = generate_article_page(article, articles)
-                (cat_dir / f"{article['filename']}.html").write_text(article_html, encoding='utf-8')
-        
         print(f"✅ 生成 {category} ({len([a for a in articles if a['category'] == category])} 篇)")
     
-    print(f"\n🎉 網站生成完成！輸出目錄：{OUTPUT_DIR}")
+    # 生成文章頁面（扁平化，全放根目錄）
+    for article in articles:
+        article_html = generate_article_page(article, articles)
+        (OUTPUT_DIR / f"{article['slug']}.html").write_text(article_html, encoding='utf-8')
+    
+    print(f"\n🎉 網站生成完成！")
     print(f"   - 首頁：{OUTPUT_DIR / 'index.html'}")
     print(f"   - 文章數：{len(articles)}")
 

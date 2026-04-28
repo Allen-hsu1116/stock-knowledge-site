@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K線型態 - 股票知識庫</title>
+    <title>停利方法 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -16,10 +16,8 @@
     --text-secondary: #4b5563;
     --text-muted: #9ca3af;
     --border: #e5e7eb;
-    --shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
 .container { max-width: 1200px; margin: 0 auto; }
 
@@ -85,77 +83,70 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="../index.html" class="logo">
+            <a href="index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="../technical.html" class=" active">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+            <nav><a href="technical.html" class="">技術分析</a><a href="fundamental.html" class="">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class=" active">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
         <article class="article-content">
-            <h1>K線型態</h1>
-            <h1>K線型態</h1>
+            <h1>停利方法</h1>
+            <h1>停利方法</h1>
 
-<blockquote>K線是技術分析的基礎語言，每一根K線都在說一個多空交戰的故事。</blockquote>
+<blockquote>讓利潤奔跑，但要用移動停利鎖住獲利。</blockquote>
 
 <h2>核心概念</h2>
 
-<p>每根K線由四個價格組成：開盤價（Open）、最高價（High）、最低價（Low）、收盤價（Close）。</p>
+<p>停利比停損更難，因為貪婪會讓你不想賣。設定規則，紀律執行。</p>
 
-<p><strong>解讀三要素</strong>：
-<ul><li><strong>顏色</strong>：紅K（上漲）vs 黑K（下跌）</li>
-<li><strong>實體長度</strong>：趨勢強度（長實體 = 趨勢明顯）</li>
-<li><strong>影線長度</strong>：多空交戰激烈程度（長影線 = 阻力大）</li>
-</ul></p>
+<h2>四種停利方法</h2>
 
-<h3>單根K線型態</h3>
+<p>| 方法 | 操作方式 | 優點 | 缺點 | 適用場景 |
+|------|----------|------|------|----------|
+| <strong>固定百分比停利</strong> | 達到目標百分比出場 | 簡單明確 | 可能過早出場 | 短線（10-20%）、新手 |
+| <strong>移動停利（回檔比例）</strong> | 從最高點回檔 X% 出場 | 鎖定獲利、讓利潤奔跑 | 需監控最高點 | 波段、趨勢 |
+| <strong>壓力位停利</strong> | 到達技術壓力位觀察轉折 | 符合技術邏輯、目標明確 | 需判斷壓力位準確性 | 短線、前高附近 |
+| <strong>乖離率停利</strong> | 乖離率超過閾值分批出場 | 避免回檔吞噬獲利 | 需設定合理乖離閾值 | 波段、防止過熱 |</p>
 
-<table><tr><th>型態</th><th>定義</th><th>市場訊號</th></tr></table>
-<h3>看漲反轉型態</h3>
+<h2>實戰應用</h2>
 
-<table><tr><th>型態</th><th>組成</th><th>訊號</th></tr></table>
-<h3>看跌反轉型態</h3>
+<h3>停利建議</h3>
 
-<table><tr><th>型態</th><th>組成</th><th>訊號</th></tr></table>
-<h3>K線組合型態</h3>
+<ul><li>短線：10-20% 固定停利或回檔 5-10%</li>
+<li>中線：30-50% 或乖離率 15-25%</li>
+<li>移動停利：從最高點回檔 10% 出場</li>
+</ul>
 
-<p><strong>雙K型態</strong>：
-<table><tr><th>型態</th><th>組成</th><th>訊號</th></tr></table>
-<strong>三K型態</strong>：
-<table><tr><th>型態</th><th>組成</th><th>訊號</th></tr></table>
-<h2>實戰應用</h2></p>
+<h3>移動停利執行</h3>
 
-<h3>K線影線比例判斷法</h3>
-
-<table><tr><th>影線比例</th><th>意義</th></tr></table>
-<strong>實戰口訣</strong>：長實體 + 短影線 → 趨勢延續性高；短實體 + 長影線 → 趨勢延續性低
+<p>1. 股價上漲後，設定移動停利觸發點
+2. 從最高點回檔 10% 時自動賣出
+3. 鎖住大部分獲利，避免回吐</p>
 
 <h2>注意事項</h2>
 
-<ul><li><strong>單根K線不構成訊號</strong>：需搭配前後K線一起判斷</li>
-<li><strong>影線透露過程，實體透露結果</strong>：長影線 = 激烈交戰，長實體 = 明確趨勢</li>
-<li><strong>型態位置很重要</strong>：同樣型態在高位和低位意義不同</li>
-<li><strong>反轉型態要在趨勢末端才有效</strong></li>
-<li><strong>停損永遠設在型態極端點</strong></li>
-<li><strong>三K比雙K更可靠</strong>（多了確認K線）</li>
+<ul><li>不要因為貪心而忽略停利訊號</li>
+<li>分批出場可以降低心理壓力</li>
+<li>搭配風險報酬比：至少 1:2</li>
 </ul>
 
 <h2>相關主題</h2>
 
-<ul><li><a class="wikilink" href="moving-averages.html">均線判斷</a></li>
+<ul><li><a class="wikilink" href="stop-loss.html">停損方法</a></li>
+<li><a class="wikilink" href="風險報酬比.html">風險報酬比</a></li>
 <li><a class="wikilink" href="support-resistance.html">支撐壓力</a></li>
-<li><a class="wikilink" href="stop-loss.html">停損方法</a></li>
 </ul>
 
 <h2>來源</h2>
 
 <li>stock-knowledge.md（2026-04-28 遷移）</li>
-            <h2>相關主題</h2><p><a href="../technical/support-resistance.html" class="wikilink">支撐壓力</a>, <a href="../technical/moving-averages.html" class="wikilink">均線判斷</a>, <a href="../technical/moving-averages.html" class="wikilink">均線判斷</a></p>
+            <h2>相關主題</h2><p><a class="wikilink" href="k-patterns.html">K線型態</a>, <a class="wikilink" href="stop-loss.html">停損方法</a>, <a class="wikilink" href="k-patterns.html">K線型態</a></p>
         </article>
     </main>
     <footer>
-        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
+        <p>股票知識庫 · <a href="index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>

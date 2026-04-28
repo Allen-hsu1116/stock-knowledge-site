@@ -16,10 +16,8 @@
     --text-secondary: #4b5563;
     --text-muted: #9ca3af;
     --border: #e5e7eb;
-    --shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
 .container { max-width: 1200px; margin: 0 auto; }
 
@@ -85,11 +83,11 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="../index.html" class="logo">
+            <a href="index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class=" active">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+            <nav><a href="technical.html" class="">技術分析</a><a href="fundamental.html" class=" active">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class="">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
@@ -201,8 +199,15 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 
 <p><strong>差異說明</strong>：CMoney的計算方向相反，<strong>所有指標 < 0 為佳</strong></p>
 
-<table><tr><th>指標</th><th>判讀（< 0為佳）</th><th>含義</th></tr></table>
-<strong>適用時機</strong>：快速篩選用，五項指標中負值越多越好
+<p>| 指標 | 判讀（< 0為佳） | 含義 |
+|------|----------------|------|
+| 存貨指標 | 存貨增加% > 營收增加% | 存貨管理不佳 |
+| 應收帳款指標 | 應收增加% > 營收增加% | 催收狀況差或賒銷衝量 |
+| 銷貨毛利指標 | 營收增加% > 毛利增加% | 成本控制不佳 |
+| 銷管費用指標 | 銷管費用增加% > 營收增加% | 費用浪費 |
+| 備抵壞帳指標 | 應收增加% > 備抵壞帳增加% | 備提不足 |</p>
+
+<p><strong>適用時機</strong>：快速篩選用，五項指標中負值越多越好</p>
 
 <p>---</p>
 
@@ -297,7 +302,7 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
         </article>
     </main>
     <footer>
-        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
+        <p>股票知識庫 · <a href="index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>

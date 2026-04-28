@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>外資期貨未平倉判讀 - 股票知識庫</title>
+    <title>財報假帳偵測 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -16,10 +16,8 @@
     --text-secondary: #4b5563;
     --text-muted: #9ca3af;
     --border: #e5e7eb;
-    --shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
 .container { max-width: 1200px; margin: 0 auto; }
 
@@ -85,83 +83,81 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="../index.html" class="logo">
+            <a href="index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class=" active">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+            <nav><a href="technical.html" class="">技術分析</a><a href="fundamental.html" class=" active">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class="">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
         <article class="article-content">
-            <h1>外資期貨未平倉判讀</h1>
-            <h1>外資期貨未平倉判讀</h1>
+            <h1>財報假帳偵測</h1>
+            <h1>財報假帳偵測</h1>
 
-<blockquote>大外資看中期方向，小外資看短線靈敏度，兩者同向偏多才是真多</blockquote>
+<blockquote>先看老闆質押，再看應收帳款天數，這兩個是最大的警訊。</blockquote>
 
 <h2>核心概念</h2>
 
-<p>外資期貨未平倉口數是台股指數期貨市場最重要的籌碼指標之一。外資在台指期的多空部位，直接反映其對大盤方向的預期。</p>
+<h3>假帳五大動機</h3>
 
-<p><strong>關鍵區分：大外資 vs 小外資</strong></p>
+<p>| 動機 | 說明 |
+|------|------|
+| 順利上市上櫃 | 為了符合上市櫃標準，美化財報 |
+| 掩飾本業衰退 | 怕財報難看導致股價下跌或銀行抽銀根 |
+| 避免大股東破產 | 大股東股票質押成數高（>60%），股價不能跌 |
+| 操縱股價 | 先低價買進，再假帳拉抬股價，最後高賣 |
+| 掏空公司 | 把公司資產搬進自己口袋 |</p>
 
-<ul><li><strong>大外資（五大特定人）</strong>：市場最大的五位法人部位，通常就是外資中最大的幾家。部位大，無法短線操作，期貨部位通常代表中期看法（數週到數月）</li>
-<li><strong>小外資</strong>：外資總部位扣除五大外資後的淨額。部位較小，短線操作更靈活，對行情變化更敏感</li>
-</ul>
+<h3>財報假帳六大特徵</h3>
 
-<p>計算方式：小外資 = 外資總未平倉淨額 − 五大外資淨額</p>
+<p>| 特徵 | 判斷標準 | 原理 |
+|------|----------|------|
+| 應收帳款天數過高 | > 90天 | 假交易利潤藏在應收帳款銷不掉 |
+| 存貨天數過低 | < 10天且異於同業 | 虛增營收但存貨沒增加 |
+| 不動產過高 | 週轉率低於同業 | 應收帳款轉入不動產消化 |
+| 長期投資過高 | 未上市櫃公司投資多 | 難驗證的資產藏假 |
+| 現金過高 | 現金高但借款也高 | 現金可能被限制（博達案） |
+| 雜項資產過高 | 其他應收款、預付款高 | 雜項科目藏假 |</p>
 
 <h2>實戰應用</h2>
 
-<h3>大小外資同向判斷法</h3>
+<h3>假帳偵測心法</h3>
 
-<table><tr><th>大外資</th><th>小外資</th><th>判斷</th></tr></table>
-<strong>核心原則</strong>：大、小外資沒有人翻空單之前，行情不太會有太大的翻轉變動。
+<p>1. 先看老闆質押：> 80% = 小心
+2. 再看應收帳款天數：> 90天 = 警訊
+3. 看存貨天數：< 10天且與同業差距大 = 警訊
+4. 看現金與借款：雙高 = 現金可能被限制
+5. 看營業現金流：營收成長但現金流為負 = 怪
+6. 看利多頻率：澄清「不予置評」太多 = 放消息炒股
+7. 看借殼歷史：借殼後 3-4 年內營收暴增 = 警訊
+8. 研究產業：產業差卻賺錢 = 可能有假</p>
 
-<h3>小外資領先訊號</h3>
+<h3>非財務警訊</h3>
 
-<p>小外資比大外資更敏感，在一波下跌後小外資較快翻多，在一波上漲後也較快翻空。因此：
-<ul><li>想看短線變化 → 參考小外資部位</li>
-<li>想看中期趨勢 → 參考大外資部位</li>
-<li>最強訊號 = 小外資領先翻多 + 大外資維持偏多</li>
-</ul></p>
-
-<h3>結算日參考</h3>
-
-<p>外資台指期空單加碼 → 預期大盤下跌 → 結算日壓低結算機率較高
-外資台指期多單加碼 → 預期大盤上漲 → 結算日拉高結算機率較高</p>
-
-<p>但籌碼面與行情相關性不是 100%，需搭配其他因素綜合判斷。</p>
-
-<h3>常見誤區</h3>
-
-<p>1. <strong>把外資當反指標</strong>：當外資空單增加但行情卻上漲時，不要急著認定外資是反指標。可能只是小外資已經翻多但大外資還沒跟上
-2. <strong>只看外資總部位</strong>：外資總部位包含幾十家機構，大小外資可能方向不同，總量會掩蓋真相
-3. <strong>忽略套利部位</strong>：外資可能同時持有現貨多單和期貨空單做套利，單看期貨空單會誤判</p>
-
-<h2>注意事項</h2>
-
-<ul><li>外資在各國交易策略多元，期貨部位不一定純粹是方向性看法</li>
-<li>五大特定人數據有落後性，盤後才公布</li>
-<li>結算日效應雖有參考價值，但不保證準確</li>
-<li>建議搭配 <a class="wikilink" href="futures-open-interest.html">期貨未平倉量判讀</a>、<a class="wikilink" href="institutional-investors.html">三大法人特性</a> 綜合判斷</li>
-</ul>
+<p>| 警訊 | 判斷方式 |
+|------|----------|
+| 老闆誠信被質疑 | 質押成數 > 80% = 很缺錢 |
+| 經營階層變動 | 財務長、獨董、董事接連離職 |
+| 股價異常飆漲 | 漲幅遠超同業且無基本面支撐 |
+| 利多消息不斷 | 頻繁發布利多、澄清「不予置評」太多 |</p>
 
 <h2>相關主題</h2>
-<ul><li><a class="wikilink" href="institutional-investors.html">三大法人特性</a></li>
-<li><a class="wikilink" href="futures-open-interest.html">期貨未平倉量判讀</a></li>
-<li><a class="wikilink" href="quarterly-window-dressing.html">作帳行情</a></li>
+
+<ul><li><a class="wikilink" href="earnings-quality.html">盈餘品質分析</a> - 用七項指標量化驗證盈餘真實性，是假帳偵測的進階版</li>
+<li><a class="wikilink" href="企業掏空識別.html">企業掏空識別</a></li>
+<li><a class="wikilink" href="會計師查核報告判讀.html">會計師查核報告判讀</a></li>
+<li><a class="wikilink" href="管理階層品質評估.html">管理階層品質評估</a></li>
 </ul>
 
 <h2>來源</h2>
-<ul><li><a href="../raw/2026-04-29/正確解讀大小外資期貨買賣超.md">正確解讀大小外資期貨買賣超</a></li>
-</ul>
-<li><a href="../raw/2026-04-29/期貨未平倉主力動向.md">期貨未平倉主力動向</a></li>
-            <h2>相關主題</h2><p><a href="../chips/institutional-investors.html" class="wikilink">三大法人特性</a>, <a href="../chips/quarterly-window-dressing.html" class="wikilink">作帳行情</a>, <a href="../chips/quarterly-window-dressing.html" class="wikilink">作帳行情</a>, <a href="../chips/institutional-investors.html" class="wikilink">三大法人特性</a>, <a href="../chips/institutional-investors.html" class="wikilink">三大法人特性</a></p>
+
+<li>stock-knowledge.md（2026-04-28 遷移）</li>
+            
         </article>
     </main>
     <footer>
-        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
+        <p>股票知識庫 · <a href="index.html">返回首頁</a></p>
     </footer>
 </body>
 </html>
