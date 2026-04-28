@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>籌碼九階段 - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class=" active">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>籌碼九階段</h1>
+            <h1>籌碼九階段</h1>
+
+<blockquote>一檔股票從興起到幻滅的完整籌碼循環：接→護→拉→換→養→軋→出→套→殺</blockquote>
+
+<h2>核心概念</h2>
+
+<p>籌碼九階段是 XS 策略平台團隊提出的框架，將一檔飆股的興起與幻滅，在籌碼面上細分為 9 個階段，形成一個 S 曲線。標的從籌碼聚集到發散，投資人只要辨識目前股價處於哪個階段，就知道該列入觀察、進場、出場還是做空。</p>
+
+<h3>九個階段詳解</h3>
+
+<p><strong>階段1：接</strong> — 大戶逢低承接
+<ul><li>股價調整到一定程度，大戶覺得夠便宜開始逢低承接</li>
+<li>大戶買超但主力不一定買超、散戶賣超、融資減少、成交量不大</li>
+<li>股價還在下降趨勢但跌勢漸緩，內部人持股增加</li>
+</ul></p>
+
+<p><strong>階段2：護</strong> — 大戶積極護盤
+<ul><li>買超金額變大，股價跌不下去</li>
+<li>股價多日未破底、主力買超金額愈來愈大、成交量放大</li>
+<li>主力不只逢低承接，也開始追價買進</li>
+</ul></p>
+
+<p><strong>階段3：拉</strong> — 主力拉升股價
+<ul><li>低檔買不到後主力追價買進，又拉又殺洗出短線籌碼</li>
+<li>股價明顯上漲、主力持續買超、消息面還沒有利多</li>
+<li>股價比大盤強</li>
+</ul></p>
+
+<p><strong>階段4：換</strong> — 籌碼快速換手
+<ul><li>主力持續買超引起市場注意，基本面利多出現</li>
+<li>法人、代操、投資高手等先知先覺者進場</li>
+<li>法人買超、千張大戶增加、大戶買超散戶賣超</li>
+<li>主力還沒真正出貨，只是消化不同價位的散戶賣壓</li>
+</ul></p>
+
+<p><strong>階段5：養</strong> — 故意示弱養空單
+<ul><li>散戶追不下手，主力故意示弱讓短多下車、空頭開始做空</li>
+<li>股價漲幅已大、股價轉弱、融券增加、主力小賣超</li>
+<li>融資與融券同步增加（主力把現股換融資養券）</li>
+</ul></p>
+
+<p><strong>階段6：軋</strong> — 軋空拉升準備出貨
+<ul><li>配合消息面利多拉高股價，做空者被軋到受不了</li>
+<li>消息見報率大增、社群媒體常曝光、融券大增</li>
+<li>主力買超停滯、成交量增加</li>
+</ul></p>
+
+<p><strong>階段7：出</strong> — 主力開始出貨
+<ul><li>做空者回補推升股價，漲幅接近主力目標價</li>
+<li>主力開始賣超、融券回補、融資成長</li>
+<li>消息面還是利多，法人還在追捧，但股價上不去或撐不久</li>
+</ul></p>
+
+<p><strong>階段8：套</strong> — 散戶被套牢
+<ul><li>股價隨消息面開高但常開高走低，尾盤留上影線</li>
+<li>消息面利多不斷但主力賣超</li>
+<li>K線長上影線下影線或長黑，相對大盤偏弱</li>
+<li>股價盤頭位於短期均線下方、千張大戶開始減少、大戶賣超散戶買超</li>
+</ul></p>
+
+<p><strong>階段9：殺</strong> — 下殺取量清倉
+<ul><li>主力出貨差不多或出不掉時開始下殺取量</li>
+<li>股價明顯下跌、融資反而增加（散戶撿便宜）</li>
+<li>各方勢力（主力、法人、公司派、高手、官股）都站在賣方</li>
+<li>先前累計買超加速釋出、空單急劇減少</li>
+</ul></p>
+
+<h2>實戰應用</h2>
+
+<h3>操作策略對應</h3>
+
+<table>
+<tr><th>階段</th><th>做多策略</th><th>做空策略</th></tr>
+<tr><td>------</td><td>----------</td><td>----------</td></tr>
+<tr><td>接→護</td><td>列入觀察名單</td><td>—</td></tr>
+<tr><td>拉→換</td><td>進場抱牢（最愛）</td><td>—</td></tr>
+<tr><td>養→軋</td><td>觀察有無軋空機會</td><td>—</td></tr>
+<tr><td>出</td><td>見好就收</td><td>—</td></tr>
+<tr><td>套→殺</td><td>—</td><td>做空標的</td></tr>
+</table>
+<h3>大盤對應</h3>
+
+<ul><li><strong>大盤觸底</strong>：多數股票出現「接」與「護」</li>
+<li><strong>大盤見高</strong>：多數股票在「套」與「殺」</li>
+</ul>
+
+<h3>判斷框架</h3>
+
+<p>把標的套到 9 階段裡觀察：
+<ul><li>狀況符合預期 → 按表操課</li>
+<li>狀況與設想不同 → 先退出</li>
+<li>進退有據，不受盤面波動影響</li>
+</ul></p>
+
+<h2>注意事項</h2>
+
+<p>1. <strong>不是所有股票都會完整走9個階段</strong>：公司派不炒作的沒有「接」與「護」；市值小成交量小的沒有「養」與「軋」
+2. <strong>「養」的階段最危險</strong>：主力故意示弱，融資融券同步增加，散戶容易誤判為見頂
+3. <strong>「換」的階段是確認訊號</strong>：如果沒有出現換手，代表市場不認同，最好見好就收
+4. <strong>結束後籌碼凌亂</strong>：殺完後成交量萎縮，成為盤面上無足輕重的股票，直到再次跌到主力有興趣的價位</p>
+
+<h2>相關主題</h2>
+
+<ul><li><span class="wikilink disabled">威科夫方法</span> — 西方版的主力吸籌派發框架</li>
+<li><a class="wikilink" href="主力洗盤甩轎手法.html">主力洗盤甩轎手法</a> — 辨識洗盤與出貨的差異</li>
+<li><a class="wikilink" href="institutional-investors.html">三大法人特性</a> — 法人在各階段的角色</li>
+<li><a class="wikilink" href="margin-maintenance-calls.html">融資維持率與斷頭</a> — 「殺」階段融資斷頭的連鎖效應</li>
+<li><span class="wikilink disabled">千張大戶持股比例</span> — 追蹤大戶進出的量化工具</li>
+<li><span class="wikilink disabled">融資券交叉判讀</span> — 「養」階段融資融券同步增加的判讀</li>
+</ul>
+
+<h2>來源</h2>
+
+<ul><li><a href="../raw/2026-04-29/籌碼九階段接護拉換養軋出套殺.md">認識主力出貨的「籌碼9階段」</a></li>
+</ul>
+<li><a href="../raw/2026-04-29/籌碼九階段接護拉換養軋出套殺.md">如何避開主力軋、出、套、殺？</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="主力洗盤甩轎手法.html">主力洗盤甩轎手法</a>, <a class="wikilink" href="institutional-investors.html">三大法人特性</a>, <a class="wikilink" href="margin-maintenance-calls.html">融資維持率與斷頭</a></p>
+        </article>
+    </main>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
+</body>
+</html>

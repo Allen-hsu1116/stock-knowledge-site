@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>內部人申報轉讓判讀 - 股票知識庫</title>
+    <title>融券回補與軋空行情 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -93,70 +93,91 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
     </header>
     <main class="container">
         <article class="article-content">
-            <h1>內部人申報轉讓判讀</h1>
-            <h1>內部人申報轉讓判讀</h1>
+            <h1>融券回補與軋空行情</h1>
+            <h1>融券回補與軋空行情</h1>
 
-<blockquote>內部人賣股不一定是壞消息，轉讓方式決定多空影響，長期仍回歸基本面。</blockquote>
+<blockquote>融券必須在停止過戶日前6個營業日回補，越接近回補日越容易出現軋空行情</blockquote>
 
 <h2>核心概念</h2>
 
-<p><strong>內部人</strong>依證交法定義，包括董事、監察人、經理人、持股超過 10% 的大股東，以及這些人的配偶、未成年子女和利用他人名義持有者。</p>
+<p>融券回補是指融券放空的投資人，必須在規定期限前買回股票歸還券商。這個機制存在的原因是：融券的股票是向券商借的，當公司需要確認股東名冊時，借券人就必須還券。</p>
 
-<p>內部人轉讓持股必須<strong>事前申報</strong>，自申報日起 3 日後至 1 個月內完成轉讓，每月 15 日前公司須公告持股情形（每日轉讓未超過 1 萬股免公告）。</p>
+<p><strong>融券強制回補的5大時機</strong>：
+1. <strong>股東常會</strong> — 每年固定發生，須確認股東名冊（3~4月）
+2. <strong>除權除息</strong> — 每年固定發生，配發股利須確認股權（5~7月高峰）
+3. <strong>現金增資</strong> — 視個股而定，發行新股須確認股東權益
+4. <strong>減資</strong> — 視個股而定，退還股本須確認股東
+5. <strong>合併/分割</strong> — 視個股而定，公司結構變動須確認股東</p>
+
+<p><strong>重要例外</strong>：臨時股東會不需融券回補。</p>
+
+<p><strong>回補日計算</strong>：停止過戶日前6個營業日即為最後回補日。停券期間約3~7天，之後恢復融券交易。</p>
+
+<p><strong>台股特殊狀況</strong>：目前一年最多配息4次，加上股東會及除權，強制回補次數可能非常多。例如台積電一年就有5次融券強制回補。這類標的相對不適合融券放空。</p>
 
 <h2>實戰應用</h2>
 
-<h3>五種轉讓方式與市場影響</h3>
+<h3>1. 軋空行情判斷</h3>
+
+<p>越接近融券回補日，越容易出現軋空行情。邏輯：
+<ul><li>融券餘額高 → 大量投資人必須買回股票</li>
+<li>特定人士可能故意哄抬股價</li>
+<li>流動性差的股票更容易被軋空</li>
+<li>搶回補的恐慌心理推升股價</li>
+</ul></p>
+
+<p><strong>查詢工具</strong>：
+<ul><li>證交所融券餘額：https://www.twse.com.tw/zh/page/trading/exchange/MI_MARGN.html</li>
+<li>停券預告表：臺灣證券交易所 → 交易資訊 → 融資融券與可借券賣出額度</li>
+</ul></p>
+
+<h3>2. 低檔融券激增股篩選</h3>
+
+<p>篩選條件：融券增加 + 股價尚未過前高 + 基本面佳
+<ul><li>營收創新高、本益比低、基本面好的個股，融券激增後容易軋空</li>
+<li>例：雙鴻(3324) 營收成長40%、本益比<15，低檔融券激增後軋空</li>
+</ul></p>
+
+<h3>3. 融券回補後繼續放空的4種解法</h3>
 
 <table>
-<tr><th>方式</th><th>影響</th><th>解讀</th></tr>
+<tr><th>方法</th><th>優點</th><th>缺點</th></tr>
 <tr><td>------</td><td>------</td><td>------</td></tr>
-<tr><td><strong>贈與</strong></td><td>小</td><td>偏多，選低點轉讓省稅，代表對後市有信心</td></tr>
-<tr><td><strong>信託</strong></td><td>小</td><td>中性，多為財務規劃或限制員工新股依法信託</td></tr>
-<tr><td><strong>洽特定人</strong></td><td>小</td><td>中性，已有買方接手，不影響市場賣壓</td></tr>
-<tr><td><strong>一般交易</strong></td><td>大</td><td>偏空，直接在市場拋售，多位同時申報嚴重警訊</td></tr>
-<tr><td><strong>鉅額逐筆交易</strong></td><td>很大</td><td>最空，500 張以上大單，高點或營運出問題時使用</td></tr>
+<tr><td>先回補再重新放空</td><td>簡單直接</td><td>回補到重新放空間若大跌賺不到</td></tr>
+<tr><td>股票期貨放空</td><td>無回補問題</td><td>不是每檔都有期貨</td></tr>
+<tr><td>買進賣權(權證)</td><td>無回補問題</td><td>時間價值成本、Delta問題、流動性風險</td></tr>
+<tr><td>找同類標的放空</td><td>替代方案</td><td>事件型機會不會發生在同類股</td></tr>
 </table>
-<h3>判讀重點</h3>
+<h3>4. 操作建議</h3>
 
-<p>1. <strong>轉讓方式</strong>是第一道濾網：贈與/信託/洽特定人影響小，一般交易/鉅額交易影響大
-2. <strong>多位內部人同時申報</strong>：嚴重警訊，可能代表公司內部共識看壞
-3. <strong>高檔申報轉讓</strong>：股價已大漲後申報，可能是「超漲」訊號
-4. <strong>申報張數 vs 持股比例</strong>：小比例轉讓可能是理財需求，大比例清空要警惕</p>
-
-<h3>經典案例</h3>
-
-<ul><li><strong>國巨（2327）</strong>：2018 年前董娘以鉅額交易賣 1.2 萬張，股價從 1310 跌至 200 多元，「勿忘國巨」成為經典警惕</li>
-<li><strong>美超微（SMCI）</strong>：安永會計師退出稽核後不久，高層大量賣股，引發治理疑慮</li>
-<li><strong>奇鋐（3017）</strong>：2019 年董娘出清 1034 張，短期下跌但長期基本面向上，最終漲至 817 元</li>
+<ul><li><strong>不要壓最後一刻回補</strong>，提早買回避免軋空</li>
+<li><strong>避開一年多次配息的股票放空</strong>，平均放空2個月就要回補</li>
+<li><strong>營業員沒有義務提醒回補</strong>，自己注意最後回補日</li>
+<li><strong>基本面好的個股不宜輕易放空</strong>，非基本面利空往往只是短線修正</li>
 </ul>
 
 <h2>注意事項</h2>
 
-<ul><li>內部人賣股不一定代表公司出問題，可能只是個人理財需求</li>
-<li>贈與/信託/洽特定人的轉讓對股價影響有限</li>
-<li>鉅額交易和一般交易才是真正需要關注的</li>
-<li><strong>長期股價仍回歸基本面</strong>：奇鋐案例證明，內部人賣股短期衝擊不等於長期趨勢</li>
-<li>查詢管道：公開資訊觀測站（mops.twse.com.tw）</li>
+<ul><li><strong>軋空不一定發生</strong>：融券回補訊息會讓股價變高是經驗邏輯推論，並非適用所有股票</li>
+<li><strong>回補行情可能是虛漲</strong>：若股價上漲速度顯著快於盈餘提升幅度，可能含軋空虛灌成分</li>
+<li><strong>融券餘額高≠一定軋空</strong>：需搭配法人籌碼、基本面判斷</li>
+<li><strong>流動性風險</strong>：交易量小的股票，回補時可能買不到好價位</li>
+<li><strong>違約交割後果嚴重</strong>：超過回補日未還券，券商強制市價買回，損失慘重</li>
 </ul>
 
 <h2>相關主題</h2>
-
-<ul><li><span class="wikilink disabled">三大法人操作慣性</span></li>
-<li><a class="wikilink" href="自營商避險買超判讀.html">自營商避險買超判讀</a></li>
-<li><span class="wikilink disabled">融資券交叉判讀</span></li>
-<li><span class="wikilink disabled">借券賣出餘額</span></li>
-<li><span class="wikilink disabled">千張大戶持股比例</span></li>
-<li><a class="wikilink" href="董監持股質押比判讀.html">董監持股質押比判讀</a></li>
-<li><a class="wikilink" href="庫藏股判讀.html">庫藏股判讀</a></li>
+<ul><li><span class="wikilink disabled">融資券交叉判讀</span></li>
+<li><a class="wikilink" href="margin-maintenance-calls.html">融資維持率與斷頭</a></li>
+<li><a class="wikilink" href="institutional-investors.html">三大法人特性</a></li>
+<li><a class="wikilink" href="作帳行情與法人季底操作.html">作帳行情與法人季底操作</a></li>
+<li><a class="wikilink" href="券資比判讀.html">券資比判讀</a></li>
 </ul>
 
 <h2>來源</h2>
-
-<ul><li><a href="../raw/2026-04-29/內部人賣股與申報轉讓判讀.md">內部人賣股說明什麼？股價一定會崩跌嗎？</a></li>
+<ul><li><a href="../raw/2026-04-29/融券回補解析-市場先生.md">融券回補是什麼？回補日對股價影響？完整的融券回補解析</a></li>
 </ul>
-<li><a href="../raw/2026-04-29/內部人賣股與申報轉讓判讀.md">董娘賣股是警訊？大股東申報轉讓怎解讀？</a></li>
-            <h2>相關主題</h2><p><a class="wikilink" href="自營商避險買超判讀.html">自營商避險買超判讀</a></p>
+<li><a href="../raw/2026-04-29/融券強制回補5大原因-Yahoo.md">想不被軋空 搞懂融券強制回補的5大原因</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="margin-maintenance-calls.html">融資維持率與斷頭</a>, <a class="wikilink" href="institutional-investors.html">三大法人特性</a>, <a class="wikilink" href="作帳行情與法人季底操作.html">作帳行情與法人季底操作</a>, <a class="wikilink" href="券資比判讀.html">券資比判讀</a></p>
         </article>
     </main>
     <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
