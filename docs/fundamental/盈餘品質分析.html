@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盈餘品質分析 - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --primary-dark: #4f46e5;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class=" active">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>盈餘品質分析</h1>
+            <h1>盈餘品質分析</h1>
+
+<blockquote>帳面EPS好看不等於公司真的賺到錢——盈餘品質衡量帳面盈餘有多少是「真實現金」，有多少只是會計調整。</blockquote>
+
+<h2>核心概念</h2>
+
+<h3>盈餘品質 Earnings Quality 是什麼</h3>
+
+<p>衡量公司帳面盈餘有多少是「真實現金」、有多少是「會計調整（應計項目）」。品質越高代表盈餘越能反映真實經營績效、越能預測未來。</p>
+
+<p><strong>為什麼重要</strong>：
+<ul><li>帳面EPS好看不等於公司真的賺到錢</li>
+<li>應計項目（應收帳款、存貨變動等）可能隱藏財務造假</li>
+<li>博達案、康友案都是盈餘品質差的公司</li>
+<li>Sloan (1996) 研究證實：高應計項目公司未來報酬顯著較低（應計項目異象 Accrual Anomaly）</li>
+</ul></p>
+
+<p>---</p>
+
+<h3>七項盈餘品質指標（薛兆亨體系）</h3>
+
+<p><strong>所有指標 > 0 為佳</strong>（與CMoney五指標相反，因為計算方式不同）</p>
+
+<p>分析步驟：
+1. 確認公司使用的會計方法是否適當
+2. 查閱會計師查核報告
+3. 確認公司之前是否有重編財報
+4. 計算公司相關營運風險
+5. 用以下七項指標進行量化分析</p>
+
+<p>#### 指標一：存貨指標</p>
+
+<p><strong>公式</strong>：存貨指標 = 營收增加百分比 - 存貨增加百分比</p>
+
+<p><strong>計算方式</strong>：
+1. 營收增加百分比 = (本年度營收 - 前兩年平均營收) ÷ 前兩年平均營收
+2. 存貨增加百分比 = (本年度存貨 - 前兩年平均存貨) ÷ 前兩年平均存貨
+3. 兩者相減即為存貨指標</p>
+
+<p><strong>判讀</strong>：
+<ul><li>> 0：存貨控管適當，盈餘品質好</li>
+<li>< 0：存貨堆積速度超過銷售成長，可能有滞銷風險</li>
+</ul></p>
+
+<p>#### 指標二：應收款項指標</p>
+
+<p><strong>公式</strong>：應收款項指標 = 營收增加百分比 - 應收款項增加百分比</p>
+
+<p><strong>判讀</strong>：
+<ul><li>> 0：應收款項催收良好，產品銷售佳</li>
+<li>< 0：可能用賒銷墊高營收，應收帳款回收困難</li>
+</ul></p>
+
+<p>#### 指標三：毛利指標</p>
+
+<p><strong>公式</strong>：毛利指標 = 毛利增加百分比 - 營收增加百分比</p>
+
+<p><strong>判讀</strong>：
+<ul><li>> 0：獲利能力超過營收成長，成本控制良好</li>
+<li>< 0：營收成長但毛利跟不上，可能降價搶單或成本失控</li>
+</ul></p>
+
+<p>#### 指標四：銷管費用指標</p>
+
+<p><strong>公式</strong>：銷管費用指標 = 營收增加百分比 - 銷管費用增加百分比</p>
+
+<p><strong>判讀</strong>：
+<ul><li>> 0：銷管費用未因營收增加而同比例增加，經營效率提升</li>
+<li>< 0：費用成長超過營收成長，可能資源浪費或管理效率差</li>
+</ul></p>
+
+<p>#### 指標五：備抵壞帳指標</p>
+
+<p><strong>公式</strong>：備抵壞帳指標 = 備抵壞帳增加百分比 - 應收款項增加百分比</p>
+
+<p><strong>判讀</strong>：
+<ul><li>> 0：備抵壞帳提列充足，財務報表可信</li>
+<li>< 0：備抵壞帳提列不足，有修飾財報嫌疑</li>
+</ul></p>
+
+<p>#### 指標六：研發費用指標</p>
+
+<p><strong>公式</strong>：研發費用指標 = 研發費用增加百分比 - 同業研發費用增加百分比</p>
+
+<p><strong>判讀</strong>：
+<ul><li>> 0：研發投入高於同業，長期競爭力可能較強（但不宜過高）</li>
+<li>< 0：研發投入低於同業，可能犧牲長期發展換短期盈餘</li>
+</ul></p>
+
+<p><strong>適用時機</strong>：科技業、生技業等研發密集產業</p>
+
+<p>#### 指標七：員工生產力指標</p>
+
+<p><strong>公式</strong>：員工生產力指標 = (本期員工平均營收 - 前期員工平均營收) ÷ 前期員工平均營收</p>
+
+<p><strong>判讀</strong>：
+<ul><li>> 0：員工生產力成長，人力素質上升</li>
+<li>< 0：員工生產力下降，可能人員膨脹或效率低落</li>
+</ul></p>
+
+<p>---</p>
+
+<h3>CMoney 五項盈餘品質指標（簡化版）</h3>
+
+<p><strong>差異說明</strong>：CMoney的計算方向相反，<strong>所有指標 < 0 為佳</strong></p>
+
+<table><tr><th>指標</th><th>判讀（< 0為佳）</th><th>含義</th></tr></table>
+<strong>適用時機</strong>：快速篩選用，五項指標中負值越多越好
+
+<p>---</p>
+
+<h3>Sloan 應計項目比率（學術版，最強）</h3>
+
+<p><strong>公式</strong>：
+應計項目 = [(Δ流動資產 - Δ現金) - (Δ流動負債 - Δ短期借款) - 折舊費用] ÷ 去年同季資產</p>
+
+<p><strong>是什麼</strong>：衡量公司盈餘中有多少是「沒有現金支撐的應計項目」。應計項目越高，盈餘品質越差。</p>
+
+<p><strong>簡化版（財報狗版）</strong>：營業現金流 ÷ 淨利
+<ul><li>> 1 或接近1：盈餘品質佳</li>
+<li>< 0.5：盈餘品質差，大量盈餘沒有現金支撐</li>
+<li>< 0：公司虧現金卻報盈餘，高度警示</li>
+</ul></p>
+
+<p>---</p>
+
+<h3>應計項目異象 Accrual Anomaly</h3>
+
+<p>Sloan (1996) 發現的市場異象——高應計項目的公司未來報酬系統性偏低。</p>
+
+<p><strong>背後邏輯</strong>：
+<ul><li>應計項目（應收帳款增加、存貨增加等）容易受管理層操控</li>
+<li>市場傾向高估應計項目的持續性（以為今年多賺的明年還會賺）</li>
+<li>實際上應計項目的持續性遠低於現金流</li>
+<li>當市場修正預期時，高應計項目股價下跌</li>
+</ul></p>
+
+<p><strong>實戰策略</strong>：
+<ul><li>做多：低應計項目（高現金流品質）的公司</li>
+<li>做空/避開：高應計項目的公司</li>
+<li>台股回測：排除高應計項目後，年化報酬提升2%+</li>
+</ul></p>
+
+<p>---</p>
+
+<h2>實戰應用</h2>
+
+<h3>盈餘品質分析實戰SOP</h3>
+
+<p>1. <strong>快速過濾</strong>：用營業現金流÷淨利 < 0.5 或為負的公司，直接剔除
+2. <strong>七指標掃描</strong>：對通過第一步的公司，計算七項盈餘品質指標
+3. <strong>紅旗判斷</strong>：
+   - 3項以上指標為負 → 盈餘品質有疑慮
+   - 備抵壞帳指標 + 應收款項指標同時為負 → 高度造假風險
+   - 存貨指標 + 毛利指標同時為負 → 可能虛增存貨虛增盈餘
+4. <strong>Sloan過濾</strong>：排除應計項目最高的30%公司
+5. <strong>產業校正</strong>：金融業、營建業不適用存貨指標；研發費用指標只用於科技業</p>
+
+<h3>實例</h3>
+
+<p><strong>情境A</strong>：某電子公司營收成長15%，但存貨增加25%
+<ul><li>存貨指標 = 15% - 25% = -10%（負值，存貨失控）</li>
+<li>判斷：可能出貨不如預期，存貨跌價風險高</li>
+</ul></p>
+
+<p><strong>情境B</strong>：某公司營收成長10%，應收帳款增加30%
+<ul><li>應收款項指標 = 10% - 30% = -20%（嚴重負值）</li>
+<li>判斷：高機率放寬信用政策衝營收，現金回收有問題</li>
+</ul></p>
+
+<p><strong>情境C</strong>：A公司淨利10億，但營業現金流只有3億
+<ul><li>簡化Sloan = 3÷10 = 0.3（遠低於0.5）</li>
+<li>判斷：高應計項目，70%盈餘沒有現金支撐，盈餘品質差</li>
+</ul></p>
+
+<p>---</p>
+
+<h2>注意事項</h2>
+
+<ul><li><strong>薛兆亨七指標 > 0 為佳</strong> vs <strong>CMoney五指標 < 0 為佳</strong>，計算方向相反，使用前確認是哪個體系</li>
+<li>金融股不適用存貨指標、應收款項指標（無存貨、應收帳款結構不同）</li>
+<li>營建股不適用存貨指標（存貨特性完全不同）</li>
+<li>研發費用指標只用於科技業、生技業</li>
+<li>前兩年平均的基期選擇會影響結果，建議用同產業比較</li>
+<li>單一指標為負不一定有問題，要看整體組合判斷</li>
+</ul>
+
+<h2>相關主題</h2>
+
+<ul><li><a class="wikilink" href="財報假帳偵測.html">財報假帳偵測</a> - 盈餘品質差是假帳的前兆，兩者交叉驗證效果最強</li>
+<li><a class="wikilink" href="杜邦分析.html">杜邦分析</a> - 拆解ROE的組成，與盈餘品質互補</li>
+<li><a class="wikilink" href="應計項目異象.html">應計項目異象</a> - 高應計項目公司的系統性低估現象</li>
+<li><a class="wikilink" href="營業現金流分析.html">營業現金流分析</a> - 盈餘品質的關鍵驗證指標</li>
+</ul>
+
+<h2>來源</h2>
+
+<li><a href="raw/2026-04-28/盈餘品質分析Earnings%20Quality-2346.md">盈餘品質分析七項指標×應計項目比率×實戰過濾</a></li>
+            
+        </article>
+    </main>
+    <footer>
+        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
+    </footer>
+</body>
+</html>

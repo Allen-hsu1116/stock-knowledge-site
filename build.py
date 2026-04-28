@@ -1,45 +1,50 @@
 #!/usr/bin/env python3
 """
-股票學習筆記 - 網站生成器
-從 memory/stock-learning/*.md 生成靜態網站到 docs/
+股票知識庫 - 網站生成器
+從 stock-knowledge-base/wiki/ 生成靜態網站到 docs/
 
 使用方式：
-    python3 stock-knowledge-site-build.py
+    python3 build.py
 
-此腳本由每天的凌晨統整任務自動執行，
+此腳本由每天的學習任務自動執行，
 執行後會自動推送到 GitHub。
 """
 
 import os
 import re
 import shutil
-import json
 from pathlib import Path
 from datetime import datetime
 
 # 路徑設定
 WORKSPACE = Path.home() / ".openclaw" / "workspace"
-MEMORY_DIR = WORKSPACE / "memory"
-LEARNING_DIR = MEMORY_DIR / "stock-learning"
+WIKI_DIR = WORKSPACE / "stock-knowledge-base" / "wiki"
+RAW_DIR = WORKSPACE / "stock-knowledge-base" / "raw"
 REPO_DIR = WORKSPACE / "stock-knowledge-site"
 OUTPUT_DIR = REPO_DIR / "docs"
 
+# 主題對應
 TOPICS = {
-    "technical": {"name": "技術分析", "icon": "📊", "desc": "K線、均線、技術指標"},
-    "fundamental": {"name": "基本面分析", "icon": "💰", "desc": "財報、估值、產業分析"},
-    "chips": {"name": "籌碼面分析", "icon": "🎲", "desc": "三大法人、主力動向"},
-    "strategy": {"name": "操作策略", "icon": "🎯", "desc": "當沖、波段、價值投資"},
-    "risk": {"name": "風險管理", "icon": "⚠️", "desc": "停損停利、倉位控制"},
-    "psychology": {"name": "交易心理", "icon": "🧠", "desc": "心態建設、認知偏誤"}
+    "技術分析": {"id": "technical", "icon": "📊", "desc": "K線、均線、技術指標"},
+    "基本面分析": {"id": "fundamental", "icon": "💰", "desc": "財報、估值、產業分析"},
+    "籌碼面分析": {"id": "chips", "icon": "🎲", "desc": "三大法人、主力動向"},
+    "操作策略": {"id": "strategy", "icon": "🎯", "desc": "當沖、波段、價值投資"},
+    "風險管理": {"id": "risk", "icon": "⚠️", "desc": "停損停利、倉位控制"},
 }
 
 CSS = '''
 :root {
-    --primary: #6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5;
-    --bg: #ffffff; --bg-secondary: #f9fafb; --bg-tertiary: #f3f4f6;
-    --text: #111827; --text-secondary: #4b5563; --text-muted: #9ca3af;
-    --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.1);
-    --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --primary-dark: #4f46e5;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -59,620 +64,399 @@ nav a.active { background: var(--primary); color: white; }
 main { padding: 40px 24px; }
 
 .hero { text-align: center; padding: 60px 0 40px; }
-.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, var(--text), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
 .hero-subtitle { font-size: 18px; color: var(--text-muted); }
 
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
-.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.2s; }
-.stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
 .stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
 .stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
 
 .topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
 .topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; }
-.topic-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
 .topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
 .topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
 .topic-desc { font-size: 14px; color: var(--text-secondary); }
 .topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
 
 .section { margin-bottom: 48px; }
-.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
-.section-title { font-size: 24px; font-weight: 600; }
-.section-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
 
-.date-group { margin-bottom: 32px; }
-.date-header { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
-.date-header .date { color: var(--primary); }
-.date-header .weekday { color: var(--text-muted); font-size: 14px; margin-left: 8px; }
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
 
-.session-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
-.session-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
-.session-item:hover { border-color: var(--primary); }
-.session-time { font-size: 12px; color: var(--text-muted); }
-.session-title { font-size: 16px; font-weight: 600; }
-.session-item:hover .session-title { color: var(--primary); }
-.session-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
 
-.tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; background: var(--bg-tertiary); border-radius: 12px; font-size: 12px; color: var(--text-secondary); }
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
 
-.summary-card { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; padding: 20px; margin-top: 16px; }
-.summary-card a { color: white; text-decoration: none; display: block; }
-.summary-card:hover { opacity: 0.95; }
-.summary-title { font-size: 14px; opacity: 0.9; }
-.summary-link { font-size: 16px; font-weight: 600; margin-top: 4px; }
-
-.content { background: var(--bg); max-width: 900px; margin: 0 auto; }
-.content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; }
-.content h1 { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
-.content h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
-.content h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
-.content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text-secondary); }
-.content p { margin-bottom: 16px; color: var(--text-secondary); }
-.content ul, .content ol { margin: 0 0 16px 24px; color: var(--text-secondary); }
-.content li { margin-bottom: 8px; }
-.content a { color: var(--primary); text-decoration: none; }
-.content a:hover { text-decoration: underline; }
-.content code { background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 14px; }
-.content pre { background: var(--bg-tertiary); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
-.content pre code { background: none; padding: 0; }
-.content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-muted); }
-.content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
-.content th { background: var(--bg-tertiary); padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
-.content td { padding: 12px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); }
-.content tr:hover td { background: var(--bg-secondary); }
-.content .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
-
-.knowledge-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
-.knowledge-nav a { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
-.knowledge-nav a:hover { background: var(--primary); color: white; border-color: var(--primary); }
-
-/* 推薦追蹤頁面 */
-.rec-list { display: flex; flex-direction: column; gap: 8px; }
-.rec-item { display: flex; align-items: center; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s; }
-.rec-item:hover { border-color: var(--primary); }
-.rec-item.checked { background: var(--bg-tertiary); }
-.rec-item .stock { flex: 1; font-weight: 500; }
-.rec-item .score { color: var(--text-muted); margin-right: 16px; }
-.rec-item .result { font-weight: 600; }
-.rec-item .result.success { color: var(--success); }
-.rec-item .result.danger { color: var(--danger); }
-.rec-item .result.pending { color: var(--text-muted); }
-.stats-section { margin-bottom: 32px; }
-.stats-section h2 { font-size: 20px; margin-bottom: 16px; }
-
-.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
-.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
-.breadcrumb a:hover { color: var(--primary); }
-
-.nav-links { display: flex; gap: 12px; margin-bottom: 24px; }
-.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: all 0.2s; }
-.nav-link:hover { background: var(--bg-tertiary); color: var(--text); border-color: var(--primary); }
-
-footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 32px; margin-top: 48px; text-align: center; }
-.footer-text { font-size: 14px; color: var(--text-muted); }
-
-@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .topic-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } .topic-grid { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } .content-card { padding: 24px; } }
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
 '''
 
-def detect_topics(content):
-    keywords = {
-        "technical": ["K線", "均線", "支撐", "壓力", "技術", "RSI", "MACD", "KD", "移動平均", "趨勢線"],
-        "fundamental": ["財報", "營收", "EPS", "本益比", "基本面", "估值", "ROE", "殖利率", "股息"],
-        "chips": ["法人", "主力", "融資", "籌碼", "外資", "投信", "自營商", "大戶"],
-        "strategy": ["當沖", "波段", "價值投資", "策略", "停損", "停利", "選擇權", "加碼", "部位"],
-        "risk": ["風險", "倉位", "部位控制", "MDD", "回撤", "凱利", "資金管理"],
-        "psychology": ["心理", "心態", "情緒", "紀律", "偏誤", "行為", "FOMO", "貪婪", "恐懼"]
-    }
-    found = []
-    for t, kws in keywords.items():
-        for kw in kws:
-            if kw in content and t not in found:
-                found.append(t)
-    return found
 
-def md_to_html(text):
-    """Convert Markdown to HTML with proper line breaks"""
-    # Save code blocks
-    code_blocks = []
-    def save_code(m):
-        code_blocks.append(m.group(0))
-        return f"\n__CODE{len(code_blocks)-1}__\n"
-    text = re.sub(r"```[\s\S]*?```", save_code, text)
-    
-    # Tables
-    def make_table(m):
-        lines = m.group(0).strip().split('\n')
-        if len(lines) < 2: return m.group(0)
-        h = [c.strip() for c in lines[0].split('|') if c.strip()]
-        rows = [[c.strip() for c in l.split('|') if c.strip()] for l in lines[2:] if l.strip()]
-        return '<table><thead><tr>' + ''.join(f'<th>{x}</th>' for x in h) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join(f'<td>{x}</td>' for x in r) + '</tr>' for r in rows) + '</tbody></table>'
-    text = re.sub(r"(\|.+\|\n)+(\|[-:| ]+\|\n)(\|.+\|[\s\S]*?)(?=\n\n|\n*$)", make_table, text)
-    
-    # Split into blocks
-    lines = text.split('\n')
-    blocks = []
-    current_block = []
-    in_list = False
-    
-    for line in lines:
-        stripped = line.strip()
-        is_header = re.match(r'^#{1,4}\s+', stripped)
-        is_list_item = re.match(r'^[-*]\s+', stripped)
-        is_hr = stripped == '---'
-        is_empty = not stripped
-        is_table_row = stripped.startswith('|')
-        is_code_placeholder = '__CODE' in stripped
-        
-        if is_list_item:
-            if not in_list and current_block:
-                blocks.append('\n'.join(current_block))
-                current_block = []
-            in_list = True
-            current_block.append(line)
-        elif in_list and not is_list_item and not is_empty:
-            blocks.append('\n'.join(current_block))
-            current_block = [line]
-            in_list = False
-        elif is_empty:
-            if current_block:
-                blocks.append('\n'.join(current_block))
-                current_block = []
-            in_list = False
-        else:
-            current_block.append(line)
-    
-    if current_block:
-        blocks.append('\n'.join(current_block))
-    
-    # Process each block
-    result = []
-    for block in blocks:
-        block = block.strip()
-        if not block:
-            continue
-        
-        if re.match(r'^#{4}\s+', block):
-            result.append(re.sub(r'^#{4}\s+(.+)$', r'<h4>\1</h4>', block))
-        elif re.match(r'^#{3}\s+', block):
-            result.append(re.sub(r'^#{3}\s+(.+)$', r'<h3>\1</h3>', block))
-        elif re.match(r'^#{2}\s+', block):
-            result.append(re.sub(r'^#{2}\s+(.+)$', r'<h2>\1</h2>', block))
-        elif re.match(r'^#\s+', block):
-            result.append(re.sub(r'^#\s+(.+)$', r'<h1>\1</h1>', block))
-        elif block == '---':
-            result.append('<hr>')
-        elif re.match(r'^[-*]\s+', block, re.MULTILINE):
-            items = re.findall(r'^[-*]\s+(.+)$', block, re.MULTILINE)
-            def format_item(item):
-                item = re.sub(r'`([^`]+)`', r'<code>\1</code>', item)
-                item = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', item)
-                item = re.sub(r'\*(.+?)\*', r'<i>\1</i>', item)
-                item = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', item)
-                return item
-            html = '<ul>\n' + '\n'.join(f'<li>{format_item(item)}</li>' for item in items) + '\n</ul>'
-            result.append(html)
-        elif block.startswith('<table>'):
-            result.append(block)
-        elif '__CODE' in block:
-            result.append(block)
-        else:
-            block = re.sub(r'`([^`]+)`', r'<code>\1</code>', block)
-            block = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', block)
-            block = re.sub(r'\*(.+?)\*', r'<i>\1</i>', block)
-            block = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', block)
-            lines_in_block = [l.strip() for l in block.split('\n') if l.strip()]
-            if lines_in_block:
-                result.append('<p>' + '<br>\n'.join(lines_in_block) + '</p>')
-    
-    text = '\n\n'.join(result)
-    
-    for i, block in enumerate(code_blocks):
-        block = re.sub(r'^```\w*\n', '<pre><code>', block)
-        block = re.sub(r'\n```$', '</code></pre>', block)
-        text = text.replace(f'__CODE{i}__', block)
-    
-    return text
-
-def parse_session(content, session_num):
-    # 新格式：## 第 N 回合學習 - Title 或 ## 第 N 回合學習 — Title
-    title_match = re.search(r"^##\s*第\s*(\d+)\s*回合學習\s*[-–—]\s*(.+)$", content, re.MULTILINE)
-    if title_match:
-        title = title_match.group(2).strip()
-    else:
-        # 舊格式：#1 - Title
-        title_match = re.search(r"^#\s*(\d+)\s*[-–]\s*(.+)$", content, re.MULTILINE)
-        if not title_match:
-            title_match = re.search(r"^#\s*[\d-]+\s+[\d:]+\s*[-–](.+)$", content, re.MULTILINE)
-        title = title_match.group(2).strip() if title_match else f"學習回合 {session_num}"
-    
-    # 時間格式：**時間**：01:09 或舊格式
-    time_match = re.search(r"\*\*時間\*\*[：:]\s*(\d{1,2}:\d{2})", content)
-    if not time_match:
-        time_match = re.search(r"(\d{4}-\d{2}-\d{2})\s+(\d{1,2}:\d{2})", content)
-    session_time = time_match.group(1) if time_match else ""
-    
-    return {
-        "num": session_num,
-        "title": title,
-        "time": session_time,
-        "content": content,
-        "topics": detect_topics(content)
-    }
-
-def parse_daily_file(filepath):
-    with open(filepath, encoding="utf-8") as f:
+def parse_wiki_article(filepath: Path) -> dict:
+    """解析 wiki 文章"""
+    with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    date_match = re.search(r"(\d{4}-\d{2}-\d{2})", filepath.stem)
-    date = date_match.group(1) if date_match else ""
+    # 提取標題
+    title_match = re.search(r'^# (.+)$', content, re.MULTILINE)
+    title = title_match.group(1) if title_match else filepath.stem
     
-    if "summary" in filepath.stem:
-        return None
+    # 提取摘要（> 開頭的行）
+    summary_match = re.search(r'^> (.+)$', content, re.MULTILINE)
+    summary = summary_match.group(1) if summary_match else ""
     
-    # 新格式：## 第 N 回合學習 - Title
-    # 舊格式：# 2026-04-03 00:08 - Title
-    session_pattern = r"(^##\s*第\s*\d+\s*回合學習\s*[-–—].+?$|^#\s*\d{4}-\d{2}-\d{2}\s+\d{1,2}:\d{2}\s*[-–—].+?$)"
-    session_starts = list(re.finditer(session_pattern, content, re.MULTILINE))
-    
-    sessions = []
-    if session_starts:
-        for i, match in enumerate(session_starts):
-            start = match.start()
-            end = session_starts[i + 1].start() if i + 1 < len(session_starts) else len(content)
-            session_content = content[start:end].strip()
-            sessions.append(parse_session(session_content, i + 1))
-    else:
-        sessions.append({
-            "num": 1,
-            "title": f"{date} 學習記錄",
-            "time": "",
-            "content": content,
-            "topics": detect_topics(content)
-        })
-    
-    first_title = re.search(r"^#\s+(.+)$", content, re.MULTILINE)
-    day_title = first_title.group(1) if first_title else date
+    # 提取關鍵字
+    keywords = re.findall(r'\[\[([^\]]+)\]\]', content)
     
     return {
-        "date": date,
-        "file": filepath.stem,
-        "title": day_title,
-        "sessions": sessions,
-        "topics": detect_topics(content)
+        "title": title,
+        "summary": summary,
+        "keywords": keywords,
+        "content": content,
+        "filename": filepath.stem,
+        "category": filepath.parent.name
     }
 
-def get_weekday(date_str):
-    try:
-        d = datetime.strptime(date_str, "%Y-%m-%d")
-        weekdays = ["週一", "週二", "週三", "週四", "週五", "週六", "週日"]
-        return weekdays[d.weekday()]
-    except:
-        return ""
 
-def HTML(body, title="股票學習筆記", depth=""):
-    nav_links = f'''
-    <nav>
-        <a href="{depth}index.html">首頁</a>
-        <a href="{depth}knowledge.html">知識庫</a>
-        <a href="{depth}timeline.html">時間線</a>
-        <a href="{depth}recommendations.html">推薦追蹤</a>
-    </nav>'''
+def generate_index_page(articles: list) -> str:
+    """生成首頁"""
+    # 統計各類別文章數
+    category_counts = {}
+    for article in articles:
+        cat = article["category"]
+        category_counts[cat] = category_counts.get(cat, 0) + 1
+    
+    # 生成主題卡片
+    topic_cards = ""
+    for cat_name, info in TOPICS.items():
+        count = category_counts.get(cat_name, 0)
+        topic_cards += f'''
+        <a href="{info["id"]}.html" class="topic-card">
+            <div class="topic-icon">{info["icon"]}</div>
+            <div class="topic-name">{cat_name}</div>
+            <div class="topic-desc">{info["desc"]}</div>
+            <div class="topic-count">{count} 篇文章</div>
+        </a>'''
+    
+    # 生成最新文章列表
+    recent_articles = ""
+    for article in articles[:10]:
+        cat_info = TOPICS.get(article["category"], {"id": "other", "icon": "📄"})
+        recent_articles += f'''
+        <div class="article-card">
+            <div class="article-title">
+                <a href="{cat_info["id"]}/{article["filename"]}.html">{article["title"]}</a>
+            </div>
+            <div class="article-excerpt">{article["summary"]}</div>
+            <div class="article-meta">
+                <span>{cat_info["icon"]} {article["category"]}</span>
+                {f'<span>相關：{", ".join(article["keywords"][:3])}</span>' if article["keywords"] else ''}
+            </div>
+        </div>'''
+    
+    total_articles = len(articles)
     
     return f'''<!DOCTYPE html>
 <html lang="zh-TW">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title><style>{CSS}</style></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>股票知識庫</title>
+    <style>{CSS}</style>
+</head>
 <body>
-<header><div class="header-inner"><a href="{depth}index.html" class="logo"><div class="logo-icon">📈</div><div class="logo-text">學習筆記</div></a>{nav_links}</div></header>
-<main class="container">{body}</main>
-<footer><p class="footer-text">由妖姬西打龍 🐍 自動生成</p></footer>
-</body></html>'''
-
-def generate_recommendations_page():
-    """生成推薦追蹤頁面"""
-    tracker_file = WORKSPACE / "stock-picker" / "history" / "tracking.json"
-    
-    if not tracker_file.exists():
-        return None
-    
-    try:
-        with open(tracker_file, encoding="utf-8") as f:
-            data = json.load(f)
-    except Exception as e:
-        print(f"⚠️ 讀取追蹤資料失敗: {e}")
-        return None
-    
-    # 推薦列表
-    recommendations = data.get("recommendations", {})
-    
-    if not recommendations:
-        return None
-    
-    # 按日期分組
-    by_date = {}
-    for key, rec in recommendations.items():
-        date = rec.get("date", "未知")
-        if date not in by_date:
-            by_date[date] = []
-        by_date[date].append(rec)
-    
-    # 計算整體統計
-    total = len(recommendations)
-    checked = [rec for rec in recommendations.values() if rec.get("checked") and rec.get("result")]
-    
-    if checked:
-        results = [rec["result"] for rec in checked]
-        avg_return = sum(r["return_pct"] for r in results) / len(results)
-        win_rate = sum(1 for r in results if r["return_pct"] > 0) / len(results) * 100
-        stats = {
-            "total_recommendations": total,
-            "overall_avg_return": round(avg_return, 2),
-            "overall_win_rate": round(win_rate, 1)
-        }
-    else:
-        stats = {"total_recommendations": total, "message": "尚無已檢查的推薦"}
-    
-    # 按日期排序
-    sorted_dates = sorted(by_date.keys(), reverse=True)
-    
-    # 生成 HTML
-    items_html = ""
-    for date in sorted_dates[:30]:  # 只顯示最近 30 天
-        recs = by_date[date]
-        weekday = get_weekday(date)
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav>
+                <a href="index.html" class="active">首頁</a>
+                <a href="https://github.com/" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <div class="hero">
+            <h1 class="hero-title">股票操作知識庫</h1>
+            <p class="hero-subtitle">成為股票操作大師的路上，每一步都算數</p>
+        </div>
         
-        recs_html = ""
-        for rec in recs:
-            stock_id = rec.get("stock_id", "")
-            stock_name = rec.get("stock_name", "")[:6]
-            score = rec.get("score", 0)
-            entry_price = rec.get("entry_price", 0)
-            stop_loss = rec.get("stop_loss", 0)
-            stop_gain = rec.get("stop_gain", 0)
-            result = rec.get("result")
-            
-            # 進場價位區塊
-            price_info = f'<div class="price-info"><span>推薦進場: {entry_price:.1f}</span>'
-            price_info += f'<span>停損: {stop_loss:.1f}</span>'
-            price_info += f'<span>停利: {stop_gain:.1f}</span></div>'
-            
-            if result:
-                # 已檢查
-                return_pct = result.get("return_pct", 0)
-                current_price = result.get("current_price", entry_price)
-                max_return = result.get("max_return_pct", 0)
-                max_drawdown = result.get("max_drawdown_pct", 0)
-                
-                color = "success" if return_pct > 0 else "danger"
-                icon = "📈" if return_pct > 0 else "📉"
-                
-                # 實際進場價（當天收盤）
-                actual_entry = f'<div class="actual-price">實際進場: {entry_price:.1f} → 現價: {current_price:.1f}</div>'
-                max_info = f'<div class="max-info">最高: {max_return:+.2f}% / 最大回撤: {max_drawdown:.2f}%</div>'
-                
-                recs_html += f'<div class="rec-item checked"><div class="rec-header"><span class="stock">{stock_id} {stock_name}</span><span class="score">{score:.0f}分</span></div>{price_info}{actual_entry}{max_info}<span class="result {color}">{icon} {return_pct:+.2f}%</span></div>'
-            else:
-                # 未檢查
-                recs_html += f'<div class="rec-item"><div class="rec-header"><span class="stock">{stock_id} {stock_name}</span><span class="score">{score:.0f}分</span></div>{price_info}<span class="result pending">⏳ 待檢查</span></div>'
-        
-        items_html += f'<div class="date-group"><div class="date-header"><span class="date">{date}</span><span class="weekday">{weekday}</span> · {len(recs)} 支</div><div class="rec-list">{recs_html}</div></div>'
-    
-    # 整體統計
-    stats_html = ""
-    if stats and "message" not in stats:
-        stats_html = f'''
-        <div class="stats-section">
-            <h2>📊 整體統計</h2>
-            <div class="stats-grid">
-                <div class="stat-card"><div class="stat-value">{stats.get("total_recommendations", 0)}</div><div class="stat-label">總推薦數</div></div>
-                <div class="stat-card"><div class="stat-value">{stats.get("overall_avg_return", 0):+.2f}%</div><div class="stat-label">平均報酬</div></div>
-                <div class="stat-card"><div class="stat-value">{stats.get("overall_win_rate", 0):.1f}%</div><div class="stat-label">勝率</div></div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">{total_articles}</div>
+                <div class="stat-label">篇文章</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">{len(TOPICS)}</div>
+                <div class="stat-label">個主題</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">{sum(len(a["keywords"]) for a in articles)}</div>
+                <div class="stat-label">個關鍵字</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">24</div>
+                <div class="stat-label">小時更新</div>
             </div>
         </div>
-        '''
+        
+        <section class="section">
+            <h2 class="section-title">主題分類</h2>
+            <div class="topic-grid">{topic_cards}</div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">最新文章</h2>
+            {recent_articles}
+        </section>
+    </main>
+    <footer>
+        <p>股票知識庫 · 每小時自動學習，每天自動編譯</p>
+        <p>最後更新：{datetime.now().strftime("%Y-%m-%d %H:%M")}</p>
+    </footer>
+</body>
+</html>'''
+
+
+def generate_category_page(category: str, articles: list) -> str:
+    """生成類別頁面"""
+    cat_articles = [a for a in articles if a["category"] == category]
+    cat_info = TOPICS.get(category, {"id": "other", "icon": "📄", "desc": ""})
     
-    html = f'''
-    <style>
-    .rec-header {{ display: flex; justify-content: space-between; margin-bottom: 8px; }}
-    .price-info {{ font-size: 12px; color: #6b7280; margin-bottom: 4px; }}
-    .price-info span {{ margin-right: 12px; }}
-    .actual-price {{ font-size: 13px; color: #374151; margin-bottom: 2px; }}
-    .max-info {{ font-size: 11px; color: #9ca3af; }}
-    </style>
-    <div class="content">
-        <div class="content-card">
-            <h1>🎯 推薦追蹤</h1>
-            <p>追蹤每日推薦股票的 5 日表現</p>
+    article_list = ""
+    for article in cat_articles:
+        article_list += f'''
+        <div class="article-card">
+            <div class="article-title">
+                <a href="{article["filename"]}.html">{article["title"]}</a>
+            </div>
+            <div class="article-excerpt">{article["summary"]}</div>
+            <div class="article-meta">
+                {f'<span>相關：{", ".join([f"<a class=\"wikilink\" href=\"{k}.html\">{k}</a>" for k in article["keywords"][:3]])}</span>' if article["keywords"] else ''}
+            </div>
+        </div>'''
+    
+    if not article_list:
+        article_list = '<div class="article-card"><p>尚無文章</p></div>'
+    
+    nav_items = ""
+    for cat_name, info in TOPICS.items():
+        active = " active" if cat_name == category else ""
+        nav_items += f'<a href="{info["id"]}.html" class="{active}">{cat_name}</a>'
+    
+    return f'''<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{category} - 股票知識庫</title>
+    <style>{CSS}</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav>{nav_items}</nav>
         </div>
-    </div>
-    {stats_html}
-    <div class="section">
-        <h2>📅 歷史推薦</h2>
-        {items_html}
-    </div>
-    '''
+    </header>
+    <main class="container">
+        <h1 class="section-title">{cat_info["icon"]} {category}</h1>
+        <p style="color: var(--text-muted); margin-bottom: 32px;">{cat_info["desc"]}</p>
+        <div class="section">
+            {article_list}
+        </div>
+    </main>
+    <footer>
+        <p>股票知識庫 · 每小時自動學習，每天自動編譯</p>
+    </footer>
+</body>
+</html>'''
+
+
+def markdown_to_html(content: str) -> str:
+    """將 Markdown 轉換為 HTML（簡化版）"""
+    # 標題
+    content = re.sub(r'^### (.+)$', r'<h3>\1</h3>', content, flags=re.MULTILINE)
+    content = re.sub(r'^## (.+)$', r'<h2>\1</h2>', content, flags=re.MULTILINE)
+    content = re.sub(r'^# (.+)$', r'<h1>\1</h1>', content, flags=re.MULTILINE)
     
-    return html
+    # 引用
+    content = re.sub(r'^> (.+)$', r'<blockquote>\1</blockquote>', content, flags=re.MULTILINE)
+    
+    # 粗體
+    content = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', content)
+    
+    # 連結
+    content = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', content)
+    
+    # wiki 連結 [[主題]]
+    content = re.sub(r'\[\[([^\]]+)\]\]', r'<a class="wikilink" href="\1.html">\1</a>', content)
+    
+    # 無序列表
+    content = re.sub(r'^- (.+)$', r'<li>\1</li>', content, flags=re.MULTILINE)
+    content = re.sub(r'(<li>.*</li>\n)+', r'<ul>\g<0></ul>\n', content)
+    
+    # 表格（簡化）
+    def replace_table(match):
+        table_content = match.group(1)
+        rows = table_content.strip().split('\n')
+        html = '<table>'
+        for i, row in enumerate(rows):
+            cells = row.split('|')
+            cells = [c.strip() for c in cells if c.strip()]
+            if cells:
+                tag = 'th' if i == 0 else 'td'
+                html += '<tr>' + ''.join(f'<{tag}>{c}</{tag}>' for c in cells) + '</tr>'
+        html += '</table>'
+        return html
+    
+    content = re.sub(r'\|(.+)\|\n(\|.+\|\n)+', replace_table, content)
+    
+    # 程式碼區塊
+    content = re.sub(r'```(\w+)?\n(.+?)```', r'<pre><code class="\1">\2</code></pre>', content, flags=re.DOTALL)
+    
+    # 行內程式碼
+    content = re.sub(r'`([^`]+)`', r'<code>\1</code>', content)
+    
+    # 段落
+    paragraphs = content.split('\n\n')
+    html_paragraphs = []
+    for p in paragraphs:
+        p = p.strip()
+        if not p:
+            continue
+        # 如果已經是 HTML 標籤，就不加 <p>
+        if not re.match(r'^<(h[1-6]|ul|ol|li|table|blockquote|pre)', p):
+            p = f'<p>{p}</p>'
+        html_paragraphs.append(p)
+    
+    return '\n\n'.join(html_paragraphs)
+
+
+def generate_article_page(article: dict, all_articles: list) -> str:
+    """生成文章頁面"""
+    cat_info = TOPICS.get(article["category"], {"id": "other", "icon": "📄"})
+    html_content = markdown_to_html(article["content"])
+    
+    # 相關文章
+    related = ""
+    for keyword in article["keywords"][:5]:
+        for a in all_articles:
+            if a["filename"] != article["filename"] and keyword in a["keywords"]:
+                related += f'<a href="../{TOPICS.get(a["category"], {"id": "other"})["id"]}/{a["filename"]}.html" class="wikilink">{a["title"]}</a>, '
+                break
+    
+    if related:
+        related = f'<h2>相關主題</h2><p>{related.rstrip(", ")}</p>'
+    
+    nav_items = ""
+    for cat_name, info in TOPICS.items():
+        active = " active" if cat_name == article["category"] else ""
+        nav_items += f'<a href="../{info["id"]}.html" class="{active}">{cat_name}</a>'
+    
+    return f'''<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{article["title"]} - 股票知識庫</title>
+    <style>{CSS}</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav>{nav_items}</nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>{article["title"]}</h1>
+            {html_content}
+            {related}
+        </article>
+    </main>
+    <footer>
+        <p>股票知識庫 · <a href="../index.html">返回首頁</a></p>
+    </footer>
+</body>
+</html>'''
 
 
 def main():
-    print("生成網站...")
+    """主程式"""
+    print("📊 股票知識庫網站生成器")
+    print("=" * 50)
     
+    # 清空輸出目錄
     if OUTPUT_DIR.exists():
         shutil.rmtree(OUTPUT_DIR)
     OUTPUT_DIR.mkdir(parents=True)
-    (OUTPUT_DIR/"session").mkdir()
-    (OUTPUT_DIR/"topic").mkdir()
     
-    # Parse all learning records
-    all_files = sorted(LEARNING_DIR.glob("*.md"), reverse=True)
-    daily_data = []
-    all_sessions = []
+    # 讀取所有 wiki 文章
+    articles = []
     
-    for f in all_files:
-        if "summary" in f.stem:
-            continue
-        data = parse_daily_file(f)
-        if data:
-            daily_data.append(data)
-            for s in data["sessions"]:
-                all_sessions.append({
-                    **s,
-                    "date": data["date"],
-                    "day_file": data["file"],
-                    "day_title": data["title"]
-                })
+    for category in TOPICS.keys():
+        cat_dir = WIKI_DIR / category
+        if cat_dir.exists():
+            for filepath in cat_dir.glob("*.md"):
+                article = parse_wiki_article(filepath)
+                articles.append(article)
     
-    # Stats
-    stats = {
-        "total_sessions": len(all_sessions),
-        "total_days": len(daily_data),
-        "topics": {k: 0 for k in TOPICS}
-    }
+    print(f"找到 {len(articles)} 篇文章")
     
-    for s in all_sessions:
-        for t in s["topics"]:
-            if t in stats["topics"]:
-                stats["topics"][t] += 1
+    # 生成首頁
+    index_html = generate_index_page(articles)
+    (OUTPUT_DIR / "index.html").write_text(index_html, encoding='utf-8')
+    print("✅ 生成首頁")
     
-    # Index page
-    stats_html = f'''
-    <div class="stat-card"><div class="stat-value">{stats["total_sessions"]}</div><div class="stat-label">學習回合</div></div>
-    <div class="stat-card"><div class="stat-value">{stats["total_days"]}</div><div class="stat-label">學習天數</div></div>
-    <div class="stat-card"><div class="stat-value">{len(TOPICS)}</div><div class="stat-label">主題分類</div></div>
-    <div class="stat-card"><div class="stat-value">{sum(1 for s in all_sessions if len(s["topics"]) > 1)}</div><div class="stat-label">跨主題學習</div></div>
-    '''
-    
-    topics_html = ""
-    for k, v in TOPICS.items():
-        count = stats["topics"].get(k, 0)
-        topics_html += f'<a href="topic/{k}.html" class="topic-card"><div class="topic-icon">{v["icon"]}</div><div class="topic-name">{v["name"]}</div><div class="topic-desc">{v["desc"]}</div><div class="topic-count">{count} 回合</div></a>'
-    
-    recent_html = ""
-    for day in daily_data[:5]:
-        weekday = get_weekday(day["date"])
-        recent_html += f'<div class="date-group"><div class="date-header"><span class="date">{day["date"]}</span><span class="weekday">{weekday}</span> · {len(day["sessions"])} 回合</div><div class="session-list">'
+    # 生成類別頁面
+    for category, info in TOPICS.items():
+        cat_dir = OUTPUT_DIR / info["id"]
+        cat_dir.mkdir(exist_ok=True)
         
-        for s in day["sessions"]:
-            tags = "".join([f'<span class="tag">{TOPICS[t]["icon"]} {TOPICS[t]["name"]}</span>' for t in s["topics"] if t in TOPICS])
-            recent_html += f'<a href="session/{day["file"]}_{s["num"]}.html" class="session-item"><div class="session-time">#{s["num"]} {s["time"]}</div><div class="session-title">{s["title"][:50]}</div><div class="tags">{tags}</div></a>'
+        # 類別索引頁
+        cat_html = generate_category_page(category, articles)
+        (OUTPUT_DIR / f"{info['id']}.html").write_text(cat_html, encoding='utf-8')
         
-        summary_file = LEARNING_DIR / f"{day['date']}-summary.md"
-        if summary_file.exists():
-            recent_html += f'<div class="summary-card"><a href="session/{day["date"]}-summary.html"><div class="summary-title">📅 當日總結</div><div class="summary-link">查看 {day["date"]} 學習總結 →</div></a></div>'
+        # 類別內文章頁面
+        for article in articles:
+            if article["category"] == category:
+                article_html = generate_article_page(article, articles)
+                (cat_dir / f"{article['filename']}.html").write_text(article_html, encoding='utf-8')
         
-        recent_html += '</div></div>'
+        print(f"✅ 生成 {category} ({len([a for a in articles if a['category'] == category])} 篇)")
     
-    index_html = f'''
-    <div class="hero"><h1 class="hero-title">股票學習筆記</h1><p class="hero-subtitle">朝股票操作大師邁進中</p></div>
-    <div class="stats-grid">{stats_html}</div>
-    <section class="section"><div class="section-header"><h2 class="section-title">📖 學習主題</h2></div><div class="topic-grid">{topics_html}</div></section>
-    <section class="section"><div class="section-header"><h2 class="section-title">🕐 最近學習</h2><a href="timeline.html" class="section-link">查看全部 →</a></div>{recent_html}</section>
-    '''
-    
-    with open(OUTPUT_DIR/"index.html", "w", encoding="utf-8") as f:
-        f.write(HTML(index_html))
-    
-    # Knowledge page
-    kf = MEMORY_DIR / "stock-knowledge.md"
-    khtml = md_to_html(kf.read_text(encoding="utf-8")) if kf.exists() else "<p>知識庫尚未建立</p>"
-    
-    nav_html = '<div class="knowledge-nav">'
-    for k, v in TOPICS.items():
-        nav_html += f'<a href="#{k}">{v["icon"]} {v["name"]}</a>'
-    nav_html += '</div>'
-    
-    knowledge_html = f'<div class="content"><div class="content-card"><h1>📚 知識庫</h1>{nav_html}{khtml}</div></div>'
-    
-    with open(OUTPUT_DIR/"knowledge.html", "w", encoding="utf-8") as f:
-        f.write(HTML(knowledge_html, "知識庫"))
-    
-    # Timeline page
-    timeline_html = f'<div class="content"><div class="content-card"><h1>📅 學習時間線</h1><p>共 {len(all_sessions)} 回合學習記錄</p></div></div>'
-    
-    for day in daily_data:
-        weekday = get_weekday(day["date"])
-        timeline_html += f'<div class="date-group"><div class="date-header"><span class="date">{day["date"]}</span><span class="weekday">{weekday}</span> · {len(day["sessions"])} 回合</div><div class="session-list">'
-        
-        for s in day["sessions"]:
-            tags = "".join([f'<span class="tag">{TOPICS[t]["icon"]}</span>' for t in s["topics"][:3] if t in TOPICS])
-            timeline_html += f'<a href="session/{day["file"]}_{s["num"]}.html" class="session-item"><div class="session-time">#{s["num"]} {s["time"]}</div><div class="session-title">{s["title"][:60]}</div><div class="tags">{tags}</div></a>'
-        
-        summary_file = LEARNING_DIR / f"{day['date']}-summary.md"
-        if summary_file.exists():
-            timeline_html += f'<div class="summary-card"><a href="session/{day["date"]}-summary.html"><div class="summary-title">📅 當日總結</div><div class="summary-link">查看 {day["date"]} 學習總結 →</div></a></div>'
-        
-        timeline_html += '</div></div>'
-    
-    with open(OUTPUT_DIR/"timeline.html", "w", encoding="utf-8") as f:
-        f.write(HTML(timeline_html, "時間線"))
-    
-    # Topic pages
-    for k, v in TOPICS.items():
-        related = [s for s in all_sessions if k in s["topics"]]
-        titems = ""
-        for s in related:
-            titems += f'<a href="../session/{s["day_file"]}_{s["num"]}.html" class="session-item"><div class="session-time">{s["date"]} #{s["num"]}</div><div class="session-title">{s["title"][:60]}</div></a>'
-        
-        topic_html = f'<div class="content"><div class="content-card"><h1>{v["icon"]} {v["name"]}</h1><p>{v["desc"]}</p><p style="color:var(--text-muted);margin-top:12px">{len(related)} 回合相關學習</p></div></div><section class="section"><div class="session-list">{titems}</div></section>'
-        
-        with open(OUTPUT_DIR/"topic"/f"{k}.html", "w", encoding="utf-8") as f:
-            f.write(HTML(topic_html, v["name"], "../"))
-    
-    # Session pages
-    for day in daily_data:
-        for s in day["sessions"]:
-            html = md_to_html(s["content"])
-            tags = "".join([f'<span class="tag">{TOPICS[t]["icon"]} {TOPICS[t]["name"]}</span>' for t in s["topics"] if t in TOPICS])
-            
-            session_html = f'''
-            <div class="content">
-                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>{day["date"]}</span></div>
-                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
-                <div class="content-card">
-                    <div class="meta">{day["date"]} #{s["num"]} · {tags}</div>
-                    <h1>{s["title"]}</h1>
-                    {html}
-                </div>
-            </div>
-            '''
-            
-            with open(OUTPUT_DIR/"session"/f"{day['file']}_{s['num']}.html", "w", encoding="utf-8") as f:
-                f.write(HTML(session_html, s["title"][:50], "../"))
-    
-    # Summary pages
-    for f in all_files:
-        if "summary" in f.stem:
-            date_match = re.search(r"(\d{4}-\d{2}-\d{2})", f.stem)
-            date = date_match.group(1) if date_match else ""
-            
-            content = f.read_text(encoding="utf-8")
-            html = md_to_html(content)
-            
-            summary_html = f'''
-            <div class="content">
-                <div class="breadcrumb"><a href="../index.html">首頁</a><span>/</span><a href="../timeline.html">時間線</a><span>/</span><span>{date}</span></div>
-                <div class="nav-links"><a href="../timeline.html" class="nav-link">← 返回時間線</a></div>
-                <div class="content-card">
-                    <h1>📅 {date} 學習總結</h1>
-                    {html}
-                </div>
-            </div>
-            '''
-            
-            with open(OUTPUT_DIR/"session"/f"{date}-summary.html", "w", encoding="utf-8") as fh:
-                fh.write(HTML(summary_html, f"{date} 學習總結", "../"))
-    
-    print(f"✅ 已生成 {len(all_sessions)} 個學習回合（{len(daily_data)} 天）")
-    
-    # 推薦追蹤頁面
-    rec_html = generate_recommendations_page()
-    if rec_html:
-        with open(OUTPUT_DIR/"recommendations.html", "w", encoding="utf-8") as f:
-            f.write(HTML(rec_html, "推薦追蹤"))
-        print("✅ 已生成推薦追蹤頁面")
+    print(f"\n🎉 網站生成完成！輸出目錄：{OUTPUT_DIR}")
+    print(f"   - 首頁：{OUTPUT_DIR / 'index.html'}")
+    print(f"   - 文章數：{len(articles)}")
 
 
 if __name__ == "__main__":
