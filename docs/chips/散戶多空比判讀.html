@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鉅額交易判讀 - 股票知識庫</title>
+    <title>散戶多空比判讀 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -93,97 +93,89 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
     </header>
     <main class="container">
         <article class="article-content">
-            <h1>鉅額交易判讀</h1>
-            <p>---
-source: memory
-source_date: 2026-04-29
-status: raw_linked
-raw_file: 鉅額交易制度與主力大戶判讀.md
----</p>
+            <h1>散戶多空比判讀</h1>
+            <h1>散戶多空比判讀</h1>
 
-<h1>鉅額交易判讀</h1>
-
-<blockquote>盤後大單是主力的真實聲音，溢價搶貨看多、折價拋貨看空，價差方向比成交本身更重要</blockquote>
+<blockquote>小台/微台散戶多空比是散戶情緒的反向指標，正值越大散戶越看多（偏空訊號），負值越大散戶越看空（偏多訊號）</blockquote>
 
 <h2>核心概念</h2>
 
-<p>鉅額交易是台股特有的制度，讓大額買賣可以在集中市場之外完成，避免對盤中價格造成劇烈衝擊。</p>
+<p>散戶多空比是從小台指期貨（MTX）和微台指期貨（TMF）的未平倉量，扣除三大法人部位後，計算散戶的多空方向。</p>
 
-<p><strong>申報門檻</strong>：
-<ul><li>單一證券：500交易單位（50萬股）或金額1,500萬元以上</li>
-<li>股票組合：5種股票且金額合計1,500萬元以上</li>
+<p><strong>計算公式</strong>：
+<ul><li>散戶多單 = 小台未平倉總量 − 三大法人小台多單</li>
+<li>散戶空單 = 小台未平倉總量 − 三大法人小台空單</li>
+<li><strong>散戶多空比 = (散戶多單 − 散戶空單) / 小台未平倉總量</strong></li>
 </ul></p>
 
-<p><strong>兩種交易方式</strong>：</p>
+<p><strong>為何散戶是反指標</strong>：
+<ul><li>散戶賺一點就跑、賠了就凹，行為高度可預測</li>
+<li>行情高點散戶空單最多（被軋空），行情低點散戶多單最多（被套牢）</li>
+<li>這是人性反映，不是預測工具</li>
+</ul></p>
 
-<table>
-<tr><th>配對交易</th><th>逐筆交易</th></tr>
-<tr><td>---</td><td>---------</td><td>---------</td></tr>
-<tr><td>時間</td><td>08:00-08:30, 09:00-17:00</td><td>09:00-17:00</td></tr>
-<tr><td>方式</td><td>買賣雙方事先協商</td><td>分拆小單在公開市場執行</td></tr>
-<tr><td>價格</td><td>協商價格，可偏離收盤價</td><td>公開市場價格發現</td></tr>
-<tr><td>揭露</td><td>完成後才揭露</td><td>即時揭露</td></tr>
-<tr><td>適用</td><td>機構大額移轉、大股東轉讓</td><td>機構分批進出</td></tr>
-</table>
+<p><strong>小台 vs 微台</strong>：
+<ul><li>微台散戶多空比比小台更敏感，因為散戶參與度更高</li>
+<li>2025年後微台交易量急增，微台散戶多空比更具參考價值</li>
+</ul></p>
+
 <h2>實戰應用</h2>
 
-<h3>1. 溢價/折價判讀</h3>
+<h3>三個門檻判斷</h3>
 
-<p><strong>溢價成交</strong>（成交價 > 當日收盤價）：
-<ul><li>買方願意用更高價搶貨 → 看多訊號</li>
-<li>可能原因：掌握未公开利多、急於建倉、法人配置需求</li>
-<li>案例：2026/3/2 台積電收盤1,975元，鉅額交易2,190元（溢價+10.9%）</li>
-</ul></p>
+<p>1. <strong>±20%門檻</strong>：散戶多空比超過 ±20% 才有參考價值
+2. <strong>未平倉量 > 10,000口</strong>：量太小不具統計意義
+3. <strong>極端值反轉</strong>：歷史極端值時行情反轉機率高</p>
 
-<p><strong>折價成交</strong>（成交價 < 當日收盤價）：
-<ul><li>賣方願意用更低價出貨 → 看空訊號</li>
-<li>可能原因：大股東急於變現、內部人看淡後市、機構降部位</li>
-<li>折價幅度越大，賣壓越急</li>
-</ul></p>
+<h3>三種情境判讀</h3>
 
-<h3>2. 鉅額交易追蹤方式</h3>
+<table>
+<tr><th>情境</th><th>散戶多空比</th><th>判讀</th></tr>
+<tr><td>------</td><td>-----------</td><td>------</td></tr>
+<tr><td>多頭趨勢中散戶空單暴增</td><td>負值極大</td><td>散戶做空被軋，趨勢可能繼續</td></tr>
+<tr><td>空頭趨勢中散戶多單暴增</td><td>正值極大</td><td>散戶抄底被套，趨勢可能繼續</td></tr>
+<tr><td>震盪盤散戶方向不明</td><td>±10%以內</td><td>不具參考性</td></tr>
+</table>
+<h3>搭配指標</h3>
 
-<ul><li><strong>證交所/櫃買中心官網</strong>：每日公布鉅額交易明細</li>
-<li><strong>TEJ PRO</strong>：整理好的歷史與當日鉅額交易資料庫</li>
-<li><strong>券商APP</strong>：部分券商提供鉅額交易即時通知</li>
+<ul><li><strong>散戶多空比 + <a class="wikilink" href="foreign-futures-oi.html">外資期貨未平倉判讀</a></strong>：法人與散戶對作，確認度更高</li>
+<li><strong>散戶多空比 + <a class="wikilink" href="大盤融資餘額判讀.html">大盤融資餘額判讀</a></strong>：雙重散戶情緒指標共振</li>
+<li><strong>散戶多空比 + <span class="wikilink disabled">Put-Call-Ratio選擇權籌碼</span></strong>：兩個反向指標同時極端，反轉訊號更強</li>
 </ul>
 
-<h3>3. 鉅額交易後的股價行為</h3>
+<h3>羊群指標還原</h3>
 
-<ul><li>溢價鉅額交易後，短期（3-5日）上漲機率較高</li>
-<li>折價鉅額交易後，短期下跌壓力大</li>
-<li>但須注意：配對交易可能是大股東的資產規劃（贈與、信託），非看多看空</li>
-<li>連續多日同方向鉅額交易，訊號強度更高</li>
-</ul>
-
-<h3>4. 鉅額分點追蹤</h3>
-
-<p>搭配分點進出資料，可以進一步判斷：
-<ul><li>總公司vs分公司：總公司大單偏向法人操作，分公司偏向大戶</li>
-<li>百大券商買超股：交易量最大的100家券商分點，買超數百張以上的個股</li>
+<p>原始散戶多空比可能被大單干擾，需要還原真實部位：
+<ul><li>多空比 ±20% 以上 + 未平倉量 ±10,000口以上才有意義</li>
+<li>還原後的數據更能反映真實散戶情緒</li>
 </ul></p>
 
 <h2>注意事項</h2>
 
-<ul><li><strong>配對交易可能是資產移轉</strong>：大股東贈與、信託規劃也走鉅額交易，不一定是看多</li>
-<li><strong>單次鉅額交易不構成訊號</strong>：要觀察趨勢，連續多日同方向才有效</li>
-<li><strong>流動性低的股票鉅額交易影響更大</strong>：小型股一筆鉅額交易可能等於好幾天成交量</li>
-<li><strong>資訊揭露有延遲</strong>：配對交易完成後才揭露，散戶永遠慢一步</li>
-<li><strong>避免過度解讀</strong>：機構有時只是調整部位，不是方向性交易</li>
-<li><strong>注意交易者身分</strong>：內部人申報轉讓走鉅額交易，和法人進出意義完全不同</li>
+<ul><li><strong>不是100%準確</strong>：市場有人會反著反指標做，過度依賴會吃大虧</li>
+<li><strong>落後指標</strong>：盤後才公布，隔日開盤可能已反映</li>
+<li><strong>需搭配量能</strong>：未平倉量太低時不可靠</li>
+<li><strong>微台比小台更敏感</strong>：因散戶參與度更高</li>
+<li><strong>不要單一依賴</strong>：需與法人籌碼、技術面交叉驗證</li>
 </ul>
 
 <h2>相關主題</h2>
-<ul><li><a class="wikilink" href="分點進出追蹤關鍵分點.html">分點進出追蹤關鍵分點</a></li>
-<li><a class="wikilink" href="內部人申報轉讓判讀.html">內部人申報轉讓判讀</a></li>
-<li><a class="wikilink" href="institutional-investors.html">三大法人特性</a></li>
-<li><a class="wikilink" href="主力出貨辨識.html">主力出貨辨識</a></li>
-<li><a class="wikilink" href="籌碼七指標選股法.html">籌碼七指標選股法</a></li>
+
+<ul><li><a class="wikilink" href="institutional-investors.html">三大法人特性</a></li>
+<li><a class="wikilink" href="foreign-futures-oi.html">外資期貨未平倉判讀</a></li>
+<li><a class="wikilink" href="大盤融資餘額判讀.html">大盤融資餘額判讀</a></li>
+<li><span class="wikilink disabled">Put-Call-Ratio選擇權籌碼</span></li>
+<li><a class="wikilink" href="融資使用率判讀.html">融資使用率判讀</a></li>
+<li><a class="wikilink" href="三大法人連續買超選股.html">三大法人連續買超選股</a></li>
 </ul>
 
 <h2>來源</h2>
-<li><a href="../raw/2026-04-29/鉅額交易制度與主力大戶判讀.md">鉅額交易制度與主力大戶判讀</a></li>
-            <h2>相關主題</h2><p><a class="wikilink" href="分點進出追蹤關鍵分點.html">分點進出追蹤關鍵分點</a>, <a class="wikilink" href="內部人申報轉讓判讀.html">內部人申報轉讓判讀</a>, <a class="wikilink" href="institutional-investors.html">三大法人特性</a>, <a class="wikilink" href="主力出貨辨識.html">主力出貨辨識</a>, <a class="wikilink" href="籌碼七指標選股法.html">籌碼七指標選股法</a></p>
+
+<ul><li><a href="../raw/2026-04-29/散戶多空比判讀.md">台指期散戶多空比 — Winsmart</a></li>
+<li><a href="https://gooptions.cc/%E4%BA%86%E8%A7%A3%E5%8F%B0%E6%8C%87%E6%9C%9F%E6%95%A3%E6%88%B6%E5%A4%9A%E7%A9%BA%E6%AF%94/">小台散戶多空比即時查詢 — gooptions</a></li>
+</ul>
+<li><a href="https://quantpass.org/retail-investor-index/">散戶指標解讀 — QuantPass</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="foreign-futures-oi.html">外資期貨未平倉判讀</a>, <a class="wikilink" href="大盤融資餘額判讀.html">大盤融資餘額判讀</a>, <a class="wikilink" href="institutional-investors.html">三大法人特性</a>, <a class="wikilink" href="foreign-futures-oi.html">外資期貨未平倉判讀</a></p>
         </article>
     </main>
     <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
