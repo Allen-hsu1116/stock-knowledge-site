@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>五種最佳買點 - 股票知識庫</title>
+    <title>均值回歸策略 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -93,84 +93,111 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
     </header>
     <main class="container">
         <article class="article-content">
-            <h1>五種最佳買點</h1>
-            <h1>五種最佳買點</h1>
+            <h1>均值回歸策略</h1>
+            <h1>均值回歸策略</h1>
 
-<blockquote>突破買進追漲不追高，拉回買進找有效支撐，技術面買點搭配籌碼面加分，是短線交易的進場核心</blockquote>
+<blockquote>價格像橡皮筋，拉太遠終究會彈回來；但小心橡皮筋斷掉的那一刻</blockquote>
 
 <h2>核心概念</h2>
 
-<p>股票買進方式可分為兩大類：<strong>突破買進</strong>與<strong>拉回買進</strong>。多數人的困境是「突破漲太高不敢買，拉回太多怕還會跌」，結果總是買在最高點。</p>
+<p>均值回歸（Mean Reversion）策略的核心假設：成熟、流動性佳的金融資產，價格最終會圍繞歷史平均值上下波動。當價格因突發事件出現極端偏離，就像被拉扯的橡皮筋，拉得越遠（乖離越大），未來反彈回歸中心的力量越強。</p>
 
-<p>關鍵心法：
-<ul><li>突破買進是<strong>追漲</strong>不是<strong>追高</strong> — 追的是趨勢動能，不是追價格位置</li>
-<li>拉回買進要找<strong>有效的支撐</strong> — 不是隨便一個價格都叫支撐</li>
-</ul></p>
+<h3>兩種均值回歸</h3>
 
-<p>單用技術面容易被騙線，單用籌碼面找不到最佳進場價，兩者搭配才能提高勝率。</p>
+<p>1. <strong>時間軸均值回歸</strong>：變數價值反彈回歷史平均
+   - 例：CAPE達27.27倍偏貴，因歷史平均接近16倍</p>
+
+<p>2. <strong>跨類別均值回歸</strong>：變數價值回歸跨類別平均
+   - 例：本益比30倍的石油股偏貴，因石油類股平均PE接近15倍</p>
 
 <h2>實戰應用</h2>
 
-<h3>突破買進（2個買點）</h3>
+<h3>三大進場訊號</h3>
 
-<p><strong>買點1：盤整後帶量突破</strong>
-<ul><li>股價長期盤整，突然以帶量實體紅K突破整理區</li>
-<li><strong>分批進場</strong>：先用少量資金測試真假，表態紅K出現再加碼</li>
-<li>等待期間跌破長紅K低點要停損</li>
-<li>若只能一筆資金投入，需加設時間停損</li>
+<p><strong>1. RSI極端值</strong>
+<ul><li>14日RSI跌破30 → 超賣區，觸發買進</li>
+<li>⚠️ 調整參數時要避免過度優化（Over-optimization）</li>
 </ul></p>
 
-<p><strong>買點2：突破箱頂</strong>
-<ul><li>箱型畫出短期整理的高低點，突破上緣即進場</li>
-<li>進階做法：股價接近箱頂前、在「價漲量增階段」事先建立部位</li>
-<li>突破成功性在量增階段最高</li>
+<p><strong>2. 布林通道乖離邊界</strong>
+<ul><li>根據常態分配，價格95%機率在±2標準差內運行</li>
+<li>日收盤價跌破布林通道下軌 → 極端乖離，觸發買進</li>
+<li>布林通道本身就是移動平均線+標準差，與均值回歸概念高度契合</li>
 </ul></p>
 
-<h3>拉回買進（3個買點）</h3>
-
-<p><strong>買點3：突破後回檔測試支撐成功</strong>
-<ul><li>最直覺的支撐就是原本突破的壓力 — <strong>壓力轉支撐</strong></li>
-<li>突破壓力代表消化套牢賣壓、吸引新籌碼，突破價成為新成本區</li>
-<li>常見支撐位置：季線反彈、箱頂反彈</li>
+<p><strong>3. 歷史均線乖離率（Bias Ratio）</strong>
+<ul><li>Bias = (Close - MA) / MA × 100%</li>
+<li>20日均線乖離率達到-5% → 自動買進</li>
+<li>可配合不同週期均線計算乖離率</li>
 </ul></p>
 
-<p><strong>買點4：窒息量後的長紅K</strong>
-<ul><li>窒息量定義：量縮到不能再縮的成交量</li>
-<li>窒息量無法提前預知，要等帶量長紅K出現才能確認前一天是窒息量</li>
-<li>盤中發現窒息量後出現增量，可搶先卡位</li>
+<h3>出場機制</h3>
+
+<p><strong>停利 — 回歸中值</strong>：
+<ul><li>目標不是抱著等翻倍，而是等價格回到中心平衡點</li>
+<li>例：跌破布林下軌買進 → 觸碰中軌（20日均線）時賣出</li>
+<li>勝率通常60%-70%</li>
 </ul></p>
 
-<p><strong>買點5：回測箱底成功反彈</strong>
-<ul><li>碰觸箱底反彈時進場</li>
-<li>需要耐心觀察追蹤</li>
+<p><strong>停損 — 橡皮筋斷裂保護</strong>：
+<ul><li>公司基本面出現毀滅性打擊時，股價跌破後不反彈反而一路向下</li>
+<li>強制停損：買進後繼續下跌超過總資金2%，無條件市價停損</li>
+<li>這是均值回歸策略最容易遭遇滅頂之災的地方</li>
 </ul></p>
+
+<h3>趨勢追蹤搭配均值回歸</h3>
+
+<ul><li>均值回歸策略勝率高，但單邊大趨勢時會連續停損（橡皮筋斷裂）</li>
+<li>趨勢追蹤策略賠率高，但盤整時會連續假突破</li>
+<li>成熟的系統化交易者同時納入兩者，在不同市場環境下截長補短</li>
+<li>區間盤整 → 均值回歸策略表現好</li>
+<li>趨勢行情 → 趨勢追蹤策略表現好</li>
+</ul>
 
 <h2>注意事項</h2>
 
-<ul><li>帶量突破的K棒只有1天籌碼資訊，很難判斷真偽，因此分批進場是必要防護</li>
-<li>籌碼面沒有有效訊號時，成交量是唯一關鍵</li>
-<li>進場後必須嚴守停損停利，買點再好不停損一樣賠</li>
-<li>追漲不等於追高，差別在於追的是「動能」還是「價格位置」</li>
+<h3>均值回歸的三大陷阱</h3>
+
+<p>1. <strong>「均值」的定義問題</strong>：不同時間或跨類別樣本，計算出的均值不同
+2. <strong>「回歸」的時機不確定</strong>：何時發生回歸？通過什麼方式回歸？（股價下跌 vs 獲利成長）
+3. <strong>結構性改變摧毀均值回歸</strong>：
+   - 企業老化：成長率自然下降，不再朝歷史常態移動
+   - 科技與產業結構變化：如亞馬遜改變零售業常態
+   - 投資人偏好改變：指數型基金量激增改變股價結構</p>
+
+<h3>CAPE回測的教訓</h3>
+
+<ul><li>1917-1966年：CAPE市場時機策略勝過買入持有</li>
+<li>1967-2016年：CAPE策略輸給買入持有</li>
+<li>買進訊號的報酬優於賣出訊號</li>
+<li>統計顯著性 ≠ 投資報酬：相關性不是因果關係</li>
+</ul>
+
+<h3>避免過度優化</h3>
+
+<ul><li>調整RSI參數（如把30改成28.5迎合歷史高勝率）要極度小心</li>
+<li>過度優化導致策略在未來失效</li>
+<li>必須做樣本外測試驗證策略穩健性</li>
 </ul>
 
 <h2>相關主題</h2>
 
-<ul><li><a class="wikilink" href="../technical/support-resistance.html">支撐壓力</a></li>
-<li><span class="wikilink disabled">量價關係</span></li>
-<li><a class="wikilink" href="../technical/k-patterns.html">K線型態</a></li>
-<li><a class="wikilink" href="../technical/moving-averages.html">均線判斷</a></li>
+<ul><li><a class="wikilink" href="拉回買進策略.html">拉回買進策略</a></li>
+<li><span class="wikilink disabled">布林通道</span></li>
+<li><span class="wikilink disabled">RSI指標</span></li>
+<li><a class="wikilink" href="../technical/support-resistance.html">支撐壓力</a></li>
 <li><a class="wikilink" href="動能交易策略.html">動能交易策略</a></li>
-<li><span class="wikilink disabled">波段操作</span></li>
-<li><a class="wikilink" href="../risk/stop-loss.html">停損方法</a></li>
-<li><a class="wikilink" href="../risk/take-profit.html">停利方法</a></li>
-<li><a class="wikilink" href="拉回買進策略.html">拉回買進策略</a></li>
-<li><a class="wikilink" href="均值回歸策略.html">均值回歸策略</a></li>
+<li><span class="wikilink disabled">過度擬合</span></li>
+<li><span class="wikilink disabled">回測驗證</span></li>
+<li><span class="wikilink disabled">風險報酬比</span></li>
 </ul>
 
 <h2>來源</h2>
 
-<li><a href="../raw/2026-04-30/五種最佳買點突破買拉回買.md">五種最佳買點告訴你...突破買、拉回買，哪個容易賺錢！</a></li>
-            <h2>相關主題</h2><p><a class="wikilink" href="../technical/support-resistance.html">支撐壓力</a>, <a class="wikilink" href="../technical/k-patterns.html">K線型態</a>, <a class="wikilink" href="../technical/moving-averages.html">均線判斷</a>, <a class="wikilink" href="動能交易策略.html">動能交易策略</a></p>
+<ul><li><a href="../raw/2026-04-30/均值回歸策略進出場時機.md">均值回歸策略進出場時機</a></li>
+</ul>
+<li><a href="../raw/2026-04-30/均值回歸不可抗拒的萬有引力還是危險的幻想.md">均值回歸：不可抗拒的萬有引力還是危險的幻想</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="拉回買進策略.html">拉回買進策略</a>, <a class="wikilink" href="../technical/support-resistance.html">支撐壓力</a>, <a class="wikilink" href="動能交易策略.html">動能交易策略</a></p>
         </article>
     </main>
     <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>

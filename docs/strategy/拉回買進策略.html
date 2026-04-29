@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>操作策略 - 股票知識庫</title>
+    <title>拉回買進策略 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -84,67 +84,100 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="technical.html" class="">技術分析</a><a href="fundamental.html" class="">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class=" active">操作策略</a><a href="risk.html" class="">風險管理</a></nav>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class=" active">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
-        <h1 class="section-title">🎯 操作策略</h1>
-        <p style="color: var(--text-muted); margin-bottom: 32px;">當沖、波段、價值投資</p>
-        <div class="section">
-        <div class="article-card">
-            <div class="article-title">
-                <a href="strategy/海龜交易法則-turtle-trading.html">海龜交易法則 Turtle Trading</a>
-            </div>
-            <div class="article-excerpt">最經典的順勢交易系統：20日突破進場、ATR停損、金字塔加碼，40年來仍然有效。</div>
-            <div class="article-meta"><span>相關：<span class="wikilink disabled">順勢交易</span>, <a class="wikilink" href="動能交易策略.html">動能交易策略</a>, <span class="wikilink disabled">ATR停損停利系統</span></span></div>
-        </div>
-        <div class="article-card">
-            <div class="article-title">
-                <a href="strategy/順勢交易-trend-trading.html">順勢交易 Trend Trading</a>
-            </div>
-            <div class="article-excerpt">不預測市場方向，只跟著趨勢走。突破壓力做多、跌破支撐做空，核心是紀律和停損。</div>
-            <div class="article-meta"><span>相關：<span class="wikilink disabled">海龜交易法則</span>, <a class="wikilink" href="動能交易策略.html">動能交易策略</a>, <a class="wikilink" href="五種最佳買點.html">五種最佳買點</a></span></div>
-        </div>
-        <div class="article-card">
-            <div class="article-title">
-                <a href="strategy/動能交易策略.html">動能交易策略</a>
-            </div>
-            <div class="article-excerpt">買入價格走勢強勁的資產，在趨勢反轉或動能減弱時賣出；核心假設是「強者恆強，弱者恆弱」</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="五種最佳買點.html">五種最佳買點</a>, <span class="wikilink disabled">波段操作</span>, <a class="wikilink" href="day-trading.html">當沖操作</a></span></div>
-        </div>
-        <div class="article-card">
-            <div class="article-title">
-                <a href="strategy/五種最佳買點.html">五種最佳買點</a>
-            </div>
-            <div class="article-excerpt">突破買進追漲不追高，拉回買進找有效支撐，技術面買點搭配籌碼面加分，是短線交易的進場核心</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="../technical/support-resistance.html">支撐壓力</a>, <span class="wikilink disabled">量價關係</span>, <a class="wikilink" href="../technical/k-patterns.html">K線型態</a></span></div>
-        </div>
-        <div class="article-card">
-            <div class="article-title">
-                <a href="strategy/day-trading.html">當沖操作</a>
-            </div>
-            <div class="article-excerpt">散戶當沖從未轉正，外資賺 194 億、散戶賠 291 億。</div>
-            <div class="article-meta"><span>相關：<span class="wikilink disabled">波段操作</span>, <a class="wikilink" href="../risk/stop-loss.html">停損方法</a>, <a class="wikilink" href="../chips/institutional-investors.html">三大法人特性</a></span></div>
-        </div>
-        <div class="article-card">
-            <div class="article-title">
-                <a href="strategy/拉回買進策略.html">拉回買進策略</a>
-            </div>
-            <div class="article-excerpt">不追高，等價格拉回到支撐再進場，停損小、風險小、獲利空間大</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="五種最佳買點.html">五種最佳買點</a>, <a class="wikilink" href="../technical/moving-averages.html">均線判斷</a>, <a class="wikilink" href="../technical/support-resistance.html">支撐壓力</a></span></div>
-        </div>
-        <div class="article-card">
-            <div class="article-title">
-                <a href="strategy/均值回歸策略.html">均值回歸策略</a>
-            </div>
-            <div class="article-excerpt">價格像橡皮筋，拉太遠終究會彈回來；但小心橡皮筋斷掉的那一刻</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="拉回買進策略.html">拉回買進策略</a>, <span class="wikilink disabled">布林通道</span>, <span class="wikilink disabled">RSI指標</span></span></div>
-        </div></div>
+        <article class="article-content">
+            <h1>拉回買進策略</h1>
+            <h1>拉回買進策略</h1>
+
+<blockquote>不追高，等價格拉回到支撐再進場，停損小、風險小、獲利空間大</blockquote>
+
+<h2>核心概念</h2>
+
+<p>拉回買進（Pullback Buying）是趨勢交易中最實用的進場方式。核心邏輯是：</p>
+
+<p>1. <strong>先確認方向</strong>：用均線排列判斷多空趨勢
+2. <strong>等待拉回</strong>：價格拉回到支撐區（均線、前波高點、趨勢線）
+3. <strong>確認止跌</strong>：出現紅K或止跌跡象再進場
+4. <strong>設定小停損</strong>：因為進場在支撐附近，停損不需要太大</p>
+
+<h3>為什麼拉回買優於突破買？</h3>
+
+<ul><li>突破買容易追高，拉回幅度動輒2-3百點（期貨），容易被掃停損</li>
+<li>停損設太小（40點）+ 追高 = 很容易被洗出場</li>
+<li>拉回買進場位置更好，停損小、風險可控、獲利空間大</li>
+<li>好的進場點不會隨時都有，需要耐心等待</li>
+</ul>
+
+<h3>均線判斷進場時機</h3>
+
+<p><strong>3日均線與5日均線搭配</strong>：
+<ul><li>多頭排列（3日在5日之上）→ 拉回買進</li>
+<li>空頭排列（3日在5日之下）→ 反彈放空</li>
+<li>黃金交叉 → 多空轉換點</li>
+</ul></p>
+
+<p><strong>短線操作要領</strong>：
+<ul><li>價格沿5日均線往上爬 → 行情持續上漲</li>
+<li>價格回落到均線附近出現反彈 → 均線具支撐力</li>
+<li>乖離過大時 → 價格會回到均線附近（均值回歸效應）</li>
+</ul></p>
+
+<h2>實戰應用</h2>
+
+<h3>進場步驟</h3>
+
+<p>1. 確認均線排列方向（多頭排列做多是基本前提）
+2. 等待價格拉回到3日或5日均線附近
+3. 觀察是否出現止跌訊號（紅K、下影線）
+4. 在支撐附近進場，停損設在支撐下方50-80點</p>
+
+<h3>停利策略</h3>
+
+<ul><li><strong>分批停利</strong>：一口先設固定停利（如125點），另一口用移動停利</li>
+<li><strong>移動停利</strong>：6根K棒高低點+100點作為保護</li>
+<li>進場在低點後，隨行情往上移動停利線鎖住獲利</li>
+</ul>
+
+<h3>做空也適用</h3>
+
+<ul><li>空頭排列時，等價格反彈到均線附近再放空</li>
+<li>設定停損在均線上方</li>
+<li>同樣使用分批停利和移動停利</li>
+</ul>
+
+<h2>注意事項</h2>
+
+<ul><li><strong>不要追高</strong>：寧可錯過也不要追高進場，拉回買才是穩健做法</li>
+<li><strong>方向優先</strong>：先確認多空方向，再做對應操作，方向錯了進場點再好也沒用</li>
+<li><strong>停損要合理</strong>：參考ATR設定停損，波動大停損大，波動小停損小</li>
+<li><strong>耐心等待</strong>：好的進場點可能一天只出現一次，甚至兩天才有一次</li>
+<li><strong>均線是動態的</strong>：不能以固定價格作為進場條件，要搭配即時均線位置判斷</li>
+</ul>
+
+<h2>相關主題</h2>
+
+<ul><li><a class="wikilink" href="五種最佳買點.html">五種最佳買點</a></li>
+<li><a class="wikilink" href="../technical/moving-averages.html">均線判斷</a></li>
+<li><a class="wikilink" href="../technical/support-resistance.html">支撐壓力</a></li>
+<li><a class="wikilink" href="均值回歸策略.html">均值回歸策略</a></li>
+<li><a class="wikilink" href="../risk/stop-loss.html">停損方法</a></li>
+<li><a class="wikilink" href="../risk/take-profit.html">停利方法</a></li>
+<li><a class="wikilink" href="動能交易策略.html">動能交易策略</a></li>
+</ul>
+
+<h2>來源</h2>
+
+<li><a href="../raw/2026-04-30/突破買與拉回買的買點.md">突破買與拉回買的買點</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="五種最佳買點.html">五種最佳買點</a>, <a class="wikilink" href="../technical/moving-averages.html">均線判斷</a>, <a class="wikilink" href="../technical/support-resistance.html">支撐壓力</a>, <a class="wikilink" href="均值回歸策略.html">均值回歸策略</a>, <a class="wikilink" href="../risk/stop-loss.html">停損方法</a></p>
+        </article>
     </main>
-    <footer><p>股票知識庫 · 每小時自動學習，每天自動編譯</p></footer>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
 </body>
 </html>
