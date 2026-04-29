@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>融資融券八大組合判讀 - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class=" active">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>融資融券八大組合判讀</h1>
+            <h1>融資融券八大組合判讀</h1>
+
+<blockquote>資券增減搭配價格漲跌，八種組合精準判讀主力與散戶的對決方向</blockquote>
+
+<h2>核心概念</h2>
+
+<p>融資融券一般認定為散戶指標，因為法人操作以現股買賣為主，大戶資金雄厚也少用融資融券，除特殊情況如主力刻意使用融資鎖單。將「資增/資減」×「券增/券減」×「價漲/價跌」組合，可以得出八種情境，每一種代表不同的多空力道對抗。</p>
+
+<p><strong>基本前提</strong>：
+<ul><li>大型股：融資融券是散戶指標（法人用借券，大戶用現股）</li>
+<li>中小型股：融資融券可能是主力在操作（主力會利用融資鎖單或融券放空操控多空）</li>
+</ul></p>
+
+<h2>實戰應用</h2>
+
+<h3>八大組合判讀表</h3>
+
+<table>
+<tr><th>組合</th><th>資變化</th><th>券變化</th><th>價格</th><th>判讀</th><th>操作</th></tr>
+<tr><td>------</td><td>--------</td><td>--------</td><td>------</td><td>------</td><td>------</td></tr>
+<tr><td>1</td><td>增</td><td>增</td><td>漲</td><td>人氣鼎沸，空頭壓不住，將軋空</td><td>持股續抱，融券減少後提防走弱</td></tr>
+<tr><td>2</td><td>增</td><td>增</td><td>跌</td><td>主力倒貨+融券放空雙殺</td><td>立即出場，多殺多+斷頭風險</td></tr>
+<tr><td>3</td><td>增</td><td>減</td><td>漲</td><td>散戶追漲無空頭壓制</td><td>融資不斷上升時提防反轉</td></tr>
+<tr><td>4</td><td>增</td><td>減</td><td>跌</td><td>散戶承接但有人倒貨</td><td>潛在利空，可能崩跌，出場</td></tr>
+<tr><td>5</td><td>減</td><td>增</td><td>漲</td><td>主力吃貨+空頭壓不下</td><td>未來可能軋空，留意買點</td></tr>
+<tr><td>6</td><td>減</td><td>增</td><td>跌</td><td>停損出場+空頭加碼放空</td><td>潛在利空，可能崩跌</td></tr>
+<tr><td>7</td><td>減</td><td>減</td><td>漲</td><td>融券回補反彈買盤</td><td>回補耗盡後股價將跌，短多</td></tr>
+<tr><td>8</td><td>減</td><td>減</td><td>跌</td><td>停損殺出+融券回補無力</td><td>中長空走勢，避開</td></tr>
+</table>
+<h3>三大高勝率組合</h3>
+
+<p><strong>🔥 組合5（資減券增價漲）— 最佳進場訊號</strong>
+<ul><li>融資減少=散戶退場，融券增加=空頭進場</li>
+<li>股價卻上漲=有主力在吃貨，空頭壓不住</li>
+<li>未來極可能軋空，是最強的進場訊號</li>
+</ul></p>
+
+<p><strong>⚠️ 組合4（資增券減價跌）— 最強出場訊號</strong>
+<ul><li>散戶持續承接，融券已回補</li>
+<li>但股價仍下跌=有人在持續倒貨</li>
+<li>暗示潛在利空即將發生，崩跌機率最高</li>
+</ul></p>
+
+<p><strong>💀 組合2（資增券增價跌）— 最危險情境</strong>
+<ul><li>主力一邊倒貨一邊放空，雙線作戰</li>
+<li>散戶不斷向下承接</li>
+<li>最終將引發多殺多+斷頭連鎖反應</li>
+</ul></p>
+
+<h3>大型股 vs 中小型股差異</h3>
+
+<p><strong>大型股</strong>（台灣50+中型100）：
+<ul><li>融資融券=散戶指標</li>
+<li>融資創高+股價高點=主力退出，出場訊號</li>
+<li>融券創高+股價低點=散戶偏空，進場訊號</li>
+</ul></p>
+
+<p><strong>中小型股</strong>（150檔以外）：
+<ul><li>融資融券可能=主力操作工具</li>
+<li>低檔融資暴增=主力介入，最佳進場時機</li>
+<li>維持高融資餘額=主力持續持有</li>
+<li>高檔融資暴減或融券暴增=主力出貨警訊</li>
+</ul></p>
+
+<h3>券資比輔助判斷</h3>
+
+<p>券資比 = 融券餘額 / 融資餘額</p>
+
+<ul><li>券資比>30%：偏多訊號，高融券餘額=軋空行情可能啟動</li>
+<li>券資比<10%：偏空訊號，融券太少=空頭不看好</li>
+<li>搭配八大組合使用，組合5+高券資比=最強軋空組合</li>
+</ul>
+
+<h2>注意事項</h2>
+
+<p>1. <strong>組合判讀需要連續觀察</strong>：單日數據可能失真，至少觀察3-5日趨勢
+2. <strong>主力融資鎖單例外</strong>：中小型股主力會刻意用融資鎖單，此時融資增加不代表散戶追高
+3. <strong>融資減少不一定看空</strong>：資減券增價漲反而是最強多頭訊號
+4. <strong>融資增加不一定看多</strong>：資增券減價跌是最危險的出場訊號
+5. <strong>價格方向是關鍵</strong>：同樣的資券變化搭配不同價格方向，意義完全相反
+6. <strong>數據落後性</strong>：T日交易，T+1才公布，盤中無法即時取得</p>
+
+<h2>相關主題</h2>
+
+<ul><li><a class="wikilink" href="大盤融資餘額判讀.html">大盤融資餘額判讀</a> — 大盤層級的融資餘額四情境判讀</li>
+<li><a class="wikilink" href="margin-maintenance-calls.html">融資維持率與斷頭</a> — 斷頭賣壓的觸發機制</li>
+<li><a class="wikilink" href="融資使用率判讀.html">融資使用率判讀</a> — 散戶情緒溫度計</li>
+<li><a class="wikilink" href="券資比判讀.html">券資比判讀</a> — 券資比30%多空分水嶺</li>
+<li><a class="wikilink" href="融券回補與軋空行情.html">融券回補與軋空行情</a> — 高券資比搭配八大組合5的軋空判讀</li>
+<li><a class="wikilink" href="主力洗盤甩轎手法.html">主力洗盤甩轎手法</a> — 主力製造假象清洗籌碼</li>
+<li><a class="wikilink" href="主力出貨辨識.html">主力出貨辨識</a> — 出貨五大前兆</li>
+<li><a class="wikilink" href="散戶多空比判讀.html">散戶多空比判讀</a> — 小台微台散戶反向指標</li>
+<li><a class="wikilink" href="institutional-investors.html">三大法人特性</a> — 法人操作慣性</li>
+</ul>
+
+<h2>來源</h2>
+
+<ul><li><a href="../raw/2026-04-29/融資增減判讀與散戶指標.md">從融資融券判斷走勢（華冠投顧）</a></li>
+<li><a href="../raw/2026-04-29/融資增減判讀與散戶指標.md">從融資融券看進出場（Cmoney）</a></li>
+</ul>
+<li><a href="../raw/2026-04-29/融資增減判讀與散戶指標.md">大盤融資餘額全解析（FM Studio）</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="大盤融資餘額判讀.html">大盤融資餘額判讀</a>, <a class="wikilink" href="margin-maintenance-calls.html">融資維持率與斷頭</a>, <a class="wikilink" href="融資使用率判讀.html">融資使用率判讀</a>, <a class="wikilink" href="券資比判讀.html">券資比判讀</a>, <a class="wikilink" href="融券回補與軋空行情.html">融券回補與軋空行情</a></p>
+        </article>
+    </main>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
+</body>
+</html>
