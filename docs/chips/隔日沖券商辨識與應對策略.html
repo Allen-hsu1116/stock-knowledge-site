@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隔日沖券商辨識與應對策略 - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class=" active">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>隔日沖券商辨識與應對策略</h1>
+            <h1>隔日沖券商辨識與應對策略</h1>
+
+<blockquote>隔日沖主力用龐大資金拉漲停後隔天賣出，透過券商分點追蹤可提前識別，4%分水嶺是關鍵應對技巧</blockquote>
+
+<h2>核心概念</h2>
+
+<p>隔日沖是「今天買、明天賣」的操作方式，隔日沖主力會針對當天強勢股大量買進，讓股價漲停，隔日再開高賣出賺取價差。與當沖不同，隔日沖需要持有過夜，承擔留倉風險。</p>
+
+<h3>當沖 vs 隔日沖</h3>
+
+<table>
+<tr><th>項目</th><th>當沖</th><th>隔日沖</th></tr>
+<tr><td>------</td><td>------</td><td>--------</td></tr>
+<tr><td>定義</td><td>當天買、當天賣</td><td>當天買、隔天賣</td></tr>
+<tr><td>本金</td><td>不需要（現股當沖）</td><td>需要</td></tr>
+<tr><td>證交稅</td><td>現股0.15%</td><td>0.3%</td></tr>
+<tr><td>留倉風險</td><td>無</td><td>有</td></tr>
+</table>
+<h2>實戰應用</h2>
+
+<h3>兩種隔日沖手法</h3>
+
+<p><strong>1. 拉漲停策略</strong>
+主力挑選已漲7%~9%的中小型股，用數億資金買到漲停鎖死，吸引散戶跟進。隔天開高後主力全部倒貨，統計上漲停股隔天開高機率極高，但散戶買不到漲停股。</p>
+
+<p><strong>2. 權證隔日沖策略</strong>
+主力大量買進權證及標的股票，自營商因風險控制被迫買進股票避險，推升股價。隔天主力將權證及股票全部賣出獲利。一般投資人難以複製。</p>
+
+<h3>隔日沖券商分點辨識</h3>
+
+<p>盤後從券商分點進出表判斷是否有隔日沖介入：</p>
+
+<p><strong>主要隔日沖券商</strong>：
+<ul><li>凱基-松山、凱基-台北</li>
+<li>元大-土城永寧</li>
+<li>國票-敦北法人</li>
+<li>富國-建邦</li>
+</ul></p>
+
+<p><strong>三大隔日沖派別</strong>：
+<ul><li>群益幫：以群益金鼎為核心</li>
+<li>美好大元大：美好證券、大元證券</li>
+<li>自動幫：凱基-松山、凱基-台北等</li>
+</ul></p>
+
+<p><strong>次要隔日沖券商</strong>：統一-士林、群益金鼎-大安、中國信託-忠孝</p>
+
+<p><strong>辨識關鍵</strong>：該券商分點買超高居第1名且數量與第2名相差很多。近年主力改用多個分點操作，不再絕對準確。</p>
+
+<h3>應對策略</h3>
+
+<p>1. <strong>4%分水嶺</strong>：隔天開盤高於4%代表股價強勁可續抱；不到4%且成交量迅速擴大則先獲利出場
+2. <strong>尾盤決定</strong>：隔日沖賣壓多在9:30前操作完畢，想買的人等尾盤再進場
+3. <strong>長期投資人</strong>：隔日沖跟你無關，照自己策略走就好
+4. <strong>跟單風險極高</strong>：主力吃肉你喝湯，湯還很有限，碗也可能打翻</p>
+
+<h3>近年變化</h3>
+
+<p>隔日沖不再限於隔天賣出，會隔2日、3日才賣，甚至隔天繼續拉漲停。不要預設立場隔天就賣。</p>
+
+<h2>注意事項</h2>
+
+<p>1. <strong>漲停未鎖死風險</strong>：盤中出現更大賣壓，主力籌碼不夠再次拉漲停
+2. <strong>隔日未開高風險</strong>：突發消息面或系統性風險導致大盤翻轉
+3. <strong>交易成本高</strong>：現股隔日沖證交稅0.3%，是當沖的兩倍，頻繁進出成本可觀
+4. <strong>違約交割風險</strong>：T+2扣款，需確保交割帳戶有足夠資金
+5. <strong>主力也會被倒貨</strong>：鎖漲停時可能被另一個大股東或更大資金反向攻擊</p>
+
+<h2>相關主題</h2>
+
+<ul><li><a class="wikilink" href="分點進出追蹤關鍵分點.html">分點進出追蹤關鍵分點</a></li>
+<li><a class="wikilink" href="主力操作生命週期.html">主力操作生命週期</a></li>
+<li><a class="wikilink" href="主力出貨辨識.html">主力出貨辨識</a></li>
+<li><a class="wikilink" href="主力洗盤甩轎手法.html">主力洗盤甩轎手法</a></li>
+<li><a class="wikilink" href="../strategy/day-trading.html">當沖操作</a></li>
+<li><a class="wikilink" href="institutional-investors.html">三大法人特性</a></li>
+</ul>
+
+<h2>來源</h2>
+
+<ul><li><a href="../raw/2026-04-29/隔日沖券商辨識與應對策略.md">隔日沖是什麼？- 市場先生</a></li>
+<li><a href="https://smart.businessweekly.com.tw/Reading/IndepArticle.aspx?id=6016241">隔日沖手法與應對 - Smart自學網</a></li>
+</ul>
+<li><a href="https://www.stockfeel.com.tw/%E9%9A%94%E6%97%A5%E6%B2%96-%E9%9A%94%E6%97%A5%E6%B2%96%E5%A4%A7%E6%88%B6-%E9%80%B2%E5%87%BA%E5%88%86%E9%BB%9E/">隔日沖券商名單整理 - StockFeel</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="分點進出追蹤關鍵分點.html">分點進出追蹤關鍵分點</a>, <a class="wikilink" href="主力操作生命週期.html">主力操作生命週期</a>, <a class="wikilink" href="主力出貨辨識.html">主力出貨辨識</a>, <a class="wikilink" href="主力洗盤甩轎手法.html">主力洗盤甩轎手法</a>, <a class="wikilink" href="../strategy/day-trading.html">當沖操作</a></p>
+        </article>
+    </main>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
+</body>
+</html>

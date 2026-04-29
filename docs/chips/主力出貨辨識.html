@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主力出貨辨識 - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class=" active">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>主力出貨辨識</h1>
+            <h1>主力出貨辨識</h1>
+
+<blockquote>辨識主力出貨的五個前兆，避免在高位接盤成為犧牲品</blockquote>
+
+<h2>核心概念</h2>
+
+<p>主力出貨是指在股價經過一段上漲後，主力（大戶、法人、公司派）開始賣出手中的股票以實現利潤的過程。由於主力籌碼量大，出貨需要時間，會採取各種手段避免引起股價快速下跌，利用市場情緒引導散戶接盤。</p>
+
+<h2>實戰應用</h2>
+
+<h3>五個出貨前兆</h3>
+
+<p><strong>1. 成交量異常放大</strong>
+<ul><li>股價在高位持續上漲且成交量異常放大</li>
+<li>成交量放大但股價無法再創新高 → 買盤力量不足以推升</li>
+<li>常伴隨利好消息，但利好不漲 → 主力藉利好出貨</li>
+</ul></p>
+
+<p><strong>2. 股價走勢疲弱、頻繁震盪</strong>
+<ul><li>高位震盪走勢，每次反彈無法突破前高</li>
+<li>主力利用震盪行情逐步減持</li>
+<li>股價看似還有上漲潛力，實際上主力正在倒貨</li>
+</ul></p>
+
+<p><strong>3. 量價背離</strong>
+<ul><li>股價上漲但成交量逐步萎縮</li>
+<li>代表追高買盤力量不足</li>
+<li>主力利用殘存的市場熱情逐步派發籌碼</li>
+<li>持續出現量價背離時，市場很可能即將反轉下跌</li>
+</ul></p>
+
+<p><strong>4. 大單頻繁賣出、小單買入</strong>
+<ul><li>主力將大筆賣單拆分為多筆小單（拆單出貨）</li>
+<li>分時盤口觀察：大額賣單頻繁出現，買單多為小額單</li>
+<li>內盤成交多於外盤 → 主力默默倒貨</li>
+<li>表面市場活躍，實際大量籌碼被悄然拋售</li>
+</ul></p>
+
+<p><strong>5. 利好消息頻繁但股價不漲</strong>
+<ul><li>利好不漲是最明顯的出貨訊號</li>
+<li>可能是公司業績增長、產業政策利多、未經證實的消息</li>
+<li>利好出現卻股價滯漲或小幅下跌 → 主力藉利好派發</li>
+</ul></p>
+
+<h3>出貨 vs 洗盤 辨識對照</h3>
+
+<table>
+<tr><th>特徵</th><th>出貨</th><th>洗盤</th></tr>
+<tr><td>------</td><td>------</td><td>------</td></tr>
+<tr><td>目的</td><td>清倉獲利了結</td><td>恐嚇浮動籌碼出場</td></tr>
+<tr><td>手法</td><td>溫和下跌、拆單出貨</td><td>快速下跌、跌破支撐</td></tr>
+<tr><td>量能</td><td>高檔放量後量縮</td><td>先放量後縮量</td></tr>
+<tr><td>均線</td><td>跌破關鍵均線</td><td>不破關鍵均線</td></tr>
+<tr><td>利好反應</td><td>利多不漲</td><td>利空不跌</td></tr>
+<tr><td>K線</td><td>高位上影線頻繁</td><td>回測防守線後反彈</td></tr>
+</table>
+<h3>應對策略</h3>
+
+<p>1. <strong>設置止盈點</strong>：股價達到目標價果斷止盈
+2. <strong>避免盲目追高</strong>：利好消息頻出時反而要警惕
+3. <strong>關注技術指標變化</strong>：RSI超買+背離、OBV資金流出都是警訊
+4. <strong>觀察籌碼變化</strong>：法人買賣超、融資餘額變化、千張大戶持股比例</p>
+
+<h3>高價股量價背離的例外</h3>
+
+<p>高價股出現價漲量縮不一定是主力出貨：
+<ul><li>高價股散戶追價意願本來就弱</li>
+<li>籌碼相對安定，軋空時量縮是正常現象</li>
+<li>建議搭配法人進出指標判斷是否真的在出貨</li>
+</ul></p>
+
+<h2>注意事項</h2>
+
+<p>1. <strong>出貨是過程不是事件</strong>：主力出貨需要時間，不會一天完成
+2. <strong>利好不漲是最強訊號</strong>：所有利好都出來了卻不漲，基本確認出貨
+3. <strong>量價背離要持續觀察</strong>：單日背離可能是雜訊，持續背離才是訊號
+4. <strong>不要和主力對作</strong>：辨識出出貨訊號就走，不要想著比主力聰明
+5. <strong>拆單出貨最難察覺</strong>：大單賣出小單買入是拆單特徵，分時盤口觀察</p>
+
+<h2>相關主題</h2>
+
+<ul><li><a class="wikilink" href="主力洗盤甩轎手法.html">主力洗盤甩轎手法</a> — 出貨的鏡像，洗盤的五種型態辨識</li>
+<li><a class="wikilink" href="籌碼九階段.html">籌碼九階段</a> — 完整的籌碼循環框架，出貨對應「出→套→殺」階段</li>
+<li><span class="wikilink disabled">威科夫方法</span> — 西方版的主力派發（出貨）框架</li>
+<li><a class="wikilink" href="institutional-investors.html">三大法人特性</a> — 法人出貨的籌碼追蹤</li>
+<li><span class="wikilink disabled">量價關係</span> — 量價背離的深入判斷</li>
+<li><span class="wikilink disabled">隔日沖券商辨識</span> — 短線主力出貨的辨識</li>
+</ul>
+
+<h2>來源</h2>
+
+<ul><li><a href="../raw/2026-04-29/主力出貨前兆.md">主力出貨的前兆：如何識別市場中的隱藏信號</a></li>
+</ul>
+<li><a href="../raw/2026-04-29/主力洗盤手法.md">主力洗盤手法與出貨前兆</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="主力洗盤甩轎手法.html">主力洗盤甩轎手法</a>, <a class="wikilink" href="籌碼九階段.html">籌碼九階段</a>, <a class="wikilink" href="institutional-investors.html">三大法人特性</a></p>
+        </article>
+    </main>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
+</body>
+</html>

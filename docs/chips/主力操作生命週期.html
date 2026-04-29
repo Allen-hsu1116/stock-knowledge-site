@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主力操作生命週期 - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class=" active">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>主力操作生命週期</h1>
+            <h1>主力操作生命週期</h1>
+
+<blockquote>主力操作個股的四階段：吸貨→洗盤→拉升→出貨，量先價行是核心判斷原則</blockquote>
+
+<h2>核心概念</h2>
+
+<p>任何個股的生命週期不外乎經歷四個階段：
+1. <strong>低位吸貨</strong>：主力在底部默默收集籌碼
+2. <strong>洗盤換手</strong>：清除浮動籌碼，提高持股成本差距
+3. <strong>拉升</strong>：量能發動，股價進入主升段
+4. <strong>高位出貨</strong>：利用利好消息和市場情緒派發籌碼</p>
+
+<p>這四個階段構成了一檔股票從興起到幻滅的完整循環，對應<a class="wikilink" href="籌碼九階段.html">籌碼九階段</a>中的「接→護→拉→換→養→軋→出→套→殺」。</p>
+
+<h2>實戰應用</h2>
+
+<h3>階段一：吸貨（底部收集）</h3>
+
+<p><strong>量能特徵</strong>：
+<ul><li>5日均量 < 20日均量，成交量萎縮到窒息量</li>
+<li>偶爾出現攻擊量（5MV向上交叉20MV），但尚未連續</li>
+</ul></p>
+
+<p><strong>籌碼特徵</strong>：
+<ul><li>融資餘額持續下降（散戶退場）</li>
+<li>法人開始連續買進3天以上</li>
+<li>千張大戶持股比例緩步增加</li>
+</ul></p>
+
+<p><strong>辨識要點</strong>：
+<ul><li>底部沒有人注意，消息面偏空</li>
+<li>利空不跌是重要訊號</li>
+<li>攻擊量出現後，月均量轉折向上是起漲確認</li>
+</ul></p>
+
+<h3>階段二：洗盤（清除浮動籌碼）</h3>
+
+<p><strong>量能特徵</strong>：
+<ul><li>洗盤量能由大到小，呈縮量過程</li>
+<li>量能萎縮後再放量突破</li>
+</ul></p>
+
+<p><strong>籌碼特徵</strong>：
+<ul><li>融資繼續減少</li>
+<li>主力利用震盪嚇出信心不足的投資者</li>
+</ul></p>
+
+<p><strong>洗盤型態</strong>：詳見<a class="wikilink" href="主力洗盤甩轎手法.html">主力洗盤甩轎手法</a>
+<ul><li>橫向洗盤、短線拉回洗盤、K線洗盤、甩轎等</li>
+</ul></p>
+
+<h3>階段三：拉升（主升段）</h3>
+
+<p><strong>量能特徵</strong>：
+<ul><li>多頭量能型態：5日均量 > 20日均量，且20日均量向上</li>
+<li>量增價揚，形成良性互動</li>
+<li>攻擊量連續出現，推升股價</li>
+</ul></p>
+
+<p><strong>籌碼特徵</strong>：
+<ul><li>法人持續買超</li>
+<li>融資可能開始增加（散戶追價）</li>
+<li>大戶持股穩定或微增</li>
+</ul></p>
+
+<p><strong>操作要點</strong>：
+<ul><li>守住第一防守線（長紅K最低點）續抱</li>
+<li>跌破第一防線但不破第二防線 → 較長整理</li>
+<li>跌破第二防線 → 考慮減碼</li>
+</ul></p>
+
+<h3>階段四：出貨（高位派發）</h3>
+
+<p><strong>量能特徵</strong>：
+<ul><li>高檔放量但不創新高</li>
+<li>量價背離：價漲量縮</li>
+</ul></p>
+
+<p><strong>籌碼特徵</strong>：
+<ul><li>大單賣出小單買入（拆單出貨）</li>
+<li>利好消息頻繁但股價不漲</li>
+<li>法人轉為賣超</li>
+</ul></p>
+
+<p><strong>辨識要點</strong>：詳見<a class="wikilink" href="主力出貨辨識.html">主力出貨辨識</a></p>
+
+<h3>多頭量能型態判斷</h3>
+
+<p>多頭的量能型態兩個條件：
+1. 短期5日均量 > 20日均量
+2. 20日的月均量必須向上</p>
+
+<p>如同股價均線：長均線趨勢向上 + 短均線 > 長均線 = 多頭格局</p>
+
+<h3>量價背離的兩種例外</h3>
+
+<p><strong>1. 中段整理的量價背離</strong>
+<ul><li>多頭維持中段整理，並非由多翻空</li>
+<li>股價在區間整理但量能轉為空方型態</li>
+<li>以季線為支撐關卡，略微跌破又快速回復可接受</li>
+</ul></p>
+
+<p><strong>2. 高價股量價背離</strong>
+<ul><li>高價股飆漲時追價意願轉弱，出現價漲量縮</li>
+<li>這並非主力出貨，而是籌碼相對安定</li>
+<li>建議搭配法人進出指標判斷</li>
+</ul></p>
+
+<h2>注意事項</h2>
+
+<p>1. <strong>量先價行</strong>：成交量是領先指標，必須先有攻擊量才有起漲
+2. <strong>吸貨階段最難辨識</strong>：底部沒人注意，需要籌碼追蹤經驗
+3. <strong>洗盤和變盤容易混淆</strong>：守住防線是洗盤，跌破防線是變盤
+4. <strong>出貨是過程不是事件</strong>：主力不會一天出完，觀察持續性訊號
+5. <strong>搭順風車的時機</strong>：攻擊量出現+法人連續買進+融資下降 = 最佳進場點</p>
+
+<h2>相關主題</h2>
+
+<ul><li><a class="wikilink" href="主力洗盤甩轎手法.html">主力洗盤甩轎手法</a> — 洗盤的五種型態與辨識方法</li>
+<li><a class="wikilink" href="主力出貨辨識.html">主力出貨辨識</a> — 出貨的五個前兆</li>
+<li><a class="wikilink" href="籌碼九階段.html">籌碼九階段</a> — 完整九階段籌碼循環</li>
+<li><span class="wikilink disabled">威科夫方法</span> — 西方版主力操作框架（吸籌→派發）</li>
+<li><a class="wikilink" href="institutional-investors.html">三大法人特性</a> — 法人買賣超在生命週期各階段的特徵</li>
+<li><span class="wikilink disabled">量價關係</span> — 量先價行的深度解析</li>
+<li><a class="wikilink" href="融資使用率判讀.html">融資使用率判讀</a> — 融資餘額在各階段的變化</li>
+</ul>
+
+<h2>來源</h2>
+
+<ul><li><a href="../raw/2026-04-29/主力吸貨拉升出貨.md">謝佳穎教你看懂作量股：吸貨→洗盤→拉升→出貨</a></li>
+</ul>
+<li><a href="../raw/2026-04-29/主力洗盤手法.md">主力洗盤手法與出貨前兆</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="籌碼九階段.html">籌碼九階段</a>, <a class="wikilink" href="主力洗盤甩轎手法.html">主力洗盤甩轎手法</a>, <a class="wikilink" href="主力出貨辨識.html">主力出貨辨識</a>, <a class="wikilink" href="主力洗盤甩轎手法.html">主力洗盤甩轎手法</a>, <a class="wikilink" href="主力出貨辨識.html">主力出貨辨識</a></p>
+        </article>
+    </main>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
+</body>
+</html>
