@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>均值回歸策略Mean Reversion - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class=" active">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>均值回歸策略Mean Reversion</h1>
+            <h1>均值回歸策略Mean Reversion</h1>
+
+<blockquote>價格偏離均值太遠時會像橡皮筋一樣彈回來，在極端乖離時逆勢進場、回歸中值時出場的高勝率策略。</blockquote>
+
+<h2>核心概念</h2>
+
+<p>均值回歸策略基於一個核心假設：成熟、流動性佳的金融資產，其價格最終會圍繞歷史平均值上下波動。當價格因突發事件大幅偏離均值（乖離），就像被拉扯的橡皮筋，拉得越遠，未來反彈回歸的力量就越強。</p>
+
+<p>與趨勢追蹤策略相反：
+<ul><li><strong>趨勢追蹤</strong>：順勢而為，市場漲我就買，跌我就賣</li>
+<li><strong>均值回歸</strong>：逆勢操作，市場恐慌我撿便宜，過熱我先跑</li>
+</ul></p>
+
+<h2>三大進場指標</h2>
+
+<h3>1. RSI 極端值</h3>
+<ul><li>當 14 日 RSI 跌破 30（超賣區），觸發買進</li>
+<li>當 RSI 升破 70（超買區），觸發賣出</li>
+<li>⚠️ 調整參數時必須避免過度最佳化</li>
+</ul>
+
+<h3>2. 布林通道乖離邊界</h3>
+<ul><li>根據常態分配，價格有 95% 機率在正負兩個標準差之間運行</li>
+<li>跌破布林下軌 → 極端乖離，觸發買進</li>
+<li>突破布林上軌 → 過熱乖離，觸發賣出</li>
+</ul>
+
+<h3>3. 均線乖離率（Bias Ratio）</h3>
+<ul><li>公式：Bias = (Close – MA) / MA × 100%</li>
+<li>當 20 日均線乖離率達 -5%，自動買進</li>
+<li>數值可依個股波動特性調整</li>
+</ul>
+
+<h2>實戰應用</h2>
+
+<h3>進場時機</h3>
+1. 等待指標觸發超賣訊號（RSI<30 / 跌破布林下軌 / 乖離率超過閾值）
+2. 確認基本面沒有毀滅性變化（避免橡皮筋斷裂）
+3. 分批進場，不要一次性全押
+
+<h3>出場時機</h3>
+<ul><li><strong>停利</strong>：回歸中值（20日均線 / 布林中軌）時出場</li>
+<li>均值回歸策略勝率通常在 60%-70%</li>
+<li>目標是捕捉「回歸中值」的利潤，不是抱著等翻倍</li>
+</ul>
+
+<h3>停損設計（致命關鍵）</h3>
+<ul><li>買進後股價繼續下跌超過總資金 2%，無條件市價停損</li>
+<li>橡皮筋會斷！公司基本面出現毀滅性打擊時，股價不會反彈</li>
+<li>確保停損單確實執行，注意系統故障或網路延遲風險</li>
+</ul>
+
+<h2>注意事項</h2>
+
+<p>1. <strong>橡皮筋斷裂風險</strong>：均值回歸最大的致命傷，單邊大趨勢會讓逆勢部位不斷停損
+2. <strong>過度最佳化陷阱</strong>：調整參數迎合歷史數據會讓策略在未來失效
+3. <strong>適用標的</strong>：適合成熟、流動性佳的資產（大型股、ETF），不適合小型股或趨勢明確的標的
+4. <strong>市場環境</strong>：區間盤整市最適合均值回歸；趨勢市則會頻繁停損
+5. <strong>組合策略</strong>：成熟的交易者應將高勝率的「均值回歸」與高賠率的「趨勢追蹤」同時納入投資組合</p>
+
+<h2>相關主題</h2>
+<ul><li><span class="wikilink disabled">布林通道Bollinger Bands</span></li>
+<li><span class="wikilink disabled">KD指標</span></li>
+<li><span class="wikilink disabled">RSI相對強弱指數</span></li>
+<li><span class="wikilink disabled">假突破三道過濾</span></li>
+<li><span class="wikilink disabled">順勢交易Trend Trading</span></li>
+<li><span class="wikilink disabled">停損五法</span></li>
+<li><span class="wikilink disabled">風險報酬比</span></li>
+<li><span class="wikilink disabled">回測驗證Backtesting陷阱</span></li>
+</ul>
+
+<h2>來源</h2>
+<li><a href="../raw/2026-04-30/均值回歸策略進出場時機.md">均值回歸策略進出場時機</a></li>
+            
+        </article>
+    </main>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
+</body>
+</html>
