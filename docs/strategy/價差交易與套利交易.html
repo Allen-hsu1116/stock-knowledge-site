@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>價差交易與套利交易 - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class=" active">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>價差交易與套利交易</h1>
+            <h1>價差交易與套利交易</h1>
+
+<blockquote>不賭方向賺價差，一多一空對沖系統風險，靠商品間關聯性的偏離與回歸獲利，是市場中性策略的核心。</blockquote>
+
+<h2>核心概念</h2>
+
+<h3>價差交易（Spread Trading / Pairs Trading）</h3>
+
+<p>價差交易又稱配對交易，屬於市場中性策略。利用兩個具高度相關性的商品，在價差出現偏離時建立一多一空的部位組合，藉由價差的變化而非單一方向獲利。</p>
+
+<p>可應用於股票、指數、外匯與商品等各類市場。</p>
+
+<h3>兩種價差策略</h3>
+
+<p><strong>收斂價差（Convergence）</strong>
+<ul><li>當兩標的價差擴大至超出常態區間，預期最終將回歸平均</li>
+<li>操作：放空價格偏高者、做多價格偏低者，待價差收斂獲利</li>
+<li>實例：2025年初金銀比達100:1（歷史均值70~80），放空黃金、做多白銀，待比值回落至80左右獲利</li>
+</ul></p>
+
+<p><strong>發散價差（Divergence）</strong>
+<ul><li>當兩標的價差縮小至過低水準，預期將再度擴大</li>
+<li>操作：做多價格偏低者、放空價格偏高者，待價差發散獲利</li>
+<li>實例：疫情初期無鉛汽油價格一度低於原油（價差為負，常態應高於原油），做多無鉛汽油、放空原油</li>
+</ul></p>
+
+<h3>套利交易</h3>
+
+<p>套利交易是價差交易的特例，根據風險程度分為兩類：</p>
+
+<p><strong>無風險套利</strong>
+<ul><li>同時買入與賣出完全相同規格的資產，利用短暫價格差異獲利</li>
+<li>例：上銀期貨報385元、上銀現股報382元 → 賣出期貨一口、買進現股兩張，待價差收斂平倉獲利</li>
+<li>實務上嚴格意義的無風險套利多為短暫現象，機會稍縱即逝</li>
+</ul></p>
+
+<p><strong>統計套利</strong>
+<ul><li>基於數據分析與數理模型的量化策略</li>
+<li>利用Z-score或標準差界定價差偏離程度</li>
+<li>核心假設：價差具均值回歸特性</li>
+<li>例：平均價差50，縮小至25以下時買入被低估者、賣出被高估者，待價差回歸平均獲利</li>
+<li>需以嚴謹的資料建模控制風險</li>
+</ul></p>
+
+<h2>實戰應用</h2>
+
+<h3>三步制定價差交易策略</h3>
+
+<p><strong>第一步：了解商品間的關聯性</strong>
+<ul><li>常見關聯性組合：黃金與白銀、富台指與台指、台積電與台積電ADR</li>
+<li>透過統計軟體計算相關係數或常態分配</li>
+<li>關聯性越高，價差回歸的機率越大</li>
+</ul></p>
+
+<p><strong>第二步：計算合約規格及匯差</strong>
+<ul><li>跨市場交易時，匯率、交易時間、合約規格可能不同</li>
+<li>必須清楚兩邊的合約規格，才能制定合格的價差交易</li>
+<li>例：台積電現股（台幣計價）vs 台積電ADR（美元計價），需考慮匯率換算</li>
+</ul></p>
+
+<p><strong>第三步：確保交易能同時進行</strong>
+<ul><li>兩邊商品必須能同時交易</li>
+<li>例：遇到個股強制回補時無法做空，該價差交易就無法成立</li>
+<li>需確認兩邊的流動性與交易限制</li>
+</ul></p>
+
+<h3>價差交易優勢</h3>
+
+<ul><li><strong>對沖系統風險</strong>：一多一空結構，降低單一方向風險</li>
+<li><strong>降低波動</strong>：相對於單邊交易，價差波動較小</li>
+<li><strong>市場中性</strong>：不預判大盤方向，只賺商品間的相對強弱</li>
+</ul>
+
+<h2>注意事項</h2>
+
+<ul><li><strong>均值回歸不一定發生</strong>：價差可能持續偏離而不回歸，必須設停損</li>
+<li><strong>關聯性可能改變</strong>：歷史相關性高的商品，關聯可能因結構性變化而打破</li>
+<li><strong>流動性風險</strong>：兩邊商品流動性不同時，可能無法同時平倉</li>
+<li><strong>跨市場風險</strong>：匯率波動、交易時間差異、合約規格不同都可能影響損益</li>
+<li><strong>槓桿控制</strong>：價差交易雖然風險較低，但仍然要控制槓桿倍數，避免爆倉</li>
+<li><strong>強制回補風險</strong>：個股除權息期間強制回補融券，可能導致策略無法執行</li>
+<li><strong>無風險套利機會極少</strong>：市場效率越高，無風險套利機會越少</li>
+</ul>
+
+<h2>相關主題</h2>
+
+<ul><li><span class="wikilink disabled">操作策略/當沖八大步驟與交易心態|當沖八大步驟與交易心態</span></li>
+<li><span class="wikilink disabled">風險管理/停損方法|停損方法</span></li>
+<li><span class="wikilink disabled">風險管理/倉位管理|倉位管理</span></li>
+<li><span class="wikilink disabled">操作策略/均值回歸策略|均值回歸策略</span></li>
+<li><span class="wikilink disabled">操作策略/當沖操作|當沖操作</span></li>
+</ul>
+
+<h2>來源</h2>
+
+<li><a href="../raw/2026-04-30/價差交易與套利交易收斂發散策略.md">價差交易與套利交易完整教學｜收斂與發散策略實例解析</a></li>
+            
+        </article>
+    </main>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
+</body>
+</html>

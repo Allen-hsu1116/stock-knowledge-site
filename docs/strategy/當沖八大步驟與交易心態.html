@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>當沖八大步驟與交易心態 - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class=" active">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>當沖八大步驟與交易心態</h1>
+            <h1>當沖八大步驟與交易心態</h1>
+
+<blockquote>當沖不是賭博，是用紀律和策略在日內波動中獲利；八大步驟從選模式到復盤，五個心態從多空雙向到持盈保泰，缺一不可。</blockquote>
+
+<h2>核心概念</h2>
+
+<h3>三種當沖模式</h3>
+
+<table>
+<tr><th>模式</th><th>賺賠比</th><th>出手次數</th><th>資金效率</th><th>操作核心</th><th>留倉</th></tr>
+<tr><td>------</td><td>--------</td><td>----------</td><td>----------</td><td>----------</td><td>------</td></tr>
+<tr><td>Tick流</td><td>低</td><td>多</td><td>高</td><td>短進短出</td><td>否</td></tr>
+<tr><td>一波流</td><td>中</td><td>中</td><td>中</td><td>當前行情走勢</td><td>否</td></tr>
+<tr><td>日內波</td><td>高</td><td>少</td><td>低</td><td>盤前選股</td><td>可</td></tr>
+</table>
+<ul><li><strong>Tick流</strong>：捕捉微小波動，每次進出場間隔數秒到數分鐘，平均獲利1%以下，積小成大。適合頻繁震盪且成交量活躍的標的。</li>
+<li><strong>一波流</strong>：掌握當日最大短期趨勢，單筆獲利1%~5%，追蹤量能變化與大單流向，在關鍵時刻果敢進場，操作熱門族群與題材股。</li>
+<li><strong>日內波</strong>：研判個股單日有長紅/長黑K棒才進場，等趨勢確立後進場，接近收盤時出場，單筆獲利5%以上，甚至可轉波段持有。注重盤前選股。</li>
+</ul>
+
+<h3>日內交易時段特性</h3>
+
+<table>
+<tr><th>時段</th><th>特性</th><th>操作建議</th></tr>
+<tr><td>------</td><td>------</td><td>----------</td></tr>
+<tr><td>開盤前</td><td>觀察美股、期貨、日韓股市</td><td>決定偏多/偏空方向</td></tr>
+<tr><td>9:00-9:30</td><td>波動劇烈、量能放大</td><td>短線快攻，強勢股搶漲停</td></tr>
+<tr><td>9:30-10:30</td><td>走勢逐漸明朗</td><td>技術型態確認進場</td></tr>
+<tr><td>10:30-12:30</td><td>量縮觀望、波動收斂</td><td>減少出手次數</td></tr>
+<tr><td>12:30-13:30</td><td>當沖出場、波段進場</td><td>注意風險管理與動態調整</td></tr>
+</table>
+<strong>最佳當沖時段：9:00-10:30</strong>，超過12點未成交就該取消。
+
+<h3>短線技術指標</h3>
+
+<ul><li><strong>當日開盤價</strong>：日內多空分界線，強勢股開盤後迅速脫離開盤價</li>
+<li><strong>當日均價線</strong>：當天平均交易成本，站上偏多、跌破偏空</li>
+<li><strong>日K線關鍵點位</strong>：近期高低點、昨收價形成支撐壓力</li>
+<li><strong>均線/布林通道</strong>：上揚均線為支撐，下彎均線為壓力</li>
+</ul>
+
+<h2>實戰應用</h2>
+
+<h3>選股策略</h3>
+
+<p>1. <strong>事件驅動</strong>：政策發布、產業趨勢、經濟指標、財報公布等事件與類股漲跌的關聯性
+2. <strong>條件篩選</strong>：周轉率排名、成交量排名，篩選人氣陡升、流動性高的標的
+3. <strong>動能交易</strong>：選擇強勢標的，開盤後篩選波動幅度5%以上的股票觀察</p>
+
+<h3>勝率與賺賠比</h3>
+
+<ul><li><strong>賺賠比</strong>＝平均獲利÷平均虧損</li>
+<li><strong>期望值</strong>＝（賺賠比×勝率）－（1×賠率）</li>
+<li>期望值為正→長期獲利；期望值為負→長期虧損</li>
+<li>例：勝率40%、賺賠比3 → 期望值＝3×0.4－1×0.6＝0.6（正期望）</li>
+</ul>
+
+<h3>交易成本</h3>
+
+<ul><li>手續費是當沖隱形殺手，100~150元區間的股票1Tick跳0.5元，手續費有優惠時1Tick就能獲利打平成本</li>
+<li>低價股Tick占比高，成本壓力更大</li>
+</ul>
+
+<h3>五個交易心態</h3>
+
+<p>1. <strong>多空雙向操作</strong>：當沖必須學會做空，不能只有偏多思維
+2. <strong>設停損點</strong>：開盤前就設好進出場及停損停利點，嚴格執行
+3. <strong>不過度交易</strong>：等最有利機會，超過12點未成交就取消，完成交易後不要再入場
+4. <strong>資金充足防違約</strong>：不在漲跌停價附近交易，避免沖銷不掉被迫交割
+5. <strong>持盈保泰</strong>：大盤量縮或當月已賺5%以上時，減少交易次數與金額</p>
+
+<h3>回本難度提醒</h3>
+
+<ul><li>虧損5% → 需賺5.26%回本</li>
+<li>虧損20% → 需賺25%回本</li>
+<li>當沖當天最大虧損通常不超過3%，2%停損停利是常態</li>
+</ul>
+
+<h3>復盤交易檢討</h3>
+
+<p>1. 每天記錄進出場原因、交易環境、判斷依據與結果
+2. 每週/每月回顧策略是否仍適用當前市況，根據數據調整
+3. 參與交易社群或閱讀專家文章，補足自己的盲點</p>
+
+<h2>注意事項</h2>
+
+<ul><li>當沖是雙面刃，高槓桿帶來高風險，新手必須先建立心態再學技術</li>
+<li>零股無法當沖</li>
+<li>散戶通病：賺錢的單抱不住、賠錢的單抱超長→小賠小賺大賠的負經濟效應</li>
+<li>收盤前半小時不適合開新倉，走勢容易與早盤逆向</li>
+<li>停損是當沖交易者的護身符，做錯死扛只會增加回本難度</li>
+<li>交易成本是隱形殺手，低價股Tick成本占比更高</li>
+</ul>
+
+<h2>相關主題</h2>
+
+<ul><li><span class="wikilink disabled">操作策略/當沖操作|當沖操作</span></li>
+<li><span class="wikilink disabled">操作策略/五種最佳買點|五種最佳買點</span></li>
+<li><span class="wikilink disabled">風險管理/停損方法|停損方法</span></li>
+<li><span class="wikilink disabled">風險管理/停利方法|停利方法</span></li>
+<li><span class="wikilink disabled">風險管理/倉位管理|倉位管理</span></li>
+<li><span class="wikilink disabled">操作策略/動能交易策略|動能交易策略</span></li>
+<li><span class="wikilink disabled">技術分析/K線型態|K線型態</span></li>
+<li><span class="wikilink disabled">技術分析/支撐壓力|支撐壓力</span></li>
+<li><span class="wikilink disabled">操作策略/價差交易與套利交易|價差交易與套利交易</span></li>
+</ul>
+
+<h2>來源</h2>
+
+<ul><li><a href="../raw/2026-04-30/當沖零基礎八大步驟建立短線策略.md">當沖零基礎？靠八大步驟建立屬於你的短線策略！</a></li>
+</ul>
+<li><a href="../raw/2026-04-30/新手學當沖基本交易心態.md">新手學當沖！你該建立的幾個基本交易心態</a></li>
+            
+        </article>
+    </main>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
+</body>
+</html>

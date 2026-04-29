@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箱型理論 Darvas Box - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class=" active">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>箱型理論 Darvas Box</h1>
+            <h1>箱型理論 Darvas Box</h1>
+
+<blockquote>股價超過一半時間在箱子裡震盪，找出箱頂箱底，突破箱頂買進、跌破箱底停損，是達華斯18個月從1萬變200萬的經典順勢策略</blockquote>
+
+<h2>核心概念</h2>
+
+<p>箱型理論（Darvas Box Theory）由尼可拉斯·達華斯（Nicolas Darvas）提出，他原是舞蹈家，因客戶用股票支付酬勞而踏入股市，經歷大賠後自行研究出這套方法，18個月內將1萬美元滾成200萬美元。</p>
+
+<p><strong>箱型是什麼</strong>：股價在一段區間內上下震盪，相對高點形成賣壓（箱頂），相對低點形成支撐（箱底），價格在箱頂與箱底之間來回，就形成一個「箱子」。</p>
+
+<p><strong>為什麼會形成箱型</strong>：
+<ul><li>箱頂賣壓來源：前波買在相對高點的投資人被套牢，當價格回到成本區想解套賣出</li>
+<li>箱底支撐來源：主力護盤 + 技術分析者看到止跌跟進</li>
+</ul></p>
+
+<p><strong>箱型確認條件</strong>：
+<ul><li>股價至少觸碰箱頂與箱底各2～3次</li>
+<li>連續3個交易日不再突破前高 → 箱頂確立</li>
+<li>連續3個交易日不再跌破前低 → 箱底確立</li>
+<li>箱型持續時間越長，參考價值越高</li>
+</ul></p>
+
+<p><strong>關鍵特性</strong>：股價超過一半時間處於箱型整理，而非單邊趨勢。掌握箱型，就能掌握大部分時間的走勢。</p>
+
+<h2>實戰應用</h2>
+
+<h3>一、達華斯原始操作法（順勢突破型）</h3>
+
+<p>1. <strong>選股</strong>：高成交量、有成長動能、處於上升趨勢的大型成長股
+2. <strong>找箱型</strong>：在上升趨勢中找出箱型整理區間
+3. <strong>進場</strong>：股價帶量突破箱頂時買進（預先掛單在箱頂上方一點）
+4. <strong>停損</strong>：進場同時設停損在箱底下方，單次最大損失＝箱頂到箱底的距離
+5. <strong>移動停損</strong>：股價進入下一個箱子後，停損點上移至新箱底
+6. <strong>加碼</strong>：新箱頂突破時可加碼
+7. <strong>出場</strong>：股價跌破當前箱底時出場</p>
+
+<h3>二、區間操作法（箱內低買高賣型）</h3>
+
+<p>適用條件：箱頂與箱底之間價差超過20%</p>
+
+<ul><li>接近箱底時逢低買入</li>
+<li>接近箱頂時逢高賣出</li>
+<li>停損設在箱底下方一點</li>
+</ul>
+
+<h3>三、確認真假突破</h3>
+
+<ul><li><strong>真突破</strong>：帶量突破、收盤價站穩箱頂上方、出現多根中長紅K線</li>
+<li><strong>假突破</strong>：盤中短暫突破但收盤跌回箱內、量能不足、突破後隔天立刻回落</li>
+<li><strong>應對</strong>：假突破後果斷停損，不凹單；若再次突破可重新追回</li>
+</ul>
+
+<h3>四、階梯式上漲</h3>
+
+<p>上升趨勢中的箱型會呈現階梯狀：一個箱子突破後進入下一個更高的箱子，舊箱頂變成新箱底。只要股價不跌破前一個箱底就續抱，跌破則停損。</p>
+
+<p>以台積電為例：566-593 → 突破 → 614-660 → 突破 → 700+ → 738-812 → 突破 → 818-873</p>
+
+<h3>五、支撐壓力互換原則</h3>
+
+<ul><li>向上突破後：原箱頂（壓力）變成新箱底（支撐）</li>
+<li>向下跌破後：原箱底（支撐）變成新箱頂（壓力）</li>
+</ul>
+
+<h2>注意事項</h2>
+
+<p>1. <strong>只適用於上升趨勢</strong>：在盤整或下跌趨勢中，箱型突破訊號模糊，誤判風險極高。達華斯是在牛市中開發此法，熊市能否複製存疑
+2. <strong>勝率低但期望值可為正</strong>：準確度可能僅30-40%，但順勢策略不需高勝率，10次對3-4次即可有正期望值
+3. <strong>停損必須嚴格</strong>：不嚴格停損，一次大虧可能吃掉所有小賺。「多次小虧損、一次大獲利」是核心邏輯
+4. <strong>不能小賺就跑</strong>：順勢策略低勝率，小賺就出場會變成「小賺小賠低勝率」，長期必定虧損。必須讓利潤奔跑
+5. <strong>箱型範圍判斷主觀</strong>：上下緣沒有絕對精確標準，可多抓0.3%誤差範圍減少假突破洗刷
+6. <strong>箱型越窄越有利</strong>：停損範圍小，風險控制更容易
+7. <strong>冷門股不適用</strong>：成交量過低的股票，主力可自行畫線，箱型理論失效
+8. <strong>滑價成本高</strong>：順勢追價策略在突破瞬間常有滑價，需納入成本計算
+9. <strong>末升段/末跌段注意</strong>：箱型出現在3波段走勢末端時，後續可能反轉為頭部或底部型態
+10. <strong>不好回測</strong>：太多人為判斷因素（標的選擇、箱型範圍認定、假突破處理），難以量化驗證</p>
+
+<h2>相關主題</h2>
+
+<ul><li><span class="wikilink disabled">操作策略/順勢交易|順勢交易</span> - 箱型理論本質上是順勢交易的應用</li>
+<li><span class="wikilink disabled">操作策略/突破交易策略|突破交易策略</span> - 箱型突破是突破交易的一種</li>
+<li><span class="wikilink disabled">操作策略/海龜交易法則|海龜交易法則</span> - 同為經典順勢系統，20日突破進場</li>
+<li><span class="wikilink disabled">操作策略/階梯操盤法|階梯操盤法</span> - 箱型理論的進階移動停利技巧</li>
+<li><span class="wikilink disabled">技術分析/支撐壓力|支撐壓力</span> - 箱型理論的基礎</li>
+<li><span class="wikilink disabled">風險管理/停損方法|停損方法</span> - 箱型理論的停損設在箱底</li>
+<li><span class="wikilink disabled">風險管理/停利方法|停利方法</span> - 移動停利隨箱底上移</li>
+</ul>
+
+<h2>來源</h2>
+
+<ul><li><a href="../raw/2026-04-30/箱型理論達華斯箱型整理Yahoo財經.md">箱型整理也能賺！怎麼判斷「多空交戰」突破點？ - Yahoo財經</a></li>
+<li><a href="../raw/2026-04-30/箱型理論市場先生完整解析.md">箱型理論/箱型整理是什麼？ - Mr.Market市場先生</a></li>
+</ul>
+<li><a href="../raw/2026-04-30/箱型理論OANDA交易策略介紹.md">何謂箱型理論及其交易策略介紹 - OANDA Lab</a></li>
+            
+        </article>
+    </main>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
+</body>
+</html>
