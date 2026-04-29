@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大外資與小外資判讀 - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class=" active">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>大外資與小外資判讀</h1>
+            <h1>大外資與小外資判讀</h1>
+
+<blockquote>大外資看長線方向、小外資看短線靈敏度；扣掉五大特法就是小外資，短線變化更有參考價值。</blockquote>
+
+<h2>核心概念</h2>
+
+<h3>什麼是大外資與小外資？</h3>
+
+<p>台股的「外資」不是一個統一的主體，而是眾多海外法人機構的集合。這些法人可以依規模分為兩類：</p>
+
+<p><strong>大外資（五大特定法人）</strong>：
+<ul><li>資金部位超級大，交易週期長</li>
+<li>看法較長遠，部位笨重</li>
+<li>不會頻繁調整部位</li>
+<li>代表：摩根大通、高盛、美林等大型投資銀行</li>
+</ul></p>
+
+<p><strong>小外資（非五大特法）</strong>：
+<ul><li>資金部位較小</li>
+<li>短線調整靈活</li>
+<li>看法偏短線</li>
+<li>可能有假外資混入</li>
+</ul></p>
+
+<h3>為什麼要區分？</h3>
+
+<p>因為外資總量是大外資+小外資的加總，當兩者方向不同時，只看總量會被誤導：</p>
+
+<ul><li>大外資偏多（長線佈局）+ 小外資偏空（短線避險）= 總量可能接近平衡</li>
+<li>大外資偏空（避險）+ 小外資偏多（短線搶反彈）= 總量可能接近平衡</li>
+<li><strong>關鍵</strong>：大外資決定長線方向，小外資決定短線波動</li>
+</ul>
+
+<h3>小外資的計算方法</h3>
+
+<blockquote>小外資 = 外資總量 − 五大特定法人總量</blockquote>
+
+<p>期交所每日公布三大法人期貨部位，其中「五大特定法人」的部位也會單獨列出。扣掉五大特法後，剩下的就是規模較小的外資機構。</p>
+
+<h2>實戰應用</h2>
+
+<h3>一、大外資判讀重點</h3>
+
+<p>1. <strong>看長線方向</strong>：大外資部位笨重，調整需要時間，一旦方向確定通常持續較久
+2. <strong>看未平倉變化趨勢</strong>：連續3-5天同方向增加，比單日大幅變動更有意義
+3. <strong>看現貨配合</strong>：大外資現貨連續買超 + 期貨多單 = 最強偏多訊號
+4. <strong>注意避險部位</strong>：大外資期貨空單可能只是避險，不代表看空</p>
+
+<h3>二、小外資判讀重點</h3>
+
+<p>1. <strong>看短線靈敏度</strong>：小外資反應快，變化幅度大
+2. <strong>追蹤日變化</strong>：小外資每天調整，觀察短線方向
+3. <strong>搭配大外資</strong>：大小外資同方向 = 方向明確；方向相反 = 震盪整理
+4. <strong>注意假外資</strong>：小外資中可能有本土資金透過海外帳戶操作</p>
+
+<h3>三、大小外資交叉判讀</h3>
+
+<table>
+<tr><th>大外資</th><th>小外資</th><th>判讀</th></tr>
+<tr><td>--------</td><td>--------</td><td>------</td></tr>
+<tr><td>偏多</td><td>偏多</td><td>強烈多頭訊號，趨勢明確</td></tr>
+<tr><td>偏多</td><td>偏空</td><td>長多短震盪，拉回買進</td></tr>
+<tr><td>偏空</td><td>偏多</td><td>長空短反彈，反彈賣出</td></tr>
+<tr><td>偏空</td><td>偏空</td><td>強烈空頭訊號，趨勢明確</td></tr>
+<tr><td>中性</td><td>偏多</td><td>短線反彈，觀察是否轉多</td></tr>
+<tr><td>中性</td><td>偏空</td><td>短線修正，觀察是否轉空</td></tr>
+</table>
+<h3>四、跟單策略建議</h3>
+
+<p><strong>跟大外資</strong>：
+<ul><li>適合波段操作、中長線投資</li>
+<li>觀察期貨未平倉趨勢，而非單日變化</li>
+<li>需要充足資金承受短期波動</li>
+<li>進場後要有耐心等待方向發酵</li>
+</ul></p>
+
+<p><strong>跟小外資</strong>：
+<ul><li>適合短線操作、當沖</li>
+<li>反應快，但要確認不是假外資</li>
+<li>進出迅速，停損要果斷</li>
+<li>不適合長線投資者參考</li>
+</ul></p>
+
+<h2>注意事項</h2>
+
+<ul><li><strong>五大特法名單會變動</strong>：期交所的五大特法不是固定不變的</li>
+<li><strong>假外資無法過濾</strong>：小外資中可能有本土資金混入</li>
+<li><strong>摩台期是盲區</strong>：大外資可能同時操作摩台，台指期只看得到一部分</li>
+<li><strong>群體非個體</strong>：外資總量是多個法人加總，不代表單一看法</li>
+<li><strong>2011年後準確度下降</strong>：跟單效益約只有外資的一半</li>
+</ul>
+
+<h2>相關主題</h2>
+<ul><li><a class="wikilink" href="外資現貨期貨部位綜合判讀.html">外資現貨期貨部位綜合判讀</a></li>
+<li><a class="wikilink" href="foreign-futures-oi.html">外資期貨未平倉判讀</a></li>
+<li><a class="wikilink" href="外資避險期貨部位判讀.html">外資避險期貨部位判讀</a></li>
+<li><a class="wikilink" href="institutional-investors.html">三大法人特性</a></li>
+<li><a class="wikilink" href="三大法人連續買超選股.html">三大法人連續買超選股</a></li>
+<li><a class="wikilink" href="借券賣出餘額與外資隱形做空.html">借券賣出餘額與外資隱形做空</a></li>
+<li><a class="wikilink" href="自營商避險買超判讀.html">自營商避險買超判讀</a></li>
+</ul>
+
+<h2>來源</h2>
+<ul><li><a href="../raw/2026-04-29/外資期貨空單與現貨綜合判讀.md">外資期貨空單大增2萬口的背後 - WinSmart</a></li>
+<li><a href="../raw/2026-04-29/外資期貨空單與現貨綜合判讀.md">外資台指期貨部位年勝率100% - 市場先生</a></li>
+</ul>
+<li><a href="../raw/2026-04-29/外資期貨空單與現貨綜合判讀.md">外資是什麼？ - StockFeel</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="外資現貨期貨部位綜合判讀.html">外資現貨期貨部位綜合判讀</a>, <a class="wikilink" href="foreign-futures-oi.html">外資期貨未平倉判讀</a>, <a class="wikilink" href="外資避險期貨部位判讀.html">外資避險期貨部位判讀</a>, <a class="wikilink" href="institutional-investors.html">三大法人特性</a>, <a class="wikilink" href="三大法人連續買超選股.html">三大法人連續買超選股</a></p>
+        </article>
+    </main>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
+</body>
+</html>
