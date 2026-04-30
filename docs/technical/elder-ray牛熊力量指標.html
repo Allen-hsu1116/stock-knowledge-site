@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>技術分析 - 股票知識庫</title>
+    <title>Elder-Ray牛熊力量指標 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -84,46 +84,87 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="technical.html" class=" active">技術分析</a><a href="fundamental.html" class="">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class="">風險管理</a></nav>
+            <nav><a href="../technical.html" class=" active">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class="">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
-        <h1 class="section-title">📊 技術分析</h1>
-        <p style="color: var(--text-muted); margin-bottom: 32px;">K線、均線、技術指標</p>
-        <div class="section">
-        <div class="article-card">
-            <div class="article-title">
-                <a href="technical/k-patterns.html">K線型態</a>
-            </div>
-            <div class="article-excerpt">K線是技術分析的基礎語言，每一根K線都在說一個多空交戰的故事。</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="moving-averages.html">均線判斷</a>, <a class="wikilink" href="support-resistance.html">支撐壓力</a>, <a class="wikilink" href="../risk/stop-loss.html">停損方法</a></span></div>
-        </div>
-        <div class="article-card">
-            <div class="article-title">
-                <a href="technical/moving-averages.html">均線判斷</a>
-            </div>
-            <div class="article-excerpt">均線是市場成本線，價格在均線上代表過去一段時間買者賺錢。</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="k-patterns.html">K線型態</a>, <a class="wikilink" href="support-resistance.html">支撐壓力</a>, <a class="wikilink" href="../risk/stop-loss.html">停損方法</a></span></div>
-        </div>
-        <div class="article-card">
-            <div class="article-title">
-                <a href="technical/elder-ray牛熊力量指標.html">Elder-Ray牛熊力量指標</a>
-            </div>
-            <div class="article-excerpt">市場的X光機，看穿K線皮膚底下多頭貪婪與空頭恐懼的真實骨架</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="../strategy/多時間框架分析.html">多時間框架分析</a>, <a class="wikilink" href="../strategy/三重濾網交易系統.html">三重濾網交易系統</a>, <a class="wikilink" href="../strategy/三重濾網交易系統.html">三重濾網交易系統</a></span></div>
-        </div>
-        <div class="article-card">
-            <div class="article-title">
-                <a href="technical/support-resistance.html">支撐壓力</a>
-            </div>
-            <div class="article-excerpt">觸及次數越多越可靠，支撐壓力是心理關卡。</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="k-patterns.html">K線型態</a>, <a class="wikilink" href="moving-averages.html">均線判斷</a>, <a class="wikilink" href="../risk/stop-loss.html">停損方法</a></span></div>
-        </div></div>
+        <article class="article-content">
+            <h1>Elder-Ray牛熊力量指標</h1>
+            <h1>Elder-Ray牛熊力量指標</h1>
+
+<blockquote>市場的X光機，看穿K線皮膚底下多頭貪婪與空頭恐懼的真實骨架</blockquote>
+
+<h2>核心概念</h2>
+
+<p>艾爾德射線 (Elder-Ray Index)，又稱牛熊力量指標 (Bull & Bear Power)，由傳奇交易員 Alexander Elder 博士發明。</p>
+
+<p>命名由來：「Ray」代表X光射線。K線圖是市場的皮膚，這套指標是市場的X光機，能看穿多頭（貪婪）與空頭（恐懼）的真實力量。</p>
+
+<h3>三個行為金融學假設</h3>
+
+<p>1. <strong>價值共識 (Value Consensus)</strong>：13日 EMA 代表多空雙方妥協後的「合理價值」
+2. <strong>Bull Power（多頭力量）</strong>：最高價與EMA的距離
+   - 公式：Bull Power = High – 13日 EMA
+   - 意義：多頭能把價格拉離價值共識多遠
+3. <strong>Bear Power（空頭力量）</strong>：最低價與EMA的距離
+   - 公式：Bear Power = Low – 13日 EMA
+   - 意義：空頭能把價格壓離價值共識多深</p>
+
+<h2>實戰應用</h2>
+
+<h3>最高勝率買點：多頭趨勢中的「空頭力竭」</h3>
+<ul><li><strong>前提</strong>：13日 EMA 趨勢向上（大方向多頭）</li>
+<li><strong>觸發</strong>：Bear Power 在零軸之下（股價回檔），但柱狀體開始縮短、向上勾頭</li>
+<li><strong>解讀</strong>：空頭砸盤力量耗盡，順勢拉回買點</li>
+<li><strong>這就是 <a class="wikilink" href="../strategy/多時間框架分析.html">多時間框架分析</a> 的精髓</strong>：大方向多頭 + 短期空頭力竭 = 進場</li>
+</ul>
+
+<h3>最高勝率空點：空頭趨勢中的「多頭力竭」</h3>
+<ul><li><strong>前提</strong>：13日 EMA 趨勢向下</li>
+<li><strong>觸發</strong>：Bull Power 在零軸之上，但柱狀體開始縮短、向下彎折</li>
+<li><strong>解讀</strong>：反彈中多頭力盡，極佳的反彈空點</li>
+</ul>
+
+<h3>終極反轉訊號：力量背離 (Power Divergence)</h3>
+<ul><li><strong>頂背離</strong>：股價創新高，Bull Power 比前一波低 → 多頭耗竭，即將見頂</li>
+<li><strong>底背離</strong>：股價創新低，Bear Power 負值比前一波淺 → 空頭耗竭，即將見底</li>
+</ul>
+
+<h3>與三重濾網系統搭配</h3>
+Elder-Ray 是 <a class="wikilink" href="../strategy/三重濾網交易系統.html">三重濾網交易系統</a> 中第二重濾網的理想工具：
+<ul><li>第一重：週線 MACD 判斷大方向</li>
+<li>第二重：日線 Elder-Ray 找空頭力竭買點</li>
+<li>第三重：60分鐘線確認突破進場</li>
+</ul>
+
+<h2>注意事項</h2>
+
+<ul><li><strong>EMA 方向是前提</strong>：不看EMA方向就讀Bull/Bear Power毫無意義，多頭趨勢中看空頭力竭，空頭趨勢中看多頭力竭</li>
+<li><strong>Bear Power 在零軸下是正常的</strong>：不代表一定看空，關鍵是「柱狀體縮短」的力竭訊號</li>
+<li><strong>力量背離比絕對值更重要</strong>：不要纠结Bull Power數字多大，要看趨勢變化</li>
+<li><strong>盤整區間無效</strong>：EMA走平時Bull/Bear Power失去方向性參考價值</li>
+<li><strong>單獨使用風險高</strong>：一定要搭配趨勢判斷和其他指標確認</li>
+</ul>
+
+<h2>相關主題</h2>
+
+<ul><li><a class="wikilink" href="../strategy/三重濾網交易系統.html">三重濾網交易系統</a> - Elder-Ray的發明者Elder設計的多時間框架系統</li>
+<li><a class="wikilink" href="../strategy/多時間框架分析.html">多時間框架分析</a> - Elder-Ray適合放在中間層級使用</li>
+<li><span class="wikilink disabled">指標背離頂背離底背離</span> - Power Divergence是背離的一種</li>
+<li><span class="wikilink disabled">順勢交易</span> - Elder-Ray是順勢交易找進場點的最佳工具</li>
+<li><span class="wikilink disabled">MACD背離RSI背離KD背離量價背離</span> - 其他背離指標可交叉驗證</li>
+</ul>
+
+<h2>來源</h2>
+
+<li><a href="../raw/2026-04-30/Elder-Ray-Index牛熊力量指標.md">Elder-Ray Index - XQ官方部落格</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="../strategy/多時間框架分析.html">多時間框架分析</a>, <a class="wikilink" href="../strategy/三重濾網交易系統.html">三重濾網交易系統</a>, <a class="wikilink" href="../strategy/三重濾網交易系統.html">三重濾網交易系統</a>, <a class="wikilink" href="../strategy/多時間框架分析.html">多時間框架分析</a></p>
+        </article>
     </main>
-    <footer><p>股票知識庫 · 每小時自動學習，每天自動編譯</p></footer>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>技術分析 - 股票知識庫</title>
+    <title>多時間框架分析 - 股票知識庫</title>
     <style>
 :root {
     --primary: #6366f1;
@@ -84,46 +84,95 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">📈</div>
                 <div class="logo-text">股票知識庫</div>
             </a>
-            <nav><a href="technical.html" class=" active">技術分析</a><a href="fundamental.html" class="">基本面分析</a><a href="chips.html" class="">籌碼面分析</a><a href="strategy.html" class="">操作策略</a><a href="risk.html" class="">風險管理</a></nav>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class=" active">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
         </div>
     </header>
     <main class="container">
-        <h1 class="section-title">📊 技術分析</h1>
-        <p style="color: var(--text-muted); margin-bottom: 32px;">K線、均線、技術指標</p>
-        <div class="section">
-        <div class="article-card">
-            <div class="article-title">
-                <a href="technical/k-patterns.html">K線型態</a>
-            </div>
-            <div class="article-excerpt">K線是技術分析的基礎語言，每一根K線都在說一個多空交戰的故事。</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="moving-averages.html">均線判斷</a>, <a class="wikilink" href="support-resistance.html">支撐壓力</a>, <a class="wikilink" href="../risk/stop-loss.html">停損方法</a></span></div>
-        </div>
-        <div class="article-card">
-            <div class="article-title">
-                <a href="technical/moving-averages.html">均線判斷</a>
-            </div>
-            <div class="article-excerpt">均線是市場成本線，價格在均線上代表過去一段時間買者賺錢。</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="k-patterns.html">K線型態</a>, <a class="wikilink" href="support-resistance.html">支撐壓力</a>, <a class="wikilink" href="../risk/stop-loss.html">停損方法</a></span></div>
-        </div>
-        <div class="article-card">
-            <div class="article-title">
-                <a href="technical/elder-ray牛熊力量指標.html">Elder-Ray牛熊力量指標</a>
-            </div>
-            <div class="article-excerpt">市場的X光機，看穿K線皮膚底下多頭貪婪與空頭恐懼的真實骨架</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="../strategy/多時間框架分析.html">多時間框架分析</a>, <a class="wikilink" href="../strategy/三重濾網交易系統.html">三重濾網交易系統</a>, <a class="wikilink" href="../strategy/三重濾網交易系統.html">三重濾網交易系統</a></span></div>
-        </div>
-        <div class="article-card">
-            <div class="article-title">
-                <a href="technical/support-resistance.html">支撐壓力</a>
-            </div>
-            <div class="article-excerpt">觸及次數越多越可靠，支撐壓力是心理關卡。</div>
-            <div class="article-meta"><span>相關：<a class="wikilink" href="k-patterns.html">K線型態</a>, <a class="wikilink" href="moving-averages.html">均線判斷</a>, <a class="wikilink" href="../risk/stop-loss.html">停損方法</a></span></div>
-        </div></div>
+        <article class="article-content">
+            <h1>多時間框架分析</h1>
+            <h1>多時間框架分析</h1>
+
+<blockquote>用多種時間週期辨識行情趨勢，長線保護短線，大方向對了再找進場點</blockquote>
+
+<h2>核心概念</h2>
+
+<p>多重時間框架（Multi TimeFrame, MTF）是透過多種時間週期來辨識股價行情趨勢的交易技術。</p>
+
+<p>很多人對同一檔股票看多看空意見不同，其實兩邊都沒錯，只是談論的週期不同。日線看空但月線看多，可能是月線多頭中的日線回檔——這就是多時間框架要解決的問題。</p>
+
+<p><strong>核心原則：長線保護短線</strong>
+長期趨勢難以扭轉，若長期趨勢為多方架構，短線操作就應以偏多思考為核心。</p>
+
+<h3>經典操作範例</h3>
+1. 月線級別 KD 黃金交叉 → 多方格局確認
+2. 週線級別 KD 也黃金交叉 → 中期也偏多
+3. 日線級別 KD 黃金交叉 → 短期轉強買入訊號
+
+<p>三個級別共振，勝率最高。</p>
+
+<h3>不同操作風格的時間框架選擇</h3>
+
+<table>
+<tr><th>操作風格</th><th>交易時間軸</th><th>參考上層</th><th>參考更上層</th></tr>
+<tr><td>----------</td><td>-----------</td><td>---------</td><td>-----------</td></tr>
+<tr><td>波段操作</td><td>日線</td><td>週線</td><td>月線</td></tr>
+<tr><td>當沖操作</td><td>5分K</td><td>15分K</td><td>30分K/60分K</td></tr>
+<tr><td>中長線投資</td><td>週線</td><td>月線</td><td>季線</td></tr>
+</table>
+<strong>重點</strong>：不能用日線操作當沖（1天才1根K棒），時間框架要匹配操作策略。
+
+<h2>實戰應用</h2>
+
+<h3>Step 1：判斷大方向（最高層級時間框架）</h3>
+<ul><li>用趨勢型指標（MA、MACD）判斷主趨勢方向</li>
+<li>主趨勢往上 → 只找做多機會</li>
+<li>主趨勢往下 → 只找做空機會</li>
+</ul>
+
+<h3>Step 2：找進場時機（中間層級時間框架）</h3>
+<ul><li>用震盪指標（KD、RSI）找超買超賣</li>
+<li>主趨勢多方 + KD 超賣區 = 拉回買點</li>
+<li>主趨勢空方 + KD 超買區 = 反彈空點</li>
+</ul>
+
+<h3>Step 3：確認進場點（最短層級時間框架）</h3>
+<ul><li>用突破型策略確認進場</li>
+<li>價格突破近期高點、帶量突破等</li>
+<li>也可以搭配 <a class="wikilink" href="../technical/elder-ray牛熊力量指標.html">Elder-Ray牛熊力量指標</a> 確認空頭力竭</li>
+</ul>
+
+<h3>多時間框架三重確認法</h3>
+這就是 <a class="wikilink" href="三重濾網交易系統.html">三重濾網交易系統</a> 的核心邏輯——三個層級的時間框架分別用不同類型的指標，互相驗證。
+
+<h2>注意事項</h2>
+
+<ul><li><strong>不要逆著大方向操作</strong>：月線空頭卻在日線做多，勝率極低</li>
+<li><strong>時間框架要匹配</strong>：當沖看日線沒意義，波段看5分K噪音太多</li>
+<li><strong>三個級別不必同時發出訊號</strong>：大方向確認後，等中短期出現機會即可</li>
+<li><strong>不同級別訊號矛盾時，以大級別為準</strong></li>
+<li><strong>多時間框架不是看越多級別越好</strong>：三個級別就夠了，太多反而混亂</li>
+</ul>
+
+<h2>相關主題</h2>
+
+<ul><li><a class="wikilink" href="三重濾網交易系統.html">三重濾網交易系統</a> - Alexander Elder 的多時間框架實戰系統</li>
+<li><a class="wikilink" href="../technical/elder-ray牛熊力量指標.html">Elder-Ray牛熊力量指標</a> - Elder 發明的多空力量指標，適合搭配多時間框架</li>
+<li><span class="wikilink disabled">順勢交易</span> - 多時間框架是順勢交易的最佳工具</li>
+<li><a class="wikilink" href="../technical/moving-averages.html">均線判斷</a> - 均線是判斷大方向的基本工具</li>
+<li><span class="wikilink disabled">KD指標隨機指標</span> - 常用於中間層級找超買超賣</li>
+<li><a class="wikilink" href="動能交易策略.html">動能交易策略</a> - 動能交易也常用多時間框架確認</li>
+</ul>
+
+<h2>來源</h2>
+
+<li><a href="../raw/2026-04-30/多重時間框架掌握順勢交易.md">利用時間也能分析股市？多重時間框架掌握順勢交易</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="../technical/elder-ray牛熊力量指標.html">Elder-Ray牛熊力量指標</a>, <a class="wikilink" href="三重濾網交易系統.html">三重濾網交易系統</a>, <a class="wikilink" href="三重濾網交易系統.html">三重濾網交易系統</a>, <a class="wikilink" href="../technical/elder-ray牛熊力量指標.html">Elder-Ray牛熊力量指標</a></p>
+        </article>
     </main>
-    <footer><p>股票知識庫 · 每小時自動學習，每天自動編譯</p></footer>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
 </body>
 </html>
