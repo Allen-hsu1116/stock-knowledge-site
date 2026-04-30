@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCP波動收縮型態 Volatility Contraction Pattern - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class=" active">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>VCP波動收縮型態 Volatility Contraction Pattern</h1>
+            <h1>VCP波動收縮型態 Volatility Contraction Pattern</h1>
+
+<blockquote>波動收縮越來越小、成交量萎縮到極限時，就是最佳進場點 — Mark Minervini的「聖盃」型態</blockquote>
+
+<h2>核心概念</h2>
+
+<p>VCP（Volatility Contraction Pattern，波動收縮型態）由美國投資冠軍 <strong>Mark Minervini</strong> 提出。他在1997年和2021年參加全美投資競賽，年化報酬率分別高達 <strong>155%</strong> 和 <strong>334.8%</strong>。</p>
+
+<p>VCP的核心邏輯：<strong>股價在上升趨勢的中段整理中，波動幅度一次比一次小，成交量也逐步萎縮，代表供給賣壓逐步消失，籌碼從弱者轉移到強者手中，最後出現突破點（樞紐點），就是最佳買進時機。</strong></p>
+
+<h3>比喻：擰毛巾</h3>
+
+<ul><li>第一次擰：流出大量水（第一次回檔跌幅最大，通常不超過50%）</li>
+<li>第二次擰：流出少量水（第二次回檔約為前一次的一半）</li>
+<li>第三次擰：流出些許水（波動越來越小）</li>
+<li>最後：一滴水都擰不出來（供給賣壓完全消失，少量買盤就能推升股價）</li>
+</ul>
+
+<h3>VCP型態特徵</h3>
+
+<p>1. 股價經過 <strong>2-6次</strong> 的波浪收縮
+2. 每次回檔幅度約為前一次的 <strong>一半</strong>（如25%→15%→12%→6%→3%）
+3. 成交量同步萎縮
+4. 最後收縮到極限，出現樞紐點（Pivot Buy Point）</p>
+
+<h2>實戰應用</h2>
+
+<h3>選股三條件</h3>
+
+<p><strong>條件1：股票處於第二階段上升趨勢</strong></p>
+
+<p>Minervini歸納股票四大階段：整理→承接→做頭→下降。幾乎所有強勢股的大漲都發生在第二階段。判斷標準：
+<ul><li>股價高於200MA</li>
+<li>200MA處於上升趨勢</li>
+<li>150MA高於200MA</li>
+<li>股價呈現階梯狀走勢（高點低點持續墊高）</li>
+<li>短線均線位於長線之上</li>
+<li>價漲量增、價跌量縮</li>
+</ul></p>
+
+<p><strong>條件2：價格波動呈現收縮</strong></p>
+
+<p>每次回檔幅度為前一次的一半，從大到小遞減：
+<ul><li>第一次回檔：最大（如25%）</li>
+<li>第二次回檔：約一半（如15%）</li>
+<li>越收越小，最後可能只剩1-3%</li>
+</ul></p>
+
+<p><strong>條件3：時間壓縮</strong></p>
+
+<p>健全的整理期間需要 <strong>3-65週</strong>，讓籌碼從弱者轉到強者手中。短期內沒完成消化籌碼就急漲，即使型態符合，風險也較高。</p>
+
+<h3>進場：樞紐點（Pivot Buy Point）</h3>
+
+<p>VCP整理完成後出現樞紐點，是賣壓最小的臨界點：
+<ul><li>價格行為呈現「價漲量增、價跌量縮」</li>
+<li>只要有少量買盤就能推升股價</li>
+<li>這是 <strong>右側交易</strong> 的進場點</li>
+</ul></p>
+
+<h3>突破後的確認訊號</h3>
+
+<p>1. <strong>跟進走勢</strong>：連續幾天大量漲勢（機構買盤vs散戶的區別）
+2. <strong>收高多於收低</strong>：突破後第一二週，上漲天數多於下跌天數
+3. <strong>網球行為</strong>：回檔後快速反彈（像網球彈跳，不是像雞蛋摔破）
+4. <strong>價格收在上半部</strong>：線形上半部收盤次數多於下半部</p>
+
+<h3>停損設定</h3>
+
+<ul><li>馬克建議停損 <strong>7-8%</strong> 或更低</li>
+<li>原則：停損不超過期望獲利的一半</li>
+<li>進場前制訂三件事：</li>
+</ul>
+  1. 起始停損點
+  2. 重新進場條件（再滿足買進條件即可）
+  3. 獲利了結（上移停損點）
+<ul><li><strong>極力反對向下攤平</strong>：「只有輸家才會向下攤平虧損部位」</li>
+</ul>
+
+<h3>台股實戰回測（丹尼爾）</h3>
+
+<ul><li>純VCP型態不夠，需搭配 <strong>客觀量化條件</strong></li>
+<li>結合 <strong>基本面因子</strong>（營收趨勢向上）+ <strong>相對大盤季漲幅</strong>（量價分析）</li>
+<li>回測結果：<strong>盈虧比>2，勝率5成多</strong>，穩定獲利</li>
+<li>紀律執行比選股更重要</li>
+</ul>
+
+<h2>注意事項</h2>
+
+<h3>常見誤解</h3>
+1. <strong>不是所有波動收縮都是VCP</strong>：合格VCP需要搭配SEPA策略的長期趨勢判斷，不是肉眼覺得「看起來像」就算
+2. <strong>VCP必須在上升趨勢中</strong>：Minervini強調，只有第二階段（上升趨勢中段整理）的VCP才有效，下跌趨勢中的收縮不算
+3. <strong>VCP≠100%勝率</strong>：出現VCP型態不一定能突破成功，突破失敗就要認賠
+
+<h3>三大風險</h3>
+1. <strong>突破失敗</strong>：VCP型態最後未必能突破，必須設好停損
+2. <strong>主觀判斷陷阱</strong>：肉眼看起來像VCP不代表就是，需要客觀量化條件
+3. <strong>急漲盤整</strong>：整理期間太短（未完成籌碼消化）就急漲，風險較高
+
+<h3>VCP策略的三個核心優勢（市場先生歸納）</h3>
+1. <strong>邏輯清晰</strong>：背後有籌碼面理由（供給減少→價格易漲）
+2. <strong>風控容易</strong>：波動收縮→停損點小→盈虧比好
+3. <strong>周轉率高</strong>：右側交易，對錯快速揭曉，資金使用效率高
+
+<h2>相關主題</h2>
+<ul><li><a class="wikilink" href="突破交易策略.html">突破交易策略</a></li>
+<li><span class="wikilink disabled">順勢交易</span></li>
+<li><span class="wikilink disabled">停損五法</span></li>
+<li><span class="wikilink disabled">量價關係</span></li>
+<li><span class="wikilink disabled">SEPA策略</span></li>
+<li><span class="wikilink disabled">均線多頭排列</span></li>
+<li><span class="wikilink disabled">海龜交易法則</span></li>
+<li><a class="wikilink" href="多時間框架分析.html">多時間框架分析</a></li>
+<li><a class="wikilink" href="三重濾網交易系統.html">三重濾網交易系統</a></li>
+<li><span class="wikilink disabled">型態學反轉型態中繼型態</span></li>
+</ul>
+
+<h2>來源</h2>
+<ul><li><a href="../raw/2026-04-30/VCP型態是什麼-市場先生.md">VCP 型態是什麼？- 市場先生</a></li>
+<li><a href="../raw/2026-04-30/VCP波動收斂型態台股選股-丹尼爾.md">VCP波動收斂型態台股選股 - 丹尼爾</a></li>
+</ul>
+<li><a href="../raw/2026-04-30/VCP價格波動收縮形態-技術分析指標.md">VCP 價格波動收縮形態 - 技術分析指標</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="突破交易策略.html">突破交易策略</a></p>
+        </article>
+    </main>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
+</body>
+</html>
