@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>震盪整理交易策略 - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class=" active">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>震盪整理交易策略</h1>
+            <h1>震盪整理交易策略</h1>
+
+<blockquote>盤整不是等待，是另一種賺錢的方式——但前提是你分得清盤整和趨勢</blockquote>
+
+<h2>核心概念</h2>
+
+<p>震盪整理（Range-bound / Consolidation）是指股價在一定區間內上下波動，沒有明確的上漲或下跌趨勢。這是市場中最常見的狀態——統計上約70%的時間股價處於盤整。</p>
+
+<p>盤整不可怕，可怕的是在盤整中用趨勢策略，或在趨勢中用盤整策略。</p>
+
+<h3>四大盤整形態</h3>
+
+<p>1. <strong>矩形整理（Box / Rectangle）</strong>
+   - 股價在水平支撐線與壓力線之間來回震盪
+   - 最典型的盤整型態，最容易操作
+   - 箱型理論的核心型態，與<span class="wikilink disabled">箱型理論Darvas Box</span>相關</p>
+
+<p>2. <strong>三角形整理（Triangle）</strong>
+   - 上升三角形：壓力線水平，支撐線上移 → 偏多
+   - 下降三角形：支撐線水平，壓力線下移 → 偏空
+   - 對稱三角形：壓力線與支撐線同時收斂 → 方向未定</p>
+
+<p>3. <strong>楔形整理（Wedge）</strong>
+   - 上升楔形：兩條邊界線都上移但收斂 → <strong>看空</strong>（與直覺相反！）
+   - 下降楔形：兩條邊界線都下移但收斂 → <strong>看多</strong>（也與直覺相反！）</p>
+
+<p>4. <strong>旗形整理（Flag）</strong>
+   - 急漲或急跌後的短暫休息
+   - 通常延續原趨勢方向
+   - 與<span class="wikilink disabled">型態學</span>中的旗型對應</p>
+
+<h3>判斷盤整還是趨勢</h3>
+
+<table>
+<tr><th>特徵</th><th>盤整</th><th>趨勢</th></tr>
+<tr><td>------</td><td>------</td><td>------</td></tr>
+<tr><td>均線</td><td>糾結</td><td>多頭/空頭排列</td></tr>
+<tr><td>量能</td><td>萎縮</td><td>溫和放大</td></tr>
+<tr><td>波幅</td><td>收斂</td><td>擴大</td></tr>
+<tr><td>新高新低</td><td>無</td><td>連續創新高或新低</td></tr>
+</table>
+<h2>實戰應用</h2>
+
+<h3>策略一：區間交易法（Range Trading）</h3>
+
+<p>在支撐線買入、壓力線賣出，適合明確的矩形整理。</p>
+
+<p><strong>操作步驟</strong>：
+1. 畫出支撐線和壓力線（至少觸碰2-3次才有效）
+2. 在支撐線附近買入（RSI < 30 或KD黃金交叉確認）
+3. 在壓力線附近賣出（RSI > 70 或KD死亡交叉確認）
+4. 停損設在支撐線下方2-3%</p>
+
+<p><strong>優點</strong>：勝率高、停損小、規則明確
+<strong>缺點</strong>：單次獲利有限、假突破風險</p>
+
+<h3>策略二：等待突破法（Breakout Trading）</h3>
+
+<p>等待價格有效突破區間邊界後順勢進場，與<a class="wikilink" href="突破交易策略.html">突破交易策略</a>相關。</p>
+
+<p><strong>有效突破確認</strong>：
+<ul><li>3%原則：價格突破區間邊界超過3%</li>
+<li>回測確認：突破後拉回測試原邊界，支撐壓力互換成功</li>
+<li>帶量突破：突破時成交量明顯放大（1.5倍均量以上）</li>
+</ul></p>
+
+<h3>策略三：保持觀望（Wait and See）</h3>
+
+<p>盤整期間保持耐心，保留資金，待趨勢方向明確後再進場。</p>
+
+<p><strong>適合</strong>：不擅長短線交易、無法頻繁看盤的投資者
+<strong>優點</strong>：避免方向不明時的無謂虧損
+<strong>缺點</strong>：可能錯過區間內的利潤</p>
+
+<h3>低量能＋盤整＝高勝率策略</h3>
+
+<p>XQ回測發現的一個高勝率策略：
+<ul><li>成交量 < 800張（低量能＝持有者看法一致）</li>
+<li>成交量 > 5張（避免完全無流動性）</li>
+<li>區間未破底且創新高（盤整後向上突破）</li>
+<li>進出場條件：獲利18%、停損18%</li>
+</ul></p>
+
+<p><strong>核心邏輯</strong>：「人多的地方不要去」
+<ul><li>低量能代表股價沒有溢價或膨脹問題</li>
+<li>持有成本容易被控制在一定範圍內</li>
+<li>持有者對股價看法較一致</li>
+<li>只要有資金追價，趨勢就容易形成</li>
+</ul></p>
+
+<p><strong>限制</strong>：交易胃納量極小，不適合大資金操作</p>
+
+<h3>XS選股代碼：區間未破底且創新高</h3>
+
+<pre><code class="">Input:period(60, "區間定義");
+Input:percent(25, "區間振幅定義");
+
+<p>Condition1 = False;
+Condition2 = False;</p>
+
+<p>Value1 = Lowest(Low, Period);</p>
+
+<p>IF Value1 = Low[Period - 1]
+Then Condition1 = True;</p>
+
+<p>IF Highest(High[1], Period) <= Value1 * (1 + Percent / 100)
+Then Condition2 = True;</p>
+
+<p>IF Condition1 and Condition2
+and Close Crosses Over Highest(Close[1], Period)
+Then Ret=1;
+</code></pre></p>
+
+<h2>注意事項</h2>
+
+<h3>假突破——盤整最大陷阱</h3>
+
+<p>假突破是震盪行情中最常見的陷阱，看起來突破結果又跌回區間內。</p>
+
+<p><strong>應對方法</strong>：
+1. <strong>3%原則</strong>：價格突破超過3%才視為有效突破
+2. <strong>回測確認</strong>：突破後拉回測試原邊界，確認支撐壓力互換
+3. <strong>量能確認</strong>：突破必須帶量，無量突破大概率是假突破
+4. <strong>時間確認</strong>：收盤價站穩壓力線上方3天</p>
+
+<h3>盤整交易的停損設計</h3>
+
+<ul><li><strong>區間停損</strong>：跌破支撐線2-3%出場</li>
+<li><strong>時間停損</strong>：持有超過預設天數未達目標，減碼出場</li>
+<li><strong>突破停損</strong>：區間被帶量突破反方向，立即停損反手</li>
+</ul>
+
+<h3>盤整何時結束？</h3>
+
+<p>盤整結束的訊號：
+1. <strong>帶量突破</strong>區間邊界
+2. 量能從萎縮轉為<strong>明顯放大</strong>
+3. 均線從糾結開始<strong>多頭或空頭排列</strong>
+4. 區間振幅越來越小（收斂到極致 = 即將變盤）</p>
+
+<h3>常見錯誤</h3>
+
+<p>1. <strong>在盤整中用趨勢策略</strong>：突破買進結果是假突破
+2. <strong>在趨勢中用盤整策略</strong>：拉回買進結果趨勢反轉
+3. <strong>忽略量能</strong>：盤整末期量縮到極致是變盤前兆
+4. <strong>區間畫太寬或太窄</strong>：至少2-3次觸碰才有效
+5. <strong>死守區間不停損</strong>：盤整突破後不認賠，小虧變大虧</p>
+
+<h2>相關主題</h2>
+
+<ul><li><a class="wikilink" href="逆勢交易策略.html">逆勢交易策略</a></li>
+<li><a class="wikilink" href="突破交易策略.html">突破交易策略</a></li>
+<li><span class="wikilink disabled">箱型理論Darvas Box</span></li>
+<li><span class="wikilink disabled">布林通道</span></li>
+<li><span class="wikilink disabled">均線糾結</span></li>
+<li><a class="wikilink" href="../technical/support-resistance.html">支撐壓力</a></li>
+<li><span class="wikilink disabled">假突破三道過濾</span></li>
+<li><span class="wikilink disabled">量先價行原則</span></li>
+</ul>
+
+<h2>來源</h2>
+
+<ul><li><a href="../raw/2026-04-30/低量能區間盤整高勝率策略XQ.md">低量能＋區間盤整＝勝率80%</a></li>
+</ul>
+<li><a href="../raw/2026-04-30/震盪整理四大形態與三種策略.md">震盪整理四大形態與三種策略</a></li>
+            <h2>相關主題</h2><p><a class="wikilink" href="突破交易策略.html">突破交易策略</a>, <a class="wikilink" href="逆勢交易策略.html">逆勢交易策略</a>, <a class="wikilink" href="突破交易策略.html">突破交易策略</a></p>
+        </article>
+    </main>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
+</body>
+</html>
