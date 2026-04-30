@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>類股輪動策略 - 股票知識庫</title>
+    <style>
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --bg: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 600; color: var(--text); }
+nav { display: flex; gap: 8px; }
+nav a { padding: 8px 16px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { background: var(--bg-tertiary); color: var(--text); }
+nav a.active { background: var(--primary); color: white; }
+
+main { padding: 40px 24px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero-title { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+.hero-subtitle { font-size: 18px; color: var(--text-muted); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+.topic-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: var(--text); }
+.topic-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.topic-icon { width: 48px; height: 48px; background: var(--bg-tertiary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
+.topic-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.topic-desc { font-size: 14px; color: var(--text-secondary); }
+.topic-count { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+
+.article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.article-card:hover { border-color: var(--primary); }
+.article-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.article-title a { color: var(--text); text-decoration: none; }
+.article-title a:hover { color: var(--primary); }
+.article-excerpt { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.article-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-muted); }
+
+.wikilink { color: var(--primary); text-decoration: none; }
+.wikilink:hover { text-decoration: underline; }
+.wikilink.disabled { color: var(--text-muted); }
+
+.article-content { max-width: 800px; }
+.article-content h2 { font-size: 24px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.article-content h3 { font-size: 18px; margin: 24px 0 12px; }
+.article-content p { margin-bottom: 16px; }
+.article-content ul, .article-content ol { margin: 16px 0; padding-left: 24px; }
+.article-content li { margin-bottom: 8px; }
+.article-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.article-content th, .article-content td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+.article-content th { background: var(--bg-secondary); font-weight: 600; }
+.article-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.9em; }
+.article-content pre { background: var(--bg-tertiary); padding: 16px; border-radius: 8px; overflow-x: auto; }
+.article-content pre code { background: none; padding: 0; }
+.article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">📈</div>
+                <div class="logo-text">股票知識庫</div>
+            </a>
+            <nav><a href="../technical.html" class="">技術分析</a><a href="../fundamental.html" class="">基本面分析</a><a href="../chips.html" class="">籌碼面分析</a><a href="../strategy.html" class=" active">操作策略</a><a href="../risk.html" class="">風險管理</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <article class="article-content">
+            <h1>類股輪動策略</h1>
+            <h1>類股輪動策略</h1>
+
+<blockquote>資金不會同時湧入所有產業——看懂輪動順序，提前部署下一個主流類股</blockquote>
+
+<h2>核心概念</h2>
+
+<p><strong>類股輪動（Sector Rotation）</strong> 是指市場資金在不同產業類別之間輪流移動的現象。A產業漲到一定程度後，資金撤出轉進B產業，形成「類股輪漲」的節奏。</p>
+
+<h3>為什麼會有類股輪動？</h3>
+
+<p>1. <strong>資金效率</strong>：台股規模越來越大，外資法人進入後，主力結構改變，無法同時拉抬所有類股，於是出現輪動
+2. <strong>景氣循環</strong>：不同產業在不同景氣階段表現不同（參見<span class="wikilink disabled">風險管理/美林投資時鐘景氣循環四階段|美林投資時鐘</span>）
+3. <strong>短線資金操作</strong>：資金湧入某類股推高股價 → 實現獲利後撤出 → 尋找下一個還沒漲的類股 → 重複
+4. <strong>消息面驅動</strong>：政策、數據、事件驅動資金在不同產業間移動</p>
+
+<h3>類股 vs 概念股</h3>
+
+<ul><li><strong>類股</strong>：以產業類別作為分類基準，有統一的客觀定義（如金融類股、電子類股、半導體類股）</li>
+<li><strong>概念股</strong>：較偏向主觀個人認定的題材分類（如AI概念股、降息受惠股）</li>
+</ul>
+
+<h3>權值股是輪動的核心</h3>
+
+<p>類股輪動也可以叫做「權值股輪漲」。每個類股都有領頭羊（權值股），它們的表現決定了整個類股的方向。</p>
+
+<h2>實戰應用</h2>
+
+<h3>辨識類股輪動的方法</h3>
+
+<p>1. <strong>觀察類股指數強弱</strong>：比較各產業類股指數的相對強度
+2. <strong>資金流向追蹤</strong>：觀察法人資金在各類股間的流動
+3. <strong>RSI產業指標</strong>：用各產業的RSI數值判斷相對強弱
+   - RSI > 65：產業處於相對高點，可能開始循環
+   - RSI 上升15以上：產業循環可能結束
+4. <strong>景氣信號燈搭配</strong>：
+   - 牛市（景氣信號上升）→ 觀察產業輪動信號，將0050 ETF短期置換成輪動類股
+   - 熊市（景氣信號下降） → 平倉股票，持有短天期債券</p>
+
+<h3>航運領先半導體的輪動模式</h3>
+
+<p>TEJ實證發現：航運指數的轉強經常領先於半導體的上漲。
+<ul><li>航運 RSI > 65 → 買入半導體相關類股</li>
+<li>半導體 RSI 相對買入時上升15 → 出場賣出半導體回到0050 ETF</li>
+<li>此策略搭配景氣燈號可優化單純持有大盤的績效</li>
+</ul></p>
+
+<h3>類股輪動操作SOP</h3>
+
+<p>1. <strong>辨識當前主流類股</strong>：用類股指數漲跌幅、法人買超、成交量判斷
+2. <strong>判斷主流是否接近尾聲</strong>：法人開始減碼、成交量暴增但股價不漲、散戶大量進入
+3. <strong>尋找下一個輪動類股</strong>：觀察RSI低、法人開始加碼、有題材但尚未發動的類股
+4. <strong>提前部署</strong>：在主流類股尚未結束前就開始觀察下一個標的
+5. <strong>確認後進場</strong>：新主流類股帶量突破、法人持續買超時進場</p>
+
+<h3>搭配美林投資時鐘</h3>
+
+<table>
+<tr><th>景氣階段</th><th>表現較好的類股</th></tr>
+<tr><td>----------</td><td>---------------</td></tr>
+<tr><td>復甦期</td><td>科技、非必需消費</td></tr>
+<tr><td>繁榮期</td><td>原物料、工業</td></tr>
+<tr><td>滯脹期</td><td>能源、必需消費</td></tr>
+<tr><td>衰退期</td><td>公用事業、醫療、防禦股</td></tr>
+</table>
+<h2>注意事項</h2>
+
+<h3>類股輪動的陷阱</h3>
+
+<ul><li><strong>散戶反向指標</strong>：散戶開始狂買某類股時，可能就是輪動即將結束的訊號</li>
+<li><strong>輪動速度加快</strong>：在震盪市中輪動速度極快，追高殺低風險大</li>
+<li><strong>假輪動</strong>：某類股一天大漲不代表資金真的在輪動，可能是消息面驅動的短線脈衝</li>
+<li><strong>不要所有類股同時漲</strong>：如果大盤全面上漲，就不是輪動而是牛市</li>
+</ul>
+
+<h3>實戰提醒</h3>
+
+<ul><li>類股輪動在大型市場（如台股）才有意義，小型市場容易全面漲跌</li>
+<li>輪動需要時間，不要因為一天的上漲就判斷輪動開始</li>
+<li>法人資金流向是輪動最可靠的領先指標</li>
+<li>搭配<span class="wikilink disabled">操作策略/多時間框架分析|多時間框架分析</span>確認趨勢</li>
+</ul>
+
+<h2>相關主題</h2>
+
+<ul><li><span class="wikilink disabled">風險管理/美林投資時鐘景氣循環四階段|美林投資時鐘</span> - 景氣循環與類股表現的對應關係</li>
+<li><span class="wikilink disabled">技術分析/RSI相對強弱指數|RSI相對強弱指數</span> - 用RSI判斷產業相對強弱</li>
+<li><span class="wikilink disabled">操作策略/動能交易策略|動能交易策略</span> - 類股輪動本質上是跨產業的動能交易</li>
+<li><span class="wikilink disabled">籌碼面分析/三大法人特性|三大法人特性</span> - 法人資金流向是輪動的驅動力</li>
+<li><span class="wikilink disabled">操作策略/順勢交易|順勢交易</span> - 輪動確認後順勢操作</li>
+<li><span class="wikilink disabled">技術分析/量價關係與背離|量價關係與背離</span> - 判斷類股是否接近尾聲</li>
+</ul>
+
+<h2>來源</h2>
+
+<ul><li><a href="../raw/2026-04-30/類股輪動CMoney.md">類股輪動CMoney</a></li>
+</ul>
+<li><a href="../raw/2026-04-30/產業輪動量化回測TEJ.md">產業輪動量化回測TEJ</a></li>
+            
+        </article>
+    </main>
+    <footer><p>股票知識庫 · <a href="../index.html">返回首頁</a></p></footer>
+</body>
+</html>
