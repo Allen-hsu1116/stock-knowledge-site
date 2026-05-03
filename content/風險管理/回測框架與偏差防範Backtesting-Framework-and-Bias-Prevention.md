@@ -97,14 +97,14 @@
 
 ## 相關主題
 
-- [[風險管理/交易策略開發流程Trading-Strategy-Development-Workflow|交易策略開發流程]]
-- [[風險管理/回測過擬合Backtest-Overfitting|回測過擬合]]
-- [[風險管理/過度擬合Overfitting量化判斷|過度擬合量化判斷]]
-- [[風險管理/回測驗證Backtesting陷阱|回測驗證陷阱]]
-- [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]]
-- [[風險管理/生存者偏差Survivorship-Bias|生存者偏差]]
-- [[風險管理/滑價與交易執行風險|滑價與交易執行風險]]
-- [[風險管理/交易總成本TCT與滑價風險|交易總成本與滑價風險]]
+- [[交易策略開發流程Trading-Strategy-Development-Workflow|交易策略開發流程]]
+- [[回測過擬合Backtest-Overfitting|回測過擬合]]
+- [[過度擬合Overfitting量化判斷|過度擬合量化判斷]]
+- [[回測驗證Backtesting陷阱|回測驗證陷阱]]
+- [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]]
+- [[生存者偏差Survivorship-Bias|生存者偏差]]
+- [[滑價與交易執行風險|滑價與交易執行風險]]
+- [[交易總成本TCT與滑價風險|交易總成本與滑價風險]]
 
 ## 來源
 

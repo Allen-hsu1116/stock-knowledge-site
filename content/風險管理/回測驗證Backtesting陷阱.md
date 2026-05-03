@@ -99,7 +99,7 @@
 - [[回測過擬合Backtest-Overfitting]]
 - [[過度擬合Overfitting量化判斷]]
 - [[交易總成本TCT與滑價風險]]
-- [[因子衰退Factor Decay]]
+- [[因子衰退Factor-Decay]]
 - [[模型風險Model Risk]]
 - [[策略壓力測試Stress-Testing]]
 - [[流動性幻覺Liquidity-Illusion]]

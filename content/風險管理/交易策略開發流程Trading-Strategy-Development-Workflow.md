@@ -122,17 +122,17 @@
 
 ## 相關主題
 
-- [[風險管理/回測過擬合Backtest-Overfitting|回測過擬合 Backtest Overfitting]]
-- [[風險管理/過度擬合Overfitting量化判斷|過度擬合Overfitting量化判斷]]
-- [[風險管理/回測驗證Backtesting陷阱|回測驗證Backtesting陷阱]]
-- [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬交易驗證]]
-- [[風險管理/順序風險Sequence-Risk|順序風險 Sequence Risk]]
-- [[風險管理/策略壓力測試Stress-Testing|策略壓力測試]]
-- [[風險管理/生存者偏差Survivorship-Bias|生存者偏差 Survivorship Bias]]
-- [[風險管理/風險調整報酬指標夏普比率與索提諾比率|風險調整報酬指標]]
-- [[操作策略/規則化交易系統Rule-Based-Trading-System|規則化交易系統]]
-- [[風險管理/交易總成本TCT與滑價風險|交易總成本與滑價風險]]
-- [[風險管理/因子衰退Factor-Decay|因子衰退]]
+- [[回測過擬合Backtest-Overfitting|回測過擬合 Backtest Overfitting]]
+- [[過度擬合Overfitting量化判斷|過度擬合Overfitting量化判斷]]
+- [[回測驗證Backtesting陷阱|回測驗證Backtesting陷阱]]
+- [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬交易驗證]]
+- [[順序風險Sequence-Risk|順序風險 Sequence Risk]]
+- [[策略壓力測試Stress-Testing|策略壓力測試]]
+- [[生存者偏差Survivorship-Bias|生存者偏差 Survivorship Bias]]
+- [[風險調整報酬指標夏普比率與索提諾比率|風險調整報酬指標]]
+- [[規則化交易系統Rule-Based-Trading-System|規則化交易系統]]
+- [[交易總成本TCT與滑價風險|交易總成本與滑價風險]]
+- [[因子衰退Factor-Decay|因子衰退]]
 
 ## 來源
 

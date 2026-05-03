@@ -44,10 +44,10 @@
 
 ## 相關主題
 
-- [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬交易驗證]]
-- [[風險管理/回測過擬合Backtest-Overfitting|回測過擬合]]
-- [[風險管理/MDD回撤管理三維度|MDD回撤管理]]
-- [[風險管理/斷頭強制平倉Forced-Liquidation|斷頭強制平倉]]
+- [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬交易驗證]]
+- [[回測過擬合Backtest-Overfitting|回測過擬合]]
+- [[MDD最大回撤計算與恢復難度|MDD回撤管理]]
+- [[斷頭強制平倉Forced-Liquidation|斷頭強制平倉]]
 
 ## 來源
 

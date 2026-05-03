@@ -116,15 +116,15 @@ ATR 可用於計算每筆交易的合理部位大小：
 
 ## 相關主題
 
-- [[ATR停損停利系統波動大停損大波動小停損小]]
+- [[ATR平均真實波幅-Average-True-Range]]
 - [[移動停利停損Trailing-Stop]]
 - [[SuperTrend超級趨勢指標]]
 - [[布林通道Bollinger-Bands三軌八型態]]
 - [[海龜交易法則]]
-- [[部位控制Position-Sizing]]
+- [[倉位管理]]
 - [[停損設定方法Stop-Loss-Placement]]
 - [[多時間框架分析]]
-- [[DMI趨向指標+DI-DI-ADX三線判讀]]
+- [[ADX趨勢強度過濾盤整]]
 
 ## 來源
 

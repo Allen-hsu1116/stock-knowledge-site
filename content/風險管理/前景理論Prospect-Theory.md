@@ -55,11 +55,11 @@
 
 ## 相關主題
 - [[認知偏誤與交易心理]]
-- [[損失厭惡Loss Aversion處置效應過度自信FOMO]]
+- [[前景理論Prospect-Theory]]
 - [[交易心理紀律執行力]]
 - [[停損方法]]
-- [[交易期望值Trading Expectancy]]
-- [[風險報酬比Risk Reward Ratio]]
+- [[交易期望值Trading-Expectancy]]
+- [[風險報酬比]]
 
 ## 來源
 - [前景理論 — 波段抱不住，砍在阿呆股的行為經濟理論基礎](../raw/2026-05-01/前景理論Prospect-Theory.md)

@@ -109,27 +109,27 @@
 
 資金曲線管理不是獨立使用的，它應該搭配：
 
-- [[風險報酬比Risk-Reward-Ratio]]：每筆交易的風險報酬比
+- [[風險報酬比]]：每筆交易的風險報酬比
 - [[MDD最大回撤計算與恢復難度]]：了解回撤的嚴重性
-- [[Calmar Ratio]]：年化報酬 / MDD，衡量風險調整後報酬
-- [[部位管理Position Sizing]]：單筆風險控制
+- [[風險調整報酬指標夏普比率與索提諾比率]]：年化報酬 / MDD，衡量風險調整後報酬
+- [[倉位管理]]：單筆風險控制
 - [[停損設定方法Stop-Loss-Placement]]：個別交易的停損設定
-- [[風險平價Risk Parity]]：跨資產的風險平衡
+- [[風險平價Risk-Parity]]：跨資產的風險平衡
 
 ## 相關主題
 
 - [[MDD最大回撤計算與恢復難度]]
-- [[回撤持續時間Drawdown Duration]]
-- [[Calmar Ratio]]
-- [[追蹤回撤Trailing Drawdown]]
-- [[風險報酬比Risk Reward Ratio]]
-- [[交易期望值Trading Expectancy]]
-- [[部位管理Position Sizing]]
+- [[MDD最大回撤計算與恢復難度]]
+- [[風險調整報酬指標夏普比率與索提諾比率]]
+- [[MDD最大回撤計算與恢復難度]]
+- [[風險報酬比]]
+- [[交易期望值Trading-Expectancy]]
+- [[倉位管理]]
 - [[停損設定方法Stop-Loss-Placement]]
-- [[風險平價Risk Parity]]
-- [[報復性交易防禦Revenge Trading Defense]]
+- [[風險平價Risk-Parity]]
+- [[報復性交易防禦體系Revenge-Trading-Defense]]
 - [[交易心理紀律執行力]]
-- [[資金曲線交易策略]]（交易策略篇）
+- [[趨勢線交易策略]]（交易策略篇）
 
 ## 來源
 

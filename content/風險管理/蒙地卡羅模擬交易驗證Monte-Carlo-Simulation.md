@@ -104,13 +104,13 @@ print(f"破產機率: {np.mean(mdd_dist > 破產閾值):.2%}")
 
 ## 相關主題
 
-- [[風險管理/回測過擬合Backtest-Overfitting|回測過擬合 Backtest Overfitting]]
-- [[風險管理/過度擬合Overfitting量化判斷|過度擬合Overfitting量化判斷]]
-- [[風險管理/回測驗證Backtesting陷阱|回測驗證Backtesting陷阱]]
-- [[風險管理/策略壓力測試Stress-Testing|策略壓力測試Stress Testing]]
-- [[風險管理/風險報酬比Risk-Reward-Ratio|風險報酬比Risk Reward Ratio]]
-- [[風險管理/交易期望值Trading-Expectancy|交易期望值Trading Expectancy]]
-- [[風險管理/資金曲線管理Equity-Curve-Management|資金曲線管理Equity Curve Management]]
+- [[回測過擬合Backtest-Overfitting|回測過擬合 Backtest Overfitting]]
+- [[過度擬合Overfitting量化判斷|過度擬合Overfitting量化判斷]]
+- [[回測驗證Backtesting陷阱|回測驗證Backtesting陷阱]]
+- [[策略壓力測試Stress-Testing|策略壓力測試Stress Testing]]
+- [[風險報酬比|風險報酬比Risk Reward Ratio]]
+- [[交易期望值Trading-Expectancy|交易期望值Trading Expectancy]]
+- [[資金曲線管理Equity-Curve-Management|資金曲線管理Equity Curve Management]]
 
 ## 來源
 

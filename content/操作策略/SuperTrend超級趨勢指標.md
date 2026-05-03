@@ -87,15 +87,15 @@ SuperTrend最大缺點：**盤整時反覆反轉，每次突破就反轉**。
 
 ## 相關主題
 
-- [[DMI趨向指標]] — +DI/-DI判斷方向，ADX判斷強度
+- [[ADX趨勢強度過濾盤整]] — +DI/-DI判斷方向，ADX判斷強度
 - [[ADX趨勢強度過濾盤整]] — ADX數值判斷趨勢/盤整狀態
-- [[ATR停損停利系統]] — SuperTrend的核心計算基礎
+- [[ATR平均真實波幅-Average-True-Range]] — SuperTrend的核心計算基礎
 - [[順勢交易]] — SuperTrend是順勢交易的典型工具
 - [[海龜交易法則]] — 同樣使用ATR停損+突破進場的經典系統
-- [[箱型理論Darvas Box]] — 同樣抓箱型突破的概念
+- [[箱型理論Darvas-Box]] — 同樣抓箱型突破的概念
 - [[VCP波動收縮型態]] — 型態確認後突破，與SuperTrend互補
-- [[布林通道Squeeze]] — 另一種盤整突破策略
-- [[移動停損Trailing Stop]] — SuperTrend本質就是移動停損
+- [[布林通道Bollinger-Bands三軌八型態]] — 另一種盤整突破策略
+- [[移動停利停損Trailing-Stop]] — SuperTrend本質就是移動停損
 - [[震盪整理交易策略]] — SuperTrend失靈時的替代策略
 
 ## 來源

@@ -64,10 +64,10 @@
 
 ## 相關主題
 - [[回測驗證Backtesting陷阱]]
-- [[因子衰退Factor Decay]]
+- [[因子衰退Factor-Decay]]
 - [[過度擬合Overfitting量化判斷]]
 - [[策略壓力測試Stress-Testing]]
-- [[前進分析Walk-Forward Analysis]]
+- [[回測框架與偏差防範Backtesting-Framework-and-Bias-Prevention]]
 - [[交易期望值Trading-Expectancy]]
 - [[模型風險Model Risk]]
 

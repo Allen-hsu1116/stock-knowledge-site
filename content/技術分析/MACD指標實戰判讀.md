@@ -138,12 +138,12 @@ MACD由三個相互關聯的元素組成：
 ## 相關主題
 
 - [[背離Divergence進階實戰]]
-- [[KD指標隨機指標RSV計算K值D值]]
-- [[RSI相對強弱指數計算公式14日6日]]
+- [[KD指標隨機指標]]
+- [[RSI相對強弱指標]]
 - [[均線判斷]]
 - [[均線多頭排列與空頭排列]]
-- [[布林通道Bollinger Bands三軌八型態]]
-- [[CCI商品通道指標Commodity Channel Index]]
+- [[布林通道Bollinger-Bands三軌八型態]]
+- [[CCI商品通道指標Commodity-Channel-Index]]
 - [[多時間框架分析]]
 
 ## 來源

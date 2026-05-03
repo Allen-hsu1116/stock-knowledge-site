@@ -49,10 +49,10 @@
 
 ## 相關主題
 - [[回測驗證Backtesting陷阱]]
-- [[過度擬合Overfitting]]
+- [[過度擬合Overfitting量化判斷]]
 - [[認知偏誤與交易心理]]
-- [[交易期望值Trading Expectancy]]
-- [[策略壓力測試Stress Testing]]
+- [[交易期望值Trading-Expectancy]]
+- [[策略壓力測試Stress-Testing]]
 - [[模型風險Model Risk]]
 
 ## 來源

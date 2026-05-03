@@ -82,13 +82,13 @@ ATR 停損確保停損位於正常市場噪音之外，同時數學可控。
 ## 相關主題
 
 - [[停損方法]]
-- [[ATR停損停利系統]]
+- [[ATR平均真實波幅-Average-True-Range]]
 - [[倉位管理]]
-- [[風險報酬比Risk-Reward-Ratio]]
+- [[風險報酬比]]
 - [[交易期望值Trading-Expectancy]]
-- [[移動停損Trailing-Stop]]
-- [[報復性交易Revenge-Trading]]
-- [[過度交易Overtrading]]
+- [[移動停利停損Trailing-Stop]]
+- [[報復性交易防禦體系Revenge-Trading-Defense]]
+- [[交易心理紀律執行力]]
 
 ## 來源
 

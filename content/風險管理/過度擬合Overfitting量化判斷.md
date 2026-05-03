@@ -86,7 +86,7 @@ Bailey等人用CSCV方法測試策略：
 ## 相關主題
 - [[回測過擬合Backtest-Overfitting]]
 - [[回測驗證Backtesting陷阱]]
-- [[因子衰退Factor Decay]]
+- [[因子衰退Factor-Decay]]
 - [[風險調整報酬指標夏普比率與索提諾比率]]
 - [[交易期望值Trading-Expectancy]]
 - [[模型風險Model Risk]]

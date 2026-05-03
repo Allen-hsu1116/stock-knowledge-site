@@ -99,17 +99,17 @@ Douglas 的框架是所有風險管理的心理基礎：
 ## 相關主題
 - [[交易心理紀律執行力]]
 - [[認知偏誤與交易心理]]
-- [[交易計畫Trading Plan七大要素]]
-- [[交易日誌系統七個必填欄位]]
-- [[規則化交易系統Rule-Based Trading System]]
-- [[交易紀律量化系統Rule Adherence Score]]
-- [[損失厭惡Loss Aversion]]
-- [[過度交易Overtrading]]
-- [[報復性交易防禦體系Revenge Trading Defense]]
-- [[風險報酬比Risk Reward Ratio]]
-- [[交易期望值Trading Expectancy]]
+- [[交易心理紀律執行力]]
+- [[交易心理紀律執行力]]
+- [[規則化交易系統Rule-Based-Trading-System]]
+- [[交易紀律量化系統Rule-Adherence-Score]]
+- [[前景理論Prospect-Theory]]
+- [[交易心理紀律執行力]]
+- [[報復性交易防禦體系Revenge-Trading-Defense]]
+- [[風險報酬比]]
+- [[交易期望值Trading-Expectancy]]
 - [[停損方法]]
-- [[2%法則]]
+- [[倉位管理]]
 
 ## 來源
 - [《紀律的交易者》- 重點整理與心得](../raw/2026-05-01/紀律的交易者-重點整理與心得.md)

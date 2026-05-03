@@ -53,9 +53,9 @@ Elder-Ray 是 [[三重濾網交易系統]] 中第二重濾網的理想工具：
 
 - [[三重濾網交易系統]] - Elder-Ray的發明者Elder設計的多時間框架系統
 - [[多時間框架分析]] - Elder-Ray適合放在中間層級使用
-- [[指標背離頂背離底背離]] - Power Divergence是背離的一種
+- [[背離Divergence進階實戰]] - Power Divergence是背離的一種
 - [[順勢交易]] - Elder-Ray是順勢交易找進場點的最佳工具
-- [[MACD背離RSI背離KD背離量價背離]] - 其他背離指標可交叉驗證
+- [[背離Divergence進階實戰]] - 其他背離指標可交叉驗證
 
 ## 來源
 

@@ -116,11 +116,11 @@ TEJ用台指買權TXO202304C15500驗證：
 
 - [[選擇權Greeks希臘字母]]
 - [[Theta時間衰減實戰]]
-- [[波動率微笑曲線與偏態Volatility Smile and Skew]]
+- [[波動率微笑曲線與偏態Volatility-Smile-and-Skew]]
 - [[隱含波動率IV與歷史波動率HV實戰判讀]]
 - [[選擇權四大基本策略]]
 - [[選擇權組合策略]]
-- [[Vega對沖遠月賣權]]
+- [[選擇權Greeks希臘字母]]
 
 ## 來源
 
