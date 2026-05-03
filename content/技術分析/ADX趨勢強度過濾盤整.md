@@ -87,7 +87,7 @@ ADX（Average Directional Movement Index，平均趨向指數）由J. Welles Wil
 
 ## 相關主題
 
-- [[ADX趨勢強度過濾盤整]] — ADX的完整版，包含+DI/-DI方向判斷
+- [[DMI動向指標與DI方向判斷]] — +DI/-DI方向判斷的完整教學，DMI系統三線合一
 - [[SuperTrend超級趨勢指標]] — ADX的最佳搭配對象，過濾盤整假訊號
 - [[KD指標隨機指標]] — 另一種超買超賣判斷
 - [[RSI相對強弱指標]] — ADX判強度+RSI判方向的經典組合
@@ -96,8 +96,13 @@ ADX（Average Directional Movement Index，平均趨向指數）由J. Welles Wil
 - [[均線糾結]] — 盤整的視覺判斷法，與ADX低位互相印證
 - [[震盪整理交易策略]] — ADX低位時的替代策略
 
+- [[DMI動向指標與DI方向判斷]] — +DI/-DI方向判斷的完整教學
+
 ## 來源
 
 - [ADX指標完整教學QuantPass](../raw/2026-04-30/ADX指標完整教學QuantPass.md)
 - [超級趨勢策略TEJ](../raw/2026-04-30/超級趨勢策略TEJ.md)
 - [Supertrend指標FinTastic](../raw/2026-04-30/Supertrend指標FinTastic.md)
+- [善用動向指標DMI-ADX找出大趨勢-OANDA](../raw/2026-05-03/善用動向指標DMI-ADX找出大趨勢-OANDA.md)
+- [DMI指標完整教學當沖用法與參數設定-量化通](../raw/2026-05-03/DMI指標完整教學當沖用法與參數設定-量化通.md)
+- [ADX指標完整教學與DMI搭配-量化通](../raw/2026-05-03/ADX指標完整教學與DMI搭配-量化通.md)
