@@ -18,10 +18,14 @@ rsync -av --delete \
   --exclude='SCHEMA.md' \
   --exclude='SKILL.md' \
   --exclude='INDEX.md' \
+  --exclude='index.md' \
   --exclude='.obsidian' \
   --exclude='templates' \
   --exclude='private' \
   "$WIKI_DIR/" "$QUARTZ_DIR/content/"
+
+# 複製首頁（獨立維護，不受 wiki/INDEX.md 影響）
+cp "$QUARTZ_DIR/quartz-index.md" "$QUARTZ_DIR/content/index.md"
 
 echo "✅ 同步完成"
 echo ""
