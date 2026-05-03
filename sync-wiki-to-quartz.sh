@@ -17,6 +17,7 @@ fi
 rsync -av --delete \
   --exclude='SCHEMA.md' \
   --exclude='SKILL.md' \
+  --exclude='INDEX.md' \
   --exclude='.obsidian' \
   --exclude='templates' \
   --exclude='private' \
