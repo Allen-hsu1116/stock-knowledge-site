@@ -53,8 +53,8 @@ f = (0.45 × 3 - 1) / 2 = 0.175 = **17.5%**
 1. 先回測策略取得勝率和盈虧比
 2. 代入凱利公式計算理論部位比例
 3. 打折至 Half Kelly 或更低
-4. 結合[[風險管理/交易期望值Trading-Expectancy]]驗證策略正期望值
-5. 用[[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]測試不同部位的結果
+4. 結合[[交易期望值Trading-Expectancy]]驗證策略正期望值
+5. 用[[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]測試不同部位的結果
 
 ### 反向求最低勝率或盈虧比
 
@@ -84,12 +84,12 @@ b > (1-p) / p
 
 ## 相關主題
 
-- [[風險管理/倉位管理]]
-- [[風險管理/交易期望值Trading-Expectancy|交易期望值]]
-- [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]]
-- [[風險管理/MDD最大回撤計算與恢復難度|MDD最大回撤]]
-- [[風險管理/財務槓桿風險管理Leverage-Risk-Management|財務槓桿風險管理]]
-- [[風險管理/回測過擬合Backtest-Overfitting|回測過擬合]]
+- [[倉位管理]]
+- [[交易期望值Trading-Expectancy|交易期望值]]
+- [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]]
+- [[MDD最大回撤計算與恢復難度|MDD最大回撤]]
+- [[財務槓桿風險管理Leverage-Risk-Management|財務槓桿風險管理]]
+- [[回測過擬合Backtest-Overfitting|回測過擬合]]
 
 ## 來源
 

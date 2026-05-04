@@ -178,3 +178,4 @@ Kinder %R（k%R）用成交量代替成交價計算，代表量的變化：
 - [Williams %R HeyGoTrade](../raw/2026-05-02/Williams-%R-HeyGoTrade.md)
 - [威廉指標完整教學 QuantPass](../raw/2026-05-03/威廉指標QuantPass.md)
 - [杜金龍台股技術分析回測 WMS%R](../raw/2026-05-03/威廉指標杜金龍台股回測.md)
+- [威廉指標完整教學 QuantPass](../raw/2026-05-04/威廉指標QuantPass完整教學.md)
