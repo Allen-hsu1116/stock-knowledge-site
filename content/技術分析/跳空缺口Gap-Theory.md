@@ -109,7 +109,8 @@
 - [[背離Divergence進階實戰]]
 - [[均線判斷]]
 - [[量價關係與背離]]
-- [[K線型態]]
+- [[島型反轉Island-Reversal]]
+- [[V型反轉V-Shaped-Reversal]]
 
 ## 來源
 - [跳空缺口是什麼？交易中如何使用？ - OANDA](../raw/2026-05-02/跳空缺口OANDA.md)
