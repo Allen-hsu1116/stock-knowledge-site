@@ -47,3 +47,4 @@
 - [[ADX趨勢強度過濾盤整]]
 - [[量價關係與背離]]
 - [[ATR平均真實波幅-Average-True-Range]]
+- [[肯特納通道Keltner-Channel]] - 用ATR而非標準差畫通道寬度，對極端波動更平滑
