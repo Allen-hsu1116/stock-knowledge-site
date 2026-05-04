@@ -144,6 +144,8 @@ VP 是**確認性指標**，不預測趨勢，需要與其他工具搭配：
 
 ## 相關主題
 - [[VWAP成交量加權均價]]
+- [[Market-Profile市場輪廓TPO]] - Market Profile看時間、Volume Profile看量能，兩者互補
+- [[訂單流足跡圖Footprint-Chart]] - 微觀訂單流驗證Volume Profile的量能分佈
 - [[量價關係九種型態高低檔判讀]]
 - [[支撐壓力]]
 - [[均值回歸策略]]
