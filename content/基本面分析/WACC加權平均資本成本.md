@@ -111,6 +111,8 @@ WACC 本身不是投資訊號，要搭配 ROIC（投入資本報酬率）：
 
 ## 相關主題
 
+- [[ROIC投入資本報酬率]] - ROIC > WACC 才是價值創造
+- [[EVA經濟附加價值]] - EVA = (ROIC - WACC) × 投入資本，WACC 是 EVA 的核心減項
 - [[企業價值倍數EV-EBIT與EV-EBITDA]] - EV/EBITDA 是 WACC 的倒推應用
 - [[現金流量折現法DCF估值]] - WACC 是 DCF 的折現率
 - [[營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]] - 槓桿影響 WACC 和資本結構
