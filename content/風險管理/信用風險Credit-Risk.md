@@ -99,6 +99,8 @@
 - [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
 - [[對沖風險三大內生風險與失敗案例]]
 - [[財務槓桿風險管理Leverage-Risk-Management]]
+- [[主權風險與主權違約Sovereign-Risk-and-Default]]
+- [[金融傳染風險Financial-Contagion]]
 
 ## 來源
 

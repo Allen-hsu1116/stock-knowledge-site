@@ -106,6 +106,8 @@
 - [[VaR風險值Value-at-Risk]]
 - [[風險報酬比]]
 - [[通膨風險與實質報酬Inflation-Risk-and-Real-Return]]
+- [[主權風險與主權違約Sovereign-Risk-and-Default]]
+- [[金融傳染風險Financial-Contagion]]
 
 ## 來源
 
