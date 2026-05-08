@@ -46,4 +46,4 @@
 - [[動能交易策略]]
 
 ## 來源
-- [美國就業大反彈！AI趕不走人類工作？](../raw/youtube/2026-05-07-oldwang.md)
+- [美國就業大反彈！AI趕不走人類工作？](https://www.youtube.com/watch?v=86grPFRI2Cc)

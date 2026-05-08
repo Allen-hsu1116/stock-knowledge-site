@@ -57,4 +57,4 @@
 - [[移動停損與左側右側交易]]
 
 ## 來源
-- [股息剩1.1%, 美股還有戲? AI邊緣運算起風了? 宏爺講股](../raw/youtube/2026-05-07-hongye.md)
+- [股息剩1.1%, 美股還有戲? AI邊緣運算起風了? 宏爺講股](https://www.youtube.com/watch?v=HjuR2S3lvDg)

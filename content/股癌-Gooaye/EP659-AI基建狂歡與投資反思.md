@@ -67,4 +67,4 @@
 - [[主力買賣超與買賣家數差]]
 
 ## 來源
-- [EP659 | 🦤](../raw/youtube/2026-05-06-gooaye.md)
+- [EP659 | 🦤](https://www.youtube.com/watch?v=pP-JU2PCDnU)

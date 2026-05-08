@@ -39,4 +39,4 @@
 - [[科技股投資策略]]
 
 ## 來源
-- [Google TPU升級引爆AI算力戰！周刊投資](../raw/youtube/2026-05-07-weekly-invest.md)
+- [Google TPU升級引爆AI算力戰！周刊投資](https://www.youtube.com/watch?v=P08w4lC_8Lo)
