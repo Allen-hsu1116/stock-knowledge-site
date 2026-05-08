@@ -76,6 +76,7 @@
 
 ## 相關主題
 
+- [[信用風險Credit-Risk]] - 集中度風險是信用風險的三大類型之一
 - [[風險預算Risk Budgeting|風險預算Risk Budgeting]] - 用風險而非金額分配部位，天然控制集中度
 - [[流動性風險Liquidity-Risk|流動性風險Liquidity Risk]] - 集中部位+低流動性=災難
 - [[集中度風險Concentration Risk|相關性風險Correlation Risk]] - 看似分散實則相關，分散失效的根源

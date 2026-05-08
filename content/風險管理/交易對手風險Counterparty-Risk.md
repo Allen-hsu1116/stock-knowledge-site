@@ -58,6 +58,8 @@
 
 ## 相關主題
 
+- [[信用風險Credit-Risk]] - 交易對手風險是信用風險的子集
+- [[信用利差Credit-Spread]] - 信用利差反映市場對違約風險的即時定價
 - [[流動性風險Liquidity-Risk|流動性風險]]
 - [[集中度風險Concentration Risk|集中度風險]]
 - [[停損設定方法Stop-Loss-Placement|停損設定方法]]
