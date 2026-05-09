@@ -183,6 +183,7 @@ Dalio的經濟環境四象限框架：
 - [[流動性風險Liquidity-Risk]]
 - [[模型風險Model Risk]]
 - [[集中度風險Concentration Risk]]
+- [[尾部風險平價Tail-Risk-Parity]]
 
 ## 來源
 

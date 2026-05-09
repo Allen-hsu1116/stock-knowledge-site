@@ -47,3 +47,6 @@
 - [[倉位管理]]
 - [[資金曲線管理Equity-Curve-Management]]
 - [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]
+- [[回撤分析進階Drawdown-Analysis-Advanced]]
+- [[Calmar-Ratio年化報酬MDD]]
+- [[回撤持續時間Drawdown-Duration]]
