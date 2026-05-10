@@ -1,3 +1,7 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// 表格日期欄不換行
+.youtube-table td:nth-child(3),
+.youtube-table th:nth-child(3) {
+  white-space: nowrap;
+}
