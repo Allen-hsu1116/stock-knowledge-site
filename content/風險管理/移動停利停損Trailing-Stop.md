@@ -5,7 +5,6 @@ source:
   - homedadpro.com/trailing-stop/
   - developer.fugle.tw (TrailingStop-strategy)
 date: 2026-05-10
-tags: [操作策略, 風險管理, 出場策略, Trailing-Stop, 移動停利, 移動停損]
 ---
 
 # 移動停利停損 Trailing Stop

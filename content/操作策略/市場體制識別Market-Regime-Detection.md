@@ -1,6 +1,5 @@
 ---
 title: 市場體制識別 Market Regime Detection
-tags:
   - 操作策略
   - 體制識別
   - ADX

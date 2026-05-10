@@ -1,5 +1,4 @@
 ---
-tags: [風險管理, 選擇權, Greeks, Delta, Gamma, Theta, Vega, IV]
 date: 2026-05-09
 ---
 

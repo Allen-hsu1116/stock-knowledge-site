@@ -2,7 +2,6 @@
 title: AD累積分配指標收盤位置加權
 date: 2026-05-04
 category: 技術分析
-tags: [AD, 累積分配, CLV, 量價指標, Marc Chaikin, 背離]
 ---
 
 # AD 累積分配指標收盤位置加權

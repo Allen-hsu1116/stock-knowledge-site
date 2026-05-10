@@ -1,6 +1,5 @@
 ---
 title: 波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral
-tags:
   - 操作策略
   - 選擇權
   - 波動率套利

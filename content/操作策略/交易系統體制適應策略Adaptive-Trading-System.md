@@ -1,6 +1,5 @@
 ---
 title: 交易系統體制適應策略 Adaptive Trading System
-tags:
   - 操作策略
   - 體制適應
   - 策略切換

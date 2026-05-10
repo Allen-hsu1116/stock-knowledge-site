@@ -1,5 +1,4 @@
 ---
-tags: [技術分析, 追蹤停損, Chande-Kroll-Stop, ATR, 出場指標]
 date: 2026-05-10
 ---
 

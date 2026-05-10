@@ -1,5 +1,4 @@
 ---
-tags: [操作策略, 加碼, 減碼, 部位管理, Scale-In, Scale-Out]
 date: 2026-05-10
 ---
 
