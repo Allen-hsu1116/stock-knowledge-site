@@ -102,6 +102,7 @@
 - [[過度擬合Overfitting量化判斷|過度擬合量化判斷]]
 - [[回測驗證Backtesting陷阱|回測驗證陷阱]]
 - [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]]
+- [[Walk-Forward-Analysis滾動前進驗證|Walk-Forward Analysis 滾動前進驗證]]
 - [[生存者偏差Survivorship-Bias|生存者偏差]]
 - [[滑價與交易執行風險|滑價與交易執行風險]]
 - [[交易總成本TCT與滑價風險|交易總成本與滑價風險]]
