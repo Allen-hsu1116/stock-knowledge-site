@@ -116,3 +116,5 @@
 - [EdgeTrader: DonChian Channel 唐奇安通道! 海龜交易法的核心](../raw/2026-05-03/唐奇安通道Donchian-Channel.md)
 - [量化通: 唐奇安通道完整教學](../raw/2026-05-03/唐奇安通道Donchian-Channel.md)
 - [程式交易快譯通: 唐奇安通道突破系統](../raw/2026-05-03/唐奇安通道Donchian-Channel.md)
+- [EdgeTrader: DonChian Channel 唐奇安通道! 海龜交易法的核心](../raw/2026-05-11/唐奇安通道完整教學.md)
+- [量化通: 唐奇安通道完整教學](../raw/2026-05-11/唐奇安通道完整教學.md)
