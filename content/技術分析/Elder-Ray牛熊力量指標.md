@@ -41,6 +41,27 @@ Elder-Ray 是 [[三重濾網交易系統]] 中第二重濾網的理想工具：
 - 第二重：日線 Elder-Ray 找空頭力竭買點
 - 第三重：60分鐘線確認突破進場
 
+## XScript 指標腳本
+
+```
+// 指標名稱：Elder-Ray Index (艾爾德射線 / 牛熊力量指標)
+// 理論基礎：Dr. Alexander Elder
+Input: Length(13, "EMA 計算週期");
+Variable: ValueEMA(0), BullPower(0), BearPower(0);
+
+// 1. 計算市場價值共識 (13 日 EMA)
+ValueEMA = XAverage(Close, Length);
+
+// 2. 計算多頭力量與空頭力量
+BullPower = High - ValueEMA;
+BearPower = Low - ValueEMA;
+
+// 3. 繪圖輸出
+Plot1(BullPower, "多頭力量(Bull)");
+Plot2(BearPower, "空頭力量(Bear)");
+Plot3(0, "價值共識(零軸)");
+```
+
 ## 注意事項
 
 - **EMA 方向是前提**：不看EMA方向就讀Bull/Bear Power毫無意義，多頭趨勢中看空頭力竭，空頭趨勢中看多頭力竭
@@ -48,6 +69,7 @@ Elder-Ray 是 [[三重濾網交易系統]] 中第二重濾網的理想工具：
 - **力量背離比絕對值更重要**：不要纠结Bull Power數字多大，要看趨勢變化
 - **盤整區間無效**：EMA走平時Bull/Bear Power失去方向性參考價值
 - **單獨使用風險高**：一定要搭配趨勢判斷和其他指標確認
+- **精神醫學視角**：Elder有精神科醫師背景，指標設計核心是量化貪婪（Bull Power）與恐懼（Bear Power）的心理狀態
 
 ## 相關主題
 
@@ -56,7 +78,9 @@ Elder-Ray 是 [[三重濾網交易系統]] 中第二重濾網的理想工具：
 - [[背離Divergence進階實戰]] - Power Divergence是背離的一種
 - [[順勢交易]] - Elder-Ray是順勢交易找進場點的最佳工具
 - [[背離Divergence進階實戰]] - 其他背離指標可交叉驗證
+- [[MACD指標實戰判讀]] - 第一重濾網常用指標
 
 ## 來源
 
 - [Elder-Ray Index - XQ官方部落格](../raw/2026-04-30/Elder-Ray-Index牛熊力量指標.md)
+- [Elder-Ray Index 進階 - XQ官方部落格](../raw/2026-05-11/Elder-Ray-Index牛熊力量指標.md)
