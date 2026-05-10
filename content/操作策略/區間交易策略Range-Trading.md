@@ -201,6 +201,7 @@
 - [[KD指標隨機指標]]
 - [[均值回歸策略]]
 - [[量先價行原則]]
+- [[盤整市綜合操作策略Consolidation-Market-Strategy]]
 - [[箱型理論Darvas-Box]]
 
 ## 來源
