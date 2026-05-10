@@ -1,7 +1,7 @@
 @use "./base.scss";
 
-// 表格日期欄不換行
-.youtube-table td:nth-child(3),
-.youtube-table th:nth-child(3) {
+// 表格日期欄不換行（第3欄是日期）
+article table td:nth-child(3),
+article table th:nth-child(3) {
   white-space: nowrap;
 }
