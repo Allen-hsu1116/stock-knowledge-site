@@ -122,6 +122,7 @@ if self.now_price <= self.high_price * (1 - self.stopProfit_ratio):
 - [[海龜交易法則]]
 - [[SAR拋物線指標Parabolic-SAR]]
 - [[Chandelier-Exit吊燈出場指標]]
+- [[Chande-Kroll-Stop錢德克羅停損指標]]
 
 ## 來源
 
