@@ -160,6 +160,9 @@ WMA 反應最快，適合需要及時反應的場景：
 - [[黃金交叉與死亡交叉均線交叉實戰]]
 - [[MACD指標實戰判讀]]
 - [[布林通道Bollinger-Bands三軌八型態]]
+- [[赫爾移動平均線HMA-Hull-Moving-Average]]
+- [[考夫曼自適應移動平均線KAMA]]
+- [[McGinley-Dynamic麥金利動態指標]]
 
 ## 來源
 

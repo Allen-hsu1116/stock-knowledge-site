@@ -106,6 +106,7 @@ Chande Kroll Stop 由 Tushar Chande 和 Stanley Kroll 在《The New Technical Tr
 ## 相關主題
 
 - [[Chandelier-Exit吊燈出場指標]]
+- [[Chande-Momentum-Oscillator-CMO錢德動量震盪指標]]
 - [[移動停利停損Trailing-Stop]]
 - [[ATR平均真實波幅-Average-True-Range]]
 - [[SAR拋物線指標Parabolic-SAR]]
