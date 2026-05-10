@@ -56,7 +56,7 @@
 
 ## 相關主題
 - [[基本面分析/經濟護城河Economic-Moat|經濟護城河 Economic Moat]]
-- [[周刊投資/Google-TPU升級引爆AI算力戰-PCB與散熱產業|Google TPU升級引爆AI算力戰 PCB與散熱產業]]
+- [[YouTube頻道/周刊投資/Google-TPU升級引爆AI算力戰-PCB與散熱產業|Google TPU升級引爆AI算力戰 PCB與散熱產業]]
 
 ## 來源
 - [NVIDIA比較貴，但Google比較省？TPU v8讓1,000萬預算變500萬的「生存法則」！](https://www.youtube.com/watch?v=6PVV50YKA4o)
