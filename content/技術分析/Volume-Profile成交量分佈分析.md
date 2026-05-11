@@ -187,3 +187,4 @@ VP 是**確認性指標**，不預測趨勢，需要與其他工具搭配：
 - [Volume Profile 如何用於交易中 - EdgeTrader](../raw/2026-05-11/成交量分佈分析Volume-Profile-EdgeTrader.md)
 - [Volume Profile Analysis 成交量分佈分析 - FinTastic](../raw/2026-05-11/成交量分佈分析Volume-Profile-FinTastic.md)
 - [Alpha公開-04-Volume Profile運用 - 群創實戰](../raw/2026-05-11/Volume-Profile運用Alpha群創實戰.md)
+- [成交量分佈分析 Volume Profile 進階實戰 - EdgeTrader](../raw/2026-05-11/成交量分佈分析Volume-Profile進階實戰-EdgeTrader.md)
