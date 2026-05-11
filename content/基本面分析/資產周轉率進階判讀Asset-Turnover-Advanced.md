@@ -85,6 +85,8 @@
 - [[營運效率指標與CCC實戰判讀]] - 周轉率的實戰判讀框架
 - [[ROIC投入資本報酬率]] - ROIC用投入資本替代總資產，更精確衡量效率
 - [[營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]] - 槓桿的另一面
+- [[營運資金週轉率判讀Working-Capital-Turnover]] - 營運資金效率的專門指標
+- [[固定資產週轉率判讀Fixed-Asset-Turnover]] - 固定資產使用效率的專門指標
 
 ## 來源
 
