@@ -135,6 +135,7 @@ EV/EBITDA 的核心概念可追溯到 1980 年代，由 John Malone 在 Tele-Com
 - [[經濟護城河Economic-Moat|經濟護城河]] - 延長超額收益存續期
 - [[財報三表綜合判讀與勾稽關係|財報三表綜合判讀]]
 - [[資本支出CapEx與自由現金流判讀]] - CapEx是EBITDA的核心缺陷補充
+- [[SOTP分部加總估值法Sum-of-the-Parts-Valuation|SOTP分部估值法]] - EV/EBITDA是SOTP各部門最常用的估值倍數
 
 ## 來源
 - [企業價值倍數EV/EBIT、EV/EBITDA是什麼？怎麼計算？- 市場先生](../raw/2026-05-05/企業價值倍數EV-EBIT-EBITDA市場先生.md)
