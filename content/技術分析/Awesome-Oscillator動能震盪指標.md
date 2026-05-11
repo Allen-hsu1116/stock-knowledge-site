@@ -74,6 +74,7 @@ Alligator（鱷魚指標）判趨勢方向，AO在趨勢確認後找進場點位
 - [[背離Divergence進階實戰]]
 - [[一目均衡表Ichimoku-Kinko-Hyo]]
 - [[KD指標隨機指標]]
+- [[Bill-Williams五維交易系統進階實戰]]
 
 ## 來源
 
