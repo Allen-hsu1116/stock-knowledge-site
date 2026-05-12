@@ -129,6 +129,7 @@ date: 2026-05-09
 - [[配息率與盈餘分配率判讀]]
 - [[負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]]
 - [[本益比進階判讀PE-Ratio-Advanced]]
+- [[庫藏股買回分析Treasury-Stock-Buyback]]
 
 ## 來源
 
