@@ -120,6 +120,7 @@ WACC 本身不是投資訊號，要搭配 ROIC（投入資本報酬率）：
 - [[負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] - 資本結構決定 WACC
 - [[經濟護城河Economic-Moat]] - 有護城河的公司 ROIC 持續大於 WACC
 - [[股利折現模型DDM估值]] - DDM 的貼現率 k 就是 Ke（權益資本成本）
+- [[NPV淨現值與IRR內部報酬率投資評估|NPV與IRR]] - WACC是NPV折現率和IRR的比較基準
 
 ## 來源
 
