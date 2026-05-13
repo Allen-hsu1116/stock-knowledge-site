@@ -154,6 +154,7 @@ Kelly 公式和 Ralph Vince 的 Optimal f 看起來相似但有根本差異：
 
 ## 相關主題
 
+- [[部位控制2%法則Position-Sizing-2-Percent-Rule]] - 2%法則是凱利公式的安全下限
 - [[倉位管理]]
 - [[交易期望值Trading-Expectancy]]
 - [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]
@@ -168,3 +169,4 @@ Kelly 公式和 Ralph Vince 的 Optimal f 看起來相似但有根本差異：
 
 - [凱利公式-賭博與投機者的資金控管經典 - 勳仔的理財小角落](../raw/2026-05-03/凱利公式資金控管.md)
 - [Kelly Criterion - Wikipedia](../raw/2026-05-09/Kelly-Criterion-Wikipedia.md)
+- [凱利公式深度解析：易懂的資金管理與風險控制指南](../raw/2026-05-14/2%法則與凱利公式部位控制.md) (方格子/Thor Lin)
