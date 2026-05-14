@@ -120,6 +120,8 @@
 - [[交易心理紀律執行力]]
 - [[前景理論Prospect-Theory]]
 - [[VIX恐慌指數系統性風險監控]]
+- [[連續虧損應對策略Losing-Streak-Recovery-Strategy]]
+- [[專業復盤三層次Professional-Review-Three-Levels]]
 
 ## 來源
 
