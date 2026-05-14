@@ -50,3 +50,4 @@
 - [[回撤分析進階Drawdown-Analysis-Advanced]]
 - [[Calmar-Ratio年化報酬MDD]]
 - [[回撤持續時間Drawdown-Duration]]
+- [[MDD最大回撤進階實戰各資產歷史回撤與管理方法]] - 各資產MDD數據與管理方法
