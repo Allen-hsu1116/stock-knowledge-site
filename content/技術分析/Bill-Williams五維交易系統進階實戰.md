@@ -192,3 +192,6 @@ MFI = (最高價 - 最低價) / 成交量，與成交量結合判斷市場真實
 - [混沌交易法全攻略：比爾威廉指標教學與實戰應用](../raw/2026-05-11/Bill-Williams混沌交易法五維系統-CashbackIsland.md)
 - [混沌操作法五階段 - MBA智庫百科](../raw/2026-05-11/Bill-Williams混沌操作法五階段-MBA智库.md)
 - [鱷魚線四階段進場策略 - EBC金融集團](../raw/2026-05-11/鱷魚線Alligator四階段進場策略-EBC.md)
+- [Fractals trading and how to use the Alligator - Tradeciety](https://tradeciety.com/fractals-trading-use-alligator-williams-chaos-theory)
+- [The Chaos Theory of Bill Williams - FBS](https://fbs.com/fbs-academy/trading-tutorials/trading-handbook/bill-williams-s-theory)
+- [鱷魚線Alligator指標與碎形交易](../raw/2026-05-16/鱷魚線Alligator指標與碎形交易.md)

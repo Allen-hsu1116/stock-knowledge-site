@@ -29,9 +29,9 @@
 - **有效碎形**：向上碎形高於紅色齒線（Teeth），或向下碎形低於紅色齒線
 - **無效碎形**：碎形出現在齒線與唇線之間或齒線下方（多頭時）
 
-**無效碎形變有效碎形**：原本無效的碎形，經過幾天紅色齒線下降/上升後，碎形超過了新位置的齒線，就變成有效碎形。
+**無效碎形變有效碎形**：原本無效的碎形，經過幾天紅色齒線下降/上升後，碎形超過了新位置的齒線，就變成有效碎形。Bill Williams 特別強調：這個機制很重要，因為齒線是移動的，一個原本在齒線上方的向上碎形可能因為齒線上升而變成無效，反之亦然。
 
-**重要規則**：採用的碎形應以**最新出現的碎形**為準，新碎形出現後之前的碎形不可再用。
+**重要規則**：採用的碎形應以**最新出現的碎形**為準，新碎形出現後之前的碎形不可再用。這表示碎形訊號有時效性，舊的碎形一旦被新的覆蓋就失去意義。
 
 ## 實戰應用
 
@@ -109,3 +109,6 @@
 
 - [鱷魚線(Alligator)詳解2025](../raw/2026-05-04/鱷魚線Alligator-Indicator實戰四階段與碎形進場.md)
 - [什麼是鱷魚線技術指標？-大昌期貨](https://www.dcnfutures.tw/news/details.php?id=2052)
+- [MoneyDJ 鱷魚線解釋頁](https://concords.moneydj.com/z/glossary/glexp_5140.djhtm)
+- [Fractals trading and how to use the Alligator - Tradeciety](https://tradeciety.com/fractals-trading-use-alligator-williams-chaos-theory)
+- [鱷魚線Alligator指標與碎形交易](../raw/2026-05-16/鱷魚線Alligator指標與碎形交易.md)
