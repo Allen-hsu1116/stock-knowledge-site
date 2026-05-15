@@ -179,6 +179,8 @@ MFI = (最高價 - 最低價) / 成交量，與成交量結合判斷市場真實
 - [[鱷魚線Alligator-Indicator]]
 - [[威廉碎形Williams-Fractal]]
 - [[Awesome-Oscillator動能震盪指標]]
+- [[AC加速震盪指標Acceleration-Deceleration-Oscillator]]
+- [[Gator-Oscillator蓋特震盪指標]]
 - [[MACD指標實戰判讀]]
 - [[RSI相對強弱指標]]
 - [[背離Divergence進階實戰]]
