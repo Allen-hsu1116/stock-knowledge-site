@@ -61,7 +61,7 @@
 - [[確認偏誤Confirmation-Bias]]
 - [[前景理論Prospect-Theory]]
 - [[前景理論Prospect-Theory]]
-- [[交易日誌交易旅程框架交易前交易中交易後]]
+- [[交易日誌與交易紀律養成]]
 - [[認知偏誤與交易心理]]
 - [[報復性交易防禦體系Revenge-Trading-Defense]]
 

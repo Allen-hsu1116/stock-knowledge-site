@@ -104,7 +104,7 @@
 - [[交易紀律量化系統Rule-Adherence-Score]]
 - [[交易系統Trading-System設計與迷思]]
 - [[交易計畫書Trading-Plan]]
-- [[交易日誌交易旅程框架交易前交易中交易後]]
+- [[交易日誌與交易紀律養成]]
 - [[前景理論Prospect-Theory]]
 - [[操盤手五階段成長模型Trader-Development-Five-Stages]]
 - [[過度自信偏誤Overconfidence-Bias]]

@@ -159,7 +159,7 @@ Barber et al.（2009）以台灣股票市場所有投資人的完整交易資料
 - [[過度自信偏誤Overconfidence-Bias]]
 - [[損失厭惡Loss-Aversion處置效應過度自信FOMO]]
 - [[交易心理紀律執行力]]
-- [[交易日誌交易旅程框架交易前交易中交易後]]
+- [[交易日誌與交易紀律養成]]
 - [[停損設定方法Stop-Loss-Placement]]
 - [[交易期望值Trading-Expectancy]]
 - [[報復性交易防禦體系Revenge-Trading-Defense]]

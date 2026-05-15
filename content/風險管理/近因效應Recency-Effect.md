@@ -87,7 +87,7 @@
 - [[過度自信偏誤Overconfidence-Bias]]
 - [[錨定效應Anchoring-Bias]]
 - [[損失厭惡Loss-Aversion處置效應過度自信FOMO]]
-- [[交易日誌交易旅程框架交易前交易中交易後]]
+- [[交易日誌與交易紀律養成]]
 - [[交易系統Trading-System設計與迷思]]
 - [[回測過擬合Backtest-Overfitting]]
 

@@ -169,7 +169,7 @@ title: 交易執行力缺口 Execution Gap
 - [[錨定效應Anchoring-Bias]]
 - [[交易心理紀律執行力]]
 - [[交易計畫書Trading-Plan]]
-- [[交易日誌交易旅程框架交易前交易中交易後]]
+- [[交易日誌與交易紀律養成]]
 - [[交易紀律量化系統Rule-Adherence-Score]]
 - [[規則化交易系統Rule-Based-Trading-System]]
 - [[凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]

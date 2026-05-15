@@ -58,7 +58,7 @@
 
 - [[確認偏誤Confirmation-Bias]]
 - [[認知偏誤與交易心理]]
-- [[交易日誌交易旅程框架交易前交易中交易後]]
+- [[交易日誌與交易紀律養成]]
 - [[回測驗證Backtesting陷阱]]
 - [[回測過擬合Backtest-Overfitting]]
 - [[贏家心智系統Mark-Douglas交易心理框架]]

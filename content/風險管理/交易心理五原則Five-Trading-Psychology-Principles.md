@@ -69,7 +69,7 @@ title: 交易心理五原則 Five Trading Psychology Principles
 
 | 原則 | 對應概念 |
 |------|---------|
-| 原則一：滾動修正 | [[交易日誌交易旅程框架交易前交易中交易後]] 的交易後檢討 |
+| 原則一：滾動修正 | [[交易日誌與交易紀律養成]] 的交易後檢討 |
 | 原則二：有憑有據 | [[規則化交易系統Rule-Based-Trading-System]] 的規則化進場 |
 | 原則三：重複正確 | [[交易紀律量化系統Rule-Adherence-Score]] 的紀律評分 |
 | 原則四：容許虧損 | [[損失厭惡Loss-Aversion處置效應過度自信FOMO]] 的損失厭惡管理 |
@@ -88,7 +88,7 @@ title: 交易心理五原則 Five Trading Psychology Principles
 - [[贏家心智系統Mark-Douglas交易心理框架]]
 - [[損失厭惡Loss-Aversion處置效應過度自信FOMO]]
 - [[交易期望值Trading-Expectancy]]
-- [[交易日誌交易旅程框架交易前交易中交易後]]
+- [[交易日誌與交易紀律養成]]
 - [[規則化交易系統Rule-Based-Trading-System]]
 - [[交易紀律量化系統Rule-Adherence-Score]]
 - [[停損設定方法Stop-Loss-Placement]]

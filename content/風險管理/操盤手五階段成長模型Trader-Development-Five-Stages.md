@@ -125,7 +125,7 @@
 - [[交易紀律量化系統Rule-Adherence-Score]]
 - [[認知偏誤與交易心理]]
 - [[報復性交易防禦體系Revenge-Trading-Defense]]
-- [[交易日誌交易旅程框架交易前交易中交易後]]
+- [[交易日誌與交易紀律養成]]
 - [[程式交易與主觀交易優劣比較]]
 - [[前景理論Prospect-Theory]]
 - [[過度自信偏誤Overconfidence-Bias]]
