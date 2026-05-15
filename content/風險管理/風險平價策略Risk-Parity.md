@@ -185,6 +185,9 @@ Dalio的經濟環境四象限框架：
 - [[集中度風險Concentration Risk]]
 - [[尾部風險平價Tail-Risk-Parity]]
 
+- [[階層式風險平價HRP-Hierarchical-Risk-Parity]]
+
 ## 來源
 
 - [Risk Parity - Wikipedia](../raw/2026-05-08/Risk-Parity-風險平價策略.md)
+- [Risk Parity 策略和全天候基金 - 狂徒](../raw/2026-05-15/風險平價策略與全天候基金-狂徒.md)
