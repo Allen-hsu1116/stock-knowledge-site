@@ -75,6 +75,8 @@
 - [[策略壓力測試Stress-Testing]]
 - [[倉位管理]]
 - [[風險預算Risk Budgeting]]
+- [[策略容量Strategy-Capacity]]
 
 ## 來源
 - [量化投資中「因子衰退」的核心原因](../raw/2026-05-01/因子衰退Factor-Decay.md)
+- [量化投資中「因子衰退」的核心原因（Vocus）](../raw/2026-05-15/量化投資中因子衰退的核心原因-K.S的量化投資.md)
