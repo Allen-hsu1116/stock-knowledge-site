@@ -128,6 +128,9 @@
 - [[ROE杜邦分析淨利率資產週轉率權益乘數]] - ROE拆解分析
 - [[本益比進階判讀PE-Ratio-Advanced]] - 估值進階判讀
 - [[交易策略回測與過擬合Backtesting-and-Overfitting]] - 回測與過擬合
+- [[產業生命週期Industry-Life-Cycle]] - 產業所處階段判斷
+- [[由上而下與由下而上選股法Top-Down-vs-Bottom-Up]] - 基本面分析兩大流派
+- [[成長股與價值股投資策略Growth-vs-Value-Investing]] - 成長股vs價值股策略選擇
 
 ## 來源
 
