@@ -136,6 +136,37 @@ PCR 作為逆向指標，極端值比中間值更有參考意義：
 - **MacroMicro 財經 M 平方**：https://www.macromicro.me/series/1360/tw-put-call-ratio（歷史圖表）
 - **Win 投資**：https://winvest.tw/Future/Index/OptionPutCallRatio/TX00
 
+### P/C Ratio 多空區間判讀表（GoOptions 實戰版）
+
+台股 P/C Ratio 長期均值約 85-95，不宜死守 100 作為分界：
+
+| P/C Ratio 區間 | 市場意涵 | 賣方解讀 | 實務建議 |
+|---------------|---------|---------|----------|
+| 大於 120 | 極度偏多 | Sell Put 遠大於 Sell Call | 留意散戶過度樂觀，搭配法人籌碼驗證 |
+| 100-120 | 溫和偏多 | Put 未平倉略多於 Call | 順勢偏多操作，注意 P/C Ratio 是否持續下滑 |
+| 80-100 | 溫和偏空 | Call 未平倉略多於 Put | 短線偏保守，留意是否為洗盤或真正轉空 |
+| 小於 80 | 極度偏空 | Sell Call 遠大於 Sell Put | 反向思考：極端值可能是反轉訊號 |
+
+### P/C Ratio 極端值反轉統計
+
+- P/C Ratio 突破 130 後 5 個交易日內，加權指數回檔機率約 65%
+- P/C Ratio 低於 70 後 5 個交易日內，指數反彈機率約 60%
+
+### P/C Ratio 每日操作六步驟
+
+1. **每日盤後查看 P/C Ratio**：記錄當日數值與前一日變化方向
+2. **判斷整體多空傾向**：連續 3 日以上高於長期均值（約 90）且持續上升=偏多格局
+3. **檢查法人籌碼一致性**：確認外資 Sell Put/Sell Call 方向是否與 P/C Ratio 走勢一致
+4. **定位支撐壓力點**：找出 Put 與 Call 未平倉最大量的履約價
+5. **設定極端值警示**：P/C Ratio 超過 130 或低於 70 啟動反向思考
+6. **每週回顧修正**：比對判讀與實際走勢，紀錄準確率
+
+### P/C Ratio + 法人籌碼一致性判斷
+
+- P/C Ratio 升高但外資反而在 Sell Call → 矛盾訊號，值得警惕
+- P/C Ratio 升高且外資 Sell Put → 多方訊號可信度高
+- 散戶主導的 P/C Ratio 變動訊號可信度較低
+
 ## 來源
 
 - [Put Call Ratio 散戶指標 QuantPass](../raw/2026-05-02/期貨未平倉量OI與選擇權Put-Call-Ratio.md)
@@ -146,3 +177,4 @@ PCR 作為逆向指標，極端值比中間值更有參考意義：
 - [Put Call Ratio 是什麼 StockFeel](../raw/2026-05-06/StockFeel-Put-Call-Ratio是什麼.md)
 - [選擇權未平倉意義解讀 永豐期貨](../raw/2026-05-06/永豐期貨-選擇權未平倉意義解讀.md)
 - [Put Call Ratio 散戶指標 QuantPass](../raw/2026-05-06/QuantPass-Put-Call-Ratio散戶指標.md)
+- [GoOptions P/C Ratio 實戰教學](../raw/2026-05-17/GoOptions選擇權PutCallRatio實戰教學.md)
