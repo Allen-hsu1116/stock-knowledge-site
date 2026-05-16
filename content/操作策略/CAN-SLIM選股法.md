@@ -102,7 +102,27 @@ CAN SLIM 是 O'Neil 在《How to Make Money in Stocks》一書中提出的選股
 - [[均線多頭排列與空頭排列]] — 確認趨勢的輔助工具
 - [[五種最佳買點]] — CAN SLIM 買點是其中之一
 
+### NorthCoast CAN SLIM 指數與 CANGX 基金實證
+
+NorthCoast資產管理公司根據CAN SLIM策略推出績效指數與基金（CANGX）：
+
+- **持股水位浮動**：策略包含擇時因素（M條件），空頭時持股可能低於50%，不完全滿手股票
+- **2008年金融海嘯**：回檔僅-20.4%（大盤-50%），Beta僅0.64，避險效果顯著
+- **近年表現**：2016年以後表現不特別亮眼，與70/30策略接近，落後S&P 500
+- **費用率1.43%**偏高，可能是基金報酬未顯著勝過基準的原因
+- **快而急的空頭**（如2020年3月Covid-19）：持股未及時調降至70-80%，回檔較大
+- **策略定位**：屬動能策略（Momentum Strategy），多頭表現好、避開慢空頭，但快空頭可能追高殺低
+
+### 市場先生評價
+
+- CAN SLIM最值得學習的不是策略本身，而是**設計策略的方式與思考**
+- 多種分析領域的指標（基本面+技術面+籌碼面+大盤方向）融合在一個有邏輯的框架裡
+- 類似思考方式可以延伸到：綜合判斷不衝突的多面向策略設計
+- 單純動能策略在現代市場的報酬/風險優勢有限，需要加入其他資訊
+
 ## 來源
 
 - [CAN SLIM - Wikipedia](../raw/2026-04-30/CAN-SLIM-Wikipedia.md)
 - [William O'Neil's CAN SLIM Trading Strategy Explained - Macro Ops](../raw/2026-04-30/CAN-SLIM-Macro-Ops.md)
+- [《笑傲股市》— 選股系統起手式：CANSLIM - StockFeel](../raw/2026-05-17/CANSLIM選股法-StockFeel.md)
+- [CANSLIM選股法是什麼？威廉歐尼爾的7個選股策略介紹 - Mr.Market市場先生](../raw/2026-05-17/CANSLIM選股法-市場先生.md)
