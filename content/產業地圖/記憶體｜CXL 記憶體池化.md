@@ -21,21 +21,14 @@
 
 ---
 
-## 🔵 CXL 控制器 IC（2 家）
+## 🔵 CXL 控制器 IC 與 Retimer（2 家）
 
-設計 CXL 控制器 IC 與記憶體擴展晶片的廠商。
+設計 CXL 控制器 IC、Retimer 與記憶體擴展晶片的廠商。
 
 | 公司 | 代號 | 市場定位 | 關聯度 | 核心產品 | 技術重心 |
 |------|------|----------|--------|----------|----------|
-| **慧榮** | 5274 | 🟡 重要供應商 CXL 記憶體擴展 IC 布局 | 高 | SSD 控制器 IC、eMMC/UFS 控制器、CXL 記憶體擴展 IC（開發中） | 全球 SSD 控制器 IC 龍頭、布局 CXL 記憶體擴展 IC |
 | **智原** | 3035 | 🟡 重要供應商 CXL IP 與 ASIC 平台 | 高 | ASIC 設計平台、IP 授權、CXL IP（開發中） | ASIC 設計服務領先、CXL IP 授權布局 |
-
-### 🔍 慧榮重點摘要
-- **市場定位**：🟡 重要供應商
-- **籌碼標籤**：has_futures、revenue_yoy_growth、revenue_consecutive_growth、revenue_new_high、trust_net_buy、eps_growth
-- 全球 SSD 控制器 IC 龍頭
-- 布局 CXL 記憶體擴展 IC
-- PCIe Gen5 SSD 控制器量產
+| **致新科技** | 4966 | 🟡 重要供應商 CXL Retimer IC 供應商 | 高 | CXL Retimer IC、PCIe Retimer、DisplayPort IC | CXL Retimer IC 技術領先、PCIe Gen5/Gen6 Retimer 量產 |
 
 ### 🔍 智原重點摘要
 - **市場定位**：🟡 重要供應商
@@ -44,17 +37,7 @@
 - CXL IP 授權布局
 - AI ASIC NPU 平台
 
----
-
-## 🔵 CXL 記憶體模組（1 家）
-
-生產 CXL 記憶體模組的廠商。
-
-| 公司 | 代號 | 市場定位 | 關聯度 | 核心產品 | 技術重心 |
-|------|------|----------|--------|----------|----------|
-| **譜瑞-KY** | 4966 | 🟡 重要供應商 CXL Retimer IC 供應商 | 高 | CXL Retimer IC、PCIe Retimer、DisplayPort IC | CXL Retimer IC 技術領先、PCIe Gen5/Gen6 Retimer 量產 |
-
-### 🔍 譜瑞-KY重點摘要
+### 🔍 致新科技重點摘要
 - **市場定位**：🟡 重要供應商
 - **籌碼標籤**：foreign_net_buy、trust_net_buy
 - CXL Retimer IC 技術領先
@@ -63,9 +46,9 @@
 
 ---
 
-## 🔵 CXL 平台與系統（1 家）
+## 🔵 CXL 記憶體模組與封測（1 家）
 
-提供 CXL 記憶體池化平台與系統整合的廠商。
+生產 CXL 記憶體模組與封裝測試的廠商。
 
 | 公司 | 代號 | 市場定位 | 關聯度 | 核心產品 | 技術重心 |
 |------|------|----------|--------|----------|----------|
