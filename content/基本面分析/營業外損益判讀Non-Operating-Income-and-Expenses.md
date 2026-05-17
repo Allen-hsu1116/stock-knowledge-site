@@ -96,6 +96,8 @@
 - [[負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] - 利息費用反映財務結構
 - [[遞延收益與合同負債判讀Deferred-Income-and-Contract-Liability]] - 錢收了但還不能認列收入
 - [[ROE杜邦分析淨利率資產週轉率權益乘數]] - ROE拆解看獲利來源
+- [[調整後EPS扣除非經常性損益Adjusted-EPS]] - 扣除業外損益後更精確
+- [[財報窗飾辨識Window-Dressing-Detection]] - 業外收入美化是窗飾常見手法
 
 ## 來源
 
