@@ -215,6 +215,7 @@ PBR 河流圖和 [[本益比河流圖PE-Band|PE Band]] 概念相同，用歷史 
 
 - [[股價淨值比PBR-Price-to-Book-Ratio]] - PBR 基礎概念、四種保守計算法、真假便宜判斷
 - [[本益比河流圖PE-Band]] - PE Band 估值方法，與 PBR Band 互補
+- [[股價淨值比河流圖PBR-Band]] - PBR 的視覺化估值工具，景氣循環股首選
 - [[每股淨值進階判讀BVPS與Graham-Number]] - BVPS 深入分析、Graham Number 估值
 - [[ROE杜邦分析淨利率資產週轉率權益乘數]] - PBR × ROE 恆等式的核心搭配
 - [[PEG本益成長比]] - 成長股估值，PBR 不適用的場景改用 PEG
