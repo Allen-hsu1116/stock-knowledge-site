@@ -142,7 +142,7 @@ Greeks是瞬時指標，標的價格一動Greeks就跟著變：
 - [[選擇權Greeks希臘字母|選擇權Greeks希臘字母]] - 操作策略角度的Greeks應用
 - [[逼券商拉抬Gamma-Squeeze兩手策略|Gamma Squeeze]] - 正Gamma的力量
 - [[波動率微笑曲線與偏態Volatility-Smile-and-Skew|波動率微笑與偏態]] - IV在不同履約價的分佈
-- [[VIX恐慌指數系統性風險監控|VIX恐慌指數]] - 市場整體Vega暴露的溫度計
+- [[VIX恐慌指數實戰判讀|VIX恐慌指數]] - 市場整體Vega暴露的溫度計
 - [[模型風險Model Risk|模型風險]] - Black-Scholes的假設限制
 - [[Beta係數實戰判讀|Beta係數實戰判讀]] - 系統性風險的量化指標
 

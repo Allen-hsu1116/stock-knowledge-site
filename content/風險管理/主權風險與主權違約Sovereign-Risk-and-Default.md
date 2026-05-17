@@ -98,7 +98,7 @@ Frenkel, Karmann 和 Scholtens (2004) 提出影響主權違約機率的五大因
 - [[信用利差Credit-Spread]]
 - [[系統性風險與非系統性風險]]
 - [[金融傳染風險Financial-Contagion]]
-- [[VIX恐慌指數系統性風險監控]]
+- [[VIX恐慌指數實戰判讀]]
 - [[尾部風險對沖Tail-Risk-Hedging]]
 - [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
 - [[流動性風險Liquidity-Risk]]

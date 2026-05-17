@@ -247,7 +247,7 @@ Theta 成本 = Theta × 持有天數
 - [[逼券商拉抬Gamma-Squeeze兩手策略]]
 - [[跨式Straddle與勒式Strangle]]
 - [[鐵兀鷹Iron-Condor]]
-- [[VIX恐慌指數系統性風險監控]]
+- [[VIX恐慌指數實戰判讀]]
 - [[選擇權四大基本策略]]
 - [[選擇權組合策略]]
 - [[相關性崩潰Correlation-Breakdown]]

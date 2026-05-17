@@ -160,7 +160,7 @@ Delta Neutral 不是設好就忘，需要持續 Rebalance：
 - [[逼券商拉抬Gamma-Squeeze兩手策略]]
 - [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
 - [[隱含波動率IV與歷史波動率HV實戰判讀]]
-- [[VIX恐慌指數系統性風險監控]]
+- [[VIX恐慌指數實戰判讀]]
 - [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
 - [[Black-Scholes定價模型]]
 - [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]

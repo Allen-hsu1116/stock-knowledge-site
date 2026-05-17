@@ -106,7 +106,7 @@ XQ的短線過熱選股條件：
 - [[成交量特殊型態判讀Volume-Pattern-Analysis]]
 - [[過度交易Overtrading防範體系]]
 - [[市場情緒週期與反脆弱交易系統Market-Sentiment-Cycle-and-Antifragile-System]]
-- [[VIX恐慌指數系統性風險監控]]
+- [[VIX恐慌指數實戰判讀]]
 - [[當沖操作]]
 - [[當沖八大步驟與交易心態]]
 

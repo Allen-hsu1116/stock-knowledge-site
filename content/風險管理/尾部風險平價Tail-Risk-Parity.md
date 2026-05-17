@@ -105,7 +105,7 @@ TRP 不按傳統資產類別分組，而是按**壓力情境下的行為**分桶
 - [[尾部風險對沖Tail-Risk-Hedging]]
 - [[風險歸因Risk-Attribution]]
 - [[流動性風險Liquidity-Risk]]
-- [[VIX恐慌指數系統性風險監控]]
+- [[VIX恐慌指數實戰判讀]]
 - [[再平衡策略Portfolio-Rebalancing]]
 
 ## 來源

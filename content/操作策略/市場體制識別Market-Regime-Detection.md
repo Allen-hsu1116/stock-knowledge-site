@@ -135,7 +135,7 @@ created: 2026-05-09
 - [[多時間框架分析]]
 - [[交易系統Trading-System設計與迷思]]
 - [[ATR平均真實波幅-Average-True-Range]]
-- [[VIX恐慌指數系統性風險監控]]
+- [[VIX恐慌指數實戰判讀]]
 
 ## 來源
 
