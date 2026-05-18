@@ -150,3 +150,4 @@ ADX 可以像 RSI 一樣觀察背離：
 - [DMI指標終極教學與實戰策略-FMStudio](../raw/2026-05-18/DMI指標終極教學與實戰策略-FMStudio.md)
 - [DMI指標用法ADX趨勢強度判讀與參數設定-CashbackIsland](../raw/2026-05-18/DMI指標用法ADX趨勢強度判讀與參數設定-CashbackIsland.md)
 - [ADX指標完整教學與DMI搭配-量化通](../raw/2026-05-03/ADX指標完整教學與DMI搭配-量化通.md)
+- [DMI指標使用方法指南-Mitrade](../raw/2026-05-18/DMI指標使用方法指南.md)

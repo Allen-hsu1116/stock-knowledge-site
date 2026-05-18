@@ -85,6 +85,7 @@
 - [[多時間框架分析]]
 - [[技術指標鈍化與對策]]
 - [[洗盤辨識多指標確認框架Whipsaw-Multi-Indicator-Confirmation]]
+- [[KDJ指標與J值實戰]] — KD 的升級版，J 值提供更靈敏的轉折預警
 
 ## 來源
 - [KD指標MBA智庫](../raw/2026-05-10/KD指標MBA智庫.md)
