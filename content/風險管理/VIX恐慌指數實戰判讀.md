@@ -164,9 +164,9 @@ VIX最重要的特性之一就是均值回歸：
 - [[操作策略/選擇權四大基本策略]]
 - [[操作策略/Theta時間價值衰退與選擇權賣方策略]]
 - [[籌碼面分析/三大法人籌碼綜合判讀框架Institutional-Investors-Integrated-Framework]]
-- [[黑天鵝事件與尾部風險基礎更新]]
+- [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
 - [[風險管理/風險管理決策框架Risk-Management-Decision-Framework]]
-- [[外資期貨未平倉判讀補強]]
+- [[外資期貨未平倉判讀]]
 
 ## 來源
 

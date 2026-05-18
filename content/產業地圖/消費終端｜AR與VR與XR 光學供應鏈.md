@@ -143,6 +143,6 @@ AR/VR/XR 裝置的組裝代工廠商。
 
 ## 🔗 相關題材
 
-- [[ddic]] — 平行：DDIC 廠商提供 AR/VR 微型顯示器驅動 IC
-- [[display-panel]] — 平行：面板廠的 Micro OLED/Micro LED 是 AR/VR 核心顯示技術
-- [[optical-lens-camera]] — 平行：光學鏡頭廠商同時供應 AR/VR 與手機鏡頭
+- [[產業地圖/IC 設計｜顯示驅動 IC]] — 平行：DDIC 廠商提供 AR/VR 微型顯示器驅動 IC
+- [[產業地圖/光學顯示｜面板產業]] — 平行：面板廠的 Micro OLED/Micro LED 是 AR/VR 核心顯示技術
+- [[產業地圖/光學顯示｜光學鏡頭與相機模組]] — 平行：光學鏡頭廠商同時供應 AR/VR 與手機鏡頭

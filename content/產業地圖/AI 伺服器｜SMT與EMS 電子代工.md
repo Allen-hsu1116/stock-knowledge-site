@@ -73,6 +73,6 @@
 
 ## 🔗 相關題材
 
-- [[ai-server]] — 下游：SMT/EMS 是 AI 伺服器組裝的核心環節
-- [[pcb-manufacturing]] — 上游：PCB 製造是 SMT 代工的上游
-- [[connector-highspeed]] — 上游：高速連接器是 SMT 組裝的關鍵零件
+- [[產業地圖/AI伺服器｜ODM與GPU運算平台]] — 下游：SMT/EMS 是 AI 伺服器組裝的核心環節
+- [[產業地圖/電子零組件｜PCB 硬板製造]] — 上游：PCB 製造是 SMT 代工的上游
+- [[產業地圖/電子零組件｜AI 互連元件]] — 上游：高速連接器是 SMT 組裝的關鍵零件

@@ -103,12 +103,12 @@
 
 - [[操作策略/當沖選股策略Day-Trading-Stock-Selection]]
 - [[操作策略/短線交易三模式Tick流一波流日內波]]
-- [[停損設定方法]]
+- [[停損設定方法Stop-Loss-Placement]]
 - [[操作策略/分批停利策略Partial-Exit-Strategy]]
 - [[操作策略/交易策略回測與過擬合Backtesting-and-Overfitting]]
-- [[移動停利停損Trailing-Stop深度更新]]
+- [[移動停利停損Trailing-Stop]]
 - [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule]]
-- [[凱利公式深度補強更新]]
+- [[凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
 
 ## 來源
 

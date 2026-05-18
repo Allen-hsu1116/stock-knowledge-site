@@ -145,7 +145,7 @@
 
 ## 🔗 相關題材
 
-- [[ip-asic]] — 上游：IP/ASIC 設計是 Edge AI 晶片的基礎
-- [[robotics_physical_ai]] — 下游：人形機器人需要 Edge AI 晶片
-- [[industrial-automation]] — 互補：工業自動化大量採用 Edge AI 方案
-- [[hpc-ic]] — 平行：HPC IC 與 Edge AI 晶片是算力的兩端
+- [[產業地圖/IC設計｜IP授權與客製ASIC設計服務]] — 上游：IP/ASIC 設計是 Edge AI 晶片的基礎
+- [[智慧機器人｜人形機器人與實體 AI]] — 下游：人形機器人需要 Edge AI 晶片
+- [[產業地圖/智慧機器人｜工業自動化 與 智慧製造]] — 互補：工業自動化大量採用 Edge AI 方案
+- [[產業地圖/IC 設計｜HPC 與網通 IC]] — 平行：HPC IC 與 Edge AI 晶片是算力的兩端

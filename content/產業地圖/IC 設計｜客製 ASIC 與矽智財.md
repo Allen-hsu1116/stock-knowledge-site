@@ -128,6 +128,6 @@
 
 ## 🔗 相關題材
 
-- [[wafer-foundry]] — 下游：ASIC 設計完成後交由晶圓代工廠生產
-- [[advanced-packaging]] — 下游：ASIC 晶片需先進封裝（CoWoS 等）
-- [[ai-server]] — 下游：AI 伺服器是 ASIC 晶片的主要終端應用
+- [[產業地圖/半導體製造｜晶圓代工]] — 下游：ASIC 設計完成後交由晶圓代工廠生產
+- [[產業地圖/先進封測｜AI 先進封裝 CoWoS]] — 下游：ASIC 晶片需先進封裝（CoWoS 等）
+- [[產業地圖/AI伺服器｜ODM與GPU運算平台]] — 下游：AI 伺服器是 ASIC 晶片的主要終端應用

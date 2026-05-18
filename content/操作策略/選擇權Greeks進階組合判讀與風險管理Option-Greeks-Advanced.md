@@ -83,7 +83,6 @@ Delta Neutral 不是設好就忘，需要持續 Rebalance：
 **Gamma Scalping 本質**：在 Delta Neutral 基礎上利用 Gamma 獲利
 - 跌時 Buy（Delta 變負）→ 漲時 Sell（Delta 變正）→ 自動低買高賣
 - 前提：Gamma 夠大（ATM 或接近到期）+ 波動率夠高
-- 詳見 [[Gamma-Scalping波動率利潤引擎]]
 
 ### Greeks 風險限額設定
 

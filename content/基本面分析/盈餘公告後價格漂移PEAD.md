@@ -234,7 +234,7 @@ Zhang等（2024）在英國股市發現：
 - [[基本面分析/應計項目異象Accrual-Anomaly]]
 - [[基本面分析/法人預估EPS與共識預期Consensus-EPS]]
 - [[基本面分析/盈餘管理手法識別與判讀]]
-- [[確認偏誤Confirmation-Bias選擇性搜尋支持證據忽略反面訊號]]
+- [[確認偏誤Confirmation-Bias]]
 - [[操作策略/動能交易策略]]
 
 ## 來源

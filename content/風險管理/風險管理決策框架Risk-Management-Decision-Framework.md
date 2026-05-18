@@ -34,7 +34,7 @@
 | 系統性風險 | 大盤崩跌、金融風暴、戰爭 | [[風險管理/風險平價策略Risk-Parity]]、[[風險管理/分散投資七法與相關係數Diversification-Seven-Methods]]、避險資產配置 |
 | 非系統性風險 | 單一公司經營風險、財報造假 | [[風險管理/集中度風險Concentration Risk]]分散、[[風險管理/Beta係數實戰判讀]]、Alpha選股 |
 | 流動性風險 | 賣不掉、滑價嚴重 | [[風險管理/流動性風險Liquidity-Risk]]管理、限額交易 |
-| 槓桿風險 | 融資斷頭、保證金追繳 | [[風險管理/財務槓桿風險管理Leverage-Risk-Management]]、[[融資維持率除權息陷阱與斷頭後市場反轉]] |
+| 槓桿風險 | 融資斷頭、保證金追繳 | [[風險管理/財務槓桿風險管理Leverage-Risk-Management]]、[[融資維持率市場轉折訊號Margin-Maintenance-Ratio-Market-Signal]] |
 | 相關性風險 | 危機時資產相關性趨近1 | [[風險管理/相關性崩潰Correlation-Breakdown]]、[[風險管理/尾部風險對沖Tail-Risk-Hedging]] |
 | 心理風險 | 報復性交易、過度交易 | [[風險管理/交易心理五原則Five-Trading-Psychology-Principles]]、[[風險管理/交易紀律量化系統Rule-Adherence-Score]] |
 

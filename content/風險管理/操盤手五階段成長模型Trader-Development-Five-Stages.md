@@ -126,7 +126,7 @@
 - [[風險管理/認知偏誤與交易心理]]
 - [[風險管理/報復性交易防禦體系Revenge-Trading-Defense]]
 - [[風險管理/交易日誌與交易紀律養成]]
-- [[程式交易與主觀交易優劣比較]]
+- [[程式交易與主觀交易優劣比較Systematic-vs-Discretionary-Trading]]
 - [[風險管理/前景理論Prospect-Theory]]
 - [[風險管理/過度自信偏誤Overconfidence-Bias]]
 
