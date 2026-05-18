@@ -219,3 +219,4 @@ Kinder %R（k%R）用成交量代替成交價計算，代表量的變化：
 - [威廉指標完整教學 QuantPass（參數設定選股）](../raw/2026-05-18/威廉指標QuantPass.md)
 - [威廉指標KD對比背離黃金交叉 StockFeel](../raw/2026-05-18/威廉指標StockFeel.md)
 - [威廉指標Failure信號與時間要素 EdgeTrader](../raw/2026-05-18/威廉指標EdgeTrader.md)
+- [威廉指標WMSR超買超賣參數設定 Yahoo奇摩股市 + TEJ回測](../raw/2026-05-18/威廉指標Williams-%R-Yahoo奇摩-TEJ回測.md)
