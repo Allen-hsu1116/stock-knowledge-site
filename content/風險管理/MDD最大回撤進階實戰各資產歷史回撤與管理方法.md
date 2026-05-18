@@ -129,15 +129,15 @@ MDD = (120 - 90) ÷ 120 = 25%
 - 程式交易回測的MDD至少要涵蓋一個完整牛熊循環
 
 ## 相關主題
-- [[MDD最大回撤計算與恢復難度]] - MDD基礎計算與恢復難度表
-- [[回撤恢復數學與帳戶生存Drawdown-Recovery-Math]] - 回撤恢復的數學原理
-- [[回撤分析進階Drawdown-Analysis-Advanced]] - 回撤分析方法論
-- [[回撤持續時間Drawdown-Duration]] - 恢復時間分析
-- [[部位控制2%法則Position-Sizing-2-Percent-Rule]] - 單筆風險控制
-- [[凱利公式部位最佳化Kelly-Criterion-Position-Sizing]] - 最佳部位計算
-- [[投資風險管理系統框架Risk-Management-System-Framework]] - 風險管理總框架
-- [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]] - 極端事件風險
-- [[Calmar-Ratio年化報酬MDD]] - 報酬回撤比指標
+- [[風險管理/MDD最大回撤計算與恢復難度]] - MDD基礎計算與恢復難度表
+- [[風險管理/回撤恢復數學與帳戶生存Drawdown-Recovery-Math]] - 回撤恢復的數學原理
+- [[風險管理/回撤分析進階Drawdown-Analysis-Advanced]] - 回撤分析方法論
+- [[風險管理/回撤持續時間Drawdown-Duration]] - 恢復時間分析
+- [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule]] - 單筆風險控制
+- [[風險管理/凱利公式部位最佳化Kelly-Criterion-Position-Sizing]] - 最佳部位計算
+- [[風險管理/投資風險管理系統框架Risk-Management-System-Framework]] - 風險管理總框架
+- [[風險管理/黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]] - 極端事件風險
+- [[風險管理/Calmar-Ratio年化報酬MDD]] - 報酬回撤比指標
 
 ## 來源
 - [Max drawdown(MDD)是什麼？最大回檔幅度的4個注意事項 - 市場先生](../raw/2026-05-15/最大回撤MDD風險指標-市場先生.md)

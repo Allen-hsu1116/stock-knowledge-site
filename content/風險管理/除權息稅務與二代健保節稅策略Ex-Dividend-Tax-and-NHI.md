@@ -128,11 +128,11 @@
 
 ## 相關主題
 
-- [[除權息填息率與操作策略Ex-Dividend-Fill-Rate-and-Strategy]]
-- [[除權息三大操作策略Ex-Dividend-Three-Strategies]]
-- [[波段操作]]
-- [[風險管理vs資金管理三層次思維]]
-- [[部位控制2%法則Position-Sizing-2-Percent-Rule]]
+- [[操作策略/除權息填息率與操作策略Ex-Dividend-Fill-Rate-and-Strategy]]
+- [[操作策略/除權息三大操作策略Ex-Dividend-Three-Strategies]]
+- [[操作策略/波段操作]]
+- [[風險管理/風險管理vs資金管理三層次思維]]
+- [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule]]
 
 ## 來源
 

@@ -110,13 +110,13 @@ Bailey等人用CSCV方法測試策略：
 - **模型是訊號不是聖盃**：將AI模型視為提供預測訊號的工具，配合嚴格資金管理才能穩健獲利
 
 ## 相關主題
-- [[回測過擬合Backtest-Overfitting]]
-- [[回測驗證Backtesting陷阱]]
-- [[因子衰退Factor-Decay]]
-- [[風險調整報酬指標夏普比率與索提諾比率]]
-- [[交易期望值Trading-Expectancy]]
-- [[模型風險Model Risk]]
-- [[策略壓力測試Stress-Testing]]
+- [[風險管理/回測過擬合Backtest-Overfitting]]
+- [[風險管理/回測驗證Backtesting陷阱]]
+- [[風險管理/因子衰退Factor-Decay]]
+- [[風險管理/風險調整報酬指標夏普比率與索提諾比率]]
+- [[風險管理/交易期望值Trading-Expectancy]]
+- [[風險管理/模型風險Model Risk]]
+- [[風險管理/策略壓力測試Stress-Testing]]
 
 ## 來源
 - [為什麼實盤不如回測？如何檢驗多重測試導致的回測過擬合](../raw/2026-05-01/他思笔记回測過擬合多重檢驗.md)

@@ -80,7 +80,7 @@
 - 策略容量是因子衰退的**物理限制**
 - 當一個因子被過度使用（策略擁擠），不只是 Alpha 衰減，策略容量也會因為參與者爭搶流動性而下降
 - 容量不足的策略公開教學 = 暴露對手盤操作方式，加速衰退
-- 參見 [[因子衰退Factor-Decay]]
+- 參見 [[風險管理/因子衰退Factor-Decay]]
 
 ## 注意事項
 
@@ -92,15 +92,15 @@
 - **管理人的投資能力是否體現在當下規模**：比看絕對規模更重要的判斷標準
 
 ## 相關主題
-- [[因子衰退Factor-Decay]]
-- [[交易總成本TCT與滑價風險]]
-- [[流動性風險Liquidity-Risk]]
-- [[流動性幻覺Liquidity-Illusion]]
-- [[市場微結構與流動性定價Market-Microstructure-and-Liquidity-Pricing]]
-- [[回測驗證Backtesting陷阱]]
-- [[回測過擬合Backtest-Overfitting]]
-- [[倉位管理]]
-- [[資金曲線管理Equity-Curve-Management]]
+- [[風險管理/因子衰退Factor-Decay]]
+- [[風險管理/交易總成本TCT與滑價風險]]
+- [[風險管理/流動性風險Liquidity-Risk]]
+- [[風險管理/流動性幻覺Liquidity-Illusion]]
+- [[風險管理/市場微結構與流動性定價Market-Microstructure-and-Liquidity-Pricing]]
+- [[風險管理/回測驗證Backtesting陷阱]]
+- [[風險管理/回測過擬合Backtest-Overfitting]]
+- [[風險管理/倉位管理]]
+- [[風險管理/資金曲線管理Equity-Curve-Management]]
 
 ## 來源
 - [如何粗略估計一個策略的資金容量](../raw/2026-05-15/策略資金容量粗略估計-子楠講量化-FMZ.md)

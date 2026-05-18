@@ -107,14 +107,14 @@
 7. **Backspread是反向操作**：如果預期大波動而非溫和方向，應該用Backspread而非Ratio Spread
 
 ## 相關主題
-- [[對角價差Diagonal-Spread]]
-- [[時間價差Calendar-Spread]]
-- [[選擇權組合策略]]
-- [[鐵兀鷹Iron-Condor]]
-- [[選擇權Greeks希臘字母]]
-- [[選擇權賣方收租策略Option-Seller-Rent-Collection]]
-- [[Theta時間衰減實戰]]
-- [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
+- [[操作策略/對角價差Diagonal-Spread]]
+- [[操作策略/時間價差Calendar-Spread]]
+- [[操作策略/選擇權組合策略]]
+- [[操作策略/鐵兀鷹Iron-Condor]]
+- [[操作策略/選擇權Greeks希臘字母]]
+- [[操作策略/選擇權賣方收租策略Option-Seller-Rent-Collection]]
+- [[操作策略/Theta時間衰減實戰]]
+- [[操作策略/波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
 
 ## 來源
 - [對角價差與比率價差知識整理](../raw/2026-05-10/對角價差與比率價差知識整理.md)

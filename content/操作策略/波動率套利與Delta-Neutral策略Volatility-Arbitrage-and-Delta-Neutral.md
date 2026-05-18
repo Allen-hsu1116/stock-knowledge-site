@@ -122,7 +122,7 @@ Theta 成本 = Theta × 持有天數
 - 同時做空指數 IV、做多成分股 IV（或反過來）
 - 利用指數成分股之間的相關性變化獲利
 - 需要同時操作大量成分股的選擇權
-- **風險**：相關性在危機中趨近1（[[相關性崩潰Correlation-Breakdown]]），所有成分股同漲同跌
+- **風險**：相關性在危機中趨近1（[[風險管理/相關性崩潰Correlation-Breakdown]]），所有成分股同漲同跌
 
 ### 4. Variance Swap（波動率交換）
 
@@ -189,7 +189,7 @@ Theta 成本 = Theta × 持有天數
 
 ### 5. 相關性風險
 - 波動率 Dispersion 策略依賴成分股相關性
-- 危機時相關性趨近1（[[金融傳染風險Financial-Contagion]]）
+- 危機時相關性趨近1（[[風險管理/金融傳染風險Financial-Contagion]]）
 - 這是 LTCM 倒閉的核心原因之一
 
 ### 6. 模型風險
@@ -226,7 +226,7 @@ Theta 成本 = Theta × 持有天數
 | Delta Neutral Short Vol | 無 | Short | 正 | 負 | IV 高、預期波動收斂 |
 | 裸買 Call/Put | 有 | Long | 負 | 正 | 看方向 + 波動率上升 |
 | 賣出鐵兀鷹 | 無/小 | Short | 正 | 負 | IV 高、預期盤整 |
-| [[跨式Straddle與勒式Strangle]] | 無 | Long | 負 | 正 | 大波動、方向不確定 |
+| [[操作策略/跨式Straddle與勒式Strangle]] | 無 | Long | 負 | 正 | 大波動、方向不確定 |
 
 ## 注意事項
 
@@ -240,20 +240,20 @@ Theta 成本 = Theta × 持有天數
 
 ## 相關主題
 
-- [[選擇權Greeks希臘字母]]
-- [[選擇權Greeks風險判讀]]
-- [[隱含波動率IV與歷史波動率HV實戰判讀]]
-- [[波動率微笑曲線與偏態Volatility-Smile-and-Skew]]
-- [[逼券商拉抬Gamma-Squeeze兩手策略]]
-- [[跨式Straddle與勒式Strangle]]
-- [[鐵兀鷹Iron-Condor]]
-- [[VIX恐慌指數實戰判讀]]
-- [[選擇權四大基本策略]]
-- [[選擇權組合策略]]
-- [[相關性崩潰Correlation-Breakdown]]
-- [[金融傳染風險Financial-Contagion]]
-- [[市場體制識別Market-Regime-Detection]]
-- [[回撤分析進階Drawdown-Analysis-Advanced]]
+- [[操作策略/選擇權Greeks希臘字母]]
+- [[風險管理/選擇權Greeks風險判讀]]
+- [[技術分析/隱含波動率IV與歷史波動率HV實戰判讀]]
+- [[技術分析/波動率微笑曲線與偏態Volatility-Smile-and-Skew]]
+- [[籌碼面分析/逼券商拉抬Gamma-Squeeze兩手策略]]
+- [[操作策略/跨式Straddle與勒式Strangle]]
+- [[操作策略/鐵兀鷹Iron-Condor]]
+- [[風險管理/VIX恐慌指數實戰判讀]]
+- [[操作策略/選擇權四大基本策略]]
+- [[操作策略/選擇權組合策略]]
+- [[風險管理/相關性崩潰Correlation-Breakdown]]
+- [[風險管理/金融傳染風險Financial-Contagion]]
+- [[操作策略/市場體制識別Market-Regime-Detection]]
+- [[風險管理/回撤分析進階Drawdown-Analysis-Advanced]]
 
 ## 來源
 

@@ -83,13 +83,13 @@
 
 ## 相關主題
 
-- [[確認偏誤Confirmation-Bias]]
-- [[過度自信偏誤Overconfidence-Bias]]
-- [[錨定效應Anchoring-Bias]]
-- [[損失厭惡Loss-Aversion處置效應過度自信FOMO]]
-- [[交易日誌與交易紀律養成]]
-- [[交易系統Trading-System設計與迷思]]
-- [[回測過擬合Backtest-Overfitting]]
+- [[風險管理/確認偏誤Confirmation-Bias]]
+- [[風險管理/過度自信偏誤Overconfidence-Bias]]
+- [[風險管理/錨定效應Anchoring-Bias]]
+- [[風險管理/損失厭惡Loss-Aversion處置效應過度自信FOMO]]
+- [[風險管理/交易日誌與交易紀律養成]]
+- [[風險管理/交易系統Trading-System設計與迷思]]
+- [[風險管理/回測過擬合Backtest-Overfitting]]
 
 ## 來源
 

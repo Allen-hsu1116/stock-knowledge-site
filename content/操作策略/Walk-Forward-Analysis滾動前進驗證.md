@@ -117,7 +117,7 @@ $$WFE = \frac{\text{樣本外年化報酬}}{\text{樣本內年化報酬}} \times
 ### WFA 不是萬能的
 - 即使 WFA 通過，實盤仍可能失敗（制度變化、流動性枯竭等）
 - WFA 驗證的是「策略在過去市場環境下的適應性」，不保證未來
-- 需要搭配 [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]] 做壓力測試
+- 需要搭配 [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]] 做壓力測試
 
 ## Python 實作框架
 
@@ -180,14 +180,14 @@ print(f"WFA Efficiency: {wfe:.1%}")
 
 ## 相關主題
 
-- [[回測框架與偏差防範Backtesting-Framework-and-Bias-Prevention|回測框架與偏差防範]]
-- [[回測過擬合Backtest-Overfitting|回測過擬合]]
-- [[過度擬合Overfitting量化判斷|過度擬合量化判斷]]
-- [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]]
-- [[策略壓力測試Stress-Testing|策略壓力測試]]
-- [[交易策略回測與過擬合Backtesting-and-Overfitting|交易策略回測與過擬合]]
-- [[交易系統Trading-System設計與迷思|交易系統設計與迷思]]
-- [[交易策略開發流程Trading-Strategy-Development-Workflow|交易策略開發流程]]
+- [[風險管理/回測框架與偏差防範Backtesting-Framework-and-Bias-Prevention|回測框架與偏差防範]]
+- [[風險管理/回測過擬合Backtest-Overfitting|回測過擬合]]
+- [[風險管理/過度擬合Overfitting量化判斷|過度擬合量化判斷]]
+- [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]]
+- [[風險管理/策略壓力測試Stress-Testing|策略壓力測試]]
+- [[操作策略/交易策略回測與過擬合Backtesting-and-Overfitting|交易策略回測與過擬合]]
+- [[風險管理/交易系統Trading-System設計與迷思|交易系統設計與迷思]]
+- [[風險管理/交易策略開發流程Trading-Strategy-Development-Workflow|交易策略開發流程]]
 
 ## 來源
 

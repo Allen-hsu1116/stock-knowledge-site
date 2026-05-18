@@ -89,7 +89,7 @@ ATR 停損確保停損位於正常市場噪音之外，同時數學可控。
 
 **理由消失停損法的核心**：當你買進的理由消失了，不管賺賠都該出場。你的損益跟市場未來漲跌無關——市場不在乎你賺多少%或賠多少%。
 
-詳細內容見 [[理由消失停損法Reason-Based-Exit]]
+詳細內容見 [[操作策略/理由消失停損法Reason-Based-Exit]]
 
 ### 停損停利比例原則
 
@@ -102,16 +102,16 @@ ATR 停損確保停損位於正常市場噪音之外，同時數學可控。
 
 ## 相關主題
 
-- [[停損方法]]
-- [[ATR平均真實波幅-Average-True-Range]]
-- [[倉位管理]]
-- [[風險報酬比]]
-- [[交易期望值Trading-Expectancy]]
-- [[移動停利停損Trailing-Stop]]
-- [[理由消失停損法Reason-Based-Exit]]
-- [[分批停利策略Partial-Exit-Strategy]]
-- [[報復性交易防禦體系Revenge-Trading-Defense]]
-- [[交易心理紀律執行力]]
+- [[風險管理/停損方法]]
+- [[技術分析/ATR平均真實波幅-Average-True-Range]]
+- [[風險管理/倉位管理]]
+- [[風險管理/風險報酬比]]
+- [[風險管理/交易期望值Trading-Expectancy]]
+- [[風險管理/移動停利停損Trailing-Stop]]
+- [[操作策略/理由消失停損法Reason-Based-Exit]]
+- [[操作策略/分批停利策略Partial-Exit-Strategy]]
+- [[風險管理/報復性交易防禦體系Revenge-Trading-Defense]]
+- [[風險管理/交易心理紀律執行力]]
 
 ## 來源
 

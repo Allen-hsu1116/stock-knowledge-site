@@ -61,7 +61,7 @@ Frenkel, Karmann 和 Scholtens (2004) 提出影響主權違約機率的五大因
 信用違約交換（CDS）利差是主權風險最即時的市場指標：
 - **CDS利差擴大**→市場認為違約風險上升
 - **CDS利差縮小**→市場認為違約風險下降
-- 搭配[[信用利差Credit-Spread]]的TED Spread和HY Spread，可多角度監控系統性風險
+- 搭配[[風險管理/信用利差Credit-Spread]]的TED Spread和HY Spread，可多角度監控系統性風險
 
 ### 違約後的處理方式
 
@@ -94,15 +94,15 @@ Frenkel, Karmann 和 Scholtens (2004) 提出影響主權違約機率的五大因
 
 ## 相關主題
 
-- [[信用風險Credit-Risk]]
-- [[信用利差Credit-Spread]]
-- [[系統性風險與非系統性風險]]
-- [[金融傳染風險Financial-Contagion]]
-- [[VIX恐慌指數實戰判讀]]
-- [[尾部風險對沖Tail-Risk-Hedging]]
-- [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
-- [[流動性風險Liquidity-Risk]]
-- [[相關性崩潰Correlation-Breakdown]]
+- [[風險管理/信用風險Credit-Risk]]
+- [[風險管理/信用利差Credit-Spread]]
+- [[風險管理/系統性風險與非系統性風險]]
+- [[風險管理/金融傳染風險Financial-Contagion]]
+- [[風險管理/VIX恐慌指數實戰判讀]]
+- [[風險管理/尾部風險對沖Tail-Risk-Hedging]]
+- [[風險管理/黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
+- [[風險管理/流動性風險Liquidity-Risk]]
+- [[風險管理/相關性崩潰Correlation-Breakdown]]
 
 ## 來源
 

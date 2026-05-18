@@ -181,11 +181,11 @@ ROE可以進一步拆解為四大影響因素：
 
 ## 相關主題
 
-- [[ROIC投入資本報酬率]] - 排除槓桿的資本效率指標，搭配杜邦分析更完整
-- [[EVA經濟附加價值]] - EVA 考慮資本成本，杜邦分析不考慮
-- [[WACC加權平均資本成本]] - 高權益乘數影響 WACC 和資本結構
-- [[營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]] - 槓桿的放大效果
-- [[負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] - 權益乘數與負債比率的關係
+- [[基本面分析/ROIC投入資本報酬率]] - 排除槓桿的資本效率指標，搭配杜邦分析更完整
+- [[基本面分析/EVA經濟附加價值]] - EVA 考慮資本成本，杜邦分析不考慮
+- [[基本面分析/WACC加權平均資本成本]] - 高權益乘數影響 WACC 和資本結構
+- [[基本面分析/營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]] - 槓桿的放大效果
+- [[基本面分析/負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] - 權益乘數與負債比率的關係
 
 ## 假資優生辨識（CMoney 實戰框架）
 

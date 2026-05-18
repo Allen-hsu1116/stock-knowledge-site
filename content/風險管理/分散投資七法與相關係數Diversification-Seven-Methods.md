@@ -72,7 +72,7 @@
 
 這是分散投資最大的陷阱：平時分散有效的資產，在黑天鵝事件中全部一起跌。必須搭配尾部風險對沖。
 
-詳見 [[相關性風險Correlation-Risk]] 和 [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
+詳見 [[風險管理/相關性風險Correlation-Risk]] 和 [[風險管理/黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
 
 ### 4. 分散的限度
 
@@ -91,15 +91,15 @@
 
 ## 相關主題
 
-- [[相關性風險Correlation-Risk]]
-- [[系統性風險與非系統性風險]]
-- [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
-- [[尾部風險對沖Tail-Risk-Hedging]]
-- [[投資組合配置策略]]
-- [[風險平價Risk-Parity]]
-- [[凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
-- [[風險預算Risk Budgeting]]
-- [[集中度風險Concentration Risk]]
+- [[風險管理/相關性風險Correlation-Risk]]
+- [[風險管理/系統性風險與非系統性風險]]
+- [[風險管理/黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
+- [[風險管理/尾部風險對沖Tail-Risk-Hedging]]
+- [[操作策略/投資組合配置策略]]
+- [[風險管理/風險平價Risk-Parity]]
+- [[風險管理/凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
+- [[風險管理/風險預算Risk Budgeting]]
+- [[風險管理/集中度風險Concentration Risk]]
 
 ## 來源
 

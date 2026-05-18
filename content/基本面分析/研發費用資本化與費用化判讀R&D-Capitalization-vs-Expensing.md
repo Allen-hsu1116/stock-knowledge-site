@@ -90,11 +90,11 @@
 
 ## 相關主題
 
-- [[無形資產攤銷與減值判讀Intangible-Asset-Amortization-and-Impairment]]
-- [[商譽減損與併購風險]]
-- [[盈餘品質分析]]
-- [[財報假帳偵測]]
-- [[經濟護城河Economic-Moat]]
+- [[基本面分析/無形資產攤銷與減值判讀Intangible-Asset-Amortization-and-Impairment]]
+- [[基本面分析/商譽減損與併購風險]]
+- [[基本面分析/盈餘品質分析]]
+- [[基本面分析/財報假帳偵測]]
+- [[基本面分析/經濟護城河Economic-Moat]]
 
 ## 來源
 

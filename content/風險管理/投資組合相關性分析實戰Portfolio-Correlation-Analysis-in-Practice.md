@@ -16,7 +16,7 @@ tags:
 
 ## 核心概念
 
-投資組合相關性分析是將相關性理論轉化為可操作的投資組合管理工具。不同於[[相關性風險Correlation-Risk]]的理論框架和[[相關性崩潰Correlation-Breakdown]]的危機機制，本文聚焦於**日常投資組合管理中如何實際計算、評估、運用相關性**來降低風險。
+投資組合相關性分析是將相關性理論轉化為可操作的投資組合管理工具。不同於[[風險管理/相關性風險Correlation-Risk]]的理論框架和[[風險管理/相關性崩潰Correlation-Breakdown]]的危機機制，本文聚焦於**日常投資組合管理中如何實際計算、評估、運用相關性**來降低風險。
 
 ### 分散投資的幻覺
 
@@ -160,7 +160,7 @@ Bitcoin和Ethereum相關性0.85+，同時持有分散效果極低。而且加密
 
 2. **相關性是動態的**：今天低相關的資產，明天可能高相關。定期（至少每月）重新計算，不要用去年的相關性做今天的決策。
 
-3. **相關性加權部位不是萬能**：它降低相關性風險，但不消除。在[[相關性崩潰Correlation-Breakdown]]時，所有調整都可能來不及。
+3. **相關性加權部位不是萬能**：它降低相關性風險，但不消除。在[[風險管理/相關性崩潰Correlation-Breakdown]]時，所有調整都可能來不及。
 
 4. **過度優化相關性的陷阱**：如果為了追求最低相關性而買入不理解的資產，可能引入新的風險。相關性分析是工具，不是策略本身。
 
@@ -168,16 +168,16 @@ Bitcoin和Ethereum相關性0.85+，同時持有分散效果極低。而且加密
 
 ## 相關主題
 
-- [[相關性崩潰Correlation-Breakdown]] - 危機時相關性飆升的機制與防禦
-- [[相關性風險Correlation-Risk]] - 相關性風險的基礎理論框架
-- [[投資組合理論與分散投資的局限Portfolio-Theory-and-Diversification-Limits]] - 馬柯維茨理論與現實的落差
-- [[分散投資七法與相關係數Diversification-Seven-Methods]] - 分散投資的七種方法
-- [[部位控制2%法則Position-Sizing-2-Percent-Rule]] - 部位控制的基礎方法
-- [[風險管理決策框架Risk-Management-Decision-Framework]] - 風險管理整體決策框架
-- [[MDD最大回撤進階實戰各資產歷史回撤與管理方法]] - 崩潰造成的回撤
-- [[尾部風險對沖工具與實證比較Tail-Hedging-Tools-and-Backtest]] - 尾部對沖策略
-- [[策略壓力測試Stress-Testing]] - 壓力測試方法論
-- [[VIX恐慌指數實戰判讀]] - VIX是相關性崩潰的即時指標
+- [[風險管理/相關性崩潰Correlation-Breakdown]] - 危機時相關性飆升的機制與防禦
+- [[風險管理/相關性風險Correlation-Risk]] - 相關性風險的基礎理論框架
+- [[風險管理/投資組合理論與分散投資的局限Portfolio-Theory-and-Diversification-Limits]] - 馬柯維茨理論與現實的落差
+- [[風險管理/分散投資七法與相關係數Diversification-Seven-Methods]] - 分散投資的七種方法
+- [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule]] - 部位控制的基礎方法
+- [[風險管理/風險管理決策框架Risk-Management-Decision-Framework]] - 風險管理整體決策框架
+- [[風險管理/MDD最大回撤進階實戰各資產歷史回撤與管理方法]] - 崩潰造成的回撤
+- [[風險管理/尾部風險對沖工具與實證比較Tail-Hedging-Tools-and-Backtest]] - 尾部對沖策略
+- [[風險管理/策略壓力測試Stress-Testing]] - 壓力測試方法論
+- [[風險管理/VIX恐慌指數實戰判讀]] - VIX是相關性崩潰的即時指標
 
 ## 來源
 

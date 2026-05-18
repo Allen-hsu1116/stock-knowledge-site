@@ -99,8 +99,8 @@ f* = (0.55 × 0.15 - 0.45 × 0.08) / (0.15 × 0.08) = (0.0825 - 0.036) / 0.012 =
 1. 先回測策略取得勝率和盈虧比
 2. 代入凱利公式計算理論部位比例
 3. 打折至 Half Kelly 或更低
-4. 結合[[交易期望值Trading-Expectancy]]驗證策略正期望值
-5. 用[[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]測試不同部位的結果
+4. 結合[[風險管理/交易期望值Trading-Expectancy]]驗證策略正期望值
+5. 用[[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]測試不同部位的結果
 
 ### Kelly vs Optimal f
 
@@ -154,16 +154,16 @@ Kelly 公式和 Ralph Vince 的 Optimal f 看起來相似但有根本差異：
 
 ## 相關主題
 
-- [[部位控制2%法則Position-Sizing-2-Percent-Rule]] - 2%法則是凱利公式的安全下限
-- [[倉位管理]]
-- [[交易期望值Trading-Expectancy]]
-- [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]
-- [[MDD最大回撤計算與恢復難度]]
-- [[財務槓桿風險管理Leverage-Risk-Management]]
-- [[回測過擬合Backtest-Overfitting]]
-- [[破產風險Risk-of-Ruin]]
-- [[風險報酬比]]
-- [[最適f理論Optimal-f-Position-Sizing|最適f理論 Optimal f]]
+- [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule]] - 2%法則是凱利公式的安全下限
+- [[風險管理/倉位管理]]
+- [[風險管理/交易期望值Trading-Expectancy]]
+- [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]
+- [[風險管理/MDD最大回撤計算與恢復難度]]
+- [[風險管理/財務槓桿風險管理Leverage-Risk-Management]]
+- [[風險管理/回測過擬合Backtest-Overfitting]]
+- [[風險管理/破產風險Risk-of-Ruin]]
+- [[風險管理/風險報酬比]]
+- [[風險管理/最適f理論Optimal-f-Position-Sizing|最適f理論 Optimal f]]
 
 ## 來源
 

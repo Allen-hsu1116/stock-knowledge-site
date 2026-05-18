@@ -93,14 +93,14 @@ Long Gamma 的 Scalping 策略本質上就是在收割 Convexity：
 
 ## 相關主題
 
-- [[選擇權Greeks希臘字母]]
-- [[選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced]]
-- [[Black-Scholes定價模型]]
-- [[選擇權四大基本策略]]
-- [[選擇權組合策略]]
-- [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
+- [[操作策略/選擇權Greeks希臘字母]]
+- [[操作策略/選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced]]
+- [[操作策略/Black-Scholes定價模型]]
+- [[操作策略/選擇權四大基本策略]]
+- [[操作策略/選擇權組合策略]]
+- [[操作策略/波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
 - [[波動率套利與Delta Neutral策略]]
-- [[選擇權賣方收租策略Option-Seller-Rent-Collection]]
+- [[操作策略/選擇權賣方收租策略Option-Seller-Rent-Collection]]
 
 ## 來源
 

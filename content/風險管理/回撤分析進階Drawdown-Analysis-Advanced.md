@@ -160,16 +160,16 @@ MDD 是單一事件統計量，嚴重依賴觀察期間：
 
 ## 相關主題
 
-- [[MDD最大回撤計算與恢復難度]]
-- [[CVaR條件風險價值Conditional-Value-at-Risk]]
-- [[風險調整報酬指標夏普比率與索提諾比率]]
-- [[策略壓力測試Stress-Testing]]
-- [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]
-- [[回撤持續時間Drawdown-Duration]]
-- [[資金曲線管理Equity-Curve-Management]]
-- [[Calmar-Ratio年化報酬MDD]]
-- [[追蹤回撤Trailing-Drawdown固定回撤差異]]
-- [[風險報酬比]]
+- [[風險管理/MDD最大回撤計算與恢復難度]]
+- [[風險管理/CVaR條件風險價值Conditional-Value-at-Risk]]
+- [[風險管理/風險調整報酬指標夏普比率與索提諾比率]]
+- [[風險管理/策略壓力測試Stress-Testing]]
+- [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]
+- [[風險管理/回撤持續時間Drawdown-Duration]]
+- [[風險管理/資金曲線管理Equity-Curve-Management]]
+- [[風險管理/Calmar-Ratio年化報酬MDD]]
+- [[風險管理/追蹤回撤Trailing-Drawdown固定回撤差異]]
+- [[風險管理/風險報酬比]]
 
 ## 來源
 

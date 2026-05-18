@@ -117,20 +117,20 @@ Step 5：大盤方向配合（M=Market Direction）
 - **基準選擇**：vs 大盤和 vs 產業指數的 RS 可能截然不同
 
 ### 搭配其他指標
-- RS + [[VCP波動收縮型態進階實戰]]：強勢股 + 突破買點
-- RS + [[成交量確認原則Volume-Confirmation]]：量價確認強度
-- RS + [[CANSLIM選股法]]：歐尼爾完整選股框架
-- RS + [[多時間框架分析]]：多週期確認強勢
+- RS + [[技術分析/VCP波動收縮型態進階實戰]]：強勢股 + 突破買點
+- RS + [[技術分析/成交量確認原則Volume-Confirmation]]：量價確認強度
+- RS + [[技術分析/CANSLIM選股法]]：歐尼爾完整選股框架
+- RS + [[技術分析/多時間框架分析]]：多週期確認強勢
 
 ## 相關主題
 
-- [[RSI相對強弱指標]]
-- [[VCP波動收縮型態進階實戰]]
-- [[成交量確認原則Volume-Confirmation]]
-- [[ROC變動率指標Rate-of-Change]]
-- [[多指標共振交易系統Multi-Indicator-Confluence]]
-- [[大盤強弱判讀與市場寬度]]
-- [[多時間框架分析]]
+- [[技術分析/RSI相對強弱指標]]
+- [[技術分析/VCP波動收縮型態進階實戰]]
+- [[技術分析/成交量確認原則Volume-Confirmation]]
+- [[技術分析/ROC變動率指標Rate-of-Change]]
+- [[技術分析/多指標共振交易系統Multi-Indicator-Confluence]]
+- [[技術分析/大盤強弱判讀與市場寬度]]
+- [[技術分析/多時間框架分析]]
 
 ## 來源
 

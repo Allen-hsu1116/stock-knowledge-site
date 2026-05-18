@@ -133,14 +133,14 @@ Williams原始參數(5, 34)為20多年前設計：
 
 ## 相關主題
 
-- [[Awesome-Oscillator動能震盪指標]] — AC的基礎指標，衡量動量方向
-- [[鱷魚線Alligator-Indicator]] — 五維系統第一維，判斷趨勢方向
-- [[威廉碎形Williams-Fractal]] — 五維系統第二維，標示關鍵轉折點
-- [[Gator-Oscillator蓋特震盪指標]] — 鱷魚線的體溫計，量化趨勢強弱
-- [[Bill-Williams五維交易系統進階實戰]] — 五維系統完整整合策略
-- [[MACD指標實戰判讀]] — 另一種動量指標，與AC的比較
-- [[背離Divergence進階實戰]] — 背離訊號的通用判讀框架
-- [[多指標共振交易系統Multi-Indicator-Confluence]] — 多指標共振提升勝率
+- [[技術分析/Awesome-Oscillator動能震盪指標]] — AC的基礎指標，衡量動量方向
+- [[技術分析/鱷魚線Alligator-Indicator]] — 五維系統第一維，判斷趨勢方向
+- [[技術分析/威廉碎形Williams-Fractal]] — 五維系統第二維，標示關鍵轉折點
+- [[技術分析/Gator-Oscillator蓋特震盪指標]] — 鱷魚線的體溫計，量化趨勢強弱
+- [[技術分析/Bill-Williams五維交易系統進階實戰]] — 五維系統完整整合策略
+- [[技術分析/MACD指標實戰判讀]] — 另一種動量指標，與AC的比較
+- [[技術分析/背離Divergence進階實戰]] — 背離訊號的通用判讀框架
+- [[技術分析/多指標共振交易系統Multi-Indicator-Confluence]] — 多指標共振提升勝率
 
 ## 來源
 

@@ -87,12 +87,12 @@ Volume Delta = 買方成交量 - 賣方成交量
 
 ## 相關主題
 
-- [[Volume-Profile成交量分佈分析]] - 從時間軸看成交量分佈，Footprint Chart從價位看成交細節，兩者互補
-- [[Market-Profile市場輪廓TPO]] - 用時間密度描繪市場結構，TPO+Volume Profile+Footprint三合一最完整
-- [[量價關係九種型態高低檔判讀]] - 量價關係的宏觀版，Footprint是微觀版
-- [[成交量確認原則Volume-Confirmation]] - 帶量突破的微觀驗證
-- [[SMC聰明錢概念Smart-Money-Concepts]] - 訂單塊與FVG是機構足跡，Footprint Chart看到的是即時足跡
-- [[VWAP成交量加權均價]] - 法人成本線，搭配Footprint判斷突破真偽
+- [[技術分析/Volume-Profile成交量分佈分析]] - 從時間軸看成交量分佈，Footprint Chart從價位看成交細節，兩者互補
+- [[技術分析/Market-Profile市場輪廓TPO]] - 用時間密度描繪市場結構，TPO+Volume Profile+Footprint三合一最完整
+- [[技術分析/量價關係九種型態高低檔判讀]] - 量價關係的宏觀版，Footprint是微觀版
+- [[技術分析/成交量確認原則Volume-Confirmation]] - 帶量突破的微觀驗證
+- [[技術分析/SMC聰明錢概念Smart-Money-Concepts]] - 訂單塊與FVG是機構足跡，Footprint Chart看到的是即時足跡
+- [[技術分析/VWAP成交量加權均價]] - 法人成本線，搭配Footprint判斷突破真偽
 
 ## 來源
 

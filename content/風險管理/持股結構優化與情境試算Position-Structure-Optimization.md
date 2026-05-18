@@ -56,13 +56,13 @@
 
 ## 相關主題
 
-- [[部位控制2%法則Position-Sizing-2-Percent-Rule]]
-- [[集中度風險Concentration Risk]]
-- [[再平衡策略Portfolio-Rebalancing]]
-- [[投資風險管理系統框架Risk-Management-System-Framework]]
-- [[回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
-- [[風險報酬比]]
-- [[連續虧損應對策略Losing-Streak-Recovery-Strategy]]
+- [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule]]
+- [[風險管理/集中度風險Concentration Risk]]
+- [[風險管理/再平衡策略Portfolio-Rebalancing]]
+- [[風險管理/投資風險管理系統框架Risk-Management-System-Framework]]
+- [[風險管理/回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
+- [[風險管理/風險報酬比]]
+- [[風險管理/連續虧損應對策略Losing-Streak-Recovery-Strategy]]
 
 ## 來源
 

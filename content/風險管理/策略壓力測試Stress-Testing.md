@@ -158,7 +158,7 @@
 
 - **VaR**：統計模型，在正常市場條件下估計損失（附帶機率），適合日常風險監控
 - **壓力測試**：問「如果市場崩了會怎樣？」——極端情境下評估損失（不附帶機率），適合發現 VaR 看不到的脆弱點
-- Basel FRTB 已將主要資本計量從 VaR 改為 [[CVaR條件風險價值Conditional-Value-at-Risk]]，但壓力測試仍是獨立的監管要求
+- Basel FRTB 已將主要資本計量從 VaR 改為 [[風險管理/CVaR條件風險價值Conditional-Value-at-Risk]]，但壓力測試仍是獨立的監管要求
 - **最佳實務**：三者並用——VaR/CVaR 做日常監控，情境分析評估特定事件曝險，模型化壓力測試系統性探勘弱點
 
 ### 三種情境分析方法
@@ -254,7 +254,7 @@ DPG（衍生性商品政策小組）定義的七種標準衝擊：
 ### 常見五大錯誤
 
 1. **只用歷史情境**——下次危機長得一定不一樣，2020 COVID 的速度史上無前例
-2. **忽略相關性崩潰**——危機中所有風險資產相關性飆升，分散效果消失（見 [[相關性崩潰Correlation-Breakdown]]）
+2. **忽略相關性崩潰**——危機中所有風險資產相關性飆升，分散效果消失（見 [[風險管理/相關性崩潰Correlation-Breakdown]]）
 3. **測了不行動**——最常見的機構失敗模式
 4. **一次只動一個因子**——真實危機是多因子同時崩潰
 5. **把壓力測試結果當精確預測**——它是數量級估計，不是精確預言
@@ -268,18 +268,18 @@ DPG（衍生性商品政策小組）定義的七種標準衝擊：
 
 ## 相關主題
 
-- [[回測驗證Backtesting陷阱]]
-- [[過度擬合Overfitting量化判斷]]
-- [[回測框架與偏差防範Backtesting-Framework-and-Bias-Prevention]]
-- [[MDD最大回撤計算與恢復難度]]
-- [[系統性風險與非系統性風險]]
-- [[集中度風險Concentration Risk]]
-- [[模型風險Model Risk]]
-- [[流動性風險Liquidity-Risk]]
-- [[尾部風險對沖Tail-Risk-Hedging]]
-- [[風險歸因Risk-Attribution]]
-- [[保證金追繳與融資斷頭Margin-Call-and-Forced-Liquidation]]
-- [[財務槓桿風險管理Leverage-Risk-Management]]
+- [[風險管理/回測驗證Backtesting陷阱]]
+- [[風險管理/過度擬合Overfitting量化判斷]]
+- [[風險管理/回測框架與偏差防範Backtesting-Framework-and-Bias-Prevention]]
+- [[風險管理/MDD最大回撤計算與恢復難度]]
+- [[風險管理/系統性風險與非系統性風險]]
+- [[風險管理/集中度風險Concentration Risk]]
+- [[風險管理/模型風險Model Risk]]
+- [[風險管理/流動性風險Liquidity-Risk]]
+- [[風險管理/尾部風險對沖Tail-Risk-Hedging]]
+- [[風險管理/風險歸因Risk-Attribution]]
+- [[風險管理/保證金追繳與融資斷頭Margin-Call-and-Forced-Liquidation]]
+- [[風險管理/財務槓桿風險管理Leverage-Risk-Management]]
 
 ## 來源
 

@@ -60,10 +60,10 @@
 - 重大事件時（結婚、生子、市場崩盤）：立即重新評估
 
 **關鍵監控指標**：
-- [[風險調整報酬指標夏普比率與索提諾比率|夏普比率與索提諾比率]]
-- [[回撤分析進階Drawdown-Analysis-Advanced|回撤分析]]
-- [[Beta係數實戰判讀|Beta係數]]
-- [[VaR風險值Value-at-Risk|VaR風險值]]
+- [[風險管理/風險調整報酬指標夏普比率與索提諾比率|夏普比率與索提諾比率]]
+- [[風險管理/回撤分析進階Drawdown-Analysis-Advanced|回撤分析]]
+- [[風險管理/Beta係數實戰判讀|Beta係數]]
+- [[風險管理/VaR風險值Value-at-Risk|VaR風險值]]
 
 ## 五大風險分散方法
 
@@ -93,32 +93,32 @@
 ├── 進場策略（什麼條件買）
 ├── 出場策略（什麼條件賣）
 └── 風險管理（怎麼保護帳戶）← 貫穿所有決策
-    ├── 單筆風險控制（[[部位控制2%法則Position-Sizing-2-Percent-Rule|2%法則]]）
-    ├── 帳戶風險控制（[[回撤分析進階Drawdown-Analysis-Advanced|MDD控制]]）
-    ├── 相關性控制（[[分散投資七法與相關係數Diversification-Seven-Methods|分散投資]]）
-    └── 心理風險控制（[[認知偏誤與交易心理|認知偏誤管理]]）
+    ├── 單筆風險控制（[[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule|2%法則]]）
+    ├── 帳戶風險控制（[[風險管理/回撤分析進階Drawdown-Analysis-Advanced|MDD控制]]）
+    ├── 相關性控制（[[風險管理/分散投資七法與相關係數Diversification-Seven-Methods|分散投資]]）
+    └── 心理風險控制（[[風險管理/認知偏誤與交易心理|認知偏誤管理]]）
 ```
 
 ## 注意事項
 
 1. **風險管理不是限制獲利的枷鎖**，而是保障長期生存的安全網
 2. **四步驟是循環不是一次性的**——識別→設定→選擇→監控→再識別...
-3. **人性是最大的風險**——再好的系統也抵不過不執行，參見[[交易執行力缺口Execution-Gap|交易執行力缺口]]
-4. **分散投資在危機時會失效**——相關性趨向1，參見[[相關性崩潰Correlation-Breakdown|相關性崩潰]]
+3. **人性是最大的風險**——再好的系統也抵不過不執行，參見[[風險管理/交易執行力缺口Execution-Gap|交易執行力缺口]]
+4. **分散投資在危機時會失效**——相關性趨向1，參見[[風險管理/相關性崩潰Correlation-Breakdown|相關性崩潰]]
 5. **停損設太緊等於沒停損**——被正常波動洗出場比不止損更危險
 
 ## 相關主題
 
-- [[回撤分析進階Drawdown-Analysis-Advanced|回撤分析進階]]
-- [[部位控制2%法則Position-Sizing-2-Percent-Rule|部位控制2%法則]]
-- [[停損設定方法Stop-Loss-Placement|停損設定方法]]
-- [[風險報酬比|風險報酬比]]
-- [[分散投資七法與相關係數Diversification-Seven-Methods|分散投資七法與相關係數]]
-- [[認知偏誤與交易心理|認知偏誤與交易心理]]
-- [[交易計畫書Trading-Plan|交易計畫書]]
-- [[系統性風險與非系統性風險|系統性風險與非系統性風險]]
-- [[流動性風險Liquidity-Risk|流動性風險]]
-- [[市場情緒週期與反脆弱交易系統Market-Sentiment-Cycle-and-Antifragile-System|市場情緒週期與反脆弱交易系統]]
+- [[風險管理/回撤分析進階Drawdown-Analysis-Advanced|回撤分析進階]]
+- [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule|部位控制2%法則]]
+- [[風險管理/停損設定方法Stop-Loss-Placement|停損設定方法]]
+- [[風險管理/風險報酬比|風險報酬比]]
+- [[風險管理/分散投資七法與相關係數Diversification-Seven-Methods|分散投資七法與相關係數]]
+- [[風險管理/認知偏誤與交易心理|認知偏誤與交易心理]]
+- [[風險管理/交易計畫書Trading-Plan|交易計畫書]]
+- [[風險管理/系統性風險與非系統性風險|系統性風險與非系統性風險]]
+- [[風險管理/流動性風險Liquidity-Risk|流動性風險]]
+- [[風險管理/市場情緒週期與反脆弱交易系統Market-Sentiment-Cycle-and-Antifragile-System|市場情緒週期與反脆弱交易系統]]
 
 ## 來源
 

@@ -85,14 +85,14 @@ CHO 和 CMF 是同一個設計師（Marc Chaikin）的不同面向工具：
 
 ## 相關主題
 
-- [[Chaikin-Money-Flow佳慶資金流量指標]]
-- [[AD累積分配指標收盤位置加權]]
-- [[OBV能量潮指標量價趨勢判讀]]
-- [[MACD指標實戰判讀]]
-- [[MFI資金流量指標Money-Flow-Index]]
-- [[背離Divergence進階實戰]]
-- [[量價關係九種型態高低檔判讀]]
-- [[Klinger-Volume-Oscillator克林格成交量震盪指標]]
+- [[技術分析/Chaikin-Money-Flow佳慶資金流量指標]]
+- [[技術分析/AD累積分配指標收盤位置加權]]
+- [[技術分析/OBV能量潮指標量價趨勢判讀]]
+- [[技術分析/MACD指標實戰判讀]]
+- [[技術分析/MFI資金流量指標Money-Flow-Index]]
+- [[技術分析/背離Divergence進階實戰]]
+- [[技術分析/量價關係九種型態高低檔判讀]]
+- [[技術分析/Klinger-Volume-Oscillator克林格成交量震盪指標]]
 
 ## 來源
 

@@ -25,7 +25,7 @@
 - 跌 10% 只需漲 11.1%，差距不大
 - 跌 50% 需要漲 100%，等於要翻倍才能回本
 - 跌 80% 需要漲 400%，等於要漲 5 倍
-- 這就是為什麼 [[部位控制2%法則Position-Sizing-2-Percent-Rule|2% 法則]] 把單筆最大虧損限制在總資金 2%
+- 這就是為什麼 [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule|2% 法則]] 把單筆最大虧損限制在總資金 2%
 
 ### 恢復難度的三個維度
 
@@ -74,7 +74,7 @@
 1. **設定 MDD 上限**：根據你的心理承受能力和現金流需求，設定可接受的最大回撤（例如 20%）
 2. **反推部位大小**：從 MDD 上限反推單筆最大風險和總槓桿上限
 3. **建立分層停損**：
-   - 單筆停損：[[停損設定方法Stop-Loss-Placement|2% 法則]]
+   - 單筆停損：[[風險管理/停損設定方法Stop-Loss-Placement|2% 法則]]
    - 帳戶停損：月虧超過 6% 暫停交易
    - 策略停損：策略連續虧損超過歷史 MDD 的 1.5 倍，停止使用
 4. **滾動 MDD 監控**：不只看全歷史 MDD，也要看「最近 3 年」的滾動 MDD，評估策略在不同市場環境的韌性
@@ -92,27 +92,27 @@
 這只是粗估，實際恢復可能更長，因為：
 - 市場不會直線上漲
 - 心理壓力可能導致提前退出
-- 策略可能在回撤後衰退（參見 [[因子衰退Factor-Decay|因子衰退]]）
+- 策略可能在回撤後衰退（參見 [[風險管理/因子衰退Factor-Decay|因子衰退]]）
 
 ## 注意事項
 
 1. **只看深度不看時間是危險的**：30% 回撤 3 週回本 vs 3 年回本，體感完全不同
-2. **回測 MDD 可能低估**：歷史最壞情況不代表未來最壞情況，建議用 [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]] 壓力測試
+2. **回測 MDD 可能低估**：歷史最壞情況不代表未來最壞情況，建議用 [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]] 壓力測試
 3. **槓桿會放大 MDD**：2 倍槓桿等於 MDD 也放大 2 倍，恢復更難
 4. **別忽略交易成本**：滑價、手續費、稅金會讓實際 MDD 比回測更大
-5. **MDD 不是唯一指標**：搭配 [[風險調整報酬指標夏普比率與索提諾比率|夏普比率]]、[[Calmar-Ratio年化報酬MDD|Calmar Ratio]]、[[CVaR條件風險價值Conditional-Value-at-Risk|CVaR]] 交叉驗證
+5. **MDD 不是唯一指標**：搭配 [[風險管理/風險調整報酬指標夏普比率與索提諾比率|夏普比率]]、[[風險管理/Calmar-Ratio年化報酬MDD|Calmar Ratio]]、[[風險管理/CVaR條件風險價值Conditional-Value-at-Risk|CVaR]] 交叉驗證
 
 ## 相關主題
 
-- [[回撤分析進階Drawdown-Analysis-Advanced|回撤分析進階]]
-- [[回撤持續時間Drawdown-Duration|回撤持續時間]]
-- [[追蹤回撤Trailing-Drawdown固定回撤差異|追蹤回撤與固定回撤差異]]
-- [[Calmar-Ratio年化報酬MDD|Calmar Ratio]]
-- [[部位控制2%法則Position-Sizing-2-Percent-Rule|部位控制2%法則]]
-- [[停損設定方法Stop-Loss-Placement|停損設定方法]]
-- [[破產風險Risk-of-Ruin|破產風險]]
-- [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]]
-- [[投資風險管理系統框架Risk-Management-System-Framework|投資風險管理系統框架]]
+- [[風險管理/回撤分析進階Drawdown-Analysis-Advanced|回撤分析進階]]
+- [[風險管理/回撤持續時間Drawdown-Duration|回撤持續時間]]
+- [[風險管理/追蹤回撤Trailing-Drawdown固定回撤差異|追蹤回撤與固定回撤差異]]
+- [[風險管理/Calmar-Ratio年化報酬MDD|Calmar Ratio]]
+- [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule|部位控制2%法則]]
+- [[風險管理/停損設定方法Stop-Loss-Placement|停損設定方法]]
+- [[風險管理/破產風險Risk-of-Ruin|破產風險]]
+- [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]]
+- [[風險管理/投資風險管理系統框架Risk-Management-System-Framework|投資風險管理系統框架]]
 
 ## 來源
 

@@ -142,15 +142,15 @@ Lopez de Prado 原論文的模擬結果顯示：
 
 ## 相關主題
 
-- [[風險平價策略Risk-Parity]]
-- [[風險預算Risk Budgeting]]
-- [[投資組合相關性分析實戰Portfolio-Correlation-Analysis-in-Practice]]
-- [[相關性風險Correlation-Risk]]
-- [[模型風險Model Risk]]
-- [[回測過擬合Backtest-Overfitting]]
-- [[資產配置策略比較Asset-Allocation-Comparison]]
-- [[分散投資七法與相關係數Diversification-Seven-Methods]]
-- [[投資組合理論與分散投資的局限Portfolio-Theory-and-Diversification-Limits]]
+- [[風險管理/風險平價策略Risk-Parity]]
+- [[風險管理/風險預算Risk Budgeting]]
+- [[風險管理/投資組合相關性分析實戰Portfolio-Correlation-Analysis-in-Practice]]
+- [[風險管理/相關性風險Correlation-Risk]]
+- [[風險管理/模型風險Model Risk]]
+- [[風險管理/回測過擬合Backtest-Overfitting]]
+- [[風險管理/資產配置策略比較Asset-Allocation-Comparison]]
+- [[風險管理/分散投資七法與相關係數Diversification-Seven-Methods]]
+- [[風險管理/投資組合理論與分散投資的局限Portfolio-Theory-and-Diversification-Limits]]
 
 ## 來源
 

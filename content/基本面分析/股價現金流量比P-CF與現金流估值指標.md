@@ -134,16 +134,16 @@ FCF Margin = 自由現金流 ÷ 營收
 
 ## 相關主題
 
-- [[FCF估值模型自由現金流15公式與選股實戰]]
-- [[現金流量折現法DCF估值]]
-- [[資本支出CapEx與自由現金流判讀]]
-- [[本益比進階判讀PE-Ratio-Advanced]]
-- [[企業價值倍數EV-EBIT與EV-EBITDA]]
-- [[盈餘品質分析]]
-- [[負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]]
-- [[現金流量表三大現金流判讀]]（待建）
-- [[現金轉換循環Cash Conversion Cycle]]
-- [[股價淨值比PBR-Price-to-Book-Ratio]]
+- [[基本面分析/FCF估值模型自由現金流15公式與選股實戰]]
+- [[基本面分析/現金流量折現法DCF估值]]
+- [[基本面分析/資本支出CapEx與自由現金流判讀]]
+- [[基本面分析/本益比進階判讀PE-Ratio-Advanced]]
+- [[基本面分析/企業價值倍數EV-EBIT與EV-EBITDA]]
+- [[基本面分析/盈餘品質分析]]
+- [[基本面分析/負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]]
+- [[基本面分析/現金流量表三大現金流判讀]]（待建）
+- [[基本面分析/現金轉換循環Cash Conversion Cycle]]
+- [[基本面分析/股價淨值比PBR-Price-to-Book-Ratio]]
 
 ## 來源
 

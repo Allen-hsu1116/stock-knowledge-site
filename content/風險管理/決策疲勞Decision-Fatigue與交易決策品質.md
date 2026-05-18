@@ -127,19 +127,19 @@ tags: [決策疲勞, 意志力耗損, 自我耗損, 交易心理, 正念交易, 
 
 ## 相關主題
 
-- [[交易心理紀律執行力]]
-- [[交易日誌與交易紀律養成]]
-- [[交易前檢查清單Pre-Trade-Checklist]]
-- [[過度交易Overtrading防範體系]]
-- [[FOMO與FUD交易衝動管理]]
-- [[近因效應Recency-Effect]]
-- [[確認偏誤Confirmation-Bias]]
-- [[過度自信偏誤Overconfidence-Bias]]
-- [[損失厭惡Loss-Aversion處置效應過度自信FOMO]]
-- [[交易執行力缺口Execution-Gap]]
-- [[贏家心智系統Mark-Douglas交易心理框架]]
-- [[報復性交易防禦體系Revenge-Trading-Defense]]
-- [[規則化交易系統Rule-Based-Trading-System]]
+- [[風險管理/交易心理紀律執行力]]
+- [[風險管理/交易日誌與交易紀律養成]]
+- [[風險管理/交易前檢查清單Pre-Trade-Checklist]]
+- [[風險管理/過度交易Overtrading防範體系]]
+- [[風險管理/FOMO與FUD交易衝動管理]]
+- [[風險管理/近因效應Recency-Effect]]
+- [[風險管理/確認偏誤Confirmation-Bias]]
+- [[風險管理/過度自信偏誤Overconfidence-Bias]]
+- [[風險管理/損失厭惡Loss-Aversion處置效應過度自信FOMO]]
+- [[風險管理/交易執行力缺口Execution-Gap]]
+- [[風險管理/贏家心智系統Mark-Douglas交易心理框架]]
+- [[風險管理/報復性交易防禦體系Revenge-Trading-Defense]]
+- [[風險管理/規則化交易系統Rule-Based-Trading-System]]
 
 ## 來源
 

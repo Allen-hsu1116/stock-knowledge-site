@@ -59,7 +59,7 @@
 組合勝率：
 - 單獨碎形：約55%-60%
 - 碎形+鱷魚線：約68%-72%
-- 碎形+鱷魚線+[[Gator-Oscillator蓋特震盪指標|Gator Oscillator]]：約78%-85%
+- 碎形+鱷魚線+[[技術分析/Gator-Oscillator蓋特震盪指標|Gator Oscillator]]：約78%-85%
 
 ### 停損設定
 
@@ -95,15 +95,15 @@
 
 ## 相關主題
 
-- [[鱷魚線Alligator-Indicator]]
-- [[Gator-Oscillator蓋特震盪指標]]
-- [[Awesome-Oscillator動能震盪指標]]
-- [[支撐壓力]]
-- [[K線型態]]
-- [[順勢交易]]
-- [[多時間框架分析]]
-- [[成交量確認原則Volume-Confirmation]]
-- [[Bill-Williams五維交易系統進階實戰]]
+- [[技術分析/鱷魚線Alligator-Indicator]]
+- [[技術分析/Gator-Oscillator蓋特震盪指標]]
+- [[技術分析/Awesome-Oscillator動能震盪指標]]
+- [[技術分析/支撐壓力]]
+- [[技術分析/K線型態]]
+- [[操作策略/順勢交易]]
+- [[技術分析/多時間框架分析]]
+- [[技術分析/成交量確認原則Volume-Confirmation]]
+- [[技術分析/Bill-Williams五維交易系統進階實戰]]
 
 ## 來源
 

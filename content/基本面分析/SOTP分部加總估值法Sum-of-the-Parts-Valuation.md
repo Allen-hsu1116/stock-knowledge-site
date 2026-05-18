@@ -142,17 +142,17 @@ Implied Equity Value = Total TEV - 淨負債 - 企業總部成本 - 少數股權
 
 ## 相關主題
 
-- [[企業價值倍數EV-EBIT與EV-EBITDA]]
-- [[現金流量折現法DCF估值]]
-- [[經濟護城河Economic-Moat]]
-- [[本益比進階判讀PE-Ratio-Advanced]]
-- [[商譽減損與併購風險]]
-- [[合併財報與非控制權益判讀]]
-- [[財報三表綜合判讀與勾稽關係]]
-- [[資本支出CapEx與自由現金流判讀]]
-- [[營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]]
-- [[ROIC投入資本報酬率]]
-- [[WACC加權平均資本成本]]
+- [[基本面分析/企業價值倍數EV-EBIT與EV-EBITDA]]
+- [[基本面分析/現金流量折現法DCF估值]]
+- [[基本面分析/經濟護城河Economic-Moat]]
+- [[基本面分析/本益比進階判讀PE-Ratio-Advanced]]
+- [[基本面分析/商譽減損與併購風險]]
+- [[基本面分析/合併財報與非控制權益判讀]]
+- [[基本面分析/財報三表綜合判讀與勾稽關係]]
+- [[基本面分析/資本支出CapEx與自由現金流判讀]]
+- [[基本面分析/營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]]
+- [[基本面分析/ROIC投入資本報酬率]]
+- [[基本面分析/WACC加權平均資本成本]]
 
 ## 來源
 

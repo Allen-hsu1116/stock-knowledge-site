@@ -77,17 +77,17 @@
 
 ### 🚨 搭配擴展找停利點
 
-斐波那契不只能找買點，還能找停利點（擴展 Extension）。常用目標價倍數：1.618 和 2.618。詳見 [[斐波那契擴展Fibonacci-Extension]]。
+斐波那契不只能找買點，還能找停利點（擴展 Extension）。常用目標價倍數：1.618 和 2.618。詳見 [[技術分析/斐波那契擴展Fibonacci-Extension]]。
 
 ## 相關主題
 
-- [[斐波那契擴展Fibonacci-Extension]]
-- [[諧波形態Harmonic-Patterns]]
-- [[支撐壓力互換與真假突破判斷]]
-- [[艾略特波浪理論Elliott-Wave-Theory]]
-- [[均線判斷]]
-- [[K線型態]]
-- [[MACD指標實戰判讀]]
+- [[技術分析/斐波那契擴展Fibonacci-Extension]]
+- [[技術分析/諧波形態Harmonic-Patterns]]
+- [[技術分析/支撐壓力互換與真假突破判斷]]
+- [[技術分析/艾略特波浪理論Elliott-Wave-Theory]]
+- [[技術分析/均線判斷]]
+- [[技術分析/K線型態]]
+- [[技術分析/MACD指標實戰判讀]]
 
 ## 來源
 

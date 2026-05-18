@@ -125,17 +125,17 @@ EV/EBITDA 的核心概念可追溯到 1980 年代，由 John Malone 在 Tele-Com
 當ROIC > WACC時，成長創造價值；當ROIC < WACC時，成長反而毀損價值。
 
 ## 相關主題
-- [[本益比進階判讀PE-Ratio-Advanced|本益比進階判讀]] - P/E的深度判讀與盲點
-- [[本益比河流圖PE-Band|本益比河流圖PE Band]]
-- [[股價淨值比PBR-Price-to-Book-Ratio|股價淨值比PBR]]
-- [[PEG本益成長比|PEG本益成長比]]
-- [[EBITDA息稅折舊攤銷前利潤|EBITDA]] - EV/EBITDA的分母
-- [[FCF估值模型自由現金流15公式與選股實戰|FCF估值模型]]
-- [[現金流量折現法DCF估值|DCF估值]] - 企業價值的理論基礎
-- [[經濟護城河Economic-Moat|經濟護城河]] - 延長超額收益存續期
-- [[財報三表綜合判讀與勾稽關係|財報三表綜合判讀]]
-- [[資本支出CapEx與自由現金流判讀]] - CapEx是EBITDA的核心缺陷補充
-- [[SOTP分部加總估值法Sum-of-the-Parts-Valuation|SOTP分部估值法]] - EV/EBITDA是SOTP各部門最常用的估值倍數
+- [[基本面分析/本益比進階判讀PE-Ratio-Advanced|本益比進階判讀]] - P/E的深度判讀與盲點
+- [[基本面分析/本益比河流圖PE-Band|本益比河流圖PE Band]]
+- [[基本面分析/股價淨值比PBR-Price-to-Book-Ratio|股價淨值比PBR]]
+- [[基本面分析/PEG本益成長比|PEG本益成長比]]
+- [[基本面分析/EBITDA息稅折舊攤銷前利潤|EBITDA]] - EV/EBITDA的分母
+- [[基本面分析/FCF估值模型自由現金流15公式與選股實戰|FCF估值模型]]
+- [[基本面分析/現金流量折現法DCF估值|DCF估值]] - 企業價值的理論基礎
+- [[基本面分析/經濟護城河Economic-Moat|經濟護城河]] - 延長超額收益存續期
+- [[基本面分析/財報三表綜合判讀與勾稽關係|財報三表綜合判讀]]
+- [[基本面分析/資本支出CapEx與自由現金流判讀]] - CapEx是EBITDA的核心缺陷補充
+- [[基本面分析/SOTP分部加總估值法Sum-of-the-Parts-Valuation|SOTP分部估值法]] - EV/EBITDA是SOTP各部門最常用的估值倍數
 
 ## 來源
 - [企業價值倍數EV/EBIT、EV/EBITDA是什麼？怎麼計算？- 市場先生](../raw/2026-05-05/企業價值倍數EV-EBIT-EBITDA市場先生.md)

@@ -102,7 +102,7 @@
 - **確認是失效還是正常波動**：任何策略都有好壞時期，不要把正常回撤誤判為失效
 
 ## 相關主題
-- [[技術分析失效三情境]]
+- [[風險管理/技術分析失效三情境]]
 - [[風險管理/因子衰退Factor-Decay|因子衰退Factor Decay]]
 - [[風險管理/回測驗證Backtesting陷阱|回測驗證Backtesting陷阱]]
 - [[風險管理/回測過擬合Backtest-Overfitting|回測過擬合Backtest Overfitting]]

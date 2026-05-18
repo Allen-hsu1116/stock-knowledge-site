@@ -98,15 +98,15 @@ TRP 不按傳統資產類別分組，而是按**壓力情境下的行為**分桶
 
 ## 相關主題
 
-- [[風險平價策略Risk-Parity]]
-- [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
-- [[CVaR條件風險價值Conditional-Value-at-Risk]]
-- [[相關性崩潰Correlation-Breakdown]]
-- [[尾部風險對沖Tail-Risk-Hedging]]
-- [[風險歸因Risk-Attribution]]
-- [[流動性風險Liquidity-Risk]]
-- [[VIX恐慌指數實戰判讀]]
-- [[再平衡策略Portfolio-Rebalancing]]
+- [[風險管理/風險平價策略Risk-Parity]]
+- [[風險管理/黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
+- [[風險管理/CVaR條件風險價值Conditional-Value-at-Risk]]
+- [[風險管理/相關性崩潰Correlation-Breakdown]]
+- [[風險管理/尾部風險對沖Tail-Risk-Hedging]]
+- [[風險管理/風險歸因Risk-Attribution]]
+- [[風險管理/流動性風險Liquidity-Risk]]
+- [[風險管理/VIX恐慌指數實戰判讀]]
+- [[風險管理/再平衡策略Portfolio-Rebalancing]]
 
 ## 來源
 

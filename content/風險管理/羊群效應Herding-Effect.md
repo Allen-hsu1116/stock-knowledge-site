@@ -72,13 +72,13 @@
 
 ## 相關主題
 
-- [[確認偏誤Confirmation-Bias]]
-- [[過度自信偏誤Overconfidence-Bias]]
-- [[損失厭惡Loss-Aversion處置效應過度自信FOMO]]
-- [[損失厭惡Loss-Aversion處置效應過度自信FOMO]]
-- [[交易心理紀律執行力]]
-- [[過度交易Overtrading防範體系]]
-- [[籌碼集中度量化指標]]
+- [[風險管理/確認偏誤Confirmation-Bias]]
+- [[風險管理/過度自信偏誤Overconfidence-Bias]]
+- [[風險管理/損失厭惡Loss-Aversion處置效應過度自信FOMO]]
+- [[風險管理/損失厭惡Loss-Aversion處置效應過度自信FOMO]]
+- [[風險管理/交易心理紀律執行力]]
+- [[風險管理/過度交易Overtrading防範體系]]
+- [[籌碼面分析/籌碼集中度量化指標]]
 
 ## 來源
 

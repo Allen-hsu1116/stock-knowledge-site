@@ -80,11 +80,11 @@ Force Index 2天 EMA 是三重濾網系統的理想第二層濾網指標：
 
 ## 相關主題
 
-- [[Klinger-Volume-Oscillator克林格成交量震盪指標]]
-- [[OBV能量潮指標量價趨勢判讀]]
-- [[MFI資金流量指標Money-Flow-Index]]
-- [[量價關係實戰操作SOP]]
-- [[Elder-Impulse-System艾爾德衝擊系統]]
+- [[技術分析/Klinger-Volume-Oscillator克林格成交量震盪指標]]
+- [[技術分析/OBV能量潮指標量價趨勢判讀]]
+- [[技術分析/MFI資金流量指標Money-Flow-Index]]
+- [[操作策略/量價關係實戰操作SOP]]
+- [[技術分析/Elder-Impulse-System艾爾德衝擊系統]]
 
 ## 來源
 

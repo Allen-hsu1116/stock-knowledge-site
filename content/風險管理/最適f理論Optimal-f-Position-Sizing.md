@@ -113,15 +113,15 @@ Vince 建議使用 Optimal f 的一個分數，而非完整比例：
 
 ## 相關主題
 
-- [[凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
-- [[倉位管理]]
-- [[MDD最大回撤計算與恢復難度]]
-- [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]
-- [[回測過擬合Backtest-Overfitting]]
-- [[破產風險Risk-of-Ruin]]
-- [[風險報酬比]]
-- [[交易期望值Trading-Expectancy]]
-- [[財務槓桿風險管理Leverage-Risk-Management]]
+- [[風險管理/凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
+- [[風險管理/倉位管理]]
+- [[風險管理/MDD最大回撤計算與恢復難度]]
+- [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]
+- [[風險管理/回測過擬合Backtest-Overfitting]]
+- [[風險管理/破產風險Risk-of-Ruin]]
+- [[風險管理/風險報酬比]]
+- [[風險管理/交易期望值Trading-Expectancy]]
+- [[風險管理/財務槓桿風險管理Leverage-Risk-Management]]
 
 ## 來源
 

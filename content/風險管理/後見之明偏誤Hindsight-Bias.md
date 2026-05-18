@@ -56,14 +56,14 @@
 
 ## 相關主題
 
-- [[確認偏誤Confirmation-Bias]]
-- [[認知偏誤與交易心理]]
-- [[交易日誌與交易紀律養成]]
-- [[回測驗證Backtesting陷阱]]
-- [[回測過擬合Backtest-Overfitting]]
-- [[贏家心智系統Mark-Douglas交易心理框架]]
-- [[生存者偏差Survivorship-Bias]]
-- [[尾部風險對沖Tail-Risk-Hedging]]
+- [[風險管理/確認偏誤Confirmation-Bias]]
+- [[風險管理/認知偏誤與交易心理]]
+- [[風險管理/交易日誌與交易紀律養成]]
+- [[風險管理/回測驗證Backtesting陷阱]]
+- [[風險管理/回測過擬合Backtest-Overfitting]]
+- [[風險管理/贏家心智系統Mark-Douglas交易心理框架]]
+- [[風險管理/生存者偏差Survivorship-Bias]]
+- [[風險管理/尾部風險對沖Tail-Risk-Hedging]]
 
 ## 來源
 

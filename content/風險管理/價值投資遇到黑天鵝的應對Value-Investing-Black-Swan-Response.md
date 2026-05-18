@@ -29,7 +29,7 @@
 > 即使勝率99%的賭局，每把都全押，早晚歸零。
 > 「0 不管後面乘上多大的數字，結果都還是 0。」
 
-這句話直接對應 [[破產風險Risk-of-Ruin]] 的數學結論：即使有優勢，資金管理不當仍會破產。
+這句話直接對應 [[風險管理/破產風險Risk-of-Ruin]] 的數學結論：即使有優勢，資金管理不當仍會破產。
 
 ## 實戰應用
 
@@ -37,7 +37,7 @@
 
 1. **分散投資**：每檔股票最多投入總資金的1/10，簡單有效
 2. **預留現金**：維持一定比例現金水位，崩盤時有資金撿便宜
-3. **控制槓桿**：避免過度槓桿導致黑天鵝時斷頭違約，詳見 [[策略壓力測試Stress-Testing]]
+3. **控制槓桿**：避免過度槓桿導致黑天鵝時斷頭違約，詳見 [[風險管理/策略壓力測試Stress-Testing]]
 4. **不預測黑天鵝**：接受無法預測的事實，轉而建立能承受任何衝擊的組合
 
 ### 價值投資者的兩大挑戰
@@ -63,14 +63,14 @@
 
 ## 相關主題
 
-- [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
-- [[尾部風險對沖Tail-Risk-Hedging]]
-- [[分散投資七法與相關係數Diversification-Seven-Methods]]
-- [[回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
-- [[破產風險Risk-of-Ruin]]
-- [[策略壓力測試Stress-Testing]]
-- [[部位控制2%法則Position-Sizing-2-Percent-Rule]]
-- [[風險報酬比]]
+- [[風險管理/黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
+- [[風險管理/尾部風險對沖Tail-Risk-Hedging]]
+- [[風險管理/分散投資七法與相關係數Diversification-Seven-Methods]]
+- [[風險管理/回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
+- [[風險管理/破產風險Risk-of-Ruin]]
+- [[風險管理/策略壓力測試Stress-Testing]]
+- [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule]]
+- [[風險管理/風險報酬比]]
 
 ## 來源
 

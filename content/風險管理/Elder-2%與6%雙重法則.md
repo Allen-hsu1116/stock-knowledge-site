@@ -74,13 +74,13 @@ Alexander Elder 在《走進我的交易室》提出兩道防線：
 
 ## 相關主題
 
-- [[風險管理vs資金管理三層次思維]]
-- [[部位控制2%法則Position-Sizing-2-Percent-Rule]]
-- [[試單策略與由小而大]]
-- [[停損設定方法Stop-Loss-Placement]]
-- [[回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
-- [[非對稱槓桿與1%資控法則]]
-- [[交易計畫書Trading-Plan]]
+- [[風險管理/風險管理vs資金管理三層次思維]]
+- [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule]]
+- [[風險管理/試單策略與由小而大]]
+- [[風險管理/停損設定方法Stop-Loss-Placement]]
+- [[風險管理/回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
+- [[風險管理/非對稱槓桿與1%資控法則]]
+- [[風險管理/交易計畫書Trading-Plan]]
 
 ## 來源
 

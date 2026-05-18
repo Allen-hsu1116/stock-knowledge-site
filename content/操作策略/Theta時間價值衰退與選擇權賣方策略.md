@@ -181,14 +181,14 @@ Long Option的收益曲線是凸的（convex）——「賺的時候越賺越多
 
 ## 相關主題
 
-- [[選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced]]
-- [[選擇權賣方收租策略Option-Seller-Rent-Collection]]
-- [[選擇權Greeks希臘字母]]
-- [[鐵兀鷹Iron-Condor]]
-- [[對角價差Diagonal-Spread]]
-- [[隱含波動率IV與歷史波動率HV實戰判讀]]
-- [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
-- [[逼券商拉抬Gamma-Squeeze兩手策略]]
+- [[操作策略/選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced]]
+- [[操作策略/選擇權賣方收租策略Option-Seller-Rent-Collection]]
+- [[操作策略/選擇權Greeks希臘字母]]
+- [[操作策略/鐵兀鷹Iron-Condor]]
+- [[操作策略/對角價差Diagonal-Spread]]
+- [[技術分析/隱含波動率IV與歷史波動率HV實戰判讀]]
+- [[操作策略/波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
+- [[籌碼面分析/逼券商拉抬Gamma-Squeeze兩手策略]]
 
 ## 來源
 

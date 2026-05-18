@@ -128,12 +128,12 @@ ROA突然異常飆高可能是：
 
 ## 相關主題
 
-- [[ROE杜邦分析淨利率資產週轉率權益乘數]]
-- [[資產周轉率進階判讀Asset-Turnover-Advanced]]
-- [[ROIC投入資本報酬率]]
-- [[EVA經濟附加價值]]
-- [[盈餘品質分析]]
-- [[負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]]
+- [[基本面分析/ROE杜邦分析淨利率資產週轉率權益乘數]]
+- [[基本面分析/資產周轉率進階判讀Asset-Turnover-Advanced]]
+- [[基本面分析/ROIC投入資本報酬率]]
+- [[基本面分析/EVA經濟附加價值]]
+- [[基本面分析/盈餘品質分析]]
+- [[基本面分析/負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]]
 
 ## 來源
 

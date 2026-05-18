@@ -58,15 +58,15 @@
 
 ## 相關主題
 
-- [[報復性交易防禦體系Revenge-Trading-Defense]]
-- [[回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
-- [[交易日誌與交易紀律養成]]
-- [[部位控制2%法則Position-Sizing-2-Percent-Rule]]
-- [[交易心理五原則Five-Trading-Psychology-Principles]]
-- [[專業復盤三層次Professional-Review-Three-Levels]]
-- [[資金曲線管理Equity-Curve-Management]]
+- [[風險管理/報復性交易防禦體系Revenge-Trading-Defense]]
+- [[風險管理/回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
+- [[風險管理/交易日誌與交易紀律養成]]
+- [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule]]
+- [[風險管理/交易心理五原則Five-Trading-Psychology-Principles]]
+- [[風險管理/專業復盤三層次Professional-Review-Three-Levels]]
+- [[風險管理/資金曲線管理Equity-Curve-Management]]
 
 ## 來源
 
 - [連續虧損應對與心態復原](../raw/2026-05-15/連續虧損應對與心態復原.md)
-- [[報復性交易防禦體系Revenge-Trading-Defense]]（既有）
+- [[風險管理/報復性交易防禦體系Revenge-Trading-Defense]]（既有）

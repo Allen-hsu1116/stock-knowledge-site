@@ -69,16 +69,16 @@
 
 ### 🚨 搭配波浪理論使用
 
-斐波那契擴展與 [[艾略特波浪理論Elliott-Wave-Theory]] 天然搭配：第3浪用1.618倍數預測，第5浪用等長或0.618倍數預測。單獨使用擴展而不知道波浪結構，容易在錯誤的波段計算。
+斐波那契擴展與 [[技術分析/艾略特波浪理論Elliott-Wave-Theory]] 天然搭配：第3浪用1.618倍數預測，第5浪用等長或0.618倍數預測。單獨使用擴展而不知道波浪結構，容易在錯誤的波段計算。
 
 ## 相關主題
 
-- [[斐波那契回撤Fibonacci-Retracement]]
-- [[諧波形態Harmonic-Patterns]]
-- [[支撐壓力互換與真假突破判斷]]
+- [[技術分析/斐波那契回撤Fibonacci-Retracement]]
+- [[技術分析/諧波形態Harmonic-Patterns]]
+- [[技術分析/支撐壓力互換與真假突破判斷]]
 - [[風險管理/停利方法]]
-- [[艾略特波浪理論Elliott-Wave-Theory]]
-- [[出場策略總論Exit-Strategy-Overview]]
+- [[技術分析/艾略特波浪理論Elliott-Wave-Theory]]
+- [[操作策略/出場策略總論Exit-Strategy-Overview]]
 
 ## 來源
 

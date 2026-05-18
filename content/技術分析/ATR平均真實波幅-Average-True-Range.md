@@ -116,16 +116,16 @@ ATR 可用於計算每筆交易的合理部位大小：
 
 ## 相關主題
 
-- [[ATR平均真實波幅-Average-True-Range]]
-- [[移動停利停損Trailing-Stop]]
-- [[SuperTrend超級趨勢指標]]
-- [[布林通道Bollinger-Bands三軌八型態]]
-- [[海龜交易法則]]
-- [[倉位管理]]
-- [[停損設定方法Stop-Loss-Placement]]
-- [[多時間框架分析]]
-- [[Chandelier-Exit吊燈出場指標]]
-- [[ADX趨勢強度過濾盤整]]
+- [[技術分析/ATR平均真實波幅-Average-True-Range]]
+- [[風險管理/移動停利停損Trailing-Stop]]
+- [[技術分析/SuperTrend超級趨勢指標]]
+- [[技術分析/布林通道Bollinger-Bands三軌八型態]]
+- [[操作策略/海龜交易法則]]
+- [[風險管理/倉位管理]]
+- [[風險管理/停損設定方法Stop-Loss-Placement]]
+- [[技術分析/多時間框架分析]]
+- [[操作策略/Chandelier-Exit吊燈出場指標]]
+- [[技術分析/ADX趨勢強度過濾盤整]]
 
 ## 來源
 

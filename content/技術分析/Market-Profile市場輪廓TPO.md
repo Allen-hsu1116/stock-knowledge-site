@@ -122,14 +122,14 @@ TPO是Market Profile的基本單位。當一個價格在一個時間單元被觸
 
 ## 相關主題
 
-- [[Volume-Profile成交量分佈分析]] - Market Profile看時間、Volume Profile看量能，兩者互補
-- [[訂單流足跡圖Footprint-Chart]] - 微觀訂單流細節，驗證TPO單印跡是否真實拒絕
-- [[VWAP成交量加權均價]] - VWAP與POC重合時吸引力最大
-- [[量價關係九種型態高低檔判讀]] - 量價的宏觀判斷
-- [[多時間框架分析]] - Market Profile本身就需要多週期整合
-- [[均值回歸策略]] - Market Profile平衡日的核心策略
-- [[順勢交易]] - Market Profile趨勢日的核心策略
-- [[停損設定方法Stop-Loss-Placement]] - 用結構界定停損（尾巴外、IB對側）比固定點數更有邏輯
+- [[技術分析/Volume-Profile成交量分佈分析]] - Market Profile看時間、Volume Profile看量能，兩者互補
+- [[技術分析/訂單流足跡圖Footprint-Chart]] - 微觀訂單流細節，驗證TPO單印跡是否真實拒絕
+- [[技術分析/VWAP成交量加權均價]] - VWAP與POC重合時吸引力最大
+- [[技術分析/量價關係九種型態高低檔判讀]] - 量價的宏觀判斷
+- [[技術分析/多時間框架分析]] - Market Profile本身就需要多週期整合
+- [[操作策略/均值回歸策略]] - Market Profile平衡日的核心策略
+- [[操作策略/順勢交易]] - Market Profile趨勢日的核心策略
+- [[風險管理/停損設定方法Stop-Loss-Placement]] - 用結構界定停損（尾巴外、IB對側）比固定點數更有邏輯
 
 ## 來源
 

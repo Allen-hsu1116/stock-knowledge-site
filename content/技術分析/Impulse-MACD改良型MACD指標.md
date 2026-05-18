@@ -79,12 +79,12 @@ SMMA（Smoothed Moving Average）的計算讓它比一般 SMA 更平滑，對突
 
 ## 相關主題
 
-- [[MACD指標實戰判讀]]
-- [[一目均衡表Ichimoku-Kinko-Hyo]]
-- [[ATR平均真實波幅-Average-True-Range]]
-- [[移動停利停損Trailing-Stop]]
-- [[ADX趨勢強度過濾盤整]]
-- [[黃金交叉與死亡交叉均線交叉實戰]]
+- [[技術分析/MACD指標實戰判讀]]
+- [[技術分析/一目均衡表Ichimoku-Kinko-Hyo]]
+- [[技術分析/ATR平均真實波幅-Average-True-Range]]
+- [[風險管理/移動停利停損Trailing-Stop]]
+- [[技術分析/ADX趨勢強度過濾盤整]]
+- [[技術分析/黃金交叉與死亡交叉均線交叉實戰]]
 
 ## 來源
 

@@ -120,13 +120,13 @@ Gator 本身不判斷多空方向，需要搭配鱷魚線：
 
 ## 相關主題
 
-- [[鱷魚線Alligator-Indicator]]
-- [[威廉碎形Williams-Fractal]]
-- [[Awesome-Oscillator動能震盪指標]]
-- [[Bill-Williams五維交易系統進階實戰]]
-- [[MACD指標實戰判讀]]
-- [[均線判斷]]
-- [[順勢交易]]
+- [[技術分析/鱷魚線Alligator-Indicator]]
+- [[技術分析/威廉碎形Williams-Fractal]]
+- [[技術分析/Awesome-Oscillator動能震盪指標]]
+- [[技術分析/Bill-Williams五維交易系統進階實戰]]
+- [[技術分析/MACD指標實戰判讀]]
+- [[技術分析/均線判斷]]
+- [[操作策略/順勢交易]]
 
 ## 來源
 

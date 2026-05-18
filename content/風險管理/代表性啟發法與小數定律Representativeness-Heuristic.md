@@ -63,15 +63,15 @@
 
 ## 相關主題
 
-- [[確認偏誤Confirmation-Bias]]
-- [[認知偏誤與交易心理]]
-- [[均值回歸策略]]
-- [[均值回歸策略MeanReversion]]
-- [[動能交易策略]]
-- [[短期動能反轉策略Short-Term-Reversal]]
-- [[回測驗證Backtesting陷阱]]
-- [[價值與動能因子結合策略]]
-- [[前景理論Prospect-Theory]]
+- [[風險管理/確認偏誤Confirmation-Bias]]
+- [[風險管理/認知偏誤與交易心理]]
+- [[操作策略/均值回歸策略]]
+- [[操作策略/均值回歸策略MeanReversion]]
+- [[操作策略/動能交易策略]]
+- [[操作策略/短期動能反轉策略Short-Term-Reversal]]
+- [[風險管理/回測驗證Backtesting陷阱]]
+- [[操作策略/價值與動能因子結合策略]]
+- [[風險管理/前景理論Prospect-Theory]]
 
 ## 來源
 

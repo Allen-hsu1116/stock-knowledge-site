@@ -77,7 +77,7 @@
 - 連續虧損 2 筆→休息 30 分鐘
 - 連續虧損 3 筆→當日停止交易
 - 單筆虧損超預期 2 倍→休息 1 小時
-- 大賺一筆→也要冷卻，避免 [[過度自信偏誤Overconfidence-Bias]]
+- 大賺一筆→也要冷卻，避免 [[風險管理/過度自信偏誤Overconfidence-Bias]]
 
 **第四道：交易清單**
 進場前逐項確認：
@@ -150,20 +150,20 @@ Barber et al.（2009）以台灣股票市場所有投資人的完整交易資料
 
 - 當沖降稅是雙面刃：降低了交易成本，但也降低了「不交易」的心理門檻
 - 融資 + 過度交易 = 短時間內可能損失超過本金（融資維持率低於 130% 斷頭）
-- 過度交易常與 [[過度自信偏誤Overconfidence-Bias]] 和 [[損失厭惡Loss-Aversion處置效應過度自信FOMO]] 交互出現
+- 過度交易常與 [[風險管理/過度自信偏誤Overconfidence-Bias]] 和 [[風險管理/損失厭惡Loss-Aversion處置效應過度自信FOMO]] 交互出現
 - 記住 Barber & Odean 的結論：交易越多，長期報酬越低
 - 如果你發現自己「不交易就焦慮」，這已經不是交易策略問題，而是成癮問題
 
 ## 相關主題
 
-- [[過度自信偏誤Overconfidence-Bias]]
-- [[損失厭惡Loss-Aversion處置效應過度自信FOMO]]
-- [[交易心理紀律執行力]]
-- [[交易日誌與交易紀律養成]]
-- [[停損設定方法Stop-Loss-Placement]]
-- [[交易期望值Trading-Expectancy]]
-- [[報復性交易防禦體系Revenge-Trading-Defense]]
-- [[凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
+- [[風險管理/過度自信偏誤Overconfidence-Bias]]
+- [[風險管理/損失厭惡Loss-Aversion處置效應過度自信FOMO]]
+- [[風險管理/交易心理紀律執行力]]
+- [[風險管理/交易日誌與交易紀律養成]]
+- [[風險管理/停損設定方法Stop-Loss-Placement]]
+- [[風險管理/交易期望值Trading-Expectancy]]
+- [[風險管理/報復性交易防禦體系Revenge-Trading-Defense]]
+- [[風險管理/凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
 
 ## 來源
 

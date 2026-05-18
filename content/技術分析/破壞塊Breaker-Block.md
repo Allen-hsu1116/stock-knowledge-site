@@ -59,12 +59,12 @@
 - **避免孤立使用**：破壞塊要放在完整的 SMC 框架中使用——先確認大結構方向、流動性、再找破壞塊
 
 ## 相關主題
-- [[訂單塊Order-Block|訂單塊 Order Block]]
-- [[FVG公允價值缺口|FVG 公允價值缺口]]
-- [[SMC聰明錢概念Smart-Money-Concepts|SMC聰明錢概念]]
-- [[流動性獵取Liquidity-Sweep|流動性獵取 Liquidity Sweep]]
-- [[BOS與CHoCH市場結構轉變|BOS與CHoCH市場結構轉變]]
-- [[支撐壓力|支撐壓力]]
+- [[技術分析/訂單塊Order-Block|訂單塊 Order Block]]
+- [[技術分析/FVG公允價值缺口|FVG 公允價值缺口]]
+- [[技術分析/SMC聰明錢概念Smart-Money-Concepts|SMC聰明錢概念]]
+- [[技術分析/流動性獵取Liquidity-Sweep|流動性獵取 Liquidity Sweep]]
+- [[技術分析/BOS與CHoCH市場結構轉變|BOS與CHoCH市場結構轉變]]
+- [[技術分析/支撐壓力|支撐壓力]]
 
 ## 來源
 - [SMC基礎ICT交易策略聰明錢流動性訂單塊FVG](../raw/2026-05-11/SMC基礎ICT交易策略聰明錢流動性訂單塊FVG.md)

@@ -62,11 +62,11 @@ date: 2026-05-15
 
 ### 搭配其他風控工具
 
-- 風險管理第一層 → 搭配 [[停損設定方法Stop-Loss-Placement]]
-- 風險管理第二層 → 搭配 [[回測績效評估完整體系Backtest-Performance-Evaluation]]
-- 資金管理第一層 → 搭配 [[部位控制2%法則Position-Sizing-2-Percent-Rule]]
-- 資金管理第二層 → 搭配 [[Elder-2%與6%雙重法則]]
-- 資金管理第三層 → 搭配 [[凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
+- 風險管理第一層 → 搭配 [[風險管理/停損設定方法Stop-Loss-Placement]]
+- 風險管理第二層 → 搭配 [[風險管理/回測績效評估完整體系Backtest-Performance-Evaluation]]
+- 資金管理第一層 → 搭配 [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule]]
+- 資金管理第二層 → 搭配 [[風險管理/Elder-2%與6%雙重法則]]
+- 資金管理第三層 → 搭配 [[風險管理/凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
 
 ## 注意事項
 
@@ -77,14 +77,14 @@ date: 2026-05-15
 
 ## 相關主題
 
-- [[部位控制2%法則Position-Sizing-2-Percent-Rule]]
-- [[Elder-2%與6%雙重法則]]
-- [[試單策略與由小而大]]
-- [[凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
-- [[最適f理論Optimal-f-Position-Sizing]]
-- [[回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
-- [[投資風險管理系統框架Risk-Management-System-Framework]]
-- [[交易期望值Trading-Expectancy]]
+- [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule]]
+- [[風險管理/Elder-2%與6%雙重法則]]
+- [[風險管理/試單策略與由小而大]]
+- [[風險管理/凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
+- [[風險管理/最適f理論Optimal-f-Position-Sizing]]
+- [[風險管理/回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
+- [[風險管理/投資風險管理系統框架Risk-Management-System-Framework]]
+- [[風險管理/交易期望值Trading-Expectancy]]
 
 ## 來源
 

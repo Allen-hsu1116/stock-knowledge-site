@@ -63,13 +63,13 @@
 - **市場結構會改變**：過去有效的策略不代表未來有效，定期用新數據重新驗證
 
 ## 相關主題
-- [[回測驗證Backtesting陷阱]]
-- [[因子衰退Factor-Decay]]
-- [[過度擬合Overfitting量化判斷]]
-- [[策略壓力測試Stress-Testing]]
-- [[回測框架與偏差防範Backtesting-Framework-and-Bias-Prevention]]
-- [[交易期望值Trading-Expectancy]]
-- [[模型風險Model Risk]]
+- [[風險管理/回測驗證Backtesting陷阱]]
+- [[風險管理/因子衰退Factor-Decay]]
+- [[風險管理/過度擬合Overfitting量化判斷]]
+- [[風險管理/策略壓力測試Stress-Testing]]
+- [[風險管理/回測框架與偏差防範Backtesting-Framework-and-Bias-Prevention]]
+- [[風險管理/交易期望值Trading-Expectancy]]
+- [[風險管理/模型風險Model Risk]]
 
 ## 來源
 - [策略優化 – 如何避免過擬合？](../raw/2026-05-01/FinLab策略優化如何避免過擬合.md)

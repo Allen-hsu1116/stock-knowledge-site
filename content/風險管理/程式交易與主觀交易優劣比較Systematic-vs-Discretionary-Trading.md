@@ -100,14 +100,14 @@
 - **回測陷阱**：生存者偏誤、前視偏誤、過度擬合是回測三大陷阱
 
 ## 相關主題
-- [[交易心理紀律執行力]]
-- [[交易紀律量化系統Rule-Adherence-Score]]
-- [[交易系統Trading-System設計與迷思]]
-- [[交易計畫書Trading-Plan]]
-- [[交易日誌與交易紀律養成]]
-- [[前景理論Prospect-Theory]]
-- [[操盤手五階段成長模型Trader-Development-Five-Stages]]
-- [[過度自信偏誤Overconfidence-Bias]]
+- [[風險管理/交易心理紀律執行力]]
+- [[風險管理/交易紀律量化系統Rule-Adherence-Score]]
+- [[風險管理/交易系統Trading-System設計與迷思]]
+- [[風險管理/交易計畫書Trading-Plan]]
+- [[風險管理/交易日誌與交易紀律養成]]
+- [[風險管理/前景理論Prospect-Theory]]
+- [[風險管理/操盤手五階段成長模型Trader-Development-Five-Stages]]
+- [[風險管理/過度自信偏誤Overconfidence-Bias]]
 
 ## 來源
 - [程式交易與主觀交易比較](../raw/2026-05-09/程式交易與主觀交易比較.md)

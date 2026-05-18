@@ -73,13 +73,13 @@ TradingView上通常以紅/橙/黃色圓點區分多層壓縮。
 
 ## 相關主題
 
-- [[PowerSqueeze指標波動收縮能量偵測]]
-- [[布林通道Bollinger-Bands三軌八型態]]
-- [[肯特納通道Keltner-Channel]]
-- [[假突破三道過濾]]
-- [[盤整突破交易SOP]]
-- [[VCP波動收縮型態進階實戰]]
-- [[ATR平均真實波幅-Average-True-Range]]
+- [[技術分析/PowerSqueeze指標波動收縮能量偵測]]
+- [[技術分析/布林通道Bollinger-Bands三軌八型態]]
+- [[技術分析/肯特納通道Keltner-Channel]]
+- [[技術分析/假突破三道過濾]]
+- [[技術分析/盤整突破交易SOP]]
+- [[技術分析/VCP波動收縮型態進階實戰]]
+- [[技術分析/ATR平均真實波幅-Average-True-Range]]
 
 ## 來源
 

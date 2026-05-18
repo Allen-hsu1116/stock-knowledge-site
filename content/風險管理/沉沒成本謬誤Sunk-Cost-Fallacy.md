@@ -56,14 +56,14 @@
 
 ## 相關主題
 
-- [[停損設定方法Stop-Loss-Placement]]
-- [[停損方法]]
-- [[確認偏誤Confirmation-Bias]]
-- [[前景理論Prospect-Theory]]
-- [[前景理論Prospect-Theory]]
-- [[交易日誌與交易紀律養成]]
-- [[認知偏誤與交易心理]]
-- [[報復性交易防禦體系Revenge-Trading-Defense]]
+- [[風險管理/停損設定方法Stop-Loss-Placement]]
+- [[風險管理/停損方法]]
+- [[風險管理/確認偏誤Confirmation-Bias]]
+- [[風險管理/前景理論Prospect-Theory]]
+- [[風險管理/前景理論Prospect-Theory]]
+- [[風險管理/交易日誌與交易紀律養成]]
+- [[風險管理/認知偏誤與交易心理]]
+- [[風險管理/報復性交易防禦體系Revenge-Trading-Defense]]
 
 ## 來源
 

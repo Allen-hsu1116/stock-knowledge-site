@@ -172,16 +172,16 @@ VP 是**確認性指標**，不預測趨勢，需要與其他工具搭配：
 - VWAP 偏日內交易，VP 偏跨日分析，兩者互補
 
 ## 相關主題
-- [[VWAP成交量加權均價]]
-- [[Market-Profile市場輪廓TPO]] - Market Profile看時間、Volume Profile看量能，兩者互補
-- [[訂單流足跡圖Footprint-Chart]] - 微觀訂單流驗證Volume Profile的量能分佈
-- [[量價關係九種型態高低檔判讀]]
-- [[支撐壓力]]
-- [[均值回歸策略]]
-- [[SMC聰明錢概念Smart-Money-Concepts]]
-- [[VCP波動收縮型態]]
-- [[杯柄型態Cup-and-Handle]]
-- [[突破交易策略]]
+- [[技術分析/VWAP成交量加權均價]]
+- [[技術分析/Market-Profile市場輪廓TPO]] - Market Profile看時間、Volume Profile看量能，兩者互補
+- [[技術分析/訂單流足跡圖Footprint-Chart]] - 微觀訂單流驗證Volume Profile的量能分佈
+- [[技術分析/量價關係九種型態高低檔判讀]]
+- [[技術分析/支撐壓力]]
+- [[操作策略/均值回歸策略]]
+- [[技術分析/SMC聰明錢概念Smart-Money-Concepts]]
+- [[操作策略/VCP波動收縮型態]]
+- [[操作策略/杯柄型態Cup-and-Handle]]
+- [[操作策略/突破交易策略]]
 
 ## 來源
 - [Volume Profile 如何用於交易中 - EdgeTrader](../raw/2026-05-11/成交量分佈分析Volume-Profile-EdgeTrader.md)

@@ -97,16 +97,16 @@
 
 ## 相關主題
 
-- [[產業生命週期Industry-Life-Cycle]]
-- [[由上而下與由下而上選股法Top-Down-vs-Bottom-Up]]
-- [[選股流程系統化總論Stock-Screening-Systematic-Approach]]
-- [[PEG本益成長比]]
-- [[本益比進階判讀PE-Ratio-Advanced]]
-- [[股價淨值比進階判讀PBR-Advanced]]
-- [[股息率與殖利率選股實戰]]
-- [[波段操作vs價值投資決策框架]]
-- [[均值回歸策略MeanReversion]]
-- [[價值與動能因子結合策略]]
+- [[基本面分析/產業生命週期Industry-Life-Cycle]]
+- [[基本面分析/由上而下與由下而上選股法Top-Down-vs-Bottom-Up]]
+- [[操作策略/選股流程系統化總論Stock-Screening-Systematic-Approach]]
+- [[基本面分析/PEG本益成長比]]
+- [[基本面分析/本益比進階判讀PE-Ratio-Advanced]]
+- [[基本面分析/股價淨值比進階判讀PBR-Advanced]]
+- [[基本面分析/股息率與殖利率選股實戰]]
+- [[操作策略/波段操作vs價值投資決策框架]]
+- [[操作策略/均值回歸策略MeanReversion]]
+- [[操作策略/價值與動能因子結合策略]]
 
 ## 來源
 

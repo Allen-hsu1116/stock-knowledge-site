@@ -160,7 +160,7 @@ MFI = (最高價 - 最低價) / 成交量，與成交量結合判斷市場真實
 
 ### Gator Oscillator（蓋特震盪指標）
 
-詳見 [[Gator-Oscillator蓋特震盪指標]]
+詳見 [[技術分析/Gator-Oscillator蓋特震盪指標]]
 
 - 多頭趨勢：紅柱成長>藍柱→短期動能強
 - 空頭趨勢：藍柱變深>紅柱→長期壓制明顯
@@ -176,18 +176,18 @@ MFI = (最高價 - 最低價) / 成交量，與成交量結合判斷市場真實
 
 ## 相關主題
 
-- [[鱷魚線Alligator-Indicator]]
-- [[威廉碎形Williams-Fractal]]
-- [[Awesome-Oscillator動能震盪指標]]
-- [[AC加速震盪指標Acceleration-Deceleration-Oscillator]]
-- [[Gator-Oscillator蓋特震盪指標]]
-- [[MACD指標實戰判讀]]
-- [[RSI相對強弱指標]]
-- [[背離Divergence進階實戰]]
-- [[量價關係九種型態高低檔判讀]]
-- [[多指標共振交易系統Multi-Indicator-Confluence]]
-- [[趨勢追蹤策略Trend-Following]]
-- [[VCP波動收縮型態進階實戰]]
+- [[技術分析/鱷魚線Alligator-Indicator]]
+- [[技術分析/威廉碎形Williams-Fractal]]
+- [[技術分析/Awesome-Oscillator動能震盪指標]]
+- [[技術分析/AC加速震盪指標Acceleration-Deceleration-Oscillator]]
+- [[技術分析/Gator-Oscillator蓋特震盪指標]]
+- [[技術分析/MACD指標實戰判讀]]
+- [[技術分析/RSI相對強弱指標]]
+- [[技術分析/背離Divergence進階實戰]]
+- [[技術分析/量價關係九種型態高低檔判讀]]
+- [[技術分析/多指標共振交易系統Multi-Indicator-Confluence]]
+- [[操作策略/趨勢追蹤策略Trend-Following]]
+- [[技術分析/VCP波動收縮型態進階實戰]]
 
 ## 來源
 

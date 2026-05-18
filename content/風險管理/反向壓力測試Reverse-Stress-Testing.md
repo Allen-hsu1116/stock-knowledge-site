@@ -63,7 +63,7 @@
 最簡單——某檔股票跌多少% 會觸發門檻。這跟傳統壓力測試差不多。
 
 #### 第二層：多資產聯動
-加入相關性——當兩檔股票同時下跌，虧損不是簡單相加，而是被相關性放大。見 [[相關性崩潰Correlation-Breakdown]]。
+加入相關性——當兩檔股票同時下跌，虧損不是簡單相加，而是被相關性放大。見 [[風險管理/相關性崩潰Correlation-Breakdown]]。
 
 #### 第三層：系統性連鎖
 加入二階效果——股價下跌 → 融資追繳 → 強制賣出 → 進一步下跌 → 流動性枯竭。這是最危險也最難建模的層次。
@@ -95,15 +95,15 @@
 
 ## 相關主題
 
-- [[策略壓力測試Stress-Testing]]
-- [[相關性崩潰Correlation-Breakdown]]
-- [[保證金追繳與融資斷頭Margin-Call-and-Forced-Liquidation]]
-- [[MDD最大回撤進階實戰各資產歷史回撤與管理方法]]
-- [[回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
-- [[風險管理決策框架Risk-Management-Decision-Framework]]
-- [[非對稱槓桿與1%資控法則]]
-- [[投資組合相關性分析實戰Portfolio-Correlation-Analysis-in-Practice]]
-- [[尾部風險對沖Tail-Risk-Hedging]]
+- [[風險管理/策略壓力測試Stress-Testing]]
+- [[風險管理/相關性崩潰Correlation-Breakdown]]
+- [[風險管理/保證金追繳與融資斷頭Margin-Call-and-Forced-Liquidation]]
+- [[風險管理/MDD最大回撤進階實戰各資產歷史回撤與管理方法]]
+- [[風險管理/回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
+- [[風險管理/風險管理決策框架Risk-Management-Decision-Framework]]
+- [[風險管理/非對稱槓桿與1%資控法則]]
+- [[風險管理/投資組合相關性分析實戰Portfolio-Correlation-Analysis-in-Practice]]
+- [[風險管理/尾部風險對沖Tail-Risk-Hedging]]
 
 ## 來源
 

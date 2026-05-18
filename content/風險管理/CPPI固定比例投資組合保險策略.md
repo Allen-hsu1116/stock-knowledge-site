@@ -63,12 +63,12 @@ CPPI（Constant Proportion Portfolio Insurance）由 Black & Jones 於1987年提
 
 ## 相關主題
 
-- [[TIPP時間不變性投資組合保險策略]]
-- [[風險報酬比]]
-- [[倉位管理]]
-- [[風險平價Risk-Parity]]
-- [[MDD最大回撤計算與恢復難度]]
-- [[流動性風險Liquidity-Risk]]
+- [[風險管理/TIPP時間不變性投資組合保險策略]]
+- [[風險管理/風險報酬比]]
+- [[風險管理/倉位管理]]
+- [[風險管理/風險平價Risk-Parity]]
+- [[風險管理/MDD最大回撤計算與恢復難度]]
+- [[風險管理/流動性風險Liquidity-Risk]]
 
 ## 來源
 

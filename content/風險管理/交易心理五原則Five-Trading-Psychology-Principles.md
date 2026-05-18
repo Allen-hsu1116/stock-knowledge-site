@@ -69,11 +69,11 @@ title: 交易心理五原則 Five Trading Psychology Principles
 
 | 原則 | 對應概念 |
 |------|---------|
-| 原則一：滾動修正 | [[交易日誌與交易紀律養成]] 的交易後檢討 |
-| 原則二：有憑有據 | [[規則化交易系統Rule-Based-Trading-System]] 的規則化進場 |
-| 原則三：重複正確 | [[交易紀律量化系統Rule-Adherence-Score]] 的紀律評分 |
-| 原則四：容許虧損 | [[損失厭惡Loss-Aversion處置效應過度自信FOMO]] 的損失厭惡管理 |
-| 原則五：耐心等待 | [[贏家心智系統Mark-Douglas交易心理框架]] 的「像賭場一樣思考」 |
+| 原則一：滾動修正 | [[風險管理/交易日誌與交易紀律養成]] 的交易後檢討 |
+| 原則二：有憑有據 | [[風險管理/規則化交易系統Rule-Based-Trading-System]] 的規則化進場 |
+| 原則三：重複正確 | [[風險管理/交易紀律量化系統Rule-Adherence-Score]] 的紀律評分 |
+| 原則四：容許虧損 | [[風險管理/損失厭惡Loss-Aversion處置效應過度自信FOMO]] 的損失厭惡管理 |
+| 原則五：耐心等待 | [[風險管理/贏家心智系統Mark-Douglas交易心理框架]] 的「像賭場一樣思考」 |
 
 ## 注意事項
 
@@ -84,14 +84,14 @@ title: 交易心理五原則 Five Trading Psychology Principles
 
 ## 相關主題
 
-- [[交易心理紀律執行力]]
-- [[贏家心智系統Mark-Douglas交易心理框架]]
-- [[損失厭惡Loss-Aversion處置效應過度自信FOMO]]
-- [[交易期望值Trading-Expectancy]]
-- [[交易日誌與交易紀律養成]]
-- [[規則化交易系統Rule-Based-Trading-System]]
-- [[交易紀律量化系統Rule-Adherence-Score]]
-- [[停損設定方法Stop-Loss-Placement]]
+- [[風險管理/交易心理紀律執行力]]
+- [[風險管理/贏家心智系統Mark-Douglas交易心理框架]]
+- [[風險管理/損失厭惡Loss-Aversion處置效應過度自信FOMO]]
+- [[風險管理/交易期望值Trading-Expectancy]]
+- [[風險管理/交易日誌與交易紀律養成]]
+- [[風險管理/規則化交易系統Rule-Based-Trading-System]]
+- [[風險管理/交易紀律量化系統Rule-Adherence-Score]]
+- [[風險管理/停損設定方法Stop-Loss-Placement]]
 
 ## 來源
 

@@ -35,7 +35,7 @@
 
 ### 搭配 EV 使用：EV/EBITDA
 
-見 [[企業價值倍數EV-EBIT與EV-EBITDA|企業價值倍數 EV/EBIT與EV/EBITDA]]
+見 [[基本面分析/企業價值倍數EV-EBIT與EV-EBITDA|企業價值倍數 EV/EBIT與EV/EBITDA]]
 
 ### 搭配 CapEx 使用：EBITDA - CapEx
 
@@ -69,12 +69,12 @@ EBITDA忽略資本支出是最大缺陷。實戰中應計算：
 **航空業實例**：A公司自購飛機（折舊不在EBITDA扣除），B公司租用飛機（租賃費在EBITDA扣除），單純比較EBITDA會低估B公司。因此航空業用 EV/EBITDAR 而非 EV/EBITDA。
 
 ## 相關主題
-- [[企業價值倍數EV-EBIT與EV-EBITDA|企業價值倍數 EV/EBIT與EV/EBITDA]]
-- [[本益比進階判讀PE-Ratio-Advanced|本益比進階判讀]] - P/E的深度判讀
-- [[FCF估值模型自由現金流15公式與選股實戰|FCF估值模型自由現金流]]
-- [[財報三表綜合判讀與勾稽關係|財報三表綜合判讀]]
-- [[盈餘品質分析|盈餘品質分析]]
-- [[現金流量折現法DCF估值|DCF估值]]
+- [[基本面分析/企業價值倍數EV-EBIT與EV-EBITDA|企業價值倍數 EV/EBIT與EV/EBITDA]]
+- [[基本面分析/本益比進階判讀PE-Ratio-Advanced|本益比進階判讀]] - P/E的深度判讀
+- [[基本面分析/FCF估值模型自由現金流15公式與選股實戰|FCF估值模型自由現金流]]
+- [[基本面分析/財報三表綜合判讀與勾稽關係|財報三表綜合判讀]]
+- [[基本面分析/盈餘品質分析|盈餘品質分析]]
+- [[基本面分析/現金流量折現法DCF估值|DCF估值]]
 
 ## 來源
 - [企業價值倍數EV/EBIT、EV/EBITDA是什麼？怎麼計算？- 市場先生](../raw/2026-05-05/企業價值倍數EV-EBIT-EBITDA市場先生.md)

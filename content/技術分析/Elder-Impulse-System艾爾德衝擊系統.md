@@ -93,14 +93,14 @@ Elder 名言：**「進場謹慎、出場快速」**（Enter cautiously, exit fa
 
 ## 相關主題
 
-- [[Elder-Ray牛熊力量指標]]
-- [[Force-Index力量指標]]
-- [[MACD指標實戰判讀]]
-- [[MACD進階實戰柱狀圖背離零軸交易與雙背離確認]]
-- [[EMA指數平滑移動平均線]]
-- [[多時間框架分析]]
-- [[背離Divergence進階實戰]]
-- [[多指標共振交易系統Multi-Indicator-Confluence]]
+- [[技術分析/Elder-Ray牛熊力量指標]]
+- [[技術分析/Force-Index力量指標]]
+- [[技術分析/MACD指標實戰判讀]]
+- [[技術分析/MACD進階實戰柱狀圖背離零軸交易與雙背離確認]]
+- [[技術分析/EMA指數平滑移動平均線]]
+- [[技術分析/多時間框架分析]]
+- [[技術分析/背離Divergence進階實戰]]
+- [[技術分析/多指標共振交易系統Multi-Indicator-Confluence]]
 
 ## 來源
 

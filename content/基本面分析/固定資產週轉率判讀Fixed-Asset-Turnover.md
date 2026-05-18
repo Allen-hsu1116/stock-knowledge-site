@@ -103,13 +103,13 @@
 
 ## 相關主題
 
-- [[資產周轉率進階判讀Asset-Turnover-Advanced]] - 杜邦分析三因子的效率因子，總資產視角
-- [[營運資金週轉率判讀Working-Capital-Turnover]] - 營運資金效率的專門指標
-- [[營運效率指標與CCC實戰判讀]] - DSO/DIO/DPO三指標拆解企業效率
-- [[現金轉換循環Cash Conversion Cycle]] - CCC越短現金效率越高
-- [[ROE杜邦分析淨利率資產週轉率權益乘數]] - 杜邦分析三因子完整框架
-- [[資本支出CapEx與自由現金流判讀]] - CapEx與固定資產的關聯
-- [[營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]] - 固定成本與週轉率的關聯
+- [[基本面分析/資產周轉率進階判讀Asset-Turnover-Advanced]] - 杜邦分析三因子的效率因子，總資產視角
+- [[基本面分析/營運資金週轉率判讀Working-Capital-Turnover]] - 營運資金效率的專門指標
+- [[基本面分析/營運效率指標與CCC實戰判讀]] - DSO/DIO/DPO三指標拆解企業效率
+- [[基本面分析/現金轉換循環Cash Conversion Cycle]] - CCC越短現金效率越高
+- [[基本面分析/ROE杜邦分析淨利率資產週轉率權益乘數]] - 杜邦分析三因子完整框架
+- [[基本面分析/資本支出CapEx與自由現金流判讀]] - CapEx與固定資產的關聯
+- [[基本面分析/營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]] - 固定成本與週轉率的關聯
 
 ## 來源
 

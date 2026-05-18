@@ -65,13 +65,13 @@
 
 ## 相關主題
 
-- [[損失厭惡Loss-Aversion處置效應過度自信FOMO]]
-- [[前景理論Prospect-Theory]]
-- [[確認偏誤Confirmation-Bias]]
-- [[沉沒成本謬誤Sunk-Cost-Fallacy]]
-- [[錨定效應Anchoring-Bias]]
-- [[停損設定方法Stop-Loss-Placement]]
-- [[交易日誌與交易紀律養成]]
+- [[風險管理/損失厭惡Loss-Aversion處置效應過度自信FOMO]]
+- [[風險管理/前景理論Prospect-Theory]]
+- [[風險管理/確認偏誤Confirmation-Bias]]
+- [[風險管理/沉沒成本謬誤Sunk-Cost-Fallacy]]
+- [[風險管理/錨定效應Anchoring-Bias]]
+- [[風險管理/停損設定方法Stop-Loss-Placement]]
+- [[風險管理/交易日誌與交易紀律養成]]
 
 ## 來源
 

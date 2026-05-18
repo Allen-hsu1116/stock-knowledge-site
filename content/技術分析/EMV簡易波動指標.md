@@ -73,12 +73,12 @@ EMV 採取與一般投資人**相反**的見解：
 
 ## 相關主題
 
-- [[OBV能量潮指標量價趨勢判讀]]
-- [[Force-Index力量指標]]
-- [[Klinger-Volume-Oscillator克林格成交量震盪指標]]
-- [[MFI資金流量指標Money-Flow-Index]]
-- [[量價關係實戰操作SOP]]
-- [[VWAP成交量加權均價]]
+- [[技術分析/OBV能量潮指標量價趨勢判讀]]
+- [[技術分析/Force-Index力量指標]]
+- [[技術分析/Klinger-Volume-Oscillator克林格成交量震盪指標]]
+- [[技術分析/MFI資金流量指標Money-Flow-Index]]
+- [[操作策略/量價關係實戰操作SOP]]
+- [[技術分析/VWAP成交量加權均價]]
 
 ## 來源
 

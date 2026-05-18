@@ -83,15 +83,15 @@ FOMO追高 → 買在頂部 → 價格回落 → 虧損 → FUD恐慌殺低 → 
 
 ## 相關主題
 
-- [[損失厭惡Loss-Aversion處置效應過度自信FOMO]]
-- [[交易心理紀律執行力]]
-- [[交易紀律量化系統Rule-Adherence-Score]]
-- [[交易前檢查清單Pre-Trade-Checklist]]
-- [[報復性交易防禦體系Revenge-Trading-Defense]]
-- [[過度交易Overtrading防範體系]]
-- [[認知偏誤與交易心理]]
-- [[前景理論Prospect-Theory]]
-- [[贏家心智系統Mark-Douglas交易心理框架]]
+- [[風險管理/損失厭惡Loss-Aversion處置效應過度自信FOMO]]
+- [[風險管理/交易心理紀律執行力]]
+- [[風險管理/交易紀律量化系統Rule-Adherence-Score]]
+- [[風險管理/交易前檢查清單Pre-Trade-Checklist]]
+- [[風險管理/報復性交易防禦體系Revenge-Trading-Defense]]
+- [[風險管理/過度交易Overtrading防範體系]]
+- [[風險管理/認知偏誤與交易心理]]
+- [[風險管理/前景理論Prospect-Theory]]
+- [[風險管理/贏家心智系統Mark-Douglas交易心理框架]]
 
 ## 來源
 

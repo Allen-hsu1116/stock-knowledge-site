@@ -77,13 +77,13 @@
 
 ## 相關主題
 
-- [[選股流程系統化總論Stock-Screening-Systematic-Approach]]
-- [[產業生命週期Industry-Life-Cycle]]
-- [[成長股與價值股投資策略Growth-vs-Value-Investing]]
-- [[景氣對策信號與大盤多空判斷]]
-- [[外資期貨未平倉判讀]]
-- [[經濟護城河Economic-Moat]]
-- [[財報基礎三表判讀入門]]
+- [[操作策略/選股流程系統化總論Stock-Screening-Systematic-Approach]]
+- [[基本面分析/產業生命週期Industry-Life-Cycle]]
+- [[基本面分析/成長股與價值股投資策略Growth-vs-Value-Investing]]
+- [[基本面分析/景氣對策信號與大盤多空判斷]]
+- [[籌碼面分析/外資期貨未平倉判讀]]
+- [[基本面分析/經濟護城河Economic-Moat]]
+- [[基本面分析/財報基礎三表判讀入門]]
 
 ## 來源
 

@@ -78,14 +78,14 @@
 
 ## 相關主題
 
-- [[選股流程系統化總論Stock-Screening-Systematic-Approach]]
-- [[由上而下與由下而上選股法Top-Down-vs-Bottom-Up]]
-- [[成長股與價值股投資策略Growth-vs-Value-Investing]]
-- [[景氣對策信號與大盤多空判斷]]
-- [[經濟護城河Economic-Moat]]
-- [[波段操作vs價值投資決策框架]]
-- [[本益比進階判讀PE-Ratio-Advanced]]
-- [[PEG本益成長比]]
+- [[操作策略/選股流程系統化總論Stock-Screening-Systematic-Approach]]
+- [[基本面分析/由上而下與由下而上選股法Top-Down-vs-Bottom-Up]]
+- [[基本面分析/成長股與價值股投資策略Growth-vs-Value-Investing]]
+- [[基本面分析/景氣對策信號與大盤多空判斷]]
+- [[基本面分析/經濟護城河Economic-Moat]]
+- [[操作策略/波段操作vs價值投資決策框架]]
+- [[基本面分析/本益比進階判讀PE-Ratio-Advanced]]
+- [[基本面分析/PEG本益成長比]]
 
 ## 來源
 

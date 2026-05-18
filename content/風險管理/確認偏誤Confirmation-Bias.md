@@ -52,14 +52,14 @@
 
 ## 相關主題
 
-- [[認知偏誤與交易心理]]
-- [[交易日誌與交易紀律養成]]
-- [[規則化交易系統Rule-Based-Trading-System]]
-- [[停損設定方法Stop-Loss-Placement]]
-- [[贏家心智系統Mark-Douglas交易心理框架]]
-- [[後見之明偏誤Hindsight-Bias]]
-- [[前景理論Prospect-Theory]]
-- [[前景理論Prospect-Theory]]
+- [[風險管理/認知偏誤與交易心理]]
+- [[風險管理/交易日誌與交易紀律養成]]
+- [[風險管理/規則化交易系統Rule-Based-Trading-System]]
+- [[風險管理/停損設定方法Stop-Loss-Placement]]
+- [[風險管理/贏家心智系統Mark-Douglas交易心理框架]]
+- [[風險管理/後見之明偏誤Hindsight-Bias]]
+- [[風險管理/前景理論Prospect-Theory]]
+- [[風險管理/前景理論Prospect-Theory]]
 
 ## 來源
 

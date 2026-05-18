@@ -54,17 +54,17 @@ De Gregorio 和 Valdes (2001) 研究1982年債務危機、1994年墨西哥危機
 
 ### 傳染的早期警訊
 
-1. **主權CDS利差**：多國同時擴大是傳染啟動訊號（見[[信用利差Credit-Spread]]）
+1. **主權CDS利差**：多國同時擴大是傳染啟動訊號（見[[風險管理/信用利差Credit-Spread]]）
 2. **相關性驟升**：原本低相關的市場突然高度聯動，是傳染的定量特徵
 3. **資本流動逆轉**：新興市場資金同時外流
-4. **VIX飆升**：恐慌情緒跨市場傳播（見[[VIX恐慌指數實戰判讀]]）
+4. **VIX飆升**：恐慌情緒跨市場傳播（見[[風險管理/VIX恐慌指數實戰判讀]]）
 
 ### 防禦傳染風險的四道防線
 
-1. **降低相關性**：投資組合中納入低相關資產（見[[分散投資七法與相關係數Diversification-Seven-Methods]]）
-2. **尾部風險對沖**：用選擇權保護極端情境（見[[尾部風險對沖Tail-Risk-Hedging]]）
+1. **降低相關性**：投資組合中納入低相關資產（見[[風險管理/分散投資七法與相關係數Diversification-Seven-Methods]]）
+2. **尾部風險對沖**：用選擇權保護極端情境（見[[風險管理/尾部風險對沖Tail-Risk-Hedging]]）
 3. **流動性緩衝**：持有足夠現金和短期高品質債券，避免被迫在傳染中火災出售
-4. **相關性崩潰預案**：在相關性趨近1時，分散化失效，必須有絕對止損紀律（見[[相關性崩潰Correlation-Breakdown]]）
+4. **相關性崩潰預案**：在相關性趨近1時，分散化失效，必須有絕對止損紀律（見[[風險管理/相關性崩潰Correlation-Breakdown]]）
 
 ### 歷史案例：1997年亞洲金融風暴
 
@@ -88,18 +88,18 @@ De Gregorio 和 Valdes (2001) 研究1982年債務危機、1994年墨西哥危機
 
 ## 相關主題
 
-- [[信用風險Credit-Risk]]
-- [[信用利差Credit-Spread]]
-- [[主權風險與主權違約Sovereign-Risk-and-Default]]
-- [[系統性風險與非系統性風險]]
-- [[相關性崩潰Correlation-Breakdown]]
-- [[相關性風險Correlation-Risk]]
-- [[VIX恐慌指數實戰判讀]]
-- [[尾部風險對沖Tail-Risk-Hedging]]
-- [[流動性風險Liquidity-Risk]]
-- [[流動性幻覺Liquidity-Illusion]]
-- [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
-- [[分散投資七法與相關係數Diversification-Seven-Methods]]
+- [[風險管理/信用風險Credit-Risk]]
+- [[風險管理/信用利差Credit-Spread]]
+- [[風險管理/主權風險與主權違約Sovereign-Risk-and-Default]]
+- [[風險管理/系統性風險與非系統性風險]]
+- [[風險管理/相關性崩潰Correlation-Breakdown]]
+- [[風險管理/相關性風險Correlation-Risk]]
+- [[風險管理/VIX恐慌指數實戰判讀]]
+- [[風險管理/尾部風險對沖Tail-Risk-Hedging]]
+- [[風險管理/流動性風險Liquidity-Risk]]
+- [[風險管理/流動性幻覺Liquidity-Illusion]]
+- [[風險管理/黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
+- [[風險管理/分散投資七法與相關係數Diversification-Seven-Methods]]
 
 ## 來源
 

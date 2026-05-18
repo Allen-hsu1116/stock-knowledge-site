@@ -91,13 +91,13 @@ tags:
 
 ## 相關主題
 
-- [[型態學總論Chart-Patterns-Overview]]
-- [[杯柄型態Cup-and-Handle]]
-- [[W底M頭雙重頂底型態Double-Top-and-Double-Bottom]]
-- [[頭肩頂與頭肩底Head-and-Shoulders]]
-- [[V型反轉V-Shaped-Reversal]]
-- [[量價關係與背離]]
-- [[K線型態]]
+- [[技術分析/型態學總論Chart-Patterns-Overview]]
+- [[操作策略/杯柄型態Cup-and-Handle]]
+- [[技術分析/W底M頭雙重頂底型態Double-Top-and-Double-Bottom]]
+- [[技術分析/頭肩頂與頭肩底Head-and-Shoulders]]
+- [[技術分析/V型反轉V-Shaped-Reversal]]
+- [[技術分析/量價關係與背離]]
+- [[技術分析/K線型態]]
 
 ## 來源
 

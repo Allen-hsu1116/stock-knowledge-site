@@ -194,13 +194,13 @@ DCF算出企業價值後，可用兩種方式評估投資決策：
 - 理解DCF可以讓你更清楚其他估價法的限制
 
 ## 相關主題
-- [[FCF估值模型自由現金流15公式與選股實戰|FCF估值模型]]
-- [[企業價值倍數EV-EBIT與EV-EBITDA|企業價值倍數EV/EBITDA]]
-- [[本益比河流圖PE-Band|本益比河流圖PE Band]]
-- [[財報三表綜合判讀與勾稽關係|財報三表綜合判讀]]
-- [[經濟護城河Economic-Moat|經濟護城河]]
-- [[SOTP分部加總估值法Sum-of-the-Parts-Valuation|SOTP分部估值法]] - 各部門獨立DCF後加總
-- [[NPV淨現值與IRR內部報酬率投資評估|NPV與IRR]] - IRR就是讓DCF的NPV=0的折現率
+- [[基本面分析/FCF估值模型自由現金流15公式與選股實戰|FCF估值模型]]
+- [[基本面分析/企業價值倍數EV-EBIT與EV-EBITDA|企業價值倍數EV/EBITDA]]
+- [[基本面分析/本益比河流圖PE-Band|本益比河流圖PE Band]]
+- [[基本面分析/財報三表綜合判讀與勾稽關係|財報三表綜合判讀]]
+- [[基本面分析/經濟護城河Economic-Moat|經濟護城河]]
+- [[基本面分析/SOTP分部加總估值法Sum-of-the-Parts-Valuation|SOTP分部估值法]] - 各部門獨立DCF後加總
+- [[基本面分析/NPV淨現值與IRR內部報酬率投資評估|NPV與IRR]] - IRR就是讓DCF的NPV=0的折現率
 
 ## 來源
 - [現金流量折現法DCF是什麼](../raw/2026-05-03/現金流量折現法DCF是什麼.md)

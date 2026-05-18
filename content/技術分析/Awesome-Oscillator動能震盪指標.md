@@ -66,15 +66,15 @@ Alligator（鱷魚指標）判趨勢方向，AO在趨勢確認後找進場點位
 
 ## 相關主題
 
-- [[鱷魚線Alligator-Indicator]]
-- [[威廉碎形Williams-Fractal]]
-- [[MFI資金流量指標Money-Flow-Index]]
-- [[SAR拋物線指標Parabolic-SAR]]
-- [[MACD指標實戰判讀]]
-- [[背離Divergence進階實戰]]
-- [[一目均衡表Ichimoku-Kinko-Hyo]]
-- [[KD指標隨機指標]]
-- [[Bill-Williams五維交易系統進階實戰]]
+- [[技術分析/鱷魚線Alligator-Indicator]]
+- [[技術分析/威廉碎形Williams-Fractal]]
+- [[技術分析/MFI資金流量指標Money-Flow-Index]]
+- [[技術分析/SAR拋物線指標Parabolic-SAR]]
+- [[技術分析/MACD指標實戰判讀]]
+- [[技術分析/背離Divergence進階實戰]]
+- [[技術分析/一目均衡表Ichimoku-Kinko-Hyo]]
+- [[技術分析/KD指標隨機指標]]
+- [[技術分析/Bill-Williams五維交易系統進階實戰]]
 
 ## 來源
 

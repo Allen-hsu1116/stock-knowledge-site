@@ -178,16 +178,16 @@ Z = 1.2×0.13 + 1.4×0.05 + 3.3×0.13 + 0.6×0.67 + 1.0×0.38 = **1.40**
 
 ## 相關主題
 
-- [[Beneish-M-Score財報舞弊偵測]] — 財報造假偵測，搭配 Z-Score 交叉驗證
-- [[負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] — X₁/X₄ 背後的財務結構
-- [[ROA資產報酬率進階判讀]] — X₃ 與 ROA 的關聯
-- [[資產周轉率進階判讀Asset-Turnover-Advanced]] — X₅ 資產週轉率深入判讀
-- [[盈餘品質分析]] — Z-Score 可能被盈餘管理扭曲
-- [[財報假帳偵測]] — 綜合財報舞弊辨識方法
-- [[信用風險Credit-Risk]] — Z-Score 在信用風險評估中的角色
-- [[Piotroski-F-Score進階實戰]] — 另一種財務健康度評分，可互補
-- [[營運資金週轉率判讀Working-Capital-Turnover]] — X₁ 營運資金的深入分析
-- [[安全邊際Margin-of-Safety進階實戰]] — Z-Score 低 = 安全邊際不足
+- [[基本面分析/Beneish-M-Score財報舞弊偵測]] — 財報造假偵測，搭配 Z-Score 交叉驗證
+- [[基本面分析/負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] — X₁/X₄ 背後的財務結構
+- [[基本面分析/ROA資產報酬率進階判讀]] — X₃ 與 ROA 的關聯
+- [[基本面分析/資產周轉率進階判讀Asset-Turnover-Advanced]] — X₅ 資產週轉率深入判讀
+- [[基本面分析/盈餘品質分析]] — Z-Score 可能被盈餘管理扭曲
+- [[基本面分析/財報假帳偵測]] — 綜合財報舞弊辨識方法
+- [[風險管理/信用風險Credit-Risk]] — Z-Score 在信用風險評估中的角色
+- [[基本面分析/Piotroski-F-Score進階實戰]] — 另一種財務健康度評分，可互補
+- [[基本面分析/營運資金週轉率判讀Working-Capital-Turnover]] — X₁ 營運資金的深入分析
+- [[基本面分析/安全邊際Margin-of-Safety進階實戰]] — Z-Score 低 = 安全邊際不足
 
 ## 來源
 

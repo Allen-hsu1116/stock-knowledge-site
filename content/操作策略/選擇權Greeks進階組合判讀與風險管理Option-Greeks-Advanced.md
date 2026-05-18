@@ -155,19 +155,19 @@ Delta Neutral 不是設好就忘，需要持續 Rebalance：
 
 ## 相關主題
 
-- [[選擇權Greeks希臘字母]]
-- [[Theta時間衰減實戰]]
-- [[逼券商拉抬Gamma-Squeeze兩手策略]]
-- [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
-- [[隱含波動率IV與歷史波動率HV實戰判讀]]
-- [[VIX恐慌指數實戰判讀]]
-- [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
-- [[Black-Scholes定價模型]]
-- [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
-- [[鐵兀鷹Iron-Condor]]
-- [[選擇權組合策略]]
-- [[選擇權四大基本策略]]
-- [[選擇權Convexity凸性與非對稱收益Option-Convexity]]
+- [[操作策略/選擇權Greeks希臘字母]]
+- [[操作策略/Theta時間衰減實戰]]
+- [[籌碼面分析/逼券商拉抬Gamma-Squeeze兩手策略]]
+- [[操作策略/波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
+- [[技術分析/隱含波動率IV與歷史波動率HV實戰判讀]]
+- [[風險管理/VIX恐慌指數實戰判讀]]
+- [[操作策略/波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
+- [[操作策略/Black-Scholes定價模型]]
+- [[操作策略/波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
+- [[操作策略/鐵兀鷹Iron-Condor]]
+- [[操作策略/選擇權組合策略]]
+- [[操作策略/選擇權四大基本策略]]
+- [[操作策略/選擇權Convexity凸性與非對稱收益Option-Convexity]]
 
 ## 來源
 

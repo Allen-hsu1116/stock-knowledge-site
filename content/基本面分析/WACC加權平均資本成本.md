@@ -111,16 +111,16 @@ WACC 本身不是投資訊號，要搭配 ROIC（投入資本報酬率）：
 
 ## 相關主題
 
-- [[ROIC投入資本報酬率]] - ROIC > WACC 才是價值創造
-- [[EVA經濟附加價值]] - EVA = (ROIC - WACC) × 投入資本，WACC 是 EVA 的核心減項
-- [[企業價值倍數EV-EBIT與EV-EBITDA]] - EV/EBITDA 是 WACC 的倒推應用
-- [[現金流量折現法DCF估值]] - WACC 是 DCF 的折現率
-- [[營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]] - 槓桿影響 WACC 和資本結構
-- [[本益比進階判讀PE-Ratio-Advanced]] - PE 是 WACC 和成長率的簡化版本
-- [[負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] - 資本結構決定 WACC
-- [[經濟護城河Economic-Moat]] - 有護城河的公司 ROIC 持續大於 WACC
-- [[股利折現模型DDM估值]] - DDM 的貼現率 k 就是 Ke（權益資本成本）
-- [[NPV淨現值與IRR內部報酬率投資評估|NPV與IRR]] - WACC是NPV折現率和IRR的比較基準
+- [[基本面分析/ROIC投入資本報酬率]] - ROIC > WACC 才是價值創造
+- [[基本面分析/EVA經濟附加價值]] - EVA = (ROIC - WACC) × 投入資本，WACC 是 EVA 的核心減項
+- [[基本面分析/企業價值倍數EV-EBIT與EV-EBITDA]] - EV/EBITDA 是 WACC 的倒推應用
+- [[基本面分析/現金流量折現法DCF估值]] - WACC 是 DCF 的折現率
+- [[基本面分析/營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]] - 槓桿影響 WACC 和資本結構
+- [[基本面分析/本益比進階判讀PE-Ratio-Advanced]] - PE 是 WACC 和成長率的簡化版本
+- [[基本面分析/負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] - 資本結構決定 WACC
+- [[基本面分析/經濟護城河Economic-Moat]] - 有護城河的公司 ROIC 持續大於 WACC
+- [[基本面分析/股利折現模型DDM估值]] - DDM 的貼現率 k 就是 Ke（權益資本成本）
+- [[基本面分析/NPV淨現值與IRR內部報酬率投資評估|NPV與IRR]] - WACC是NPV折現率和IRR的比較基準
 
 ## 來源
 

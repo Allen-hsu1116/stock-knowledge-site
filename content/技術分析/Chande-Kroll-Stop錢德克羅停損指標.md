@@ -8,7 +8,7 @@ date: 2026-05-10
 
 ## 核心概念
 
-Chande Kroll Stop 由 Tushar Chande 和 Stanley Kroll 在《The New Technical Trader》中提出，是 [[Chandelier-Exit吊燈出場指標]] 的進化版本。
+Chande Kroll Stop 由 Tushar Chande 和 Stanley Kroll 在《The New Technical Trader》中提出，是 [[操作策略/Chandelier-Exit吊燈出場指標]] 的進化版本。
 
 **Chandelier Exit 的問題**：只用一層 ATR 過濾，停損線在劇烈波動時會突然跳動，容易被假突破洗出場。
 
@@ -53,7 +53,7 @@ Chande Kroll Stop 由 Tushar Chande 和 Stanley Kroll 在《The New Technical Tr
 
 - 價格從下方突破做空停損線 → 空頭趨勢結束訊號，可考慮做多
 - 價格從上方跌破做多停損線 → 多頭趨勢結束訊號，可考慮做空
-- 停損帶寬度收斂 → 趨勢即將啟動（類似 [[布林通道Bollinger-Bands三軌八型態]] 的 Squeeze）
+- 停損帶寬度收斂 → 趨勢即將啟動（類似 [[技術分析/布林通道Bollinger-Bands三軌八型態]] 的 Squeeze）
 
 ### 參數調整
 
@@ -73,14 +73,14 @@ Chande Kroll Stop 由 Tushar Chande 和 Stanley Kroll 在《The New Technical Tr
 | 方法 | 基準點 | 距離計算 | 過濾層數 | 優點 | 缺點 |
 |------|--------|----------|----------|------|------|
 | 固定%追蹤停損 | 最高價 | 固定% | 無 | 最簡單 | 不適應波動性 |
-| [[SAR拋物線指標Parabolic-SAR]] | 極值點 | 加速因子 | 無 | 趨勢明確時利潤大 | 盤整必虧 |
-| [[Chandelier-Exit吊燈出場指標]] | 最高價 | ATR×乘數 | 1層 | 適應波動 | 劇烈波動會跳動 |
+| [[技術分析/SAR拋物線指標Parabolic-SAR]] | 極值點 | 加速因子 | 無 | 趨勢明確時利潤大 | 盤整必虧 |
+| [[操作策略/Chandelier-Exit吊燈出場指標]] | 最高價 | ATR×乘數 | 1層 | 適應波動 | 劇烈波動會跳動 |
 | **Chande Kroll Stop** | 最高/最低價 | ATR×乘數 | **2層** | 穩健平滑 | 反應較慢 |
 
 ### 搭配策略
 
-- **Chande Kroll Stop + [[ADX趨勢強度過濾盤整]]**：ADX > 25 才使用 Chande Kroll Stop，ADX < 25 停損帶會過寬，改用區間交易策略
-- **Chande Kroll Stop + [[多時間框架分析]]**：日線停損帶確認大方向，小時線停損帶找進場點
+- **Chande Kroll Stop + [[技術分析/ADX趨勢強度過濾盤整]]**：ADX > 25 才使用 Chande Kroll Stop，ADX < 25 停損帶會過寬，改用區間交易策略
+- **Chande Kroll Stop + [[技術分析/多時間框架分析]]**：日線停損帶確認大方向，小時線停損帶找進場點
 - **Chande Kroll Stop + 成交量確認**：帶量突破停損帶才確認趨勢反轉
 
 ## 注意事項
@@ -105,16 +105,16 @@ Chande Kroll Stop 由 Tushar Chande 和 Stanley Kroll 在《The New Technical Tr
 
 ## 相關主題
 
-- [[Chandelier-Exit吊燈出場指標]]
-- [[Chande-Momentum-Oscillator-CMO錢德動量震盪指標]]
-- [[移動停利停損Trailing-Stop]]
-- [[ATR平均真實波幅-Average-True-Range]]
-- [[SAR拋物線指標Parabolic-SAR]]
-- [[海龜交易法則]]
-- [[ADX趨勢強度過濾盤整]]
-- [[多時間框架分析]]
-- [[布林通道Bollinger-Bands三軌八型態]]
-- [[肯特納通道Keltner-Channel]]
+- [[操作策略/Chandelier-Exit吊燈出場指標]]
+- [[技術分析/Chande-Momentum-Oscillator-CMO錢德動量震盪指標]]
+- [[風險管理/移動停利停損Trailing-Stop]]
+- [[技術分析/ATR平均真實波幅-Average-True-Range]]
+- [[技術分析/SAR拋物線指標Parabolic-SAR]]
+- [[操作策略/海龜交易法則]]
+- [[技術分析/ADX趨勢強度過濾盤整]]
+- [[技術分析/多時間框架分析]]
+- [[技術分析/布林通道Bollinger-Bands三軌八型態]]
+- [[技術分析/肯特納通道Keltner-Channel]]
 
 ## 來源
 

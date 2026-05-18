@@ -83,14 +83,14 @@ Volume Force = V × [2 × ((dm/cm) − 1)] × T × 100
 
 ## 相關主題
 
-- [[Chaikin-Money-Flow佳慶資金流量指標]]
-- [[OBV能量潮指標量價趨勢判讀]]
-- [[MACD指標實戰判讀]]
-- [[布林通道Bollinger-Bands三軌八型態]]
-- [[斐波那契回撤Fibonacci-Retracement]]
-- [[量價背離深度實戰Volume-Price-Divergence]]
-- [[成交量確認原則Volume-Confirmation]]
-- [[AD累積分配指標收盤位置加權]]
+- [[技術分析/Chaikin-Money-Flow佳慶資金流量指標]]
+- [[技術分析/OBV能量潮指標量價趨勢判讀]]
+- [[技術分析/MACD指標實戰判讀]]
+- [[技術分析/布林通道Bollinger-Bands三軌八型態]]
+- [[技術分析/斐波那契回撤Fibonacci-Retracement]]
+- [[技術分析/量價背離深度實戰Volume-Price-Divergence]]
+- [[技術分析/成交量確認原則Volume-Confirmation]]
+- [[技術分析/AD累積分配指標收盤位置加權]]
 
 ## 來源
 

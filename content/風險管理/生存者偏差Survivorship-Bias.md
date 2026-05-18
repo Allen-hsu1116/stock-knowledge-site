@@ -45,15 +45,15 @@
 - 基金公司不會主動告訴你他們清算了多少失敗的基金
 - 「200年美國股市」本身就是生存者偏差——美國是少數連續存在200年的市場
 - 回測績效衰退率30-50%，部分原因就是生存者偏差造成的
-- 與[[回測驗證Backtesting陷阱]]密切相關
+- 與[[風險管理/回測驗證Backtesting陷阱]]密切相關
 
 ## 相關主題
-- [[回測驗證Backtesting陷阱]]
-- [[過度擬合Overfitting量化判斷]]
-- [[認知偏誤與交易心理]]
-- [[交易期望值Trading-Expectancy]]
-- [[策略壓力測試Stress-Testing]]
-- [[模型風險Model Risk]]
+- [[風險管理/回測驗證Backtesting陷阱]]
+- [[風險管理/過度擬合Overfitting量化判斷]]
+- [[風險管理/認知偏誤與交易心理]]
+- [[風險管理/交易期望值Trading-Expectancy]]
+- [[風險管理/策略壓力測試Stress-Testing]]
+- [[風險管理/模型風險Model Risk]]
 
 ## 來源
 - [無所不在的生存者誤差 — 綠角財經筆記](../raw/2026-05-01/生存者偏差Survivorship-Bias.md)

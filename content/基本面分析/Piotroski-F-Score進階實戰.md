@@ -98,10 +98,10 @@ Piotroski 原始策略是 **F-Score + 低 P/B** 雙重篩選：
 F-Score 不建議單獨使用，最佳組合：
 
 1. **F-Score + P/B 或 P/E**：原始用法，從便宜股中挑好公司
-2. **F-Score + [[ROE杜邦分析淨利率資產週轉率權益乘數|杜邦分析]]**：F-Score 看整體健康度，杜邦看 ROE 來源
-3. **F-Score + [[盈餘品質分析|盈餘品質]]**：F-Score 的第 4 項（營業現金流 > 稅後淨利）就是 Sloan 應計項目的簡化版
-4. **F-Score + [[Beneish-M-Score財報舞弊偵測|M-Score]]**：F-Score 篩好公司，M-Score 排除假帳公司，雙重過濾
-5. **F-Score + [[本益比進階判讀PE-Ratio-Advanced|本益比河流圖]]**：F-Score 判品質，PE Band 判估值位置
+2. **F-Score + [[基本面分析/ROE杜邦分析淨利率資產週轉率權益乘數|杜邦分析]]**：F-Score 看整體健康度，杜邦看 ROE 來源
+3. **F-Score + [[基本面分析/盈餘品質分析|盈餘品質]]**：F-Score 的第 4 項（營業現金流 > 稅後淨利）就是 Sloan 應計項目的簡化版
+4. **F-Score + [[基本面分析/Beneish-M-Score財報舞弊偵測|M-Score]]**：F-Score 篩好公司，M-Score 排除假帳公司，雙重過濾
+5. **F-Score + [[基本面分析/本益比進階判讀PE-Ratio-Advanced|本益比河流圖]]**：F-Score 判品質，PE Band 判估值位置
 
 ## 注意事項
 
@@ -123,20 +123,20 @@ F-Score 不建議單獨使用，最佳組合：
 
 - 使用近 4 季數據（TTM）比年度數據更即時
 - 金融股 F-Score 計算需調整（長期負債定義不同）
-- 建議搭配 [[股價淨值比PBR-Price-to-Book-Ratio|PBR]] 和 [[本益比進階判讀PE-Ratio-Advanced|PE]] 使用
+- 建議搭配 [[基本面分析/股價淨值比PBR-Price-to-Book-Ratio|PBR]] 和 [[基本面分析/本益比進階判讀PE-Ratio-Advanced|PE]] 使用
 - 季底作帳期間 F-Score 可能失真，等財報揭露後再計算
 - F-Score 6 分以上勝率 70%，但這是量化結果，個股挑選差異大
 
 ## 相關主題
 
-- [[盈餘品質分析]] - F-Score 第 4 項對應 Sloan 應計項目
-- [[Beneish-M-Score財報舞弊偵測]] - 用 8 個指標偵測財報造假
-- [[ROE杜邦分析淨利率資產週轉率權益乘數]] - 拆解 ROE 來源
-- [[ROIC投入資本報酬率]] - ROIC vs WACC 判斷價值創造
-- [[股價淨值比PBR-Price-to-Book-Ratio]] - F-Score 的最佳搭配指標
-- [[營運效率指標與CCC實戰判讀]] - F-Score 成長性的進階版
-- [[現金流量表三大現金流判讀]] - F-Score 獲利性的基礎
-- [[EVA經濟附加價值]] - EVA > 0 是 F-Score 高分的終極驗證
+- [[基本面分析/盈餘品質分析]] - F-Score 第 4 項對應 Sloan 應計項目
+- [[基本面分析/Beneish-M-Score財報舞弊偵測]] - 用 8 個指標偵測財報造假
+- [[基本面分析/ROE杜邦分析淨利率資產週轉率權益乘數]] - 拆解 ROE 來源
+- [[基本面分析/ROIC投入資本報酬率]] - ROIC vs WACC 判斷價值創造
+- [[基本面分析/股價淨值比PBR-Price-to-Book-Ratio]] - F-Score 的最佳搭配指標
+- [[基本面分析/營運效率指標與CCC實戰判讀]] - F-Score 成長性的進階版
+- [[基本面分析/現金流量表三大現金流判讀]] - F-Score 獲利性的基礎
+- [[基本面分析/EVA經濟附加價值]] - EVA > 0 是 F-Score 高分的終極驗證
 
 ## 來源
 

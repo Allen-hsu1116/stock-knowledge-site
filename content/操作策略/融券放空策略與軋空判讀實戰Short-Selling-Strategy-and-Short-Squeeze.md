@@ -189,15 +189,15 @@
 - **借券賣出與融券不同**：借券是向集保借券系統借，融券是向券商借，兩者規則不同
 
 ## 相關主題
-- [[融券回補與軋空行情]]
-- [[融券回補行情真假辨別]]
-- [[三大法人與融資融券基礎總論Institutional-Investors-and-Margin-Trading-Basics]]
-- [[融資維持率與斷頭]]
-- [[融資券交叉判讀]]
-- [[融資維持率市場轉折訊號Margin-Maintenance-Ratio-Market-Signal]]
-- [[三大法人買賣超實戰判讀]]
-- [[除權息三大操作策略Ex-Dividend-Three-Strategies]]
-- [[風險管理決策框架Risk-Management-Decision-Framework]]
+- [[籌碼面分析/融券回補與軋空行情]]
+- [[籌碼面分析/融券回補行情真假辨別]]
+- [[籌碼面分析/三大法人與融資融券基礎總論Institutional-Investors-and-Margin-Trading-Basics]]
+- [[籌碼面分析/融資維持率與斷頭]]
+- [[籌碼面分析/融資券交叉判讀]]
+- [[風險管理/融資維持率市場轉折訊號Margin-Maintenance-Ratio-Market-Signal]]
+- [[籌碼面分析/三大法人買賣超實戰判讀]]
+- [[操作策略/除權息三大操作策略Ex-Dividend-Three-Strategies]]
+- [[風險管理/風險管理決策框架Risk-Management-Decision-Framework]]
 
 ## 來源
 - [台股軋空軋成形？融券暴增釋出哪些訊號？](../raw/2026-05-17/工商時報-台股軋空軋成形融券暴增釋出哪些訊號.md)
