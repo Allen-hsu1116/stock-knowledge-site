@@ -62,6 +62,7 @@ PowerSqueeze 與 VCP 的結合是高效選股流程：
 - [[VCP波動收縮型態]]
 - [[布林通道Bollinger-Bands三軌八型態]]
 - [[肯特納通道Keltner-Channel]]
+- [[TTM-Squeeze壓縮指標實戰判讀]] - TTM Squeeze原始指標，PowerSqueeze的基礎
 - [[突破交易策略]]
 - [[量先價行原則]]
 - [[成交量確認原則Volume-Confirmation]]
