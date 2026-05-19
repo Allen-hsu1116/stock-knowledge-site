@@ -186,6 +186,7 @@ ROE可以進一步拆解為四大影響因素：
 - [[基本面分析/WACC加權平均資本成本]] - 高權益乘數影響 WACC 和資本結構
 - [[基本面分析/營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]] - 槓桿的放大效果
 - [[基本面分析/負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] - 權益乘數與負債比率的關係
+- [[基本面分析/權益乘數與財務槓桿效應判讀Equity-Multiplier-and-Leverage-Effect]] - 權益乘數的深入判讀與槓桿效應
 
 ## 假資優生辨識（CMoney 實戰框架）
 
