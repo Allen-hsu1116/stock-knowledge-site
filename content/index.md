@@ -45,4 +45,12 @@ K線、均線、指標、型態、量價關係 — 看懂圖表的一切
 
 ---
 
+## 🔗 相關網站
+
+- 📊 **[台股產業地圖](https://allen-hsu1116.github.io/industry-map-site/)** — 互動式產業鏈知識圖譜，500+ 公司供應鏈關係
+- 📈 **[每日選股報告](https://allen-hsu1116.github.io/industry-map-site/daily-report)** — AI 精選每日股票推薦與市場分析
+- 🧠 **[知識庫專案](https://allen-hsu1116.github.io/knowledge-base/%E5%B0%88%E6%A1%88/%E6%87%89%E7%94%A8/ZhuLinsen-daily_stock_analysis)** — Daily Stock Analysis 專案技術筆記
+
+---
+
 *知識是累積的，每一次學習都在縮短你與大師的距離。*

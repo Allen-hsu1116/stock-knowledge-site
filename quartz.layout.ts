@@ -36,6 +36,9 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/jackyzha0/quartz",
+      "📊 產業地圖": "https://allen-hsu1116.github.io/industry-map-site/",
+      "📈 每日報告": "https://allen-hsu1116.github.io/industry-map-site/daily-report",
+      "🧠 AI 選股": "https://allen-hsu1116.github.io/knowledge-base/專案/應用/ZhuLinsen-daily_stock_analysis",
     },
   }),
 }
