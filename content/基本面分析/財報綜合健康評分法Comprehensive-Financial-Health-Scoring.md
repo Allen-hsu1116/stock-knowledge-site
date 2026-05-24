@@ -30,7 +30,7 @@
 
 **維度三：營運效率（Efficiency）**
 - 存貨週轉率、應收帳款週轉率、CCC越短越好
-- 負CCC企業是營運現金產生器（參考[[基本面分析/現金轉換循環Cash-Conversion-Cycle|CCC判讀]]）
+- 負CCC企業是營運現金產生器（參考[[現金轉換循環Cash Conversion Cycle|CCC判讀]]）
 
 **維度四：現金流品質（Cash Flow Quality）**
 - OCF/NI > 1優秀、0.7-1尚可、< 0.7堪憂、< 0極度危險

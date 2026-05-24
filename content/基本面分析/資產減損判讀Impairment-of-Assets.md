@@ -145,7 +145,7 @@
 - [[基本面分析/調整後EPS扣除非經常性損益Adjusted-EPS]] - 減損屬非經常性損益需調整
 - [[基本面分析/財報假帳偵測]] - 減損時機是盈餘管理的常見手段
 - [[基本面分析/營業現金流對淨利比判斷盈餘品質OCF-NI-Ratio]] - 減損不影響現金流但影響淨利
-- [[基本面分析/資產重估價與重估增值判讀Asset-Reevaluation-and-Revaluation-Surplus]] - 重估增值與減損的對稱處理
+- [[資產重估價與重估增值判讀Asset-Revaluation-and-Revaluation-Surplus]] - 重估增值與減損的對稱處理
 
 ## 來源
 
