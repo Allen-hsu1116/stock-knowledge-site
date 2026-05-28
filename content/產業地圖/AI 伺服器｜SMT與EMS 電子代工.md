@@ -6,7 +6,9 @@
 > 📊 比對來源：aistockmap.com + CasualMarket + web_search
 
 ---
+
 ## 📊 產業價值鏈
+
 ```
 上游：電子零組件
   │
@@ -16,6 +18,7 @@
   ▼
 下游：終端品牌
 ```
+
 ---
 
 ## 🔵 EMS 代工龍頭（2 家）
@@ -41,8 +44,11 @@
 - AI 伺服器板卡組裝受惠
 
 ---
+
 ## 🔵 SMT 專業代工與零組件（6 家）
+
 專注 SMT 表面黏著組裝的代工廠商與零組件供應。
+
 | 公司 | 代號 | 市場定位 | 關聯度 | 核心產品 | 技術重心 |
 |------|------|----------|--------|----------|----------|
 | **巨有科技** | 8227 | 🔵 利基專精 EMS 電子代工 | 中 | EMS 電子代工、SMT 組裝 | EMS 代工利基廠商 |
@@ -51,15 +57,18 @@
 | **英業達** | 2356 | 伺服器/筆電EMS代工 | high |  |  |
 | **技嘉** | 2376 | 主機板/顯示卡SMT代工 | medium |  |  |
 | **瑞儀** | 6176 | 背光模組SMT組裝 | medium |  |  |
+
 ### 🔍 巨有科技重點摘要
 - **市場定位**：🔵 利基專精
 - **籌碼標籤**：has_futures、revenue_yoy_growth、revenue_consecutive_growth
 - EMS 代工利基廠商
+
 ### 🔍 南茂重點摘要
 - **市場定位**：🟡 重要供應商
 - **籌碼標籤**：has_futures、revenue_yoy_growth、revenue_consecutive_growth、revenue_new_high、foreign_net_buy、eps_growth
 - IC 封測與 SMT 代工並行
 - 面板驅動 IC 封測領先
+
 ---
 
 ## 🔗 相關題材

@@ -1,6 +1,10 @@
 ---
 title: Klinger Volume Oscillator 克林格成交量震盪指標
 date: 2026-05-18
+tags:
+  - 技術分析
+  - 量價指標
+  - KVO
 ---
 
 # Klinger Volume Oscillator 克林格成交量震盪指標

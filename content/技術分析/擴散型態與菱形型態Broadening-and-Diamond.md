@@ -1,5 +1,9 @@
 ---
 title: 擴散型態與菱形型態 Broadening and Diamond
+tags:
+  - 技術分析
+  - 型態學
+  - 反轉型態
 ---
 
 # 擴散型態與菱形型態Broadening-and-Diamond

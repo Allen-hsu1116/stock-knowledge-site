@@ -2,6 +2,7 @@
 title: 決策疲勞Decision-Fatigue與交易決策品質
 created: 2026-05-15
 topic: 風險管理
+tags: [決策疲勞, 意志力耗損, 自我耗損, 交易心理, 正念交易, 交易紀律]
 ---
 
 # 決策疲勞Decision-Fatigue與交易決策品質

@@ -1,6 +1,10 @@
 ---
 title: Schaff Trend Cycle 沙夫趨勢週期指標
 date: 2026-05-18
+tags:
+  - 技術分析
+  - STC
+  - 循環指標
 ---
 
 # Schaff Trend Cycle 沙夫趨勢週期指標

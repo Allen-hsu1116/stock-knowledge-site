@@ -3,6 +3,7 @@ source: memory
 source_date: 2026-05-17
 status: new
 raw_files:
+  - Delta避險原理與應用PG財經筆記.md
 ---
 
 # 自營商期貨Delta避險判讀

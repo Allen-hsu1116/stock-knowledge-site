@@ -3,6 +3,8 @@ source: memory
 source_date: 2026-05-18
 status: raw_filled
 raw_files:
+  - 十字線怎麼看-UpToGo.md
+  - 十字線Doji交易策略-TMGM.md
 ---
 
 # 十字線Doji判讀實戰

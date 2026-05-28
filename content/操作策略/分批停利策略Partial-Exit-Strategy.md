@@ -1,5 +1,7 @@
 ---
 source:
+  - rich01.com/stop-loss-point/
+  - learningpa.cc/stop-profit/
 date: 2026-05-14
 ---
 

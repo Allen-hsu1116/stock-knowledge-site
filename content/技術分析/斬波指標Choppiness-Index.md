@@ -2,6 +2,7 @@
 title: 斬波指標 Choppiness Index (CHOP)
 date: 2026-05-18
 categories: [技術分析]
+tags: [CHOP, 斬波指標, 趨勢判斷, 盤整判斷, 假突破過濾, ATR, Fibonacci]
 ---
 
 # 斬波指標 Choppiness Index (CHOP)
