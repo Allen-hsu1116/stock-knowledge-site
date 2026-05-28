@@ -1,11 +1,5 @@
 ---
 title: 波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral
-  - 操作策略
-  - 選擇權
-  - 波動率套利
-  - Delta-Neutral
-  - Gamma-Scalping
-  - Vega
 created: 2026-05-10
 ---
 

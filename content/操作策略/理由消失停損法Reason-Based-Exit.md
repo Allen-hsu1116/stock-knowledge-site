@@ -1,6 +1,5 @@
 ---
 source:
-  - rich01.com/stop-loss-point/
 date: 2026-05-14
 ---
 

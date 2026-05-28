@@ -1,10 +1,5 @@
 ---
 title: 市場體制識別 Market Regime Detection
-  - 操作策略
-  - 體制識別
-  - ADX
-  - 均線
-  - 布林通道
 created: 2026-05-09
 ---
 

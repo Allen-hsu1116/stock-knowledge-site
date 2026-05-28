@@ -1,8 +1,5 @@
 ---
 title: 圓底圓頂型態 Rounding Top and Bottom
-  - 技術分析
-  - 型態學
-  - 反轉型態
 ---
 
 # 圓底圓頂型態Rounding-Top-and-Bottom
