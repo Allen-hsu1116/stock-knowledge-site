@@ -1,7 +1,6 @@
 ---
 title: 崩盤換股策略 Crash Rotation Strategy
 date: 2026-05-16
-tags: [操作策略, 選股, 崩盤, 換股, 估值, 分批買進, 財富重分配]
 ---
 
 # 崩盤換股策略Crash-Rotation-Strategy

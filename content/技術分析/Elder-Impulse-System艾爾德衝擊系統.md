@@ -1,7 +1,6 @@
 ---
 title: Elder Impulse System 艾爾德衝擊系統
 date: 2026-05-18
-tags:
   - 技術分析
   - Elder
   - 衝擊系統

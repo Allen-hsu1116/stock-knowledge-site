@@ -2,7 +2,6 @@
 title: NPV淨現值與IRR內部報酬率投資評估
 date: 2026-05-12
 category: 基本面分析
-tags:
   - NPV
   - IRR
   - 淨現值

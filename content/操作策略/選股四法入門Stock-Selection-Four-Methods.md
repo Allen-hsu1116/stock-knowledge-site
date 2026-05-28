@@ -1,7 +1,6 @@
 ---
 title: 選股四法入門 Stock Selection Four Methods
 date: 2026-05-16
-tags: [操作策略, 選股, 基本面, 技術面, 籌碼面, 消息面, 估值, ROE]
 ---
 
 # 選股四法入門Stock-Selection-Four-Methods

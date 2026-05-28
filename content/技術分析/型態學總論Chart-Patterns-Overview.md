@@ -1,6 +1,5 @@
 ---
 title: 型態學總論 Chart Patterns Overview
-tags:
   - 技術分析
   - 型態學
   - 底部型態

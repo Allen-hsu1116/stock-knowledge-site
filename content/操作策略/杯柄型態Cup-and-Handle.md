@@ -1,6 +1,5 @@
 ---
 title: 杯柄型態 Cup and Handle
-tags:
   - 操作策略
   - 型態學
   - 歐尼爾

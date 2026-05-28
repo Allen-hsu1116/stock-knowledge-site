@@ -1,6 +1,5 @@
 ---
 title: 交易紀錄與模擬練習方法Trading Journal and Paper Trading
-tags:
   - 操作策略
   - 交易紀錄
   - 模擬交易

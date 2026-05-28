@@ -1,6 +1,5 @@
 ---
 title: Theta時間價值衰退與選擇權賣方策略
-tags:
   - 操作策略
   - 選擇權
   - Theta

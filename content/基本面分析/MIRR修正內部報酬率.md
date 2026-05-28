@@ -2,7 +2,6 @@
 title: MIRR修正內部報酬率
 date: 2026-05-12
 category: 基本面分析
-tags:
   - MIRR
   - IRR
   - 修正內部報酬率
