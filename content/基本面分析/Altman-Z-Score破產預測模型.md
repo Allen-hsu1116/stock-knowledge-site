@@ -2,7 +2,6 @@
 title: Altman Z-Score 破產預測模型
 date: 2026-05-12
 category: 基本面分析
-tags: [破產預測, Z-Score, 財務比率, 信用風險, Altman]
 ---
 
 # Altman Z-Score 破產預測模型

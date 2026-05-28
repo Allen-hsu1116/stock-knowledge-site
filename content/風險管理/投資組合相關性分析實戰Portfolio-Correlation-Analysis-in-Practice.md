@@ -2,12 +2,6 @@
 title: 投資組合相關性分析實戰 Portfolio Correlation Analysis in Practice
 date: 2026-05-15
 category: 風險管理
-tags:
-  - 相關性
-  - 投資組合
-  - 分散投資
-  - 部位配置
-  - 風險管理
 ---
 
 # 投資組合相關性分析實戰 Portfolio Correlation Analysis in Practice

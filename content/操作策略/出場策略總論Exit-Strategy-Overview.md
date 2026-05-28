@@ -1,8 +1,5 @@
 ---
 source:
-  - www.pfcf.com.tw/software/detail/2415
-  - money.cmoney.tw/article/29715
-  - www.cmoney.tw/notes/note-detail.aspx?nid=846874
 date: 2026-05-16
 ---
 

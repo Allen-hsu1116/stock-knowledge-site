@@ -1,9 +1,5 @@
 ---
 title: 型態學實戰操作策略 Chart Pattern Trading Strategy
-tags:
-  - 操作策略
-  - 型態學
-  - 技術分析
 ---
 
 # 型態學實戰操作策略Chart-Pattern-Trading-Strategy

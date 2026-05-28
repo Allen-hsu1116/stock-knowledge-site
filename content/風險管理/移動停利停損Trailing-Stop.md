@@ -1,9 +1,5 @@
 ---
 source:
-  - rich01.com/what-is-trailing-stop-0/
-  - esunsec.com.tw (TrailingStop-strategy)
-  - homedadpro.com/trailing-stop/
-  - developer.fugle.tw (TrailingStop-strategy)
 date: 2026-05-10
 ---
 
