@@ -37,8 +37,8 @@
 - 個股營收與法人動向仍需進一步確認
 
 ## 相關主題
-- [[YouTube頻道/周刊投資/AI資本支出狂潮-CoWoS先進封裝與輝達改朝換代]]
-- [[YouTube頻道/周刊投資/MLCC比價效應引爆與高階被動元件缺貨漲價]]
+- [[AI資本支出狂潮-CoWoS先進封裝與輝達改朝換代]]
+- [[MLCC比價效應引爆與高階被動元件缺貨漲價]]
 
 ## 來源
 - [從PCB到CoWoS，AOI/AXI成半導體新核心，紅利族群現身！](https://www.youtube.com/watch?v=udf55aiusHI)

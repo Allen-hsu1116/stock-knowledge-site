@@ -64,11 +64,11 @@
 - 游庭皓觀點偏多但不鼓勵過度槓桿，核心立場是「超車不颶車」
 
 ## 相關主題
-- [[風險管理/信用交易融資融券進階實戰與風險管理Margin-Trading-Advanced]]
-- [[風險管理/財務槓桿風險管理Leverage-Risk-Management]]
-- [[籌碼面分析/大盤融資餘額判讀]]
-- [[風險管理/波動率拖累與槓桿ETF損耗Volatility-Drag-and-Leveraged-ETF-Decay]]
-- [[操作策略/存股策略與股息成長投資Dividend-Growth-Investing]]
+- [[信用交易融資融券進階實戰與風險管理Margin-Trading-Advanced]]
+- [[財務槓桿風險管理Leverage-Risk-Management]]
+- [[大盤融資餘額判讀]]
+- [[波動率拖累與槓桿ETF損耗Volatility-Drag-and-Leveraged-ETF-Decay]]
+- [[存股策略與股息成長投資Dividend-Growth-Investing]]
 
 ## 來源
 - [2026/5/26(二)ETF資金海嘯 AI全民借貸潮!5月台股衝五萬?](https://www.youtube.com/watch?v=zRBJKmx5yhc)

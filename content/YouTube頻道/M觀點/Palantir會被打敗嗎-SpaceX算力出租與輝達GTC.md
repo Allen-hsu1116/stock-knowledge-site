@@ -43,9 +43,9 @@
 - 88 分鐘影片含閒聊，投資核心約佔 45%
 
 ## 相關主題
-- [[操作策略/動能交易策略]]
-- [[基本面分析/盈餘品質分析]]
-- [[風險管理/確認偏誤Confirmation-Bias]]
+- [[動能交易策略]]
+- [[盈餘品質分析]]
+- [[確認偏誤Confirmation-Bias]]
 
 ## 來源
 - [EP301 Palantir、SpaceX AI算力出租、輝達GTC](https://www.youtube.com/watch?v=yukUlI7xvjI)

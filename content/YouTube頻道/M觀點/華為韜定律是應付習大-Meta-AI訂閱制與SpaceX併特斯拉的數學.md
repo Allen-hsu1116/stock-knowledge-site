@@ -61,9 +61,9 @@ Miula 認為大多數人不會額外訂閱，因為已經有 ChatGPT 和 Gemini�
 
 ## 相關主題
 
-- [[YouTube頻道/周刊投資/COMPUTEX與SpaceX雙引爆-AI光通訊與ASIC選股邏輯]]
-- [[YouTube頻道/宏爺講股/台股爆量上影線與美光低基期魔法-輝達增速放緩與CCI矛盾訊號]]
-- [[YouTube頻道/M觀點/星艦V3首飛成功與太空經濟新時代-Anthropic首度獲利-艾克曼看好微軟]]
+- [[COMPUTEX與SpaceX雙引爆-AI光通訊與ASIC選股邏輯]]
+- [[台股爆量上影線與美光低基期魔法-輝達增速放緩與CCI矛盾訊號]]
+- [[星艦V3首飛成功與太空經濟新時代-Anthropic首度獲利-艾克曼看好微軟]]
 
 ## 來源
 

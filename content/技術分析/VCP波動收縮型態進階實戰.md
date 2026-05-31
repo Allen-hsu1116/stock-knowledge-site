@@ -104,15 +104,15 @@ PowerSqueeze 由 John Carter 提出 Squeeze 概念，經 Growin 團隊改良，�
 
 ## 相關主題
 
-- [[技術分析/PowerSqueeze指標波動收縮能量偵測]] - 快速篩選波動收縮標的
-- [[技術分析/假突破三道過濾]] - VCP 突破確認方法
-- [[技術分析/真突破確認三原則帶量收盤3天]] - VCP 突破確認方法
-- [[技術分析/成交量確認原則Volume-Confirmation|成交量確認原則 Volume Confirmation]] - 價漲量增價跌量縮
-- [[風險管理/停損方法]] - VCP 停損設定參考
-- [[技術分析/布林通道Bollinger-Bands三軌八型態]] - PowerSqueeze 組成指標
-- [[技術分析/肯特納通道Keltner-Channel]] - PowerSqueeze 組成指標
-- [[技術分析/均線判斷]] - 第二階段判斷工具
-- [[操作策略/趨勢追蹤策略Trend-Following]] - VCP 是趨勢追蹤的進場策略
+- [[PowerSqueeze指標波動收縮能量偵測]] - 快速篩選波動收縮標的
+- [[假突破三道過濾]] - VCP 突破確認方法
+- [[真突破確認三原則帶量收盤3天]] - VCP 突破確認方法
+- [[成交量確認原則Volume-Confirmation|成交量確認原則 Volume Confirmation]] - 價漲量增價跌量縮
+- [[停損方法]] - VCP 停損設定參考
+- [[布林通道Bollinger-Bands三軌八型態]] - PowerSqueeze 組成指標
+- [[肯特納通道Keltner-Channel]] - PowerSqueeze 組成指標
+- [[均線判斷]] - 第二階段判斷工具
+- [[趨勢追蹤策略Trend-Following]] - VCP 是趨勢追蹤的進場策略
 
 ## 來源
 

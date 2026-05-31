@@ -180,9 +180,9 @@ Delta Neutral只對沖了方向風險，**波動率風險（Vega）完全暴露*
 ## 相關主題
 
 - [[選擇權Greeks風險判讀|風險管理/選擇權Greeks風險判讀]]
-- [[選擇權Greeks進階組合判讀與風險管理|操作策略/選擇權Greeks進階組合判讀與風險管理]]
-- [[保護性賣權與Collar避險策略|風險管理/保護性賣權與Collar避險策略Protective-Put-and-Collar]]
+- [[選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced|操作策略/選擇權Greeks進階組合判讀與風險管理]]
+- [[保護性賣權與Collar避險策略Protective-Put-and-Collar|風險管理/保護性賣權與Collar避險策略Protective-Put-and-Collar]]
 - [[波動率風險溢價Volatility-Risk-Premium|風險管理/波動率風險溢價Volatility-Risk-Premium]]
-- [[波動率套利與Delta-Neutral策略|操作策略/波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
-- [[選擇權Convexity凸性與非對稱收益|操作策略/選擇權Convexity凸性與非對稱收益Option-Convexity]]
+- [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral|操作策略/波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
+- [[選擇權Convexity凸性與非對稱收益Option-Convexity|操作策略/選擇權Convexity凸性與非對稱收益Option-Convexity]]
 - [[Theta時間衰減實戰|操作策略/Theta時間衰減實戰]]

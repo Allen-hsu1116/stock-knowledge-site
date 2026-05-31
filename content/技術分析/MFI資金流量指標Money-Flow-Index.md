@@ -110,14 +110,14 @@ MFI適合判斷超買超賣和背離，OBV適合判斷長期資金流向趨勢�
 
 ## 相關主題
 
-- [[技術分析/RSI相對強弱指標]]
-- [[技術分析/KD指標隨機指標]]
-- [[技術分析/量價關係與背離]]
-- [[技術分析/MFI資金流量指標Money-Flow-Index]]
-- [[技術分析/背離Divergence進階實戰]]
-- [[技術分析/CCI商品通道指標Commodity-Channel-Index]]
-- [[技術分析/布林通道Bollinger-Bands三軌八型態]]
-- [[技術分析/量價關係與背離]]
+- [[RSI相對強弱指標]]
+- [[KD指標隨機指標]]
+- [[量價關係與背離]]
+- [[MFI資金流量指標Money-Flow-Index]]
+- [[背離Divergence進階實戰]]
+- [[CCI商品通道指標Commodity-Channel-Index]]
+- [[布林通道Bollinger-Bands三軌八型態]]
+- [[量價關係與背離]]
 
 ### 六、MFI實戰案例
 

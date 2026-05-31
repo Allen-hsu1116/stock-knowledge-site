@@ -111,15 +111,15 @@
 
 ## 相關主題
 
-- [[基本面分析/ROE杜邦分析淨利率資產週轉率權益乘數]] - 權益乘數是杜邦分析三因子之一
-- [[基本面分析/營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]] - 營業槓桿+財務槓桿的聯合放大效應
-- [[基本面分析/負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] - 權益乘數與負債比率一體兩面
-- [[基本面分析/利息保障倍數實戰判讀Interest-Coverage-Ratio]] - 搭配判斷償債能力
-- [[基本面分析/流動比率與速動比率實戰判讀]] - 短期償債能力交叉驗證
-- [[基本面分析/現金流量允當比率與現金再投資比率判讀Cash-Adequacy-Ratio-and-Reinvestment-Ratio]] - 長期現金流自給自足能力
-- [[基本面分析/長期負債與短期負債結構分析Long-Term-Debt-Structure]] - 槓桿來源的長短債結構
-- [[基本面分析/資產周轉率進階判讀Asset-Turnover-Advanced]] - 杜邦分析的營運效率因子
-- [[基本面分析/WACC加權平均資本成本]] - 槓桿影響WACC和資本結構
+- [[ROE杜邦分析淨利率資產週轉率權益乘數]] - 權益乘數是杜邦分析三因子之一
+- [[營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]] - 營業槓桿+財務槓桿的聯合放大效應
+- [[負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] - 權益乘數與負債比率一體兩面
+- [[利息保障倍數實戰判讀Interest-Coverage-Ratio]] - 搭配判斷償債能力
+- [[流動比率與速動比率實戰判讀]] - 短期償債能力交叉驗證
+- [[現金流量允當比率與現金再投資比率判讀Cash-Adequacy-Ratio-and-Reinvestment-Ratio]] - 長期現金流自給自足能力
+- [[長期負債與短期負債結構分析Long-Term-Debt-Structure]] - 槓桿來源的長短債結構
+- [[資產周轉率進階判讀Asset-Turnover-Advanced]] - 杜邦分析的營運效率因子
+- [[WACC加權平均資本成本]] - 槓桿影響WACC和資本結構
 
 ## 來源
 

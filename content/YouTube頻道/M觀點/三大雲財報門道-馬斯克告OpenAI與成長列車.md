@@ -47,9 +47,9 @@
 - 81 分鐘影片含閒聊，投資核心約佔 50%
 
 ## 相關主題
-- [[基本面分析/盈餘品質分析]]
-- [[操作策略/動能交易策略]]
-- [[風險管理/確認偏誤Confirmation-Bias]]
+- [[盈餘品質分析]]
+- [[動能交易策略]]
+- [[確認偏誤Confirmation-Bias]]
 
 ## 來源
 - [EP300 三大雲財報、馬斯克告OpenAI、成長列車](https://www.youtube.com/watch?v=jzvRyORhr4A)

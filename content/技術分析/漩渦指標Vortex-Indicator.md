@@ -68,11 +68,11 @@
 
 ## 相關主題
 
-- [[技術分析/DMI動向指標與DI方向判斷|DMI動向指標與DI方向判斷]]
-- [[技術分析/ADX趨勢強度過濾盤整|ADX趨勢強度過濾盤整]]
-- [[技術分析/MACD指標實戰判讀|MACD指標實戰判讀]]
-- [[技術分析/背離Divergence進階實戰|背離Divergence進階實戰]]
-- [[技術分析/多指標共振交易系統Multi-Indicator-Confluence|多指標共振交易系統Multi-Indicator-Confluence]]
+- [[DMI動向指標與DI方向判斷|DMI動向指標與DI方向判斷]]
+- [[ADX趨勢強度過濾盤整|ADX趨勢強度過濾盤整]]
+- [[MACD指標實戰判讀|MACD指標實戰判讀]]
+- [[背離Divergence進階實戰|背離Divergence進階實戰]]
+- [[多指標共振交易系統Multi-Indicator-Confluence|多指標共振交易系統Multi-Indicator-Confluence]]
 
 ## 來源
 

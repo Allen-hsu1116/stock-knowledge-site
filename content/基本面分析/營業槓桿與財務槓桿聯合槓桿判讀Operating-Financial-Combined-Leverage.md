@@ -116,11 +116,11 @@ DCL = DOL × DFL = 邊際貢獻 / (EBIT - I)
 
 ## 相關主題
 
-- [[基本面分析/負債比率與財務結構分析Debt-Ratio-and-Financial-Structure|負債比率與財務結構分析]]
-- [[基本面分析/三率三升與財報獲利能力判讀|三率三升與財報獲利能力判讀]]
-- [[風險管理/財務槓桿風險管理Leverage-Risk-Management|財務槓桿風險管理]]
-- [[風險管理/斷頭強制平倉Forced-Liquidation|斷頭強制平倉]]
-- [[基本面分析/財報三表綜合判讀與勾稽關係|財報三表綜合判讀]]
+- [[負債比率與財務結構分析Debt-Ratio-and-Financial-Structure|負債比率與財務結構分析]]
+- [[三率三升與財報獲利能力判讀|三率三升與財報獲利能力判讀]]
+- [[財務槓桿風險管理Leverage-Risk-Management|財務槓桿風險管理]]
+- [[斷頭強制平倉Forced-Liquidation|斷頭強制平倉]]
+- [[財報三表綜合判讀與勾稽關係|財報三表綜合判讀]]
 
 ## 來源
 

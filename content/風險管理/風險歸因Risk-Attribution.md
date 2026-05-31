@@ -93,15 +93,15 @@ MCTR（Marginal Contribution to Risk）是風險歸因的核心工具，量化�
 
 ## 相關主題
 
-- [[風險管理/風險預算Risk Budgeting]]
-- [[風險管理/風險平價策略Risk-Parity]]
-- [[風險管理/風險調整報酬指標夏普比率與索提諾比率]]
-- [[風險管理/策略壓力測試Stress-Testing]]
-- [[風險管理/集中度風險Concentration Risk]]
-- [[風險管理/相關性風險Correlation-Risk]]
-- [[風險管理/系統性風險與非系統性風險]]
-- [[風險管理/投資組合理論與分散投資的局限Portfolio-Theory-and-Diversification-Limits]]
-- [[風險管理/VaR風險值Value-at-Risk]]
+- [[風險預算Risk Budgeting]]
+- [[風險平價策略Risk-Parity]]
+- [[風險調整報酬指標夏普比率與索提諾比率]]
+- [[策略壓力測試Stress-Testing]]
+- [[集中度風險Concentration Risk]]
+- [[相關性風險Correlation-Risk]]
+- [[系統性風險與非系統性風險]]
+- [[投資組合理論與分散投資的局限Portfolio-Theory-and-Diversification-Limits]]
+- [[VaR風險值Value-at-Risk]]
 
 ## 來源
 

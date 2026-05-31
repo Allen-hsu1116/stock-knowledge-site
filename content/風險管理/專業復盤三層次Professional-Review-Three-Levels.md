@@ -89,13 +89,13 @@ J Law 的真實案例：花幾個月系統復盤上千筆交易後，震驚發�
 
 ## 相關主題
 
-- [[風險管理/交易日誌與交易紀律養成]]
-- [[風險管理/連續虧損應對策略Losing-Streak-Recovery-Strategy]]
-- [[風險管理/報復性交易防禦體系Revenge-Trading-Defense]]
-- [[風險管理/交易心理五原則Five-Trading-Psychology-Principles]]
-- [[風險管理/交易期望值Trading-Expectancy]]
-- [[風險管理/回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
-- [[風險管理/持股結構優化與情境試算Position-Structure-Optimization]]
+- [[交易日誌與交易紀律養成]]
+- [[連續虧損應對策略Losing-Streak-Recovery-Strategy]]
+- [[報復性交易防禦體系Revenge-Trading-Defense]]
+- [[交易心理五原則Five-Trading-Psychology-Principles]]
+- [[交易期望值Trading-Expectancy]]
+- [[回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
+- [[持股結構優化與情境試算Position-Structure-Optimization]]
 
 ## 來源
 

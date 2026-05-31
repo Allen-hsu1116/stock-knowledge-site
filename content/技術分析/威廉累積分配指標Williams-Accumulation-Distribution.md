@@ -86,11 +86,11 @@ WA/D = 前日WA/D + 多空值 × 成交量
 
 ### 4. 搭配其他指標
 
-**黃金組合：Williams A/D + [[技術分析/RSI相對強弱指標|RSI]]**
+**黃金組合：Williams A/D + [[RSI相對強弱指標|RSI]]**
 - RSI 背離 + Williams A/D 背離 → 雙重確認，勝率顯著提升
 - RSI 超買/超賣 + WA/D 方向轉折 → 進出場時機
 
-**組合：Williams A/D + [[技術分析/MACD指標實戰判讀|MACD]]**
+**組合：Williams A/D + [[MACD指標實戰判讀|MACD]]**
 - MACD 金叉/死叉 + WA/D 方向一致 → 確認趨勢啟動
 - MACD 交叉但 WA/D 不確認 → 可能是假突破
 
@@ -112,22 +112,22 @@ WA/D 本身是輔助指標，不提供明確的買賣訊號（沒有超買超賣
 單日爆量漲停或跌停會讓 WA/D 劇烈跳動，可能產生假訊號。遇到除權息、處置股等特殊交易日需要排除或調整。
 
 ### 4. 盤整市失效
-所有量價累積指標在盤整市中都容易產生假訊號，Williams A/D 也不例外。搭配 [[技術分析/ADX趨勢強度過濾盤整|ADX]] 或 [[技術分析/斬波指標Choppiness-Index|CHOP]] 過濾盤整市是必要的。
+所有量價累積指標在盤整市中都容易產生假訊號，Williams A/D 也不例外。搭配 [[ADX趨勢強度過濾盤整|ADX]] 或 [[斬波指標Choppiness-Index|CHOP]] 過濾盤整市是必要的。
 
 ### 5. 與 Williams %R 的差異
-Larry Williams 還開發了 [[技術分析/威廉指標Williams-%R|Williams %R]] 擺盪指標，但兩者完全不同：
+Larry Williams 還開發了 [[威廉指標Williams-%R|Williams %R]] 擺盪指標，但兩者完全不同：
 - Williams A/D 是量價累積指標（看長期趨勢）
 - Williams %R 是動量擺盪指標（看短期超買超賣）
 - 不要搞混了
 
 ## 相關主題
 
-- [[技術分析/OBV能量潮指標量價趨勢判讀|OBV能量潮指標]] — 最簡單的量價累積指標，漲加量跌減量
-- [[技術分析/AD累積分配指標收盤位置加權|AD累積分配指標]] — OBV的改良版，用收盤位置加權取代二元漲跌
-- [[技術分析/Chaikin-Money-Flow佳慶資金流量指標|Chaikin Money Flow]] — A/D線的震盪版本，背離是轉勢最強訊號
-- [[技術分析/Chaikin-Oscillator佳慶震盪指標|Chaikin Oscillator]] — A/D線的MACD版，偵測資金動能轉折
-- [[技術分析/量價關係九種型態高低檔判讀|量價關係九種型態]] — 量價基礎判讀
-- [[技術分析/成交量確認原則Volume-Confirmation|成交量確認原則]] — 沒有量能支持的突破都是假突破
+- [[OBV能量潮指標量價趨勢判讀|OBV能量潮指標]] — 最簡單的量價累積指標，漲加量跌減量
+- [[AD累積分配指標收盤位置加權|AD累積分配指標]] — OBV的改良版，用收盤位置加權取代二元漲跌
+- [[Chaikin-Money-Flow佳慶資金流量指標|Chaikin Money Flow]] — A/D線的震盪版本，背離是轉勢最強訊號
+- [[Chaikin-Oscillator佳慶震盪指標|Chaikin Oscillator]] — A/D線的MACD版，偵測資金動能轉折
+- [[量價關係九種型態高低檔判讀|量價關係九種型態]] — 量價基礎判讀
+- [[成交量確認原則Volume-Confirmation|成交量確認原則]] — 沒有量能支持的突破都是假突破
 
 ## 來源
 

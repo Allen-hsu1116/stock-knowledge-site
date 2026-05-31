@@ -75,12 +75,12 @@
 
 ## 相關主題
 
-- [[基本面分析/財報三表綜合判讀與勾稽關係]]
-- [[基本面分析/權益乘數與財務槓桿效應判讀Equity-Multiplier-and-Leverage-Effect]] - 權益乘數是負債比率的另一面
-- [[風險管理/財務槓桿風險管理Leverage-Risk-Management]]
-- [[基本面分析/盈餘品質分析]]
-- [[基本面分析/營運效率指標與CCC實戰判讀]]
-- [[基本面分析/利息保障倍數實戰判讀Interest-Coverage-Ratio]]
+- [[財報三表綜合判讀與勾稽關係]]
+- [[權益乘數與財務槓桿效應判讀Equity-Multiplier-and-Leverage-Effect]] - 權益乘數是負債比率的另一面
+- [[財務槓桿風險管理Leverage-Risk-Management]]
+- [[盈餘品質分析]]
+- [[營運效率指標與CCC實戰判讀]]
+- [[利息保障倍數實戰判讀Interest-Coverage-Ratio]]
 
 ## 來源
 

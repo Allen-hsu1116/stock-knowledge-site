@@ -145,12 +145,12 @@ PF=2.0 但期望值只有0.1%的策略，手續費就會吃掉利潤。**PF和�
 
 ## 相關主題
 
-- [[風險管理/交易期望值Trading-Expectancy|交易期望值]] — 每筆交易的平均期望利潤，與PF互補
-- [[風險管理/風險調整報酬指標夏普比率與索提諾比率|夏普比率與索提諾比率]] — 加入波動度維度的風險調整報酬
-- [[風險管理/Calmar-Ratio年化報酬MDD|Calmar Ratio]] — 加入最大回撤維度的風險調整報酬
-- [[風險管理/回測績效評估完整體系Backtest-Performance-Evaluation|回測績效評估完整體系]] — PF是五指標之一
-- [[操作策略/勝率與賺賠比WinRate-and-RiskReward|勝率與賺賠比]] — PF的兩個組成要素
-- [[風險管理/回測過擬合Backtest-Overfitting|回測過擬合]] — 回測PF虛高的最大原因
+- [[交易期望值Trading-Expectancy|交易期望值]] — 每筆交易的平均期望利潤，與PF互補
+- [[風險調整報酬指標夏普比率與索提諾比率|夏普比率與索提諾比率]] — 加入波動度維度的風險調整報酬
+- [[Calmar-Ratio年化報酬MDD|Calmar Ratio]] — 加入最大回撤維度的風險調整報酬
+- [[回測績效評估完整體系Backtest-Performance-Evaluation|回測績效評估完整體系]] — PF是五指標之一
+- [[勝率與賺賠比WinRate-and-RiskReward|勝率與賺賠比]] — PF的兩個組成要素
+- [[回測過擬合Backtest-Overfitting|回測過擬合]] — 回測PF虛高的最大原因
 
 ## 來源
 

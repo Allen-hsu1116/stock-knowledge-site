@@ -143,14 +143,14 @@ McClellan Oscillator的累計版本：
 - **順大趨勢操作**：多頭市場偏用超賣訊號做多，空頭市場偏用超買訊號減碼
 
 ## 相關主題
-- [[技術分析/TRIN阿姆氏指標Arms-Index]]
-- [[技術分析/騰落指數ADL判讀]]
-- [[技術分析/大盤強弱判讀與市場寬度]]
-- [[技術分析/MACD指標實戰判讀]]
-- [[技術分析/MACD進階實戰柱狀圖背離零軸交易與雙背離確認]]
-- [[技術分析/背離Divergence進階實戰]]
-- [[技術分析/量價關係九種型態高低檔判讀]]
-- [[技術分析/多指標共振交易系統Multi-Indicator-Confluence]]
+- [[TRIN阿姆氏指標Arms-Index]]
+- [[騰落指數ADL判讀]]
+- [[大盤強弱判讀與市場寬度]]
+- [[MACD指標實戰判讀]]
+- [[MACD進階實戰柱狀圖背離零軸交易與雙背離確認]]
+- [[背離Divergence進階實戰]]
+- [[量價關係九種型態高低檔判讀]]
+- [[多指標共振交易系統Multi-Indicator-Confluence]]
 
 ## 來源
 - [McClellan Oscillator - StockCharts ChartSchool](../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)

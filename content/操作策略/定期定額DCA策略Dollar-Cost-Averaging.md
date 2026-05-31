@@ -42,7 +42,7 @@ DCA 的核心哲學是**不預測市場、不擇時**，用紀律取代判斷。
 
 解法：
 - 隨收入成長增加扣款金額
-- 搭配[[操作策略/加碼與減碼策略Position-Scale-In-Out|加碼策略]]在低檔加碼
+- 搭配[[加碼與減碼策略Position-Scale-In-Out|加碼策略]]在低檔加碼
 - 定期評估是否改用其他策略
 
 ## 注意事項
@@ -55,11 +55,11 @@ DCA 的核心哲學是**不預測市場、不擇時**，用紀律取代判斷。
 
 ## 相關主題
 
-- [[操作策略/定期定值投資策略Value-Averaging|定期定值投資策略 Value Averaging]] — DCA 的進階變形，追求資產固定成長
-- [[風險管理/再平衡策略Portfolio-Rebalancing|再平衡策略 Portfolio Rebalancing]] — 定期調整資產比例的紀律方法
-- [[操作策略/投資組合配置策略|投資組合配置策略]] — 80%長期報酬來自資產配置
-- [[操作策略/加碼與減碼策略Position-Scale-In-Out|加碼與減碼策略 Position Scale In/Out]] — 贏了才加、虧了不攤
-- [[風險管理/投資組合隱藏成本審計Portfolio-Hidden-Cost-Audit|投資組合隱藏成本審計]] — 手續費是投資中唯一確定的負回報
+- [[定期定值投資策略Value-Averaging|定期定值投資策略 Value Averaging]] — DCA 的進階變形，追求資產固定成長
+- [[再平衡策略Portfolio-Rebalancing|再平衡策略 Portfolio Rebalancing]] — 定期調整資產比例的紀律方法
+- [[投資組合配置策略|投資組合配置策略]] — 80%長期報酬來自資產配置
+- [[加碼與減碼策略Position-Scale-In-Out|加碼與減碼策略 Position Scale In/Out]] — 贏了才加、虧了不攤
+- [[投資組合隱藏成本審計Portfolio-Hidden-Cost-Audit|投資組合隱藏成本審計]] — 手續費是投資中唯一確定的負回報
 
 ## 來源
 

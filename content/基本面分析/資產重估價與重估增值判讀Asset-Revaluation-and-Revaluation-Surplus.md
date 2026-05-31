@@ -58,12 +58,12 @@
 
 ## 相關主題
 
-- [[基本面分析/資產負債表深度判讀Balance-Sheet-Advanced-Analysis]] - 資產負債表整體判讀
-- [[基本面分析/股價淨值比PBR-Price-to-Book-Ratio]] - PBR判讀受重估增值影響
-- [[基本面分析/股價淨值比進階判讀PBR-Advanced]] - PBR進階判讀需排除重估增值
-- [[基本面分析/ROE杜邦分析淨利率資產週轉率權益乘數]] - 重估增值影響杜邦分析
-- [[基本面分析/負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] - 重估增值影響負債比
-- [[基本面分析/商譽減損與併購風險]] - 減損處理與重估減損比較
+- [[資產負債表深度判讀Balance-Sheet-Advanced-Analysis]] - 資產負債表整體判讀
+- [[股價淨值比PBR-Price-to-Book-Ratio]] - PBR判讀受重估增值影響
+- [[股價淨值比進階判讀PBR-Advanced]] - PBR進階判讀需排除重估增值
+- [[ROE杜邦分析淨利率資產週轉率權益乘數]] - 重估增值影響杜邦分析
+- [[負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] - 重估增值影響負債比
+- [[商譽減損與併購風險]] - 減損處理與重估減損比較
 
 ## 來源
 

@@ -68,11 +68,11 @@ Larry Williams 認為所有震盪指標都對參數選擇極度敏感——不�
 
 ## 相關主題
 
-- [[技術分析/威廉指標Williams-%R|威廉指標 Williams %R]]
-- [[技術分析/RSI相對強弱指標|RSI相對強弱指標]]
-- [[技術分析/背離Divergence進階實戰|背離Divergence進階實戰]]
-- [[技術分析/KD指標隨機指標|KD指標隨機指標]]
-- [[技術分析/ADX趨勢強度過濾盤整|ADX趨勢強度過濾盤整]]
+- [[威廉指標Williams-%R|威廉指標 Williams %R]]
+- [[RSI相對強弱指標|RSI相對強弱指標]]
+- [[背離Divergence進階實戰|背離Divergence進階實戰]]
+- [[KD指標隨機指標|KD指標隨機指標]]
+- [[ADX趨勢強度過濾盤整|ADX趨勢強度過濾盤整]]
 
 ## 來源
 

@@ -221,11 +221,11 @@ IR高度依賴基準選擇：
 
 ## 相關主題
 
-- [[風險管理/風險調整報酬指標夏普比率與索提諾比率|夏普比率與索提諾比率]] — IR是「主動管理的Sharpe」
-- [[風險管理/詹森Alpha與特雷諾比率Jensen-Alpha-and-Treynor-Ratio|詹森Alpha與特雷諾比率]] — Alpha是IR的分子，Treynor用Beta取代追蹤誤差
-- [[風險管理/回測績效評估完整體系Backtest-Performance-Evaluation|回測績效評估完整體系]] — IR是績效評估的核心指標之一
-- [[風險管理/獲利因子Profit-Factor|獲利因子]] — 衡量策略品質的另一個角度
-- [[風險管理/Beta係數實戰判讀|Beta係數實戰判讀]] — Beta與追蹤誤差的關係
+- [[風險調整報酬指標夏普比率與索提諾比率|夏普比率與索提諾比率]] — IR是「主動管理的Sharpe」
+- [[詹森Alpha與特雷諾比率Jensen-Alpha-and-Treynor-Ratio|詹森Alpha與特雷諾比率]] — Alpha是IR的分子，Treynor用Beta取代追蹤誤差
+- [[回測績效評估完整體系Backtest-Performance-Evaluation|回測績效評估完整體系]] — IR是績效評估的核心指標之一
+- [[獲利因子Profit-Factor|獲利因子]] — 衡量策略品質的另一個角度
+- [[Beta係數實戰判讀|Beta係數實戰判讀]] — Beta與追蹤誤差的關係
 
 ## 來源
 

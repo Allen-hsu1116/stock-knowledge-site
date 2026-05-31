@@ -81,10 +81,10 @@ status: raw_available
 
 ### 搭配其他指標
 
-- [[基本面分析/EPS每股盈餘進階判讀]]：理解EPS基本計算
-- [[基本面分析/盈餘品質分析]]：系統性評估盈餘品質
-- [[基本面分析/盈餘管理手法識別與判讀]]：辨識盈餘美化手法
-- [[基本面分析/營業外損益判讀Non-Operating-Income-and-Expenses]]：拆解業外損益
+- [[EPS每股盈餘進階判讀]]：理解EPS基本計算
+- [[盈餘品質分析]]：系統性評估盈餘品質
+- [[盈餘管理手法識別與判讀]]：辨識盈餘美化手法
+- [[營業外損益判讀Non-Operating-Income-and-Expenses]]：拆解業外損益
 
 ## 注意事項
 
@@ -110,13 +110,13 @@ Gurufocus網站的「EPS without NRI」數值與稀釋EPS完全相同，明顯�
 
 ## 相關主題
 
-- [[基本面分析/EPS每股盈餘進階判讀]]
-- [[基本面分析/盈餘品質分析]]
-- [[基本面分析/盈餘管理手法識別與判讀]]
-- [[基本面分析/營業外損益判讀Non-Operating-Income-and-Expenses]]
-- [[基本面分析/財報窗飾辨識Window-Dressing-Detection]]
-- [[基本面分析/財報三表綜合判讀與勾稽關係]]
-- [[基本面分析/Beneish-M-Score財報舞弊偵測]]
+- [[EPS每股盈餘進階判讀]]
+- [[盈餘品質分析]]
+- [[盈餘管理手法識別與判讀]]
+- [[營業外損益判讀Non-Operating-Income-and-Expenses]]
+- [[財報窗飾辨識Window-Dressing-Detection]]
+- [[財報三表綜合判讀與勾稽關係]]
+- [[Beneish-M-Score財報舞弊偵測]]
 
 ## 來源
 

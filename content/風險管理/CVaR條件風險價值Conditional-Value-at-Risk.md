@@ -84,15 +84,15 @@ VaR的事後檢驗只需觀察超過VaR的次數是否接近預期（如95% VaR�
 
 ## 相關主題
 
-- [[風險管理/VaR風險值Value-at-Risk]]
-- [[風險管理/黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
-- [[風險管理/尾部風險對沖Tail-Risk-Hedging]]
-- [[風險管理/風險預算Risk Budgeting]]
-- [[風險管理/策略壓力測試Stress-Testing]]
-- [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]
-- [[風險管理/MDD最大回撤計算與恢復難度]]
-- [[風險管理/風險調整報酬指標夏普比率與索提諾比率]]
-- [[風險管理/投資組合理論與分散投資的局限Portfolio-Theory-and-Diversification-Limits]]
+- [[VaR風險值Value-at-Risk]]
+- [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
+- [[尾部風險對沖Tail-Risk-Hedging]]
+- [[風險預算Risk Budgeting]]
+- [[策略壓力測試Stress-Testing]]
+- [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]
+- [[MDD最大回撤計算與恢復難度]]
+- [[風險調整報酬指標夏普比率與索提諾比率]]
+- [[投資組合理論與分散投資的局限Portfolio-Theory-and-Diversification-Limits]]
 
 ## 來源
 

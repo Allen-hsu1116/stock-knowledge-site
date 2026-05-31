@@ -54,9 +54,9 @@
 - 74 分鐘影片含閒聊，投資核心約佔 55%
 
 ## 相關主題
-- [[操作策略/動能交易策略]]
-- [[風險管理/確認偏誤Confirmation-Bias]]
-- [[基本面分析/盈餘品質分析]]
+- [[動能交易策略]]
+- [[確認偏誤Confirmation-Bias]]
+- [[盈餘品質分析]]
 
 ## 來源
 - [EP299 微軟放開OpenAI、Meta放棄Manus、AI鬼故事](https://www.youtube.com/watch?v=BwLv5z5I9x0)

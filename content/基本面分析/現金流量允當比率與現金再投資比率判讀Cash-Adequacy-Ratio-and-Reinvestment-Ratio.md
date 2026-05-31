@@ -144,18 +144,18 @@
 - **產業特性是最大的變數**：跨產業比較絕對值毫無意義，一定要跟同業比
 - **5年數據有時間落差**：用的是過去5年的平均，公司如果正在轉型，平均數據可能跟不上變化
 - **分母的「存貨增加」最容易被忽略**：存貨減少會虛增允當比率，一定要檢查
-- **搭配使用效果最好**：三率搭配 [[基本面分析/營業現金流對淨利比判斷盈餘品質OCF-NI-Ratio]]、[[基本面分析/利息保障倍數實戰判讀Interest-Coverage-Ratio]]、[[基本面分析/融資活動現金流判讀Financing-Cash-Flow]] 交叉判讀
+- **搭配使用效果最好**：三率搭配 [[營業現金流對淨利比判斷盈餘品質OCF-NI-Ratio]]、[[利息保障倍數實戰判讀Interest-Coverage-Ratio]]、[[融資活動現金流判讀Financing-Cash-Flow]] 交叉判讀
 
 ## 相關主題
 
-- [[基本面分析/現金流量表三大現金流判讀]]
-- [[基本面分析/營業現金流對淨利比判斷盈餘品質OCF-NI-Ratio]]
-- [[基本面分析/利息保障倍數實戰判讀Interest-Coverage-Ratio]]
-- [[基本面分析/融資活動現金流判讀Financing-Cash-Flow]]
-- [[基本面分析/資本支出CapEx與自由現金流判讀]]
-- [[基本面分析/營運資金週轉率判讀Working-Capital-Turnover]]
-- [[基本面分析/流動比率與速動比率實戰判讀]]
-- [[基本面分析/現金流量表間接法調整項目判讀Indirect-Method-Adjustments]]
+- [[現金流量表三大現金流判讀]]
+- [[營業現金流對淨利比判斷盈餘品質OCF-NI-Ratio]]
+- [[利息保障倍數實戰判讀Interest-Coverage-Ratio]]
+- [[融資活動現金流判讀Financing-Cash-Flow]]
+- [[資本支出CapEx與自由現金流判讀]]
+- [[營運資金週轉率判讀Working-Capital-Turnover]]
+- [[流動比率與速動比率實戰判讀]]
+- [[現金流量表間接法調整項目判讀Indirect-Method-Adjustments]]
 
 ## 來源
 

@@ -115,20 +115,20 @@ Mark Douglas 在《Trading in the Zone》中強調：**一致性贏家與一般�
 
 ## 相關主題
 
-- [[風險管理/交易計畫書Trading-Plan]]
-- [[風險管理/停損設定方法Stop-Loss-Placement]]
-- [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule]]
-- [[風險管理/風險報酬比]]
-- [[風險管理/交易心理五原則Five-Trading-Psychology-Principles]]
-- [[風險管理/交易日誌與交易紀律養成]]
-- [[風險管理/交易紀律量化系統Rule-Adherence-Score]]
-- [[風險管理/交易系統Trading-System設計與迷思]]
-- [[操作策略/勝率與賺賠比WinRate-and-RiskReward]]
-- [[風險管理/交易期望值Trading-Expectancy]]
-- [[風險管理/移動停利停損Trailing-Stop]]
-- [[風險管理/交易心理紀律執行力]]
-- [[風險管理/過度交易Overtrading防範體系]]
-- [[風險管理/報復性交易防禦體系Revenge-Trading-Defense]]
+- [[交易計畫書Trading-Plan]]
+- [[停損設定方法Stop-Loss-Placement]]
+- [[部位控制2%法則Position-Sizing-2-Percent-Rule]]
+- [[風險報酬比]]
+- [[交易心理五原則Five-Trading-Psychology-Principles]]
+- [[交易日誌與交易紀律養成]]
+- [[交易紀律量化系統Rule-Adherence-Score]]
+- [[交易系統Trading-System設計與迷思]]
+- [[勝率與賺賠比WinRate-and-RiskReward]]
+- [[交易期望值Trading-Expectancy]]
+- [[移動停利停損Trailing-Stop]]
+- [[交易心理紀律執行力]]
+- [[過度交易Overtrading防範體系]]
+- [[報復性交易防禦體系Revenge-Trading-Defense]]
 
 ## 來源
 

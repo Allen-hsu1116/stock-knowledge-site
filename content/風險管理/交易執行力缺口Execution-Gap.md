@@ -160,22 +160,22 @@ title: 交易執行力缺口 Execution Gap
 - [ ] 交易日誌包含情緒記錄
 - [ ] 每週計算規則遵循率
 - [ ] 連虧紅線制度已建立
-- [ ] [[風險管理/交易計畫書Trading-Plan|交易計畫書]]已寫好
+- [ ] [[交易計畫書Trading-Plan|交易計畫書]]已寫好
 
 ## 相關主題
 
-- [[風險管理/損失厭惡Loss-Aversion處置效應過度自信FOMO]]
-- [[風險管理/確認偏誤Confirmation-Bias]]
-- [[風險管理/錨定效應Anchoring-Bias]]
-- [[風險管理/交易心理紀律執行力]]
-- [[風險管理/交易計畫書Trading-Plan]]
-- [[風險管理/交易日誌與交易紀律養成]]
-- [[風險管理/交易紀律量化系統Rule-Adherence-Score]]
-- [[風險管理/規則化交易系統Rule-Based-Trading-System]]
-- [[風險管理/凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
-- [[風險管理/停損設定方法Stop-Loss-Placement]]
-- [[風險管理/報復性交易防禦體系Revenge-Trading-Defense]]
-- [[風險管理/過度交易Overtrading防範體系]]
+- [[損失厭惡Loss-Aversion處置效應過度自信FOMO]]
+- [[確認偏誤Confirmation-Bias]]
+- [[錨定效應Anchoring-Bias]]
+- [[交易心理紀律執行力]]
+- [[交易計畫書Trading-Plan]]
+- [[交易日誌與交易紀律養成]]
+- [[交易紀律量化系統Rule-Adherence-Score]]
+- [[規則化交易系統Rule-Based-Trading-System]]
+- [[凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
+- [[停損設定方法Stop-Loss-Placement]]
+- [[報復性交易防禦體系Revenge-Trading-Defense]]
+- [[過度交易Overtrading防範體系]]
 
 ## 來源
 

@@ -164,12 +164,12 @@ g ≈ μ − σ²/2
 - 用所有資金買槓桿ETF
 
 ## 相關主題
-- [[風險管理/財務槓桿風險管理Leverage-Risk-Management|財務槓桿風險管理]]
-- [[風險管理/波動率風險溢價Volatility-Risk-Premium|波動率風險溢價]]
-- [[風險管理/回撤恢復數學與帳戶生存Drawdown-Recovery-Math|回撤恢復數學與帳戶生存]]
-- [[風險管理/非對稱槓桿與1%資控法則|非對稱槓桿與1%資控法則]]
-- [[風險管理/流動性幻覺Liquidity-Illusion|流動性幻覺]]
-- [[操作策略/選擇權Greeks希臘字母|選擇權Greeks希臘字母]]
+- [[財務槓桿風險管理Leverage-Risk-Management|財務槓桿風險管理]]
+- [[波動率風險溢價Volatility-Risk-Premium|波動率風險溢價]]
+- [[回撤恢復數學與帳戶生存Drawdown-Recovery-Math|回撤恢復數學與帳戶生存]]
+- [[非對稱槓桿與1%資控法則|非對稱槓桿與1%資控法則]]
+- [[流動性幻覺Liquidity-Illusion|流動性幻覺]]
+- [[選擇權Greeks希臘字母|選擇權Greeks希臘字母]]
 
 ## 來源
 - 波動率拖累數學推導：幾何平均與算術平均的關係

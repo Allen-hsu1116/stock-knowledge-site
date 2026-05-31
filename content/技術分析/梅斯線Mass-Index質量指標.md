@@ -44,10 +44,10 @@ Mass Index 低於 25 代表波幅狹窄、缺乏波動，這類股票短期內�
 
 ### 3. 搭配策略
 
-- **Mass Index + [[技術分析/均線判斷|9日均線]]**：基本搭配，均線方向判斷反轉方向
-- **Mass Index + [[技術分析/SAR拋物線指標Parabolic-SAR|SAR]]**：MI 確認反轉，SAR 給進出場點位
-- **Mass Index + [[技術分析/ADX趨勢強度過濾盤整|ADX]]**：MI 抓反轉時機，ADX 確認趨勢強度變化
-- **Mass Index + [[技術分析/布林通道Bollinger-Bands三軌八型態|布林通道]]**：兩者都跟波幅有關，布林通道收窄+MI 突破 27 共振更可靠
+- **Mass Index + [[均線判斷|9日均線]]**：基本搭配，均線方向判斷反轉方向
+- **Mass Index + [[SAR拋物線指標Parabolic-SAR|SAR]]**：MI 確認反轉，SAR 給進出場點位
+- **Mass Index + [[ADX趨勢強度過濾盤整|ADX]]**：MI 抓反轉時機，ADX 確認趨勢強度變化
+- **Mass Index + [[布林通道Bollinger-Bands三軌八型態|布林通道]]**：兩者都跟波幅有關，布林通道收窄+MI 突破 27 共振更可靠
 
 ### 4. 程式交易腳本（TradeScript 參考）
 
@@ -73,17 +73,17 @@ Mass = Summation(Value1, MassSum);
 - **參數敏感**：預設 25/27/26.5 適合一般市場，波動大的個股或期貨可能需要調整閾值
 - **假凸出**：有時 MI 突破 27 是因為單日極端波動（如除權息、重大消息），不一定是趨勢反轉訊號，需看後續是否持續
 - **長週期參數更穩定**：MBA 智庫建議將累積天數改為 60、均線改為 25 日，過濾假訊號效果更好
-- **與其他反轉指標共振**：單獨使用勝率有限，搭配[[技術分析/背離Divergence進階實戰|背離]]、[[技術分析/威科夫方法|Wyckoff Spring]] 等反轉確認更可靠
+- **與其他反轉指標共振**：單獨使用勝率有限，搭配[[背離Divergence進階實戰|背離]]、[[威科夫方法|Wyckoff Spring]] 等反轉確認更可靠
 
 ## 相關主題
 
-- [[技術分析/布林通道Bollinger-Bands三軌八型態]]
-- [[技術分析/ADX趨勢強度過濾盤整]]
-- [[技術分析/SAR拋物線指標Parabolic-SAR]]
-- [[技術分析/背離Divergence進階實戰]]
-- [[技術分析/趨勢反轉判斷Trend-Reversal]]
-- [[技術分析/威科夫方法]]
-- [[技術分析/ATR平均真實波幅-Average-True-Range]]
+- [[布林通道Bollinger-Bands三軌八型態]]
+- [[ADX趨勢強度過濾盤整]]
+- [[SAR拋物線指標Parabolic-SAR]]
+- [[背離Divergence進階實戰]]
+- [[趨勢反轉判斷Trend-Reversal]]
+- [[威科夫方法]]
+- [[ATR平均真實波幅-Average-True-Range]]
 
 ## 來源
 

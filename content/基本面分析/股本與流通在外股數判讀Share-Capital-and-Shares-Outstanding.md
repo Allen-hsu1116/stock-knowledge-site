@@ -43,13 +43,13 @@
 
 ## 相關主題
 
-- [[基本面分析/資本公積判讀Capital-Reserve]]
-- [[基本面分析/保留盈餘與股東權益成長判讀Retained-Earnings-and-Equity-Growth]]
-- [[基本面分析/特別股與普通股差異判讀Preferred-Stock-vs-Common-Stock]]
-- [[基本面分析/員工認股權與稀釋效果判讀Employee-Stock-Options-and-Dilution]]
-- [[基本面分析/減資三種方式與實戰判讀Capital-Reduction]]
-- [[基本面分析/庫藏股買回分析Treasury-Stock-Buyback]]
-- [[基本面分析/EPS每股盈餘進階判讀]]
+- [[資本公積判讀Capital-Reserve]]
+- [[保留盈餘與股東權益成長判讀Retained-Earnings-and-Equity-Growth]]
+- [[特別股與普通股差異判讀Preferred-Stock-vs-Common-Stock]]
+- [[員工認股權與稀釋效果判讀Employee-Stock-Options-and-Dilution]]
+- [[減資三種方式與實戰判讀Capital-Reduction]]
+- [[庫藏股買回分析Treasury-Stock-Buyback]]
+- [[EPS每股盈餘進階判讀]]
 
 ## 來源
 

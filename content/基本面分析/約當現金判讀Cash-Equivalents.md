@@ -74,13 +74,13 @@
 
 ## 相關主題
 
-- [[基本面分析/流動資產判讀Current-Assets|流動資產判讀 Current Assets]]
-- [[基本面分析/流動比率與速動比率實戰判讀|流動比率與速動比率實戰判讀]]
-- [[基本面分析/財報基礎三表判讀入門|財報基礎三表判讀入門]]
-- [[基本面分析/資產負債表深度判讀Balance-Sheet-Advanced-Analysis|資產負債表深度判讀 Balance Sheet Advanced Analysis]]
-- [[基本面分析/現金流量表三大現金流判讀|現金流量表三大現金流判讀]]
-- [[基本面分析/營業現金流對淨利比判斷盈餘品質OCF-NI-Ratio|營業現金流對淨利比判斷盈餘品質 OCF/NI Ratio]]
-- [[基本面分析/資本支出CapEx與自由現金流判讀|資本支出CapEx與自由現金流判讀]]
+- [[流動資產判讀Current-Assets|流動資產判讀 Current Assets]]
+- [[流動比率與速動比率實戰判讀|流動比率與速動比率實戰判讀]]
+- [[財報基礎三表判讀入門|財報基礎三表判讀入門]]
+- [[資產負債表深度判讀Balance-Sheet-Advanced-Analysis|資產負債表深度判讀 Balance Sheet Advanced Analysis]]
+- [[現金流量表三大現金流判讀|現金流量表三大現金流判讀]]
+- [[營業現金流對淨利比判斷盈餘品質OCF-NI-Ratio|營業現金流對淨利比判斷盈餘品質 OCF/NI Ratio]]
+- [[資本支出CapEx與自由現金流判讀|資本支出CapEx與自由現金流判讀]]
 
 ## 來源
 

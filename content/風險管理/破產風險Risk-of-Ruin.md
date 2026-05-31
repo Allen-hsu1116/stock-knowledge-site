@@ -124,16 +124,16 @@ s值（初始資金除以單筆最大虧損）是破產風險最敏感的變數�
 
 ## 相關主題
 
-- [[風險管理/凱利公式部位最佳化Kelly-Criterion-Position-Sizing]] - 破產風險與下注比例的數學關係
-- [[風險管理/倉位管理]] - 控制單筆風險是降低破產風險最直接的方法
-- [[風險管理/MDD最大回撤計算與恢復難度]] - MDD是破產的前兆
-- [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]] - 模擬法計算破產風險
-- [[風險管理/策略壓力測試Stress-Testing]] - 極端情境下的破產風險
-- [[風險管理/流動性風險Liquidity-Risk]] - 停損無法執行放大破產風險
-- [[風險管理/財務槓桿風險管理Leverage-Risk-Management]] - 槓桿加速破產
-- [[風險管理/交易期望值Trading-Expectancy]] - 正期望值是避免破產的前提
-- [[風險管理/風險報酬比]] - 風報比影響μ值進而影響破產風險
-- [[風險管理/集中度風險Concentration Risk]] - 集中投資增加破產風險
+- [[凱利公式部位最佳化Kelly-Criterion-Position-Sizing]] - 破產風險與下注比例的數學關係
+- [[倉位管理]] - 控制單筆風險是降低破產風險最直接的方法
+- [[MDD最大回撤計算與恢復難度]] - MDD是破產的前兆
+- [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]] - 模擬法計算破產風險
+- [[策略壓力測試Stress-Testing]] - 極端情境下的破產風險
+- [[流動性風險Liquidity-Risk]] - 停損無法執行放大破產風險
+- [[財務槓桿風險管理Leverage-Risk-Management]] - 槓桿加速破產
+- [[交易期望值Trading-Expectancy]] - 正期望值是避免破產的前提
+- [[風險報酬比]] - 風報比影響μ值進而影響破產風險
+- [[集中度風險Concentration Risk]] - 集中投資增加破產風險
 
 ## 來源
 

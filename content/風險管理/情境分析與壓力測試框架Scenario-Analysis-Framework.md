@@ -100,15 +100,15 @@
 - 完整的風險框架：日常用VaR，極端用情境分析，兩者缺一不可
 
 ## 相關主題
-- [[風險管理/策略壓力測試Stress-Testing]]
-- [[風險管理/反向壓力測試Reverse-Stress-Testing]]
-- [[風險管理/VaR風險值Value-at-Risk]]
-- [[風險管理/CVaR條件風險價值Conditional-Value-at-Risk]]
-- [[風險管理/黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
-- [[風險管理/尾部風險對沖Tail-Risk-Hedging]]
-- [[風險管理/風險管理決策框架Risk-Management-Decision-Framework]]
-- [[風險管理/相關性崩潰Correlation-Breakdown]]
-- [[風險管理/跳空缺口風險Gap-Risk]]
+- [[策略壓力測試Stress-Testing]]
+- [[反向壓力測試Reverse-Stress-Testing]]
+- [[VaR風險值Value-at-Risk]]
+- [[CVaR條件風險價值Conditional-Value-at-Risk]]
+- [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
+- [[尾部風險對沖Tail-Risk-Hedging]]
+- [[風險管理決策框架Risk-Management-Decision-Framework]]
+- [[相關性崩潰Correlation-Breakdown]]
+- [[跳空缺口風險Gap-Risk]]
 
 ## 來源
 - [情境分析與壓力測試框架](../raw/2026-05-22/情境分析與壓力測試框架Scenario-Analysis.md)

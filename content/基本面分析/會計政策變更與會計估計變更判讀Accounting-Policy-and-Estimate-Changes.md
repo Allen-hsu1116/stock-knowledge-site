@@ -78,13 +78,13 @@ IAS 8還有「會計錯誤更正」（Correction of Errors），與政策變更�
 
 ## 相關主題
 
-- [[基本面分析/盈餘管理手法識別與判讀]]
-- [[基本面分析/Beneish-M-Score財報舞弊偵測]]
-- [[基本面分析/財報假帳偵測]]
-- [[基本面分析/財報綜合健康評分法Comprehensive-Financial-Health-Scoring]]
-- [[基本面分析/盈餘品質分析]]
-- [[基本面分析/應計項目異象Accrual-Anomaly]]
-- [[基本面分析/營業現金流對淨利比判斷盈餘品質OCF-NI-Ratio]]
+- [[盈餘管理手法識別與判讀]]
+- [[Beneish-M-Score財報舞弊偵測]]
+- [[財報假帳偵測]]
+- [[財報綜合健康評分法Comprehensive-Financial-Health-Scoring]]
+- [[盈餘品質分析]]
+- [[應計項目異象Accrual-Anomaly]]
+- [[營業現金流對淨利比判斷盈餘品質OCF-NI-Ratio]]
 
 ## 來源
 

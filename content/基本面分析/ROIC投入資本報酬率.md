@@ -95,15 +95,15 @@ ROIC = EBIT ×（1 - 稅率）/（總資產 - 過剩現金 - 無息流動負債�
 
 ## 相關主題
 
-- [[基本面分析/WACC加權平均資本成本]] - ROIC > WACC 才是價值創造
-- [[基本面分析/EVA經濟附加價值]] - EVA = (ROIC - WACC) × 投入資本，是 ROIC 的絕對值版本
-- [[基本面分析/經濟護城河Economic-Moat]] - 有護城河的公司 ROIC 持續高於 WACC
-- [[基本面分析/ROE杜邦分析淨利率資產週轉率權益乘數]] - ROE 與 ROIC 的差異在槓桿
-- [[基本面分析/企業價值倍數EV-EBIT與EV-EBITDA]] - EV/EBITDA 用企業價值角度衡量
-- [[基本面分析/本益比進階判讀PE-Ratio-Advanced]] - PE 不考慮資本效率，ROIC 彌補此缺陷
-- [[基本面分析/EBITDA息稅折舊攤銷前利潤]] - EBITDA 是 ROIC 計算的基礎
-- [[基本面分析/EPS每股盈餘進階判讀]] - EPS 不考慮投入多少資本，ROIC 補足這個盲點
-- [[基本面分析/NPV淨現值與IRR內部報酬率投資評估|NPV與IRR]] - ROIC>WACC時NPV為正，IRR>WACC時投資值得進行
+- [[WACC加權平均資本成本]] - ROIC > WACC 才是價值創造
+- [[EVA經濟附加價值]] - EVA = (ROIC - WACC) × 投入資本，是 ROIC 的絕對值版本
+- [[經濟護城河Economic-Moat]] - 有護城河的公司 ROIC 持續高於 WACC
+- [[ROE杜邦分析淨利率資產週轉率權益乘數]] - ROE 與 ROIC 的差異在槓桿
+- [[企業價值倍數EV-EBIT與EV-EBITDA]] - EV/EBITDA 用企業價值角度衡量
+- [[本益比進階判讀PE-Ratio-Advanced]] - PE 不考慮資本效率，ROIC 彌補此缺陷
+- [[EBITDA息稅折舊攤銷前利潤]] - EBITDA 是 ROIC 計算的基礎
+- [[EPS每股盈餘進階判讀]] - EPS 不考慮投入多少資本，ROIC 補足這個盲點
+- [[NPV淨現值與IRR內部報酬率投資評估|NPV與IRR]] - ROIC>WACC時NPV為正，IRR>WACC時投資值得進行
 
 ## 來源
 

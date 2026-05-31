@@ -109,15 +109,15 @@ K-fold交叉驗證，每個fold都做IS+OOS，避免單一OOS期間偶然性。
 - 魯棒性是手段不是目的——最終目標是實盤獲利
 
 ## 相關主題
-- [[風險管理/回測過擬合Backtest-Overfitting]]
-- [[風險管理/過度擬合Overfitting量化判斷]]
-- [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]
-- [[操作策略/Walk-Forward-Analysis滾動前進驗證]]
-- [[風險管理/回測到實盤落差與上線SOP]]
-- [[風險管理/回測驗證Backtesting陷阱]]
-- [[風險管理/策略失效偵測與策略健康監控Strategy-Failure-Detection]]
-- [[風險管理/回測績效評估完整體系Backtest-Performance-Evaluation]]
-- [[操作策略/交易策略回測與過擬合Backtesting-and-Overfitting]]
+- [[回測過擬合Backtest-Overfitting]]
+- [[過度擬合Overfitting量化判斷]]
+- [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]
+- [[Walk-Forward-Analysis滾動前進驗證]]
+- [[回測到實盤落差與上線SOP]]
+- [[回測驗證Backtesting陷阱]]
+- [[策略失效偵測與策略健康監控Strategy-Failure-Detection]]
+- [[回測績效評估完整體系Backtest-Performance-Evaluation]]
+- [[交易策略回測與過擬合Backtesting-and-Overfitting]]
 
 ## 來源
 - [交易系統魯棒性](../raw/2026-05-22/交易系統魯棒性Robustness-of-Trading-System.md)

@@ -84,14 +84,14 @@ ZigZag的**最後一段線會「事後修正」**！當價格創新高/新低時
 
 ## 相關主題
 
-- [[技術分析/艾略特波浪理論Elliott-Wave-Theory|艾略特波浪理論 Elliott Wave Theory]] - ZigZag是辨識波浪結構的視覺輔助
-- [[技術分析/諧波形態Harmonic-Patterns|諧波形態 Harmonic Patterns]] - ZigZag幫助定位XABCD節點
-- [[技術分析/斐波那契回撤Fibonacci-Retracement|斐波那契回撤 Fibonacci Retracement]] - ZigZag轉折點作為斐波那契起算點
-- [[技術分析/斐波那契擴展Fibonacci-Extension|斐波那契擴展 Fibonacci Extension]] - 搭配ZigZag找目標價
-- [[技術分析/支撐壓力|支撐壓力]] - ZigZag轉折點即支撐壓力位
-- [[技術分析/趨勢線與通道線|趨勢線與通道線]] - ZigZag轉折點連線畫趨勢線
-- [[技術分析/SAR拋物線指標Parabolic-SAR|SAR拋物線指標 Parabolic SAR]] - ZigZag的底層計算基於SAR
-- [[技術分析/威科夫方法|威科夫方法 Wyckoff Method]] - ZigZag輔助辨識吸籌派發階段
+- [[艾略特波浪理論Elliott-Wave-Theory|艾略特波浪理論 Elliott Wave Theory]] - ZigZag是辨識波浪結構的視覺輔助
+- [[諧波形態Harmonic-Patterns|諧波形態 Harmonic Patterns]] - ZigZag幫助定位XABCD節點
+- [[斐波那契回撤Fibonacci-Retracement|斐波那契回撤 Fibonacci Retracement]] - ZigZag轉折點作為斐波那契起算點
+- [[斐波那契擴展Fibonacci-Extension|斐波那契擴展 Fibonacci Extension]] - 搭配ZigZag找目標價
+- [[支撐壓力|支撐壓力]] - ZigZag轉折點即支撐壓力位
+- [[趨勢線與通道線|趨勢線與通道線]] - ZigZag轉折點連線畫趨勢線
+- [[SAR拋物線指標Parabolic-SAR|SAR拋物線指標 Parabolic SAR]] - ZigZag的底層計算基於SAR
+- [[威科夫方法|威科夫方法 Wyckoff Method]] - ZigZag輔助辨識吸籌派發階段
 
 ## 來源
 

@@ -74,12 +74,12 @@ Fisher-Tippett-Gnedenko 定理指出，在滿足一定規則性條件下，獨�
 - **相關性崩潰**：危機時資產相關性趨1，EVT 估計的分散效果可能高估
 
 ## 相關主題
-- [[風險管理/VaR風險值Value-at-Risk]]
-- [[風險管理/CVaR條件風險價值Conditional-Value-at-Risk]]
-- [[風險管理/黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
-- [[風險管理/尾部風險對沖Tail-Risk-Hedging]]
-- [[風險管理/策略壓力測試Stress-Testing]]
-- [[風險管理/MDD最大回撤進階實戰各資產歷史回撤與管理方法]]
+- [[VaR風險值Value-at-Risk]]
+- [[CVaR條件風險價值Conditional-Value-at-Risk]]
+- [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
+- [[尾部風險對沖Tail-Risk-Hedging]]
+- [[策略壓力測試Stress-Testing]]
+- [[MDD最大回撤進階實戰各資產歷史回撤與管理方法]]
 - [[策略壓力測試Stress-Testing]]
 
 ## 來源

@@ -109,13 +109,13 @@ CapEx 是自由現金流的「減項」。一家公司即使營運現金流很�
 
 ## 相關主題
 
-- [[基本面分析/EBITDA息稅折舊攤銷前利潤]] - EBITDA未扣除CapEx是核心缺陷
-- [[基本面分析/企業價值倍數EV-EBIT與EV-EBITDA]] - EV/EBITDA估值需考慮CapEx差異
-- [[基本面分析/FCF估值模型自由現金流15公式與選股實戰]] - FCF = 營運現金流 – CapEx
-- [[基本面分析/ROIC投入資本報酬率]] - 投資回報率判斷CapEx有效性
-- [[基本面分析/資產周轉率進階判讀Asset-Turnover-Advanced]] - 固定資產周轉率反映CapEx效率
-- [[基本面分析/盈餘品質分析]] - 費用資本化是盈餘管理手法
-- [[基本面分析/現金流量折現法DCF估值]] - CapEx是DCF估計的關鍵參數
+- [[EBITDA息稅折舊攤銷前利潤]] - EBITDA未扣除CapEx是核心缺陷
+- [[企業價值倍數EV-EBIT與EV-EBITDA]] - EV/EBITDA估值需考慮CapEx差異
+- [[FCF估值模型自由現金流15公式與選股實戰]] - FCF = 營運現金流 – CapEx
+- [[ROIC投入資本報酬率]] - 投資回報率判斷CapEx有效性
+- [[資產周轉率進階判讀Asset-Turnover-Advanced]] - 固定資產周轉率反映CapEx效率
+- [[盈餘品質分析]] - 費用資本化是盈餘管理手法
+- [[現金流量折現法DCF估值]] - CapEx是DCF估計的關鍵參數
 
 ## 來源
 

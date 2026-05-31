@@ -54,17 +54,17 @@ Kahneman & Tversky（1974）的經典實驗：隨機轉盤選出 10 和 65 兩�
 - 自生錨（自己產生的參考值）比外部錨更容易控制，但外部錨才是真正的殺手
 - 在高度不確定的環境中（如股市），錨定效應最強——因為沒有明確的「正確答案」可反駁
 - 精確的錨值比粗略的錨值影響更大（「目標價 487 元」比「目標價 500 元」更有影響力）
-- 錨定與 [[風險管理/確認偏誤Confirmation-Bias]] 交互作用：一旦被錨定，你會特別注意支持錨值方向的資訊
+- 錨定與 [[確認偏誤Confirmation-Bias]] 交互作用：一旦被錨定，你會特別注意支持錨值方向的資訊
 
 ## 相關主題
 
-- [[風險管理/確認偏誤Confirmation-Bias]]
-- [[風險管理/損失厭惡Loss-Aversion處置效應過度自信FOMO]]
-- [[風險管理/認知偏誤與交易心理]]
-- [[風險管理/回測過擬合Backtest-Overfitting]]
-- [[風險管理/交易心理紀律執行力]]
-- [[風險管理/停損設定方法Stop-Loss-Placement]]
-- [[風險管理/前景理論Prospect-Theory]]
+- [[確認偏誤Confirmation-Bias]]
+- [[損失厭惡Loss-Aversion處置效應過度自信FOMO]]
+- [[認知偏誤與交易心理]]
+- [[回測過擬合Backtest-Overfitting]]
+- [[交易心理紀律執行力]]
+- [[停損設定方法Stop-Loss-Placement]]
+- [[前景理論Prospect-Theory]]
 
 ## 來源
 

@@ -74,15 +74,15 @@
 
 ## 相關主題
 
-- [[基本面分析/財報基礎三表判讀入門|財報基礎三表判讀入門]]
-- [[基本面分析/保留盈餘與股東權益成長判讀Retained-Earnings-and-Equity-Growth|保留盈餘與股東權益成長判讀]]
-- [[基本面分析/現金股利與股票股利差異與選擇Cash-Dividend-vs-Stock-Dividend|現金股利與股票股利差異與選擇]]
-- [[基本面分析/現金股利保障倍數與配息安全性判讀Cash-Dividend-Coverage-Ratio|現金股利保障倍數與配息安全性判讀]]
-- [[基本面分析/配息率與盈餘分配率判讀|配息率與盈餘分配率判讀]]
-- [[基本面分析/資產負債表深度判讀Balance-Sheet-Advanced-Analysis|資產負債表深度判讀]]
-- [[基本面分析/股東權益變動表判讀Statement-of-Changes-in-Equity|股東權益變動表判讀]]
-- [[基本面分析/減資三種方式與實戰判讀Capital-Reduction|減資三種方式與實戰判讀]]
-- [[基本面分析/除權息稅務規劃與節稅策略|除權息稅務規劃與節稅策略]]
+- [[財報基礎三表判讀入門|財報基礎三表判讀入門]]
+- [[保留盈餘與股東權益成長判讀Retained-Earnings-and-Equity-Growth|保留盈餘與股東權益成長判讀]]
+- [[現金股利與股票股利差異與選擇Cash-Dividend-vs-Stock-Dividend|現金股利與股票股利差異與選擇]]
+- [[現金股利保障倍數與配息安全性判讀Cash-Dividend-Coverage-Ratio|現金股利保障倍數與配息安全性判讀]]
+- [[配息率與盈餘分配率判讀|配息率與盈餘分配率判讀]]
+- [[資產負債表深度判讀Balance-Sheet-Advanced-Analysis|資產負債表深度判讀]]
+- [[股東權益變動表判讀Statement-of-Changes-in-Equity|股東權益變動表判讀]]
+- [[減資三種方式與實戰判讀Capital-Reduction|減資三種方式與實戰判讀]]
+- [[除權息稅務規劃與節稅策略|除權息稅務規劃與節稅策略]]
 
 ## 來源
 

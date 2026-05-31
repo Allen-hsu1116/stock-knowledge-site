@@ -74,14 +74,14 @@ Kahneman & Tversky 前景理論的核心發現：虧損帶來的心理痛苦是�
 
 ## 相關主題
 
-- [[風險管理/確認偏誤Confirmation-Bias]]
-- [[風險管理/錨定效應Anchoring-Bias]]
-- [[風險管理/過度自信偏誤Overconfidence-Bias]]
-- [[風險管理/過度交易Overtrading防範體系]]
-- [[風險管理/認知偏誤與交易心理]]
-- [[風險管理/前景理論Prospect-Theory]]
-- [[風險管理/交易心理紀律執行力]]
-- [[風險管理/FOMO與FUD交易衝動管理]]
+- [[確認偏誤Confirmation-Bias]]
+- [[錨定效應Anchoring-Bias]]
+- [[過度自信偏誤Overconfidence-Bias]]
+- [[過度交易Overtrading防範體系]]
+- [[認知偏誤與交易心理]]
+- [[前景理論Prospect-Theory]]
+- [[交易心理紀律執行力]]
+- [[FOMO與FUD交易衝動管理]]
 
 ## 來源
 

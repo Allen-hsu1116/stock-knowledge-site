@@ -91,12 +91,12 @@ ML 策略大幅優於純技術指標，主因是 XGBoost 能更早辨識漲勢�
 
 ## 相關主題
 
-- [[技術分析/一目均衡表Ichimoku-Kinko-Hyo]]
-- [[技術分析/MACD指標實戰判讀]]
-- [[技術分析/技術指標鈍化與對策]]
-- [[操作策略/交易策略回測與過擬合Backtesting-and-Overfitting]]
-- [[風險管理/移動停利停損Trailing-Stop]]
-- [[風險管理/停損設定方法Stop-Loss-Placement]]
+- [[一目均衡表Ichimoku-Kinko-Hyo]]
+- [[MACD指標實戰判讀]]
+- [[技術指標鈍化與對策]]
+- [[交易策略回測與過擬合Backtesting-and-Overfitting]]
+- [[移動停利停損Trailing-Stop]]
+- [[停損設定方法Stop-Loss-Placement]]
 
 ## 來源
 

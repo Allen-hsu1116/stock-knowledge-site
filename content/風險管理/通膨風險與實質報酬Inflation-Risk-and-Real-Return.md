@@ -107,13 +107,13 @@ CPI是落後指標，公布的數據反映1-2個月前的物價。用落後數�
 
 ## 相關主題
 
-- [[風險管理/風險預算Risk Budgeting]]
-- [[風險管理/投資組合理論與分散投資的局限Portfolio-Theory-and-Diversification-Limits]]
-- [[風險管理/系統性風險與非系統性風險]]
-- [[風險管理/黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
-- [[風險管理/VaR風險值Value-at-Risk]]
-- [[風險管理/分散投資七法與相關係數Diversification-Seven-Methods]]
-- [[操作策略/投資組合配置策略]]（操作策略分類）
+- [[風險預算Risk Budgeting]]
+- [[投資組合理論與分散投資的局限Portfolio-Theory-and-Diversification-Limits]]
+- [[系統性風險與非系統性風險]]
+- [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
+- [[VaR風險值Value-at-Risk]]
+- [[分散投資七法與相關係數Diversification-Seven-Methods]]
+- [[投資組合配置策略]]（操作策略分類）
 
 ## 來源
 

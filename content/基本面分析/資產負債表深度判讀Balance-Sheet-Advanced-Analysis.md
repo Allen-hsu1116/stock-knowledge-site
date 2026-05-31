@@ -126,19 +126,19 @@
 
 ## 相關主題
 
-- [[基本面分析/財報基礎三表判讀入門]]
-- [[基本面分析/財報三表綜合判讀與勾稽關係]]
-- [[基本面分析/現金流量表三大現金流判讀]]
-- [[基本面分析/負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]]
-- [[基本面分析/商譽減損與併購風險]]
-- [[基本面分析/存貨週轉率進階判讀與存貨陷阱識別]]
-- [[基本面分析/應收帳款周轉率與應收帳款周轉天數]]
-- [[基本面分析/每股淨值進階判讀BVPS與Graham-Number]]
-- [[基本面分析/盈餘品質分析]]
-- [[基本面分析/營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]]
-- [[基本面分析/股東權益變動表判讀Statement-of-Changes-in-Equity]]
-- [[基本面分析/Beneish-M-Score財報舞弊偵測]]
-- [[風險管理/財務槓桿風險管理Leverage-Risk-Management]]
+- [[財報基礎三表判讀入門]]
+- [[財報三表綜合判讀與勾稽關係]]
+- [[現金流量表三大現金流判讀]]
+- [[負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]]
+- [[商譽減損與併購風險]]
+- [[存貨週轉率進階判讀與存貨陷阱識別]]
+- [[應收帳款周轉率與應收帳款周轉天數]]
+- [[每股淨值進階判讀BVPS與Graham-Number]]
+- [[盈餘品質分析]]
+- [[營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]]
+- [[股東權益變動表判讀Statement-of-Changes-in-Equity]]
+- [[Beneish-M-Score財報舞弊偵測]]
+- [[財務槓桿風險管理Leverage-Risk-Management]]
 
 ## 來源
 

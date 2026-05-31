@@ -122,16 +122,16 @@ COVID-19大跌市前，投資者僅需用資產值的1-2%資金，平價買入�
 
 ## 相關主題
 
-- [[風險管理/黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
-- [[風險管理/尾部風險對沖Tail-Risk-Hedging]]
-- [[風險管理/尾部風險平價Tail-Risk-Parity]]
-- [[操作策略/選擇權四大基本策略]]
-- [[操作策略/跨式Straddle與勒式Strangle]]
-- [[風險管理/VIX恐慌指數實戰判讀]]
-- [[風險管理/MDD最大回撤計算與恢復難度]]
-- [[風險管理/回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
-- [[風險管理/風險報酬比]]
-- [[風險管理/價值投資遇到黑天鵝的應對Value-Investing-Black-Swan-Response]]
+- [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
+- [[尾部風險對沖Tail-Risk-Hedging]]
+- [[尾部風險平價Tail-Risk-Parity]]
+- [[選擇權四大基本策略]]
+- [[跨式Straddle與勒式Strangle]]
+- [[VIX恐慌指數實戰判讀]]
+- [[MDD最大回撤計算與恢復難度]]
+- [[回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
+- [[風險報酬比]]
+- [[價值投資遇到黑天鵝的應對Value-Investing-Black-Swan-Response]]
 
 ## 來源
 

@@ -135,13 +135,13 @@ TEJ回測發現，當個股融資維持率異常偏低時，存在短期反轉�
 
 ## 相關主題
 
-- [[風險管理/斷頭強制平倉Forced-Liquidation]]
-- [[風險管理/財務槓桿風險管理Leverage-Risk-Management]]
-- [[風險管理/MDD最大回撤計算與恢復難度]]
-- [[風險管理/流動性風險Liquidity-Risk]]
-- [[風險管理/融資維持率市場轉折訊號Margin-Maintenance-Ratio-Market-Signal]]
-- [[風險管理/風險報酬比]]
-- [[風險管理/程式交易停止時機與回收係數EA-Stop-and-Recovery-Factor]]
+- [[斷頭強制平倉Forced-Liquidation]]
+- [[財務槓桿風險管理Leverage-Risk-Management]]
+- [[MDD最大回撤計算與恢復難度]]
+- [[流動性風險Liquidity-Risk]]
+- [[融資維持率市場轉折訊號Margin-Maintenance-Ratio-Market-Signal]]
+- [[風險報酬比]]
+- [[程式交易停止時機與回收係數EA-Stop-and-Recovery-Factor]]
 
 ## 來源
 

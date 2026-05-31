@@ -55,8 +55,8 @@ Bill Ackman（Pershing Square創辦人）賣掉部分Google加碼微軟：
 - 微軟估值分析基於forward PE，市場情緒轉變可能壓抑估值更久
 
 ## 相關主題
-- [[YouTube頻道/M觀點/輝達財報與AI回檔-Google追趕與Meta大裁員]]
-- [[YouTube頻道/宏爺講股/輝達CPU逆襲與Anthropic首度獲利-外資選擇權多單暴增的市場訊號]]
+- [[輝達財報與AI回檔-Google追趕與Meta大裁員]]
+- [[輝達CPU逆襲與Anthropic首度獲利-外資選擇權多單暴增的市場訊號]]
 
 ## 來源
 - [EP306. 星艦 V3 首飛成功、Anthropic 獲利傳聞、艾克曼看好微軟 | M觀點](https://www.youtube.com/watch?v=eeJ7_oo-rjA)

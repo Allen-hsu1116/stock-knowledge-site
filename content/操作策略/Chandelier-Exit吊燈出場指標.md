@@ -37,7 +37,7 @@ Chandelier Exit 由 Charles Le Beau 開發、Alexander Elder 推廣，是一種�
 | 方法 | 基準點 | 距離計算 | 適合場景 |
 |------|--------|----------|----------|
 | 固定%追蹤停損 | 最高價 | 固定百分比 | 簡單直覺，波動性相近的標的 |
-| [[技術分析/SAR拋物線指標Parabolic-SAR]] | 極值點 | 加速因子 | 趨勢明確的市場 |
+| [[SAR拋物線指標Parabolic-SAR]] | 極值點 | 加速因子 | 趨勢明確的市場 |
 | Chandelier Exit | 最高價 | ATR×乘數 | 波動差異大的多標的操作 |
 
 ## 注意事項
@@ -46,16 +46,16 @@ Chandelier Exit 由 Charles Le Beau 開發、Alexander Elder 推廣，是一種�
 - **盤整市**：雖然比 SAR 好，但盤整中仍會被來回洗
 - **只提供出場**：不提供進場訊號，需搭配其他指標
 - **參數無一體適用**：不同標的需要不同參數，要先觀察再設定
-- **與 [[風險管理/移動停利停損Trailing-Stop]] 的關係**：Chandelier Exit 是 Trailing Stop 的 ATR 進階版，用波動度取代固定百分比
+- **與 [[移動停利停損Trailing-Stop]] 的關係**：Chandelier Exit 是 Trailing Stop 的 ATR 進階版，用波動度取代固定百分比
 
 ## 相關主題
 
-- [[風險管理/移動停利停損Trailing-Stop]]
-- [[技術分析/ATR平均真實波幅-Average-True-Range]]
-- [[技術分析/SAR拋物線指標Parabolic-SAR]]
-- [[操作策略/海龜交易法則]]
-- [[操作策略/進場SOP交易紀律完整框架]]
-- [[技術分析/Chande-Kroll-Stop錢德克羅停損指標]]
+- [[移動停利停損Trailing-Stop]]
+- [[ATR平均真實波幅-Average-True-Range]]
+- [[SAR拋物線指標Parabolic-SAR]]
+- [[海龜交易法則]]
+- [[進場SOP交易紀律完整框架]]
+- [[Chande-Kroll-Stop錢德克羅停損指標]]
 
 ## 來源
 

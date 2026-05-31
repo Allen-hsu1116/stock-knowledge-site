@@ -40,10 +40,10 @@ Artificial Analysis評分Grok 4.3 Beta拿53分，跟Kimi K2(54分)同級，打�
 - 軍售金額為預估，仍可能因政治因素調整
 
 ## 相關主題
-- [[YouTube頻道/M觀點/川習會三方博弈與台股主動型ETF投資策略]]
-- [[YouTube頻道/M觀點/Palantir會被打敗嗎-SpaceX算力出租與輝達GTC]]
-- [[YouTube頻道/M觀點/三大雲財報門道-馬斯克告OpenAI與成長列車]]
-- [[產業地圖/軟體資安｜企業軟體與 SaaS]]
+- [[川習會三方博弈與台股主動型ETF投資策略]]
+- [[Palantir會被打敗嗎-SpaceX算力出租與輝達GTC]]
+- [[三大雲財報門道-馬斯克告OpenAI與成長列車]]
+- [[軟體資安｜企業軟體與 SaaS]]
 
 ## 來源
 - [EP304. 川習會的結果分析、馬斯克會放棄 Grok 嗎、AI 公司為何狂殺 SaaS？](https://www.youtube.com/watch?v=SNvBQAt2dkQ)

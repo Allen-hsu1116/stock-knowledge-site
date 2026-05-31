@@ -89,7 +89,7 @@ IPO（Initial Public Offering）是公司首次公開發行股票並在證券交
 - [[當沖操作]]
 - [[流動性風險Liquidity-Risk]]
 - [[波段操作]]
-- [[停損方法Stop-Loss-Methods]]
+- [[停損方法]]
 - [[股價淨值比PBR-Price-to-Book-Ratio]]
 - [[本益比進階判讀PE-Ratio-Advanced]]
 - [[內部人申報轉讓判讀]]

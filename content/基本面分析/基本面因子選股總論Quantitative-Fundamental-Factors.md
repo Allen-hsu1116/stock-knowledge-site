@@ -133,14 +133,14 @@ select condition1 and condition2 and condition3 and condition4 and condition5;
 
 ## 相關主題
 
-- [[基本面分析/盈餘動能因子與SUE標準化未預期盈餘Earnings-Momentum-and-SUE]]
-- [[操作策略/低波動因子選股策略]]
-- [[操作策略/價值與動能因子結合策略]]
-- [[風險管理/因子衰退Factor-Decay]]
-- [[基本面分析/Piotroski-F-Score進階實戰]]
-- [[基本面分析/營收動能選股實戰策略Revenue-Momentum-Stock-Screening]]
-- [[基本面分析/營收成長率YoY-QoQ-MoM計算與選股實戰]]
-- [[風險管理/回測過擬合Backtest-Overfitting]]
+- [[盈餘動能因子與SUE標準化未預期盈餘Earnings-Momentum-and-SUE]]
+- [[低波動因子選股策略]]
+- [[價值與動能因子結合策略]]
+- [[因子衰退Factor-Decay]]
+- [[Piotroski-F-Score進階實戰]]
+- [[營收動能選股實戰策略Revenue-Momentum-Stock-Screening]]
+- [[營收成長率YoY-QoQ-MoM計算與選股實戰]]
+- [[回測過擬合Backtest-Overfitting]]
 
 ## 來源
 

@@ -50,12 +50,12 @@
 
 ## 相關主題
 
-- [[基本面分析/股本與流通在外股數判讀Share-Capital-and-Shares-Outstanding]]
-- [[基本面分析/資本公積判讀Capital-Reserve]]
-- [[基本面分析/保留盈餘與股東權益成長判讀Retained-Earnings-and-Equity-Growth]]
-- [[基本面分析/每股淨值進階判讀BVPS與Graham-Number]]
-- [[基本面分析/股價淨值比PBR-Price-to-Book-Ratio]]
-- [[基本面分析/減資三種方式與實戰判讀Capital-Reduction]]
+- [[股本與流通在外股數判讀Share-Capital-and-Shares-Outstanding]]
+- [[資本公積判讀Capital-Reserve]]
+- [[保留盈餘與股東權益成長判讀Retained-Earnings-and-Equity-Growth]]
+- [[每股淨值進階判讀BVPS與Graham-Number]]
+- [[股價淨值比PBR-Price-to-Book-Ratio]]
+- [[減資三種方式與實戰判讀Capital-Reduction]]
 
 ## 來源
 

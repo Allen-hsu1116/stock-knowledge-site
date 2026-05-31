@@ -70,11 +70,11 @@
 
 ## 相關主題
 
-- [[基本面分析/EPS每股盈餘進階判讀|EPS每股盈餘進階判讀]]
-- [[基本面分析/調整後EPS扣除非經常性損益Adjusted-EPS|調整後EPS扣除非經常性損]]
-- [[基本面分析/特別股與普通股差異判讀Preferred-Stock-vs-Common-Stock|特別股與普通股差異判讀]]
-- [[基本面分析/股東權益變動表判讀Statement-of-Changes-in-Equity|股東權益變動表判讀]]
-- [[基本面分析/資本公積判讀Capital-Reserve|資本公積判讀]]
+- [[EPS每股盈餘進階判讀|EPS每股盈餘進階判讀]]
+- [[調整後EPS扣除非經常性損益Adjusted-EPS|調整後EPS扣除非經常性損]]
+- [[特別股與普通股差異判讀Preferred-Stock-vs-Common-Stock|特別股與普通股差異判讀]]
+- [[股東權益變動表判讀Statement-of-Changes-in-Equity|股東權益變動表判讀]]
+- [[資本公積判讀Capital-Reserve|資本公積判讀]]
 
 ## 來源
 

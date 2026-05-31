@@ -138,17 +138,17 @@
 
 ## 相關主題
 
-- [[操作策略/均值回歸策略MeanReversion|均值回歸策略]]
-- [[技術分析/ADX趨勢強度過濾盤整|ADX趨勢強度過濾盤整]]
-- [[技術分析/ATR平均真實波幅-Average-True-Range|ATR平均真實波幅]]
-- [[技術分析/肯特納通道Keltner-Channel|肯特納通道]]
-- [[技術分析/MACD指標實戰判讀|MACD指標實戰判讀]]
-- [[技術分析/RSI鈍化應對策略RSI-Passivation-Response|RSI鈍化應對策略]]
-- [[技術分析/多指標共振交易系統Multi-Indicator-Confluence|多指標共振交易系統]]
-- [[技術分析/真突破確認三原則帶量收盤3天|真突破確認三原則]]
-- [[技術分析/W底M頭雙重頂底型態Double-Top-and-Double-Bottom|W底M頭雙重頂底型態]]
-- [[技術分析/成交量確認原則Volume-Confirmation|成交量確認原則]]
-- [[技術分析/型態學總論Chart-Patterns-Overview|型態學總論]]
+- [[均值回歸策略MeanReversion|均值回歸策略]]
+- [[ADX趨勢強度過濾盤整|ADX趨勢強度過濾盤整]]
+- [[ATR平均真實波幅-Average-True-Range|ATR平均真實波幅]]
+- [[肯特納通道Keltner-Channel|肯特納通道]]
+- [[MACD指標實戰判讀|MACD指標實戰判讀]]
+- [[RSI鈍化應對策略RSI-Passivation-Response|RSI鈍化應對策略]]
+- [[多指標共振交易系統Multi-Indicator-Confluence|多指標共振交易系統]]
+- [[真突破確認三原則帶量收盤3天|真突破確認三原則]]
+- [[W底M頭雙重頂底型態Double-Top-and-Double-Bottom|W底M頭雙重頂底型態]]
+- [[成交量確認原則Volume-Confirmation|成交量確認原則]]
+- [[型態學總論Chart-Patterns-Overview|型態學總論]]
 
 ## 來源
 

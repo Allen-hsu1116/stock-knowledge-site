@@ -102,19 +102,19 @@
 - **確認是失效還是正常波動**：任何策略都有好壞時期，不要把正常回撤誤判為失效
 
 ## 相關主題
-- [[風險管理/技術分析失效三情境]]
-- [[風險管理/因子衰退Factor-Decay|因子衰退Factor Decay]]
-- [[風險管理/回測驗證Backtesting陷阱|回測驗證Backtesting陷阱]]
-- [[風險管理/回測過擬合Backtest-Overfitting|回測過擬合Backtest Overfitting]]
-- [[風險管理/資金曲線管理Equity-Curve-Management|資金曲線管理Equity Curve Management]]
-- [[風險管理/策略壓力測試Stress-Testing|策略壓力測試Stress Testing]]
-- [[風險管理/回撤持續時間Drawdown-Duration|回撤持續時間Drawdown Duration]]
-- [[風險管理/回撤恢復數學與帳戶生存Drawdown-Recovery-Math|回撤恢復數學與帳戶生存Drawdown Recovery Math]]
-- [[風險管理/回測績效評估完整體系Backtest-Performance-Evaluation|回測績效評估完整體系Backtest Performance Evaluation]]
-- [[風險管理/交易系統Trading-System設計與迷思|交易系統Trading System設計與迷思]]
-- [[風險管理/過度交易Overtrading防範體系|過度交易Overtrading防範體系]]
-- [[風險管理/風險報酬比|風險報酬比 Risk/Reward Ratio]]
-- [[操作策略/勝率與賺賠比WinRate-and-RiskReward|勝率與賺賠比WinRate and RiskReward]]
+- [[技術分析失效三情境]]
+- [[因子衰退Factor-Decay|因子衰退Factor Decay]]
+- [[回測驗證Backtesting陷阱|回測驗證Backtesting陷阱]]
+- [[回測過擬合Backtest-Overfitting|回測過擬合Backtest Overfitting]]
+- [[資金曲線管理Equity-Curve-Management|資金曲線管理Equity Curve Management]]
+- [[策略壓力測試Stress-Testing|策略壓力測試Stress Testing]]
+- [[回撤持續時間Drawdown-Duration|回撤持續時間Drawdown Duration]]
+- [[回撤恢復數學與帳戶生存Drawdown-Recovery-Math|回撤恢復數學與帳戶生存Drawdown Recovery Math]]
+- [[回測績效評估完整體系Backtest-Performance-Evaluation|回測績效評估完整體系Backtest Performance Evaluation]]
+- [[交易系統Trading-System設計與迷思|交易系統Trading System設計與迷思]]
+- [[過度交易Overtrading防範體系|過度交易Overtrading防範體系]]
+- [[風險報酬比|風險報酬比 Risk/Reward Ratio]]
+- [[勝率與賺賠比WinRate-and-RiskReward|勝率與賺賠比WinRate and RiskReward]]
 
 ## 來源
 - [如何判定策略失效 - 幣圖誌Bituzi](../raw/2026-05-15/如何判定策略失效-幣圖誌Bituzi.md)

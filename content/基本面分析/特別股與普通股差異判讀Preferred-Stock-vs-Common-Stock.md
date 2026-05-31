@@ -84,14 +84,14 @@
 - **發行特別股的公司訊號**：公司選擇發特別股而非公司債，可能是為控制負債比率或防止經營權被奪——理解發行動機有助判斷公司財務狀況
 
 ## 相關主題
-- [[基本面分析/現金股利與股票股利差異與選擇Cash-Dividend-vs-Stock-Dividend]]
-- [[基本面分析/配息率與盈餘分配率判讀]]
-- [[基本面分析/現金股利保障倍數與配息安全性判讀Cash-Dividend-Coverage-Ratio]]
-- [[基本面分析/股息率與殖利率選股實戰]]
-- [[基本面分析/負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]]
-- [[基本面分析/庫藏股買回分析Treasury-Stock-Buyback]]
-- [[基本面分析/減資三種方式與實戰判讀Capital-Reduction]]
-- [[操作策略/可轉債操作策略]]
+- [[現金股利與股票股利差異與選擇Cash-Dividend-vs-Stock-Dividend]]
+- [[配息率與盈餘分配率判讀]]
+- [[現金股利保障倍數與配息安全性判讀Cash-Dividend-Coverage-Ratio]]
+- [[股息率與殖利率選股實戰]]
+- [[負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]]
+- [[庫藏股買回分析Treasury-Stock-Buyback]]
+- [[減資三種方式與實戰判讀Capital-Reduction]]
+- [[可轉債操作策略]]
 
 ## 來源
 - [特別股是什麼？特別股股利？缺點？一文搞懂特別股！](../raw/2026-05-19/特別股是什麼StockFeel.md)

@@ -138,16 +138,16 @@ M頭由兩個相近的高點和中間一個回調低點組成，形成"M"形狀�
 
 ## 相關主題
 
-- [[技術分析/頭肩頂與頭肩底Head-and-Shoulders|頭肩頂與頭肩底 Head and Shoulders]] - 更複雜但更可靠的反轉型態，三個峰/谷的結構
-- [[技術分析/跳空缺口Gap-Theory|跳空缺口 Gap Theory]] - 突破頸線時若伴隨跳空缺口，訊號更強
-- [[技術分析/真突破確認三原則帶量收盤3天|真突破確認三原則 帶量收盤3天]] - 頸線突破的確認方法
-- [[技術分析/背離Divergence進階實戰|背離Divergence進階實戰]] - 底背離和頂背離是W底/M頭的最佳輔助訊號
-- [[技術分析/支撐壓力|支撐壓力]] - 頸線本質上就是支撐壓力線
-- [[技術分析/成交量確認原則Volume-Confirmation|成交量確認原則 Volume Confirmation]] - 型態突破必須帶量確認
-- [[技術分析/V型反轉V-Shaped-Reversal|V型反轉 V-Shaped Reversal]] - 另一種反轉型態，操作難度更高
-- [[技術分析/三角收斂型態三種類型與突破策略|三角收斂型態 三種類型與突破策略]] - 中繼型態與反轉型態的對照
-- [[技術分析/斐波那契回撤Fibonacci-Retracement|斐波那契回撤 Fibonacci Retracement]] - W底/M頭目標價的斐波那契延伸計算
-- [[技術分析/島型反轉Island-Reversal|島型反轉 Island Reversal]] - 另一種反轉型態
+- [[頭肩頂與頭肩底Head-and-Shoulders|頭肩頂與頭肩底 Head and Shoulders]] - 更複雜但更可靠的反轉型態，三個峰/谷的結構
+- [[跳空缺口Gap-Theory|跳空缺口 Gap Theory]] - 突破頸線時若伴隨跳空缺口，訊號更強
+- [[真突破確認三原則帶量收盤3天|真突破確認三原則 帶量收盤3天]] - 頸線突破的確認方法
+- [[背離Divergence進階實戰|背離Divergence進階實戰]] - 底背離和頂背離是W底/M頭的最佳輔助訊號
+- [[支撐壓力|支撐壓力]] - 頸線本質上就是支撐壓力線
+- [[成交量確認原則Volume-Confirmation|成交量確認原則 Volume Confirmation]] - 型態突破必須帶量確認
+- [[V型反轉V-Shaped-Reversal|V型反轉 V-Shaped Reversal]] - 另一種反轉型態，操作難度更高
+- [[三角收斂型態三種類型與突破策略|三角收斂型態 三種類型與突破策略]] - 中繼型態與反轉型態的對照
+- [[斐波那契回撤Fibonacci-Retracement|斐波那契回撤 Fibonacci Retracement]] - W底/M頭目標價的斐波那契延伸計算
+- [[島型反轉Island-Reversal|島型反轉 Island Reversal]] - 另一種反轉型態
 
 ## 來源
 

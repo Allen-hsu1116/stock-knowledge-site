@@ -114,7 +114,7 @@ Gervais, Heaton & Odean（2002）定義：認為自己知識的準確性比事�
 - 男性比女性更容易過度自信（Barber & Odean 研究結論），但任何人都有可能
 - 過度自信在**不確定性最高**的領域最嚴重——股市正是不確定性極高的領域
 - 控制錯覺特別危險：在線上交易時代，點一下就能下單的便利性強化了「我能控制」的錯覺
-- 過度自信會與 [[風險管理/錨定效應Anchoring-Bias]] 和 [[風險管理/確認偏誤Confirmation-Bias]] 交互放大
+- 過度自信會與 [[錨定效應Anchoring-Bias]] 和 [[確認偏誤Confirmation-Bias]] 交互放大
 - **De Long, Shleifer, Summers & Waldmann (1990)** 證明過度自信的交易者能在市場中存活；**Wang (1997)** 用雙寡頭模型證明過度自信的基金經理可獲得比理性對手更高的期望收益——這意味著過度自信不一定立即淘汰，但長期仍受交易成本侵蝕
 - 容易過度自信的職業：外科醫生、心理學家、投資銀行家、工程師、律師、投資者——這些領域的共同特徵是反饋慢且模糊
 
@@ -126,15 +126,15 @@ Barber et al.（2009）發現台灣散戶的特殊現象：許多人把股市視
 
 ## 相關主題
 
-- [[風險管理/確認偏誤Confirmation-Bias]]
-- [[風險管理/錨定效應Anchoring-Bias]]
-- [[風險管理/損失厭惡Loss-Aversion處置效應過度自信FOMO]]
-- [[風險管理/認知偏誤與交易心理]]
-- [[風險管理/交易心理紀律執行力]]
-- [[風險管理/回測過擬合Backtest-Overfitting]]
-- [[風險管理/過度交易Overtrading防範體系]]
-- [[風險管理/破產風險Risk-of-Ruin]]
-- [[風險管理/交易系統Trading-System設計與迷思]]
+- [[確認偏誤Confirmation-Bias]]
+- [[錨定效應Anchoring-Bias]]
+- [[損失厭惡Loss-Aversion處置效應過度自信FOMO]]
+- [[認知偏誤與交易心理]]
+- [[交易心理紀律執行力]]
+- [[回測過擬合Backtest-Overfitting]]
+- [[過度交易Overtrading防範體系]]
+- [[破產風險Risk-of-Ruin]]
+- [[交易系統Trading-System設計與迷思]]
 
 ## 來源
 

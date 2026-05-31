@@ -208,14 +208,14 @@ f* = (bp - q) / b
 - **相關性矩陣**：多標的組合的整體風險預算
 
 ## 相關主題
-- [[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule|部位控制2%法則]]
-- [[風險管理/凱利公式部位最佳化Kelly-Criterion-Position-Sizing|凱利公式部位最佳化]]
-- [[風險管理/最適f理論Optimal-f-Position-Sizing|最適f理論]]
-- [[風險管理/Elder-2%與6%雙重法則|Elder 2%與6%雙重法則]]
-- [[風險管理/資金曲線管理Equity-Curve-Management|資金曲線管理]]
-- [[風險管理/風險預算Risk Budgeting|風險預算]]
-- [[風險管理/風險管理vs資金管理三層次思維|風險管理vs資金管理三層次思維]]
-- [[技術分析/ATR平均真實波幅-Average-True-Range|ATR平均真實波幅]]
+- [[部位控制2%法則Position-Sizing-2-Percent-Rule|部位控制2%法則]]
+- [[凱利公式部位最佳化Kelly-Criterion-Position-Sizing|凱利公式部位最佳化]]
+- [[最適f理論Optimal-f-Position-Sizing|最適f理論]]
+- [[Elder-2%與6%雙重法則|Elder 2%與6%雙重法則]]
+- [[資金曲線管理Equity-Curve-Management|資金曲線管理]]
+- [[風險預算Risk Budgeting|風險預算]]
+- [[風險管理vs資金管理三層次思維|風險管理vs資金管理三層次思維]]
+- [[ATR平均真實波幅-Average-True-Range|ATR平均真實波幅]]
 
 ## 來源
 - Van K. Tharp《Trade Your Way to Financial Freedom》：部位管理是交易系統最被低估的面向

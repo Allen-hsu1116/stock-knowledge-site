@@ -167,16 +167,16 @@ MACD在強勢趨勢中會鈍化——金叉後一直金叉、死叉後一直死�
 
 ## 相關主題
 
-- [[技術分析/MACD指標實戰判讀]]
-- [[技術分析/背離Divergence進階實戰]]
-- [[技術分析/背離Divergence進階實戰]]
-- [[技術分析/多指標共振交易系統Multi-Indicator-Confluence]]
-- [[技術分析/技術指標鈍化與對策]]
-- [[技術分析/黃金交叉與死亡交叉均線交叉實戰]]
-- [[技術分析/量價8大口訣與均量線三層次判讀Volume-Price-8-Rules-and-VMA]]
-- [[技術分析/ADX趨勢強度過濾盤整]]
-- [[技術分析/多指標共振交易系統Multi-Indicator-Confluence]]
-- [[技術分析/多時間框架分析]]
+- [[MACD指標實戰判讀]]
+- [[背離Divergence進階實戰]]
+- [[背離Divergence進階實戰]]
+- [[多指標共振交易系統Multi-Indicator-Confluence]]
+- [[技術指標鈍化與對策]]
+- [[黃金交叉與死亡交叉均線交叉實戰]]
+- [[量價8大口訣與均量線三層次判讀Volume-Price-8-Rules-and-VMA]]
+- [[ADX趨勢強度過濾盤整]]
+- [[多指標共振交易系統Multi-Indicator-Confluence]]
+- [[多時間框架分析]]
 
 ## 來源
 

@@ -41,11 +41,11 @@ Google宣布新筆電平台Googlebook（非Chromebook），基於Android而非Ch
 - Mula未推薦特定主動型ETF
 
 ## 相關主題
-- [[YouTube頻道/M觀點/台股美股過熱與蘋果下單Intel及Optimus工程驗證]]
-- [[YouTube頻道/股市好聲音/川習會再降關稅與美股無人下車的FOMO循環]]
-- [[操作策略/瓦森因子模型量化動能選股]]
-- [[風險管理/資產配置策略比較Asset-Allocation-Comparison]]
-- [[風險管理/回測過擬合Backtest-Overfitting]]
+- [[台股美股過熱與蘋果下單Intel及Optimus工程驗證]]
+- [[川習會再降關稅與美股無人下車的FOMO循環]]
+- [[瓦森因子模型量化動能選股]]
+- [[資產配置策略比較Asset-Allocation-Comparison]]
+- [[回測過擬合Backtest-Overfitting]]
 
 ## 來源
 - [EP303 川習會：貿易關稅、伊朗、台灣三方博弈](https://www.youtube.com/watch?v=YlAOU1zfjv8)

@@ -224,13 +224,13 @@
 - 避免在應稅帳戶產生大額資本利得
 
 ## 相關主題
-- [[風險管理/資產配置策略比較Asset-Allocation-Comparison|資產配置策略比較]]
-- [[風險管理/風險預算Risk Budgeting|風險預算]]
-- [[風險管理/分散投資七法與相關係數Diversification-Seven-Methods|分散投資七法與相關係數]]
-- [[風險管理/相關性崩潰Correlation-Breakdown|相關性崩潰]]
-- [[風險管理/投資組合理論與分散投資的局限Portfolio-Theory-and-Diversification-Limits|投資組合理論與分散投資的局限]]
-- [[風險管理/波動率拖累與槓桿ETF損耗Volatility-Drag-and-Leveraged-ETF-Decay|波動率拖累與槓桿ETF損耗]]
-- [[操作策略/定期定額DCA策略Dollar-Cost-Averaging|定期定額DCA策略]]
+- [[資產配置策略比較Asset-Allocation-Comparison|資產配置策略比較]]
+- [[風險預算Risk Budgeting|風險預算]]
+- [[分散投資七法與相關係數Diversification-Seven-Methods|分散投資七法與相關係數]]
+- [[相關性崩潰Correlation-Breakdown|相關性崩潰]]
+- [[投資組合理論與分散投資的局限Portfolio-Theory-and-Diversification-Limits|投資組合理論與分散投資的局限]]
+- [[波動率拖累與槓桿ETF損耗Volatility-Drag-and-Leveraged-ETF-Decay|波動率拖累與槓桿ETF損耗]]
+- [[定期定額DCA策略Dollar-Cost-Averaging|定期定額DCA策略]]
 
 ## 來源
 - Vanguard Research: Best Practices for Portfolio Rebalancing (2010)

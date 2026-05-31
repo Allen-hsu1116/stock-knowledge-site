@@ -117,11 +117,11 @@ Garbage in garbage out。數據有缺失、錯誤、誤植，回測結果必然�
 
 ## 相關主題
 
-- [[風險管理/交易系統Trading-System設計與迷思]]
-- [[風險管理/風險報酬比]]
-- [[風險管理/MDD最大回撤計算與恢復難度]]
-- [[風險管理/凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
-- [[風險管理/策略壓力測試Stress-Testing]]
+- [[交易系統Trading-System設計與迷思]]
+- [[風險報酬比]]
+- [[MDD最大回撤計算與恢復難度]]
+- [[凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
+- [[策略壓力測試Stress-Testing]]
 
 ## 來源
 

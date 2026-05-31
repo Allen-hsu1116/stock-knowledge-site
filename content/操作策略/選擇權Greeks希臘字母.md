@@ -40,7 +40,7 @@ created: 2026-05-24
 
 **Delta 中性（Delta Neutral）**：
 - 總 Delta = 0 的組合，不受標的物漲跌影響
-- 詳見 [[操作策略/波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral|波動率套利與Delta Neutral策略]]
+- 詳見 [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral|波動率套利與Delta Neutral策略]]
 
 ### 二、Gamma（γ）— Delta 的變化率
 
@@ -59,7 +59,7 @@ created: 2026-05-24
 **Gamma Squeeze**：
 - 當選擇權買盤大量增加，自營商必須買現貨避險（Delta hedge）
 - 買越多 → Gamma 越大 → 避險買越多 → 股價越漲 → 正循環
-- 詳見 [[籌碼面分析/逼券商拉抬Gamma-Squeeze兩手策略|逼券商拉抬Gamma Squeeze]]
+- 詳見 [[逼券商拉抬Gamma-Squeeze兩手策略|逼券商拉抬Gamma Squeeze]]
 
 ### 三、Theta（Θ）— 時間衰減
 
@@ -79,7 +79,7 @@ created: 2026-05-24
 | < 30 天 | 衰減急速 | 買方最危險的時期，賣方黃金期 |
 | < 7 天 | 衰減暴烈 | 每天時間價值大量消失（週選賣方天堂） |
 
-詳見 [[操作策略/Theta時間價值衰退與選擇權賣方策略|Theta時間價值衰退與選擇權賣方策略]]
+詳見 [[Theta時間價值衰退與選擇權賣方策略|Theta時間價值衰退與選擇權賣方策略]]
 
 ### 四、Vega（ν）— 波動率敏感度
 
@@ -97,7 +97,7 @@ created: 2026-05-24
 | 波動率上升 | IV ↑ | 權利金增加（賺） | 權利金增加（虧） |
 | 波動率下降 | IV ↓ | 權利金減少（虧） | 權利金減少（賺） |
 
-詳見 [[技術分析/隱含波動率IV與歷史波動率HV實戰判讀|隱含波動率IV與歷史波動率HV實戰判讀]]
+詳見 [[隱含波動率IV與歷史波動率HV實戰判讀|隱含波動率IV與歷史波動率HV實戰判讀]]
 
 ### 五、Rho（ρ）— 利率敏感度
 
@@ -138,7 +138,7 @@ created: 2026-05-24
 | 賣 Call | − | − | + | − |
 | 賣 Put | + | − | + | − |
 
-詳見 [[操作策略/選擇權四大基本策略|選擇權四大基本策略]]
+詳見 [[選擇權四大基本策略|選擇權四大基本策略]]
 
 ### 常見組合 Greeks
 
@@ -148,7 +148,7 @@ created: 2026-05-24
 | 勒式（Long Strangle） | ≈0 | + | − | + |
 | 鐵兀鷹（Iron Condor） | ≈0 | − | + | − |
 
-詳見 [[操作策略/跨式Straddle與勒式Strangle|跨式與勒式]]、[[操作策略/選擇權組合策略|選擇權組合策略]]
+詳見 [[跨式Straddle與勒式Strangle|跨式與勒式]]、[[選擇權組合策略|選擇權組合策略]]
 
 ## 實戰應用
 
@@ -163,7 +163,7 @@ created: 2026-05-24
 
 - 組合總 Delta = 0 不受方向影響
 - 靠 Theta 或 Vega 變化獲利
-- 詳見 [[操作策略/波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral|波動率套利與Delta Neutral策略]]
+- 詳見 [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral|波動率套利與Delta Neutral策略]]
 
 ### 3. 選擇權賣方的 Greeks 管理
 
@@ -171,7 +171,7 @@ created: 2026-05-24
 - 賣方賺 Theta（時間流逝獲利）
 - 避險方式：調整 Delta、控制 Gamma、設定停損
 
-詳見 [[操作策略/選擇權賣方收租策略Option-Seller-Rent-Collection|選擇權賣方收租策略]]
+詳見 [[選擇權賣方收租策略Option-Seller-Rent-Collection|選擇權賣方收租策略]]
 
 ## 注意事項
 
@@ -182,14 +182,14 @@ created: 2026-05-24
 
 ## 相關主題
 
-- [[操作策略/選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced|選擇權Greeks進階組合判讀]] - Greeks組合分析的進階技巧
-- [[操作策略/選擇權四大基本策略|選擇權四大基本策略]] - 買Call賣Call買Put賣Put
-- [[操作策略/選擇權賣方收租策略Option-Seller-Rent-Collection|選擇權賣方收租策略]] - Theta收入策略
-- [[操作策略/波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral|波動率套利與Delta Neutral]] - Delta中性策略
-- [[操作策略/跨式Straddle與勒式Strangle|跨式與勒式]] - 波動率交易策略
-- [[操作策略/選擇權Convexity凸性與非對稱收益Option-Convexity|選擇權Convexity]] - Greeks的高階延伸
-- [[技術分析/波動率微笑曲線與偏態Volatility-Smile-and-Skew|波動率微笑與偏態]] - 波動率結構
-- [[技術分析/隱含波動率IV與歷史波動率HV實戰判讀|IV與HV實戰判讀]] - 波動率實戰
-- [[籌碼面分析/逼券商拉抬Gamma-Squeeze兩手策略|Gamma Squeeze]] - Gamma避險的正回饋迴圈
-- [[操作策略/Theta時間價值衰退與選擇權賣方策略|Theta時間衰退]] - 時間價值實戰
-- [[風險管理/VIX恐慌指數實戰判讀|VIX恐慌指數]] - 波動率的恐懼指標
+- [[選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced|選擇權Greeks進階組合判讀]] - Greeks組合分析的進階技巧
+- [[選擇權四大基本策略|選擇權四大基本策略]] - 買Call賣Call買Put賣Put
+- [[選擇權賣方收租策略Option-Seller-Rent-Collection|選擇權賣方收租策略]] - Theta收入策略
+- [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral|波動率套利與Delta Neutral]] - Delta中性策略
+- [[跨式Straddle與勒式Strangle|跨式與勒式]] - 波動率交易策略
+- [[選擇權Convexity凸性與非對稱收益Option-Convexity|選擇權Convexity]] - Greeks的高階延伸
+- [[波動率微笑曲線與偏態Volatility-Smile-and-Skew|波動率微笑與偏態]] - 波動率結構
+- [[隱含波動率IV與歷史波動率HV實戰判讀|IV與HV實戰判讀]] - 波動率實戰
+- [[逼券商拉抬Gamma-Squeeze兩手策略|Gamma Squeeze]] - Gamma避險的正回饋迴圈
+- [[Theta時間價值衰退與選擇權賣方策略|Theta時間衰退]] - 時間價值實戰
+- [[VIX恐慌指數實戰判讀|VIX恐慌指數]] - 波動率的恐懼指標

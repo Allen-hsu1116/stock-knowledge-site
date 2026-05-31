@@ -61,11 +61,11 @@ VA 更像是一種**投資目標設定方式**，而非策略或技巧。適合�
 
 ## 相關主題
 
-- [[操作策略/定期定額DCA策略Dollar-Cost-Averaging|定期定額 DCA 策略]] — VA 的基礎版本，固定金額投入更適合大多數人
-- [[風險管理/再平衡策略Portfolio-Rebalancing|再平衡策略 Portfolio Rebalancing]] — 另一種資產目標追蹤方法
-- [[操作策略/加碼與減碼策略Position-Scale-In-Out|加碼與減碼策略 Position Scale In/Out]] — 順勢加碼而非逆勢加碼
-- [[風險管理/交易心理五原則Five-Trading-Psychology-Principles|交易心理五原則]] — 低買高賣需要強大心理素質
-- [[操作策略/均值回歸策略|均值回歸策略]] — VA 本質上是均值回歸的操作變形
+- [[定期定額DCA策略Dollar-Cost-Averaging|定期定額 DCA 策略]] — VA 的基礎版本，固定金額投入更適合大多數人
+- [[再平衡策略Portfolio-Rebalancing|再平衡策略 Portfolio Rebalancing]] — 另一種資產目標追蹤方法
+- [[加碼與減碼策略Position-Scale-In-Out|加碼與減碼策略 Position Scale In/Out]] — 順勢加碼而非逆勢加碼
+- [[交易心理五原則Five-Trading-Psychology-Principles|交易心理五原則]] — 低買高賣需要強大心理素質
+- [[均值回歸策略|均值回歸策略]] — VA 本質上是均值回歸的操作變形
 
 ## 來源
 

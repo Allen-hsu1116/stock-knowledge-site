@@ -88,14 +88,14 @@ Schaff Trend Cycle（STC）由 Doug Schaff 在 1990 年代開發，核心觀察�
 
 ## 相關主題
 
-- [[技術分析/MACD指標實戰判讀]]
-- [[技術分析/MACD進階實戰柱狀圖背離零軸交易與雙背離確認]]
-- [[技術分析/KD指標隨機指標]]
-- [[技術分析/CCI商品通道指標Commodity-Channel-Index]]
-- [[技術分析/RSI相對強弱指標]]
-- [[技術分析/Stochastic-RSI隨機RSI]]
-- [[技術分析/背離Divergence進階實戰]]
-- [[技術分析/多指標共振交易系統Multi-Indicator-Confluence]]
+- [[MACD指標實戰判讀]]
+- [[MACD進階實戰柱狀圖背離零軸交易與雙背離確認]]
+- [[KD指標隨機指標]]
+- [[CCI商品通道指標Commodity-Channel-Index]]
+- [[RSI相對強弱指標]]
+- [[Stochastic-RSI隨機RSI]]
+- [[背離Divergence進階實戰]]
+- [[多指標共振交易系統Multi-Indicator-Confluence]]
 
 ## 來源
 

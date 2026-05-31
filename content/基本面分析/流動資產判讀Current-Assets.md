@@ -35,7 +35,7 @@
 **判讀重點**：
 - 單獨看難以判斷公司好壞，要跟同業比較
 - A公司應收帳款佔營收比重長期低於B公司→A更具競爭優勢
-- 搭配[[基本面分析/應收帳款周轉率與應收帳款周轉天數|應收帳款周轉率與周轉天數]]交叉判讀
+- 搭配[[應收帳款周轉率與應收帳款周轉天數|應收帳款周轉率與周轉天數]]交叉判讀
 
 ### 4. 存貨（Inventory）— 流動性中
 
@@ -99,14 +99,14 @@
 
 ## 相關主題
 
-- [[基本面分析/約當現金判讀Cash-Equivalents|約當現金判讀 Cash Equivalents]]
-- [[基本面分析/流動比率與速動比率實戰判讀|流動比率與速動比率實戰判讀]]
-- [[基本面分析/財報基礎三表判讀入門|財報基礎三表判讀入門]]
-- [[基本面分析/資產負債表深度判讀Balance-Sheet-Advanced-Analysis|資產負債表深度判讀 Balance Sheet Advanced Analysis]]
-- [[基本面分析/應收帳款周轉率與應收帳款周轉天數|應收帳款周轉率與應收帳款周轉天數]]
-- [[基本面分析/存貨周轉率與存貨周轉天數|存貨周轉率與存貨周轉天數]]
-- [[基本面分析/現金轉換循環Cash Conversion Cycle|現金轉換循環 Cash Conversion Cycle]]
-- [[基本面分析/營運資金週轉率判讀Working-Capital-Turnover|營運資金週轉率判讀 Working Capital Turnover]]
+- [[約當現金判讀Cash-Equivalents|約當現金判讀 Cash Equivalents]]
+- [[流動比率與速動比率實戰判讀|流動比率與速動比率實戰判讀]]
+- [[財報基礎三表判讀入門|財報基礎三表判讀入門]]
+- [[資產負債表深度判讀Balance-Sheet-Advanced-Analysis|資產負債表深度判讀 Balance Sheet Advanced Analysis]]
+- [[應收帳款周轉率與應收帳款周轉天數|應收帳款周轉率與應收帳款周轉天數]]
+- [[存貨周轉率與存貨周轉天數|存貨周轉率與存貨周轉天數]]
+- [[現金轉換循環Cash Conversion Cycle|現金轉換循環 Cash Conversion Cycle]]
+- [[營運資金週轉率判讀Working-Capital-Turnover|營運資金週轉率判讀 Working Capital Turnover]]
 
 ## 來源
 

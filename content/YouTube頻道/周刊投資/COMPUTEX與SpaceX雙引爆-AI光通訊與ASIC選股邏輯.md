@@ -58,9 +58,9 @@
 
 ## 相關主題
 
-- [[YouTube頻道/周刊投資/國巨平台化轉型與AI被動元件價值重估]]
-- [[YouTube頻道/股癌-Gooaye/EP664-Anthropic轉正與AI硬體超級循環-被動元件全面噴射與TPU-Cloud新局]]
-- [[基本面分析/營收動能選股實戰策略Revenue-Momentum-Stock-Screening]]
+- [[國巨平台化轉型與AI被動元件價值重估]]
+- [[EP664-Anthropic轉正與AI硬體超級循環-被動元件全面噴射與TPU Cloud新局]]
+- [[營收動能選股實戰策略Revenue-Momentum-Stock-Screening]]
 
 ## 來源
 

@@ -152,7 +152,7 @@ Chandelier Exit 是 Trailing Stop 的 ATR 進階版，用波動度取代固定�
 - 常用參數：ATR 期間 14~22、乘數 2.5~4.0
 - 核心優勢：波動大時停損距離遠（不怕被洗），波動小時停損距離近（鎖住更多利潤）
 
-詳細內容見 [[操作策略/Chandelier-Exit吊燈出場指標]]
+詳細內容見 [[Chandelier-Exit吊燈出場指標]]
 
 ### 盤整行情使用 Trailing Stop 的技巧
 
@@ -172,16 +172,16 @@ Chandelier Exit 是 Trailing Stop 的 ATR 進階版，用波動度取代固定�
 
 ## 相關主題
 
-- [[風險管理/停損方法]]
-- [[風險管理/停損設定方法Stop-Loss-Placement]]
-- [[風險管理/停利方法]]
-- [[技術分析/ATR平均真實波幅-Average-True-Range]]
-- [[風險管理/風險報酬比]]
-- [[操作策略/均值回歸策略]]
-- [[操作策略/海龜交易法則]]
-- [[技術分析/SAR拋物線指標Parabolic-SAR]]
-- [[操作策略/Chandelier-Exit吊燈出場指標]]
-- [[技術分析/Chande-Kroll-Stop錢德克羅停損指標]]
+- [[停損方法]]
+- [[停損設定方法Stop-Loss-Placement]]
+- [[停利方法]]
+- [[ATR平均真實波幅-Average-True-Range]]
+- [[風險報酬比]]
+- [[均值回歸策略]]
+- [[海龜交易法則]]
+- [[SAR拋物線指標Parabolic-SAR]]
+- [[Chandelier-Exit吊燈出場指標]]
+- [[Chande-Kroll-Stop錢德克羅停損指標]]
 
 ## 來源
 
