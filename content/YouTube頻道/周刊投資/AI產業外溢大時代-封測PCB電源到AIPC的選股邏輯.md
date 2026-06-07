@@ -49,12 +49,12 @@ COMPUTEX利多新聞不斷，但反而是股市短暫休息的機會。利多出
 - COMPUTEX利多出盡後短暫休息是正常的，不要因回檔恐慌
 
 ## 相關主題
-- [[產業地圖/先進封測｜封測代工服務 OSAT]]
-- [[YouTube頻道/周刊投資/AI引爆PCB超級循環-ABF與CCL進入史上最強賣方市場]]
-- [[YouTube頻道/周刊投資/COMPUTEX與SpaceX雙引爆-AI光通訊與ASIC選股邏輯]]
-- [[產業地圖/IC 設計｜客製 ASIC 與矽智財]]
-- [[YouTube頻道/周刊投資/底部AI電源供應器群電與貨櫃型資料中心]]
-- [[YouTube頻道/周刊投資/從PCB到CoWoS-AOI-AXI成半導體新核心與檢測設備族群崛起]]
+- [[先進封測｜封測代工服務 OSAT]]
+- [[AI引爆PCB超級循環-ABF與CCL進入史上最強賣方市場]]
+- [[COMPUTEX與SpaceX雙引爆-AI光通訊與ASIC選股邏輯]]
+- [[IC 設計｜客製 ASIC 與矽智財]]
+- [[底部AI電源供應器群電與貨櫃型資料中心]]
+- [[從PCB到CoWoS-AOI-AXI成半導體新核心與檢測設備族群崛起]]
 
 ## 來源
 - [力成產業外溢大時代與AI PC供應鏈選股邏輯](https://www.youtube.com/watch?v=IHsBzKxyBBg)

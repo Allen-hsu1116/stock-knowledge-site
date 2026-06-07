@@ -45,8 +45,8 @@
 - AI POS和Avatar點餐尚在展示階段，實際落地進度和獲利貢獻需追蹤
 
 ## 相關主題
-- [[YouTube頻道/周刊投資/COMPUTEX-2026投資訊號-AI進入獲利時代與三大受惠區塊]]
-- [[YouTube頻道/股市好聲音/黃仁勳衝Agentic-AI與PC寒冬救星-輝達生態系從增量到存量的全面搶攻]]
+- [[COMPUTEX-2026投資訊號-AI進入獲利時代與三大受惠區塊]]
+- [[黃仁勳衝Agentic-AI與PC寒冬救星-輝達生態系從增量到存量的全面搶攻]]
 
 ## 來源
 - [乙哥直擊COMPUTEX：樺漢(6414)大轉機從雲端走向邊緣運算](https://www.youtube.com/watch?v=ozZZVLVQsUY)

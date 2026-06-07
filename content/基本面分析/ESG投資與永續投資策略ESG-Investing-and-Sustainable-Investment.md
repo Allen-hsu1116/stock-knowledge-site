@@ -105,12 +105,12 @@ ESG投資是將環境（Environmental）、社會（Social）、治理（Governa
 
 ## 相關主題
 
-- [[基本面分析/經濟護城河Economic-Moat|經濟護城河Economic Moat]]
-- [[基本面分析/財報綜合健康評分法Comprehensive-Financial-Health-Scoring|財報綜合健康評分法]]
-- [[基本面分析/ROE杜邦分析淨利率資產週轉率權益乘數|ROE杜邦分析]]
-- [[基本面分析/TSR總股東報酬率Total-Shareholder-Return|TSR總股東報酬率]]
-- [[基本面分析/基本面因子選股總論Quantitative-Fundamental-Factors|基本面因子選股總論]]
-- [[基本面分析/安全邊際Margin-of-Safety進階實戰|安全邊際]]
+- [[經濟護城河Economic-Moat|經濟護城河Economic Moat]]
+- [[財報綜合健康評分法Comprehensive-Financial-Health-Scoring|財報綜合健康評分法]]
+- [[ROE杜邦分析淨利率資產週轉率權益乘數|ROE杜邦分析]]
+- [[TSR總股東報酬率Total-Shareholder-Return|TSR總股東報酬率]]
+- [[基本面因子選股總論Quantitative-Fundamental-Factors|基本面因子選股總論]]
+- [[安全邊際Margin-of-Safety進階實戰|安全邊際]]
 
 ## 來源
 

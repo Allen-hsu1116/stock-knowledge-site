@@ -44,12 +44,12 @@ SpaceX估值2 Trillion太貴，1.8T也太貴，1.5T也太貴。但就算太貴Mi
 - Miula買的AI Infra硬體股（Credo、Coherent、Vertiv）是四月底才買的，沒有深入研究，不建議跟單
 
 ## 相關主題
-- [[YouTube頻道/M觀點/Palantir會被打敗嗎-SpaceX算力出租與輝達GTC]]
-- [[YouTube頻道/M觀點/華為韜定律是應付習大-Meta-AI訂閱制與SpaceX併特斯拉的數學]]
-- [[YouTube頻道/M觀點/星艦V3首飛成功與太空經濟新時代-Anthropic首度獲利-艾克曼看好微軟]]
-- [[YouTube頻道/M觀點/輝達財報與AI回檔-Google追趕與Meta大裁員]]
-- [[操作策略/定期定額DCA策略Dollar-Cost-Averaging]]
-- [[基本面分析/安全邊際Margin-of-Safety進階實戰]]
+- [[Palantir會被打敗嗎-SpaceX算力出租與輝達GTC]]
+- [[華為韜定律是應付習大-Meta-AI訂閱制與SpaceX併特斯拉的數學]]
+- [[星艦V3首飛成功與太空經濟新時代-Anthropic首度獲利-艾克曼看好微軟]]
+- [[輝達財報與AI回檔-Google追趕與Meta大裁員]]
+- [[定期定額DCA策略Dollar-Cost-Averaging]]
+- [[安全邊際Margin-of-Safety進階實戰]]
 
 ## 來源
 - [SP2. 輝達 GTC 直播抽顯卡 + 軟體股回神了 | M觀點特別篇](https://www.youtube.com/watch?v=DCNTWyqR70k)

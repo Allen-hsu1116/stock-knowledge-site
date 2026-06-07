@@ -51,8 +51,8 @@
 - 影片為COMPUTEX展期分析，時效性集中在展覽期間的行情節奏
 
 ## 相關主題
-- [[YouTube頻道/周刊投資/COMPUTEX與SpaceX雙引爆-AI光通訊與ASIC選股邏輯]]
-- [[YouTube頻道/股市好聲音/黃仁勳衝Agentic-AI與PC寒冬救星-輝達生態系從增量到存量的全面搶攻]]
+- [[COMPUTEX與SpaceX雙引爆-AI光通訊與ASIC選股邏輯]]
+- [[黃仁勳衝Agentic-AI與PC寒冬救星-輝達生態系從增量到存量的全面搶攻]]
 
 ## 來源
 - [黃仁勳指AI進入獲利時代，法人點名COMPUTEX重要投資訊號！](https://www.youtube.com/watch?v=abbV6c4ciTM)
