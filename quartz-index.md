@@ -46,7 +46,7 @@ K線、均線、指標、型態、量價關係 — 看懂圖表的一切
 | [老王說股](/YouTube頻道/老王說股/) | [台股閃崩2000點大逃殺——歷史統計雞湯與短線操作守則](/YouTube頻道/老王說股/台股閃崩2000點大逃殺-歷史統計雞湯與短線操作守則) | 2026-06-08 | 老王三碗心靈雞湯：納斯達克跌5%後50%機率反彈、買在2000年高點26年仍6.3%年報酬；搶反彈三步驟：市值型ETF優先 |
 | [周刊投資](/YouTube頻道/周刊投資/) | [電信商轉型AI算力發電廠：黃仁勳Token經濟學與TaaS商機](/YouTube頻道/周刊投資/電信商轉型AI算力發電廠-黃仁勳Token經濟學與TaaS商機) | 2026-06-06 | 黃仁勳Token經濟學把電信商從賣流量變賣算力，按Token計費比按小時計費營收飆8倍 |
 | [股癌 Gooaye](/YouTube頻道/股癌-Gooaye/) | [EP668 COMPUTEX觀展心得與RTX Spark市場定位](/YouTube頻道/股癌-Gooaye/EP668-COMPUTEX觀展心得與RTX-Spark市場定位) | 2026-06-06 | COMPUTEX從打高空變成現在就能用，RTX Spark搭Unified Memory讓AI筆電有搞頭 |
-| [M觀點](/YouTube頻道/M觀點/) | [EP308 輝達新時代PC、Google增資800億](/YouTube頻道/M觀點/EP308-輝達新時代PC-Google增資800億與愛莉莎莎課程事件) | 2026-06-04 | RTX Spark讓Windows PC地端跑大模型，Google增資800億不是錢不夠是太有把握 |
+| [M觀點](/YouTube頻道/M觀點/) | [EP309 Google租xAI算力、微軟NAI模型與股市修正](/YouTube頻道/M觀點/EP309-Google租xAI算力-微軟NAI模型與股市修正終於來了嗎) | 2026-06-08 | Google租xAI 11萬GPU月付9.2億，xAI年收260億成Neocloud一哥，微軟NAI不用蒸餾打敗Sonnet，台股修正非泡沫 |
 
 > 🔄 每日凌晨自動更新
 
