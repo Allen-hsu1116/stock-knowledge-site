@@ -1,3 +1,8 @@
+---
+title: "跳空缺口 Gap Theory"
+category: "技術分析"
+---
+
 # 跳空缺口 Gap Theory
 
 > K線圖中沒有交易的價格真空帶，四種缺口判斷趨勢起始、延續與反轉

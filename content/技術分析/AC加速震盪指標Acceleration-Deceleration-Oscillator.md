@@ -1,3 +1,8 @@
+---
+title: "AC加速震盪指標 Acceleration/Deceleration Oscillator"
+category: "技術分析"
+---
+
 # AC加速震盪指標 Acceleration/Deceleration Oscillator
 
 > AO的「加速度計」——動量改變先於價格改變，加速度改變又先於動量改變，AC是Bill Williams五維系統中比AO更領先的早期預警指標。

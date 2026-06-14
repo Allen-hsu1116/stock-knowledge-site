@@ -1,3 +1,8 @@
+---
+title: "主權風險與主權違約 Sovereign Risk & Default"
+category: "風險管理"
+---
+
 # 主權風險與主權違約 Sovereign Risk & Default
 
 > 政府不還錢的風險——沒有人能強迫主權國家還債，但違約的後果比你想的嚴重

@@ -1,4 +1,5 @@
 ---
+category: "操作策略"
 title: 掩護性買權 Covered Call
 date: 2026-06-04
 ---

@@ -1,3 +1,8 @@
+---
+title: "斐波那契回撤 Fibonacci Retracement"
+category: "技術分析"
+---
+
 # 斐波那契回撤 Fibonacci Retracement
 
 > 用38.2%、50%、61.8%三個比例找出趨勢中價格最可能回測的位置，是支撐壓力判斷和諧波形態的基礎工具

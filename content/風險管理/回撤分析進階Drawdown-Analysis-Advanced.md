@@ -1,3 +1,8 @@
+---
+title: "回撤分析進階Drawdown-Analysis-Advanced"
+category: "風險管理"
+---
+
 # 回撤分析進階Drawdown-Analysis-Advanced
 
 > MDD只是冰山一角——回撤有幅度和持續時間兩個維度，CDaR把回撤最佳化變成線性規劃問題，三種回撤比率比夏普更真實

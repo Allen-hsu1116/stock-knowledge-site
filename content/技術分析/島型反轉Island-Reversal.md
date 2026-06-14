@@ -1,3 +1,8 @@
+---
+title: "島型反轉 Island Reversal"
+category: "技術分析"
+---
+
 # 島型反轉 Island Reversal
 
 > 由左右兩個跳空缺口夾成的孤立K線區塊，預示趨勢強烈反轉，但僅代表小趨勢折返而非大趨勢改變

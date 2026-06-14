@@ -1,4 +1,6 @@
 ---
+title: "十字線Doji判讀實戰"
+category: "技術分析"
 source: memory
 source_date: 2026-05-18
 status: raw_filled

@@ -1,3 +1,8 @@
+---
+title: "凱利公式部位最佳化Kelly-Criterion-Position-Sizing"
+category: "風險管理"
+---
+
 # 凱利公式部位最佳化Kelly-Criterion-Position-Sizing
 
 > 計算最佳下注比例的數學公式——贏時加碼、輸時減碼，但交易不是賭場

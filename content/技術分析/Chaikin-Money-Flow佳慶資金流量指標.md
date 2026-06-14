@@ -1,3 +1,8 @@
+---
+title: "Chaikin Money Flow 佳慶資金流量指標"
+category: "技術分析"
+---
+
 # Chaikin Money Flow 佳慶資金流量指標
 
 > 用收盤價在日內位置×成交量衡量資金流向——CMF > 0 買方主導、CMF < 0 賣方主導，背離是轉勢最強訊號，±0.05 緩衝區過濾洗盤

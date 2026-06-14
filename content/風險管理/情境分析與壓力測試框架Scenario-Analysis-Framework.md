@@ -1,3 +1,8 @@
+---
+title: "情境分析與壓力測試框架 Scenario Analysis Framework"
+category: "風險管理"
+---
+
 # 情境分析與壓力測試框架 Scenario Analysis Framework
 
 > 系統性模擬不同市場環境對投資組合的衝擊，不只是算數字，更是編織「如果-那麼」的敘事來準備未知

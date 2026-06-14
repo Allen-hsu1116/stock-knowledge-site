@@ -1,3 +1,8 @@
+---
+title: "約當現金判讀 Cash Equivalents"
+category: "基本面分析"
+---
+
 # 約當現金判讀 Cash Equivalents
 
 > 90天內可變現、不損及本金的高流動性短期投資，是現金以外最具流動性的資產

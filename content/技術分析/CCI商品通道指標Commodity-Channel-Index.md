@@ -1,3 +1,8 @@
+---
+title: "CCI商品通道指標 Commodity Channel Index"
+category: "技術分析"
+---
+
 # CCI商品通道指標 Commodity Channel Index
 
 > 衡量價格與統計均值的偏離程度，CCI>100超買、CCI<-100超賣，但核心用法是0軸突破做順勢交易，不是猜頭抄底

@@ -1,3 +1,8 @@
+---
+title: "Google TPU v8 生存法則：ASIC 戰局與台廠受惠"
+category: "YouTube頻道"
+---
+
 # Google TPU v8 生存法則：ASIC 戰局與台廠受惠
 
 > Google TPU v8 每美元效能訓練提升2.7倍、推論提升80%，Anthropic 寧買 TPU 也不全押 NVIDIA——AI 算力從「貴但強」走向「省夠用」的生存邏輯

@@ -1,3 +1,8 @@
+---
+title: "回測績效評估完整體系Backtest-Performance-Evaluation"
+category: "風險管理"
+---
+
 # 回測績效評估完整體系Backtest-Performance-Evaluation
 
 > 策略好不好不是看報酬率就好——獲利性、虧損性、交易類型三大面向缺一不可，風險調整報酬指標（Sharpe/Sortino/Calmar/Profit Factor/Tail Ratio）是交叉驗證策略品質的必備工具

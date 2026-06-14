@@ -1,3 +1,8 @@
+---
+title: "營運資金週轉率判讀Working-Capital-Turnover"
+category: "基本面分析"
+---
+
 # 營運資金週轉率判讀Working-Capital-Turnover
 
 > 每一塊錢營運資金能創造多少營收——巴菲特最愛的效率指標，營運資金越少越能創造價值，但太少也代表周轉風險

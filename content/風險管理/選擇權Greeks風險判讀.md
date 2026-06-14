@@ -1,4 +1,6 @@
 ---
+title: "選擇權Greeks風險判讀"
+category: "風險管理"
 date: 2026-05-09
 ---
 

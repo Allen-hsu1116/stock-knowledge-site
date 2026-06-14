@@ -1,3 +1,8 @@
+---
+title: "股本與流通在外股數判讀Share-Capital-and-Shares-Outstanding"
+category: "基本面分析"
+---
+
 # 股本與流通在外股數判讀Share-Capital-and-Shares-Outstanding
 
 > 股本是股東原始出資的會計記錄，流通在外股數才是計算EPS等指標的關鍵數字

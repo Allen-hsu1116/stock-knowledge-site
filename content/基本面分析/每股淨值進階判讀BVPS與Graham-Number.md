@@ -1,3 +1,8 @@
+---
+title: "每股淨值進階判讀 BVPS 與 Graham Number"
+category: "基本面分析"
+---
+
 # 每股淨值進階判讀 BVPS 與 Graham Number
 
 > 每股淨值（BVPS）是價值投資的基石，但絕非萬能——必須搭配 Graham Number、P/B、ROE、DuPont 分析等多維度指標，並認識其四大限制

@@ -1,3 +1,8 @@
+---
+title: "成長股與價值股投資策略Growth-vs-Value-Investing"
+category: "基本面分析"
+---
+
 # 成長股與價值股投資策略Growth-vs-Value-Investing
 
 > 成長股和價值股不是非黑即白的分類，而是一種投資哲學的選擇。理解兩者背後的邏輯，才能在不同市場環境中靈活切換。

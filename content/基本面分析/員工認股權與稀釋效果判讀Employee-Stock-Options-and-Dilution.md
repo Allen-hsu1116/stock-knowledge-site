@@ -1,3 +1,8 @@
+---
+title: "員工認股權與稀釋效果判讀 Employee Stock Options and Dilution"
+category: "基本面分析"
+---
+
 # 員工認股權與稀釋效果判讀 Employee Stock Options and Dilution
 
 > 認股權是激勵還是稀釋？看懂員工認股權對EPS和股東權益的影響，是避開「看起來好但其實被稀釋」的必備技能

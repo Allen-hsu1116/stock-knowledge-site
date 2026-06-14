@@ -1,3 +1,8 @@
+---
+title: "TTM-Squeeze壓縮指標實戰判讀"
+category: "技術分析"
+---
+
 # TTM-Squeeze壓縮指標實戰判讀
 
 > John Carter開發的波動壓縮指標，偵測布林通道被肯特納通道包住的極端收縮狀態，捕捉盤整→爆發的轉折點

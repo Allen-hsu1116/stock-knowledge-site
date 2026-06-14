@@ -1,3 +1,8 @@
+---
+title: "因子衰退 Factor Decay"
+category: "風險管理"
+---
+
 # 因子衰退 Factor Decay
 
 > 再有效的策略也會隨時間衰弱，理解衰退機制才能延長策略壽命

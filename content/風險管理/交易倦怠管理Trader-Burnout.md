@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: 交易倦怠管理Trader-Burnout
 date: 2026-06-05
 ---
@@ -109,3 +110,7 @@ date: 2026-06-05
 - 交易心理學綜合研究（Mark Douglas, Brett Steenbarger, Denise Shull）
 -職業倦怠理論（Maslach & Jackson, 1981; Freudenberger, 1974）
 - 運動心理學恢復期模型
+
+## 實戰應用
+
+實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。

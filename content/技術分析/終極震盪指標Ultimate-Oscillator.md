@@ -1,3 +1,8 @@
+---
+title: "終極震盪指標 Ultimate Oscillator (UO)"
+category: "技術分析"
+---
+
 # 終極震盪指標 Ultimate Oscillator (UO)
 
 > Larry Williams 的三重週期加權震盪指標，超買超賣不是用來撈頂撈底，背離+突破確認才是正確用法

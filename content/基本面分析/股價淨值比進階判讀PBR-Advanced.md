@@ -1,3 +1,8 @@
+---
+title: "股價淨值比進階判讀 PBR Advanced"
+category: "基本面分析"
+---
+
 # 股價淨值比進階判讀 PBR Advanced
 
 > PBR 不只是「比1大或比1小」，進階用法要懂 PBR×ROE 恆等式、景氣循環股歷史區間法、大盤 PBR 判多空、Tobin's Q 與有形淨值比，才能真正避開價值陷阱

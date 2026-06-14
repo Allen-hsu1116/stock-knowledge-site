@@ -1,3 +1,8 @@
+---
+title: "EP659 — AI基建狂歡與投資反思"
+category: "YouTube頻道"
+---
+
 # EP659 — AI基建狂歡與投資反思
 
 > 伺服器CPU/ASIC全面噴發，但AI Slop泛濫、券商晴天收傘，市場瘋狂中要保持清醒

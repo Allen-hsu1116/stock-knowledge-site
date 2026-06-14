@@ -1,3 +1,8 @@
+---
+title: "或有負債與承諾事項判讀 Contingent Liabilities & Commitments"
+category: "基本面分析"
+---
+
 # 或有負債與承諾事項判讀 Contingent Liabilities & Commitments
 
 > 財報附註裡的隱形炸彈——不看附註，等於矇眼投資

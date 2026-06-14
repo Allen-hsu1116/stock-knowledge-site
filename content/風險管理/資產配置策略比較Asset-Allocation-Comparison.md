@@ -1,3 +1,8 @@
+---
+title: "資產配置策略比較Asset-Allocation-Comparison"
+category: "風險管理"
+---
+
 # 資產配置策略比較Asset-Allocation-Comparison
 
 > 沒有任何策略能在所有市場環境中稱王——五種經典策略的2021-2026實戰回測數據，找到最適合自己風險承受度的「最適」策略

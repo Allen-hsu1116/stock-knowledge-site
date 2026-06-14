@@ -1,4 +1,6 @@
 ---
+title: "Beneish M-Score財報舞弊偵測模型"
+category: "基本面分析"
 source: web
 source_date: 2026-05-12
 ---

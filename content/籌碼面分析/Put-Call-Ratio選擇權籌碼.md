@@ -1,3 +1,8 @@
+---
+title: "Put Call Ratio 選擇權籌碼"
+category: "籌碼面分析"
+---
+
 # Put Call Ratio 選擇權籌碼
 
 > 選擇權賣權/買權比率（PCR），是判讀散戶多空情緒的反向指標，PCR越高代表散戶偏空反而看多，PCR越低代表散戶偏多反而看空。

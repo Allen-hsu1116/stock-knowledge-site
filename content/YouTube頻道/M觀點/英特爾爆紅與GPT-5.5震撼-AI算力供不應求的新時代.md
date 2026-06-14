@@ -1,3 +1,8 @@
+---
+title: "英特爾爆紅與GPT-5.5震撼—AI算力供不應求的新時代"
+category: "YouTube頻道"
+---
+
 # 英特爾爆紅與GPT-5.5震撼—AI算力供不應求的新時代
 
 > Intel EPS 超預期14倍、GPT-5.5登頂智力榜、Agentic AI 讓 CPU 供不應求

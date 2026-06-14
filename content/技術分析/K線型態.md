@@ -1,4 +1,6 @@
 ---
+title: "K線型態"
+category: "技術分析"
 source: memory
 source_date: 2026-04-29
 status: raw_filled

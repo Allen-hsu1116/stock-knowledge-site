@@ -1,3 +1,8 @@
+---
+title: "內外盤比與五檔報價判讀 In-Out Disk Ratio & Order Book"
+category: "技術分析"
+---
+
 # 內外盤比與五檔報價判讀 In-Out Disk Ratio & Order Book
 
 > 內盤是賣方急著賣、外盤是買方急著買——看懂這場多空拔河，就能判斷主力真實動向，識破掛假單騙線

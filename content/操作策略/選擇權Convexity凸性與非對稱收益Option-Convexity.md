@@ -1,3 +1,8 @@
+---
+title: "選擇權Convexity凸性與非對稱收益Option-Convexity"
+category: "操作策略"
+---
+
 # 選擇權Convexity凸性與非對稱收益Option-Convexity
 
 > Long Option = Long Convexity = Long Gamma——賺的時候越賺越多、賠的時候越賠越少，這個非對稱收益就是選擇權最核心的特性，代價是你要付權利金和承受 Theta Decay

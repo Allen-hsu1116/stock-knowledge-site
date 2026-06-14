@@ -1,3 +1,8 @@
+---
+title: "選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced"
+category: "操作策略"
+---
+
 # 選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced
 
 > 單看 Greeks 只是一維風險，組合判讀才是多維雷達——Delta-Gamma 看加速度、Vega-Theta 看時間與波動對賭、四大 Greeks 矩陣選策略、風險限額控管活下來

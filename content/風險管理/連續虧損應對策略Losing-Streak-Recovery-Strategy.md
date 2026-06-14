@@ -1,3 +1,8 @@
+---
+title: "連續虧損應對策略Losing-Streak-Recovery-Strategy"
+category: "風險管理"
+---
+
 # 連續虧損應對策略Losing-Streak-Recovery-Strategy
 
 > 連虧不可怕，可怕的是連虧後心態崩了又加碼——五道防線從接受統計事實到彈簧式減倉，讓你活過最黑暗的連敗期

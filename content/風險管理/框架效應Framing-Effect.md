@@ -1,3 +1,8 @@
+---
+title: "框架效應 Framing Effect"
+category: "風險管理"
+---
+
 # 框架效應 Framing Effect
 
 > 同一件事用不同方式描述，就會讓你做出不同決定——這就是框架效應，交易中無所不在的認知陷阱

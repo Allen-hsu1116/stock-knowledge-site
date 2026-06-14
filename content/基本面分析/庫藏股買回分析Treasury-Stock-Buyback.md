@@ -1,3 +1,8 @@
+---
+title: "庫藏股買回分析Treasury-Stock-Buyback"
+category: "基本面分析"
+---
+
 # 庫藏股買回分析Treasury-Stock-Buyback
 
 > 公司用自有資金買回自家股票，看似利多但動機才是關鍵——註銷提升EPS、轉讓員工激勵、護盤撐股價，三種目的三種解讀，執行率和買回區間才是辨真偽的照妖鏡

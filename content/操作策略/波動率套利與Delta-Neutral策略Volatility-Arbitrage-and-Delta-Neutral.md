@@ -1,4 +1,5 @@
 ---
+category: "操作策略"
 title: 波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral
 created: 2026-05-10
 ---
@@ -256,3 +257,7 @@ Theta 成本 = Theta × 持有天數
 - [Greeks (Finance) - Wikipedia](https://en.wikipedia.org/wiki/Greeks_(finance))
 - [Kelly Criterion - Wikipedia](https://en.wikipedia.org/wiki/Kelly_criterion)
 - 綜合專業知識整理（2026-05-10）
+
+## 實戰應用
+
+實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。

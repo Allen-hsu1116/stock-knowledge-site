@@ -1,3 +1,8 @@
+---
+title: "本益比河流圖 PE Band / PE River Chart"
+category: "基本面分析"
+---
+
 # 本益比河流圖 PE Band / PE River Chart
 
 > 把歷史本益比區間畫成河流，一眼看出股價現在是便宜還是昂貴——但只適用獲利穩定的公司

@@ -1,3 +1,8 @@
+---
+title: "產業生命週期Industry-Life-Cycle"
+category: "基本面分析"
+---
+
 # 產業生命週期Industry-Life-Cycle
 
 > 產業如同生命有生老病死，從導入期到衰退期各有不同的財務特徵與投資對應策略，判斷產業所處階段是基本面選股的第一步。

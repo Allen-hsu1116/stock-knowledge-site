@@ -1,3 +1,8 @@
+---
+title: "羊群效應（Herding Effect）"
+category: "風險管理"
+---
+
 # 羊群效應（Herding Effect）
 
 > 別人買你就買、別人賣你就賣——不獨立思考的代價，就是成為最後接棒的人。

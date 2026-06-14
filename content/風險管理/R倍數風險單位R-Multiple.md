@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: R倍數風險單位R-Multiple
 date: 2026-06-12
 ---

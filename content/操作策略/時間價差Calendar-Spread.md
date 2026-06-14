@@ -1,3 +1,8 @@
+---
+title: "時間價差Calendar Spread"
+category: "操作策略"
+---
+
 # 時間價差Calendar Spread
 
 > 賣近月買遠月，賺Theta差也賺Vega擴張——但要小心波動率收縮和正逆價差變化

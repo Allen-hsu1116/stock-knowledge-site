@@ -1,3 +1,8 @@
+---
+title: "程式交易與主觀交易優劣比較 Systematic vs Discretionary Trading"
+category: "風險管理"
+---
+
 # 程式交易與主觀交易優劣比較 Systematic vs Discretionary Trading
 
 > 程式交易的核心優勢不是取代人腦，而是克服人性「賺小賠大」的本能——但好的主觀交易者才可能發展出成功的程式交易。

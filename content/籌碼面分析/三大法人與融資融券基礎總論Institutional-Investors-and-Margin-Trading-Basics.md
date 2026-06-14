@@ -1,3 +1,8 @@
+---
+title: "三大法人與融資融券基礎總論Institutional-Investors-and-Margin-Trading-Basics"
+category: "籌碼面分析"
+---
+
 # 三大法人與融資融券基礎總論Institutional-Investors-and-Margin-Trading-Basics
 
 > 籌碼面分析的起點：看懂三大法人的操作慣性與融資融券的散戶密碼

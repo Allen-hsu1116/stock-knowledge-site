@@ -1,3 +1,8 @@
+---
+title: "部門別資訊與分部報告判讀 Segment Reporting"
+category: "基本面分析"
+---
+
 # 部門別資訊與分部報告判讀 Segment Reporting
 
 > 合併報表是一塊大餅，部門別資訊是切開後的每一片——看懂每片餅的獲利能力，才能精準估值

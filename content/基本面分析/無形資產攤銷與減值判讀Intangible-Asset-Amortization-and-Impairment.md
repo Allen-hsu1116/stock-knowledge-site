@@ -1,3 +1,8 @@
+---
+title: "無形資產攤銷與減值判讀Intangible-Asset-Amortization-and-Impairment"
+category: "基本面分析"
+---
+
 # 無形資產攤銷與減值判讀Intangible-Asset-Amortization-and-Impairment
 
 > 無形資產攤銷是利潤的「分期付款」，減值是資產的「健康檢查」。兩者性質、時機、方法完全不同，投資人必須區分才能看穿盈餘管理。

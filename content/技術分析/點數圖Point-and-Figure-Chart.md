@@ -1,3 +1,8 @@
+---
+title: "點數圖 Point and Figure Chart"
+category: "技術分析"
+---
+
 # 點數圖 Point and Figure Chart
 
 > 不看時間只看價格的最純粹圖表，用X和O過濾雜訊、凸顯支撐阻力，水平計算找目標價、垂直計算抓反轉點

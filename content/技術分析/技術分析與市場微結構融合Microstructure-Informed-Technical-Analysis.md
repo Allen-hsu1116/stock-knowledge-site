@@ -1,4 +1,5 @@
 ---
+category: "技術分析"
 title: 技術分析與市場微結構融合 Microstructure-Informed Technical Analysis
 date: 2026-06-08
 ---
@@ -190,3 +191,7 @@ date: 2026-06-08
 - O'Hara, M. (1995). *Market Microstructure Theory*
 - Cartea, A., Jaimungal, S., & Penalva, J. (2015). *Algorithmic and High-Frequency Trading*
 - Vo, M.T. (2017). *The Value of Order Flow Data in Technical Analysis* (學術研究)
+
+## 實戰應用
+
+實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。

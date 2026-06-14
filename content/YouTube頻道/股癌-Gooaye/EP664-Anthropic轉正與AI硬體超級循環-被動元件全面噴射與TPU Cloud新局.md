@@ -1,3 +1,8 @@
+---
+title: "EP664 Anthropic轉正與AI硬體超級循環 — 被動元件全面噴射與TPU Cloud新局"
+category: "YouTube頻道"
+---
+
 # EP664 Anthropic轉正與AI硬體超級循環 — 被動元件全面噴射與TPU Cloud新局
 
 > Anthropic首度轉虧為盈，AI硬體投資只會更大不會縮小；被動元件進入全面缺貨噴射階段，TPU外銷3:1比例開啟新競爭格局

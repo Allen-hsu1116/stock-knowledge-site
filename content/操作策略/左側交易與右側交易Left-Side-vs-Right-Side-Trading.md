@@ -1,3 +1,8 @@
+---
+title: "左側交易與右側交易 Left-Side vs Right-Side Trading"
+category: "操作策略"
+---
+
 # 左側交易與右側交易 Left-Side vs Right-Side Trading
 
 > 在轉折點的左邊進場是預測，在右邊進場是確認——選對時機跟選對股票一樣重要

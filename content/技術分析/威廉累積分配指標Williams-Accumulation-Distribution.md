@@ -1,4 +1,5 @@
 ---
+category: "技術分析"
 title: 威廉累積分配指標 Williams Accumulation/Distribution
 date: 2026-05-31
 ---

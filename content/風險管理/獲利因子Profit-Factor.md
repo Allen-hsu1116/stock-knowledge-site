@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: 獲利因子 Profit Factor
 date: 2026-05-30
 ---

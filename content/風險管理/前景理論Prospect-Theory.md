@@ -1,3 +1,8 @@
+---
+title: "前景理論 Prospect Theory"
+category: "風險管理"
+---
+
 # 前景理論 Prospect Theory
 
 > 你的大腦天生虧損厭惡、獲利時落袋為安、虧損時反而冒險——了解這四種偏誤，才能對抗它們。

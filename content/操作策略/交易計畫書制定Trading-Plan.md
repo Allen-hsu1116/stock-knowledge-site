@@ -1,3 +1,8 @@
+---
+title: "交易計畫書制定Trading-Plan"
+category: "操作策略"
+---
+
 # 交易計畫書制定Trading-Plan
 
 > 沒有計畫的交易是賭博，有計畫的交易是投資——四步制定你的交易SOP

@@ -1,3 +1,8 @@
+---
+title: "現金轉換循環Cash Conversion Cycle"
+category: "基本面分析"
+---
+
 # 現金轉換循環Cash Conversion Cycle
 
 > 從付錢買原料到收回貨款的天數，越短代表現金使用效率越高——CCC是存貨周轉天數+應收帳款周轉天數-應付帳款周轉天數

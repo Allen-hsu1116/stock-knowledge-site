@@ -1,3 +1,8 @@
+---
+title: "確認偏誤 Confirmation Bias"
+category: "風險管理"
+---
+
 # 確認偏誤 Confirmation Bias
 
 > 看見你想看見的、相信你想相信的——大腦的自動過濾網，讓交易者只找支持自己觀點的證據，忽略反面訊號

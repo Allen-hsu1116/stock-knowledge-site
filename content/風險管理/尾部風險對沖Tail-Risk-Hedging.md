@@ -1,3 +1,8 @@
+---
+title: "尾部風險對沖 Tail Risk Hedging"
+category: "風險管理"
+---
+
 # 尾部風險對沖 Tail Risk Hedging
 
 > 用選擇權和波動率產品為投資組合買保險，防範極端市場事件的毀滅性打擊。

@@ -1,4 +1,6 @@
 ---
+title: "出場策略總論Exit-Strategy-Overview"
+category: "操作策略"
 source:
 date: 2026-05-16
 ---

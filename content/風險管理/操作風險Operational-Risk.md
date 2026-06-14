@@ -1,3 +1,8 @@
+---
+title: "操作風險 Operational Risk"
+category: "風險管理"
+---
+
 # 操作風險 Operational Risk
 
 > 不在市場漲跌裡，而在你的流程、人員、系統裡——最容易被忽略卻最致命的風險類型

@@ -1,4 +1,6 @@
 ---
+title: "Elder 2%與6%雙重法則"
+category: "風險管理"
 date: 2026-05-15
 ---
 

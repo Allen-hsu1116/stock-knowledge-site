@@ -1,3 +1,8 @@
+---
+title: "代表性啟發法與小數定律 Representativeness Heuristic"
+category: "風險管理"
+---
+
 # 代表性啟發法與小數定律 Representativeness Heuristic
 
 > 用少數特徵快速判斷整體——大腦的快思系統很好用，但在交易中會讓你過度反應、忽視基率、誤判均值回歸

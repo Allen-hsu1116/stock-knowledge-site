@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: 交易前事前驗屍Pre-Mortem-Analysis
 date: 2026-06-12
 ---

@@ -1,4 +1,5 @@
 ---
+category: "技術分析"
 title: 訂單流失衡 OFI (Order Flow Imbalance)
 date: 2026-05-31
 ---

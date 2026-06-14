@@ -1,3 +1,8 @@
+---
+title: "生存者偏差 Survivorship Bias"
+category: "風險管理"
+---
+
 # 生存者偏差 Survivorship Bias
 
 > 你看到的成功者背後有千百個失敗者——投資回測、基金績效、成功學都深受此偏差影響。

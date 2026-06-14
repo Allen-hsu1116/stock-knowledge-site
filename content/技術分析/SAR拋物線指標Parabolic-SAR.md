@@ -1,3 +1,8 @@
+---
+title: "SAR拋物線指標 Parabolic SAR"
+category: "技術分析"
+---
+
 # SAR拋物線指標 Parabolic SAR
 
 > 價格下方的點是多方護城河、價格上方的點是空方城牆——點位翻轉就是趨勢反轉，但它最怕盤整

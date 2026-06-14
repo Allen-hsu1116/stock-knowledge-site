@@ -1,3 +1,8 @@
+---
+title: "威廉碎形 Williams Fractal"
+category: "技術分析"
+---
+
 # 威廉碎形 Williams Fractal
 
 > 用5根K線辨識局部高低點的極簡指標——向上碎形突破做多、向下碎形跌破做空，搭配鱷魚線過濾假訊號是最高勝率組合

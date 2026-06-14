@@ -1,3 +1,8 @@
+---
+title: "Chandelier Exit 吊燈出場指標"
+category: "操作策略"
+---
+
 # Chandelier Exit 吊燈出場指標
 
 > 用 ATR 動態設定追蹤停損的出場指標，像吊燈從最高點懸掛下來，波動大距離遠、波動小距離近，自動適應不同股票的波動性

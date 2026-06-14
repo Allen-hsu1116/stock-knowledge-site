@@ -1,4 +1,5 @@
 ---
+category: "操作策略"
 title: 保護性買權 Protective Call
 date: 2026-06-04
 ---

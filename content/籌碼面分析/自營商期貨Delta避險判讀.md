@@ -1,4 +1,6 @@
 ---
+title: "自營商期貨Delta避險判讀"
+category: "籌碼面分析"
 source: memory
 source_date: 2026-05-17
 status: new

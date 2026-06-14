@@ -1,3 +1,8 @@
+---
+title: "分散投資七法與相關係數 Diversification Seven Methods and Correlation Coefficient"
+category: "風險管理"
+---
+
 # 分散投資七法與相關係數 Diversification Seven Methods and Correlation Coefficient
 
 > 相關係數越低，分散效果越好——但危機時一切相關性趨向1

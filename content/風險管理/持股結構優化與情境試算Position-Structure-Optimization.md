@@ -1,3 +1,8 @@
+---
+title: "持股結構優化與情境試算Position-Structure-Optimization"
+category: "風險管理"
+---
+
 # 持股結構優化與情境試算Position-Structure-Optimization
 
 > 單一持股佔總資產兩成以上就算過重——情境試算告訴你跌 15% 和跌 7% 的心理壓力差距遠不止 8%

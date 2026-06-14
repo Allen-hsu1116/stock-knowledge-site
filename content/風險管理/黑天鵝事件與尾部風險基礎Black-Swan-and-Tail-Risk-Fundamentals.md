@@ -1,3 +1,8 @@
+---
+title: "黑天鵝事件與尾部風險基礎 Black Swan and Tail Risk Fundamentals"
+category: "風險管理"
+---
+
 # 黑天鵝事件與尾部風險基礎 Black Swan and Tail Risk Fundamentals
 
 > 極端事件發生的頻率遠高於常態分佈的預測——你不知道的事比你知道的事更有意義

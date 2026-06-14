@@ -1,3 +1,8 @@
+---
+title: "報復性交易防禦體系Revenge-Trading-Defense"
+category: "風險管理"
+---
+
 # 報復性交易防禦體系Revenge-Trading-Defense
 
 > 報復性交易是帳戶殺手——虧損後急於翻本的衝動讓你越陷越深，四層防禦從心理到紀律到資金到行為全面阻斷惡性循環

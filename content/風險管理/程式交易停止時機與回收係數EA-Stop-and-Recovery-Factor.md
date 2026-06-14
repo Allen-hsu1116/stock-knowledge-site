@@ -1,3 +1,8 @@
+---
+title: "程式交易停止時機與回收係數 EA Stop Timing and Recovery Factor"
+category: "風險管理"
+---
+
 # 程式交易停止時機與回收係數 EA Stop Timing and Recovery Factor
 
 > EA有壽命，超過最大回撤或回收係數恢復期限仍未恢復就是停止訊號——承認策略失效比死撐更安全

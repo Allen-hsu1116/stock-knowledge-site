@@ -1,3 +1,8 @@
+---
+title: "交易對手風險 Counterparty Risk"
+category: "風險管理"
+---
+
 # 交易對手風險 Counterparty Risk
 
 > 對手不認帳，你贏了也拿不到錢——交易前先看對手，再看標的

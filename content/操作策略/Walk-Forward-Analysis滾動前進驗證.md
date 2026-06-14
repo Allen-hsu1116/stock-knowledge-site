@@ -1,3 +1,8 @@
+---
+title: "Walk-Forward Analysis 滾動前進驗證"
+category: "操作策略"
+---
+
 # Walk-Forward Analysis 滾動前進驗證
 
 > 把歷史數據切成訓練和測試窗口，逐步前移——模擬真實交易中的決策過程，戳破「回測完美等於實戰完美」的幻想

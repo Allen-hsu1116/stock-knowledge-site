@@ -1,3 +1,8 @@
+---
+title: "EP668 COMPUTEX觀展心得與RTX Spark市場定位"
+category: "YouTube頻道"
+---
+
 # EP668 COMPUTEX觀展心得與RTX Spark市場定位
 
 > 股癌看完COMPUTEX 2026覺得這是兩三年最喜歡的一屆——從打高空變成現在就能用，RTX Spark搭配Unified Memory讓地端AI筆電有搞頭，CPU Rack需求來自Agentic AI撞牆但優化後用量只會更大不會更小

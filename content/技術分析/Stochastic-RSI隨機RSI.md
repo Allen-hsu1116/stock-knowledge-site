@@ -1,3 +1,8 @@
+---
+title: "Stochastic RSI隨機RSI"
+category: "技術分析"
+---
+
 # Stochastic RSI隨機RSI
 
 > RSI的加速版——對RSI再做一次隨機計算，靈敏度暴增但雜訊也暴增，必須搭配趨勢指標過濾才有實戰價值

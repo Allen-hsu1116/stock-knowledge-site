@@ -1,4 +1,6 @@
 ---
+title: "Chande Kroll Stop 錢德克羅停損指標"
+category: "技術分析"
 date: 2026-05-10
 ---
 

@@ -1,3 +1,8 @@
+---
+title: "財報綜合健康評分法 Comprehensive Financial Health Scoring"
+category: "基本面分析"
+---
+
 # 財報綜合健康評分法 Comprehensive Financial Health Scoring
 
 > 十項指標多維度檢視公司體質，避免單一指標見樹不見林——6分以上才值得深入研究，紅旗出現直接扣2分

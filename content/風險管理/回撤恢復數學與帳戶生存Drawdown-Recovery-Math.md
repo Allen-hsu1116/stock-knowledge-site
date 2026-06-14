@@ -1,3 +1,8 @@
+---
+title: "回撤恢復數學與帳戶生存Drawdown-Recovery-Math"
+category: "風險管理"
+---
+
 # 回撤恢復數學與帳戶生存Drawdown-Recovery-Math
 
 > 跌 20% 只需漲 25% 回本，但跌 50% 需要漲 100%——回撤越深，恢復越難，這是帳戶生存的數學鐵律

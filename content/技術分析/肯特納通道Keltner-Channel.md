@@ -1,3 +1,8 @@
+---
+title: "肯特納通道Keltner-Channel"
+category: "技術分析"
+---
+
 # 肯特納通道Keltner-Channel
 
 > 以EMA為中軌、ATR為通道寬度的趨勢通道指標，結合均線方向與波動率，判斷趨勢強度與進出場時機

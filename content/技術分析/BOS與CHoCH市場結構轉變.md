@@ -1,3 +1,8 @@
+---
+title: "BOS與CHoCH市場結構轉變"
+category: "技術分析"
+---
+
 # BOS與CHoCH市場結構轉變
 
 > BOS確認趨勢延續、CHoCH預告趨勢反轉——讀懂結構突破就是讀懂市場的方向語言

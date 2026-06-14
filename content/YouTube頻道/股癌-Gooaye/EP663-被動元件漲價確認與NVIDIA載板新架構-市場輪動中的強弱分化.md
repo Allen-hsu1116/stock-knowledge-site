@@ -1,3 +1,8 @@
+---
+title: "EP663 被動元件漲價確認與NVIDIA載板新架構-市場輪動中的強弱分化"
+category: "YouTube頻道"
+---
+
 # EP663 被動元件漲價確認與NVIDIA載板新架構-市場輪動中的強弱分化
 
 > Panasonic漲價函證實被動元件上升循環啟動，NVIDIA Blackwell雙拼載板架構帶來新題材，4月噴完後回歸正常輪動行情

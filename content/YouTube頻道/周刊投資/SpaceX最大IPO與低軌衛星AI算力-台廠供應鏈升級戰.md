@@ -1,3 +1,8 @@
+---
+title: "SpaceX最大IPO與低軌衛星AI算力——台廠供應鏈升級戰"
+category: "YouTube頻道"
+---
+
 # SpaceX最大IPO與低軌衛星AI算力——台廠供應鏈升級戰
 
 > SpaceX IPO 被包裝成太空經濟進入資本市場的里程碑，核心不是單純火箭故事，而是 Starlink 現金流、政府合約、低軌衛星通訊與太空 AI 算力共同撐起的新基建敘事。

@@ -1,4 +1,5 @@
 ---
+category: "基本面分析"
 title: Buyback Yield回購殖利率
 date: 2026-06-02
 ---

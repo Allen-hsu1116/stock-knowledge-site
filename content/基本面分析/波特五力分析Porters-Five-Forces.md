@@ -1,3 +1,8 @@
+---
+title: "波特五力分析 Porter's Five Forces"
+category: "基本面分析"
+---
+
 # 波特五力分析 Porter's Five Forces
 
 > 用五種競爭力量拆解產業結構，判斷一個產業值不值得投資——五力越弱，產業越肥，公司越能賺

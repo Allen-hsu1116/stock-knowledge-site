@@ -1,3 +1,8 @@
+---
+title: "Market Profile 市場輪廓 TPO"
+category: "技術分析"
+---
+
 # Market Profile 市場輪廓 TPO
 
 > 用時間密度描繪市場拍賣過程——TPO告訴你市場在哪個價位「花時間討論」，價值區告訴你多數人認同的範圍，IB破位告訴你趨勢是否啟動

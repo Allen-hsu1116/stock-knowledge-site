@@ -1,3 +1,8 @@
+---
+title: "投資組合隱藏成本審計Portfolio-Hidden-Cost-Audit"
+category: "風險管理"
+---
+
 # 投資組合隱藏成本審計Portfolio-Hidden-Cost-Audit
 
 > 成本是投資中唯一確定的負回報——內扣費用、交易滑價、稅務拖累三個黑洞，30年可吃掉近6萬美元的差距

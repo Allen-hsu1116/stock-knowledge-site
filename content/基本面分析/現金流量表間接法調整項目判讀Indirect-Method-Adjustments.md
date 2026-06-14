@@ -1,3 +1,8 @@
+---
+title: "現金流量表間接法調整項目判讀 Indirect Method Adjustments"
+category: "基本面分析"
+---
+
 # 現金流量表間接法調整項目判讀 Indirect Method Adjustments
 
 > 從稅後淨利調整回營業現金流的每一個項目都是盈餘品質的照妖鏡——折舊加回不是現金、應收帳款暴增是紅旗、營運資金變動方向比金額更重要

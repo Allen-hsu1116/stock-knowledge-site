@@ -1,3 +1,8 @@
+---
+title: "股票面額與無面額股票判讀Par-Value-and-No-Par-Value-Stock"
+category: "基本面分析"
+---
+
 # 股票面額與無面額股票判讀Par-Value-and-No-Par-Value-Stock
 
 > 面額是會計記錄單位，跟股價沒關係；面額高低只影響股本與資本公積的數字分配，不影響股東權益總額

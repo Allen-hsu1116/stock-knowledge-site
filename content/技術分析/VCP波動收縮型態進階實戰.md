@@ -1,3 +1,8 @@
+---
+title: "VCP波動收縮型態進階實戰"
+category: "技術分析"
+---
+
 # VCP波動收縮型態進階實戰
 
 > 馬克·米奈爾維尼的「聖盃」型態，透過供需法則找到賣壓耗盡的樞紐買點
@@ -118,3 +123,7 @@ PowerSqueeze 由 John Carter 提出 Squeeze 概念，經 Growin 團隊改良，�
 
 - [VCP型態選股方法 - 市場先生](../raw/2026-05-11/VCP型態選股方法與SEPA策略.md)
 - [VCP實例操作PowerSqueeze - Growin Blog](../raw/2026-05-11/VCP實例操作PowerSqueeze指標搭配.md)
+
+## 實戰應用
+
+實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。

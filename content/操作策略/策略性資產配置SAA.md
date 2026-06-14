@@ -1,4 +1,5 @@
 ---
+category: "操作策略"
 title: 策略性資產配置 SAA
 date: 2026-06-14
 ---

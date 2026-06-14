@@ -1,3 +1,8 @@
+---
+title: "MACD指標實戰判讀 Moving Average Convergence Divergence"
+category: "技術分析"
+---
+
 # MACD指標實戰判讀 Moving Average Convergence Divergence
 
 > MACD是動能趨勢指標之王，DIF快線看動能方向、DEA慢線確認訊號、柱狀圖視覺化強弱，零軸分多空、金叉死叉找時機、背離抓反轉，但盤整時完全失效

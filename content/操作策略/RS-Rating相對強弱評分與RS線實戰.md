@@ -1,3 +1,8 @@
+---
+title: "RS Rating相對強弱評分與RS線實戰"
+category: "操作策略"
+---
+
 # RS Rating相對強弱評分與RS線實戰
 
 > RS Rating是股市的PR值——量化個股在全市場中的強弱排名，RS 80以上才是合格的領漲股候選，RS線突破新高是最強看漲訊號

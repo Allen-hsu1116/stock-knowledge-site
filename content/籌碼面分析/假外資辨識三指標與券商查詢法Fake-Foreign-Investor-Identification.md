@@ -1,3 +1,8 @@
+---
+title: "假外資辨識三指標與券商查詢法Fake-Foreign-Investor-Identification"
+category: "籌碼面分析"
+---
+
 # 假外資辨識三指標與券商查詢法Fake-Foreign-Investor-Identification
 
 > 假外資製造的買超訊號正是設計來吸引你的，看到外資買超先別急著跟

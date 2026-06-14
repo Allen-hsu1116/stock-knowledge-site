@@ -1,3 +1,8 @@
+---
+title: "訂單流足跡圖 Footprint Chart"
+category: "技術分析"
+---
+
 # 訂單流足跡圖 Footprint Chart
 
 > 把K線拆開看——每個價位上買方和賣方到底誰在主導，足跡圖讓你透視K線內部的真實交易博弈

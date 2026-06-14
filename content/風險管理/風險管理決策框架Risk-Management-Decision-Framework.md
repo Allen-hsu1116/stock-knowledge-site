@@ -1,3 +1,8 @@
+---
+title: "風險管理決策框架 Risk Management Decision Framework"
+category: "風險管理"
+---
+
 # 風險管理決策框架 Risk Management Decision Framework
 
 > 遇到風險時不是問「該怎麼避」，而是先問「我願意承受多少、承受什麼類型」，然後選擇對應的工具——這才是系統化的風險管理

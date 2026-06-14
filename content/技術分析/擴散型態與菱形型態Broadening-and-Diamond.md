@@ -1,4 +1,5 @@
 ---
+category: "技術分析"
 title: 擴散型態與菱形型態 Broadening and Diamond
 ---
 

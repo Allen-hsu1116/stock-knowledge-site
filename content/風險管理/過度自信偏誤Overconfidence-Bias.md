@@ -1,3 +1,8 @@
+---
+title: "過度自信偏誤 Overconfidence Bias"
+category: "風險管理"
+---
+
 # 過度自信偏誤 Overconfidence Bias
 
 > 覺得自己比市場聰明，是虧損最快的捷徑。

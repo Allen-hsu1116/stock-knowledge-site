@@ -1,3 +1,8 @@
+---
+title: "回撤持續時間 Drawdown Duration"
+category: "風險管理"
+---
+
 # 回撤持續時間 Drawdown Duration
 
 > 回撤多久才恢復？持續時間比幅度更折磨人

@@ -1,4 +1,6 @@
 ---
+title: "財報窗飾辨識Window-Dressing-Detection"
+category: "基本面分析"
 source: https://www.fishhuang.idv.tw/2022/08/Financial-Statement-Analysis-37-window-decoration-and-scam.html
 source_date: 2026-05-17
 status: raw_available

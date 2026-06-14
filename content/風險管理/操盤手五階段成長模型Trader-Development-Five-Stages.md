@@ -1,3 +1,8 @@
+---
+title: "操盤手五階段成長模型 Trader Development Five Stages"
+category: "風險管理"
+---
+
 # 操盤手五階段成長模型 Trader Development Five Stages
 
 > 只有5%的人能走完五個階段——原因不是能力，是堅持與改變自己的能力。

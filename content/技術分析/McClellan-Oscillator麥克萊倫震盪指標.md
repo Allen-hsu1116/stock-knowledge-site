@@ -1,4 +1,6 @@
 ---
+title: "McClellan Oscillator麥克萊倫震盪指標"
+category: "技術分析"
 date: 2026-05-18
 ---
 
@@ -157,3 +159,7 @@ McClellan Oscillator的累計版本：
 - [McClellan Summation Index - StockCharts ChartSchool](../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)
 - [市場寬度 - Finetic](../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)
 - [TRIN 交易者指數 - taindicators](../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)
+
+## 實戰應用
+
+實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。

@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: "Ulcer Index潰瘍指數與Martin Ratio"
 date: 2026-06-13
 ---

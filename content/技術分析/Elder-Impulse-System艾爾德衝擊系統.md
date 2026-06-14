@@ -1,4 +1,5 @@
 ---
+category: "技術分析"
 title: Elder Impulse System 艾爾德衝擊系統
 date: 2026-05-18
 ---

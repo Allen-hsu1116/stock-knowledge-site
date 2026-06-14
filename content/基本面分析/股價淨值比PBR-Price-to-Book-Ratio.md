@@ -1,3 +1,8 @@
+---
+title: "股價淨值比 PBR Price-to-Book Ratio"
+category: "基本面分析"
+---
+
 # 股價淨值比 PBR Price-to-Book Ratio
 
 > 股價是淨值的幾倍，PBR < 1 不代表撿到便宜，要搭配 ROE 才能分辨真便宜和假便宜

@@ -1,3 +1,8 @@
+---
+title: "資產減損判讀 Impairment of Assets"
+category: "基本面分析"
+---
+
 # 資產減損判讀 Impairment of Assets
 
 > 資產帳面價值超過可回收金額就要減損——減損是一次性認列的「還債」，但管理層有動機延後認列，看懂減損訊號是避免踩雷的關鍵

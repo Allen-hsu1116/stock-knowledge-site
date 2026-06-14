@@ -1,4 +1,6 @@
 ---
+title: "調整後EPS扣除非經常性損益Adjusted-EPS"
+category: "基本面分析"
 source: https://rich01.com/what-is-adjusted-eps/
 source_date: 2026-05-17
 status: raw_available

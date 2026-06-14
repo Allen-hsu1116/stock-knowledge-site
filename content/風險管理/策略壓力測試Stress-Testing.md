@@ -1,3 +1,8 @@
+---
+title: "策略壓力測試 Stress Testing"
+category: "風險管理"
+---
+
 # 策略壓力測試 Stress Testing
 
 > 不測壓力就上線，等於蒙眼開車——用極端情境檢驗策略是否能在風暴中存活

@@ -1,3 +1,8 @@
+---
+title: "EP309 Google租xAI算力、微軟NAI模型、股市修正終於來了嗎"
+category: "YouTube頻道"
+---
+
 # EP309 Google租xAI算力、微軟NAI模型、股市修正終於來了嗎
 
 > Google租xAI的11萬顆GPU月付9.2億美元，xAI年收260億美元成Neocloud一哥；微軟NAI Thinking One不用蒸餾就打敗Claude Sonnet，通路商自有品牌策略；台股美股修正屬多頭修正非泡沫崩壞。

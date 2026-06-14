@@ -1,3 +1,8 @@
+---
+title: "特別股與普通股差異判讀 Preferred Stock vs Common Stock"
+category: "基本面分析"
+---
+
 # 特別股與普通股差異判讀 Preferred Stock vs Common Stock
 
 > 特別股是兼具債券與股票特性的混合型證券，配息固定優先、清償順位高於普通股，但通常無表決權，適合追求穩定收益的長期投資人

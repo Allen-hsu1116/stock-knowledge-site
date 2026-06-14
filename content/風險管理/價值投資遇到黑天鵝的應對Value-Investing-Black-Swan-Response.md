@@ -1,3 +1,8 @@
+---
+title: "價值投資遇到黑天鵝的應對 Value Investing Black Swan Response"
+category: "風險管理"
+---
+
 # 價值投資遇到黑天鵝的應對 Value Investing Black Swan Response
 
 > 黑天鵝不是價值投資者的敵人——資金過度集中才是。分散投資＋預留現金＝黑天鵝下的生存法則

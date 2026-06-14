@@ -1,3 +1,8 @@
+---
+title: "交易紀律量化系統 Rule Adherence Score"
+category: "風險管理"
+---
+
 # 交易紀律量化系統 Rule Adherence Score
 
 > 把紀律從「靠意志力」變成「可量化的數字」——每週計算規則遵循率，用數據證明守規則比不守規則賺更多。

@@ -1,3 +1,8 @@
+---
+title: "Bill Williams 五維交易系統進階實戰"
+category: "技術分析"
+---
+
 # Bill Williams 五維交易系統進階實戰
 
 > 混沌交易法五維指標（鱷魚線、碎形、AO、AC、MFI）的系統化整合策略，從趨勢判斷到進場加碼出場的完整交易流程。
@@ -197,3 +202,7 @@ MFI = (最高價 - 最低價) / 成交量，與成交量結合判斷市場真實
 - [Fractals trading and how to use the Alligator - Tradeciety](https://tradeciety.com/fractals-trading-use-alligator-williams-chaos-theory)
 - [The Chaos Theory of Bill Williams - FBS](https://fbs.com/fbs-academy/trading-tutorials/trading-handbook/bill-williams-s-theory)
 - [鱷魚線Alligator指標與碎形交易](../raw/2026-05-16/鱷魚線Alligator指標與碎形交易.md)
+
+## 實戰應用
+
+實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。

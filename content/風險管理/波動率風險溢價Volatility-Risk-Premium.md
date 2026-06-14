@@ -1,3 +1,8 @@
+---
+title: "波動率風險溢價 Volatility Risk Premium"
+category: "風險管理"
+---
+
 # 波動率風險溢價 Volatility Risk Premium
 
 > IV系統性高於RV的溢價，是選擇權賣方長期獲利的理論基礎，也是承擔尾部風險的補償

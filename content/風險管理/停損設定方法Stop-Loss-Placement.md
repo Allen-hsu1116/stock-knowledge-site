@@ -1,3 +1,8 @@
+---
+title: "停損設定方法Stop-Loss-Placement"
+category: "風險管理"
+---
+
 # 停損設定方法Stop-Loss-Placement
 
 > 停損不是保護單筆交易，而是保護整個帳戶——設定在「想法失效」的地方，而非任意數字

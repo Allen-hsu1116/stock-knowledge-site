@@ -1,3 +1,8 @@
+---
+title: "FVG 公允價值缺口 (Fair Value Gap)"
+category: "技術分析"
+---
+
 # FVG 公允價值缺口 (Fair Value Gap)
 
 > 三根K線之間的價格真空帶，機構快速進場的證據，價格傾向回測失衡區重新平衡

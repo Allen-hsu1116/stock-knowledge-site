@@ -1,3 +1,8 @@
+---
+title: "ATR平均真實波幅 Average True Range"
+category: "技術分析"
+---
+
 # ATR平均真實波幅 Average True Range
 
 > 衡量市場波動程度的無方向性指標，波動大停損大、波動小停損小，是動態停損停利和部位控制的基礎工具

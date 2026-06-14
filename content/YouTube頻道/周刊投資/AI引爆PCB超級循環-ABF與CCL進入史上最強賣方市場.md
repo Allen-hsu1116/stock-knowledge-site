@@ -1,3 +1,8 @@
+---
+title: "AI引爆PCB超級循環：ABF與CCL進入史上最強賣方市場"
+category: "YouTube頻道"
+---
+
 # AI引爆PCB超級循環：ABF與CCL進入史上最強賣方市場
 
 > AI伺服器驅動PCB/ABF/CCL超級循環，需求從手機筆電轉向AI運算全面驅動，ABF載板再現賣方市場AI大廠付預約費鎖產能，臻鼎資本支出一個月從300億暴增至800億，mSAP製程成高階PCB關鍵技術

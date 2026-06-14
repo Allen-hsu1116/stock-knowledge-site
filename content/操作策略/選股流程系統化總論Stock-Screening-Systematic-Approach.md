@@ -1,3 +1,8 @@
+---
+title: "選股流程系統化總論 Stock Screening Systematic Approach"
+category: "操作策略"
+---
+
 # 選股流程系統化總論 Stock Screening Systematic Approach
 
 > 選股不是憑感覺，是一套可重複執行的系統：從因子尋找→效果驗證→條件設定→多因子組合，每一步都有SOP

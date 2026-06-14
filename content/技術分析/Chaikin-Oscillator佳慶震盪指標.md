@@ -1,3 +1,8 @@
+---
+title: "Chaikin Oscillator 佳慶震盪指標"
+category: "技術分析"
+---
+
 # Chaikin Oscillator 佳慶震盪指標
 
 > A/D線的「MACD版」——用兩條EMA的差值偵測資金動能轉折，背離訊號比交叉更可靠，是CMF的震盪兄弟指標

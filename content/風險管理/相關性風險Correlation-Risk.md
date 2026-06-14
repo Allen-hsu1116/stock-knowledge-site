@@ -1,3 +1,8 @@
+---
+title: "相關性風險 Correlation Risk"
+category: "風險管理"
+---
+
 # 相關性風險 Correlation Risk
 
 > 平時不相關的資產在危機時全部一起跌——多樣化在你最需要它的時候失效，這就是相關性風險

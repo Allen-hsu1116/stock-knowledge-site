@@ -1,3 +1,8 @@
+---
+title: "平均K線Heikin-Ashi"
+category: "技術分析"
+---
+
 # 平均K線Heikin-Ashi
 
 > 用平均價格繪製的平滑K線圖，過濾市場噪音讓趨勢一目了然，是趨勢追隨者的好幫手。

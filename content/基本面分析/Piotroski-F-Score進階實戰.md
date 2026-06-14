@@ -1,4 +1,6 @@
 ---
+title: "Piotroski F-Score 進階實戰"
+category: "基本面分析"
 source: raw/2026-05-12/Piotroski-F-Score-進階實戰.md
 source_date: 2026-05-12
 status: compiled

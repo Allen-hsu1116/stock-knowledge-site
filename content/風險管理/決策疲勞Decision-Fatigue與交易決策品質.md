@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: 決策疲勞Decision-Fatigue與交易決策品質
 created: 2026-05-15
 topic: 風險管理

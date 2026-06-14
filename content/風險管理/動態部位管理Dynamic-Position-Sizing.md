@@ -1,3 +1,8 @@
+---
+title: "動態部位管理 Dynamic Position Sizing"
+category: "風險管理"
+---
+
 # 動態部位管理 Dynamic Position Sizing
 
 > 不是固定2%走天下——根據市場波動度、策略勝率和帳戶狀態動態調整部位大小，讓風險永遠在控制之中。

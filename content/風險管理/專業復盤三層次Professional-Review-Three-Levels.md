@@ -1,3 +1,8 @@
+---
+title: "專業復盤三層次Professional-Review-Three-Levels"
+category: "風險管理"
+---
+
 # 專業復盤三層次Professional-Review-Three-Levels
 
 > 單筆復盤只解眼前問題，系統復盤才挖出重複錯誤——三層次從市場全景到單筆到系統分析，讓復盤真正改變你的交易

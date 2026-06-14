@@ -1,3 +1,8 @@
+---
+title: "漩渦指標 Vortex Indicator (VI)"
+category: "技術分析"
+---
+
 # 漩渦指標 Vortex Indicator (VI)
 
 > 從流體力學漩渦概念轉化的趨勢能量指標，VI+與VI-的開口擴大才是真趨勢，糾纏就是盤整

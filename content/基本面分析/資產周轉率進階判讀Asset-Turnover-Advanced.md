@@ -1,3 +1,8 @@
+---
+title: "資產周轉率進階判讀Asset-Turnover-Advanced"
+category: "基本面分析"
+---
+
 # 資產周轉率進階判讀Asset-Turnover-Advanced
 
 > 資產周轉率是杜邦分析三因子中的「效率因子」，同樣的淨利率下，周轉率越高ROE越高——看懂周轉率才能分辨公司是靠利潤還是靠效率賺錢

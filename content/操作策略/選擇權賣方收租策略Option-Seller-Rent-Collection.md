@@ -1,3 +1,8 @@
+---
+title: "選擇權賣方收租策略Option-Seller-Rent-Collection"
+category: "操作策略"
+---
+
 # 選擇權賣方收租策略Option-Seller-Rent-Collection
 
 > 賣出選擇權收取權利金就像當房東收租——價差單鎖定風險、週選加速時間衰減，用小資金穩定賺取時間價值的策略系統

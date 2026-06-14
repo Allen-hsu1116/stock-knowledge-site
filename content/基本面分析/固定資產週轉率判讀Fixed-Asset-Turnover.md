@@ -1,3 +1,8 @@
+---
+title: "固定資產週轉率判讀Fixed-Asset-Turnover"
+category: "基本面分析"
+---
+
 # 固定資產週轉率判讀Fixed-Asset-Turnover
 
 > 固定資產每1元能創造多少營收——資本密集產業的效率溫度計，太高可能投資不足，太低可能資產閒置

@@ -1,3 +1,8 @@
+---
+title: "葛蘭碧八大法則 Granville's 8 Rules"
+category: "技術分析"
+---
+
 # 葛蘭碧八大法則 Granville's 8 Rules
 
 > 只看股價和一條均線，就能找到四大買點與四大賣點——均線操作最經典的進出場法則。
@@ -155,3 +160,7 @@
 
 - [葛蘭碧八大法則圖解（學吧LearningPa）](../raw/2026-05-17/葛蘭碧八大法則.md)
 - [OANDA 葛蘭碧八大法則](https://www.oanda.com/bvi-ft/lab-education/technical_analysis/moving_average-granvilles_law/)
+
+## 實戰應用
+
+實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。

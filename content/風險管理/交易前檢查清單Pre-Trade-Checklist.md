@@ -1,3 +1,8 @@
+---
+title: "交易前檢查清單Pre-Trade-Checklist"
+category: "風險管理"
+---
+
 # 交易前檢查清單Pre-Trade-Checklist
 
 > 進場前的系統化檢查流程，確保每筆交易都有明確的理由、風險、出場計畫，用紀律取代衝動。

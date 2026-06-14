@@ -1,4 +1,5 @@
 ---
+category: "操作策略"
 title: 崩盤換股策略 Crash Rotation Strategy
 date: 2026-05-16
 ---

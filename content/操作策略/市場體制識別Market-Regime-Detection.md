@@ -1,4 +1,5 @@
 ---
+category: "操作策略"
 title: 市場體制識別 Market Regime Detection
 created: 2026-05-09
 ---

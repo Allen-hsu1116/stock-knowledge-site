@@ -1,3 +1,8 @@
+---
+title: "VSA成交量價差分析 Volume Spread Analysis"
+category: "技術分析"
+---
+
 # VSA成交量價差分析 Volume Spread Analysis
 
 > 從成交量、價差、收盤位置三維判讀聰明錢的真實意圖，是威科夫方法的量化實戰版，六種核心型態辨識主力吸籌與出貨

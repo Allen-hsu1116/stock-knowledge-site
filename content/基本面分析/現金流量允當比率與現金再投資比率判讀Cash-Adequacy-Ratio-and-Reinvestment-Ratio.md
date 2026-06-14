@@ -1,3 +1,8 @@
+---
+title: "現金流量允當比率與現金再投資比率判讀Cash-Adequacy-Ratio-and-Reinvestment-Ratio"
+category: "基本面分析"
+---
+
 # 現金流量允當比率與現金再投資比率判讀Cash-Adequacy-Ratio-and-Reinvestment-Ratio
 
 > 現金流量允當比率衡量公司靠自身現金流支應支出的能力，現金再投資比率衡量扣除股利後可用於再投資的現金佔比，二者搭配債務保障比率構成現金流品質的三大核心指標

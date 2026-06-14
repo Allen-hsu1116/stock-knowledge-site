@@ -1,3 +1,8 @@
+---
+title: "斷頭強制平倉 Forced Liquidation"
+category: "風險管理"
+---
+
 # 斷頭強制平倉 Forced Liquidation
 
 > 被斷頭不是運氣差，是保證金管理失敗——槓桿交易的終極風險

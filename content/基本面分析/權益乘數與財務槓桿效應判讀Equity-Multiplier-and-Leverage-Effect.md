@@ -1,3 +1,8 @@
+---
+title: "權益乘數與財務槓桿效應判讀 Equity Multiplier & Leverage Effect"
+category: "基本面分析"
+---
+
 # 權益乘數與財務槓桿效應判讀 Equity Multiplier & Leverage Effect
 
 > 杜邦分析的「財務效率因子」——每1元股東權益撬動多少資產，看懂槓桿放大獲利也放大虧損的雙面刃

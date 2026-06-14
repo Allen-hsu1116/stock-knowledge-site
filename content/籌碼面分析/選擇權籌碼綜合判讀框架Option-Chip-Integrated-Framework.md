@@ -1,3 +1,8 @@
+---
+title: "選擇權籌碼綜合判讀框架Option-Chip-Integrated-Framework"
+category: "籌碼面分析"
+---
+
 # 選擇權籌碼綜合判讀框架Option-Chip-Integrated-Framework
 
 > 系統化整合選擇權五大籌碼工具（P/C Ratio、支撐壓力表、法人OI、交易人區隔、OI增減流動），建立每日判讀SOP與多空訊號交叉確認機制。

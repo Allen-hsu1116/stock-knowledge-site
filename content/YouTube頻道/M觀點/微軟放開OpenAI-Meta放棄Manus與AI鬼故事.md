@@ -1,3 +1,8 @@
+---
+title: "微軟放開OpenAI、Meta放棄Manus、AI又有鬼故事"
+category: "YouTube頻道"
+---
+
 # 微軟放開OpenAI、Meta放棄Manus、AI又有鬼故事
 
 > 微軟放棄 OpenAI 獨家服務權換取永久優先推出+成本優勢，AI Infra 下殺是買點

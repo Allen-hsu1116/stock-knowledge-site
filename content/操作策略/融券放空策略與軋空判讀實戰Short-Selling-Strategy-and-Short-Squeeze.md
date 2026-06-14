@@ -1,3 +1,8 @@
+---
+title: "融券放空策略與軋空判讀實戰Short-Selling-Strategy-and-Short-Squeeze"
+category: "操作策略"
+---
+
 # 融券放空策略與軋空判讀實戰Short-Selling-Strategy-and-Short-Squeeze
 
 > 融券放空是「獲利有限、風險無限」的逆向操作，成本計算、維持率管理、軋空判讀三者缺一不可，放空不是看對方向就能賺，而是看對方向且活到方向兌現

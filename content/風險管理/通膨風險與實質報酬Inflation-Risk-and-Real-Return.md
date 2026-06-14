@@ -1,3 +1,8 @@
+---
+title: "通膨風險與實質報酬 Inflation Risk and Real Return"
+category: "風險管理"
+---
+
 # 通膨風險與實質報酬 Inflation Risk and Real Return
 
 > 通膨是投資的隱形稅——你的名義報酬看起來很美，扣掉通膨才知道真正賺了多少

@@ -1,3 +1,8 @@
+---
+title: "OpenAI上市與蘋果AI翻身戰——IPO超級浪潮與中期回檔的辨讀"
+category: "YouTube頻道"
+---
+
 # OpenAI上市與蘋果AI翻身戰——IPO超級浪潮與中期回檔的辨讀
 
 > 美股強彈但多空分歧加劇：OpenAI/SpaceX/Anthropic三大IPO吸走4兆美元資金，蘋果WWDC推出新Siri但市場不買單，高利率壓力下七巨頭vs無獲利科技股出現K型分化

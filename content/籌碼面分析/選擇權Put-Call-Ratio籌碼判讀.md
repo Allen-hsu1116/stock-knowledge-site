@@ -1,3 +1,8 @@
+---
+title: "選擇權Put-Call-Ratio籌碼判讀"
+category: "籌碼面分析"
+---
+
 # 選擇權Put-Call-Ratio籌碼判讀
 
 > 透過選擇權 Put/Call Ratio 判讀市場多空情緒與支撐壓力區，是籌碼面分析的重要工具，更是恐懼與貪婪指數的核心因子。

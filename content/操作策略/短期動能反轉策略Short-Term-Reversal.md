@@ -1,3 +1,8 @@
+---
+title: "短期動能反轉策略Short-Term-Reversal"
+category: "操作策略"
+---
+
 # 短期動能反轉策略Short-Term-Reversal
 
 > 過去一週到一個月漲最多的股票接下來容易跌、跌最多的容易漲——市場對訊息過度反應，短期價格偏離均衡後回歸

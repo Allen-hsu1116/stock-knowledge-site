@@ -1,3 +1,8 @@
+---
+title: "PowerSqueeze指標 波動收縮能量偵測"
+category: "技術分析"
+---
+
 # PowerSqueeze指標 波動收縮能量偵測
 
 > 布林通道+肯特納通道組合指標，快速篩選波動收縮股，搭配VCP型態提高選股效率

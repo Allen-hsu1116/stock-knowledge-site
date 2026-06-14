@@ -1,3 +1,8 @@
+---
+title: "法人預估EPS與共識預期Consensus-EPS"
+category: "基本面分析"
+---
+
 # 法人預估EPS與共識預期Consensus-EPS
 
 > 共識EPS是市場對未來的集體預期——超預期大漲、不如預期大跌，關鍵是預期差而非絕對值

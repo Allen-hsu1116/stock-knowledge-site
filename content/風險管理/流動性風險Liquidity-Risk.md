@@ -1,3 +1,8 @@
+---
+title: "流動性風險 Liquidity Risk"
+category: "風險管理"
+---
+
 # 流動性風險 Liquidity Risk
 
 > 想賣的時候賣不掉，就是流動性風險——不只是理論，是散戶最容易忽略的致命陷阱

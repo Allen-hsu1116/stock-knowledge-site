@@ -1,3 +1,8 @@
+---
+title: "內部大戶理論 Internal Major Shareholder Theory"
+category: "籌碼面分析"
+---
+
 # 內部大戶理論 Internal Major Shareholder Theory
 
 > 用集保股權分散表減去三大法人，推算非法人大戶的持股變化，跟著最了解公司的人下注

@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: 流動性風險量化衡量與流動性調整VaR Liquidity-Adjusted VaR
 ---
 

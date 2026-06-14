@@ -1,3 +1,8 @@
+---
+title: "交易系統魯棒性 Robustness of Trading System"
+category: "風險管理"
+---
+
 # 交易系統魯棒性 Robustness of Trading System
 
 > 策略在面對未知環境和參數變化時仍能合理表現的能力——回測績效好是必要條件，魯棒性才是實盤生存的關鍵

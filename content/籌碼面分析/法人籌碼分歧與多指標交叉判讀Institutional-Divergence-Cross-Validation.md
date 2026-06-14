@@ -1,3 +1,8 @@
+---
+title: "法人籌碼分歧與多指標交叉判讀Institutional-Divergence-Cross-Validation"
+category: "籌碼面分析"
+---
+
 # 法人籌碼分歧與多指標交叉判讀Institutional-Divergence-Cross-Validation
 
 > 當三大法人方向不一致時，不要猜誰對，等結果出來再動

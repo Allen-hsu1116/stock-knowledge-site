@@ -1,3 +1,8 @@
+---
+title: "樺漢大轉機：從雲端走向邊緣運算與AI落地應用"
+category: "YouTube頻道"
+---
+
 # 樺漢大轉機：從雲端走向邊緣運算與AI落地應用
 
 > 樺漢科技(6414)董事長朱富賢在COMPUTEX 2026受訪，揭示從生成式AI走向實體AI(Physical AI)的戰略轉型：NVIDIA Jetson平台16路攝影機即時辨識、地端大模型免連網運算、AI POS語音點餐、AI Avatar客服——邊緣運算是AI落地的最後一哩。

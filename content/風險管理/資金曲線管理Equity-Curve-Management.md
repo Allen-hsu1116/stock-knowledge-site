@@ -1,3 +1,8 @@
+---
+title: "資金曲線管理 Equity Curve Management"
+category: "風險管理"
+---
+
 # 資金曲線管理 Equity Curve Management
 
 > 資金曲線是交易帳戶的生命跡象圖——平滑曲線代表紀律，鋸齒曲線代表失控；管理資金曲線不是追求最漂亮的曲線，而是在虧損時自動降速、在恢復時穩健加速。

@@ -1,3 +1,8 @@
+---
+title: "Impulse-MACD改良型MACD指標"
+category: "技術分析"
+---
+
 # Impulse-MACD改良型MACD指標
 
 > LazyBear 開發的改良型 MACD，用零延遲 DEMA 替代 EMA，搭配 SMMA 高低價通道判斷趨勢衝量，過濾盤整雜訊

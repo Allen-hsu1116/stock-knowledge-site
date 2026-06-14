@@ -1,3 +1,8 @@
+---
+title: "交易期望值Trading Expectancy"
+category: "風險管理"
+---
+
 # 交易期望值Trading Expectancy
 
 > 期望值是交易系統的靈魂——正值期望值讓你長期獲利，負值讓你必然虧損，勝率和風險報酬比缺一不可

@@ -1,3 +1,8 @@
+---
+title: "VaR風險值Value-at-Risk"
+category: "風險管理"
+---
+
 # VaR風險值Value-at-Risk
 
 > 在給定置信水平和持有期間下，資產或投資組合可能遭受的最大損失——風險管理的通用語言

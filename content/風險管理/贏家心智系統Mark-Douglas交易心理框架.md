@@ -1,3 +1,8 @@
+---
+title: "贏家心智系統 Mark Douglas交易心理框架"
+category: "風險管理"
+---
+
 # 贏家心智系統 Mark Douglas交易心理框架
 
 > 交易之道：攻心為上，技術次之——Mark Douglas的機率思考框架，讓你從「必須對」解脫到「任何事都可能發生」

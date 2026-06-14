@@ -1,3 +1,8 @@
+---
+title: "保證金追繳與融資斷頭 Margin Call and Forced Liquidation"
+category: "風險管理"
+---
+
 # 保證金追繳與融資斷頭 Margin Call and Forced Liquidation
 
 > 融資維持率低於130%觸發追繳令，T+2不補就T+3強制斷頭——槓桿的代價是失去控制權

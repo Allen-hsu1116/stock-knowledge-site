@@ -1,4 +1,5 @@
 ---
+category: "技術分析"
 title: Schaff Trend Cycle 沙夫趨勢週期指標
 date: 2026-05-18
 ---

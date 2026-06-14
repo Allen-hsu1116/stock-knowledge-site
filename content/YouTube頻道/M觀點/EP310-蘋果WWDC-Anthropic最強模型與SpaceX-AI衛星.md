@@ -1,3 +1,8 @@
+---
+title: "EP310 蘋果WWDC、Anthropic最強模型與SpaceX AI衛星——端側AI到太空資料中心"
+category: "YouTube頻道"
+---
+
 # EP310 蘋果WWDC、Anthropic最強模型與SpaceX AI衛星——端側AI到太空資料中心
 
 > M觀點把本集拆成三條科技主線：蘋果用 Google 技術補 AI 作業、Anthropic 新模型靠高價與安全控管重回前沿模型王座，SpaceX AI-1 衛星則讓太空資料中心從故事變成可驗證的工程題。

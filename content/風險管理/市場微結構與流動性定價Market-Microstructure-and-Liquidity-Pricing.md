@@ -1,3 +1,8 @@
+---
+title: "市場微結構與流動性定價 Market Microstructure and Liquidity Pricing"
+category: "風險管理"
+---
+
 # 市場微結構與流動性定價 Market Microstructure and Liquidity Pricing
 
 > 看懂訂單簿的形狀，你就知道流動性值多少錢——價差不是成本，是資訊

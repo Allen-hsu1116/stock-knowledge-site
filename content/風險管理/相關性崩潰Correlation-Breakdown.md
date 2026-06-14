@@ -1,3 +1,8 @@
+---
+title: "相關性崩潰 Correlation Breakdown"
+category: "風險管理"
+---
+
 # 相關性崩潰 Correlation Breakdown
 
 > 當你以為分散投資能保護你，市場告訴你：危機時所有資產一起跌——相關性在你最需要保護的時刻崩潰到1

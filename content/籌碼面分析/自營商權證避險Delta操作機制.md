@@ -1,4 +1,6 @@
 ---
+title: "自營商權證避險Delta操作機制"
+category: "籌碼面分析"
 source: memory
 source_date: 2026-04-29
 status: raw_linked

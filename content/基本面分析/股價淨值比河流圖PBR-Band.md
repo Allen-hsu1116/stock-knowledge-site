@@ -1,3 +1,8 @@
+---
+title: "股價淨值比河流圖 PBR Band / PBR River Chart"
+category: "基本面分析"
+---
+
 # 股價淨值比河流圖 PBR Band / PBR River Chart
 
 > 把歷史股價淨值比區間畫成河流，一眼看出股價是便宜還是昂貴——特別適用景氣循環股和獲利不穩定公司

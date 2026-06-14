@@ -1,3 +1,8 @@
+---
+title: "COMPUTEX與SpaceX雙引爆 — AI光通訊與ASIC選股邏輯"
+category: "YouTube頻道"
+---
+
 # COMPUTEX與SpaceX雙引爆 — AI光通訊與ASIC選股邏輯
 
 > COMPUTEX與SpaceX兩大事件交匯，光通訊（雷射封裝、光模組）是過渡期最確定的投資主線，ASIC客製化晶片是未來三年增速最快的半導體賽道；長線趨勢股要在大跌時勇敢買進，不要在多頭時追高。

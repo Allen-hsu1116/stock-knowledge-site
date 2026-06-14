@@ -1,4 +1,6 @@
 ---
+title: "理由消失停損法Reason-Based-Exit"
+category: "操作策略"
 source:
 date: 2026-05-14
 ---

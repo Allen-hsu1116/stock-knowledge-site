@@ -1,4 +1,5 @@
 ---
+category: "操作策略"
 title: 戰術資產配置 TAA
 date: 2026-06-14
 ---

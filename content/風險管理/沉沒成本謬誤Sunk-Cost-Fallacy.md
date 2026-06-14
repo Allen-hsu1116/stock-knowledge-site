@@ -1,3 +1,8 @@
+---
+title: "沉沒成本謬誤 Sunk Cost Fallacy"
+category: "風險管理"
+---
+
 # 沉沒成本謬誤 Sunk Cost Fallacy
 
 > 已經虧的錢不該影響未來決策——但你的大腦做不到，越套越深越不甘心，最後把牢底坐穿

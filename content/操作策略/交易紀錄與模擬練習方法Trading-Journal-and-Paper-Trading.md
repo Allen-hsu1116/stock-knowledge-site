@@ -1,4 +1,5 @@
 ---
+category: "操作策略"
 title: 交易紀錄與模擬練習方法Trading Journal and Paper Trading
 date: 2026-05-14
 ---

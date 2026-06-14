@@ -1,3 +1,8 @@
+---
+title: "負債比率與財務結構分析Debt-Ratio-and-Financial-Structure"
+category: "基本面分析"
+---
+
 # 負債比率與財務結構分析Debt-Ratio-and-Financial-Structure
 
 > 負債比率衡量公司資產中有多少來自舉債，不是越低越好——產業特性決定合理區間，現金流能力決定能否撐住槓桿

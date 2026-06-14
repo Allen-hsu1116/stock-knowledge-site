@@ -1,3 +1,8 @@
+---
+title: "成交量確認原則Volume-Confirmation"
+category: "技術分析"
+---
+
 # 成交量確認原則Volume-Confirmation
 
 > 沒有成交量支持的突破都是耍流氓——帶量突破才算真突破，量縮回測才算有效支撐，量價背離才是反轉確認

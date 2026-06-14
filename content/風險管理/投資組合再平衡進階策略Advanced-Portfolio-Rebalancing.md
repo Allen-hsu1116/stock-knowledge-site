@@ -1,3 +1,8 @@
+---
+title: "投資組合再平衡進階策略Advanced-Portfolio-Rebalancing"
+category: "風險管理"
+---
+
 # 投資組合再平衡進階策略Advanced-Portfolio-Rebalancing
 
 > 再平衡不是「跌了就買」，而是有系統地把投資組合拉回目標配置——定期、門檻、混合三法各有適用場景。

@@ -1,3 +1,8 @@
+---
+title: "近因效應（Recency Effect）"
+category: "風險管理"
+---
+
 # 近因效應（Recency Effect）
 
 > 剛發生的事不代表未來會持續——最近的虧損讓你過度保守，最近的獲利讓你過度自信。

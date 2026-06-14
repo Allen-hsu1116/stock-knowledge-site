@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: "MAE/MFE交易復盤與出場優化"
 date: 2026-06-13
 ---

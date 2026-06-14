@@ -1,3 +1,8 @@
+---
+title: "籌碼面分析常見誤區與陷阱 Chip Analysis Pitfalls"
+category: "籌碼面分析"
+---
+
 # 籌碼面分析常見誤區與陷阱 Chip Analysis Pitfalls
 
 > 法人買超不等於必漲、籌碼集中不等於利多——搞懂6大誤區才不會被籌碼面騙

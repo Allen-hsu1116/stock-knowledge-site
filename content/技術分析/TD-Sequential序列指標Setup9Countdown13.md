@@ -1,3 +1,8 @@
+---
+title: "TD Sequential 序列指標 Setup 9 Countdown 13"
+category: "技術分析"
+---
+
 # TD Sequential 序列指標 Setup 9 Countdown 13
 
 > 用計數「9」和「13」捕捉趨勢耗盡點的領先指標，Tom DeMark 開發的市場轉折偵測器。

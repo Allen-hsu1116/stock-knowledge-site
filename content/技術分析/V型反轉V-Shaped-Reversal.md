@@ -1,3 +1,8 @@
+---
+title: "V型反轉 V-Shaped Reversal"
+category: "技術分析"
+---
+
 # V型反轉 V-Shaped Reversal
 
 > 急跌後急漲（或急漲後急跌）的髮夾彎型態，轉勢點成交量最大，但操作難度極高，不適合一般投資人仰賴獲利

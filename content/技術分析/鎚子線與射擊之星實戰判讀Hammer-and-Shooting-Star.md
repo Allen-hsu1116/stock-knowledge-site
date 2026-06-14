@@ -1,4 +1,5 @@
 ---
+category: "技術分析"
 title: 鎚子線與射擊之星實戰判讀 Hammer and Shooting Star
 date: 2026-06-01
 ---

@@ -1,3 +1,8 @@
+---
+title: "流動性獵取 Liquidity Sweep"
+category: "技術分析"
+---
+
 # 流動性獵取 Liquidity Sweep
 
 > 聰明錢推動價格突破散戶止損密集區——你的止損就是機構進場的燃料，被掃之後才是真正的方向

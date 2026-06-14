@@ -1,3 +1,8 @@
+---
+title: "市場情緒週期與反脆弱交易系統Market-Sentiment-Cycle-and-Antifragile-System"
+category: "風險管理"
+---
+
 # 市場情緒週期與反脆弱交易系統Market-Sentiment-Cycle-and-Antifragile-System
 
 > 市場情緒像鐘擺從懷疑擺到狂喜再從恐慌擺到絕望，讀懂情緒週期才能利用他人情緒而非被吞噬，反脆弱交易系統讓你在混亂中反而更強大

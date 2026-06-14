@@ -1,3 +1,8 @@
+---
+title: "再平衡策略Portfolio-Rebalancing"
+category: "風險管理"
+---
+
 # 再平衡策略Portfolio-Rebalancing
 
 > 透過紀律性地將投資組合調回目標比例，控制風險、實現高賣低買，避免情緒化決策

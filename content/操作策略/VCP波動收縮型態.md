@@ -1,3 +1,8 @@
+---
+title: "VCP波動收縮型態 Volatility Contraction Pattern"
+category: "操作策略"
+---
+
 # VCP波動收縮型態 Volatility Contraction Pattern
 
 > 波動收縮越來越小、成交量萎縮到極限時，就是最佳進場點 — Mark Minervini的「聖盃」型態

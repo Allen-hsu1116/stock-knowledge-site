@@ -1,3 +1,8 @@
+---
+title: "斐波那契擴展 Fibonacci Extension"
+category: "技術分析"
+---
+
 # 斐波那契擴展 Fibonacci Extension
 
 > 用61.8%、100%、161.8%三個比例預測趨勢目標價，是停利設定和諧波形態的核心工具

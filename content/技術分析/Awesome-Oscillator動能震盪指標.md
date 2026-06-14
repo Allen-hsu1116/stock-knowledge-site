@@ -1,3 +1,8 @@
+---
+title: "Awesome Oscillator動能震盪指標"
+category: "技術分析"
+---
+
 # Awesome Oscillator動能震盪指標
 
 > Bill Williams的動能溫度計——SMA(5)減SMA(34)用中位數算，零軸上多下空、碟形看續航、雙峰抓反轉，但固定參數是雙面刃

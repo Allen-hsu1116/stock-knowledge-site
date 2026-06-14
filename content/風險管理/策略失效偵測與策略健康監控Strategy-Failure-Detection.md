@@ -1,3 +1,8 @@
+---
+title: "策略失效偵測與策略健康監控Strategy-Failure-Detection"
+category: "風險管理"
+---
+
 # 策略失效偵測與策略健康監控Strategy-Failure-Detection
 
 > 策略不是上線就永遠有效，量化偵測失效時機比猜測市場方向更重要

@@ -1,3 +1,8 @@
+---
+title: "相對活力指標 RVI (Relative Vigor Index)"
+category: "技術分析"
+---
+
 # 相對活力指標 RVI (Relative Vigor Index)
 
 > 用收盤價與開盤價的關係衡量趨勢「活力」的震盪指標，多頭收高、空頭收低是基本假設，信號線交叉與背離是兩大操作核心

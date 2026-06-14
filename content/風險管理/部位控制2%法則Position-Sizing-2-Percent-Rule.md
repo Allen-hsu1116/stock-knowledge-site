@@ -1,4 +1,6 @@
 ---
+title: "部位控制2%法則 Position Sizing 2% Rule"
+category: "風險管理"
 date: 2026-05-14
 ---
 

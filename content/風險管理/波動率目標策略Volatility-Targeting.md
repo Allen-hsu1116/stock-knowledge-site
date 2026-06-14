@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: 波動率目標策略 Volatility Targeting
 date: 2026-06-14
 ---

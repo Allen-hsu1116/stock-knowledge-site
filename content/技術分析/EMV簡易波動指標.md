@@ -1,3 +1,8 @@
+---
+title: "EMV 簡易波動指標（Ease of Movement Value）"
+category: "技術分析"
+---
+
 # EMV 簡易波動指標（Ease of Movement Value）
 
 > 量價合成指標，衡量「價格移動的容易程度」：少量成交就能推動價格 → EMV 升高；大成交但價格不動 → EMV 趨近零。零軸穿越是主要交易訊號。

@@ -1,3 +1,8 @@
+---
+title: "策略容量 Strategy Capacity"
+category: "風險管理"
+---
+
 # 策略容量 Strategy Capacity
 
 > 每個策略能承載的最大資金規模，超過容量上限後報酬率必然下降

@@ -1,3 +1,8 @@
+---
+title: "MFI資金流量指標 Money Flow Index"
+category: "技術分析"
+---
+
 # MFI資金流量指標 Money Flow Index
 
 > RSI的量價升級版，加入成交量判斷資金流向，背離訊號比RSI更可靠，但盤整盤一樣會被洗

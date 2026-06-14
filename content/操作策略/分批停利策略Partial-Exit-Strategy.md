@@ -1,4 +1,6 @@
 ---
+title: "分批停利策略Partial-Exit-Strategy"
+category: "操作策略"
 source:
 date: 2026-05-14
 ---

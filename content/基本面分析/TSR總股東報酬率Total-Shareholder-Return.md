@@ -1,3 +1,8 @@
+---
+title: "TSR總股東報酬率Total-Shareholder-Return"
+category: "基本面分析"
+---
+
 # TSR總股東報酬率Total-Shareholder-Return
 
 > 衡量股東真實總報酬的黃金指標，同時納入資本利得與股利收益，是證交所「提升企業價值計畫2.0」新增的核心評估指標

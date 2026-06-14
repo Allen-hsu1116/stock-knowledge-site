@@ -1,3 +1,8 @@
+---
+title: "Google TPU升級引爆AI算力戰：PCB與散熱產業"
+category: "YouTube頻道"
+---
+
 # Google TPU升級引爆AI算力戰：PCB與散熱產業
 
 > Google TPU升級帶動AI算力競賽，PCB與散熱產業迎爆發行情

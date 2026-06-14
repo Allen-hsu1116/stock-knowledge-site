@@ -1,3 +1,8 @@
+---
+title: "Palantir會被打敗嗎、SpaceX AI算力出租、輝達台北GTC"
+category: "YouTube頻道"
+---
+
 # Palantir會被打敗嗎、SpaceX AI算力出租、輝達台北GTC
 
 > Palantir 財報漂亮但股價大跌，SpaceX 把算力租給 Anthropic，GTC 台北六月初登場

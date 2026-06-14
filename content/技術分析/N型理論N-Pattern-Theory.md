@@ -1,3 +1,8 @@
+---
+title: "N型理論N-Pattern-Theory"
+category: "技術分析"
+---
+
 # N型理論N-Pattern-Theory
 
 > 股價走勢的基本結構單元——上漲N型代表攻擊、下跌N型代表殺盤，1/2法則判斷多空強弱，失敗N型是反轉前兆

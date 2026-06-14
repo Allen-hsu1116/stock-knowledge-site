@@ -1,3 +1,8 @@
+---
+title: "艾略特波浪理論 Elliott Wave Theory"
+category: "技術分析"
+---
+
 # 艾略特波浪理論 Elliott Wave Theory
 
 > 市場以5波推動3波修正的節奏前進，群眾心理從希望到狂熱到絕望的循環——數對浪是框架不是預言，三鐵律是唯一的硬規則

@@ -1,3 +1,8 @@
+---
+title: "技術分析回測方法與過度擬合Backtesting-and-Overfitting"
+category: "技術分析"
+---
+
 # 技術分析回測方法與過度擬合Backtesting-and-Overfitting
 
 > 回測是驗證技術分析策略有效性的關鍵步驟，但回測結果好不代表未來能賺錢——過度擬合是最大的陷阱，學會正確的回測方法才能避免「歷史績效好、實際交易虧」的慘劇。

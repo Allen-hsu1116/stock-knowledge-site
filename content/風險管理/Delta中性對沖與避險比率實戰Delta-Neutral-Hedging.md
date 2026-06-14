@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: Delta中性對沖與避險比率實戰
 date: 2026-05-29
 ---
@@ -186,3 +187,7 @@ Delta Neutral只對沖了方向風險，**波動率風險（Vega）完全暴露*
 - [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral|操作策略/波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
 - [[選擇權Convexity凸性與非對稱收益Option-Convexity|操作策略/選擇權Convexity凸性與非對稱收益Option-Convexity]]
 - [[Theta時間衰減實戰|操作策略/Theta時間衰減實戰]]
+
+## 來源
+
+- 未標註原始素材；需後續回溯補齊。

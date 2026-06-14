@@ -1,3 +1,8 @@
+---
+title: "趨勢追蹤策略 Trend Following"
+category: "操作策略"
+---
+
 # 趨勢追蹤策略 Trend Following
 
 > 不預測市場，只跟隨趨勢——小虧多次、偶爾大賺，讓利潤奔跑、及早停損。

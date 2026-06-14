@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: 投資組合熱度Portfolio-Heat
 date: 2026-06-12
 ---

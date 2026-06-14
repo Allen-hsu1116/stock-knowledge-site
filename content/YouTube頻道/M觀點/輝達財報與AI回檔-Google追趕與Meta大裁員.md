@@ -1,3 +1,8 @@
+---
+title: "輝達財報與AI回檔、Google追趕、Meta大裁員"
+category: "YouTube頻道"
+---
+
 # 輝達財報與AI回檔、Google追趕、Meta大裁員
 
 > 輝達Q1營收年增85%營業利益率65.6%史上新高，但市場反應平平；AI基建股回檔是洗出不堅定持有者的好時機；Google Gemini 3.5 Flash從完全不能用進步到勉強可用但仍落後GPT 5.5；Meta裁員8000人並轉型Pods and Cohorts組織模式

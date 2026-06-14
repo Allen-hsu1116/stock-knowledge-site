@@ -1,3 +1,8 @@
+---
+title: "投資組合理論與分散投資的局限 Portfolio Theory and Diversification Limits"
+category: "風險管理"
+---
+
 # 投資組合理論與分散投資的局限 Portfolio Theory and Diversification Limits
 
 > 分散投資降低風險——直到危機來臨，所有資產一起跌

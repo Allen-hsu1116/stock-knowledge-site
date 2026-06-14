@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: 詹森Alpha與特雷諾比率 Jensen's Alpha & Treynor Ratio
 date: 2026-05-30
 ---

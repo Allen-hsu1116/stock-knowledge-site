@@ -1,3 +1,8 @@
+---
+title: "最適f理論Optimal-f-Position-Sizing"
+category: "風險管理"
+---
+
 # 最適f理論Optimal-f-Position-Sizing
 
 > 用歷史交易資料找出讓資金成長最快的下注比例——Kelly的實戰版，但最大虧損是它的錨點

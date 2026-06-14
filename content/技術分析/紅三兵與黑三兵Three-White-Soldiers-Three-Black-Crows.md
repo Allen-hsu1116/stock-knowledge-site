@@ -1,3 +1,8 @@
+---
+title: "紅三兵與黑三兵 Three White Soldiers & Three Black Crows"
+category: "技術分析"
+---
+
 # 紅三兵與黑三兵 Three White Soldiers & Three Black Crows
 
 > 連續三根同色K線組成的趨勢確認型態，紅三兵看多、黑三兵看空，但出現位置決定是買進訊號還是賣出警訊

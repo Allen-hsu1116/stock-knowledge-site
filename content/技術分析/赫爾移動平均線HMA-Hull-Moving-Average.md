@@ -1,3 +1,8 @@
+---
+title: "赫爾移動平均線 HMA (Hull Moving Average)"
+category: "技術分析"
+---
+
 # 赫爾移動平均線 HMA (Hull Moving Average)
 
 > 最小化延遲的平滑均線，用轉折點判趨勢，不用交叉訊號。

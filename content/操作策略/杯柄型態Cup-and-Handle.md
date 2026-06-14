@@ -1,4 +1,5 @@
 ---
+category: "操作策略"
 title: 杯柄型態 Cup and Handle
 ---
 

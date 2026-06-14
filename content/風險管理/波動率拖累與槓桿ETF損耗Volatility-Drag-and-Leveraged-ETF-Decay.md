@@ -1,3 +1,8 @@
+---
+title: "波動率拖累與槓桿ETF損耗 Volatility Drag & Leveraged ETF Decay"
+category: "風險管理"
+---
+
 # 波動率拖累與槓桿ETF損耗 Volatility Drag & Leveraged ETF Decay
 
 > 波動率拖累是槓桿ETF長期持有必虧的數學鐵律——波動越大拖累越重，2倍槓桿不代表2倍報酬。

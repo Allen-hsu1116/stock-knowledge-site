@@ -1,3 +1,8 @@
+---
+title: "輝達GTC直播抽顯卡與軟體股回神——Stay in Your Lane投資哲學"
+category: "YouTube頻道"
+---
+
 # 輝達GTC直播抽顯卡與軟體股回神——Stay in Your Lane投資哲學
 
 > Snowflake連續兩季成長加速證明AI不會消滅SaaS，軟體基礎建設層價值長存；記憶體需求CAGR 30-40%歷史前所未見；投資要留在自己擅長的賽道

@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: 交易心理五原則 Five Trading Psychology Principles
 ---
 

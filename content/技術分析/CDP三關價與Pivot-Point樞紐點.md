@@ -1,3 +1,8 @@
+---
+title: "CDP三關價與Pivot-Point樞紐點"
+category: "技術分析"
+---
+
 # CDP三關價與Pivot-Point樞紐點
 
 > 用昨日價格計算今日支撐壓力，當沖極短線的日內地圖。

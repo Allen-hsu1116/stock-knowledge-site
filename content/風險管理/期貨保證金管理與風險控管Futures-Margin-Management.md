@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: 期貨保證金管理與風險控管
 date: 2026-05-29
 ---
@@ -166,3 +167,7 @@ date: 2026-05-29
 - [[凱利公式部位最佳化Kelly-Criterion-Position-Sizing|風險管理/凱利公式部位最佳化Kelly-Criterion-Position-Sizing]]
 - [[跳空缺口風險Gap-Risk|風險管理/跳空缺口風險Gap-Risk]]
 - [[信用交易融資融券進階實戰與風險管理Margin-Trading-Advanced|風險管理/信用交易融資融券進階實戰與風險管理Margin-Trading-Advanced]]
+
+## 來源
+
+- 未標註原始素材；需後續回溯補齊。

@@ -1,3 +1,8 @@
+---
+title: "風險預算 Risk Budgeting"
+category: "風險管理"
+---
+
 # 風險預算 Risk Budgeting
 
 > 用風險而非資金來分配投資組合，讓風險承擔有意識、可量化

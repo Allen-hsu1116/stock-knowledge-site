@@ -1,4 +1,5 @@
 ---
+category: "技術分析"
 title: 時間循環與週期分析 Market Cycle & Time Analysis
 date: 2026-06-08
 ---

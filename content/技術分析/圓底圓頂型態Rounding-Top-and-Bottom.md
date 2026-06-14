@@ -1,4 +1,5 @@
 ---
+category: "技術分析"
 title: 圓底圓頂型態 Rounding Top and Bottom
 ---
 

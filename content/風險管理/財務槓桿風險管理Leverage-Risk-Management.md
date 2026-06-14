@@ -1,3 +1,8 @@
+---
+title: "財務槓桿風險管理Leverage-Risk-Management"
+category: "風險管理"
+---
+
 # 財務槓桿風險管理Leverage-Risk-Management
 
 > 借錢放大獲利也放大虧損——槓桿是雙面刃，控制槓桿就是控制生存

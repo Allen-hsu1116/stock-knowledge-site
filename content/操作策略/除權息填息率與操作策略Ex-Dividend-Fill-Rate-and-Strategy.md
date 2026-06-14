@@ -1,3 +1,8 @@
+---
+title: "除權息填息率與操作策略 Ex-Dividend Fill Rate & Strategy"
+category: "操作策略"
+---
+
 # 除權息填息率與操作策略 Ex-Dividend Fill Rate & Strategy
 
 > 除息後股價漲回除息前價格叫填息，填息率是判斷除息後能否回本的關鍵指標——基本面、籌碼面、技術面三維評分決定是否參與除息

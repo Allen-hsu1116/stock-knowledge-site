@@ -1,3 +1,8 @@
+---
+title: "融資活動現金流判讀 Financing Cash Flow Analysis"
+category: "基本面分析"
+---
+
 # 融資活動現金流判讀 Financing Cash Flow Analysis
 
 > 看懂公司的金脈來源與去向——借錢、還錢、配息、增資，融資現金流揭穿公司怎麼找錢又怎麼花錢

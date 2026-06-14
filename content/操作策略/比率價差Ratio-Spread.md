@@ -1,3 +1,8 @@
+---
+title: "比率價差Ratio-Spread"
+category: "操作策略"
+---
+
 # 比率價差Ratio-Spread
 
 > 買1賣2賺溫和方向，但裸露的那口是你最大的敵人——嚴格停損是生存前提

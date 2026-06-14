@@ -1,3 +1,8 @@
+---
+title: "ROC變動率指標 Rate of Change"
+category: "技術分析"
+---
+
 # ROC變動率指標 Rate of Change
 
 > 把漲跌幅畫成曲線——ROC 是最純粹的動能溫度計，但盤整時它只會在 0 軸旁抖

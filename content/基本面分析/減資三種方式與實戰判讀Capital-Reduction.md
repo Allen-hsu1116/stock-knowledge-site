@@ -1,4 +1,5 @@
 ---
+category: "基本面分析"
 title: 減資三種方式與實戰判讀 Capital Reduction
 date: 2026-05-09
 ---

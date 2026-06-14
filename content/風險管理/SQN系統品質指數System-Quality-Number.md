@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: "SQN系統品質指數System Quality Number"
 date: 2026-06-13
 ---

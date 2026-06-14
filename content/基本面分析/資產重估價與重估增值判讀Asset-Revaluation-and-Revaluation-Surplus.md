@@ -1,3 +1,8 @@
+---
+title: "資產重估價與重估增值判讀 Asset Revaluation and Revaluation Surplus"
+category: "基本面分析"
+---
+
 # 資產重估價與重估增值判讀 Asset Revaluation and Revaluation Surplus
 
 > 財報上的「帳面富裕」——重估增值不是賺來的錢，只是數字搬家

@@ -1,4 +1,6 @@
 ---
+title: "移動停利停損 Trailing Stop"
+category: "風險管理"
 source:
 date: 2026-05-10
 ---

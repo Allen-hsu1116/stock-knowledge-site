@@ -1,3 +1,8 @@
+---
+title: "集中度風險 Concentration Risk"
+category: "風險管理"
+---
+
 # 集中度風險 Concentration Risk
 
 > 所有雞蛋放在同一個籃子——不是不可以，但你最好真的看得住那個籃子

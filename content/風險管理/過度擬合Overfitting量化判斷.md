@@ -1,3 +1,8 @@
+---
+title: "過度擬合Overfitting量化判斷"
+category: "風險管理"
+---
+
 # 過度擬合Overfitting量化判斷
 
 > 用數學告訴你策略是真的好還是只是運氣好——PSR、DSR、CSCV三大工具量化過擬合風險

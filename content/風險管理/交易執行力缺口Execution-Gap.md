@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: 交易執行力缺口 Execution Gap
 ---
 

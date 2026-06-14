@@ -1,3 +1,8 @@
+---
+title: "Volume Profile 成交量分佈分析"
+category: "技術分析"
+---
+
 # Volume Profile 成交量分佈分析
 
 > 把成交量從時間軸轉到價格軸，看見市場真正的成本結構——POC是公認價格、VA是多數人認同的價格區、LVN是價格快速穿越的不認同區

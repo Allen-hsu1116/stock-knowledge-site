@@ -1,3 +1,8 @@
+---
+title: "自我服務偏差 Self-Serving Bias"
+category: "風險管理"
+---
+
 # 自我服務偏差 Self-Serving Bias
 
 > 賺了是我厲害，賠了是市場爛——自我服務偏差讓你永遠學不到教訓

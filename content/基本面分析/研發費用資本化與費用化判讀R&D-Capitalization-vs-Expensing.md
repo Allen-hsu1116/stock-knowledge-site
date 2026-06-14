@@ -1,3 +1,8 @@
+---
+title: "研發費用資本化與費用化判讀R&D-Capitalization-vs-Expensing"
+category: "基本面分析"
+---
+
 # 研發費用資本化與費用化判讀R&D-Capitalization-vs-Expensing
 
 > 研發費用「費用化」壓低當期利潤但最保守，「資本化」美化當期利潤但潛藏未來攤銷風險。判讀公司研發資本化比率是辨識盈餘管理的關鍵。

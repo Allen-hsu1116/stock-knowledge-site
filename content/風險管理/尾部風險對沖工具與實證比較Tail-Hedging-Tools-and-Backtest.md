@@ -1,3 +1,8 @@
+---
+title: "尾部風險對沖工具與實證比較 Tail Hedging Tools and Backtest"
+category: "風險管理"
+---
+
 # 尾部風險對沖工具與實證比較 Tail Hedging Tools and Backtest
 
 > 用選擇權、波動率產品和期貨為投資組合買保險——1-2%的年成本換取崩盤時5-10倍以上的保護

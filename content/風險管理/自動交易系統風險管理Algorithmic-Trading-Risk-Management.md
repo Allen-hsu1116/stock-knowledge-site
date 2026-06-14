@@ -1,4 +1,6 @@
 ---
+title: "自動交易系統風險管理Algorithmic-Trading-Risk-Management"
+category: "風險管理"
 date: 2026-05-15
 ---
 

@@ -1,3 +1,8 @@
+---
+title: "網格交易Grid-Trading"
+category: "操作策略"
+---
+
 # 網格交易Grid-Trading
 
 > 把區間交易自動化——像漁網一樣，在震盪行情中自動收割每一次波動的利潤

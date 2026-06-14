@@ -1,4 +1,5 @@
 ---
+category: "技術分析"
 title: 價格通道 Price Channel
 date: 2026-06-01
 ---

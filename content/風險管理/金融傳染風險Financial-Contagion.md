@@ -1,3 +1,8 @@
+---
+title: "金融傳染風險 Financial Contagion"
+category: "風險管理"
+---
+
 # 金融傳染風險 Financial Contagion
 
 > 一個國家的金融危機像病毒一樣擴散到其他國家——1997年泰銖崩潰兩個月內波及整個亞洲，連美國LTCM都倒下

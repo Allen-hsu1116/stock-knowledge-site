@@ -1,3 +1,8 @@
+---
+title: "MTM動量指標 Momentum Index"
+category: "技術分析"
+---
+
 # MTM動量指標 Momentum Index
 
 > 價格漲得越快動量越大、漲得越慢動量衰減——動量線穿過中心線就是趨勢轉向的預告

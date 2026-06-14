@@ -1,3 +1,8 @@
+---
+title: "交易計畫書Trading-Plan"
+category: "風險管理"
+---
+
 # 交易計畫書Trading-Plan
 
 > 沒有計畫的交易是賭博——交易計畫書是你和市場之間的書面契約

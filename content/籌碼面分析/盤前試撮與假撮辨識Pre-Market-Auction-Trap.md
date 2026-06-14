@@ -1,3 +1,8 @@
+---
+title: "盤前試撮與假撮辨識Pre-Market-Auction-Trap"
+category: "籌碼面分析"
+---
+
 # 盤前試撮與假撮辨識Pre-Market-Auction-Trap
 
 > 盤前試撮是主力免費的心理戰場——掛假單不花一毛錢就能操控散戶預期，辨識假撮手法是開盤前最重要的防身術

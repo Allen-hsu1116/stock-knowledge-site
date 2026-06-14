@@ -1,3 +1,8 @@
+---
+title: "投資活動現金流進階判讀Investing-Cash-Flow-Advanced"
+category: "基本面分析"
+---
+
 # 投資活動現金流進階判讀Investing-Cash-Flow-Advanced
 
 > 投資現金流不是負的就不好——拆解投資現金流的組成項目，分辨「投資未來」與「變賣家產」，才是判讀企業真正價值的關鍵

@@ -1,3 +1,8 @@
+---
+title: "有效稅率與所得稅費用判讀 Effective Tax Rate & Income Tax Analysis"
+category: "基本面分析"
+---
+
 # 有效稅率與所得稅費用判讀 Effective Tax Rate & Income Tax Analysis
 
 > 所得稅費用不等於公司實際繳的稅，有效稅率才是衡量公司真實稅負的溫度計——ETR偏離法定稅率代表免稅利益或盈餘管理訊號

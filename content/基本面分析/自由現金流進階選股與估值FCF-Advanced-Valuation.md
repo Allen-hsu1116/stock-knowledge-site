@@ -1,3 +1,8 @@
+---
+title: "自由現金流進階選股與估值FCF-Advanced-Valuation"
+category: "基本面分析"
+---
+
 # 自由現金流進階選股與估值FCF-Advanced-Valuation
 
 > FCF不只是「公司賺多少現金」，更是判斷公司能不能活、值不值得投資的終極指標——巴菲特最愛的數字

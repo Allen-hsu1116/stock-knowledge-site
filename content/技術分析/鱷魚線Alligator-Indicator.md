@@ -1,3 +1,8 @@
+---
+title: "鱷魚線指標 Alligator Indicator"
+category: "技術分析"
+---
+
 # 鱷魚線指標 Alligator Indicator
 
 > 三條位移均線模擬鱷魚的顎、齒、唇——睡覺時不交易、張口時順勢進場、閉嘴時獲利了結，Bill Williams最直覺的趨勢追蹤系統

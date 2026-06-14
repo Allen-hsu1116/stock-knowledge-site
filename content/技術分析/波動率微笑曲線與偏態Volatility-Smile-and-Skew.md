@@ -1,3 +1,8 @@
+---
+title: "波動率微笑曲線與偏態 Volatility Smile & Skew"
+category: "技術分析"
+---
+
 # 波動率微笑曲線與偏態 Volatility Smile & Skew
 
 > 不同履約價的選擇權隱含波動率連起來像笑臉或歪嘴——看懂曲線形狀就知道市場在怕什麼、哪端被高估，還能用偏斜套利

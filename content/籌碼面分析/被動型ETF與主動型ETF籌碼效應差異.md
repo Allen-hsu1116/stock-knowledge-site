@@ -1,4 +1,5 @@
 ---
+category: "籌碼面分析"
 title: 被動型ETF與主動型ETF籌碼效應差異
 date: 2026-06-03
 ---

@@ -1,3 +1,8 @@
+---
+title: "現金股利保障倍數與配息安全性判讀 Cash Dividend Coverage Ratio"
+category: "基本面分析"
+---
+
 # 現金股利保障倍數與配息安全性判讀 Cash Dividend Coverage Ratio
 
 > 配息率告訴你公司「願不願意」配息，現金股利保障倍數告訴你公司「付不付得起」——用營業現金流而非會計利潤衡量配息的可持續性

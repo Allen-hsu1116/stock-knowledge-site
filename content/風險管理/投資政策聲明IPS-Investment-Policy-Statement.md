@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: 投資政策聲明IPS-Investment-Policy-Statement
 date: 2026-06-12
 ---

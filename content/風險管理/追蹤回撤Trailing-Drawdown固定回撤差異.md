@@ -1,3 +1,8 @@
+---
+title: "追蹤回撤 Trailing Drawdown 與固定回撤差異"
+category: "風險管理"
+---
+
 # 追蹤回撤 Trailing Drawdown 與固定回撤差異
 
 > 從歷史最高點算回撤 vs 從固定起點算回撤，兩者意義完全不同

@@ -1,3 +1,8 @@
+---
+title: "保留盈餘與股東權益成長判讀 Retained Earnings and Equity Growth"
+category: "基本面分析"
+---
+
 # 保留盈餘與股東權益成長判讀 Retained Earnings and Equity Growth
 
 > 一塊錢保留盈餘能否創造超過一塊錢的市場價值？巴菲特用這個標準判斷公司是否值得長期持有

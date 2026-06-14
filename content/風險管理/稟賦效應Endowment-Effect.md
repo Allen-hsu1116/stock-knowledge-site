@@ -1,3 +1,8 @@
+---
+title: "稟賦效應（Endowment Effect）"
+category: "風險管理"
+---
+
 # 稟賦效應（Endowment Effect）
 
 > 擁有就高估——持有股票讓你覺得它比實際更值錢，這就是為什麼捨不得賣。

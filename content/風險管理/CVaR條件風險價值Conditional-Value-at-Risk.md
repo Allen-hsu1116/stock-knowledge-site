@@ -1,3 +1,8 @@
+---
+title: "CVaR條件風險價值 Conditional Value at Risk"
+category: "風險管理"
+---
+
 # CVaR條件風險價值 Conditional Value at Risk
 
 > VaR只告訴你最壞情況的門檻，CVaR告訴你跨過門檻後會賠多少——真正衡量尾部風險的一致性風險測度

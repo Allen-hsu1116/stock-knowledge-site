@@ -1,3 +1,8 @@
+---
+title: "股東權益變動表判讀Statement-of-Changes-in-Equity"
+category: "基本面分析"
+---
+
 # 股東權益變動表判讀Statement-of-Changes-in-Equity
 
 > 財報第四張表，記錄股東權益各項目的期初到期末變動過程，看出公司如何對待股東的錢——保留盈餘占比是判斷權益品質的關鍵

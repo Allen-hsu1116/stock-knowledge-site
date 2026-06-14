@@ -1,3 +1,8 @@
+---
+title: "盈餘動能因子與SUE標準化未預期盈餘 Earnings Momentum & SUE"
+category: "基本面分析"
+---
+
 # 盈餘動能因子與SUE標準化未預期盈餘 Earnings Momentum & SUE
 
 > 盈餘動能是獨立於價值、規模、價格動量的第四因子，SUE量化盈餘驚喜程度，正驚喜後續3-6個月仍持續上漲（PEAD），是基本面選股中最被低估的超額報酬來源

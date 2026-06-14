@@ -1,3 +1,8 @@
+---
+title: "W底M頭雙重頂底型態 Double Top and Double Bottom"
+category: "技術分析"
+---
+
 # W底M頭雙重頂底型態 Double Top and Double Bottom
 
 > 最經典的反轉型態，W底兩次探底未破代表空方力竭，M頭兩次攻頂未過代表多方力竭，頸線突破確認方向、測量目標價

@@ -1,3 +1,8 @@
+---
+title: "蒙地卡羅模擬交易驗證 Monte Carlo Simulation for Trading"
+category: "風險管理"
+---
+
 # 蒙地卡羅模擬交易驗證 Monte Carlo Simulation for Trading
 
 > 把回測的單一結果變成一萬條平行宇宙的資金曲線，用機率分布取代點估計，戳破「歷史回測等於未來」的幻想

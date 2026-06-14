@@ -1,3 +1,8 @@
+---
+title: "基本面因子選股總論Quantitative-Fundamental-Factors"
+category: "基本面分析"
+---
+
 # 基本面因子選股總論Quantitative-Fundamental-Factors
 
 > 用量化因子系統化挑出好股票，把「感覺這家公司好」變成「數據證明這家公司好」

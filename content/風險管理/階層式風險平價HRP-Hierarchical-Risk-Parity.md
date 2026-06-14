@@ -1,3 +1,8 @@
+---
+title: "階層式風險平價 HRP（Hierarchical Risk Parity）"
+category: "風險管理"
+---
+
 # 階層式風險平價 HRP（Hierarchical Risk Parity）
 
 > 用機器學習的聚類演算法把相關性矩陣從完全圖降維成樹狀結構，解決MPT對參數過度敏感的問題——第五代資產配置理論

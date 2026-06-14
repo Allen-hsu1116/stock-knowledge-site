@@ -1,3 +1,8 @@
+---
+title: "反向壓力測試 Reverse Stress Testing"
+category: "風險管理"
+---
+
 # 反向壓力測試 Reverse Stress Testing
 
 > 別問「跌 30% 會怎樣」，問「什麼組合會讓我虧 500 萬」——反向找出致命弱點

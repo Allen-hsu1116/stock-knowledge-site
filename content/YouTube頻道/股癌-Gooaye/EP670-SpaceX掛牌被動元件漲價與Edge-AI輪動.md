@@ -1,3 +1,8 @@
+---
+title: "EP670 SpaceX掛牌、被動元件漲價與Edge AI輪動"
+category: "YouTube頻道"
+---
+
 # EP670 SpaceX掛牌、被動元件漲價與Edge AI輪動
 
 > SpaceX掛牌後衛星題材可能從夢想定價進入獲利了結，被動元件漲價仍在供需驗證期，而AI監管壓力可能讓Edge AI重新成為資金關注方向。

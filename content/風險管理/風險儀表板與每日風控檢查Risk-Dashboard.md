@@ -1,4 +1,5 @@
 ---
+category: "風險管理"
 title: 風險儀表板與每日風控檢查Risk-Dashboard
 date: 2026-06-05
 ---
@@ -142,3 +143,7 @@ date: 2026-06-05
 - Alexander Elder, *Come Into My Trading Room*
 - Van K. Tharp, *Trade Your Way to Financial Freedom*
 - 風險管理實務框架
+
+## 實戰應用
+
+實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。

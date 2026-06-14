@@ -1,3 +1,8 @@
+---
+title: "EP665 被動元件整組做壞與SpaceX軌道AI運算新大夢"
+category: "YouTube頻道"
+---
+
 # EP665 被動元件整組做壞與SpaceX軌道AI運算新大夢
 
 > 被動元件做壞了國巨BB ratio特規品90%標準品8%全世界都缺，SpaceX IPO先卡位再說軌道AI伺服器是下一個大夢Starlink是印鈔機，長期投資每次看部位都是重新做決定
@@ -45,3 +50,7 @@
 ## 來源
 
 - [EP665 | 🌸](https://www.youtube.com/watch?v=Vdy7_ihnpJ4)
+
+## 相關主題
+
+- 股票知識庫索引

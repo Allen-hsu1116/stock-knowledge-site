@@ -1,3 +1,8 @@
+---
+title: "NVIDIA Blackwell帶動MLCC大缺貨：高階被動元件搶到定價權"
+category: "YouTube頻道"
+---
+
 # NVIDIA Blackwell帶動MLCC大缺貨：高階被動元件搶到定價權
 
 > AI伺服器帶動高階MLCC需求暴增，日韓大廠掌握定價權，被動元件從殺價競爭走向高技術高ASP新時代

@@ -1,3 +1,8 @@
+---
+title: "PSY心理線指標 Psychological Line"
+category: "技術分析"
+---
+
 # PSY心理線指標 Psychological Line
 
 > 用「上漲天數比例」衡量市場情緒的震盪指標，RSI 的原型，簡單直覺但不考量漲跌幅度

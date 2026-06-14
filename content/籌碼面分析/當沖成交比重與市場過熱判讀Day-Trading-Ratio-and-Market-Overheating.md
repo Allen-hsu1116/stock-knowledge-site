@@ -1,3 +1,8 @@
+---
+title: "當沖成交比重與市場過熱判讀Day-Trading-Ratio-and-Market-Overheating"
+category: "籌碼面分析"
+---
+
 # 當沖成交比重與市場過熱判讀Day-Trading-Ratio-and-Market-Overheating
 
 > 當沖成交比重是衡量市場短線交易熱度與籌碼穩定度的關鍵指標，比重過高常伴隨市場過熱與反轉風險。

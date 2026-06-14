@@ -1,3 +1,8 @@
+---
+title: "錨定效應 Anchoring Bias"
+category: "風險管理"
+---
+
 # 錨定效應 Anchoring Bias
 
 > 被第一眼看到的數字綁架，從此所有判斷都往那個方向偏。

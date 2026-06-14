@@ -1,3 +1,8 @@
+---
+title: "殘餘收益模型Residual Income Valuation進階判讀"
+category: "基本面分析"
+---
+
 # 殘餘收益模型Residual Income Valuation進階判讀
 
 > 股票內在價值 = 淨值 + 未來殘餘收益折現總和，殘餘收益 = 淨利 - 股東資本成本，ROE > 資本成本才創造價值

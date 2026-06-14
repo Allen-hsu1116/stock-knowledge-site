@@ -1,3 +1,8 @@
+---
+title: "勝率與賺賠比 Win Rate & Risk-Reward Ratio"
+category: "操作策略"
+---
+
 # 勝率與賺賠比 Win Rate & Risk-Reward Ratio
 
 > 勝率告訴你「多常對」，賺賠比告訴你「對的時候賺多少」，兩者結合的期望值才是策略能否長期獲利的關鍵。

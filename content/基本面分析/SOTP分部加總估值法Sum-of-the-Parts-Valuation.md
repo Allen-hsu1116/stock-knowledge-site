@@ -1,3 +1,8 @@
+---
+title: "SOTP分部加總估值法Sum-of-the-Parts-Valuation"
+category: "基本面分析"
+---
+
 # SOTP分部加總估值法Sum-of-the-Parts-Valuation
 
 > 將多元化企業拆解為獨立業務部門，分別用最適合的方法估值後加總，再用來發現隱藏價值與對抗多元化折價的估值方法。

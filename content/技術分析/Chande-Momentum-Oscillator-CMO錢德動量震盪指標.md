@@ -1,3 +1,8 @@
+---
+title: "錢德動量震盪指標 CMO (Chande Momentum Oscillator)"
+category: "技術分析"
+---
+
 # 錢德動量震盪指標 CMO (Chande Momentum Oscillator)
 
 > 測量「純動量」的震盪指標，未經平滑處理，比 RSI 更敏感，適合抓轉折與背離。

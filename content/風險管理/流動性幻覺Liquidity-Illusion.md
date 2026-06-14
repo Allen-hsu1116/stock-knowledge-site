@@ -1,3 +1,8 @@
+---
+title: "流動性幻覺 Liquidity Illusion"
+category: "風險管理"
+---
+
 # 流動性幻覺 Liquidity Illusion
 
 > 平時看得到的流動性，危機時瞬間蒸發——你以為市場永遠有買家，直到你需要賣的那一刻。

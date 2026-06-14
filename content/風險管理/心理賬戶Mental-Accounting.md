@@ -1,3 +1,8 @@
+---
+title: "心理賬戶 Mental Accounting"
+category: "風險管理"
+---
+
 # 心理賬戶 Mental Accounting
 
 > 你把同樣的錢分到不同的心理抽屜，然後用不同態度花掉——這就是心理賬戶，交易中最隱形的資金殺手

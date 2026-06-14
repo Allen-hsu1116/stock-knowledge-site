@@ -1,3 +1,8 @@
+---
+title: "諧波形態 Harmonic Patterns"
+category: "技術分析"
+---
+
 # 諧波形態 Harmonic Patterns
 
 > 利用特定Fibonacci比例排列辨識高機率反轉點的幾何價格型態，在D點（潛在反轉區PRZ）進場捕捉趨勢反轉——Gartley、Butterfly、Bat、Crab、Shark、Cypher六大型態各有精確比例定義

@@ -1,4 +1,5 @@
 ---
+category: "技術分析"
 title: 多指標共振交易系統 Multi-Indicator Confluence
 ---
 

@@ -1,3 +1,8 @@
+---
+title: "順序風險 Sequence Risk"
+category: "風險管理"
+---
+
 # 順序風險 Sequence Risk
 
 > 同樣的損益結果，只因出現順序不同就能讓你破產——交易結果的時序排列是生存的隱形殺手

@@ -1,3 +1,8 @@
+---
+title: "會計政策變更與會計估計變更判讀 Accounting Policy Change & Estimate Change"
+category: "基本面分析"
+---
+
 # 會計政策變更與會計估計變更判讀 Accounting Policy Change & Estimate Change
 
 > 會計政策變更追溯調整所有期間、會計估計變更只影響當期及以後——看懂變更類型和動機，是辨識盈餘管理的關鍵技能

@@ -1,4 +1,5 @@
 ---
+category: "操作策略"
 title: 選股四法入門 Stock Selection Four Methods
 date: 2026-05-16
 ---

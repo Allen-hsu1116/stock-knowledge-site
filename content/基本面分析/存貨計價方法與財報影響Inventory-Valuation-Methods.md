@@ -1,3 +1,8 @@
+---
+title: "存貨計價方法與財報影響Inventory-Valuation-Methods"
+category: "基本面分析"
+---
+
 # 存貨計價方法與財報影響Inventory-Valuation-Methods
 
 > 不同存貨計價方法（FIFO、加權平均、個別計價）直接影響毛利率、所得稅、流動比率，IFRS 下已禁用 LIFO，台股投資人必須理解存貨計價對盈餘的操縱空間。

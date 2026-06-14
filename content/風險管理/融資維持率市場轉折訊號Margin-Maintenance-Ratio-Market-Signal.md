@@ -1,3 +1,8 @@
+---
+title: "融資維持率市場轉折訊號 Margin Maintenance Ratio Market Signal"
+category: "風險管理"
+---
+
 # 融資維持率市場轉折訊號 Margin Maintenance Ratio Market Signal
 
 > 融資維持率不只是個人風險指標——全市場維持率普遍偏低時，斷頭賣壓是底部反轉的前兆
