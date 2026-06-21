@@ -47,7 +47,8 @@ category: "操作策略"
 
 - [[選擇權組合策略]]
 - [[選擇權四大基本策略]]
-- [[鐵兀鷹Iron-Condor]]
+- [[操作策略/鐵兀鷹Iron-Condor]]
+- [[操作策略/鐵蝴蝶Iron-Butterfly]]
 - [[隱含波動率IV判讀]]
 - [[Theta時間衰減實戰]]
 

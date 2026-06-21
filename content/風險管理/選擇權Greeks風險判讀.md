@@ -87,7 +87,7 @@ date: 2026-05-09
 | 看小漲 | 賣Put | + | - | + |
 | 看大跌 | 買Put | - | + | - |
 | 看小跌 | 賣Call | - | - | + |
-| 看盤整 | [[鐵兀鷹Iron-Condor|Iron Condor]] | ≈0 | - | + |
+| 看盤整 | [[操作策略/鐵兀鷹Iron-Condor|Iron Condor]] | ≈0 | - | + |
 | 看大波 | 買Straddle | ≈0 | + | - |
 
 ### 風險管理矩陣
@@ -102,7 +102,7 @@ date: 2026-05-09
 
 ### 三種Theta策略
 
-1. **[[鐵兀鷹Iron-Condor|Iron Condor]]**：穩定Theta收入，但Gamma風險大
+1. **[[操作策略/鐵兀鷹Iron-Condor|Iron Condor]]**：穩定Theta收入，但Gamma風險大
 2. **[[時間價差Calendar-Spread|日曆價差]]**：近月Theta衰變快、遠月慢，賺時間差
 3. **Covered Call（掩護性買權）**：持有股票+賣出買權，降低持倉成本但限制上漲空間
 
@@ -140,7 +140,7 @@ Greeks是瞬時指標，標的價格一動Greeks就跟著變：
 - [[隱含波動率IV與歷史波動率HV實戰判讀|IV與HV實戰判讀]] - Vega衡量的就是IV變動的影響
 - [[選擇權四大基本策略|選擇權四大基本策略]] - 所有組合策略的基石
 - [[選擇權組合策略|選擇權組合策略]] - 價差、跨式、勒式
-- [[鐵兀鷹Iron-Condor|Iron Condor]] - 正Theta+負Vega的盤整策略
+- [[操作策略/鐵兀鷹Iron-Condor|Iron Condor]] - 正Theta+負Vega的盤整策略
 - [[選擇權Greeks希臘字母|選擇權Greeks希臘字母]] - 操作策略角度的Greeks應用
 - [[逼券商拉抬Gamma-Squeeze兩手策略|Gamma Squeeze]] - 正Gamma的力量
 - [[波動率微笑曲線與偏態Volatility-Smile-and-Skew|波動率微笑與偏態]] - IV在不同履約價的分佈
