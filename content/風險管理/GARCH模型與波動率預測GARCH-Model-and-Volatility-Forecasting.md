@@ -184,7 +184,7 @@ ln(σ²(t)) = ω + α·[|ε(t-1)|/σ(t-1) - √(2/π)] + γ·ε(t-1)/σ(t-1) + �
 
 - [[VIX恐慌指數實戰判讀]] - VIX 與 GARCH 的隱含 vs 統計波動率對比
 - [[VaR風險值Value-at-Risk]] - GARCH 動態 VaR 的基礎
-- [[CVaR條件風險值Conditional-Value-at-Risk]] - GARCH-CVaR 進階風險度量
+- [[CVaR條件風險價值Conditional-Value-at-Risk]] - GARCH-CVaR 進階風險度量
 - [[波動率風險溢價Volatility-Risk-Premium]] - IV vs GARCH 預測的差值套利
 - [[波動率體制轉換模型Volatility-Regime-Switching-Model]] - GARCH + Markov 轉換
 - [[極端值理論EVT量化肥尾風險]] - GARCH-EVT 尾部風險組合

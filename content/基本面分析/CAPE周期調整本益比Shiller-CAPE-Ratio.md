@@ -8,7 +8,7 @@ created: 2026-06-30
 
 > **一句話：** 諾貝爾經濟學獎得主 Robert Shiller 發明的「十年平滑本益比」——把通膨和景氣循環的噪音濾掉後，看市場到底是貴還是便宜。
 
-## 定義
+## 核心概念
 
 **CAPE（Cyclically Adjusted Price-to-Earnings Ratio）**，又稱 **Shiller P/E** 或 **P/E 10**，是將股價除以過去十年經通膨調整後的平均盈餘，用來評估股市長期估值水準的指標。
 

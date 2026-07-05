@@ -2,7 +2,7 @@
 
 > 用兩個指標打敗大盤——便宜（高盈餘殖利率）+ 好公司（高投入資本報酬率），Joel Greenblatt 把巴菲特的選股邏輯濃縮成一套可機械化執行的公式。
 
-## 來源
+## 核心概念
 
 Joel Greenblatt 在 2005 年出版的《The Little Book That Beats the Market》提出此策略。Greenblatt 是 Gotham Capital 創辦人，1985-1995 年十年間年化報酬率 50%，被譽為價值投資實戰派代表人物之一。他將巴菲特與蒙格的選股哲學簡化為兩個量化指標，讓普通投資人也能系統化執行。
 

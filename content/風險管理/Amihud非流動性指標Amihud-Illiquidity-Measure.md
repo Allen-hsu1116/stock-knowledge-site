@@ -150,7 +150,7 @@ Amihud指標直接回答「我能買多少？」
 - [[流動性風險Liquidity-Risk]] — 流動性風險基礎概念
 - [[流動性幻覺Liquidity-Illusion]] — 為什麼平時的流動性在危機時蒸發
 - [[流動性風險量化衡量與流動性調整VaR-Liquidity-Adjusted-VaR]] — L-VaR把Amihud納入風險計算
-- [[集中度風險Concentration-Risk]] — 高ILLIQ股票集中持有風險更大
+- [[集中度風險Concentration Risk]] — 高ILLIQ股票集中持有風險更大
 - [[風險管理總論]] — 風險管理體系總覽
 - [[配對交易進階實戰]] — 配對交易的流動性篩選
 - [[滑價與交易執行風險]] — 滑價是Amihud指標的實際表現
