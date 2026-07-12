@@ -152,3 +152,11 @@ RVOL 是量能分析的「標準化工具」，讓你不用記住每檔股票的
 - Investopedia: Relative Volume
 - StockCharts ChartSchool: Relative Volume
 - Warrior Trading: Relative Volume Guide
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）

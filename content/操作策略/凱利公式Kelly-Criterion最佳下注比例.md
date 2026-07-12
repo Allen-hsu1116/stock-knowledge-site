@@ -211,3 +211,11 @@ Wikipedia 記載了一個經典實驗：受試者拿到 $25，可以對一個 60
 - Kelly, J. L. (1956). "A New Interpretation of Information Rate". Bell System Technical Journal.
 - Thorp, E. O. (1969). "Optimal Gambling Systems for Favorable Games". Review of the International Statistical Institute.
 - Poundstone, W. (2005). "Fortune's Formula: The Untold Story of the Scientific Betting System That Beat the Casinos and Wall Street"
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）

@@ -108,6 +108,18 @@ Auto-Envelopes 是 Elder 三重濾網系統的天然補充：
 - [[技術分析/SuperTrend超級趨勢指標]] — 同樣基於 ATR 的趨勢追蹤指標
 - [[技術分析/愛爾德溫度計Elder-Thermometer]] — Elder 系統的波動溫度計
 
+## 實戰應用
+
+（待補充）
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）
+
 ## 來源
 
 - Alexander Elder, *Come Into My Trading Room* (2002)

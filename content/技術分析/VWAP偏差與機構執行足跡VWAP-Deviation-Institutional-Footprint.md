@@ -133,3 +133,11 @@ VWAP偏差最大的價值在於與其他指標形成共振確認：
 - [[技術分析/相對成交量RVOL-Relative-Volume]] — 量能異常偵測
 - [[技術分析/內外盤比與五檔報價判讀InOut-Disk-Ratio-and-Order-Book]] — 多空拔河判讀
 - [[操作策略/執行演算法VWAP-TWAP-Execution-Algorithm]] — 機構執行演算法詳解
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）

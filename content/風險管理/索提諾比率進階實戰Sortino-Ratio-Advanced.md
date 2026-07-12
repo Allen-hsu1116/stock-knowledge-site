@@ -122,6 +122,18 @@ Sharpe 可能差不多，但 Sortino 會明顯偏好策略 B（下行波動小�
 - [[操作策略/凱利公式Kelly-Criterion最佳下注比例]] — 下注比例的數學基礎
 - [[風險管理/回測績效評估完整體系Backtest-Performance-Evaluation]] — 回測績效的完整評估框架
 
+## 實戰應用
+
+（待補充）
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）
+
 ## 來源
 
 - Sortino, F. & Price, L. (1994). "Performance Measurement in a Downside Risk Framework." *Journal of Investing*

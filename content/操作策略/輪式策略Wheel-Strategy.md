@@ -210,3 +210,15 @@ Wheel 策略最大的盲點是「賣 Put 等於限價買進」，如果標的基
 - [Investopedia - Wheel Strategy](https://www.investopedia.com/terms/w/wheel-strategy.asp)
 - YouTube 搜尋結果：Best Beginner Options Trading Strategy (Wheel Strategy Explained) - Brad Finn
 - YouTube 搜尋結果：The "Wheel" Options Strategy - Markus Heitkoetter
+
+## 實戰應用
+
+（待補充）
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）

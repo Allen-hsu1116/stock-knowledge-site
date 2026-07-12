@@ -183,3 +183,15 @@ date: 2026-07-09
 - [Wikipedia - Dark pool](https://en.wikipedia.org/wiki/Dark_pool)
 - Michael Lewis, *Flash Boys: A Wall Street Revolt* (2014)
 - Bloomberg (2025) — Dark pool trading volume exceeds 50% of U.S. equity volume
+
+## 實戰應用
+
+（待補充）
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）

@@ -172,3 +172,15 @@ DPO 本身不判斷趨勢方向，必須搭配趨勢指標：
 - [Detrended price oscillator - Wikipedia](https://en.wikipedia.org/wiki/Detrended_price_oscillator)
 - DPO 由 William Blau 於 1991 年開發
 - 讀者可自行用 Python（pandas）實作：`df['DPO'] = df['Close'].shift(n//2+1) - df['Close'].rolling(n).mean()`
+
+## 實戰應用
+
+（待補充）
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）

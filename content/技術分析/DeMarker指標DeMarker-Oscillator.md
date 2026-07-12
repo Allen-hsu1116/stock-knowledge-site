@@ -148,3 +148,15 @@ DeMarker 只是 Tom DeMark 指標體系的一員：
 - Tom DeMark, *DeMark on Day-Trading Options* (1999)
 - MQL5 技術指標文檔：iDeMarker，參數為 symbol, period, ma_period（預設14）
 - DeMarker 的0.3/0.7閾值與 MQL5 示例代碼中的 indicator_level1=0.3, indicator_level2=0.7 一致
+
+## 實戰應用
+
+（待補充）
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）

@@ -181,3 +181,15 @@ Box Spread 的隱含利率可作為市場無風險利率的替代指標。與國
 - Cboe: "Long-Dated Box Spreads: A Better Way to Buy a Home" (2025)
 - SyntheticFi: 機構級 Box Spread 借貸服務
 - Put-Call Parity 基礎理論
+
+## 實戰應用
+
+（待補充）
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）

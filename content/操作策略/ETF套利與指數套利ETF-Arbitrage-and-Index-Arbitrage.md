@@ -169,3 +169,15 @@ ETF（Exchange-Traded Fund）在交易所像股票一樣買賣，有一個「市
 
 - [Wikipedia - Exchange-traded fund (Arbitrage mechanism)](https://en.wikipedia.org/wiki/Exchange-traded_fund#Arbitrage_mechanism)
 - Investopedia - ETF Creation and Redemption
+
+## 實戰應用
+
+（待補充）
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）

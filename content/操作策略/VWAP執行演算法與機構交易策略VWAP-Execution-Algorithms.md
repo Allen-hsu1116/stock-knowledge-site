@@ -156,6 +156,18 @@ VWAP 有一個有趣的特性——**自我實現（self-fulfilling）**：
 - [[技術分析/成交量加權移動平均線VWMA-Volume-Weighted-Moving-Average]] — 把成交量揉進均線
 - [[籌碼面分析/暗池交易與大戶足跡Dark-Pool-Trading-and-Institutional-Footprint]] — 機構場外交易的足跡追蹤
 
+## 實戰應用
+
+（待補充）
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）
+
 ## 來源
 
 - QuantInsti: VWAP Tutorial — Calculation, Uses, and Limitations

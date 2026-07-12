@@ -185,3 +185,11 @@ SafeZone Stop 的核心智慧是「只看真正的方向性穿透，忽略噪音
 - [[跳空缺口風險Gap-Risk]] — 跳空風險基礎
 - [[趨勢追蹤策略Trend-Following]] — 趨勢追蹤策略
 - [[盤整市綜合操作策略Consolidation-Market-Strategy]] — 盤整市策略
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）

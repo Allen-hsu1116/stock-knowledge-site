@@ -201,6 +201,10 @@ RS Ratio = 板塊指數 / 大盤指數
 - [[操作策略/跨市場分析Intermarket-Analysis]] - 跨市場輪動的系統性框架
 - [[法人換股與類股輪動籌碼判讀]] - 從籌碼面追蹤輪動
 
+## 實戰應用
+
+（待補充）
+
 ## 來源
 
 - Stovall, S. (1996). "Sector Investing." McGraw-Hill

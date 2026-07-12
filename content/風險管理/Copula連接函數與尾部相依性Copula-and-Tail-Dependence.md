@@ -208,6 +208,14 @@ $$
 - **與 [[風險管理/極端值理論EVT量化肥尾風險|EVT 極值理論]] 的關係**：EVT 擬合單變量尾部，Copula 連接多變量尾部，兩者組合 = 完整的尾部風險建模
 - **與 [[風險管理/分散投資七法與相關係數Diversification-Seven-Methods|分散投資]] 的關係**：Copula 下尾相依係數量化分散在危機時的失效程度
 
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）
+
 ## 來源
 
 - Sklar, A. (1959). "Fonctions de répartition à n dimensions et leurs marges"

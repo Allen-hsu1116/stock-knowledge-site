@@ -192,3 +192,11 @@ CAPE 是本益比的「去噪版」——用十年平均盈餘 + 通膨調整，
 - Siegel, J. (2013). "Don't Put Faith in CAPE Crusaders". Financial Times.
 - Keimling, N. (2016). "Predicting Stock Market Returns Using the Shiller CAPE".
 - multpl.com: Shiller PE Ratio Historical Data
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）

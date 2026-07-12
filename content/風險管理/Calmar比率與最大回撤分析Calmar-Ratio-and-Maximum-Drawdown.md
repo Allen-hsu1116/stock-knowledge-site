@@ -198,3 +198,11 @@ Calmar 完全不區分這兩種路徑。
 - [Calmar ratio - Wikipedia](https://en.wikipedia.org/wiki/Calmar_ratio)
 - Terry W. Young, "Calmar Ratio", Futures Magazine, 1991
 - California Managed Accounts (CMA) Reports
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）

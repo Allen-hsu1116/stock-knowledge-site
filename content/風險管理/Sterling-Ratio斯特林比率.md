@@ -51,10 +51,10 @@ SR = (Annual Portfolio Return - Annual Risk-Free Rate) / Average Largest Drawdow
 | 指標 | 分子 | 分母 | 核心差異 |
 |------|------|------|----------|
 | Sharpe | 超額報酬 | 標準差（總波動） | 懲罰上漲和下跌波動 |
-| [[風險管理/索提諾比率進階實戰Sortino-Ratio-Advanced\|Sortino]] | 超額報酬 | 下行標準差 | 只懲罰下跌波動 |
+| [[風險管理/索提諾比率進階實戰Sortino-Ratio-Advanced|Sortino]] | 超額報酬 | 下行標準差 | 只懲罰下跌波動 |
 | Calmar | 年化報酬 | 最大回撤 | 單一最壞情況 |
 | Sterling | 年化報酬 | 平均年度回撤 | 回撤的平均水準 |
-| [[風險管理/Omega比率Omega-Ratio\|Omega]] | 收益潛力 | 損失風險 | 用整個分配而非單一統計量 |
+| [[風險管理/Omega比率Omega-Ratio|Omega]] | 收益潛力 | 損失風險 | 用整個分配而非單一統計量 |
 
 **Sterling 的定位**：在 Calmar 和 Sharpe 之間。比 Sharpe 更貼近投資者真實感受（回撤比標準差直觀），比 Calmar 更穩定（平均回撤不會被單一極端值扭曲）。
 
@@ -112,3 +112,15 @@ Sterling 用「平均回撤」，在這個體系中介於 Calmar（最保守）�
 ---
 
 *標籤：#風險管理 #績效評估 #回撤分析 #風險調整報酬*
+
+## 核心概念
+
+（待補充）
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）

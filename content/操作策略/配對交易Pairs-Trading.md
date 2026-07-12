@@ -194,3 +194,15 @@ Long-Term Capital Management 曾大量使用配對交易，最終因為：
 - [Pairs trade - Wikipedia](https://en.wikipedia.org/wiki/Pairs_trade)
 - Gerry Bamberger & Nunzio Tartaglia, Morgan Stanley, 1980s
 - Long-Term Capital Management 的反面教材案例
+
+## 實戰應用
+
+（待補充）
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）

@@ -148,3 +148,11 @@ Omega = 3.83 表示每承受1單位損失風險，可獲得3.83單位的收益�
 - Sortino, F.A. & Price, L.N. (1994). "Performance measurement in a downside risk framework". Journal of Investing.
 - Wikipedia: Sortino ratio（Omega 的數學基礎）
 - Post-Modern Portfolio Theory（後現代投資組合理論）核心指標之一
+
+## 注意事項
+
+（待補充）
+
+## 相關主題
+
+（待補充）
