@@ -109,6 +109,18 @@ Marwala 推論：AI 參與者越多，市場越有效率，因為機器學習能
 - **與 [[風險管理/黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals|黑天鵝理論]] 的關係**：Taleb 批評 EMH 忽略極端事件的肥尾風險。
 - **與 [[風險管理/生存者偏差Survivorship-Bias|生存者偏差]] 的關係**：EMH 認為成功投資者是運氣，但成功者認為是技術——生存者偏差讓我們只看到贏家。
 
+
+## 核心概念
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）
+
 ## 來源
 
 - Wikipedia: Efficient-market hypothesis

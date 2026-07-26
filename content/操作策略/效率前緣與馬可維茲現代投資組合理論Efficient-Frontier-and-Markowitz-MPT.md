@@ -189,3 +189,10 @@ MPT假設投資人完全理性，但行為財務學證明投資人受心理帳�
 - Markowitz, Harry (1952). "Portfolio Selection". The Journal of Finance. 7 (1): 77–91.
 - Markowitz, Harry (1959). Portfolio Selection: Efficient Diversification of Investments. John Wiley & Sons.
 - Hubbard, Douglas W. (2009). The Failure of Risk Management. John Wiley & Sons.
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

@@ -197,3 +197,14 @@ category: "操作策略"
 - [[市場中性策略Market-Neutral-Strategy]]
 - [[Copula連接函數與尾部相依性Copula-and-Tail-Dependence]]
 - [[配對交易Pairs-Trading]]
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

@@ -170,3 +170,10 @@ Fama-French模型從學術走向實務，催生了整個因子投資產業：
 - Fama, E. F.; French, K. R. (2015). "A Five-Factor Asset Pricing Model". Journal of Financial Economics. 116: 1–22.
 - Carhart, M. M. (1997). "On Persistence in Mutual Fund Performance". The Journal of Finance. 52 (1): 57–82.
 - Kenneth French Data Library: [https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html)
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

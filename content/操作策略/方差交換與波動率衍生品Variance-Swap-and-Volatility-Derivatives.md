@@ -165,3 +165,14 @@ OTC 衍生品的對手可能違約。相關頁面 [[交易對手風險Counterpar
 - [[波動率期限結構與曲面演化Volatility-Term-Structure-and-Surface-Evolution]]
 - [[離散度交易Dispersion-Trading]]
 - [[隱含波動率IV與歷史波動率HV實戰判讀]]
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

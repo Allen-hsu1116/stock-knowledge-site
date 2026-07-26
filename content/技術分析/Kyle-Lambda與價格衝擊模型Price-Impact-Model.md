@@ -140,3 +140,14 @@ Kyle 的線性模型是基礎，實證顯示真實市場更接近**凹函數**�
 - Bouchaud, J.P. et al. (2004). "Fluctuations and Response in Financial Markets: The Minor Game." (Square Root Law)
 - Wikipedia: Market Impact
 - Easley, D. & O'Hara, M. — VPIN 相關論文系列
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

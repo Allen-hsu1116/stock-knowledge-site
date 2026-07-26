@@ -263,3 +263,10 @@ Robert Shiller在《非理性繁榮》中指出，股價波動遠超過估值變
 - Kahneman, Daniel; Tversky, Amos (1979). "Prospect Theory: An Analysis of Decision under Risk". Econometrica. 47 (2): 263–291.
 - Thaler, Richard (2015). Misbehaving: The Making of Behavioral Economics. W.W. Norton.
 - Shiller, Robert (2000). Irrational Exuberance. Princeton University Press.
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

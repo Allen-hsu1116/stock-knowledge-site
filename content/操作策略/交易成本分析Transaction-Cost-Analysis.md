@@ -143,6 +143,18 @@ TCA 是實現 [[操作策略/實施短缺與最佳執行Implementation-Shortfall
 - [[風險管理/交易執行力缺口Execution-Gap]] — 執行落差
 - [[風險管理/市場微結構與流動性定價Market-Microstructure-and-Liquidity-Pricing]] — 微結構基礎
 
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）
+
 ## 來源
 
 - Wikipedia: Transaction cost analysis

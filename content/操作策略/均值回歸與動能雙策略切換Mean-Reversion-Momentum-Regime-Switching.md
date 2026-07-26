@@ -145,3 +145,14 @@
 - Hurst, H.E. (1951). "Long-term storage capacity of reservoirs."（Hurst Exponent 原始論文）
 - Connors, L. & Alvarez, C. "An Introduction to Regime Switching Strategies."
 - Quantitative Research: "Mean Reversion vs Momentum: When to Switch."
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

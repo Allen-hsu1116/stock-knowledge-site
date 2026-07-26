@@ -1,11 +1,14 @@
 ---
+title: "High Tight Flag 高緊旗形型態"
 tags: [操作策略, 型態學, 突破, 動能, CAN-SLIM]
 created: 2026-07-16
 ---
 
 # High Tight Flag 高緊旗形型態
 
-## 概述
+> High Tight Flag（HTF，高緊旗形）是 William O'Neil 在《How to Make Money in Stocks》中提出的經典強勢股型態，也是 [[操作策略/CAN-SLIM選股法|CAN-SLIM 選股法]] 中最具爆發力的買點型態之一。
+
+## 核心概念
 
 High Tight Flag（HTF，高緊旗形）是 William O'Neil 在《How to Make Money in Stocks》中提出的經典強勢股型態，也是 [[操作策略/CAN-SLIM選股法|CAN-SLIM 選股法]] 中最具爆發力的買點型態之一。
 
@@ -135,3 +138,14 @@ High Tight Flag 是技術分析中最「硬核」的強勢型態——它要求�
 - 突破交易：[[技術分析/盤整突破交易SOP|盤整突破交易 SOP]]
 - 停損設定：[[風險管理/停損設定方法Stop-Loss-Placement|停損設定方法]]
 - 趨勢確認：[[技術分析/ADX趨勢強度過濾盤整|ADX 趨勢強度]]
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

@@ -122,3 +122,10 @@ C − P = S − K × e^(−rT)
 - YouTube: "Synthetic Options - Understanding Professional Trading"
 - Natenberg, Sheldon. "Option Volatility and Pricing" (Ch. on Put-Call Parity)
 - CBOE Options Education — Synthetic Positions Guide
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

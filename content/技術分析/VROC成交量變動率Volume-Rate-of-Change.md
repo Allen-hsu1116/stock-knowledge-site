@@ -1,11 +1,14 @@
 ---
+title: "VROC 成交量變動率 (Volume Rate of Change)"
 tags: [技術分析, 成交量, 動量指標, 量價關係]
 created: 2026-07-14
 ---
 
 # VROC 成交量變動率 (Volume Rate of Change)
 
-## 概述
+> Volume Rate of Change（VROC）是一個衡量成交量動量的技術指標。它的計算邏輯與 [[技術分析/ROC變動率指標Rate-of-Change|價格變動率 ROC]] 完全對應，只是把分子從「價格變化」換成「成交量變化」。
+
+## 核心概念
 
 Volume Rate of Change（VROC）是一個衡量成交量動量的技術指標。它的計算邏輯與 [[技術分析/ROC變動率指標Rate-of-Change|價格變動率 ROC]] 完全對應，只是把分子從「價格變化」換成「成交量變化」。
 
@@ -139,3 +142,14 @@ VROC 是一個用「量的變化率」來衡量市場動能的輔助指標。它
 - [[籌碼面分析/分點進出追蹤關鍵分點]]
 - [[籌碼面分析/當沖成交比重與市場過熱判讀Day-Trading-Ratio-and-Market-Overheating]]
 - [[籌碼面分析/主力作線與控盤手法]]
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

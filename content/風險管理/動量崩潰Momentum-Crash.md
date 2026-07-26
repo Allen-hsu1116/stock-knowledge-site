@@ -160,6 +160,18 @@ category: "風險管理"
 - [[風險管理/策略失效偵測與策略健康監控Strategy-Failure-Detection]] — 策略失效監控
 - [[操作策略/均值回歸策略MeanReversion]] — 均值回歸策略
 
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）
+
 ## 來源
 
 - Daniel, K. and Moskowitz, T.J. (2016). "Momentum Crashes." Journal of Financial Economics 122(2), 253-287

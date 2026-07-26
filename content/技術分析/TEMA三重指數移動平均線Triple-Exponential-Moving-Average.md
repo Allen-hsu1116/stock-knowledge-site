@@ -1,11 +1,14 @@
 ---
+title: "TEMA 三重指數移動平均線 (Triple Exponential Moving Average)"
 tags: [技術分析, 均線, 趨勢指標, 動量]
 created: 2026-07-15
 ---
 
 # TEMA 三重指數移動平均線 (Triple Exponential Moving Average)
 
-## 概述
+> TEMA（Triple Exponential Moving Average，三重指數移動平均線）由 Patrick Mulloy 於 1994 年提出。核心思路是：**對 EMA 做 EMA 再做 EMA，然後用代數組合消除延遲**——讓均線既有平滑度又大幅降低遲滯性。
+
+## 核心概念
 
 TEMA（Triple Exponential Moving Average，三重指數移動平均線）由 Patrick Mulloy 於 1994 年提出。核心思路是：**對 EMA 做 EMA 再做 EMA，然後用代數組合消除延遲**——讓均線既有平滑度又大幅降低遲滯性。
 
@@ -132,3 +135,14 @@ TEMA 是零延遲均線家族中計算最直觀的一員。它用三層 EMA 的�
 - 自適應均線：[[技術分析/考夫曼自適應移動平均線KAMA|KAMA]]
 - 零延遲均線：[[技術分析/赫爾移動平均線HMA-Hull-Moving-Average|HMA]]
 - 動量確認：[[技術分析/MACD指標實戰判讀|MACD]]
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

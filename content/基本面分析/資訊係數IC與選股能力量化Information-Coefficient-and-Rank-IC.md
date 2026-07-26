@@ -172,3 +172,14 @@ $$IR = IC \times \sqrt{BR} \times \sqrt{TC}$$
 
 **來源**: Wikipedia Information Coefficient 條目；Grinold & Kahn《Active Portfolio Management》；量化投資實務
 **建立日期**: 2026-07-23
+
+## 核心概念
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

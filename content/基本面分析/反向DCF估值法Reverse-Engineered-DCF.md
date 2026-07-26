@@ -167,3 +167,10 @@ Price = ∑ [FCF₀ × (1+g)^t / (1+WACC)^t] + TV / (1+WACC)^n
 - Mauboussin, M. J. & Johnson, P. (2014). "What Type of Investor Are You?". Credit Suisse Global Financial Strategies.
 - Mauboussin, M. J. (2015). "Capital Allocation: Measuring, Monitoring and Managing Value Creation".
 - Damodaran, A. (2012). "Investment Valuation: Tools and Techniques for Determining the Value of Any Asset". Wiley.
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

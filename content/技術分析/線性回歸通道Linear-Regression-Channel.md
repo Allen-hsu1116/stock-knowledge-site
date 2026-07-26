@@ -1,11 +1,14 @@
 ---
+title: "Linear Regression Channel 線性回歸通道"
 tags: [技術分析, 統計, 通道, 趨勢, 回歸]
 created: 2026-07-16
 ---
 
 # Linear Regression Channel 線性回歸通道
 
-## 概述
+> Linear Regression Channel（線性回歸通道）是將統計學中的「最小平方法線性回歸」直接應用到股價圖表上的通道型指標。它不同於 [[技術分析/布林通道Bollinger-Bands三軌八型態|布林通道]]（用標準差）或 [[技術分析/肯特納通道Keltner-Channel|肯特納通道]]（用 ATR），而是用迴歸線本身作為中軸、用回歸殘差的標準差作為上下軌。
+
+## 核心概念
 
 Linear Regression Channel（線性回歸通道）是將統計學中的「最小平方法線性回歸」直接應用到股價圖表上的通道型指標。它不同於 [[技術分析/布林通道Bollinger-Bands三軌八型態|布林通道]]（用標準差）或 [[技術分析/肯特納通道Keltner-Channel|肯特納通道]]（用 ATR），而是用迴歸線本身作為中軸、用回歸殘差的標準差作為上下軌。
 
@@ -159,3 +162,14 @@ Linear Regression Channel 是通道指標中最「學術」的一種——它把
 - 趨勢強度：[[技術分析/ADX趨勢強度過濾盤整|ADX 趨勢強度]]
 - 均線比較：[[技術分析/移動平均線種類比較SMA-EMA-WMA|SMA vs EMA vs WMA]]
 - 停損設定：[[風險管理/停損設定方法Stop-Loss-Placement|停損設定方法]]
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

@@ -130,3 +130,18 @@ HFT 和做市有顯著重疊——許多 HFT 公司的主要策略就是做市�
 
 **來源**: Wikipedia High-Frequency Trading、Market Maker 條目；SEC 做市定義；Michael Lewis《Flash Boys》
 **建立日期**: 2026-07-23
+
+## 核心概念
+（待補充）
+
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

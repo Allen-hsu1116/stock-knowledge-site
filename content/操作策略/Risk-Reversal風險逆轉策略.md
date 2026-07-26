@@ -1,11 +1,14 @@
 ---
+title: "Risk Reversal 風險逆轉策略"
 tags: [操作策略, 選擇權, 方向性策略, Greeks]
 created: 2026-07-14
 ---
 
 # Risk Reversal 風險逆轉策略
 
-## 概述
+> Risk Reversal（風險逆轉，又稱 Risk Reversal Combo）是選擇權市場中最常見的方向性策略之一。結構非常簡單：**賣出一個 Put + 買進一個 Call**，兩者通常同為價外（OTM），到期日相同。
+
+## 核心概念
 
 Risk Reversal（風險逆轉，又稱 Risk Reversal Combo）是選擇權市場中最常見的方向性策略之一。結構非常簡單：**賣出一個 Put + 買進一個 Call**，兩者通常同為價外（OTM），到期日相同。
 
@@ -135,3 +138,14 @@ Risk Reversal 是一個高效的方向性策略，核心優勢是用賣出選擇
 - [[風險管理/保證金追繳與融資斷頭Margin-Call-and-Forced-Liquidation]]
 - [[風險管理/跳空缺口風險Gap-Risk]]
 - [[籌碼面分析/台指期結算日操作]]
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

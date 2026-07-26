@@ -176,3 +176,10 @@ Almgren和Chriss（2000）提出的模型是最佳執行的經典框架：
 - [Implementation shortfall - Wikipedia](https://en.wikipedia.org/wiki/Implementation_shortfall)
 - [Trade Strategy and Execution - CFA Institute](https://www.cfainstitute.org/)
 - Almgren, R.; Chriss, N. (2000). "Optimal Execution of Portfolio Transactions". Journal of Risk. 3: 5-39.
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

@@ -1,11 +1,14 @@
 ---
+title: "Williams Fractal 威廉分形指標"
 tags: [技術分析, Bill-Williams, 分形, 支撐壓力, 突破]
 created: 2026-07-16
 ---
 
 # Williams Fractal 威廉分形指標
 
-## 概述
+> Williams Fractal（威廉分形）由傳奇交易員 Larry Williams 在其著作《Trading Chaos》中提出，是 [[技術分析/Bill-Williams五維交易系統進階實戰|Bill Williams 五維交易系統]] 的核心組件之一。
+
+## 核心概念
 
 Williams Fractal（威廉分形）由傳奇交易員 Larry Williams 在其著作《Trading Chaos》中提出，是 [[技術分析/Bill-Williams五維交易系統進階實戰|Bill Williams 五維交易系統]] 的核心組件之一。
 
@@ -140,3 +143,14 @@ Bill Williams 的哲學是：鱷魚線告訴你「要不要進場」，分形告
 - 峰谷辨識比較：[[技術分析/ZigZag鋸齒形指標峰谷辨識與趨勢過濾|ZigZag 鋸齒形指標]]
 - 移動停損：[[風險管理/移動停利停損Trailing-Stop|移動停利停損]]
 - 同系列指標：[[技術分析/Williams-R威廉指標|Williams %R]]
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

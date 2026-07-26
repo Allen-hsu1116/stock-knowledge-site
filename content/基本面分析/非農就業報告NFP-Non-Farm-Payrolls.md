@@ -99,3 +99,18 @@
 - Wikipedia: Nonfarm payrolls
 - BLS (Bureau of Labor Statistics) 官方定義
 - 知識庫 YouTube 影片筆記中 2026 年多次 NFP 相關分析
+
+## 核心概念
+（待補充）
+
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）

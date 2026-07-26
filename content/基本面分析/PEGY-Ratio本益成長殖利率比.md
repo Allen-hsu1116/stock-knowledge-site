@@ -1,11 +1,14 @@
 ---
+title: "PEGY Ratio 本益成長殖利率比"
 tags: [基本面分析, 估值, 成長股, 股利]
 created: 2026-07-15
 ---
 
 # PEGY Ratio 本益成長殖利率比
 
-## 概述
+> PEGY Ratio（Price/Earnings to Growth and Yield）是 [[基本面分析/PEG本益成長比|PEG Ratio]] 的進化版——在成長率之外再加入殖利率，形成更全面的估值篩選指標。
+
+## 核心概念
 
 PEGY Ratio（Price/Earnings to Growth and Yield）是 [[基本面分析/PEG本益成長比|PEG Ratio]] 的進化版——在成長率之外再加入殖利率，形成更全面的估值篩選指標。
 
@@ -129,3 +132,10 @@ PEGY Ratio 是 PEG 的台股友善版——在成長之外加上殖利率，讓�
 - 股利穩定度：[[基本面分析/股利穩定度與股利成長分析Dividend-Stability-and-Growth-Analysis|股利穩定度與成長分析]]
 - DCF 估值：[[基本面分析/現金流量折現法DCF估值|DCF 估值]]
 - FCF 估值：[[基本面分析/FCF估值模型自由現金流15公式與選股實戰|FCF 估值模型]]
+
+## 實戰應用
+（待補充）
+
+
+## 相關主題
+（待補充）

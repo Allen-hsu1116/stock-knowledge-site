@@ -178,3 +178,14 @@ TSMOM 在台股的實證資料較少，但可以參考 CTA 基金的長期績效
 - [[套息交易Carry-Trade]]
 - [[短期動能反轉策略Short-Term-Reversal]]
 - [[台灣持續性動能策略Momentum-Persistency]]
+
+## 實戰應用
+（待補充）
+
+
+## 注意事項
+（待補充）
+
+
+## 相關主題
+（待補充）
