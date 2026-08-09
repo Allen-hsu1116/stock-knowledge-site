@@ -1,6 +1,7 @@
 ---
 title: 處置效應進階實戰 Disposition Effect Advanced
 date: 2026-06-28
+category: "風險管理"
 ---
 
 # 處置效應進階實戰 Disposition Effect Advanced

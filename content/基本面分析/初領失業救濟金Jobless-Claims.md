@@ -1,3 +1,8 @@
+---
+title: "初領失業救濟金 Jobless Claims (Initial Jobless Claims)"
+category: "基本面分析"
+---
+
 # 初領失業救濟金 Jobless Claims (Initial Jobless Claims)
 
 > 每週四早上 8:30 揭曉的高頻就業數據。非農月報的先行指標，市場波動的每週催化劑。

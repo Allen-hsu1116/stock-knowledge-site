@@ -1,3 +1,8 @@
+---
+title: "密西根大學消費者情緒指數 University of Michigan Consumer Sentiment Index (UMCSI)"
+category: "基本面分析"
+---
+
 # 密西根大學消費者情緒指數 University of Michigan Consumer Sentiment Index (UMCSI)
 
 > 消費者心理的月度X光——當信心崩塌時，衰退已在路上

@@ -1,6 +1,7 @@
 ---
 title: Fisher Transform 費雪轉換指標
 date: 2026-06-22
+category: "技術分析"
 ---
 
 # Fisher Transform 費雪轉換指標

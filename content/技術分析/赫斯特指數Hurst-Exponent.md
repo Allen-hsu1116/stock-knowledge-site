@@ -1,6 +1,7 @@
 ---
 title: 赫斯特指數 Hurst Exponent
 date: 2026-06-29
+category: "技術分析"
 ---
 
 # 赫斯特指數 Hurst Exponent

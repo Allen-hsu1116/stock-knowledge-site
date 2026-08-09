@@ -1,3 +1,8 @@
+---
+title: "波動率體制轉換模型 Volatility Regime Switching Model"
+category: "風險管理"
+---
+
 # 波動率體制轉換模型 Volatility Regime Switching Model
 
 > 市場有兩種人格——有時平靜如湖，有時狂暴如海。你不能用同一套策略對付兩種人格。波動率體制轉換模型用統計方法自動辨識市場現在是哪種人格，讓你知道何時該順勢、何時該反轉。

@@ -1,6 +1,7 @@
 ---
 title: 波動率的波動率VVIX Volatility of Volatility
 date: 2026-06-28
+category: "風險管理"
 ---
 
 # 波動率的波動率 VVIX Volatility of Volatility

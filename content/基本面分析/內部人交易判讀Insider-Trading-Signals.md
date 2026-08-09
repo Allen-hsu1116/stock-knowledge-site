@@ -1,6 +1,7 @@
 ---
 title: 內部人交易判讀
 date: 2026-06-23
+category: "基本面分析"
 ---
 
 # 內部人交易判讀 Insider Trading Signals

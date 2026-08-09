@@ -1,3 +1,8 @@
+---
+title: "均值回歸與動能雙策略切換 Mean-Reversion-Momentum-Regime-Switching"
+category: "操作策略"
+---
+
 # 均值回歸與動能雙策略切換 Mean-Reversion-Momentum-Regime-Switching
 
 > 均值回歸和動能是市場的雙螺旋DNA——同一個市場在不同體制下展現完全相反的行為，關鍵不在選邊站而在知道何時切換。

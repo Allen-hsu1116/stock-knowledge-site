@@ -1,6 +1,7 @@
 ---
 title: 後悔厭惡與決策理論 Regret Aversion
 date: 2026-06-28
+category: "風險管理"
 ---
 
 # 後悔厭惡與決策理論 Regret Aversion

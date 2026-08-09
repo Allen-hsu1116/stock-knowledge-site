@@ -1,3 +1,8 @@
+---
+title: "LTCM長期資本管理公司倒閉案例 Long-Term Capital Management Collapse"
+category: "風險管理"
+---
+
 # LTCM長期資本管理公司倒閉案例 Long-Term Capital Management Collapse
 
 > 兩位諾貝爾獎得主、華爾街最聰明的腦袋、25倍槓桿——然後四個月內虧掉46億美元。市場不在乎你有多聰明，只在乎你能不能活過極端事件。

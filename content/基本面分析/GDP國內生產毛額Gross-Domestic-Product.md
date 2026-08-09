@@ -1,3 +1,8 @@
+---
+title: "GDP 國內生產毛額 (Gross Domestic Product)"
+category: "基本面分析"
+---
+
 # GDP 國內生產毛額 (Gross Domestic Product)
 
 > 一個國家經濟體質檢報告。GDP 不只是數字，是股市多空的終極底氣——沒有 GDP 成長，就沒有企業獲利成長。

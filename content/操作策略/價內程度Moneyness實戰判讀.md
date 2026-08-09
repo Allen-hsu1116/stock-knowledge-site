@@ -1,6 +1,7 @@
 ---
 title: "價內程度Moneyness實戰判讀"
 date: 2026-06-27
+category: "操作策略"
 ---
 
 # 價內程度 Moneyness 實戰判讀

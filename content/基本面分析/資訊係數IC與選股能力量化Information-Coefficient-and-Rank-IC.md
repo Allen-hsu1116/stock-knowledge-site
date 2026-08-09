@@ -1,3 +1,8 @@
+---
+title: "資訊係數IC與選股能力量化 Information Coefficient & Rank IC"
+category: "基本面分析"
+---
+
 # 資訊係數IC與選股能力量化 Information Coefficient & Rank IC
 
 > 量化選股能力的標準答案——IC衡量預測與實際報酬的相關性，Rank IC更穩健地用Spearman等級相關避開極端值干擾，IR=IC×√BR揭示選股能力×交易頻率的乘法關係

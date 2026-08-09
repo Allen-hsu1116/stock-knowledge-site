@@ -1,3 +1,8 @@
+---
+title: "信用違約交換CDS Credit Default Swap"
+category: "基本面分析"
+---
+
 # 信用違約交換CDS Credit Default Swap
 
 > 為債券買保險的金融衍生品——2008金融危機的引爆點之一，AIG因此被國有化，但CDS本身是信用風險管理的核心工具

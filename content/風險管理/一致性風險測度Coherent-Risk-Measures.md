@@ -1,3 +1,8 @@
+---
+title: "一致性風險測度 Coherent Risk Measures"
+category: "風險管理"
+---
+
 # 一致性風險測度 Coherent Risk Measures
 
 > 風險測度的四大公理——單調性、次可加性、正齊次性、平移不變性——VaR 不合格、CVaR 才合格的數學原因。

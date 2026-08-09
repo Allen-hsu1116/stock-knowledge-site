@@ -1,3 +1,8 @@
+---
+title: "消費者信心指數 Consumer Confidence Index"
+category: "基本面分析"
+---
+
 # 消費者信心指數 Consumer Confidence Index
 
 > 消費者自己說了算——花不花錢先看心情，信心指數是消費支出的情緒先行指標

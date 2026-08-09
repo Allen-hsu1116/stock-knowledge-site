@@ -1,6 +1,7 @@
 ---
 title: "共整合檢定 Cointegration Test"
 date: 2026-06-20
+category: "操作策略"
 ---
 
 # 共整合檢定 Cointegration Test

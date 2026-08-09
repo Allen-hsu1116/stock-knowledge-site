@@ -1,6 +1,7 @@
 ---
 title: "波動率期限結構與曲面演化Volatility-Term-Structure-and-Surface-Evolution"
 date: 2026-06-27
+category: "操作策略"
 ---
 
 # 波動率期限結構與曲面演化 Volatility Term Structure & Surface Evolution

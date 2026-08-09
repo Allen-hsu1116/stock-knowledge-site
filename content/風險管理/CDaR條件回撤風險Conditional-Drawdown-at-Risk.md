@@ -1,6 +1,7 @@
 ---
 title: "CDaR條件回撤風險 Conditional Drawdown at Risk"
 date: 2026-06-26
+category: "風險管理"
 ---
 
 # CDaR條件回撤風險 Conditional Drawdown at Risk

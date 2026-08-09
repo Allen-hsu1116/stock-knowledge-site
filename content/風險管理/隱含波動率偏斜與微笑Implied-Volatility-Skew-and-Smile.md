@@ -1,3 +1,8 @@
+---
+title: "隱含波動率偏斜與微笑 Implied Volatility Skink and Smile"
+category: "風險管理"
+---
+
 # 隱含波動率偏斜與微笑 Implied Volatility Skink and Smile
 
 > 選擇權市場的隱含波動率隨履約價變化形成「微笑」或「偏斜」曲線，是市場對肥尾與崩盤風險的定價訊號。

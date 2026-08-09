@@ -1,3 +1,8 @@
+---
+title: "合成部位 Synthetic Position"
+category: "操作策略"
+---
+
 # 合成部位 Synthetic Position
 
 > 用選擇權組合複製出標的資產的損益結構，不直接持有標的就能獲得相同的方向性曝險。

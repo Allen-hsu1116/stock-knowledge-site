@@ -1,3 +1,8 @@
+---
+title: "CPI 消費者物價指數 Consumer Price Index"
+category: "基本面分析"
+---
+
 # CPI 消費者物價指數 Consumer Price Index
 
 > 通膨的溫度計，聯準會利率決策的核心依據，台股投資人每個月必盯的數字。

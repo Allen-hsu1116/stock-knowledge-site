@@ -1,3 +1,8 @@
+---
+title: "VIX 恐慌指數 Volatility Index"
+category: "基本面分析"
+---
+
 # VIX 恐慌指數 Volatility Index
 
 > 市場的恐懼溫度計——當 VIX 飆升時，不是你該恐慌的時候，而是你該觀察別人恐慌的時候。

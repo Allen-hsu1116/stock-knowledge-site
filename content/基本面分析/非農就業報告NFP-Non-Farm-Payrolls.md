@@ -1,3 +1,8 @@
+---
+title: "非農就業報告 NFP Non-Farm Payrolls"
+category: "基本面分析"
+---
+
 # 非農就業報告 NFP Non-Farm Payrolls
 
 > 每月第一個週五引爆全球市場波動的就業數據，聯準會雙重使命的就業面指標。

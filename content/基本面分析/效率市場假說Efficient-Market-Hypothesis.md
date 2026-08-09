@@ -1,3 +1,8 @@
+---
+title: "效率市場假說 Efficient Market Hypothesis (EMH)"
+category: "基本面分析"
+---
+
 # 效率市場假說 Efficient Market Hypothesis (EMH)
 
 > 股價已經反映所有已知資訊——你不可能持續「打敗市場」，除非你運氣好或者承擔了更高的風險。

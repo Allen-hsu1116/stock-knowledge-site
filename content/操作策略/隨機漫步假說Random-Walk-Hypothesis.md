@@ -1,3 +1,8 @@
+---
+title: "隨機漫步假說 Random Walk Hypothesis"
+category: "操作策略"
+---
+
 # 隨機漫步假說 Random Walk Hypothesis
 
 > 股價變動本質上是隨機的——昨天的價格走勢無法預測明天的方向，就像醉漢走路一樣不可預測。

@@ -1,3 +1,8 @@
+---
+title: "PCE 個人消費支出物價指數 (Personal Consumption Expenditures Price Index)"
+category: "基本面分析"
+---
+
 # PCE 個人消費支出物價指數 (Personal Consumption Expenditures Price Index)
 
 > 聯準會最看重的通膨指標。CPI 是新聞標題，PCE 才是利率決策的真正依據。

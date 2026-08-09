@@ -1,6 +1,7 @@
 ---
 title: KST 確知事物指標 Know Sure Thing
 date: 2026-06-22
+category: "技術分析"
 ---
 
 # KST 確知事物指標 Know Sure Thing

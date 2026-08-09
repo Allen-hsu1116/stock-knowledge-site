@@ -1,3 +1,8 @@
+---
+title: "Sterling Ratio 斯特林比率"
+category: "風險管理"
+---
+
 # Sterling Ratio 斯特林比率
 
 > 用年化報酬除以平均年度回撤衡量風險調整報酬——Calmar 的「平均版」，不看單一最壞回撤而是看每年回撤的平均值。

@@ -1,3 +1,8 @@
+---
+title: "TIPS與損益兩平通膨率 Breakeven Inflation Rate"
+category: "基本面分析"
+---
+
 # TIPS與損益兩平通膨率 Breakeven Inflation Rate
 
 > 市場對通膨的真實預期——不是問經濟學家怎麼看，而是看債券交易員用真金白銀押注的通膨數字。

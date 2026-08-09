@@ -1,3 +1,8 @@
+---
+title: "PPI 生產者物價指數 Producer Price Index"
+category: "基本面分析"
+---
+
 # PPI 生產者物價指數 Producer Price Index
 
 > CPI 的上游領先指標，生產端通膨壓力的第一手訊號。

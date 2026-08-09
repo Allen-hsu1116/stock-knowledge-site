@@ -1,3 +1,8 @@
+---
+title: "Kyle's Lambda 與價格衝擊模型 Price Impact Model"
+category: "技術分析"
+---
+
 # Kyle's Lambda 與價格衝擊模型 Price Impact Model
 
 > 機構大單如何推動價格？Kyle's Lambda 量化「交易量→價格移動」的敏感度，是市場微結構的核心定價工具。

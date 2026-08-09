@@ -1,3 +1,8 @@
+---
+title: "索提諾比率進階實戰 Sortino Ratio Advanced"
+category: "風險管理"
+---
+
 # 索提諾比率進階實戰 Sortino Ratio Advanced
 
 > 夏普比率把上漲也當風險，Sortino 只懲罰下跌——因為賺錢的波動不是風險，虧錢的波動才是。

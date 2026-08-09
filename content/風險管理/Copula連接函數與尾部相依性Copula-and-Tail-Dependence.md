@@ -1,3 +1,8 @@
+---
+title: "Copula 連接函數與尾部相依性 Copula and Tail Dependence"
+category: "風險管理"
+---
+
 # Copula 連接函數與尾部相依性 Copula and Tail Dependence
 
 > **Sklar's Theorem (1959)** 的核心洞察——將多變量聯合分佈拆解為「各資產的邊際分佈」和「資產間的相依結構」兩個獨立部分。Copula 是描述相依結構的數學函數，讓我們能精確建模金融資產在危機時「一起跌」的現象——尾部相依性。

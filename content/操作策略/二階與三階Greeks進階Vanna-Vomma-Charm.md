@@ -1,6 +1,7 @@
 ---
 title: "二階與三階Greeks進階 Vanna Vomma Charm"
 date: 2026-06-27
+category: "操作策略"
 ---
 
 # 二階與三階 Greeks 進階：Vanna、Vomma、Charm

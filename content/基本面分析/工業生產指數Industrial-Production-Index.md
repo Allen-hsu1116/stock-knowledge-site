@@ -1,3 +1,8 @@
+---
+title: "工業生產指數 Industrial Production Index (IPI)"
+category: "基本面分析"
+---
+
 # 工業生產指數 Industrial Production Index (IPI)
 
 > 製造業的月度心跳圖——工廠轉速加快還是放慢，一看便知

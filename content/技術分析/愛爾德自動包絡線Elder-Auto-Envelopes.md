@@ -1,3 +1,8 @@
+---
+title: "愛爾德自動包絡線 Elder's Auto-Envelopes"
+category: "技術分析"
+---
+
 # 愛爾德自動包絡線 Elder's Auto-Envelopes
 
 > 市場是個躁鬱症患者——Auto-Envelopes 用 EMA 當中心線、ATR 當波動尺，畫出 95% 價格應該待在裡面的「理智邊界」。

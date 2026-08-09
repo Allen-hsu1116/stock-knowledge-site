@@ -1,3 +1,8 @@
+---
+title: "Black-Litterman 模型：結合投資者觀點與市場均衡"
+category: "操作策略"
+---
+
 # Black-Litterman 模型：結合投資者觀點與市場均衡
 
 > Fischer Black 與 Robert Litterman 1990 年在 Goldman Sachs 開發的資產配置模型，解決 Markowitz 均值-方差優化在實務上「預期報酬率難以估計」的核心痛點。

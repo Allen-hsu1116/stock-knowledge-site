@@ -1,3 +1,8 @@
+---
+title: "ISM 製造業採購經理人指數 Institute for Supply Management Manufacturing PMI"
+category: "基本面分析"
+---
+
 # ISM 製造業採購經理人指數 Institute for Supply Management Manufacturing PMI
 
 > 美國製造業的體溫計——每月第一個工作日發布，比政府數據早一步告訴你工廠在忙還是閒

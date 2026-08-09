@@ -1,3 +1,8 @@
+---
+title: "光譜風險測度 Spectral Risk Measure"
+category: "風險管理"
+---
+
 # 光譜風險測度 Spectral Risk Measure
 
 > 用非遞增權重函數加權所有報酬分位數的風險測度，把「風險厭惡程度」直接編碼進風險衡量中，是一致性風險測度的進階版。

@@ -1,6 +1,7 @@
 ---
 title: "因子風險管理 Factor Risk Management"
 date: 2026-06-26
+category: "風險管理"
 ---
 
 # 因子風險管理 Factor Risk Management

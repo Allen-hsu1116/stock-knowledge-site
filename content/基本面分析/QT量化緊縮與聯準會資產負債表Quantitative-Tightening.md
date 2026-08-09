@@ -1,3 +1,8 @@
+---
+title: "QT 量化緊縮與聯準會資產負債表 (Quantitative Tightening)"
+category: "基本面分析"
+---
+
 # QT 量化緊縮與聯準會資產負債表 (Quantitative Tightening)
 
 > QE 灌水，QT 抽水。當聯準會在縮表，市場流動性就在消失——這是股市最容易被忽略的隱形風險。

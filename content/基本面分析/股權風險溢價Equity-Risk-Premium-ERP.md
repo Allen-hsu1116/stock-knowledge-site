@@ -1,3 +1,8 @@
+---
+title: "股權風險溢價 Equity Risk Premium (ERP)"
+category: "基本面分析"
+---
+
 # 股權風險溢價 Equity Risk Premium (ERP)
 
 > 股票相對債券的超額報酬——你承擔股市波動，市場應該多補償你多少？這個數字決定了所有股票的估值基礎。

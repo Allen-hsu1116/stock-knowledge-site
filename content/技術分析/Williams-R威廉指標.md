@@ -1,6 +1,7 @@
 ---
 title: Williams %R 威廉指標
 date: 2026-07-13
+category: "技術分析"
 ---
 
 # Williams %R 威廉指標 (William's Percent Range)

@@ -1,6 +1,7 @@
 ---
 title: 信用評等與公司債違約風險判讀
 date: 2026-06-23
+category: "基本面分析"
 ---
 
 # 信用評等與公司債違約風險判讀 Credit Rating & Default Risk

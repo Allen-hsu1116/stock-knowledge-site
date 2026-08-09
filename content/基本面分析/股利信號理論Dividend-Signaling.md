@@ -1,6 +1,7 @@
 ---
 title: 股利信號理論
 date: 2026-06-23
+category: "基本面分析"
 ---
 
 # 股利信號理論 Dividend Signaling

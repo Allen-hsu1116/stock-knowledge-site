@@ -1,6 +1,7 @@
 ---
 title: Connors RSI 複合RSI指標
 date: 2026-06-22
+category: "技術分析"
 ---
 
 # Connors RSI 複合RSI指標 (CRSI)

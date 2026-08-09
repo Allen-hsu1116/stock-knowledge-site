@@ -1,3 +1,8 @@
+---
+title: "零售銷售 Retail Sales"
+category: "基本面分析"
+---
+
 # 零售銷售 Retail Sales
 
 > 美國消費者錢包的月度體檢報告——占GDP七成的消費支出，零售銷售是第一手訊號

@@ -1,3 +1,8 @@
+---
+title: "條件風險價值 CVaR 與期望短缺 Expected Shortfall"
+category: "風險管理"
+---
+
 # 條件風險價值 CVaR 與期望短缺 Expected Shortfall
 
 > VaR 告訴你「最壞情況下的損失底線」，CVaR 告訴你「如果真的踩到那條底線，平均會賠多少」。一個看門檻，一個看門檻之後的地獄。

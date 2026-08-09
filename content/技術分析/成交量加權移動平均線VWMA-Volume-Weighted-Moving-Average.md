@@ -1,3 +1,8 @@
+---
+title: "成交量加權移動平均線 VWMA Volume-Weighted Moving Average"
+category: "技術分析"
+---
+
 # 成交量加權移動平均線 VWMA Volume-Weighted Moving Average
 
 > 每一天的價格不再是平等的——成交量大的日子說話大聲，成交量小的日子閉嘴。VWMA 把成交量當權重揉進均線裡，讓你看到的不是「平均價格」而是「平均市場共識」。

@@ -1,3 +1,8 @@
+---
+title: "FOMC 聯邦公開市場委員會與利率決策 Federal Open Market Committee"
+category: "基本面分析"
+---
+
 # FOMC 聯邦公開市場委員會與利率決策 Federal Open Market Committee
 
 > 全球資金流向的總開關，八次會議決定全世界股市的呼吸節奏。

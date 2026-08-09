@@ -1,3 +1,8 @@
+---
+title: "Pain Index 與 Pain Ratio"
+category: "風險管理"
+---
+
 # Pain Index 與 Pain Ratio
 
 > 用回撤的「深度 × 持續時間」平均來衡量投資痛苦程度，比最大回撤更能反映持有過程的心理負擔。

@@ -1,6 +1,7 @@
 ---
 title: "統計套利 Statistical Arbitrage"
 date: 2026-06-20
+category: "操作策略"
 ---
 
 # 統計套利 Statistical Arbitrage

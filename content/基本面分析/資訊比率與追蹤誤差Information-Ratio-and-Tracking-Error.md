@@ -1,3 +1,8 @@
+---
+title: "資訊比率與追蹤誤差 Information Ratio & Tracking Error"
+category: "基本面分析"
+---
+
 # 資訊比率與追蹤誤差 Information Ratio & Tracking Error
 
 > 夏普比率問你「承擔總風險賺了多少」，資訊比率問你「相對於大盤，每單位追蹤誤差賺了多少超額報酬」。一個衡量絕對能力，一個衡量相對能力。

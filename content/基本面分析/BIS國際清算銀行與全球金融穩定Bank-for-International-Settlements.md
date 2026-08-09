@@ -1,3 +1,8 @@
+---
+title: "BIS 國際清算銀行與全球金融穩定 Bank for International Settlements"
+category: "基本面分析"
+---
+
 # BIS 國際清算銀行與全球金融穩定 Bank for International Settlements
 
 > BIS 是「央行的央行」，全球金融穩定的最後守門人。它的報告和數據是洞察系統性風險的頂級情報來源，投資人不可忽視。

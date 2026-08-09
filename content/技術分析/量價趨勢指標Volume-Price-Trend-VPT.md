@@ -1,6 +1,7 @@
 ---
 title: 量價趨勢指標 Volume Price Trend (VPT)
 date: 2026-06-29
+category: "技術分析"
 ---
 
 # 量價趨勢指標 Volume Price Trend (VPT)

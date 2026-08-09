@@ -1,3 +1,8 @@
+---
+title: "新屋開工與建築許可 Housing Starts & Building Permits"
+category: "基本面分析"
+---
+
 # 新屋開工與建築許可 Housing Starts & Building Permits
 
 > 房市是經濟的領頭羊——新屋開工不只看房價，更是就業、消費、建材需求的綜合領先指標

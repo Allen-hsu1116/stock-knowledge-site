@@ -2,6 +2,7 @@
 title: 斬波指標 Choppiness Index (CHOP)
 date: 2026-05-18
 categories: [技術分析]
+category: "技術分析"
 ---
 
 # 斬波指標 Choppiness Index (CHOP)

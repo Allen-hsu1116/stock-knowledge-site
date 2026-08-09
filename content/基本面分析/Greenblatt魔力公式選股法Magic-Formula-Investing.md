@@ -1,3 +1,8 @@
+---
+title: "Greenblatt 魔力公式選股法 Magic Formula Investing"
+category: "基本面分析"
+---
+
 # Greenblatt 魔力公式選股法 Magic Formula Investing
 
 > 用兩個指標打敗大盤——便宜（高盈餘殖利率）+ 好公司（高投入資本報酬率），Joel Greenblatt 把巴菲特的選股邏輯濃縮成一套可機械化執行的公式。

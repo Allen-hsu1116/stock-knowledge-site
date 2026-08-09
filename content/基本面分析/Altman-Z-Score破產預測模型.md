@@ -1,6 +1,7 @@
 ---
 title: Altman Z-Score 破產預測模型
 date: 2026-07-13
+category: "基本面分析"
 ---
 
 # Altman Z-Score 破產預測模型

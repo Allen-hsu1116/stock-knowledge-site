@@ -1,3 +1,8 @@
+---
+title: "耐久財訂單 Durable Goods Orders"
+category: "基本面分析"
+---
+
 # 耐久財訂單 Durable Goods Orders
 
 > 企業資本支出的溫度計——當工廠開始下訂單買設備，經濟引擎正在加速

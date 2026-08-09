@@ -1,3 +1,8 @@
+---
+title: "JOLTS 職位空缺與勞工流動調查 Job Openings and Labor Turnover Survey"
+category: "基本面分析"
+---
+
 # JOLTS 職位空缺與勞工流動調查 Job Openings and Labor Turnover Survey
 
 > 勞動市場的X光機——不只看有多少人失業，更看有多少職位在等人、多少人主動辭職、多少人被裁

@@ -1,3 +1,8 @@
+---
+title: "VWAP 執行演算法與機構交易策略 VWAP Execution Algorithms"
+category: "操作策略"
+---
+
 # VWAP 執行演算法與機構交易策略 VWAP Execution Algorithms
 
 > 機構買 10,000 張不是一次下單——VWAP/TWAP/IS 演算法把大單拆成小單，像拼圖一樣慢慢組裝，不讓市場發現意圖。

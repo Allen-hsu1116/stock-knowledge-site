@@ -1,3 +1,8 @@
+---
+title: "TED Spread 泰德利差"
+category: "基本面分析"
+---
+
 # TED Spread 泰德利差
 
 > 銀行間信用壓力的溫度計——當銀行開始不信任彼此，TED Spread 會先告訴你。

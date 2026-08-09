@@ -1,3 +1,8 @@
+---
+title: "波動率目標策略 Volatility Targeting"
+category: "操作策略"
+---
+
 # 波動率目標策略 Volatility Targeting
 
 > 不管市場瘋不瘋，你的波動率就是這麼大。市場太瘋就減碼，太冷就加碼，讓組合永遠維持在目標波動率。

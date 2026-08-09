@@ -1,6 +1,7 @@
 ---
 title: "風險平價進階實戰 Risk Parity Advanced Practice"
 date: 2026-06-26
+category: "風險管理"
 ---
 
 # 風險平價進階實戰 Risk Parity Advanced Practice

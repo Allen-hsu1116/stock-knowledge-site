@@ -1,3 +1,8 @@
+---
+title: "擺動指數與累積擺動指數 Swing Index & ASI"
+category: "技術分析"
+---
+
 # 擺動指數與累積擺動指數 Swing Index & ASI
 
 > **J. Welles Wilder Jr.** 於 1978 年《New Concepts in Technical Trading Systems》提出的突破分析工具，用單日價格關係量化「真正的」市場擺動，ASI 將每日 Swing Index 累加成連續線，是辨識真假突破與趨勢確認的經典輔助指標。

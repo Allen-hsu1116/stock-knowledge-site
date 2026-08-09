@@ -1,3 +1,8 @@
+---
+title: "Chaikin Volatility 佳慶波動率"
+category: "技術分析"
+---
+
 # Chaikin Volatility 佳慶波動率
 
 > Marc Chaikin 設計的波動率指標，用高低價差的 EMA 變化率衡量波動程度——不是像 ATR 那樣看絕對波動大小，而是看波動「正在擴大還是收縮」。

@@ -1,6 +1,7 @@
 ---
 title: "Smart Beta因子投資策略"
 date: 2026-06-25
+category: "操作策略"
 ---
 
 # Smart Beta 因子投資策略

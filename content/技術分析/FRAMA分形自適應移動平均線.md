@@ -1,6 +1,7 @@
 ---
 title: 分形自適應移動平均線 FRAMA
 date: 2026-06-29
+category: "技術分析"
 ---
 
 # 分形自適應移動平均線 FRAMA
