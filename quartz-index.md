@@ -46,7 +46,7 @@ K線、均線、指標、型態、量價關係 — 看懂圖表的一切
 | [周刊投資](/YouTube頻道/周刊投資/) | [模型商自研晶片浪潮——OpenAI Jalapeño與ASIC受益供應鏈](/YouTube頻道/周刊投資/模型商自研晶片浪潮——OpenAI-Jalapeno與ASIC受益供應鏈) | 2026-08-13 | OpenAI與博通9個月做出ASIC晶片Jalapeño省50%推論成本；模型商自研晶片五大原因從擺脫算力綁架到降低長期營運成本；聯發科搶走Google TPU大單上修AI ASIC市占至15-20%；台灣ASIC三雄世芯創意聯發科各有定位。 |
 | [老王說股](/YouTube頻道/老王說股/) | [國巨反彈命懸三線與均線紀律——群創南亞科三陽開泰與友達四海游龍](/YouTube頻道/老王說股/國巨反彈命懸三線與均線紀律——群創南亞科三陽開泰與友達四海游龍) | 2026-08-11 | 國巨大漲7.68%命懸三線五日十日均線加531元低點跌破才停損；外資投信回來買超是大漲關鍵反彈看支撐不看壓；群創南亞科挑戰月均線三陽開泰；友達長紅站所有均線四海游龍今天長黑不代表翻空。 |
 | [M觀點](/YouTube頻道/M觀點/) | [Google不會放棄前沿模型——SPCX估值上修與美股歷史新高的風險控管](/YouTube頻道/M觀點/Google不會放棄前沿模型——SPCX估值上修與美股歷史新高的風險控管) | 2026-08-10 | Miula逆風反駁SemiAnalysis「Gemini is cooked」報導Google不可能放棄前沿模型；提出前沿模型新分類最前沿次前沿後前沿；SPCX估值從1.05兆上修到1.4兆美元地面算力中心明年8GW年營收2400億；S&P500創歷史新高7月修正教訓槓桿3-5倍一定重傷conviction來自深入研究。 |
-| [股癌 Gooaye](/YouTube頻道/股癌-Gooaye/) | [EP687 雙軌制終結與Google轉型房東——咒思法則崩壞、處置股新制與巴菲特的基礎建設邏輯](/YouTube頻道/股癌-Gooaye/EP687雙軌制終結與Google轉型房東——咒思法則崩壞、處置股新制與巴菲特的基礎建設邏輯) | 2026-08-12 | 處置股改兩分鐘一戳假單滿天飛咒思法則崩壞大家互相算計；波克夏買Google不是賭AI模型是買數位時代鐵路電網算力房東可能更快現金流轉正；Apple不投資AI反而Earned Today表現最好市場買單。 |
+| [股癌 Gooaye](/YouTube頻道/股癌-Gooaye/) | [EP688 SpaceX解禁、Cerebras推論架構與NVIDIA 800V DC白皮書](/YouTube頻道/股癌-Gooaye/EP688-SpaceX解禁Cerebras推論架構與NVIDIA-800V-DC白皮書) | 2026-08-15 | SpaceX解禁賣壓不如預期反而打底上攻；Cerebras與AMD合作Disaggregated Inference架構把推論拆Prefill+Decode；NVIDIA 800V DC白皮書三階段從PowerRack到PowerCenter到DC PowerBlock；54V升800V是功耗暴增的物理必然；被動功率元件獲利成長速度高於營收成長。 |
 
 > 🔄 每日凌晨自動更新
 
