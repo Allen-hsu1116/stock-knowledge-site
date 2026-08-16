@@ -137,6 +137,12 @@
 - [[風險管理/行為財務學總論Behavioral-Finance-Overview]] — 行為財務學
 - [[操作策略/均值回歸與動能雙策略切換Mean-Reversion-Momentum-Regime-Switching]] — 均值回歸策略
 
+## 實戰應用
+
+- 在台股市場中，本概念需結合台股特性（如漲跌幅限制、法人結構）調整使用
+- 建議搭配多指標共振系統（趨勢+動量+成交量+波動率）提高勝率
+- 實戰操作時應設好停損停利，嚴格執行紀律
+
 ## 參考來源
 
 - Wikipedia: Calendar effect, Seasonal spread trading

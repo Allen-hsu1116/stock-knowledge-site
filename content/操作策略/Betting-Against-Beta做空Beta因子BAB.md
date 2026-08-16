@@ -108,6 +108,11 @@ Frazzini & Pedersen 的核心理論：
 - **Risk Parity**：[[風險管理/風險預算Risk Budgeting|風險平價]] 策略天然傾向低Beta資產，與 BAB 理念一致
 - **All-Weather Portfolio**：橋水基金的全天候組合實質上大量配置低Beta資產
 
+## 相關主題
+
+- [[技術分析回測方法與過度擬合Backtesting-and-Overfitting]] - 回測驗證與過度擬合防範
+- [[風險資金配置Risk-Capital-Allocation]] - 風險資金配置原則
+
 ## 參考來源
 
 - Frazzini, A. & Pedersen, L.H. (2014). "Betting against beta." *Journal of Financial Economics*, 111(1), 1-25.

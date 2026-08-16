@@ -95,6 +95,12 @@ Bailey & López de Prado 同時提出 PBO，用交叉驗證來估計回測過擬
 3. **樣本數要夠**：用 3 個月日資料測出 Sharpe 3.0，和用 10 年月資料測出 Sharpe 1.5，後者可能更可信
 4. **誠實記錄你的試驗次數**：這是 DSR 最有價值的概念——不是算出一個精確數字，而是讓你意識到自己到底「調」了多少
 
+## 注意事項
+
+- 本指標/概念僅供參考，實際操作需結合當時市場環境與其他指標綜合判斷
+- 歷史數據不代表未來表現，回測結果可能存在過度擬合風險
+- 散戶在使用時應注意自身風險承受能力，避免過度槓桿
+
 ## 來源
 
 - Bailey, D. & López de Prado, M. (2014). "The Deflated Sharpe Ratio: Correcting for Selection Bias, Backtest Overfitting, and Non-Normality." *Journal of Portfolio Management*, 40(5), 94-107.

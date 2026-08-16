@@ -116,6 +116,17 @@ Viral Acharya 和 Lasse Pedersen 將流動性納入 CAPM 框架：
 - 使用 [[操作策略/VWAP執行演算法與機構交易策略VWAP-Execution-Algorithms|VWAP 策略]] 分散執行
 - 避開處置股和全額交割股的流動性陷阱
 
+## 注意事項
+
+- 本指標/概念僅供參考，實際操作需結合當時市場環境與其他指標綜合判斷
+- 歷史數據不代表未來表現，回測結果可能存在過度擬合風險
+- 散戶在使用時應注意自身風險承受能力，避免過度槓桿
+
+## 相關主題
+
+- [[技術分析回測方法與過度擬合Backtesting-and-Overfitting]] - 回測驗證與過度擬合防範
+- [[風險資金配置Risk-Capital-Allocation]] - 風險資金配置原則
+
 ## 參考來源
 
 - Amihud, Y. & Mendelson, H. (1986). "Asset pricing and the bid-ask spread." *Journal of Financial Economics*, 17(2), 223-249.

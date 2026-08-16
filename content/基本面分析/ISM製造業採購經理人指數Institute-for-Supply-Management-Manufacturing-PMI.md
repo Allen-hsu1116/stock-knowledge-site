@@ -120,6 +120,11 @@ ISM PMI 是製造業觀測鏈的領先端：
 
 ISM 製造業 PMI 是美國製造業最即時、最具公信力的景氣指標，90年歷史賦予它無可替代的權威性。50榮枯線是市場最關注的門檻，新訂單是最強領先訊號，物價指數是通膨前哨。作為所有總經指標中報告延遲最短的數據，ISM PMI 是每月第一個給市場「製造業體溫」的關鍵數據。但擴散指數只測方向不測幅度，需要搭配耐久財訂單和工業生產指標才能得到完整的製造業圖像。
 
+## 相關主題
+
+- [[技術分析回測方法與過度擬合Backtesting-and-Overfitting]] - 回測驗證與過度擬合防範
+- [[風險資金配置Risk-Capital-Allocation]] - 風險資金配置原則
+
 ## 參考來源
 
 - [Wikipedia: ISM Report On Business](https://en.wikipedia.org/wiki/ISM_Report_On_Business)

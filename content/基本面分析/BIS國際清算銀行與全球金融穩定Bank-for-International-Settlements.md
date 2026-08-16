@@ -130,3 +130,10 @@ BIS 近年開始關注 AI 對金融市場的影響：
 - [[基本面分析/SOFR擔保隔夜融資利率Secured-Overnight-Financing-Rate|SOFR]]
 - [[基本面分析/信用循環與明斯基時刻Credit-Cycle-and-Minsky-Moment|信用循環與明斯基時刻]]
 - [[風險管理/LTCM長期資本管理公司倒閉案例Long-Term-Capital-Management-Collapse|LTCM 倒閉案例]]
+
+## 注意事項
+
+- 本指標/概念僅供參考，實際操作需結合當時市場環境與其他指標綜合判斷
+- 歷史數據不代表未來表現，回測結果可能存在過度擬合風險
+- 散戶在使用時應注意自身風險承受能力，避免過度槓桿
+
