@@ -1,6 +1,6 @@
 ---
 title: Heston隨機波動率模型
- aliases: [Heston Model, Stochastic Volatility Model, 隨機波動率模型]
+aliases: [Heston Model, Stochastic Volatility Model, 隨機波動率模型]
 ---
 
 # Heston隨機波動率模型 (Heston Stochastic Volatility Model)
