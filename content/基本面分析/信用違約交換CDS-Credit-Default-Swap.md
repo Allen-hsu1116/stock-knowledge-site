@@ -114,14 +114,14 @@ category: "基本面分析"
 
 ### 信用利差作為系統性風險指標
 - CDS spread 擴大 = 信用風險上升 = 股市前瞻警訊
-- 詳見 [[基本面分析/信用利差Credit-Spread|信用利差]]
+- 詳見 [[風險管理/信用利差Credit-Spread|信用利差]]
 - AI 巨頭的 CDS 走高是台股投資人應關注的系統性訊號
 - 美國 AI 巨頭發債 2400 億美元時 CDS 利差走擴就是信用市場消化不良的訊號
 
 ### 主權 CDS 與國家風險
 - 主權 CDS 涵蓋否認、延期、加速等特殊信用事件
 - 台灣主權 CDS spread 是外資衡量台股風險的參考
-- 詳見 [[基本面分析/主權風險與主權違約Sovereign-Risk-and-Default|主權風險與主權違約]]
+- 詳見 [[風險管理/主權風險與主權違約Sovereign-Risk-and-Default|主權風險與主權違約]]
 
 ### 信用循環定位
 - CDS 市場是信用循環的溫度計
@@ -142,10 +142,10 @@ category: "基本面分析"
 
 ## 相關連結
 
-- [[基本面分析/信用利差Credit-Spread|信用利差]]
+- [[風險管理/信用利差Credit-Spread|信用利差]]
 - [[基本面分析/信用循環與明斯基時刻Credit-Cycle-and-Minsky-Moment|信用循環與明斯基時刻]]
 - [[基本面分析/信用評等與公司債違約風險判讀Credit-Rating-and-Default-Risk|信用評等與公司債違約風險判讀]]
-- [[基本面分析/主權風險與主權違約Sovereign-Risk-and-Default|主權風險與主權違約]]
+- [[風險管理/主權風險與主權違約Sovereign-Risk-and-Default|主權風險與主權違約]]
 - [[風險管理/交易對手風險Counterparty-Risk|交易對手風險]]
 - [[風險管理/信用風險Credit-Risk|信用風險]]
 - [[風險管理/選擇權Greeks風險判讀|選擇權 Greeks 風險判讀]]

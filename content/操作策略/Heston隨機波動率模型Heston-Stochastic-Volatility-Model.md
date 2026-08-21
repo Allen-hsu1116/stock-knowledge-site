@@ -90,7 +90,7 @@ $$C = S_0 e^{-qT} P_1 - K e^{-rT} P_2$$
 用 Heston 模型校準出來的波動率曲面，可以用來：
 - 定價場外奇異選擇權（barrier、Asian、cliquet 等）
 - 找出市場報價中的套利機會（某些履約價的 IV 偏離模型曲面）
-- 計算 [[操作策略/選擇權Greeks希臟字母|Greeks]] 時納入 vega 和 vanna 的波動率敏感度
+- 計算 [[操作策略/選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced|Greeks]] 時納入 vega 和 vanna 的波動率敏感度
 
 ### 2. 波動率套利
 

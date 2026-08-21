@@ -54,7 +54,7 @@ Anthropic目標估值2兆美元10月上市超SpaceX，年化營收470億年底�
 - [[YouTube頻道/股市好聲音/AI舉債時代自由現金流能翻正嗎——外資加空單與亞洲內資接盤新常態]]
 - [[基本面分析/信用違約交換CDS-Credit-Default-Swap]]
 - [[基本面分析/資本支出CapEx與自由現金流判讀]]
-- [[基本面分析/信用利差Credit-Spread]]
+- [[風險管理/信用利差Credit-Spread]]
 - [[風險管理/財務槓桿風險管理Leverage-Risk-Management]]
 - [[產業地圖/記憶體｜HBM 高頻寬記憶體]]
 
