@@ -72,8 +72,9 @@ $$V = \sum_{i=1}^{n} \pi(p_i) \cdot v(x_i)$$
 - $\pi(p_i)$ = 機率加權函數
 - $v(x_i)$ = 價值函數
 
-## 四重風險態度（Fourfold Pattern）
+## 注意事項
 
+### 四重風險態度（Fourfold Pattern）
 前景理論最強大的預測力來自「四重模式」——把情境分成「高機率/低機率」×「獲利/虧損」四個象限：
 
 **高機率獲利** → 風險趨避
@@ -122,8 +123,9 @@ Benartzi 和 Thaler（1995）用前景理論解釋了**股權溢價之謎**（Eq
 
 **Gneezy 和 Potters（1997）的實驗證實了這點**：參與者在可以更頻繁調整投資時反而表現更差，因為他們對短期損益過度反應。
 
-## 前景理論在股市交易的應用
+## 實戰應用
 
+### 前景理論在股市交易的應用
 ### 1. 處置效應的根源
 散戶賣贏家留輸家，不是因為笨，是因為前景理論讓虧損區的風險偏好自然產生——「不賣就沒賠」的心理讓人在該停損時反而加碼。
 
@@ -179,16 +181,14 @@ CPT 引入了等級依賴效用（Rank-Dependent Utility），用累積分佈函
 5. **用部位大小管理情緒**：如果某個部位的波動讓你睡不著，代表你已經進入損失厭惡區，應該縮小部位
 6. **理解四重模式**：當你發現自己在「賭一把」時，問自己——我是不是在高機率虧損區做出風險偏好決策？
 
-## 參考文獻
-
+## 來源
 - Kahneman, D. & Tversky, A. (1979). "Prospect Theory: An Analysis of Decision under Risk". Econometrica, 47(2), 263-291.
 - Tversky, A. & Kahneman, D. (1992). "Advances in Prospect Theory: Cumulative Representation of Uncertainty". Journal of Risk and Uncertainty, 5, 297-323.
 - Benartzi, S. & Thaler, R. (1995). "Myopic Loss Aversion and the Equity Premium Puzzle". Quarterly Journal of Economics, 110(1), 73-92.
 - Gneezy, U. & Potters, J. (1997). "An Experiment on Risk Taking and Evaluation Periods". Quarterly Journal of Economics, 112(2), 631-645.
 - Kahneman, D. (2011). "Thinking, Fast and Slow". Farrar, Straus and Giroux.
 
-## 相關頁面
-
+## 相關主題
 - [[風險管理/行為財務學總論Behavioral-Finance-Overview]] — 前景理論是行為財務學的基石
 - [[風險管理/處置效應進階實戰Disposition-Effect-Advanced]] — 前景理論最直接的交易應用
 - [[風險管理/光譜風險測度Spectral-Risk-Measure]] — 前景理論的風險態度模型在風險測度中的應用

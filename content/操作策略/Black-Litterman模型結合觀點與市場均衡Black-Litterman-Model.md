@@ -177,8 +177,7 @@ E[R] = [(τΣ)⁻¹ + P'Ω⁻¹P]⁻¹ × [(τΣ)⁻¹Π + P'Ω⁻¹Q]
 - [[風險管理/風險平價Risk-Parity]] — 另一種替代均衡配置方法
 - [[基本面分析/Fama-French多因子模型Fama-French-Multi-Factor-Model]] — 多因子可以轉化為 BL 觀點
 
-## 參考資料
-
+## 來源
 - Black, F. & Litterman, R. (1992). "Global Portfolio Optimization." Financial Analysts Journal, 48(5), 28-43.
 - He, G. & Litterman, R. (2002). "The Intuition Behind Black-Litterman Model Portfolios." SSRN.
 - Idzorek, T. (2005). "A Step-By-Step Guide to the Black-Litterman Model."

@@ -7,8 +7,7 @@ date: 2026-08-23
 
 # 模型信賴集合Model Confidence Set
 
-## 一句話解釋
-
+## 核心概念
 Model Confidence Set（MCS）不硬選一個回測冠軍，而是逐步淘汰有證據顯著較差的候選，最後留下在給定信心水準下仍不能被排除為最佳的模型集合；資料不夠有辨識力時就老實留多人，總比瞎封一個王好。
 
 ## 它要解決什麼問題
@@ -131,8 +130,9 @@ $$T_{\max,\mathcal M}=\max_{i\in\mathcal M}t_{i\cdot}$$
 - 損失函數
 - 顯著水準
 
-## 交易策略實作SOP
+## 實戰應用
 
+### 交易策略實作SOP
 ### 第一步：凍結候選宇宙
 
 保留所有實際比較過的：
@@ -219,8 +219,7 @@ MCS存活不是上線許可證，還要檢查：
 - [[風險管理/通縮夏普比率Deflated-Sharpe-Ratio|通縮夏普比率]]：針對被挑出的Sharpe修正多重試驗、樣本長度與非正態偏差
 - [[風險管理/組合式淨化交叉驗證CPCV-Combinatorial-Purged-Cross-Validation|CPCV]]：產生多條淨化後樣本外路徑與績效分布，不直接建立最佳模型信賴集合
 
-## 限制
-
+## 注意事項
 - **相對而非絕對**：一群爛模型也會有最佳者；最佳只代表比較沒那麼爛
 - **候選依賴**：加入或移除模型可能改變檢定與淘汰路徑
 - **損失依賴**：換目標函數就可能換集合
@@ -251,8 +250,7 @@ MCS存活不是上線許可證，還要檢查：
 4. 損失函數、候選全集與時間序列重抽樣，三個少一個都會歪
 5. 最合理的輸出有時不是一個策略，而是一個可再平均、審查與實盤驗證的候選集合
 
-## 相關連結
-
+## 相關主題
 - [[風險管理/White-Reality-Check與Hansen-SPA多重策略檢定]]
 - [[風險管理/通縮夏普比率Deflated-Sharpe-Ratio]]
 - [[風險管理/組合式淨化交叉驗證CPCV-Combinatorial-Purged-Cross-Validation]]
@@ -260,8 +258,7 @@ MCS存活不是上線許可證，還要檢查：
 - [[風險管理/回測框架與偏差防範Backtesting-Framework-and-Bias-Prevention]]
 - [[操作策略/Walk-Forward-Analysis滾動前進驗證]]
 
-## 參考來源
-
+## 來源
 - Hansen, P. R., Lunde, A., & Nason, J. M. (2011). [The Model Confidence Set](https://doi.org/10.3982/ECTA5771). *Econometrica*, 79(2), 453–497. [作者公開PDF](https://reinhardhansen.github.io/papers/2011HansenLundeNason-MCS-Econometrica.pdf)
 - Bernardi, M., & Catania, L. (2014). [The Model Confidence Set package for R](https://arxiv.org/abs/1410.8504). arXiv:1410.8504.
 

@@ -1,3 +1,7 @@
+---
+title: "投資人情緒異象 Investor Sentiment Anomaly"
+---
+
 # 投資人情緒異象 Investor Sentiment Anomaly
 
 > 散戶的情緒不是噪音，而是一種可量化、可預測、可獲利的市場異象。Baker & Wurgler 證明情緒高漲時小型股、高波動股、虧損股被系統性高估，情緒低落時被系統性低估——市場的定價錯誤有週期性規律。
@@ -118,8 +122,15 @@ Baker & Wurgler（2006）構建了六個情緒代理變數的複合指標：
 - **2021年Meme股狂潮**：GameStop、AMC 等虧損小型股暴漲=散戶情緒驅動的極端案例
 - **2026年台股AI泡沫辯論**：融資從5000億暴增到6700億、處置股頻繁、零股交易熱絡=情緒高漲訊號，國巨從1200跌到456也驗證了情緒反轉的殺傷力
 
-## 參考文獻
+## 注意事項
 
+本文方法不保證未來績效；實際使用須檢查資料品質、樣本外穩定性、交易成本、流動性與適用市場。
+
+## 相關主題
+
+- [[基本面分析/基本面分析總論]]
+
+## 來源
 - Baker, M. & Wurgler, J. (2006). "Investor Sentiment and the Cross-Section of Stock Returns." *Journal of Finance*, 61(4), 1645-1680.
 - Baker, M. & Wurgler, J. (2007). "Investor Sentiment in the Stock Market." *Journal of Economic Perspectives*, 21(2), 129-152.
 - Da, Z., Engelberg, J. & Gao, P. (2014). "The Sum of All FEARS: Investor Sentiment and Asset Prices." *Review of Financial Studies*.

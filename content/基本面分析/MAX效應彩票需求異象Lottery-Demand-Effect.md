@@ -1,3 +1,7 @@
+---
+title: "MAX效應彩票需求異象 Lottery Demand Effect / MAX Effect"
+---
+
 # MAX效應彩票需求異象 Lottery Demand Effect / MAX Effect
 
 > 散戶愛買彩券，也愛買那種「有可能暴漲」的股票。問題是：彩券的期望值是負的，MAX效應的股票也是。
@@ -78,21 +82,18 @@ MAX 效應與動能策略表面矛盾——動能策略買強勢股，MAX 策略
 - 持續上漲代表趨勢力量，單日暴漲更多是事件驅動和情緒溢價
 - 動能股 + 低 MAX = 最健康的強勢股（穩步上漲非暴漲暴跌）
 
-## 限制與批評
-
+## 注意事項
 - **市場微結構效應**：高 MAX 股票可能流動性差，bid-ask bounce 造成的假性高報酬
 - **與其他異象重疊**：控制 IVOL、規模、價值因子後 MAX 效應的顯著性有爭議
 - **機構套利限制**：高 MAX 股票往往流動性差、市值小，機構難以建立足夠大的做空部位
 - **台股限制**：±10% 漲跌幅限制了 MAX 的極端值，異象強度可能弱於美股
 
-## 關鍵文獻
-
+## 來源
 - Bali, T.G., Cakici, N., & Whitelaw, R.F. (2011). "Maxing out: Stocks as lotteries and the cross-section of expected returns." *Journal of Financial Economics*, 99(2), 427-446.
 - Kumar, A. (2009). "Who Gambles in the Stock Market?" *Journal of Finance*, 64(4), 1889-1933. (彩票偏好與股市行為)
 - Hou, K., & Loh, R.K. (2016). "Have we solved the idiosyncratic volatility puzzle?" *Journal of Financial Economics*, 121(1), 153-175. (IVOL 與 MAX 的關係)
 
-## 相關筆記
-
+## 相關主題
 - [[風險管理/前景理論Prospect-Theory|前景理論 Prospect Theory]]
 - [[風險管理/行為財務學總論Behavioral-Finance-Overview|行為財務學總論]]
 - [[操作策略/短期動能反轉策略Short-Term-Reversal|短期動能反轉策略]]

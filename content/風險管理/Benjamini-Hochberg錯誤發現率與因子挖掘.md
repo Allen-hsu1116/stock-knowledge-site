@@ -7,8 +7,9 @@ date: 2026-08-23
 
 # Benjamini-Hochberg錯誤發現率與因子挖掘
 
-## 一句話解釋
 
+> Benjamini-Hochberg（BH）程序不是保證所有入選因子都是真的，而是控制「被宣告發現的結果中，預期有多少比例是誤報」；它比只容許零次誤報的FWER方法更有檢定力，適合大量因子探索，但別把容許少量垃圾誤讀成每一袋垃圾都有品質認證。
+## 核心概念
 Benjamini-Hochberg（BH）程序不是保證所有入選因子都是真的，而是控制「被宣告發現的結果中，預期有多少比例是誤報」；它比只容許零次誤報的FWER方法更有檢定力，適合大量因子探索，但別把容許少量垃圾誤讀成每一袋垃圾都有品質認證。
 
 ## 為什麼金融研究特別需要FDR
@@ -201,8 +202,7 @@ Harvey、Liu與Zhu整理大量橫斷面報酬因子，指出在數百個已知�
 - [[風險管理/通縮夏普比率Deflated-Sharpe-Ratio|通縮夏普比率]]：修正最佳Sharpe的多重試驗與非正態偏差
 - [[風險管理/組合式淨化交叉驗證CPCV-Combinatorial-Purged-Cross-Validation|CPCV]]：建立多條防洩漏樣本外路徑，不等於多重假設錯誤率控制
 
-## 常見錯誤
-
+## 注意事項
 - 只把最後發表的因子算入$m$
 - 每個參數版本都測過，卻只算一個策略
 - 看完正負方向才決定單尾檢定
@@ -213,8 +213,9 @@ Harvey、Liu與Zhu整理大量橫斷面報酬因子，指出在數百個已知�
 - 只看統計顯著，不看alpha是否付得起交易成本
 - 將同一資料重複探索又當成新樣本確認
 
-## 實戰檢查清單
+## 實戰應用
 
+### 實戰檢查清單
 - 研究家族是否在看結果前定義
 - 所有試過的因子與參數是否完整保存
 - 單尾或雙尾方向是否事前指定
@@ -234,8 +235,7 @@ Harvey、Liu與Zhu整理大量橫斷面報酬因子，指出在數百個已知�
 4. 因子高度相關時，獨立性不能靠閉眼許願
 5. FDR適合海選，封存樣本、成本與嚴格確認才決定誰能拿錢上場
 
-## 相關連結
-
+## 相關主題
 - [[風險管理/White-Reality-Check與Hansen-SPA多重策略檢定]]
 - [[風險管理/通縮夏普比率Deflated-Sharpe-Ratio]]
 - [[風險管理/回測過擬合Backtest-Overfitting]]
@@ -244,8 +244,7 @@ Harvey、Liu與Zhu整理大量橫斷面報酬因子，指出在數百個已知�
 - [[基本面分析/Fama-French多因子模型Fama-French-Multi-Factor-Model]]
 - [[基本面分析/資訊係數IC與選股能力量化Information-Coefficient-and-Rank-IC]]
 
-## 參考來源
-
+## 來源
 - Benjamini, Y., & Hochberg, Y. (1995). [Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing](https://doi.org/10.1111/j.2517-6161.1995.tb02031.x). *Journal of the Royal Statistical Society: Series B*, 57(1), 289–300. [公開PDF](https://www.math.tau.ac.il/~yekutiel/eBayes/bh_1995.pdf)
 - Harvey, C. R., Liu, Y., & Zhu, H. (2016). [… and the Cross-Section of Expected Returns](https://doi.org/10.1093/rfs/hhv059). *Review of Financial Studies*, 29(1), 5–68. [NBER工作論文](https://www.nber.org/papers/w20592)
 

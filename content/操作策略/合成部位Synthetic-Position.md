@@ -75,8 +75,9 @@ C − P = S − K × e^(−rT)
 - **投票權**：合成部位無股東投票權
 - **保證金追繳風險**：賣出端（賣Put或賣Call）有保證金追繳風險，實際持有多頭無此風險
 
-## 實戰應用場景
+## 實戰應用
 
+### 實戰應用場景
 ### 場景一：低成本建立大型多頭部位
 - 看好某檔股票但資金不足 → 買ATM Call + 賣ATM Put = 合成多頭
 - 以約1/3~1/5的資金獲得相同方向性曝險
@@ -121,8 +122,7 @@ C − P = S − K × e^(−rT)
 4. **保證金追繳**：賣出端可能因標的劇烈波動觸發保證金追繳
 5. **展延成本**：每個月或每季展延的權利金損耗是隱形成本
 
-## 參考資料
-
+## 來源
 - YouTube: projectoption — "Synthetic Long Stock | Options Trading Strategy Guide"
 - YouTube: "Synthetic Options - Understanding Professional Trading"
 - Natenberg, Sheldon. "Option Volatility and Pricing" (Ch. on Put-Call Parity)

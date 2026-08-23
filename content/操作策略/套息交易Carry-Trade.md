@@ -121,8 +121,7 @@ category: "操作策略"
 - 2010-2019 低利率時代利差壓縮，套息交易報酬降至 2-4%
 - 2022-2026 全球利率分化加劇，套息交易捲土重來
 
-## 參考資料
-
+## 來源
 - Brunnermeier, M., Nagel, S. & Pedersen, L. (2008). "Carry Trades and Currency Crashes." NBER.
 - Lustig, H. & Verdelhan, A. (2007). "The Cross-Section of Foreign Currency Risk Premia and Consumption Growth Risk." AER.
 - Wikipedia: Market Impact（價格衝擊與套息平倉的關係）

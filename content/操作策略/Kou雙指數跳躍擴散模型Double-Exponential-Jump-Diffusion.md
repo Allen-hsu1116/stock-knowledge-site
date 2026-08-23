@@ -5,8 +5,9 @@ aliases: [Kou Model, Double Exponential Jump Diffusion, DEJD, 雙指數跳躍擴
 
 # Kou雙指數跳躍擴散模型 (Double Exponential Jump Diffusion)
 
-## 一句話解釋
 
+> Kou 模型在幾何布朗運動上加入有限活動的複合卜瓦松跳躍，並讓對數跳躍幅度服從非對稱雙指數分布：上跳與下跳可有不同機率和尾部衰減速度，既能描述「壞消息比好消息更兇」的偏斜，也因指數分布的無記憶性而保留障礙、回望與首達問題的解析可處理性。
+## 核心概念
 Kou 模型在幾何布朗運動上加入有限活動的複合卜瓦松跳躍，並讓對數跳躍幅度服從非對稱雙指數分布：上跳與下跳可有不同機率和尾部衰減速度，既能描述「壞消息比好消息更兇」的偏斜，也因指數分布的無記憶性而保留障礙、回望與首達問題的解析可處理性。
 
 ## 為什麼不直接用Merton跳躍
@@ -22,8 +23,9 @@ Kou 模型改用雙指數分布：
 
 這個取捨很務實：不追求把現實所有毛病一次塞完，而是用少量參數換取偏斜與路徑依賴定價的可計算性。
 
-## 風險中立模型結構
+## 注意事項
 
+### 風險中立模型結構
 常見規格為：
 
 $$\frac{dS_t}{S_{t^-}}=(r-q-\lambda\zeta)dt+\sigma dW_t+(e^Y-1)dN_t$$
@@ -264,8 +266,7 @@ Kou 能產生短期偏斜，但基本模型的 $\sigma$ 與跳躍參數固定，
 - 報告信賴區間或價格敏感度，不只交出唯一參數神諭
 - 剔除無成交、價差過大的深尾報價
 
-## 交易與風控應用
-
+## 實戰應用
 ### 尾部保險定價
 
 Kou 可把左尾拆成：
@@ -331,8 +332,7 @@ Kou 可把左尾拆成：
 4. 漂移補償 $-\lambda\zeta$ 與 $\eta_+>1$ 是定價能成立的基本條件
 5. 基本 Kou 沒有隨機波動率與跳躍群聚，擬合得到尾部不等於捕捉到完整危機動態
 
-## 相關連結
-
+## 相關主題
 - [[操作策略/Merton跳躍擴散模型Merton-Jump-Diffusion-Model]]
 - [[操作策略/Bates跳躍隨機波動率模型Bates-Jump-Stochastic-Volatility-Model]]
 - [[操作策略/Black-Scholes定價模型]]
@@ -340,8 +340,7 @@ Kou 可把左尾拆成：
 - [[風險管理/隱含波動率偏斜與微笑Implied-Volatility-Skew-and-Smile]]
 - [[操作策略/選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced]]
 
-## 參考來源
-
+## 來源
 - Kou, S. G. (2002). "A Jump-Diffusion Model for Option Pricing." *Management Science*, 48(8), 1086-1101. https://doi.org/10.1287/mnsc.48.8.1086.166
 - Kou, S. G., & Wang, H. (2004). "Option Pricing Under a Double Exponential Jump Diffusion Model." *Management Science*, 50(9), 1178-1192. https://doi.org/10.1287/mnsc.1030.0163
 - Kostrzewski, M. (2014). "Bayesian DEJD model and detection of asymmetric jumps." https://arxiv.org/abs/1404.2050

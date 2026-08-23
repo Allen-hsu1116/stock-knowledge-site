@@ -189,8 +189,7 @@ Long-Term Capital Management 曾大量使用配對交易，最終因為：
 - [[風險管理/VaR風險值Value-at-Risk]] — 配對組合的風險衡量
 - [[風險管理/CDaR條件回撤風險Conditional-Drawdown-at-Risk]] — 回撤風險控制
 
-## 參考來源
-
+## 來源
 - [Pairs trade - Wikipedia](https://en.wikipedia.org/wiki/Pairs_trade)
 - Gerry Bamberger & Nunzio Tartaglia, Morgan Stanley, 1980s
 - Long-Term Capital Management 的反面教材案例

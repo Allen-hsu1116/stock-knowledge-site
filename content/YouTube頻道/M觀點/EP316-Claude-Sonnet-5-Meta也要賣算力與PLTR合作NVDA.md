@@ -1,3 +1,7 @@
+---
+title: "EP316 Claude Sonnet 5實測——Meta賣算力與Palantir輝達Intelligence Engine"
+---
+
 # EP316 Claude Sonnet 5實測——Meta賣算力與Palantir輝達Intelligence Engine
 
 > Sonnet 5實力逼近Opus 4.8但價格僅六成，第三季中階模型已碾壓第一季旗艦；Meta Compute賣閒置算力不是認輸而是資產彈性運用；Palantir+輝達Intelligence Engine讓企業Local端開源模型調校到前沿模型水準，控制層比模型層更值錢。

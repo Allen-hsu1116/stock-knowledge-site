@@ -5,8 +5,9 @@ aliases: [3/2 Model, Three-Halves Model, 3/2 Stochastic Volatility, 三分之二
 
 # 3/2隨機波動率模型 (Three-Halves Stochastic Volatility)
 
-## 一句話解釋
 
+> 3/2 模型讓瞬時變異數的擴散項與 $V_t^{3/2}$ 成正比、高波動時擾動會超線性放大；它本身是非仿射隨機波動率模型，但倒數變異數 $1/V_t$ 服從 CIR 平方根過程，因此仍可用轉換方法處理香草、已實現變異數與波動率衍生品。
+## 核心概念
 3/2 模型讓瞬時變異數的擴散項與 $V_t^{3/2}$ 成正比、高波動時擾動會超線性放大；它本身是非仿射隨機波動率模型，但倒數變異數 $1/V_t$ 服從 CIR 平方根過程，因此仍可用轉換方法處理香草、已實現變異數與波動率衍生品。
 
 ## 名字不是三除以二的報酬率
@@ -19,8 +20,9 @@ $$V_t^{3/2}$$
 
 經典 [[操作策略/Heston隨機波動率模型Heston-Stochastic-Volatility-Model|Heston 模型]]使用 $\sqrt{V_t}=V_t^{1/2}$；3/2 模型則使用 $V_t^{3/2}$。差一個 $V_t$，尾部行為與高波動區的動態就完全不是同一齣戲。
 
-## 風險中立模型結構
+## 注意事項
 
+### 風險中立模型結構
 常見規格為：
 
 $$\frac{dS_t}{S_t}=(r-q)dt+\sqrt{V_t}\,dW_t^S$$
@@ -193,8 +195,7 @@ $$I_T=\int_0^T V_s ds$$
 9. 比較模型價格、IV 誤差、Greeks 與樣本外避險損益
 10. 用多起點優化，檢查是否存在多組近似最優參數
 
-## 交易與風控應用
-
+## 實戰應用
 ### 波動率衍生品相對價值
 
 3/2 模型對高波動狀態的非線性特別敏感，可用來比較：
@@ -251,8 +252,7 @@ $$I_T=\int_0^T V_s ds$$
 4. 模型對方差、VIX 與高波動尾部商品特別有研究價值
 5. 理論上的非爆炸與實作上的數值穩定是兩回事，別讓 Euler 幫你發明新金融危機
 
-## 相關連結
-
+## 相關主題
 - [[操作策略/Heston隨機波動率模型Heston-Stochastic-Volatility-Model]]
 - [[操作策略/方差交換與波動率衍生品Variance-Swap-and-Volatility-Derivatives]]
 - [[基本面分析/VIX恐慌指數Volatility-Index]]
@@ -260,8 +260,7 @@ $$I_T=\int_0^T V_s ds$$
 - [[風險管理/隱含波動率偏斜與微笑Implied-Volatility-Skew-and-Smile]]
 - [[操作策略/選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced]]
 
-## 參考來源
-
+## 來源
 - Carr, P., & Sun, J. (2007). "A new approach for option pricing under stochastic volatility." *Review of Derivatives Research*, 10, 87-150. https://doi.org/10.1007/s11147-007-9014-6
 - Kouarfate, I. R., Kouritzin, M. A., & MacKay, A. (2021). "Explicit solution simulation method for the 3/2 model." https://arxiv.org/abs/2009.09058
 - Zheng, W., & Zeng, P. (2016). "Pricing timer options and variance derivatives with closed-form partial transform under the 3/2 model." https://arxiv.org/abs/1504.08136

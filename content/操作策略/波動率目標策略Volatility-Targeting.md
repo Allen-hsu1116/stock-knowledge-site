@@ -84,8 +84,9 @@ $$\sigma_t^2 = \omega + \alpha r_{t-1}^2 + \beta \sigma_{t-1}^2$$
 - 加入市場狀態判斷（如 VIX 水準、趨勢方向）
 - 只在特定條件下啟動波動率目標（例如 VIX > 30 才減碼）
 
-## 實戰參數選擇
+## 實戰應用
 
+### 實戰參數選擇
 **目標波動率設定：**
 - **保守型**：8-10% 年化（接近大盤長期波動率）
 - **穩健型**：10-12%
@@ -101,8 +102,7 @@ $$\sigma_t^2 = \omega + \alpha r_{t-1}^2 + \beta \sigma_{t-1}^2$$
 - **中窗口（60-120日）**：平衡，推薦
 - **長窗口（180-252日）**：穩定，但反應慢
 
-## 風險與缺陷
-
+## 注意事項
 **1. 波動率估計誤差**
 - 波動率是隱變量，預測永遠有誤差
 - 估計過高 → 不必要的減碼，犧牲報酬
@@ -142,15 +142,13 @@ $$\sigma_t^2 = \omega + \alpha r_{t-1}^2 + \beta \sigma_{t-1}^2$$
 - **vs 凱利公式**：[[操作策略/凱利公式Kelly-Criterion最佳下注比例|凱利公式]]最大化長期成長率，波動率目標控制風險水準，兩者可結合
 - **vs 均值回歸**：波動率目標利用波動率聚集（持續性），均值回歸利用價格反轉
 
-## 參考文獻
-
+## 來源
 - Moreira & Muir (2017), "Volatility-Managed Portfolios", Journal of Finance
 - Fleming, Kirby & Ostdiek (2001/2003), "The Economic Value of Volatility Timing"
 - Barroso & Santa-Clara (2015), "Momentum has its moments", Journal of Financial Economics
 - Moskowitz & Grinblatt (1999), "Do Industries Explain Momentum?"
 
-## 相關筆記
-
+## 相關主題
 - [[風險管理/GARCH模型與波動率預測GARCH-Model-and-Volatility-Forecasting|GARCH 模型與波動率預測]]
 - [[風險管理/風險平價進階實戰Risk-Parity-Advanced-Practice|風險平價進階實戰]]
 - [[風險管理/波動率體制轉換模型Volatility-Regime-Switching-Model|波動率體制轉換模型]]

@@ -1,3 +1,7 @@
+---
+title: "Hawkes 自激點過程與交易應用"
+---
+
 # Hawkes 自激點過程與交易應用
 
 > 一筆大單成交後，後面跟著更多大單——事件不是獨立的，而是會「自我激發」。Alan Hawkes 1971年提出的自激點過程，從地震學到高頻交易都在用。
@@ -50,8 +54,9 @@ Hawkes 過程的條件強度函數：
 - **ϕᵢⱼ**：類型 j 的事件對類型 i 的激發效應
 - 可以是一個市場的事件發另一個市場的事件（跨市場溢出）
 
-## 在金融市場的應用
+## 實戰應用
 
+### 在金融市場的應用
 ### 1. 高頻交易中的事件聚類
 
 金融市場的成交時間絕非隨機——大單成交後往往引發更多交易：
@@ -112,16 +117,14 @@ Hawkes 過程可以量化這種「事件聚類」的強度和持續時間。
 - **vs [[風險管理/GARCH模型與波動率預測GARCH-Model-and-Volatility-Forecasting|GARCH]]**：GARCH 建模波動率聚集，Hawkes 建模事件聚集，兩者從不同角度描述同一現象
 - **vs [[技術分析/訂單流失衡OFI-Order-Flow-Imbalance|OFI]]**：OFI 衡量買賣力量失衡的靜態快照，Hawkes 描述失衡的動態演化
 
-## 限制與注意事項
-
+## 注意事項
 1. **參數估計計算量大**：MLE 需要對所有歷史事件配對計算，高頻數據下計算成本高
 2. **模型假設事件可標記精確時間**：實務上成交記錄的時間精度受限
 3. **非平穩性**：市場狀態變化時 μ 和 ϕ 可能改變，需要滾動估計
 4. **台股數據限制**：逐筆成交數據需要 Level 2 行情，一般投資人不易取得
 5. **過度擬合風險**：多變量模型參數多，容易過度擬合歷史數據
 
-## 相關頁面
-
+## 相關主題
 - [[操作策略/高頻交易與做市策略High-Frequency-Trading-and-Market-Making]] — 高頻交易做市策略基礎
 - [[風險管理/GARCH模型與波動率預測GARCH-Model-and-Volatility-Forecasting]] — 波動率聚集的另一種建模方式
 - [[技術分析/訂單流失衡OFI-Order-Flow-Imbalance]] — 訂單流失衡的量化指標
@@ -129,8 +132,7 @@ Hawkes 過程可以量化這種「事件聚類」的強度和持續時間。
 - [[操作策略/事件驅動交易策略Event-Driven-Investing]] — 事件驅動的交易策略
 - [[風險管理/Copula連接函數與尾部相依性Copula-and-Tail-Dependence]] — 尾部相依性的另一種建模
 
-## 參考資料
-
+## 來源
 - [Hawkes process - Wikipedia](https://en.wikipedia.org/wiki/Hawkes_process)
 - Hawkes, A. G. (1971). "Spectra of some self-exciting and mutually exciting point processes." Biometrika, 58(1), 83-90.
 - Bacry, E., Mastromatteo, I., & Muzy, J. F. (2015). "Hawkes processes in finance." Market Microstructure and Liquidity, 1(1), 1550005.

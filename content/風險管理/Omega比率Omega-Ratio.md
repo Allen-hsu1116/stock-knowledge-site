@@ -142,8 +142,7 @@ Omega = 3.83 表示每承受1單位損失風險，可獲得3.83單位的收益�
 4. **缺乏直覺**：不像 Sharpe 或 Calmar 有「每單位風險賺多少」的直觀解讀
 5. **不區分路徑**：Omega 基於分佈而非時間序列，不考慮回撤的路徑風險（[[MDD最大回撤進階實戰各資產歷史回撤與管理方法|MDD]] 和 [[CDaR條件回撤風險Conditional-Drawdown-at-Risk|CDaR]] 補充）
 
-## 參考來源
-
+## 來源
 - Keating, C. & Shadwick, W.F. (2002). "A Universal Performance Measure". Journal of Performance Measurement.
 - Sortino, F.A. & Price, L.N. (1994). "Performance measurement in a downside risk framework". Journal of Investing.
 - Wikipedia: Sortino ratio（Omega 的數學基礎）

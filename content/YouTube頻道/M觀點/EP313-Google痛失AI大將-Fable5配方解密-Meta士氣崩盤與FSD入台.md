@@ -1,3 +1,7 @@
+---
+title: "EP313 Google痛失AI大將、Fable 5配方解密、Meta士氣崩盤與FSD入台"
+---
+
 # EP313 Google痛失AI大將、Fable 5配方解密、Meta士氣崩盤與FSD入台
 
 > Google兩名AI頂尖研究員跳槽對手、Fable 5用12萬字System Prompt把Agent Harness直接塞進聊天機器人、Meta Applied AI部門是裁員後的暫存區，FSD正式遞件台灣審查。

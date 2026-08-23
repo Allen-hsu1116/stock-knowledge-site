@@ -120,8 +120,7 @@ CAPE 不只適用美國，研究已擴展到 15 個以上市場：
 - 台股盈餘波動比美國大（半導體循環更劇烈），十年平均更能平滑
 - 可以跟美股 CAPE 比較，判斷相對估值優勢
 
-## 實戰應用框架
-
+## 實戰應用
 ### 1. 大盤長期擇時參考
 
 CAPE 不是短期擇時工具，而是長期資產配置的參考：
@@ -184,8 +183,7 @@ CAPE 是本益比的「去噪版」——用十年平均盈餘 + 通膨調整，
 - [[經濟週期與資產配置策略Economic-Cycle-and-Asset-Allocation]]
 - [[資產配置策略比較Asset-Allocation-Comparison]]
 
-## 參考來源
-
+## 來源
 - Wikipedia: Cyclically Adjusted Price-to-Earnings Ratio
 - Shiller, R. (2000). "Irrational Exuberance". Princeton University Press.
 - Campbell, J. Y. & Shiller, R. (1988). "Stock Prices, Earnings and Expected Dividends". Journal of Finance.

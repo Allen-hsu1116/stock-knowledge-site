@@ -1,3 +1,7 @@
+---
+title: "EP329 Anthropic成長減速——Model 2、Astra與Meta青少年訴訟"
+---
+
 # EP329 Anthropic成長減速——Model 2、Astra與Meta青少年訴訟
 
 > Anthropic的ARR仍高速成長，問題不是公司突然失速，而是成長低於極端樂觀預期；AI基建股的估值已把「永遠加速」寫進價格，任何份額轉移都會變成情緒地震。

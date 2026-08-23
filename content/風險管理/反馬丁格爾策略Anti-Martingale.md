@@ -143,8 +143,7 @@ Anti-Martingale 不是一個複雜的策略——它的邏輯簡單到一句話�
 
 記住：**Anti-Martingale 的精髓不是「加碼」，而是「在對的時候才加碼」。** 如果你連「什麼時候是對的」都判斷不了，再好的資金管理也救不了你。先修好你的交易系統，再用 Anti-Martingale 放大它的效果。
 
-## 參考
-
+## 來源
 - 破產風險基礎：[[風險管理/破產風險Risk-of-Ruin|破產風險]]
 - 部位控制：[[風險管理/部位控制2%法則Position-Sizing-2-Percent-Rule|2% 法則]]
 - 凱利公式：[[操作策略/凱利公式Kelly-Criterion最佳下注比例|凱利公式]]、[[風險管理/凱利公式部位最佳化Kelly-Criterion-Position-Sizing|凱利公式部位最佳化]]

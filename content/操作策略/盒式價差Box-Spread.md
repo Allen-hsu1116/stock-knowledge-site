@@ -174,8 +174,7 @@ Box Spread 的隱含利率可作為市場無風險利率的替代指標。與國
 4. **除息風險**：若標的在到期前除息，Box Spread 報酬會受影響（股價下降影響 Call/Put 內含價值）
 5. **美式 vs 歐式**：美式選擇權有提前行使風險，只在歐式選擇權上做 Box Spread
 
-## 參考來源
-
+## 來源
 - Wikipedia: Box spread（含完整數學推導、Robinhood 事件、BOXX ETF）
 - CME Group: "Index Options Box Spreads as Financing Tool" (2024)
 - Cboe: "Long-Dated Box Spreads: A Better Way to Buy a Home" (2025)

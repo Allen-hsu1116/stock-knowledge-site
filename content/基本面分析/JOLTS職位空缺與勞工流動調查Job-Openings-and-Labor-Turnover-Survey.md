@@ -7,8 +7,9 @@ category: "基本面分析"
 
 > 勞動市場的X光機——不只看有多少人失業，更看有多少職位在等人、多少人主動辭職、多少人被裁
 
-## 什麼是 JOLTS
+## 核心概念
 
+### 什麼是 JOLTS
 JOLTS（Job Openings and Labor Turnover Survey）是美國勞工統計局（Bureau of Labor Statistics, BLS）每月發布的勞動市場動態調查報告，追蹤職位空缺（Job Openings）、新雇用（Hires）、離職（Separations）三大面向，其中離職再細分為自願辭職（Quits）、裁員解雇（Layoffs & Discharges）和其他離職（Other Separations，含退休、死亡等）。
 
 與非農就業報告（[[基本面分析/非農就業報告NFP-Non-Farm-Payrolls|NFP]]）只看淨就業人數變化不同，JOLTS 看的是勞動市場的「流動」——有人進、有人出，就像看一個水池的水龍頭和排水口，而非只看水位。聯準會前主席葉倫極度重視 JOLTS 數據，因為它能揭示勞動市場的結構性變化，而非僅看就業總量。
@@ -31,8 +32,9 @@ JOLTS（Job Openings and Labor Turnover Survey）是美國勞工統計局（Bure
    - **裁員解雇（Layoffs & Discharges）**：雇主主動終止雇傭。裁員率上升是經濟降溫的領先訊號
    - **其他離職（Other Separations）**：退休、死亡、調職等
 
-## 關鍵比率與判讀
+## 實戰應用
 
+### 關鍵比率與判讀
 ### 職位空缺率（Job Opening Rate）
 - 公式：職位空缺數 ÷（就業人數 + 職位空缺數）
 - 5%以上代表勞動市場極度緊張，企業找不到人
@@ -63,8 +65,9 @@ JOLTS 是 [[基本面分析/非農就業報告NFP-Non-Farm-Payrolls|NFP]] 的「
 
 與 [[基本面分析/初領失業救濟金Jobless-Claims|初領失業救濟金]] 的關係：初領救濟金是每週高頻數據，反映裁員速度；JOLTS 裁員率是月度數據，但包含更多結構資訊。兩者交叉驗證能更準確判讀勞動市場趨勢。
 
-## JOLTS 的局限性
+## 注意事項
 
+### JOLTS 的局限性
 ### 樣本覆蓋不足問題
 JOLTS 樣本僅覆蓋約25%的企業，相比 NFP 的樣本覆蓋率更小。老王說股在 2026年7月的影片中特別指出，JOLTS 的樣本數不足是實戰判讀的一大盲點——民間數據源如 Indeed、LinkUp 的即時招聘數據往往比 JOLTS 更即時且覆蓋更廣。
 
@@ -107,8 +110,11 @@ JOLTS 數據與 [[基本面分析/經濟週期與資產配置策略Economic-Cycl
 
 JOLTS 是勞動市場最全面的動態調查，補充了 NFP 無法提供的「流動」維度。職位空缺、辭職率、裁員率三大指標構成完整的勞動市場體檢報告。但樣本覆蓋不足、幽靈職位和時間落差是實戰判讀中必須注意的三大局限。搭配初領失業救濟金和民間高頻招聘數據使用，才能得到最準確的勞動市場圖像。
 
-## 參考來源
+## 相關主題
 
+- [[基本面分析/基本面分析總論]]
+
+## 來源
 - [Wikipedia: JOLTS report](https://en.wikipedia.org/wiki/JOLTS_report)
 - [BLS JOLTS 官方頁面](https://www.bls.gov/jolts/)
 - 老王說股 2026-07-02 影片：JOLTS 樣本數不足與大學畢業生失業倒掛分析

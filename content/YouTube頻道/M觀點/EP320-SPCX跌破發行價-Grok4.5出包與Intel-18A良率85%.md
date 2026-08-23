@@ -1,3 +1,7 @@
+---
+title: "EP320 SPCX跌破發行價、Grok 4.5出包與Intel 18A良率85%"
+---
+
 # EP320 SPCX跌破發行價、Grok 4.5出包與Intel 18A良率85%
 
 > SpaceX從高點211跌到135塊跌破發行價但M觀點估值合理價84塊仍偏貴；Grok 4.5模型成功但Grok CLI工具偷偷上傳整個程式庫引發資安風暴，馬斯克緊急公開原始碼滅火；Mira Murati新創Thinking Machine Lab推出開源模型Inkling 41分打敗Nemotron 3 Ultra；GPT-5.6 Soul版本口碑佳但日常使用感受不到與GPT-5.5差異；Intel 18A良率從65%提升到85%，Nova Lake 80-90%轉回18A生產，五大客戶蘋果AMD亞馬遜微軟加SpaceX

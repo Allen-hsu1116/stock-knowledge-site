@@ -1,3 +1,7 @@
+---
+title: "配對交易 Pairs Trading 統計套利實戰"
+---
+
 # 配對交易 Pairs Trading 統計套利實戰
 
 > 兩檔股票像是連體嬰，當它們暫時分開，你就做多弱的那個、做空強的那個，等它們重新合體收錢。
@@ -76,8 +80,9 @@
 
 做空一檔股票收到的資金，可以用來買進另一檔，策略本身幾乎不需要額外資金（忽略保證金需求）。這讓配對交易的資金效率極高。
 
-## 風險管理：Drift是最大敵人
+## 注意事項
 
+### 風險管理：Drift是最大敵人
 配對交易最大的風險不是價差波動，而是**價差趨勢化（Drift）**——兩檔股票的關係發生了結構性變化，不再均值回歸。
 
 原因：
@@ -108,8 +113,9 @@ Rad, Low & Faff (2016) 的研究比較三種方法在美國市場的長期表現
 - **Copula法**：利潤較小但最穩定
 - 三種方法的超額報酬都在逐年衰減，因為越來越多量化基金在做同樣的事
 
-## 配對交易的演變
+## 實戰應用
 
+### 配對交易的演變
 - **1980s**：Morgan Stanley 量化團隊首創，年化報酬極高
 - **1990s**：[[風險管理/LTCM長期資本管理公司倒閉案例Long-Term-Capital-Management-Collapse|LTCM]] 也做配對交易，最後在1998年崩潰
 - **2000s**：隨著演算法交易普及，利潤空間被壓縮
@@ -122,8 +128,7 @@ Rad, Low & Faff (2016) 的研究比較三種方法在美國市場的長期表現
 3. **個股相關性不穩定**：台股個股受主力影響大，統計相關性容易被人為操作扭曲
 4. **可實作的替代方案**：用ETF配對（如0050 vs 006208）或期貨價差交易，成本更低、流動性更好
 
-## 相關頁面
-
+## 相關主題
 - [[操作策略/統計套利Statistical-Arbitrage]] — 統計套利總論
 - [[操作策略/共整合檢定Cointegration-Test]] — 共整合檢定方法
 - [[操作策略/市場中性策略Market-Neutral-Strategy]] — 市場中性策略
@@ -131,8 +136,7 @@ Rad, Low & Faff (2016) 的研究比較三種方法在美國市場的長期表現
 - [[風險管理/LTCM長期資本管理公司倒閉案例Long-Term-Capital-Management-Collapse]] — LTCM案例
 - [[風險管理/Copula連接函數與尾部相依性Copula-and-Tail-Dependence]] — Copula模型
 
-## 參考來源
-
+## 來源
 - Vidyamurthy, G. (2004). "Pairs Trading: Quantitative Methods and Analysis". Wiley
 - Rad, Low & Faff (2016). "The profitability of pairs trading strategies: distance, cointegration and copula methods". Quantitative Finance, 16(10), 1541-1558
 - Wikipedia: Pairs trade

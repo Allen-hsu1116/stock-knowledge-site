@@ -7,8 +7,9 @@ date: 2026-08-21
 
 # 過濾歷史模擬 (Filtered Historical Simulation)
 
-## 一句話解釋
 
+> 過濾歷史模擬 FHS 先用 EWMA 或 GARCH 把歷史報酬除以當時條件波動率，取得近似同尺度的標準化殘差，再乘上目前預測波動率重建損益情境；它保留歷史偏態與肥尾，又避免普通歷史模擬把低波動年代和高波動今天當成同一種天氣。
+## 核心概念
 過濾歷史模擬 FHS 先用 EWMA 或 GARCH 把歷史報酬除以當時條件波動率，取得近似同尺度的標準化殘差，再乘上目前預測波動率重建損益情境；它保留歷史偏態與肥尾，又避免普通歷史模擬把低波動年代和高波動今天當成同一種天氣。
 
 ## 普通歷史模擬的毛病
@@ -246,8 +247,9 @@ EWMA 的 $\lambda$ 或 GARCH 的持續性決定新舊資訊權重：
 
 可依 FHS Expected Shortfall 對部位做風險預算，讓不同資產以相近尾部風險貢獻配置，而不是只看名目金額。
 
-## 多日VaR陷阱
+## 注意事項
 
+### 多日VaR陷阱
 直接使用平方根時間法則：
 
 $$\operatorname{VaR}_h\approx\operatorname{VaR}_1\sqrt h$$
@@ -294,8 +296,7 @@ $$\operatorname{VaR}_h\approx\operatorname{VaR}_1\sqrt h$$
 4. GARCH過濾不會創造歷史未見的黑天鵝，也不會自動加入流動性衝擊
 5. 真正好壞要看樣本外 VaR 回測與例外群聚，不是看模型名稱多長
 
-## 相關連結
-
+## 相關主題
 - [[風險管理/VaR風險值Value-at-Risk]]
 - [[風險管理/條件風險價值CVaR與期望短缺Expected-Shortfall]]
 - [[風險管理/GARCH模型與波動率預測GARCH-Model-and-Volatility-Forecasting]]
@@ -305,8 +306,7 @@ $$\operatorname{VaR}_h\approx\operatorname{VaR}_1\sqrt h$$
 - [[風險管理/模型風險Model Risk]]
 - [[風險管理/VaR回測Kupiec-Christoffersen與Basel燈號]]
 
-## 參考來源
-
+## 來源
 - Hull, J., & White, A. (1998). "Incorporating volatility updating into the historical simulation method for value-at-risk." *Journal of Risk*, 1(1). https://doi.org/10.21314/JOR.1998.001
 - Risk.net article abstract: https://www.risk.net/journal-of-risk/2161156/incorporating-volatility-updating-into-the-historical-simulation-method-for-value-at-risk
 

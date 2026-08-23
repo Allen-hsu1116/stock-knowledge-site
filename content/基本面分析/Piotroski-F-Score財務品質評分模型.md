@@ -1,3 +1,7 @@
+---
+title: "Piotroski F-Score 財務品質評分模型"
+---
+
 # Piotroski F-Score 財務品質評分模型
 
 > 用9個簡單的財報指標，把價值股裡的「贏家」和「輸家」分開——Stanford會計教授的量化選股經典。
@@ -30,8 +34,9 @@
 8. **毛利率上升** — 当年毛利率 > 去年 得1分
 9. **資產週轉率上升** — 当年資產週轉率 > 去年 得1分
 
-## 判讀標準
+## 實戰應用
 
+### 判讀標準
 - **8~9分**：財務體質強健，價值股中的贏家
 - **0~2分**：財務體質虛弱，就算便宜也別碰
 - **3~7分**：灰色地帶，需進一步分析
@@ -52,8 +57,7 @@ Piotroski 原始論文回測1976-1996年美國股市：
 
 2024年 Schwartz & Hanauer 研究比較F-Score、魔力公式、保守公式和收購者倍數四種公式投資法，發現四者都能產生顯著的原始與風險調整報酬，但沒有任何一種在所有績效指標上持續勝出。
 
-## 局限性
-
+## 注意事項
 1. **只看一年vs前一年**：景氣循環股在衰退期F-Score必然低，不代表公司爛，是週期問題
 2. **不適用金融業**：銀行保險的商業模式完全不同，應收帳款、毛利率等指標無意義
 3. **已被市場部分定價**：20多年來被廣泛使用，套利空間縮小
@@ -71,16 +75,14 @@ Piotroski 原始論文回測1976-1996年美國股市：
 
 台股財報資料可從MOPS公開資訊觀測站取得，9項指標都能從資產負債表和現金流量表計算。
 
-## 相關頁面
-
+## 相關主題
 - [[基本面分析/Altman-Z-Score破產預測模型]] — 破產預測
 - [[基本面分析/Beneish-M-Score盈餘操縱偵測模型]] — 盈餘操縱偵測
 - [[基本面分析/Greenblatt魔力公式選股法Magic-Formula-Investing]] — 量化選股
 - [[基本面分析/NCAV淨流動資產價值選股法Net-Current-Asset-Value]] — 深度價值選股
 - [[基本面分析/Ohlson-O-Score破產預測模型]] — 破產預測
 
-## 參考來源
-
+## 來源
 - Piotroski, Joseph D. (2002). "Value Investing: The Use of Historical Financial Statement Information to Separate Winners from Losers"
 - Wikipedia: Piotroski F-score
 - Alpha Architect: Value Investing Research - Simple Methods to Improve the Piotroski F-Score

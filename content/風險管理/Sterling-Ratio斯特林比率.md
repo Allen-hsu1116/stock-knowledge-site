@@ -109,8 +109,7 @@ Sterling 是回撤分析體系的一環：
 
 Sterling 用「平均回撤」，在這個體系中介於 Calmar（最保守）和 CDaR（最激進）之間。
 
-## 參考來源
-
+## 來源
 - Wikipedia: Sterling ratio
 - Carl Bacon, *Practical Portfolio Performance Measurement and Attribution* 2nd edition, Wiley 2008, ISBN 978-0-470-05928-9
 

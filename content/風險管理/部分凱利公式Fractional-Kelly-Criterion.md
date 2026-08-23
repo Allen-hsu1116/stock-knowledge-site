@@ -1,3 +1,7 @@
+---
+title: "部分凱利公式 Fractional Kelly Criterion"
+---
+
 # 部分凱利公式 Fractional Kelly Criterion
 
 > Full Kelly 是理論最優，Half Kelly 是實務最優。因為你永遠不知道真正的勝率和賠率到底對不對。
@@ -107,8 +111,9 @@ F* = Σ⁻¹ × (μ - r·1)
 2. **嶺回歸正則化**：在 Σ 上加一個對角矩陣 λI，降低反矩陣的敏感度
 3. **直接用 Half Kelly**：算出 F* 後整體乘 0.5
 
-## 實戰計算範例
+## 實戰應用
 
+### 實戰計算範例
 ### 單一股票
 
 假設你回測一個交易策略：
@@ -152,8 +157,7 @@ Quarter Kelly f = 0.59（59%）
 
 Thorp 估計美股市場的 Kelly 比例約 117%，Half Kelly 約 59%——對大多數投資人來說 60% 股票部位是合理的。
 
-## 常見誤區
-
+## 注意事項
 - **「Half Kelly 永遠是最好的」**：不是。如果你的參數估計很精確（如套利策略），可以接近 Full Kelly。如果估計很不確定，甚至該用 Quarter Kelly
 - **「Kelly 公式保證不破產」**：Full Kelly 理論上不會歸零，但回撤可以非常深（50%+），且參數估計錯誤時可能破產
 - **「Kelly 適用於所有市場」**：Kelly 假設報酬分佈已知且穩定，肥尾市場（如加密貨幣）需要額外的[[風險管理/極端值理論EVT量化肥尾風險|極端值理論]]修正
@@ -167,8 +171,11 @@ Thorp 估計美股市場的 Kelly 比例約 117%，Half Kelly 約 59%——對�
 - **[[風險管理/前景理論Prospect-Theory|前景理論]]**：Kahneman-Tversky 的 S 型效用函數暗示，投資人的最適分數應該低於 Full Kelly
 - **[[風險管理/回撤恢復數學與帳戶生存Drawdown-Recovery-Math|回撤恢復數學]]**：跌 50% 要漲 100% 才回本，降低回撤深度比追求最大成長率更重要
 
-## 參考來源
+## 相關主題
 
+- [[風險管理/風險管理總論]]
+
+## 來源
 - Kelly, J.L. (1956). "A New Interpretation of Information Rate." *Bell System Technical Journal*
 - Thorp, E.O. (1969). "Optimal Gambling Systems for Favorable Games." *Review of the International Statistical Institute*
 - MacLean, L.C., Thorp, E.O. & Ziemba, W.T. (2011). *The Kelly Capital Growth Investment Criterion*

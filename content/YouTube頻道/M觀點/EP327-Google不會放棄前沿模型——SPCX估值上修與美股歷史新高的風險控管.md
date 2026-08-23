@@ -1,3 +1,7 @@
+---
+title: "Google不會放棄前沿模型——SPCX估值上修與美股歷史新高的風險控管"
+---
+
 # Google不會放棄前沿模型——SPCX估值上修與美股歷史新高的風險控管
 
 > SemiAnalysis唱衰Google放棄前沿模型，Miula完全不買單；SPCX估值從1.05T上修到1.4T；美股創歷史新高但下一波修正會更大

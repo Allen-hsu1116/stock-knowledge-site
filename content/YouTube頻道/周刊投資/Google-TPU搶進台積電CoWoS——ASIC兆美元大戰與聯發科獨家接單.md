@@ -1,3 +1,7 @@
+---
+title: "Google TPU搶進台積電CoWoS產能——ASIC兆美元大戰與聯發科獨家接單"
+---
+
 # Google TPU搶進台積電CoWoS產能——ASIC兆美元大戰與聯發科獨家接單
 
 > 四大CSP廠資本支出2028年將突破1.145兆美元，Google TPU躍升台積電第二大客戶僅次輝達，聯發科獨家拿下Triggerfish 2奈米新增訂單外資目標價上看1萬元

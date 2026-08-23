@@ -1,3 +1,7 @@
+---
+title: "EP688 SpaceX解禁、Cerebras推論架構與NVIDIA 800V DC白皮書"
+---
+
 # EP688 SpaceX解禁、Cerebras推論架構與NVIDIA 800V DC白皮書
 
 > SpaceX解禁賣壓不如預期反而打底上攻，Cerebras與AMD合作的Disaggregated Inference架構是推論時代新解法，NVIDIA 800V DC白皮書揭示Power供應鏈三階段受惠路線圖。

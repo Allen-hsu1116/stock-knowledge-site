@@ -1,3 +1,7 @@
+---
+title: "Betting Against Beta (BAB) 做空Beta因子"
+---
+
 # Betting Against Beta (BAB) 做空Beta因子
 
 > 低Beta股票長期跑贏高Beta股票，與CAPM預測完全相反。
@@ -71,8 +75,7 @@ Frazzini & Pedersen 的核心理論：
 - **BAB vs [[基本面分析/效率市場假說Efficient-Market-Hypothesis|EMH]]**：BAB 是對 EMH 半強式效率的直接挑戰
 - **BAB vs 品質因子**：低Beta股票常具高品質特徵（穩定獲利、低槓桿）
 
-## 台股應用
-
+## 實戰應用
 ### 低Beta策略在台股
 - 台積電(2330) Beta 約 1.2-1.5，屬高Beta，但長期報酬極佳——BAB 因子在集中型市場可能失靈
 - 金融股 Beta 通常 0.6-0.8，長期報酬穩定但不突出
@@ -84,8 +87,9 @@ Frazzini & Pedersen 的核心理論：
 - 可用 ETF 或期貨調整組合 Beta
 - 搭配 [[風險管理/凱利公式部位最佳化Kelly-Criterion-Position-Sizing|凱利公式部位控制]] 管理低Beta組合的槓桿
 
-## BAB 因子的衰退風險
+## 注意事項
 
+### BAB 因子的衰退風險
 ### 1. 套利消除
 - BAB 因子被廣泛知曉後，套利者競相買入低Beta、賣出高Beta
 - 超額報酬空間被壓縮
@@ -113,8 +117,7 @@ Frazzini & Pedersen 的核心理論：
 - [[技術分析回測方法與過度擬合Backtesting-and-Overfitting]] - 回測驗證與過度擬合防範
 - [[風險資金配置Risk-Capital-Allocation]] - 風險資金配置原則
 
-## 參考來源
-
+## 來源
 - Frazzini, A. & Pedersen, L.H. (2014). "Betting against beta." *Journal of Financial Economics*, 111(1), 1-25.
 - Black, F. (1972). "Capital Market Equilibrium with Restricted Borrowing." *Journal of Business*, 45(3), 444-455.
 - Pedersen, L.H. (2015). *Efficiently Inefficient*. Princeton University Press.

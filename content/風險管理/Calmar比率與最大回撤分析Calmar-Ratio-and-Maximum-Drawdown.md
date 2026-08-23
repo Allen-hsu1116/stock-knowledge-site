@@ -193,8 +193,7 @@ Calmar 完全不區分這兩種路徑。
 - [[操作策略/凱利公式Kelly-Criterion最佳下注比例]] — 最適下注比例
 - [[基本面分析/Piotroski-F-Score進階實戰]] — 搭配基本面篩選
 
-## 參考來源
-
+## 來源
 - [Calmar ratio - Wikipedia](https://en.wikipedia.org/wiki/Calmar_ratio)
 - Terry W. Young, "Calmar Ratio", Futures Magazine, 1991
 - California Managed Accounts (CMA) Reports

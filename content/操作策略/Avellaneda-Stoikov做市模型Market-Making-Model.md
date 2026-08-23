@@ -1,3 +1,7 @@
+---
+title: "Avellaneda-Stoikov 做市模型 Avellaneda-Stoikov Market Making Model"
+---
+
 # Avellaneda-Stoikov 做市模型 Avellaneda-Stoikov Market Making Model
 
 > 經典做市商庫存管理模型，在風險中性和庫存風險之間找到最優報價。
@@ -113,8 +117,9 @@ Avellaneda-Stoikov 模型的核心貢獻是引入**效用函數**來動態調整
 - **參數不穩定**：κ 和 σ 在不同市場狀態下波動劇烈
 - **結算風險**：收盤強制清倉假設不適用可隔夜持有的策略
 
-## 在台股的應用限制
+## 注意事項
 
+### 在台股的應用限制
 - 台股無正式做市商制度（除少數權證造市）
 - 但可應用於：
   - **選擇權造市**：期貨商自營部門可參考 A-S 模型管理選擇權部位
@@ -133,8 +138,11 @@ Avellaneda-Stoikov 模型的核心貢獻是引入**效用函數**來動態調整
 
 完整的 HJB 方程推導涉及隨機控制理論，有興趣可參考原論文。
 
-## 參考來源
+## 相關主題
 
+- [[操作策略/操作策略總論]]
+
+## 來源
 - Avellaneda, M. & Stoikov, S. (2008). "High-frequency trading in a limit order book." *Quantitative Finance*, 8(3), 217-224.
 - Guéant, O. & Tapia, M. (2013). "Dealing with the inventory risk: a solution to the market making problem." *Mathematics and Financial Economics*, 7(4), 477-507.
 - Cartea, Á., Jaikumar, S. & Penalva, J. (2015). *Algorithmic and High-Frequency Trading*. Cambridge University Press.

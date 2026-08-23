@@ -88,8 +88,9 @@ $$x_k = X \frac{\sinh(\kappa(T - t_k))}{\sinh(\kappa T)}$$
 - 開頭賣多一點降低時間風險，後段慢慢收尾
 - 這就是多數機構執行演算法的實際形狀
 
-## 實戰意義
+## 實戰應用
 
+### 實戰意義
 ### 給散戶的啟示
 
 你可能不需要寫微分方程來拆單，但 Almgren-Chriss 的核心邏輯值得每個人理解：
@@ -137,8 +138,7 @@ Kyle（1985）的 $\lambda$ 衡量的是「價格衝擊係數」——每單位�
 - Bertsimas, D. & Lo, A. (1998). "Optimal control of execution costs." *Journal of Financial Markets*, 1(1), 1-50.
 - Wikipedia: [Almgren–Chriss model](https://en.wikipedia.org/wiki/Almgren%E2%80%93Chriss_model)
 
-## 相關筆記
-
+## 相關主題
 - [[操作策略/執行演算法VWAP-TWAP-Execution-Algorithm]] — Almgren-Chriss 在 $\lambda=0$ 時收斂至 TWAP
 - [[操作策略/實施短缺與最佳執行Implementation-Shortfall-and-Best-Execution]] — 執行成本框架
 - [[操作策略/VWAP執行演算法與機構交易策略VWAP-Execution-Algorithms]] — VWAP 執行演算法

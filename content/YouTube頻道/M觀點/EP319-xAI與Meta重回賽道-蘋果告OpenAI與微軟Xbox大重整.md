@@ -1,3 +1,7 @@
+---
+title: "EP319 xAI與Meta重回賽道、蘋果告OpenAI與微軟Xbox大重整"
+---
+
 # EP319 xAI與Meta重回賽道、蘋果告OpenAI與微軟Xbox大重整
 
 > AI超級黃金週：GPT-5.6全面上線匹敵Fable 5但成本僅四成，Grok 4.5用不到10%成本提供GPT-5.5能力，Meta Muse Spark 1.1從排名50跳到前段班，蘋果告OpenAI偷商業機密，微軟砍Xbox 20%人力

@@ -1,3 +1,7 @@
+---
+title: "EP315 GPT-5.6 限量推出、蘋果漲價被罵翻與Meta自由品牌智能眼鏡"
+---
+
 # EP315 GPT-5.6 限量推出、蘋果漲價被罵翻與Meta自由品牌智能眼鏡
 
 > GPT-5.6限量預覽實力等同Anthropic Mythos，三版本Soul/Terra/Luna對標Claude Opus/Sonnet/Haiku；蘋果閃電漲價Mac/iPad被罵翻但漲幅合理，美光商務長反嗆蘋果當初壓價太狠；Meta推自由品牌智能眼鏡降價搶市但AI能力是最大考驗

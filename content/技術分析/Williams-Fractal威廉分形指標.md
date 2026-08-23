@@ -133,8 +133,7 @@ Bill Williams 的哲學是：鱷魚線告訴你「要不要進場」，分形告
 
 記住：**分形是滯後指標——你永遠在轉折發生 2 根 K 線後才確認它。但這個滯後是「確認」的代價，不是「預測」的缺陷。** 與其追求不滯後的轉折預測（通常不準），不如接受滯後、用結構化的方式在確認後進場。
 
-## 參考
-
+## 來源
 - Larry Williams, *Trading Chaos*, 2nd Edition
 - Bill Williams 五維系統：[[技術分析/Bill-Williams五維交易系統進階實戰|Bill Williams 五維交易系統進階實戰]]
 - 鱷魚線搭配：[[技術分析/鱷魚線Alligator-Indicator|鱷魚線 Alligator]]

@@ -1,3 +1,7 @@
+---
+title: "流動性溢價 Liquidity Premium"
+---
+
 # 流動性溢價 Liquidity Premium
 
 > 越難賣的資產，投資者要求越高的報酬補償——流動性不是免費的。
@@ -116,6 +120,10 @@ Viral Acharya 和 Lasse Pedersen 將流動性納入 CAPM 框架：
 - 使用 [[操作策略/VWAP執行演算法與機構交易策略VWAP-Execution-Algorithms|VWAP 策略]] 分散執行
 - 避開處置股和全額交割股的流動性陷阱
 
+## 實戰應用
+
+使用前先以歷史資料驗證本文方法，並納入交易成本、流動性與部位限制。
+
 ## 注意事項
 
 - 本指標/概念僅供參考，實際操作需結合當時市場環境與其他指標綜合判斷
@@ -127,8 +135,7 @@ Viral Acharya 和 Lasse Pedersen 將流動性納入 CAPM 框架：
 - [[技術分析回測方法與過度擬合Backtesting-and-Overfitting]] - 回測驗證與過度擬合防範
 - [[風險資金配置Risk-Capital-Allocation]] - 風險資金配置原則
 
-## 參考來源
-
+## 來源
 - Amihud, Y. & Mendelson, H. (1986). "Asset pricing and the bid-ask spread." *Journal of Financial Economics*, 17(2), 223-249.
 - Pastor, L. & Stambaugh, R.F. (2003). "Liquidity risk and expected stock returns." *Journal of Political Economy*, 111(3), 642-685.
 - Acharya, V.V. & Pedersen, L.H. (2005). "Asset pricing with liquidity risk." *Journal of Financial Economics*, 77(2), 375-410.

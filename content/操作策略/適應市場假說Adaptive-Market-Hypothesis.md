@@ -1,3 +1,7 @@
+---
+title: "適應市場假說 Adaptive Market Hypothesis"
+---
+
 # 適應市場假說 Adaptive Market Hypothesis
 
 > 市場不是永遠有效也不是永遠無效——它像生物一樣適應環境，效率程度會隨時間變化。
@@ -62,8 +66,9 @@ AMH 描述的市場效率循環：
 
 這正是 AMH 預測的：因子不會永遠有效也不會永遠失效。
 
-## 對投資的實戰啟示
+## 實戰應用
 
+### 對投資的實戰啟示
 ### 1. 策略有生命週期
 
 沒有永遠有效的策略。[[風險管理/因子衰退Factor-Decay|因子衰退]]是自然現象而非例外。監控策略有效性（[[風險管理/策略失效偵測與策略健康監控Strategy-Failure-Detection|策略失效偵測]]）比追求「永恆聖盃」更重要。
@@ -110,21 +115,18 @@ Lo 用演化動力學模型描述 AMH：
 - **與 [[操作策略/市場體制識別Market-Regime-Detection|市場體制識別]] 的關係**：體制識別是 AMH 的實戰應用——判斷市場處於效率循環的哪個階段
 - **與 [[風險管理/動量崩潰Momentum-Crash|動量崩潰]] 的關係**：動量崩潰是 AMH 的典型案例——策略擁擠到極限後環境突變導致崩潰
 
-## 批評與限制
-
+## 注意事項
 - **缺乏可檢驗的精確預測**：AMH 是概念框架而非可量化檢驗的模型，批評者認為它「什麼都能解釋等於什麼都沒解釋」
 - **實證困難**：如何量化「市場效率程度」隨時間變化？需要定義可操作的效率度量
 - **可能過度包容**：AMH 似乎可以解釋任何現象（有效時說 EMH 對、無效時說行為財務學對），缺乏 falsifiability
 - **演化類比的限制**：生物演化有明確的基因傳遞機制，市場「演化」的機制更模糊
 
-## 關鍵文獻
-
+## 來源
 - Lo, A.W. (2004). "The Adaptive Markets Hypothesis: Market Efficiency from an Evolutionary Perspective." *Journal of Portfolio Management*, 30th Anniversary Issue, 15-29.
 - Lo, A.W. (2017). *Adaptive Markets: Financial Evolution at the Speed of Thought*. Princeton University Press.
 - Lo, A.W. (2005). "Reconciling Efficient Markets with Behavioral Finance: The Adaptive Markets Hypothesis." *Journal of Investment Consulting*, 7(2), 21-44.
 
-## 相關筆記
-
+## 相關主題
 - [[基本面分析/效率市場假說Efficient-Market-Hypothesis|效率市場假說 EMH]]
 - [[風險管理/行為財務學總論Behavioral-Finance-Overview|行為財務學總論]]
 - [[操作策略/隨機漫步假說Random-Walk-Hypothesis|隨機漫步假說]]

@@ -33,8 +33,9 @@ RVOL = 當期成交量 / 過去N期平均成交量
 - **確認突破真偽：** 價格突破關鍵位置時，RVOL > 2 才算「帶量突破」，RVOL < 1 的突破九成是假的
 - **篩選日內活躍標的：** 當沖或短線交易者用盤中 RVOL 找出「今天突然活了」的股票
 
-## RVOL 分級判讀
+## 實戰應用
 
+### RVOL 分級判讀
 | RVOL 範圍 | 解讀 | 行動建議 |
 |-----------|------|----------|
 | < 0.5 | 極度萎縮，市場沒人理 | 觀望或注意是否醞釀大行情 |
@@ -146,8 +147,7 @@ RVOL 是量能分析的「標準化工具」，讓你不用記住每檔股票的
 - [[飆股DNA選股策略]]
 - [[底部訊號綜合判讀Bottom-Signal-Confluence]]
 
-## 參考來源
-
+## 來源
 - TradingView Relative Volume (RVOL) 指標定義
 - Investopedia: Relative Volume
 - StockCharts ChartSchool: Relative Volume

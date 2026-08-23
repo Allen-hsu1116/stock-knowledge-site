@@ -5,8 +5,9 @@ aliases: [Merton Jump-Diffusion Model, Jump-Diffusion, 跳躍擴散模型, Merto
 
 # Merton跳躍擴散模型 (Merton Jump-Diffusion Model)
 
-## 一句話解釋
 
+> Robert Merton 在 1976 年把 Black-Scholes 的連續股價過程加上「跳躍」成分——平時用幾何布朗運動描述連續波動，突發事件用卜瓦松過程驅動的跳躍來建模。這讓模型能解釋市場崩盤、跳空缺口等 Black-Scholes 完全無法處理的現象。
+## 核心概念
 Robert Merton 在 1976 年把 Black-Scholes 的連續股價過程加上「跳躍」成分——平時用幾何布朗運動描述連續波動，突發事件用卜瓦松過程驅動的跳躍來建模。這讓模型能解釋市場崩盤、跳空缺口等 Black-Scholes 完全無法處理的現象。
 
 ## 背景與動機
@@ -88,8 +89,7 @@ Black-Scholes 是 Merton 跳躍擴散的特例（λ=0）。Merton 模型在以�
 
 更近代的 Lévy 過程模型（Variance Gamma、CGMY、Normal Inverse Gaussian）用更靈活的純跳躍過程取代擴散+跳躍的分離，能更精細地擬合報酬分配的特徵，但失去封閉解的便利性。
 
-## 交易應用
-
+## 實戰應用
 ### 1. 選擇權定價與波動率微笑
 
 Merton 跳躍模型產生的波動率微笑特徵：
@@ -134,8 +134,7 @@ Merton 跳躍模型產生的波動率微笑特徵：
 - 通常 μ_J 為負（市場傾向跳跌）
 - σ_J 通常遠大於 σ（跳躍幅度遠大於日常波動）
 
-## 模型限制
-
+## 注意事項
 - **對數常態跳躍假設過簡**：實際跳躍幅度分佈可能更複雜（冪律尾巴等）
 - **跳躍強度固定**：λ 是常數，但實際跳躍頻率有時變性（危機時 λ 飆升）
 - **無法捕捉跳躍聚集**：一次大跳躍後常有更多跳躍（自激過程，可參考 [[操作策略/Hawkes自激點過程與交易應用Hawkes-Process-Trading|Hawkes 自激點過程]]）
@@ -148,8 +147,11 @@ Merton 跳躍模型產生的波動率微笑特徵：
 3. **跳躍風險溢價是選擇權賣方的隱性報酬來源**——但也是炸彈，一次跳躍可以吃掉數月的權利金
 4. **Heston + Merton = Bates** 是理解現代選擇權定價的必經之路——隨機波動率 + 跳躍，兩者缺一不可
 
-## 參考來源
+## 相關主題
 
+- [[操作策略/操作策略總論]]
+
+## 來源
 - Merton, R. C. (1976). "Option Pricing When Underlying Stock Returns Are Discontinuous." *Journal of Financial Economics*, 3(1-2), 125-144.
 - Kou, S. G. (2002). "A Jump-Diffusion Model for Option Pricing." *Management Science*, 48(8), 1086-1101.
 - Bates, D. S. (1996). "Jumps and Stochastic Volatility: Exchange Rate Processes Implicit in Deutsche Mark Options." *Review of Financial Studies*, 9(1), 69-107.

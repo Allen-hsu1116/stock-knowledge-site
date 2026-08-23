@@ -183,8 +183,7 @@ MPT假設投資人完全理性，但行為財務學證明投資人受心理帳�
 - [[風險管理/再平衡策略Portfolio-Rebalancing]] — 維持目標配置的再平衡方法
 - [[風險管理/行為財務學總論Behavioral-Finance-Overview]] — MPT理性假設的挑戰
 
-## 參考資料
-
+## 來源
 - [Modern portfolio theory - Wikipedia](https://en.wikipedia.org/wiki/Modern_portfolio_theory)
 - Markowitz, Harry (1952). "Portfolio Selection". The Journal of Finance. 7 (1): 77–91.
 - Markowitz, Harry (1959). Portfolio Selection: Efficient Diversification of Investments. John Wiley & Sons.

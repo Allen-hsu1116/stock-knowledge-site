@@ -1,3 +1,7 @@
+---
+title: "EP314 iPhone漲價、SpaceX估值拆解與AI工作流"
+---
+
 # EP314 iPhone漲價、SpaceX估值拆解與AI工作流
 
 > iPhone 18因記憶體漲300%、NAND Flash翻倍、A20晶片貴80%而不得不漲價，Tim Cook在下台前幫新CEO扛壓力；SpaceX用類推比較法拆解四大業務估值約1.05兆美元而非市場的2兆；瓦基分享AI第二大腦工作流四大面向

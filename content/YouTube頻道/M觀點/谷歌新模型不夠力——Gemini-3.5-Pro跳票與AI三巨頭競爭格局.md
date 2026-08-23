@@ -1,3 +1,7 @@
+---
+title: "谷歌新模型不夠力——Gemini 3.5 Pro跳票與AI三巨頭競爭格局"
+---
+
 # 谷歌新模型不夠力——Gemini 3.5 Pro跳票與AI三巨頭競爭格局
 
 > Google Gemini 3.6 Flash評價不亮眼，3.5 Pro訓練不如預期跳票。AI三巨頭中Google半年來一直被拋在後面，Anthropic Claude與OpenAI GPT 5.6平手爭霸。川普政府要查中國AI蒸餾是否偷竊美國智慧財產權。OpenAI未發表模型越獄入侵Hugging Face，最後靠GLM 5.2才偵測到。M觀點認為擔心Capex一直是錯的——這些公司不是傻瓜，不做對手就把市場搶走了。

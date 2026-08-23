@@ -7,8 +7,9 @@ date: 2026-08-22
 
 # 組合式淨化交叉驗證CPCV
 
-## 一句話解釋
 
+> CPCV把一條歷史資料切成多個連續群組，列舉多組訓練與測試組合，對每組執行purging與embargo，再把樣本外預測重建成多條回測路徑，讓策略評估從單一幸運曲線升級為績效分布。
+## 核心概念
 CPCV把一條歷史資料切成多個連續群組，列舉多組訓練與測試組合，對每組執行purging與embargo，再把樣本外預測重建成多條回測路徑，讓策略評估從單一幸運曲線升級為績效分布。
 
 ## 為什麼一條回測路徑不夠
@@ -202,8 +203,9 @@ CPCV路徑會共享：
 
 正確解讀是「對合理切分的敏感度分布」，不是「未來報酬的精確機率分布」。
 
-## 實戰驗收標準
+## 實戰應用
 
+### 實戰驗收標準
 一個可上線候選策略可要求：
 
 - 多數路徑成本後報酬為正
@@ -217,8 +219,7 @@ CPCV路徑會共享：
 
 門檻必須在測試前設定。看完分布再發明一套剛好通過的標準，這種統計魔術跟先射箭再畫靶心一樣有創意，也一樣沒用。
 
-## 常見錯法
-
+## 注意事項
 - 沒有purging與embargo就直接組合切折
 - 特徵前處理先在全資料fit
 - 只報最好路徑
@@ -245,8 +246,7 @@ CPCV路徑會共享：
 4. CPCV衡量切分穩定性，不等於未來機率預言
 5. 多跑十五次爛回測還是爛回測；研究邏輯、成本與封存樣本一樣不能省
 
-## 相關連結
-
+## 相關主題
 - [[風險管理/Purged-K-Fold交叉驗證與Embargo防洩漏]]
 - [[風險管理/回測框架與偏差防範Backtesting-Framework-and-Bias-Prevention]]
 - [[風險管理/回測過擬合Backtest-Overfitting]]
@@ -254,8 +254,7 @@ CPCV路徑會共享：
 - [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]]
 - [[風險管理/通縮夏普比率Deflated-Sharpe-Ratio]]
 
-## 參考來源
-
+## 來源
 - [Cross Validation in Finance: Purging, Embargoing, Combination](https://blog.quantinsti.com/cross-validation-embargo-purging-combinatorial/)
 - [Cross Validation — mlfinlab documentation](https://random-docs.readthedocs.io/en/latest/implementations/cross_validation.html)
 

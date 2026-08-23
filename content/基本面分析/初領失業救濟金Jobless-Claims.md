@@ -7,8 +7,7 @@ category: "基本面分析"
 
 > 每週四早上 8:30 揭曉的高頻就業數據。非農月報的先行指標，市場波動的每週催化劑。
 
-## 定義
-
+## 核心概念
 初領失業救濟金（Initial Jobless Claims）由美國勞工部每週發布，統計前一週首次向各州失業保險機構申請失業補助的人數。它是美國最高頻的勞動市場指標，每週四東岸時間 8:30 公布。
 
 與之配套的還有：
@@ -28,8 +27,9 @@ category: "基本面分析"
 
 初領失業金是 NFP 的**先行指標**。如果連續數週初領人數上升，下一個月的 NFP 大機率會低於預期。反之，初領人數持續下降，代表就業市場穩健。
 
-## 為什麼 Jobless Claims 對股市重要
+## 實戰應用
 
+### 為什麼 Jobless Claims 對股市重要
 ### 高頻勞動市場溫度計
 在非農月報之間的三週空窗期，Jobless Claims 是唯一能即時反映勞動市場狀態的官方指標。它雖然影響力不如 NFP，但連續幾週的趨勢變化足以改變市場對聯準會政策的預期。
 
@@ -78,8 +78,7 @@ category: "基本面分析"
 4. **搭配非農一起看**：Jobless Claims 是每週體溫計，NFP 是每月體檢報告
 5. **非農前夕特別重要**：非農前一週的 Jobless Claims 是市場預判 NFP 的最後線索
 
-## 相關筆記
-
+## 相關主題
 - [[基本面分析/非農就業報告NFP-Non-Farm-Payrolls|非農就業報告 NFP]] — Jobless Claims 的月度確認指標
 - [[基本面分析/FOMC聯邦公開市場委員會與利率決策Federal-Open-Market-Committee|FOMC 聯邦公開市場委員會]] — 就業數據是利率決策雙重使命之一
 - [[基本面分析/GDP國內生產毛額Gross-Domestic-Product|GDP 國內生產毛額]] — 就業是 GDP 的勞動面投入
@@ -88,8 +87,7 @@ category: "基本面分析"
 - [[籌碼面分析/恐懼貪婪指標與市場情緒量化Fear-and-Greed-Index|恐懼貪婪指標]] — 就業數據影響市場情緒
 - [[風險管理/VIX恐慌指數實戰判讀|VIX 恐慌指數]] — 突發就業數據可能推升 VIX
 
-## 參考來源
-
+## 來源
 - Wikipedia: Jobless claims
 - 美國勞工部官方數據：https://www.dol.gov/ui/data.pdf
 - FRED 歷史數據：https://fred.stlouisfed.org/series/ICSA

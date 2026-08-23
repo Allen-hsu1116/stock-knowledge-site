@@ -1,3 +1,7 @@
+---
+title: "EP676 功率元件斷貨與Meta進軍Neocloud——封裝漲價30-50%成下一棒"
+---
+
 # EP676 功率元件斷貨與Meta進軍Neocloud——封裝漲價30-50%成下一棒
 
 > 功率元件MOSFET開始斷貨不輸被動元件，封裝廠漲價30-50%挑客人；Meta做Neocloud不是退出AI而是Double down要掃掉小玩家；券商限縮大戶融資額度但非全面收傘

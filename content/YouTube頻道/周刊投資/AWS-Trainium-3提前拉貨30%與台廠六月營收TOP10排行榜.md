@@ -1,3 +1,7 @@
+---
+title: "AWS Trainium 3提前拉貨30%與台廠六月營收TOP 10排行榜"
+---
+
 # AWS Trainium 3提前拉貨30%與台廠六月營收TOP 10排行榜
 
 > AWS自研AI晶片Trainium 3強勁拉貨帶動台廠營收全面爆發，川湖年增220%奪冠，台光電台燿CCL雙雄年增翻倍，GPU+ASIC雙引擎驅動ASIC出貨占比2030年將升至40%

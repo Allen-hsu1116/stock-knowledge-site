@@ -5,8 +5,9 @@ aliases: [Rough Bergomi Model, rBergomi, Rough Volatility, 粗糙波動率模型
 
 # Rough Bergomi粗糙波動率模型 (Rough Volatility)
 
-## 一句話解釋
 
+> Rough Bergomi 模型用 Hurst 指數 $H<1/2$ 的分數型 Volterra 核驅動對數變異數，讓波動率路徑比傳統布朗擴散更鋸齒、更不平滑；它以初始遠期變異數曲線、roughness、vol-of-vol 與價格波動率相關性，重現短天期陡峭 skew 和整張波動率曲面，但沒有便宜的封閉解，計算通常靠蒙地卡羅。
+## 核心概念
 Rough Bergomi 模型用 Hurst 指數 $H<1/2$ 的分數型 Volterra 核驅動對數變異數，讓波動率路徑比傳統布朗擴散更鋸齒、更不平滑；它以初始遠期變異數曲線、roughness、vol-of-vol 與價格波動率相關性，重現短天期陡峭 skew 和整張波動率曲面，但沒有便宜的封閉解，計算通常靠蒙地卡羅。
 
 ## 「粗糙」到底是什麼
@@ -194,8 +195,7 @@ rBergomi 的 Delta、Vega 與更高階 Greeks 可透過：
 - 短端與長端方差曲線 twist
 - 價格下跌與波動率上升的聯合情境
 
-## 交易應用
-
+## 實戰應用
 ### 短天期skew相對價值
 
 模型能提供短天期 Put skew 的動態基準。若市場 skew 比模型更陡，可能是事件跳躍、供需擁擠或避險需求，不應自動解讀為無風險錯價。
@@ -208,8 +208,7 @@ rBergomi 的 Delta、Vega 與更高階 Greeks 可透過：
 
 對障礙、前向起始或波動率衍生品，可同時用 Heston、局部波動率與 rBergomi 定價。價格差不是誰一定錯，而是不同微笑動態與路徑假設的模型風險區間。
 
-## 模型限制
-
+## 注意事項
 - **計算昂貴**：通常依賴大量蒙地卡羅與細時間網格
 - **非Markov**：不能直接使用低維 PDE，歷史記憶增加實作複雜度
 - **參數識別**：$H$、$\eta$ 與 $\rho$ 對曲面效果並非完全分離
@@ -247,8 +246,11 @@ rBergomi 的 Delta、Vega 與更高階 Greeks 可透過：
 3. 初始遠期變異數曲線把當下波動率期限結構直接嵌入模型，是 rBergomi 的核心輸入
 4. 擬合能力不是免費午餐；非 Markov 記憶核把複雜度從參數表搬進了計算引擎
 
-## 參考來源
+## 相關主題
 
+- [[操作策略/操作策略總論]]
+
+## 來源
 - Bayer, C., Friz, P., & Gatheral, J. (2016). "Pricing under rough volatility." *Quantitative Finance*, 16(6), 887-904. https://doi.org/10.1080/14697688.2015.1099717
 - Bayer, C., Friz, P., & Gatheral, J. (2015). SSRN 2554754. https://doi.org/10.2139/ssrn.2554754
 - Bennedsen, M., Lunde, A., & Pakkanen, M. S. (2017). "Hybrid scheme for Brownian semistationary processes." *Finance and Stochastics*, 21, 931-965. https://arxiv.org/abs/1507.03004

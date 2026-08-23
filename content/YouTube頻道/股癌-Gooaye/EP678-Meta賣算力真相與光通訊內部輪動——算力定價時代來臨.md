@@ -1,3 +1,7 @@
+---
+title: "EP678 Meta賣算力真相與光通訊內部輪動 — 算力定價時代來臨"
+---
+
 # EP678 Meta賣算力真相與光通訊內部輪動 — 算力定價時代來臨
 
 > **頻道**：股癌 Gooaye | **日期**：2026-07-11 | **影片**：[dF-Fhpmh_8c](https://www.youtube.com/watch?v=dF-Fhpmh_8c)

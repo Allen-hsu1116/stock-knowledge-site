@@ -1,9 +1,12 @@
+---
+title: "Burke 比率（伯克比率）Burke Ratio"
+---
+
 # Burke 比率（伯克比率）Burke Ratio
 
 > 用回撤的平方根取代標準差，衡量每單位「痛苦深度」換來多少超額報酬。
 
-## 核心定義
-
+## 核心概念
 Burke Ratio 由 Kevin Burke 於 1990 年代提出，屬於[[風險管理/風險調整報酬指標夏普比率與索提諾比率|風險調整報酬指標]]家族的一員。與[[風險管理/Calmar-Ratio年化報酬MDD|Calmar Ratio]]類似，它用回撤（Drawdown）而非標準差作為風險衡量基準，但有一個關鍵差異：
 
 - **Calmar** 用「最大回撤」（MDD）——只看最慘的那一次
@@ -71,8 +74,7 @@ Burke Ratio = (0.15 - 0.02) / 0.1556 ≈ 0.836
 - **Burke > 2.0**：優秀，每單位回撤平方根換來 2 倍以上超額報酬
 - **Burke < 0**：策略報酬不如無風險利率，直接淘汰
 
-## 優缺點
-
+## 注意事項
 **優點：**
 - 所有回撤都納入計算，比 Calmar 更穩健
 - 平方加權讓大回撤的影響更突出，符合投資人心理感受
@@ -94,8 +96,11 @@ Burke Ratio 屬於回撤調整報酬指標家族的一員：
 
 選擇哪個指標取決於你最在意什麼：只怕一次大崩盤用 Calmar，怕頻繁回撤用 Burke，怕長期套牢用 Ulcer/Martin。
 
-## 參考來源
+## 相關主題
 
+- [[風險管理/風險管理總論]]
+
+## 來源
 - Burke, K. (1994). "A Sharper Sharpe Ratio." *Computerized Investing* (AAII)
 - Eling, M. & Schuhmacher, F. (2007). "Does the Choice of Performance Measure Influence the Evaluation of Hedge Funds?" *Journal of Banking & Finance*
 -相關概念可參考 [[風險管理/回撤分析進階Drawdown-Analysis-Advanced|回撤分析進階]] 與 [[風險管理/回測績效評估完整體系Backtest-Performance-Evaluation|回測績效評估完整體系]]

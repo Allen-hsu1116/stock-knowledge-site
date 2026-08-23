@@ -1,3 +1,7 @@
+---
+title: "HBM排擠引爆記憶體缺貨——華邦電CUBE搶攻邊緣AI的雙引擎"
+---
+
 # HBM排擠引爆記憶體缺貨——華邦電CUBE搶攻邊緣AI的雙引擎
 
 > 華邦電不做HBM反而因三大記憶體廠產能轉向HBM受惠，DDR4/LPDDR4嚴重供不應求，Q1 EPS 2.25元市場預估全年上看22-29元；邊緣AI推升NOR Flash和SLC NAND需求，CUBE佈局2027年商業化量產

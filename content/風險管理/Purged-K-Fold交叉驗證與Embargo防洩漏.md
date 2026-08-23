@@ -7,8 +7,9 @@ date: 2026-08-22
 
 # Purged K-Fold交叉驗證與Embargo防洩漏
 
-## 一句話解釋
 
+> Purged K-Fold先刪除資訊區間與測試折重疊的訓練樣本，Embargo再隔離測試區間後的一小段資料，避免金融標籤與長回看特徵跨越折邊界偷看答案。
+## 核心概念
 Purged K-Fold先刪除資訊區間與測試折重疊的訓練樣本，Embargo再隔離測試區間後的一小段資料，避免金融標籤與長回看特徵跨越折邊界偷看答案。
 
 ## 為什麼普通K-Fold會在金融資料翻車
@@ -177,8 +178,7 @@ Purged K-Fold重點是降低折間資訊洩漏，允許多種訓練與測試折�
 - 上線模擬：[[操作策略/Walk-Forward-Analysis滾動前進驗證|Walk-Forward Analysis]]重現逐期重訓
 - 最終驗證：保留完全未碰過的封存樣本
 
-## 常見錯法
-
+## 注意事項
 - **隨機shuffle**：破壞時間順序，未來資料混進訓練
 - **只刪相鄰一天**：持有期20日卻只隔離1日，純屬安慰劑
 - **只看訊號日期**：忽略標籤事件結束時間
@@ -200,24 +200,23 @@ Purged K-Fold重點是降低折間資訊洩漏，允許多種訓練與測試折�
 - 成本與滑價使用樣本外當時可得設定
 - 不同embargo長度結論大致一致
 
-## 實戰啟示
+## 實戰應用
 
+### 實戰啟示
 1. 金融樣本不是一個日期，而是一段資訊區間
 2. Purging防標籤跨折，Embargo防邊界殘餘依賴
 3. 正確切折不會創造alpha，只會把假的alpha清掉
 4. Purged K-Fold適合研究穩定性，Walk-Forward適合模擬真實部署
 5. 連切分方法都反覆調到績效最好，還是在過度擬合，只是換了件統計學西裝
 
-## 相關連結
-
+## 相關主題
 - [[風險管理/組合式淨化交叉驗證CPCV-Combinatorial-Purged-Cross-Validation]]
 - [[風險管理/回測框架與偏差防範Backtesting-Framework-and-Bias-Prevention]]
 - [[風險管理/回測過擬合Backtest-Overfitting]]
 - [[操作策略/Walk-Forward-Analysis滾動前進驗證]]
 - [[風險管理/模型風險Model Risk]]
 
-## 參考來源
-
+## 來源
 - [Cross Validation in Finance: Purging, Embargoing, Combination](https://blog.quantinsti.com/cross-validation-embargo-purging-combinatorial/)
 - [Cross Validation — mlfinlab documentation](https://random-docs.readthedocs.io/en/latest/implementations/cross_validation.html)
 

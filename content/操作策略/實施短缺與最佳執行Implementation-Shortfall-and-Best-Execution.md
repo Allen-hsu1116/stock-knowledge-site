@@ -171,8 +171,7 @@ Almgren和Chriss（2000）提出的模型是最佳執行的經典框架：
 - [[籌碼面分析/暗池交易與大戶足跡Dark-Pool-Trading-and-Institutional-Footprint]] — 機構如何在暗池降低IS
 - [[操作策略/財報公告交易策略Earnings-Announcement-Trading]] — 財報公告前後流動性變化對IS的影響
 
-## 參考資料
-
+## 來源
 - [Implementation shortfall - Wikipedia](https://en.wikipedia.org/wiki/Implementation_shortfall)
 - [Trade Strategy and Execution - CFA Institute](https://www.cfainstitute.org/)
 - Almgren, R.; Chriss, N. (2000). "Optimal Execution of Portfolio Transactions". Journal of Risk. 3: 5-39.

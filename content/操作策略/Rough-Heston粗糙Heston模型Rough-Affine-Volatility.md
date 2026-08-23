@@ -5,8 +5,9 @@ aliases: [Rough Heston Model, 粗糙Heston模型, Rough Affine Volatility, Volte
 
 # Rough Heston粗糙Heston模型 (Rough Affine Volatility)
 
-## 一句話解釋
 
+> Rough Heston 把經典 Heston 的平方根變異數改成帶冪次記憶核的 Volterra 過程，在保留非負變異數、槓桿效應與仿射轉換結構的同時，讓波動率路徑具有 $H<1/2$ 的粗糙度；代價是模型不再有限維 Markov，普通 Riccati 方程也升級成分數階 Riccati 方程。
+## 核心概念
 Rough Heston 把經典 Heston 的平方根變異數改成帶冪次記憶核的 Volterra 過程，在保留非負變異數、槓桿效應與仿射轉換結構的同時，讓波動率路徑具有 $H<1/2$ 的粗糙度；代價是模型不再有限維 Markov，普通 Riccati 方程也升級成分數階 Riccati 方程。
 
 ## 為什麼要從Heston再往前走
@@ -185,8 +186,7 @@ $$h(t)=\frac{1}{\Gamma(\alpha)}\int_0^t(t-s)^{\alpha-1}F(u,h(s))ds$$
 
 單日 RMSE 很小不代表模型很好。只代表優化器成功討好今天的報價，明天參數全部翻臉照樣算你倒楣。
 
-## 交易與風控應用
-
+## 實戰應用
 ### 短天期skew相對價值
 
 Rough Heston 提供一套由 roughness、vol-of-vol 與槓桿相關性共同產生短端 skew 的基準。若市場左翼遠高於模型，可能反映：
@@ -214,8 +214,7 @@ Rough Heston 提供一套由 roughness、vol-of-vol 與槓桿相關性共同產�
 - 現貨下跌與波動率上升的聯合情境
 - 核近似階數改變造成的數值風險
 
-## 模型限制
-
+## 注意事項
 - **非Markov**：不能直接使用低維 PDE，歷史卷積增加計算量
 - **分數階數值誤差**：步長、卷積權重與初始奇異性都會影響價格
 - **參數識別困難**：$H$、$\nu$、$\rho$ 可能共同改變短期 skew
@@ -247,8 +246,7 @@ Rough Heston 提供一套由 roughness、vol-of-vol 與槓桿相關性共同產�
 4. 相較 rBergomi，Rough Heston 更重視平方根變異數與特徵函數可計算性
 5. 真正風險不只在參數，而在卷積核、數值離散、曲面外插與缺少跳躍
 
-## 相關連結
-
+## 相關主題
 - [[操作策略/Heston隨機波動率模型Heston-Stochastic-Volatility-Model]]
 - [[操作策略/Rough-Bergomi粗糙波動率模型Rough-Volatility]]
 - [[操作策略/Hawkes自激點過程與交易應用Hawkes-Process-Trading]]
@@ -256,8 +254,7 @@ Rough Heston 提供一套由 roughness、vol-of-vol 與槓桿相關性共同產�
 - [[操作策略/方差交換與波動率衍生品Variance-Swap-and-Volatility-Derivatives]]
 - [[操作策略/選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced]]
 
-## 參考來源
-
+## 來源
 - El Euch, O., & Rosenbaum, M. (2019). "The characteristic function of rough Heston models." *Mathematical Finance*, 29(1), 3-38. https://arxiv.org/abs/1609.02108
 - Abi Jaber, E., Larsson, M., & Pulido, S. (2019). "Affine Volterra processes." *The Annals of Applied Probability*, 29(5), 3155-3200. https://doi.org/10.1214/19-AAP1477
 - Gatheral, J., Jaisson, T., & Rosenbaum, M. (2018). "Volatility is rough." *Quantitative Finance*, 18(6), 933-949. https://doi.org/10.1080/14697688.2017.1393551

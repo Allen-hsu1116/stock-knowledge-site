@@ -1,3 +1,7 @@
+---
+title: "Grok 4.6追平最前沿模型——xAI重返御三家與Anthropic 2兆IPO估值"
+---
+
 # Grok 4.6追平最前沿模型——xAI重返御三家與Anthropic 2兆IPO估值
 
 > Grok 4.6用1.5T參數追平3T的GPT-5.6 Sol成為最前沿模型，xAI重回AI御三家；Gemini 3.7 Flash讓Google回到次前沿；Anthropic預計10月以2兆美元估值IPO

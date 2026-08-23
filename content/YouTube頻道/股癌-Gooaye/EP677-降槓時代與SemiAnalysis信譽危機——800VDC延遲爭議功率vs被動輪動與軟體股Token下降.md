@@ -1,3 +1,7 @@
+---
+title: "EP677 降槓時代與SemiAnalysis信譽危機——800VDC延遲爭議、功率vs被動輪動與軟體股Token下降"
+---
+
 # EP677 降槓時代與SemiAnalysis信譽危機——800VDC延遲爭議、功率vs被動輪動與軟體股Token下降
 
 > 韓股槓桿ETF爆倉拖累全球科技股回檔，台股降槓為修正主因非基本面惡化；SemiAnalysis報告被速食化市場放大解讀，800VDC/CPO遞延在投資圈已是共識；功率元件市值小法人進不去，CCL/Wafer/封測仍強代表行情未結束；Token下降讓軟體股數字開始好轉。

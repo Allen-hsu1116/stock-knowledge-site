@@ -18,8 +18,9 @@ tags: [操作策略, 機器學習, 量化交易, 強化學習, AI交易]
 
 **最大優勢**：RL 能學會「延遲滿足」策略——短期虧損但長期獲利的決策。傳統 ML 做不到這件事，因為它在每個時間點都在追求預測準確。
 
-## RL 的五大組件（交易語境）
+## 實戰應用
 
+### RL 的五大組件（交易語境）
 ### 1. 狀態（State）
 
 狀態是決策所需的資訊集合。交易中的 state 可以包含：
@@ -132,6 +133,10 @@ RL 不是取代傳統技術分析或基本面分析，而是提供一個**自動
 - 用 RL 學習在這些 state 下的最優動作序列
 - 用傳統風控框架限制 RL 的風險承擔
 
+## 注意事項
+
+本文方法不保證未來績效；實際使用須檢查資料品質、樣本外穩定性、交易成本、流動性與適用市場。
+
 ## 來源
 
 - Wikipedia: [Reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning)
@@ -139,8 +144,7 @@ RL 不是取代傳統技術分析或基本面分析，而是提供一個**自動
 - Sutton, R. & Barto, A. (2018). *Reinforcement Learning: An Introduction* (2nd ed.). MIT Press.
 - Dr. Tom Starke, *Deep Reinforcement Learning in Trading*
 
-## 相關筆記
-
+## 相關主題
 - [[技術分析/XGBoost技術指標整合策略]] — 監督式 ML 在交易中的應用
 - [[風險管理/通縮夏普比率Deflated-Sharpe-Ratio]] — RL 回測必須搭配的偏差修正
 - [[風險管理/過度擬合Overfitting量化判斷]] — RL 模型過擬合風險極高

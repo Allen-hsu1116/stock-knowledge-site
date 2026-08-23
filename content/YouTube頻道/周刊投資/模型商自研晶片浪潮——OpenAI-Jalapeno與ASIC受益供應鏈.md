@@ -1,3 +1,7 @@
+---
+title: "模型商自研晶片浪潮——OpenAI 9個月造出Jalapeño與ASIC受益供應鏈"
+---
+
 # 模型商自研晶片浪潮——OpenAI 9個月造出Jalapeño與ASIC受益供應鏈
 
 > OpenAI與博通合作9個月做出ASIC晶片Jalapeño省50%推論成本，Anthropic跟進；模型商自研晶片五大原因：擺脫算力綁架、議價能力、軟硬體整合、HBM利用率、降低長期營運成本。聯發科搶走Google TPU大單，博通霸主地位受挑戰。

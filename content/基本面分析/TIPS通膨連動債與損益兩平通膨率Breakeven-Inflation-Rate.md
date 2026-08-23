@@ -7,8 +7,9 @@ category: "基本面分析"
 
 > 市場對通膨的真實預期——不是問經濟學家怎麼看，而是看債券交易員用真金白銀押注的通膨數字。
 
-## TIPS 定義
+## 核心概念
 
+### TIPS 定義
 **TIPS（Treasury Inflation-Protected Securities）**是美國財政部發行的**通膨連動債券**，1997年推出，目前提供5年、10年、30年三種到期期限。
 
 **核心機制：**
@@ -50,8 +51,7 @@ Nominal Yield = Real Yield + Expected Inflation + Inflation Risk Premium
 
 損益兩平通膨率 = 預期通膨 + 通膨風險溢價，因此它**略高於**市場的真實通膨預期，但在實務上被當作通膨預期的最佳近似值。
 
-## 實戰判讀
-
+## 實戰應用
 ### 1. 通膨預期升降
 
 - **損益兩平通膨率上升：** 市場預期通膨將加速→有利原物料、抗通膨資產，不利長債
@@ -76,8 +76,9 @@ Nominal Yield = Real Yield + Expected Inflation + Inflation Risk Premium
 - **損益兩平通膨率 > 實際通膨：** 一般公債贏（市場過度定價通膨）
 - 長期持有者：TIPS提供確定的實質報酬，適合退休金等需要保護購買力的資金
 
-## 限制與盲區
+## 注意事項
 
+### 限制與盲區
 1. **流動性差異：** TIPS市場流動性遠低於一般公債，流動性溢價會壓低TIPS價格、推高TIPS殖利率，導致損益兩平通膨率被**低估**
 2. **通膨指標差異：** TIPS追蹤CPI，但聯準會看的是PCE，兩者有0.3-0.5個百分點的系統性差距
 3. **通縮保護有限：** TIPS本金調整有下限（不低於原始面額），但長期通縮環境下TIPS仍可能表現不佳
@@ -91,8 +92,7 @@ Nominal Yield = Real Yield + Expected Inflation + Inflation Risk Premium
 - 損益兩平通膨率是前瞻性指標，比CPI/PCE等回溯性數據更早反映市場預期變化
 - TIPS流動性較差導致損益兩平通膨率可能被低估，且追蹤CPI而非聯準會關注的PCE
 
-## 相關頁面
-
+## 相關主題
 - [[基本面分析/CPI消費者物價指數Consumer-Price-Index|CPI消費者物價指數]]
 - [[基本面分析/PCE個人消費支出物價指數Personal-Consumption-Expenditures|PCE個人消費支出物價指數]]
 - [[基本面分析/PPI生產者物價指數Producer-Price-Index|PPI生產者物價指數]]
@@ -103,3 +103,7 @@ Nominal Yield = Real Yield + Expected Inflation + Inflation Risk Premium
 ---
 *學習日期：2026-07-31*
 *資料來源：Wikipedia United States Treasury Security、U.S. Treasury、Bloomberg、Martinelli et al.*
+
+## 來源
+
+- 待補：本頁目前沒有可核對的原始來源連結。

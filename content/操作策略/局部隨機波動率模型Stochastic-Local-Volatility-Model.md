@@ -5,8 +5,9 @@ aliases: [Stochastic Local Volatility Model, SLV Model, Local Stochastic Volatil
 
 # 局部隨機波動率模型 (Stochastic Local Volatility Model)
 
-## 一句話解釋
 
+> 局部隨機波動率模型把 Dupire 的局部波動率與 Heston 類隨機變異數相乘：用 leverage function 精確對齊今天的香草選擇權曲面，再用隨機波動率因子改善明天的微笑動態與奇異選擇權路徑；它想兩邊都拿，結果校準變成含條件期望的非線性逆問題，數值工程也跟著長牙齒。
+## 核心概念
 局部隨機波動率模型把 Dupire 的局部波動率與 Heston 類隨機變異數相乘：用 leverage function 精確對齊今天的香草選擇權曲面，再用隨機波動率因子改善明天的微笑動態與奇異選擇權路徑；它想兩邊都拿，結果校準變成含條件期望的非線性逆問題，數值工程也跟著長牙齒。
 
 ## 為什麼要把兩種模型混在一起
@@ -196,8 +197,7 @@ mixing fraction 可用流動性較高的障礙或其他奇異商品校準。它�
 9. 重新定價全部香草，確認誤差落在 bid-ask 或容忍範圍內
 10. 用障礙、前向 smile 與 Greeks 檢查動態，而不是香草 RMSE 過關就放煙火
 
-## 交易與風控應用
-
+## 實戰應用
 ### 障礙選擇權
 
 local vol 與 stochastic vol 即使匹配同一批香草，觸碰障礙的機率仍可差很多。SLV 常用於 FX barrier、autocallable 與其他路徑商品，因為它能同時尊重市場曲面與波動率隨機性。
@@ -217,8 +217,7 @@ Delta、Vega、Vanna 與 barrier sensitivity 會受到 leverage surface 與 stoc
 
 若只 bump 一個參數卻不重新校準，算到的可能是模型內部敏感度，不是交易桌維持市場曲面後真正會承受的風險。
 
-## 模型限制
-
+## 注意事項
 - **校準昂貴**：每次更新都可能需要二維 PDE 或大量粒子
 - **隱式固定點**：leverage function 與聯合分布互相依賴
 - **尾部不穩定**：條件密度很小時，條件期望分母容易失控
@@ -257,8 +256,11 @@ Delta、Vega、Vanna 與 barrier sensitivity 會受到 leverage surface 與 stoc
 3. 香草擬合完全相同的模型，仍可對障礙與前向商品報出不同價格
 4. SLV 最危險的地方不是公式，而是低密度尾部、資料雜訊與數值穩定化悄悄主導結果
 
-## 參考來源
+## 相關主題
 
+- [[操作策略/操作策略總論]]
+
+## 來源
 - Saporito, Y. F., Yang, X., & Zubelli, J. P. (2019). "The calibration of stochastic local-volatility models: An inverse problem perspective." *Computers & Mathematics with Applications*, 77(12), 3120-3137. https://doi.org/10.1016/j.camwa.2019.01.029
 - Saporito, Y. F., Yang, X., & Zubelli, J. P. (2017). arXiv:1711.03023. https://arxiv.org/abs/1711.03023
 - Gyöngy, I. (1986). "Mimicking the one-dimensional marginal distributions of processes having an Itô differential." *Probability Theory and Related Fields*, 71, 501-516.

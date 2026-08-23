@@ -1,3 +1,7 @@
+---
+title: "Google不會放棄前沿模型——SPCX估值上修與美股歷史新高的風險控管"
+---
+
 # Google不會放棄前沿模型——SPCX估值上修與美股歷史新高的風險控管
 
 > Miula逆風反駁SemiAnalysis的「Gemini is cooked」報導，認為Google不可能放棄前沿模型研發；同時將SpaceX估值從1.05兆上修到1.4兆美元，並提醒7月修正的風控教訓。

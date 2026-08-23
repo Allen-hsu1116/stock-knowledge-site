@@ -1,3 +1,7 @@
+---
+title: "EP684 Situational Awareness 清算事件與流動性陷阱"
+---
+
 # EP684 Situational Awareness 清算事件與流動性陷阱
 
 > Leopold Aschenbrenner 的 Situational Awareness 基金被清算、部位被 Citadel 接手，類似 2021 年 Archegos 事件；這波修正本質是全市場降槓桿——4-6 月漲最多的標的 7 月跌最多；處置股制度抽流動性反而讓中小型股超跌；黃崇仁高檔截值被罵最兇但一堆股票都跌 50-60%。

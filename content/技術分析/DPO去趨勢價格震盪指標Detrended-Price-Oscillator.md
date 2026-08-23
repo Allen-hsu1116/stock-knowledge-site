@@ -167,8 +167,7 @@ DPO 本身不判斷趨勢方向，必須搭配趨勢指標：
 - [[時間循環與週期分析Market-Cycle-and-Time-Analysis]] — DPO 是循環分析的工具之一
 - [[均線判斷]] — 搭配判斷趨勢方向
 
-## 參考來源
-
+## 來源
 - [Detrended price oscillator - Wikipedia](https://en.wikipedia.org/wiki/Detrended_price_oscillator)
 - DPO 由 William Blau 於 1991 年開發
 - 讀者可自行用 Python（pandas）實作：`df['DPO'] = df['Close'].shift(n//2+1) - df['Close'].rolling(n).mean()`

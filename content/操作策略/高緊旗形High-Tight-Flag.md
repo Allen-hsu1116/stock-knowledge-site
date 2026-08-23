@@ -128,8 +128,7 @@ High Tight Flag 是技術分析中最「硬核」的強勢型態——它要求�
 
 記住：**HTF 不是「便宜的買點」，而是「最強勢的買點」。** 它的邏輯不是買在低位等漲，而是買在強勢確認後搭順風車。如果你的交易風格偏向「低買高賣」的價值型，HTF 可能永遠不適合你。但如果你是動能交易者，HTF 是你必須掌握的終極型態。
 
-## 參考
-
+## 來源
 - William O'Neil, *How to Make Money in Stocks*, 4th Edition
 - CAN-SLIM 體系：[[操作策略/CAN-SLIM選股法|CAN-SLIM 選股法]]
 - 相關型態：[[操作策略/VCP波動收縮型態|VCP 波動收縮型態]]、[[操作策略/杯柄型態Cup-and-Handle|杯柄型態]]

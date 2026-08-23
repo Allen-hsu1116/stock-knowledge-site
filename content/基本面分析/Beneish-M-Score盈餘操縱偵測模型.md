@@ -1,3 +1,7 @@
+---
+title: "Beneish M-Score 盈餘操縱偵測模型"
+---
+
 # Beneish M-Score 盈餘操縱偵測模型
 
 > 8個財報比率，一個公式，算出公司有沒有在做假帳——康乃爾學生靠它在1998年就抓出安隆。
@@ -43,8 +47,9 @@ M-Score = -4.84 + 0.92×DSRI + 0.528×GMI + 0.404×AQI + 0.892×SGI
          + 0.115×DEPI - 0.172×SGAI + 4.679×TATA - 0.327×LVGI
 ```
 
-## 判讀標準
+## 實戰應用
 
+### 判讀標準
 - **M-Score > -1.78**：公司很可能在操縱盈餘 ⚠️
 - **M-Score < -1.78**：公司不太可能操縱盈餘 ✅
 
@@ -60,8 +65,7 @@ M-Score = -4.84 + 0.92×DSRI + 0.528×GMI + 0.404×AQI + 0.892×SGI
 
 2023年 Beneish 等人的研究發現，將多家公司的 M-Score 聚合計算，可以預測美國經濟衰退和GDP成長。2023年初的聚合M-Score達到約40年來最高水準，暗示盈餘操縱的普遍性上升可能是經濟即將惡化的先行指標。
 
-## 局限性
-
+## 注意事項
 1. **機率模型非確定**：M-Score是統計模型，無法100%準確偵測操縱
 2. **不適用金融機構**：銀行保險靠利息和手續費賺錢，沒有傳統的「應收帳款」和「銷貨成本」，M-Score的關鍵變數無意義
 3. **只能抓會計操縱**：合法但激進的會計政策（如改變折舊年限）可能被偵測為操縱，但未必違法
@@ -86,15 +90,13 @@ M-Score = -4.84 + 0.92×DSRI + 0.528×GMI + 0.404×AQI + 0.892×SGI
 
 台股常見的盈餘操縱手法包括：年底衝刺營收認列、存庫減損提列不足、關係人交易虛增營收、費用資本化等，這些都能在M-Score的8個變數中留下痕跡。
 
-## 相關頁面
-
+## 相關主題
 - [[基本面分析/Piotroski-F-Score財務品質評分模型]] — 財務品質評分
 - [[基本面分析/Altman-Z-Score破產預測模型]] — 破產預測
 - [[基本面分析/Ohlson-O-Score破產預測模型]] — 破產預測
 - [[基本面分析/信用評等與公司債違約風險判讀Credit-Rating-and-Default-Risk]] — 信用風險
 
-## 參考來源
-
+## 來源
 - Beneish, Messod D. (1999). "The Detection of Earnings Manipulation"
 - Beneish, Lee & Nichols (2013). "Year-end Shifting and the Performance of the Beneish Model"
 - Beneish & Vorst (2020). "The Cost of Being Good: The Returns to ESG Investing"

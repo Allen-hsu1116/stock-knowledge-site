@@ -7,8 +7,9 @@ date: 2026-08-23
 
 # Romano-Wolf重抽樣逐步多重檢定
 
-## 一句話解釋
 
+> Romano-Wolf Stepdown在同時檢定多個策略時，用重抽樣估計「剩餘假設最大統計量」的聯合虛無分布，再從最強訊號逐步往下檢定，控制至少誤報一次的機率，又比無視策略相關性的Bonferroni和Holm通常更有檢定力。
+## 核心概念
 Romano-Wolf Stepdown在同時檢定多個策略時，用重抽樣估計「剩餘假設最大統計量」的聯合虛無分布，再從最強訊號逐步往下檢定，控制至少誤報一次的機率，又比無視策略相關性的Bonferroni和Holm通常更有檢定力。
 
 ## 問題從哪裡來
@@ -161,8 +162,7 @@ $$\widehat p_{r_s}^{adj}=\max_{u\le s}\widehat p_{r_u}^{raw}$$
 
 不能每個策略各抽各的，也不能逐日獨立洗牌。那會抹掉策略相關性與時間相依，讓最大統計量臨界值失真。
 
-## 實作SOP
-
+## 實戰應用
 ### 研究前凍結
 
 - 所有候選策略與參數
@@ -224,8 +224,7 @@ Romano-Wolf則對多個個別假設做逐步調整，在FWER控制下識別可�
 
 但若兩階段都是看完結果才臨時加的篩選，整體研究流程仍可能產生額外選擇偏差。
 
-## 限制
-
+## 注意事項
 - **很嚴格**：FWER只要出現一次誤報就算失敗，候選很多時檢定力仍可能不足
 - **依賴估計品質**：區塊長度與重抽方法錯誤會污染聯合虛無分布
 - **有限樣本不保證神奇**：理論漸近有效不代表200筆資料就突然很可靠
@@ -266,8 +265,7 @@ FWER適合：
 4. 金融資料必須同步區塊重抽，獨立亂抽只是把麻煩藏起來
 5. 調整後顯著只代表統計第一關通過，離能下單還隔著成本、容量、體制與實盤四座山
 
-## 相關連結
-
+## 相關主題
 - [[風險管理/White-Reality-Check與Hansen-SPA多重策略檢定]]
 - [[風險管理/通縮夏普比率Deflated-Sharpe-Ratio]]
 - [[風險管理/Purged-K-Fold交叉驗證與Embargo防洩漏]]
@@ -275,8 +273,7 @@ FWER適合：
 - [[風險管理/回測框架與偏差防範Backtesting-Framework-and-Bias-Prevention]]
 - [[操作策略/Walk-Forward-Analysis滾動前進驗證]]
 
-## 參考來源
-
+## 來源
 - Romano, J. P., & Wolf, M. (2005). [Exact and Approximate Stepdown Methods for Multiple Hypothesis Testing](https://doi.org/10.1198/016214504000000539). *Journal of the American Statistical Association*, 100(469), 94–108. [公開工作論文PDF](https://econ-papers.upf.edu/papers/727.pdf)
 - Stanford University. [Exact and Approximate Stepdown Methods for Multiple Hypothesis Testing](https://statistics.stanford.edu/technical-reports/exact-and-approximate-stepdown-methods-multiple-hypothesis-testing).
 

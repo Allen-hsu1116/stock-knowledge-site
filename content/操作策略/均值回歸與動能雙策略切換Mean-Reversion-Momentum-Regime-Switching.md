@@ -144,8 +144,7 @@ category: "操作策略"
 - 注意避免過度擬合：切換規則不能太複雜
 - 詳見 [[技術分析/技術分析回測方法與過度擬合Backtesting-and-Overfitting|回測方法與過度擬合]]
 
-## 參考資料
-
+## 來源
 - Moskowitz, T., Ooi, Y. & Pedersen, L. (2012). "Time Series Momentum." Journal of Financial Economics.
 - Hurst, H.E. (1951). "Long-term storage capacity of reservoirs."（Hurst Exponent 原始論文）
 - Connors, L. & Alvarez, C. "An Introduction to Regime Switching Strategies."

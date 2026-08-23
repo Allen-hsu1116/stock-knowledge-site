@@ -81,8 +81,7 @@ PPI（Producer Price Index，生產者物價指數）衡量國內生產者出廠
 - [[基本面分析/殖利率曲線分析Yield-Curve-Analysis|殖利率曲線分析]] — PPI 影響通膨預期進而影響殖利率
 - [[毛利率分析實戰判讀|毛利率分析實戰判讀]] — PPI-CPI 剪刀差直接影響毛利率
 
-## 參考來源
-
+## 來源
 - Wikipedia: Producer price index
 - BLS (Bureau of Labor Statistics) 官方定義
 - 知識庫 YouTube 影片筆記中 2026 年多次 PPI 相關分析

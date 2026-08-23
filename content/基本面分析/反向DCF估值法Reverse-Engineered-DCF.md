@@ -162,8 +162,7 @@ Price = ∑ [FCF₀ × (1+g)^t / (1+WACC)^t] + TV / (1+WACC)^n
 - [[基本面分析/經濟護城河Economic-Moat]] — 護城河決定隱含增長率能否持續
 - [[基本面分析/同業比較分析選股實戰Peer-Comparison]] — 比較同業隱含增長率是高級選股技巧
 
-## 參考資料
-
+## 來源
 - Mauboussin, M. J. & Johnson, P. (2014). "What Type of Investor Are You?". Credit Suisse Global Financial Strategies.
 - Mauboussin, M. J. (2015). "Capital Allocation: Measuring, Monitoring and Managing Value Creation".
 - Damodaran, A. (2012). "Investment Valuation: Tools and Techniques for Determining the Value of Any Asset". Wiley.

@@ -107,8 +107,7 @@ Bailey & López de Prado 同時提出 PBO，用交叉驗證來估計回測過擬
 - López de Prado, M. (2018). *Advances in Financial Machine Learning*. Wiley. Chapter 8: "Backtesting Strategies"
 - Harvey, C. & Liu, Y. (2014). "Backtesting" *Journal of Portfolio Management*
 
-## 相關筆記
-
+## 相關主題
 - [[風險管理/回測過擬合Backtest-Overfitting]] — DSR 修正的偏差來源
 - [[風險管理/過度擬合Overfitting量化判斷]] — 過擬合的量化判斷方法
 - [[風險管理/風險調整報酬指標夏普比率與索提諾比率]] — Sharpe 基礎

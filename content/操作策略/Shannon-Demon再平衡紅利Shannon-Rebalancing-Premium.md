@@ -5,8 +5,7 @@ aliases: [Shannon's Demon, Rebalancing Premium, 再平衡紅利, Shannon Demon]
 
 # Shannon's Demon 再平衡紅利 (Shannon's Demon Rebalancing Premium)
 
-## 一句話解釋
-
+## 核心概念
 Claude Shannon（資訊論之父）提出的一個思想實驗：把資產一半放現金一半放股票，每天再平衡回 50/50，在波動市場中可以從純粹的價格波動中提取額外報酬——這就是「再平衡紛利」（rebalancing premium），又叫 Shannon's Demon。
 
 ## 背景故事
@@ -101,8 +100,7 @@ William Sharpe（CAPM 作者）在 2010 年提出：
 - 等於把再平衡紛利「負向化」——在波動市場中持續被收割
 - 這就是為什麼長期持有 2x/3x ETF 的績效遠不如 2 倍/3 倍標的報酬
 
-## 交易應用
-
+## 實戰應用
 ### 1. 多資產組合
 
 最直接的應用——在低相關資產間維持固定權重：
@@ -124,8 +122,7 @@ William Sharpe（CAPM 作者）在 2010 年提出：
 - 每季再平衡，歷史回測再平衡紛利約 0.5-1% 年化
 - 在除權息季節，自然會因為成分股除息而偏離目標權重，也是再平衡的好時機
 
-## 限制與陷阱
-
+## 注意事項
 - **交易成本**：再平衡越頻繁、交易成本越高，可能吃掉紛利
 - **稅負**：在課稅帳戶中再平衡會觸發資本利得稅
 - **趨勢市場失效**：在強趨勢市場中，再平衡不斷減碼贏家，績效會輸給買入持有
@@ -139,8 +136,11 @@ William Sharpe（CAPM 作者）在 2010 年提出：
 3. Shannon's Demon 和凱利公式在精神上同源：都是在不確定中通過最適比例控制來提取報酬
 4. 過度再平衡的代價是交易成本和稅——找到再平衡頻率的甜蜜點是實務關鍵
 
-## 參考來源
+## 相關主題
 
+- [[操作策略/操作策略總論]]
+
+## 來源
 - Poundstone, W. (2005). *Fortune's Formula: The Untold Story of the Scientific Betting System That Beat the Casinos and Wall Street*. Hill and Wang.
 - Shannon, C. E. (未正式發表的思想實驗，經 Poundstone 記錄)
 - Mulvey, J., et al. (2014). "Rebalancing Diversified Portfolios." *Princeton University Working Paper*.

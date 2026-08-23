@@ -1,3 +1,7 @@
+---
+title: "VPIN訂單流毒性指標 Volume-Synchronized PIN"
+---
+
 # VPIN訂單流毒性指標 Volume-Synchronized PIN
 
 > 2010年閃電崩盤前一小時，VPIN 就已經發出了警報。Easley, López de Prado & O'Hara 用成交量時間取代時鐘時間，量化「知情交易者」何時大舉進場——這是市場微結構中最具實戰價值的毒性預警指標。
@@ -94,8 +98,7 @@ VPIN 最著名的實戰案例：
 - **與[[風險管理/市場微結構與流動性定價Market-Microstructure-and-Liquidity-Pricing|市場微結構與流動性定價]]**：VPIN 量化逆向選擇風險，是流動性定價的核心輸入
 - **與[[操作策略/Avellaneda-Stoikov做市模型Market-Making-Model|Avellaneda-Stoikov 做市模型]]**：做市商可根據 VPIN 動態調整報價寬度——毒性高時加寬價差
 
-## 批評與限制
-
+## 注意事項
 ### Andersen & Bondarenko（2014）的質疑
 
 - **「機械幻覺」批評**：Andersen & Bondarenko 認為 VPIN 的預警能力部分來自計算方法的機械性，而非真正的資訊含量
@@ -109,8 +112,9 @@ VPIN 最著名的實戰案例：
 - **台股適用性**：台股無逐筆成交公開數據（僅有最佳五檔），精確 VPIN 計算困難
 - **高頻時代的有效性**：隨著 HFT 佔比提升，VPIN 的訊號可能被噪音淹沒
 
-## 散戶實戰用法
+## 實戰應用
 
+### 散戶實戰用法
 散戶無法精確計算 VPIN，但可以觀察其代理訊號：
 
 1. **盤中異常大單方向一致性**：連續大單同方向→毒性升高→趨勢可能加速
@@ -124,8 +128,11 @@ VPIN 最著名的實戰案例：
 - **"Order Flow Toxicity Explained: A Complete Guide to VPIN"**（WaveLabs 頻道）- 7分40秒，詳細解釋 VPIN 如何在 2010 閃崩前一小時發出預警，涵蓋 Volume Time vs Clock Time、0.9 警戒線、做市商實務應用與批評者觀點
 - **"The VPIN Flow Toxicity metric and liquidity crashes"**（QuantCongressUSA2011）- Easley 團隊親自解說 VPIN 與流動性危機的關聯
 
-## 參考文獻
+## 相關主題
 
+- [[籌碼面分析/籌碼面分析總論]]
+
+## 來源
 - Easley, D., López de Prado, M. M. & O'Hara, M. (2012). "Flow Toxicity and Liquidity in a High-Frequency World." *Review of Financial Studies*, 25(5), 1457-1493.
 - Easley, D. & O'Hara, M. (1992). "Time and the Process of Trade Evolution." *Journal of Finance*, 47(2), 577-605.
 - Andersen & Bondarenko (2014). "VPIN and the Flash Crash." *Journal of Financial Economics*.

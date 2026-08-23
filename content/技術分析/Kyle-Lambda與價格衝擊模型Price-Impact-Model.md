@@ -138,8 +138,7 @@ Kyle 的線性模型是基礎，實證顯示真實市場更接近**凹函數**�
 3. **部位控制**：散戶雖然不會造成市場衝擊，但要理解大戶在 Lambda 高的環境中必須拆單，這解釋了為什麼盤中會出現規律性的小單買賣
 4. **除權息旺季**：Lambda 會因流動性下降而上升，大戶的執行成本增加，這也是為什麼除權息季節大單動作會更謹慎
 
-## 參考資料
-
+## 來源
 - Kyle, A.S. (1985). "Continuous Auctions and Insider Trading." Econometrica.
 - Almgren, R. & Chriss, N. (2000). "Optimal Execution of Portfolio Transactions." Journal of Risk.
 - Bouchaud, J.P. et al. (2004). "Fluctuations and Response in Financial Markets: The Minor Game." (Square Root Law)

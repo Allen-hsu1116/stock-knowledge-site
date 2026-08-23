@@ -207,8 +207,7 @@ smoothed = [kf.step(p) for p in prices]
 - [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]] — 粒子濾波器是其延伸
 - [[技術分析/McGinley-Dynamic麥金利動態指標]] — 另一種自適應均線，概念相通但更簡單
 
-## 參考資料
-
+## 來源
 - Kalman, R. E. (1960). "A New Approach to Linear Filtering and Prediction Problems." Journal of Basic Engineering, 82(1), 35-45.
 - Harvey, A. C. (1989). "Forecasting, Structural Time Series Models and the Kalman Filter." Cambridge University Press.
 - Tsay, R. S. (2010). "Analysis of Financial Time Series." Wiley.（第11-12章涵蓋卡爾曼濾波在金融中的應用）

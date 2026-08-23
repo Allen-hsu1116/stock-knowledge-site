@@ -1,3 +1,7 @@
+---
+title: "動態回撤控制 Dynamic Drawdown Control"
+---
+
 # 動態回撤控制 Dynamic Drawdown Control
 
 > 不只是看「回撤有多大」，而是在回撤發生時「動態縮減部位」，讓資金曲線的坑洞越挖越淺。
@@ -75,8 +79,9 @@ f(DD) = exp(-k × DD)
 
 **高點確認恢復**：必須創歷史新高才回到滿部位。最保守，但可能錯過反彈初期行情。
 
-## 實戰參數設定
+## 實戰應用
 
+### 實戰參數設定
 ### 依策略類型調整 DD_max
 
 - **趨勢追蹤策略**：DD_max = 15-25%（趨勢策略本來回撤就大，設太緊會頻繁暫停）
@@ -99,8 +104,7 @@ DDC 很少單獨使用，通常與以下工具疊加：
 - **DDC + [[風險管理/波動率目標策略Volatility-Targeting|波動率目標]]**：波動率目標控制預期風險，DDC 控制已實現回撤，雙重調節
 - **DDC + [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]]**：用模擬測試 DDC 參數在各種路徑下的效果
 
-## 優缺點
-
+## 注意事項
 **優點：**
 - 直覺性強——「輸越多下越小」符合常識
 - 數學上可證明能降低[[風險管理/MDD最大回撤計算與恢復難度|最大回撤]]和[[風險管理/破產風險Risk-of-Ruin|破產風險]]
@@ -156,8 +160,11 @@ class DynamicDrawdownControl:
         return self.current_scale
 ```
 
-## 參考來源
+## 相關主題
 
+- [[風險管理/風險管理總論]]
+
+## 來源
 - Schwartz, B. (2010). "The Emotion Machine: Managing Drawdowns in Trading"
 - 系統化交易回撤控制框架可參考 [[風險管理/回撤分析進階Drawdown-Analysis-Advanced|回撤分析進階]] 與 [[風險管理/動態部位管理Dynamic-Position-Sizing|動態部位管理]]
 - 回撤恢復數學基礎見 [[風險管理/回撤恢復數學與帳戶生存Drawdown-Recovery-Math|回撤恢復數學]]

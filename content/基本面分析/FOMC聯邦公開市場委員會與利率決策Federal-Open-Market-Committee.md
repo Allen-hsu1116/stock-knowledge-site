@@ -98,8 +98,7 @@ FOMC（Federal Open Market Committee，聯邦公開市場委員會）是美國�
 - [[基本面分析/殖利率曲線分析Yield-Curve-Analysis|殖利率曲線分析]] — FOMC 利率政策形塑殖利率曲線
 - [[總體經濟指標與台股實戰判讀|總體經濟指標與台股實戰判讀]] — FOMC 是總經分析的核心
 
-## 參考來源
-
+## 來源
 - Wikipedia: Federal Open Market Committee
 - Federal Reserve 官方網站
 - 知識庫 YouTube 影片筆記中 2026 年多次 FOMC 相關分析

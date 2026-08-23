@@ -7,8 +7,7 @@ category: "基本面分析"
 
 > 聯準會最看重的通膨指標。CPI 是新聞標題，PCE 才是利率決策的真正依據。
 
-## 定義
-
+## 核心概念
 PCE 物價指數（PCEPI）由美國經濟分析局（BEA）每月發布，衡量美國國內所有個人消費支出的平均物價變動。它源自 GDP 中最大的組成項目——個人消費支出，涵蓋耐久財、非耐久財與服務三大類。
 
 核心 PCE（Core PCE）進一步剔除波動較大的食品與能源價格，是聯準會 2% 通膨目標的官方衡量基準。
@@ -30,8 +29,9 @@ PCE 物價指數（PCEPI）由美國經濟分析局（BEA）每月發布，衡�
 - **發布時間**：CPI 通常在月中發布（快），PCE 在月末發布（慢但更全面）
 - **修正頻率**：CPI 基本不修正，PCE 每季修正三次
 
-## 為什麼 PCE 對股市重要
+## 實戰應用
 
+### 為什麼 PCE 對股市重要
 ### 直接影響利率決策
 聯準會的 2% 通膨目標就是指 Core PCE。當 Core PCE 年增率：
 - **高於 2% 且上升** → 升息預期升溫，美元走強，股市承壓
@@ -68,8 +68,7 @@ PCE 物價指數（PCEPI）由美國經濟分析局（BEA）每月發布，衡�
 4. **搭配[[基本面分析/殖利率曲線分析Yield-Curve-Analysis|殖利率曲線]]一起看**：PCE 影響短端利率預期，殖利率曲線反映市場對長期的看法
 5. **不要只看 CPI 就下結論**：CPI 4% 不代表聯準會一定升息，要看 Core PCE
 
-## 相關筆記
-
+## 相關主題
 - [[基本面分析/CPI消費者物價指數Consumer-Price-Index|CPI 消費者物價指數]] — PCE 的姊妹指標，新聞更常引用但政策影響力較低
 - [[基本面分析/PPI生產者物價指數Producer-Price-Index|PPI 生產者物價指數]] — PCE 的上游領先指標
 - [[基本面分析/FOMC聯邦公開市場委員會與利率決策Federal-Open-Market-Committee|FOMC 聯邦公開市場委員會]] — 以 Core PCE 為通膨目標的決策機構
@@ -84,8 +83,7 @@ PCE 物價指數（PCEPI）由美國經濟分析局（BEA）每月發布，衡�
 - 歷史數據不代表未來表現，回測結果可能存在過度擬合風險
 - 散戶在使用時應注意自身風險承受能力，避免過度槓桿
 
-## 參考來源
-
+## 來源
 - Wikipedia: Personal consumption expenditures price index
 - BEA 官方數據：https://www.bea.gov/data/personal-consumption-expenditures
 - 知識庫 YouTube 影片筆記中 2026 年多次相關實戰分析

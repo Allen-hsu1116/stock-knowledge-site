@@ -5,8 +5,9 @@ aliases: [SVI, Stochastic Volatility Inspired, SVI Volatility Surface, 隨機波
 
 # SVI隱含波動率曲面參數化 (Stochastic Volatility Inspired)
 
-## 一句話解釋
 
+> SVI 用五個參數描述單一到期日的總隱含變異數微笑，能快速、平滑地擬合履約價方向並提供合理翼端；把各期限切片連起來後可形成完整波動率曲面，但如果不約束蝶式與日曆套利，擬合再漂亮也可能是一張可以直接撿錢的破網。
+## 核心概念
 SVI 用五個參數描述單一到期日的總隱含變異數微笑，能快速、平滑地擬合履約價方向並提供合理翼端；把各期限切片連起來後可形成完整波動率曲面，但如果不約束蝶式與日曆套利，擬合再漂亮也可能是一張可以直接撿錢的破網。
 
 ## SVI到底是什麼
@@ -152,8 +153,7 @@ $$\min_{a,b,\rho,m,\sigma}\sum_i\omega_i\left[w_{SVI}(k_i)-w_{mkt}(k_i)\right]^2
 - 檢查數值 Delta、Vega、Vanna、Volga 是否平滑
 - 用壓力情境測試 ATM、skew、curvature 與翼端變化
 
-## 實務應用
-
+## 實戰應用
 ### 1. 波動率曲面報價
 
 SVI 將離散履約價轉成連續曲線，可快速取得未掛牌履約價的合理 IV，也能讓交易系統用一致方式插值。
@@ -184,8 +184,7 @@ Gatheral 與 Jacquier 的研究指出，Heston 隱含波動率微笑在大到期
 - 需要快速、穩定地整理市場曲面：SVI 很實用
 - 需要兩者：可先用 SVI 建市場基準，再用動態模型校準或做模型風險比較
 
-## 常見錯誤
-
+## 注意事項
 - 直接對 IV 而非總變異數亂插值
 - 用現貨價而非同期限遠期價計算價內程度
 - 每個期限獨立校準，完全不檢查日曆套利
@@ -214,8 +213,11 @@ Gatheral 與 Jacquier 的研究指出，Heston 隱含波動率微笑在大到期
 3. SVI 是市場曲面表示法，不應被誤當成完整的波動率動態模型
 4. 對交易者而言，曲面殘差只有超過交易成本與模型不確定性，才可能變成可執行的相對價值訊號
 
-## 參考來源
+## 相關主題
 
+- [[操作策略/操作策略總論]]
+
+## 來源
 - Gatheral, J., & Jacquier, A. (2014). "Arbitrage-free SVI volatility surfaces." *Quantitative Finance*, 14(1), 59-71. https://arxiv.org/abs/1204.0646
 - Gatheral, J. (2004). "A Parsimonious Arbitrage-Free Implied Volatility Parameterization with Application to the Valuation of Volatility Derivatives." Global Derivatives presentation.
 - Gatheral, J. (2006). *The Volatility Surface: A Practitioner's Guide*. Wiley.

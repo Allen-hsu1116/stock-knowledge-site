@@ -165,8 +165,7 @@ ETF（Exchange-Traded Fund）在交易所像股票一樣買賣，有一個「市
 - [[籌碼面分析/恐懼貪婪指標與市場情緒量化Fear-and-Greed-Index|恐懼貪婪指標]] — ETF 資金流向是市場情緒的代理指標
 - [[操作策略/執行演算法VWAP-TWAP-Execution-Algorithm|執行演算法]] — ETF 套利需要高效的執行演算法
 
-## 參考來源
-
+## 來源
 - [Wikipedia - Exchange-traded fund (Arbitrage mechanism)](https://en.wikipedia.org/wiki/Exchange-traded_fund#Arbitrage_mechanism)
 - Investopedia - ETF Creation and Redemption
 

@@ -7,8 +7,9 @@ date: 2026-08-21
 
 # 熵值風險值EVaR (Entropic Value-at-Risk)
 
-## 一句話解釋
 
+> 熵值風險值 EVaR 用損失分布的指數動差與 Chernoff bound 衡量尾部風險；它是一致性風險測度、同信心水準下通常比 VaR 與 CVaR 更保守，並可解讀為在 Kullback-Leibler 相對熵限制內尋找最壞期望損失。
+## 核心概念
 熵值風險值 EVaR 用損失分布的指數動差與 Chernoff bound 衡量尾部風險；它是一致性風險測度、同信心水準下通常比 VaR 與 CVaR 更保守，並可解讀為在 Kullback-Leibler 相對熵限制內尋找最壞期望損失。
 
 ## 為什麼還需要EVaR
@@ -164,8 +165,9 @@ $$\min_w\ \widehat{\operatorname{EVaR}}_c(L(w))$$
 
 若 $L_i(w)$ 對 $w$ 為凸函數，EVaR 目標通常保留凸性。與 CVaR 的情境式線性規劃相比，EVaR 可用一個額外的 $z$ 配合平滑凸目標，不必為每個樣本增加一個尾部鬆弛變數。
 
-## 實戰用途
+## 實戰應用
 
+### 實戰用途
 ### 保守尾部風險預算
 
 把組合 EVaR 限制在帳戶淨值的一定比例，適合：
@@ -188,8 +190,7 @@ $$\min_w\ \widehat{\operatorname{EVaR}}_c(L(w))$$
 
 在歷史模擬、GARCH、跳躍模型和壓力情境下分別計算 EVaR。不同模型的差距可作為[[風險管理/模型風險Model Risk|模型風險]]區間，而不是假裝單一數字有神諭能力。
 
-## 限制與陷阱
-
+## 注意事項
 - **MGF可能不存在**：Student-t、Pareto 等重尾分布的正向 MGF 可能對所有 $z>0$ 都發散，EVaR 會變成無限大
 - **極端樣本敏感**：指數加權會讓少數大損失支配結果
 - **有限樣本偏差**：高信心水準需要大量尾部資料，否則數字只是精密包裝的樣本偶然
@@ -220,8 +221,7 @@ $$\min_w\ \widehat{\operatorname{EVaR}}_c(L(w))$$
 4. MGF 不存在時 EVaR 可能無限大，這是數學邊界，不是程式 bug
 5. EVaR 應與 CVaR、壓力測試及流動性情境並用，別把一個漂亮公式當防彈背心
 
-## 相關連結
-
+## 相關主題
 - [[風險管理/VaR風險值Value-at-Risk]]
 - [[風險管理/條件風險價值CVaR與期望短缺Expected-Shortfall]]
 - [[風險管理/一致性風險測度Coherent-Risk-Measures]]
@@ -229,8 +229,7 @@ $$\min_w\ \widehat{\operatorname{EVaR}}_c(L(w))$$
 - [[風險管理/模型風險Model Risk]]
 - [[風險管理/策略壓力測試Stress-Testing]]
 
-## 參考來源
-
+## 來源
 - Ahmadi-Javid, A. (2012). "Entropic Value-at-Risk: A New Coherent Risk Measure." *Journal of Optimization Theory and Applications*, 155, 1105–1123. https://doi.org/10.1007/s10957-011-9968-2
 - Ahmadi-Javid, A., & Fallah-Tafti, M. (2019). "Portfolio Optimization with Entropic Value-at-Risk." *European Journal of Operational Research*, 279(1), 225–241. https://arxiv.org/abs/1708.05713
 

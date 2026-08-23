@@ -1,3 +1,7 @@
+---
+title: "EP681 烘焰露筆登場與CPU瓶頸——老AI轉牆區間盤與AMD Venus催化"
+---
+
 # EP681 烘焰露筆登場與CPU瓶頸——老AI轉牆區間盤與AMD Venus催化
 
 > 股癌回顧市場回檔：大盤跌不多但中小型跌到爛掉，櫃買指數形態不好看；聰明錢往老AI（ODM 10倍本益比）與業績股靠攏，從中小移往大型股；CPU成為AI供應鏈最大瓶頸，AMD Venus（SP7 CPU）將在Advancing AI 2026發表，Agentic AI推動CPU:GPU比從1:8走向1:1；Google Frozen V2（TPU推論加速器）與Kimi K3算力不足打臉「效率提升=算力需求下降」論述；烘焰露筆7/23上市，瀟然資本參與投資的遊戲持續推進。

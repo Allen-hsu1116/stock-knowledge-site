@@ -256,8 +256,7 @@ Robert Shiller在《非理性繁榮》中指出，股價波動遠超過估值變
 - [[基本面分析/CAPM資本資產定價模型Capital-Asset-Pricing-Model]] — CAPM理性假設的挑戰
 - [[操作策略/效率前緣與馬可維茲現代投資組合理論Efficient-Frontier-and-Markowitz-MPT]] — MPT理性假設的挑戰
 
-## 參考資料
-
+## 來源
 - [Behavioural finance - Wikipedia](https://en.wikipedia.org/wiki/Behavioural_finance)
 - [Behavioral economics - Wikipedia](https://en.wikipedia.org/wiki/Behavioral_economics)
 - Kahneman, Daniel; Tversky, Amos (1979). "Prospect Theory: An Analysis of Decision under Risk". Econometrica. 47 (2): 263–291.

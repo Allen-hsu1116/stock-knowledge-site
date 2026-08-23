@@ -71,8 +71,9 @@ $$\rho(x' r) = \frac{ETL_{(\gamma, \alpha)}(r_f - x' r)}{ETL_{(\delta, \beta)}(x
 
 **關鍵區別**：夏普比率問「平均報酬 vs 平均波動」，Rachev 比率問「最好的時候能賺多少 vs 最差的時候會賠多少」。
 
-## 與其他風險調整報酬指標的比較
+## 注意事項
 
+### 與其他風險調整報酬指標的比較
 **指標分類**：
 - **報酬對變異性**（Reward-to-Variability）：夏普、索提諾、[[風險管理/Omega比率Omega-Ratio|Omega]] — 用某種離散度當分母
 - **報酬對風險**（Reward-to-Risk）：Rachev、[[風險管理/Calmar比率與最大回撤分析Calmar-Ratio-and-Maximum-Drawdown|Calmar]] — 用某種損失量當分母
@@ -159,14 +160,14 @@ VaR 不滿足次可加性，所以不是一致性風險測度。Rachev 用 CVaR 
 ### 4. 非流動性資產
 非流動性資產的報酬分佈有嚴重肥尾，夏普比率的常態假設完全失效。Rachev 比率直接從歷史尾部計算，更可靠。
 
-## 在台股的應用考量
+## 實戰應用
 
+### 在台股的應用考量
 - **漲跌幅限制**：台股 10% 漲跌幅限制截斷了極端尾部，使得 ETL 和 ETR 的計算受到人為限制。與無漲跌幅限制的市場相比，Rachev 比率在台股的區分度可能較低
 - **除權息季節**：除權息造成的跳空缺口會產生人造的「極端報酬」，在計算 ETR/ETL 時需要調整
 - **樣本量**：台股個股歷史數據可能不足以可靠估計 1% 尾部，建議用 5% 分位數
 
-## 相關頁面
-
+## 相關主題
 - [[風險管理/條件風險價值CVaR與期望短缺Expected-Shortfall]] — Rachev 比率的分母就是 CVaR
 - [[風險管理/一致性風險測度Coherent-Risk-Measures]] — CVaR 的數學性質
 - [[風險管理/風險調整報酬指標夏普比率與索提諾比率|夏普比率]] — Rachev 的「前輩」，用標準差當分母
@@ -176,8 +177,7 @@ VaR 不滿足次可加性，所以不是一致性風險測度。Rachev 用 CVaR 
 - [[風險管理/光譜風險測度Spectral-Risk-Measure]] — CVaR 的廣義框架
 - [[風險管理/蒙地卡羅模擬交易驗證Monte-Carlo-Simulation]] — 用模擬產生尾部數據計算 Rachev
 
-## 參考文獻
-
+## 來源
 - Biglova, A., Ortobelli, S., Rachev, S.T. & Stoyanov, S. (2004). "Different Approaches to Risk Estimation in Portfolio Theory". The Journal of Portfolio Management, 31(1), 103-112.
 - Rachev, S.T., Stoyanov, S.V. & Fabozzi, F.J. (2008). "Advanced Stochastic Models, Risk Assessment, and Portfolio Optimization". Wiley.
 - Cheridito, P. & Kromer, E. (2013). "Reward-Risk Ratios". Journal of Investment Strategies, 3(1), 3-18.

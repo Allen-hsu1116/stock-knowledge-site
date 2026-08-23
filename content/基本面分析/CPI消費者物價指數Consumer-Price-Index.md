@@ -82,8 +82,7 @@ CPI（Consumer Price Index，消費者物價指數）是衡量一籃子消費商
 - [[總體經濟指標與台股實戰判讀|總體經濟指標與台股實戰判讀]] — CPI 是領先指標之一
 - [[基本面分析/FOMC聯邦公開市場委員會與利率決策Federal-Open-Market-Committee|FOMC 聯邦公開市場委員會]] — CPI 是 FOMC 利率決策的核心輸入
 
-## 參考來源
-
+## 來源
 - Wikipedia: Consumer price index
 - BLS (Bureau of Labor Statistics) 官方定義
 - 知識庫 YouTube 影片筆記中 2026 年多次 CPI 相關分析

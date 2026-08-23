@@ -117,15 +117,13 @@ subject to:
 - **尾部估計不確定性**：ES 依賴尾部估計，而尾部數據本來就少，樣本 ES 有較大估計誤差
 - **計算成本**：歷史模擬法需要足夠多的歷史數據，蒙特卡洛法需要大量模擬
 
-## 參考文獻
-
+## 來源
 - Rockafellar & Uryasev (2000), "Optimization of conditional value-at-risk", Journal of Risk
 - Acerbi & Tasche (2002), "Expected Shortfall: a natural coherent alternative to Value at Risk"
 - Artzner, Delbaen, Eber & Heath (1999), "Coherent Measures of Risk"
 - Basel Committee on Banking Supervision (2019), Basel III market risk framework (FRTB)
 
-## 相關筆記
-
+## 相關主題
 - [[風險管理/一致性風險測度Coherent-Risk-Measures|一致性風險測度]]
 - [[風險管理/光譜風險測度Spectral-Risk-Measure|光譜風險測度]]
 - [[風險管理/通縮夏普比率Deflated-Sharpe-Ratio|通縮夏普比率]]

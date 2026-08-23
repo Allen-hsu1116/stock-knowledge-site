@@ -1,3 +1,7 @@
+---
+title: "資產成長異象 Asset Growth Anomaly"
+---
+
 # 資產成長異象 Asset Growth Anomaly
 
 > 公司資產成長越快，未來報酬越低。這不是直覺——常識告訴我們擴張等於成長，但數據狠狠打臉。
@@ -70,21 +74,18 @@ Cooper et al. 的原始研究：
 - AI 時代資本支出暴增（CSP 合計 7500 億美元）需要用資產成長異象的視角警覺——如果 2027-2028 年 AI 營收未能兌現，高資產成長公司將面臨估值重估
 - 觀察 [[基本面分析/資本支出CapEx與自由現金流判讀|資本支出與自由現金流]]的搭配——CapEx 暴增但 FCF 轉負就是資產成長異象的經典型態
 
-## 限制與批評
-
+## 注意事項
 - **樣本生存者偏差**：破產的高資產成長公司可能被排除在樣本外
 - **產業差異**：科技業與公用事業的資產成長含義完全不同，需產業標準化
 - **時間漂移**：2008 金融危機後資產成長異象的強度有所減弱
 - **理性解釋**：高資產成長承擔更多系統性風險（投資機會曝險），低報酬可能是風險溢價補償而非錯誤定價
 
-## 關鍵文獻
-
+## 來源
 - Cooper, M.J., Gulen, H., & Schill, M.J. (2008). "Asset Growth and the Cross-Section of Stock Returns." *Journal of Finance*, 63(4), 1609-1651.
 - Fama, E.F., & French, K.R. (2015). "A five-factor asset pricing model." *Journal of Financial Economics*, 116(1), 1-22. (CMA 因子)
 - Hou, K., Xue, C., & Zhang, L. (2015). "Digesting Anomalies: An Investment Approach." *Review of Financial Studies*, 28(3), 650-705. (q-factor model 中的投資因子)
 
-## 相關筆記
-
+## 相關主題
 - [[基本面分析/Fama-French多因子模型Fama-French-Multi-Factor-Model|Fama-French 多因子模型]]
 - [[基本面分析/應計項目異象Accrual-Anomaly|應計項目異象]]
 - [[基本面分析/資本支出CapEx與自由現金流判讀|資本支出與自由現金流判讀]]

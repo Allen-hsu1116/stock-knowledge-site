@@ -1,9 +1,14 @@
+---
+title: "NCAV 淨流動資產價值選股法 Net Current Asset Value"
+---
+
 # NCAV 淨流動資產價值選股法 Net Current Asset Value
 
 > 買得比清算價還便宜的股票，Graham 的「菸蒂投資法」核心指標。
 
-## 定義與公式
+## 核心概念
 
+### 定義與公式
 **NCAV（Net Current Asset Value）** 由 Benjamin Graham 在 1934 年《Security Analysis》中提出，是深度價值投資的基石指標。
 
 **基本公式：**
@@ -41,8 +46,9 @@ NCAV > 市值意味著你買到的流動資產（現金+存貨+應收）扣除�
 - **錨定效應**：投資人錨定過去高點，低估了清算價值的下檔保護
 - **代表性偏誤**：投資人將「股價下跌」等同「公司不好」，忽略資產價值
 
-## Graham 的操作規則
+## 實戰應用
 
+### Graham 的操作規則
 Graham 在《Intelligent Investor》中提出完整的 NCAV 策略操作框架：
 
 1. **分散持有**：至少 30 檔，因為個別公司可能倒閉
@@ -110,8 +116,15 @@ Net-Net = 流動資產 - 總負債 - 特別股
 - NCAV 策略在市場恐慌時期（如 2026 年 7 月科技股修正）反而表現穩定
 - 與 [[基本面分析/估值陷阱與價值陷阱識別Value-Trap-Detection|價值陷阱識別]] 結合才能避免踩雷
 
-## 參考來源
+## 注意事項
 
+本文方法不保證未來績效；實際使用須檢查資料品質、樣本外穩定性、交易成本、流動性與適用市場。
+
+## 相關主題
+
+- [[基本面分析/基本面分析總論]]
+
+## 來源
 - Graham, B. & Dodd, D. (1934). *Security Analysis*. McGraw-Hill.
 - Graham, B. (1949). *The Intelligent Investor*. HarperCollins.
 - Wikipedia: [Net current asset value](https://en.wikipedia.org/wiki/Net_current_asset_value)

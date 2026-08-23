@@ -5,8 +5,9 @@ aliases: [Bates Model, Bates Jump Stochastic Volatility Model, 隨機波動率�
 
 # Bates跳躍隨機波動率模型 (Bates Jump Stochastic Volatility Model)
 
-## 一句話解釋
 
+> Bates 模型把 Heston 的隨機波動率與 Merton 的複合卜瓦松跳躍放進同一套價格動態：平常由連續擴散與時變變異數處理波動率聚集和中長期偏斜，突發跳躍則補上短天期深價外選擇權與崩盤尾部，代價是參數更多、校準更容易互相甩鍋。
+## 核心概念
 Bates 模型把 Heston 的隨機波動率與 Merton 的複合卜瓦松跳躍放進同一套價格動態：平常由連續擴散與時變變異數處理波動率聚集和中長期偏斜，突發跳躍則補上短天期深價外選擇權與崩盤尾部，代價是參數更多、校準更容易互相甩鍋。
 
 ## 為什麼需要Bates模型
@@ -22,8 +23,9 @@ David Bates 在研究德國馬克選擇權時，把兩者結合成 stochastic vo
 - **槓桿效應**：價格下跌與變異數上升同時發生
 - **微笑期限結構**：短期由跳躍主導，較長期由隨機波動率與均值回歸主導
 
-## 風險中立模型結構
+## 注意事項
 
+### 風險中立模型結構
 常見的 Bates 規格可寫成：
 
 $$\frac{dS_t}{S_{t^-}}=(r-q-\lambda\bar{k})dt+\sqrt{v_t}\,dW_t^{S}+(J-1)dN_t$$
@@ -144,8 +146,7 @@ Bates 的優點是彈性，缺點也是彈性。常見替代關係包括：
 - 同時使用 VIX、方差交換或其他波動率商品資料，但要處理不同市場的流動性與風險溢價
 - 報告參數敏感度與價格區間，不要只交出一組神諭數字
 
-## 交易與風控應用
-
+## 實戰應用
 ### 尾部選擇權相對價值
 
 模型可把短期左翼價格拆成連續波動率與跳躍補償。若市場 Put 價格高於模型，不代表一定能無風險賣出；也可能是模型把跳躍強度設得太低，或市場正在替你不知道的事件先收保費。
@@ -204,8 +205,11 @@ Bates 路徑能同時模擬：
 3. 選擇權隱含跳躍參數是風險中立價格，不是歷史跳空頻率的直接預測
 4. 對交易者最有用的不是多擬合幾個基點，而是看清楚跳躍發生時 Delta 對沖會直接斷線
 
-## 參考來源
+## 相關主題
 
+- [[操作策略/操作策略總論]]
+
+## 來源
 - Bates, D. S. (1996). "Jumps and Stochastic Volatility: Exchange Rate Processes Implicit in Deutsche Mark Options." *Review of Financial Studies*, 9(1), 69-107. https://doi.org/10.1093/rfs/9.1.69
 - Bates, D. S. (1993). NBER Working Paper No. 4596. https://www.nber.org/papers/w4596
 - Heston, S. L. (1993). "A Closed-Form Solution for Options with Stochastic Volatility with Applications to Bond and Currency Options." *Review of Financial Studies*, 6(2), 327-343.

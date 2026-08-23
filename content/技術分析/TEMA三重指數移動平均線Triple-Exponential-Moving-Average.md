@@ -127,8 +127,7 @@ TEMA 是零延遲均線家族中計算最直觀的一員。它用三層 EMA 的�
 
 最佳用法不是單獨依賴 TEMA，而是把它當作「快速訊號線」，搭配慢速均線或趨勢強度指標（ADX/CHOP）形成多層確認系統。記住：**靈敏不是免費的——你用延遲換來的時間優勢，會在盤整時被雜訊吃回去。**
 
-## 參考
-
+## 來源
 - Patrick Mulloy, "Smoothing Data with Less Lag," Technical Analysis of Stocks & Commodities, 1994
 - TRIX 指標同源：[[技術分析/TRIX三重指數平滑移動平均指標|TRIX 三重指數平滑移動平均指標]]
 - 均線比較：[[技術分析/移動平均線種類比較SMA-EMA-WMA|SMA vs EMA vs WMA]]

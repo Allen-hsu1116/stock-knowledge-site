@@ -86,8 +86,7 @@ $$IR \approx IC \times \sqrt{BR}$$
 
 **與 [[基本面分析/資訊係數IC與選股能力量化Information-Coefficient-and-Rank-IC|資訊係數 IC]] 的關係**：IC 是 IR 的驅動因子之一，量化投資的核心循環就是「提升 IC → 增加 BR → 提高 IR」。
 
-## 批評與限制
-
+## 注意事項
 **1. 算術報酬 vs 幾何報酬**
 - IR 用算術報酬計算，忽略複利效應
 - 幾何資訊比率 (Geometric IR) 更準確但較少使用
@@ -129,11 +128,14 @@ $$IR \approx IC \times \sqrt{BR}$$
 - 將主動報酬分解：選股貢獻 + 產業配置貢獻 + 交互效應
 - 每個維度的 IR 可以分別計算，找出 alpha 來源
 
-## 相關筆記
-
+## 相關主題
 - [[基本面分析/資訊係數IC與選股能力量化Information-Coefficient-and-Rank-IC|資訊係數 IC 與選股能力量化]]
 - [[風險管理/通縮夏普比率Deflated-Sharpe-Ratio|通縮夏普比率]]
 - [[風險管理/風險調整報酬指標夏普比率與索提諾比率|夏普比率與索提諾比率]]
 - [[風險管理/Sterling-Ratio斯特林比率|Sterling 比率]]
 - [[風險管理/Omega比率Omega-Ratio|Omega 比率]]
 - [[操作策略/Smart-Beta因子投資策略|Smart Beta 因子投資策略]]
+
+## 來源
+
+- 待補：本頁目前沒有可核對的原始來源連結。

@@ -7,8 +7,9 @@ date: 2026-08-21
 
 # VaR回測：Kupiec、Christoffersen與Basel燈號
 
-## 一句話解釋
 
+> VaR 回測不是看預測線畫得漂不漂亮，而是逐日記錄實際損失是否超過昨日預測的 VaR：Kupiec 檢查例外率對不對，Christoffersen 再檢查例外有沒有群聚，Basel 燈號則把 250 日、99% VaR 的例外數分成綠黃紅三區。
+## 核心概念
 VaR 回測不是看預測線畫得漂不漂亮，而是逐日記錄實際損失是否超過昨日預測的 VaR：Kupiec 檢查例外率對不對，Christoffersen 再檢查例外有沒有群聚，Basel 燈號則把 250 日、99% VaR 的例外數分成綠黃紅三區。
 
 ## 為什麼VaR一定要回測
@@ -299,8 +300,9 @@ $$M_t=\max(0,L_t-\operatorname{VaR}_{t|t-1})$$
 
 模型越複雜，越不能只看樣本內擬合。[[風險管理/回測驗證Backtesting陷阱|回測陷阱]]在風險模型一樣會咬人，而且咬的通常不是學術分數，是你的錢。
 
-## 實戰監控SOP
+## 實戰應用
 
+### 實戰監控SOP
 ### 每日
 
 - 保存昨日 VaR 與部位快照
@@ -325,8 +327,7 @@ $$M_t=\max(0,L_t-\operatorname{VaR}_{t|t-1})$$
 - 進行壓力測試與反向壓力測試
 - 決定是否調整限額、參數或模型
 
-## 限制與陷阱
-
+## 注意事項
 - **檢驗力不足**：一年樣本對 99% VaR 太短
 - **二元資訊損失**：不看超標幅度
 - **例外非獨立**：傳統二項假設在波動率聚集下容易失效
@@ -358,8 +359,7 @@ $$M_t=\max(0,L_t-\operatorname{VaR}_{t|t-1})$$
 4. 假設損益檢驗模型，實際損益檢驗真實帳戶，兩者都要看
 5. 回測通過只代表尚未抓到足夠證據，不代表尾部風險從此被馴服
 
-## 相關連結
-
+## 相關主題
 - [[風險管理/VaR風險值Value-at-Risk]]
 - [[風險管理/條件風險價值CVaR與期望短缺Expected-Shortfall]]
 - [[風險管理/GARCH模型與波動率預測GARCH-Model-and-Volatility-Forecasting]]
@@ -369,8 +369,7 @@ $$M_t=\max(0,L_t-\operatorname{VaR}_{t|t-1})$$
 - [[風險管理/風險儀表板與每日風控檢查Risk-Dashboard]]
 - [[風險管理/過濾歷史模擬Filtered-Historical-Simulation]]
 
-## 參考來源
-
+## 來源
 - Zhang, Y., & Nadarajah, S. (2018). "A review of backtesting for value at risk." *Communications in Statistics - Theory and Methods*. https://doi.org/10.1080/03610926.2017.1361984
 - Christoffersen, P. F. (1998). "Evaluating Interval Forecasts." *International Economic Review*, 39(4), 841–862. https://doi.org/10.2307/2527341
 - Basel Committee on Banking Supervision (1996). "Supervisory framework for the use of backtesting in conjunction with the internal models approach to market risk capital requirements." https://www.bis.org/publ/bcbs22.pdf

@@ -5,8 +5,9 @@ aliases: [SABR Model, Stochastic Alpha Beta Rho, SABR模型, 隨機Alpha Beta Rh
 
 # SABR隨機波動率模型 (Stochastic Alpha Beta Rho)
 
-## 一句話解釋
 
+> SABR 是一個讓遠期價格與自身波動率同時隨機變動、而且彼此相關的模型；它用 $\alpha$、$\beta$、$\rho$、$\nu$ 四個核心參數，快速擬合隱含波動率微笑並描述微笑隨標的移動的動態，尤其常見於利率與外匯選擇權。
+## 核心概念
 SABR 是一個讓遠期價格與自身波動率同時隨機變動、而且彼此相關的模型；它用 $\alpha$、$\beta$、$\rho$、$\nu$ 四個核心參數，快速擬合隱含波動率微笑並描述微笑隨標的移動的動態，尤其常見於利率與外匯選擇權。
 
 ## 為什麼需要SABR
@@ -110,8 +111,9 @@ SABR 的核心價值是讓微笑隨 $F$ 的移動更符合市場經驗。由於 
 
 這些風險可搭配[[操作策略/選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced|進階 Greeks]]統一管理跨履約價部位。
 
-## 主要應用
+## 實戰應用
 
+### 主要應用
 ### 利率選擇權
 
 SABR 最經典的應用是 caplet、floorlet 與 swaption。它能以少量參數擬合利率微笑，且近似公式計算快，適合大量報價與風險重算。
@@ -142,8 +144,7 @@ $$F_t^{shift}=F_t+s$$
 - **Heston**：也有隨機波動率與相關性，股票與外匯常見，具有特徵函數半封閉解
 - **純曲面參數化**：可以更靈活地擬合報價，但不一定提供標的與波動率的聯合動態
 
-## 模型限制
-
+## 注意事項
 ### 1. 近似公式不是精確解
 
 Hagan 公式在 ATM 附近通常很好，但極端履約價、長期限、高 $\nu$ 或接近邊界的 $\rho$ 可能誤差放大。
@@ -183,8 +184,11 @@ $\beta$ 與 $\rho$ 都會影響 skew，$\alpha$ 與 $\beta$ 也互相關聯。�
 3. 固定 $\beta$ 後校準其他三個參數，通常比四個一起自由亂跑更穩
 4. 近似封閉公式讓 SABR 適合交易桌，但速度快不等於沒有模型風險
 
-## 參考來源
+## 相關主題
 
+- [[操作策略/操作策略總論]]
+
+## 來源
 - Hagan, P. S., Kumar, D., Lesniewski, A. S., & Woodward, D. E. (2002). "Managing Smile Risk." *Wilmott Magazine*, September, 84-108. https://www.next-finance.net/IMG/pdf/pdf_SABR.pdf
 - Obłój, J. (2008). "Fine-Tune Your Smile: Correction to Hagan et al." *Wilmott Magazine*.
 - Gatheral, J. (2006). *The Volatility Surface: A Practitioner's Guide*. Wiley.

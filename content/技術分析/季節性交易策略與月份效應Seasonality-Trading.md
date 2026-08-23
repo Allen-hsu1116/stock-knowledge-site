@@ -1,3 +1,7 @@
+---
+title: "季節性交易策略與月份效應 Seasonality Trading"
+---
+
 # 季節性交易策略與月份效應 Seasonality Trading
 
 > 「Sell in May and go away」不只是順口溜，背後有幾十年的統計數據撐腰——但你知道為什麼嗎？
@@ -129,8 +133,11 @@
 
 兩者可以疊加使用：在季節性偏多的月份 + 經濟循環上升期 → 最強做多訊號。
 
-## 相關頁面
+## 注意事項
 
+本文方法不保證未來績效；實際使用須檢查資料品質、樣本外穩定性、交易成本、流動性與適用市場。
+
+## 相關主題
 - [[技術分析/時間循環與週期分析Market-Cycle-and-Time-Analysis]] — 經濟循環與週期分析
 - [[技術分析/技術分析回測方法與過度擬合Backtesting-and-Overfitting]] — 回測與過度擬合
 - [[基本面分析/效率市場假說Efficient-Market-Hypothesis]] — 效率市場假說
@@ -143,8 +150,7 @@
 - 建議搭配多指標共振系統（趨勢+動量+成交量+波動率）提高勝率
 - 實戰操作時應設好停損停利，嚴格執行紀律
 
-## 參考來源
-
+## 來源
 - Wikipedia: Calendar effect, Seasonal spread trading
 - Sullivan, Timmermann & White (2001). "Dangers of data mining: The case of calendar effects in stock returns". Journal of Econometrics
 - Vasileiou (2018). "Is the turn of the month effect an 'abnormal normality'?"

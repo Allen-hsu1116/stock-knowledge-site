@@ -99,8 +99,7 @@ category: "基本面分析"
 - [[基本面分析/PPI生產者物價指數Producer-Price-Index|PPI 生產者物價指數]] — 與 NFP 共同構成通膨與就業的完整圖像
 - [[總體經濟指標與台股實戰判讀|總體經濟指標與台股實戰判讀]] — NFP 是同時指標
 
-## 參考來源
-
+## 來源
 - Wikipedia: Nonfarm payrolls
 - BLS (Bureau of Labor Statistics) 官方定義
 - 知識庫 YouTube 影片筆記中 2026 年多次 NFP 相關分析

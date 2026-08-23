@@ -5,8 +5,9 @@ aliases: [Dupire Local Volatility Model, Local Vol, 局部波動率, Dupire公�
 
 # Dupire局部波動率模型 (Dupire Local Volatility Model)
 
-## 一句話解釋
 
+> Dupire 模型把瞬時波動率寫成標的價格與時間的確定性函數 $\sigma_{loc}(S,t)$，再由整張歐式選擇權價格曲面反推出這個函數；理論上能精確重現當下所有履約價與到期日的香草選擇權價格，但它擬合的是今天的曲面，不保證明天的微笑動態也對。
+## 核心概念
 Dupire 模型把瞬時波動率寫成標的價格與時間的確定性函數 $\sigma_{loc}(S,t)$，再由整張歐式選擇權價格曲面反推出這個函數；理論上能精確重現當下所有履約價與到期日的香草選擇權價格，但它擬合的是今天的曲面，不保證明天的微笑動態也對。
 
 ## 背景與動機
@@ -41,8 +42,9 @@ $$\sigma_{loc}^2(K,T)=\frac{\frac{\partial C}{\partial T}+(r-q)K\frac{\partial C
 
 這個公式厲害也麻煩：它把市場價格直接轉成局部波動率，但需要到期方向的一階微分、履約價方向的一階與二階微分。市場報價只要有一點雜訊，二階微分就可能把垃圾放大成煙火。
 
-## 與風險中立密度的關係
+## 注意事項
 
+### 與風險中立密度的關係
 Breeden-Litzenberger 關係指出，買權價格對履約價的二階導數對應折現後的風險中立密度：
 
 $$\frac{\partial^2 C}{\partial K^2}=e^{-rT}p_{RN}(K,T)$$
@@ -102,8 +104,7 @@ Dupire 擅長前者，後者不一定。別看到「完美擬合」四個字就�
 
 利率、股利或借券成本若不是確定性，基本 Dupire 公式要擴充。個股遇到離散股利時，直接硬套連續股利率可能在除息附近製造假訊號。
 
-## 交易與風控應用
-
+## 實戰應用
 ### 香草選擇權相對價值
 
 先建立平滑、無套利曲面，再比較個別報價與曲面理論值。偏離可能來自錯價，也可能只是流動性差；要同時看 bid-ask、成交量與可執行價格，否則紙上套利只是紙上富貴。
@@ -140,8 +141,11 @@ Dupire 擅長前者，後者不一定。別看到「完美擬合」四個字就�
 3. 精確擬合今天，不等於能正確預測明天；靜態校準與動態避險是兩回事
 4. Local vol 最有價值的用途不是預測方向，而是建立香草一致的定價與模型風險基準
 
-## 參考來源
+## 相關主題
 
+- [[操作策略/操作策略總論]]
+
+## 來源
 - Dupire, B. (1994). "Pricing with a Smile." *Risk*, 7(1), 18-20.
 - Derman, E., & Kani, I. (1994). "Riding on a Smile." *Risk*, 7(2), 32-39.
 - Hagan, P. S., Kumar, D., Lesniewski, A. S., & Woodward, D. E. (2002). "Managing Smile Risk." *Wilmott Magazine*, September, 84-108. https://www.next-finance.net/IMG/pdf/pdf_SABR.pdf

@@ -1,3 +1,7 @@
+---
+title: "平方根法則與市場衝擊 Square Root Law of Market Impact"
+---
+
 # 平方根法則與市場衝擊 Square Root Law of Market Impact
 
 > 你買越多，價格衝擊越大——但不是線性放大，而是按成交量的平方根成長。買2倍的量，衝擊只增加√2≈1.41倍。這條經驗法則跨越股票、債券、期貨、外匯，是全球市場微結構中最穩健的實證規律之一。
@@ -141,8 +145,7 @@ $$\Delta P \propto \sigma \cdot \sqrt{\frac{Q}{V}}$$
 - **與[[操作策略/高頻交易與做市策略High-Frequency-Trading-and-Market-Making|高頻交易與做市策略]]**：HFT 做市商利用平方根法則定價——大單的衝擊讓他們在價差中獲利更多
 - **與[[基本面分析/流動性溢價Liquidity-Premium|流動性溢價]]**：平方根法則解釋了為什麼低流動性資產要求更高報酬——高衝擊成本是流動性溢價的微觀來源
 
-## 限制與批評
-
+## 注意事項
 - **僅適用正常市場條件**：在極端壓力下（如2020年3月COVID拋售），衝擊可能遠超平方根預測
 - **不考慮方向性資訊**：平方根法則假設訂單無資訊含量，但知情交易者的衝擊遠大於不知情——需搭配[[籌碼面分析/VPIN訂單流毒性指標Volume-Synchronized-PIN|VPIN]]過濾
 - **市場碎裂影響**：同一標的在多個場所交易時，單一場所的 V 被高估，衝擊預測偏低
@@ -158,8 +161,11 @@ $$\Delta P \propto \sigma \cdot \sqrt{\frac{Q}{V}}$$
 - **Gabaix et al.（2006）**：提出基於冪律分佈的理論框架解釋平方根法則的普適性
 - **Zarinelli et al.（2015）**：用更大數據修正，指出對數關係在極端交易中更優
 
-## 參考文獻
+## 相關主題
 
+- [[操作策略/操作策略總論]]
+
+## 來源
 - Almgren, R., Thum, C., Hauptmann, E. & Li, H. (2005). "Direct Estimation of Equity Market Impact." *Risk*, 18(7), 57-62.
 - Bouchaud, J.P., Gefen, Y., Potters, M. & Wyart, M. (2004). "Fluctuations and Response in Financial Markets." *Quantitative Finance*, 4(2), 176-190.
 - Gabaix, X., Gopikrishnan, P., Plerou, V. & Stanley, H.E. (2006). "Institutional Investors and Stock Market Volatility." *Quarterly Journal of Economics*, 121(2), 461-504.

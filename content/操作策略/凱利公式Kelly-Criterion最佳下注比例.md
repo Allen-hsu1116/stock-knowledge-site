@@ -122,8 +122,7 @@ f* = Σ⁻¹ × (μ - r)
 
 這跟 Markowitz 均值-方差優化的結果一致，但凱利版本的目標是最大化幾何成長率而非均值-方差效用。
 
-## 實戰應用框架
-
+## 實戰應用
 ### 1. 單一交易部位控制
 
 假設你有一筆交易：
@@ -205,8 +204,7 @@ Wikipedia 記載了一個經典實驗：受試者拿到 $25，可以對一個 60
 - [[交易情緒控制與紀律心法Emotional-Control-and-Discipline-Mindset]]
 - [[MDD最大回撤進階實戰各資產歷史回撤與管理方法]]
 
-## 參考來源
-
+## 來源
 - Wikipedia: Kelly Criterion
 - Kelly, J. L. (1956). "A New Interpretation of Information Rate". Bell System Technical Journal.
 - Thorp, E. O. (1969). "Optimal Gambling Systems for Favorable Games". Review of the International Statistical Institute.

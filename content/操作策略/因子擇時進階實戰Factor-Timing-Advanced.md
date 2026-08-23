@@ -1,3 +1,7 @@
+---
+title: "因子擇時進階實戰 Factor Timing Advanced"
+---
+
 # 因子擇時進階實戰 Factor Timing Advanced
 
 > 知道價值因子長期有效不難，難的是知道「現在」該押價值還是押動能。因子擇時被稱為量化投資的聖杯，也是最多人翻車的地方。
@@ -87,8 +91,9 @@ AQR Capital（Cliff Asness 的公司）的研究指出：
 3. **投資人最大的錯誤是在因子失效時放棄**，而不是擇時失敗
 4. **推薦做法**：固定權重多因子組合 + 用因子估值做微調（±10-20%）
 
-## 實戰操作框架
+## 實戰應用
 
+### 實戰操作框架
 ### Step 1：建立因子基準權重
 
 根據風險容忍度和投資期限設定基準：
@@ -121,16 +126,16 @@ AQR Capital（Cliff Asness 的公司）的研究指出：
 3. **除權息季節性**：6-9月除權息旺季影響價值因子表現，見 [[操作策略/台股除權息旺季季節性套利策略Taiwan-Ex-Dividend-Season-Arbitrage|除權息策略]]
 4. **法人行為**：投信做夢、外資套利，法人行為可能扭曲因子報酬
 
-## 常見陷阱
+## 注意事項
 
+### 常見陷阱
 1. **過度自信**：以為能精準判斷因子轉折，結果每次都慢一拍
 2. **確認偏誤**：只看支持自己判斷的指標，忽略反面證據
 3. **短期主義**：因子效果以年為單位衡量，用月度績效判斷因子有效性是錯的
 4. **忽略交易成本**：頻繁調整因子權重產生的交易成本可能吃掉擇時收益
 5. **因子擁擠**：當大家都用同一個因子擇時模型時，模型本身會失效
 
-## 相關頁面
-
+## 相關主題
 - [[操作策略/Smart-Beta因子投資策略]] — 因子投資基礎
 - [[操作策略/ETF輪動策略進階Factor-Rotation-Advanced]] — 因子輪動策略
 - [[操作策略/均值回歸與動能雙策略切換Mean-Reversion-Momentum-Regime-Switching]] — 均值回歸與動能切換
@@ -141,8 +146,7 @@ AQR Capital（Cliff Asness 的公司）的研究指出：
 - [[操作策略/因子投資與量化危機]] — 因子投資的批評與反思
 - [[風險管理/動量崩潰Momentum-Crash]] — 動能因子的最大風險
 
-## 參考資料
-
+## 來源
 - [Factor investing - Wikipedia](https://en.wikipedia.org/wiki/Factor_investing)
 - Asness, C., et al. (2017). "Factor Timing is Deceptively Difficult." AQR Working Paper.
 - Arnott, R., et al. (2016). "To boldly go where no factor has gone before." Research Affiliates.

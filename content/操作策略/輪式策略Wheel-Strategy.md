@@ -204,8 +204,7 @@ Wheel 策略最大的盲點是「賣 Put 等於限價買進」，如果標的基
 - [[存股策略與股息成長投資Dividend-Growth-Investing|存股策略]] — Wheel + 存股的結合
 - [[操作策略/均值回歸策略MeanReversion|均值回歸策略]] — Wheel 隱含均值回歸假設（股價回到履約價附近）
 
-## 參考來源
-
+## 來源
 - [Wikipedia - Dark pool](https://en.wikipedia.org/wiki/Dark_pool)（結構參考）
 - [Investopedia - Wheel Strategy](https://www.investopedia.com/terms/w/wheel-strategy.asp)
 - YouTube 搜尋結果：Best Beginner Options Trading Strategy (Wheel Strategy Explained) - Brad Finn

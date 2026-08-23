@@ -7,8 +7,9 @@ date: 2026-08-22
 
 # White Reality Check與Hansen SPA多重策略檢定
 
-## 一句話解釋
 
+> White Reality Check與Hansen SPA不是問「最佳策略回測賺不賺」，而是把整個候選策略集合一起納入多重比較，檢驗其中是否真的存在優於事前指定基準的策略，而不是從一大票猴子裡挑到剛好敲出莎士比亞的那隻。
+## 核心概念
 White Reality Check與Hansen SPA不是問「最佳策略回測賺不賺」，而是把整個候選策略集合一起納入多重比較，檢驗其中是否真的存在優於事前指定基準的策略，而不是從一大票猴子裡挑到剛好敲出莎士比亞的那隻。
 
 ## 問題從哪裡來
@@ -146,8 +147,7 @@ SPA不是簡單把樣本平均為負的候選全部刪除，而是使用門檻�
 
 Bootstrap次數$B$應增加到p值對隨機種子與額外抽樣大致穩定。
 
-## 實作SOP
-
+## 實戰應用
 ### 第一步：凍結研究宇宙
 
 事前保存：
@@ -261,8 +261,7 @@ p值小於事前顯著水準時，拒絕「基準不劣於所有替代方案」�
 
 兩者互補，不是三選一的宗教戰爭。
 
-## 限制
-
+## 注意事項
 - **候選集合要誠實**：漏報失敗策略會低估資料窺探程度
 - **基準依賴**：換基準會換問題，也可能換結論
 - **平穩性假設**：市場體制轉換可能破壞原始理論條件
@@ -294,8 +293,7 @@ p值小於事前顯著水準時，拒絕「基準不劣於所有替代方案」�
 4. 拒絕集合虛無假設不等於冠軍策略已被封神
 5. 不保存失敗試驗，後面所有漂亮p值都只是失憶症統計學
 
-## 相關連結
-
+## 相關主題
 - [[風險管理/Purged-K-Fold交叉驗證與Embargo防洩漏]]
 - [[風險管理/組合式淨化交叉驗證CPCV-Combinatorial-Purged-Cross-Validation]]
 - [[風險管理/回測過擬合Backtest-Overfitting]]
@@ -304,8 +302,7 @@ p值小於事前顯著水準時，拒絕「基準不劣於所有替代方案」�
 - [[風險管理/模型風險Model Risk]]
 - [[操作策略/Walk-Forward-Analysis滾動前進驗證]]
 
-## 參考來源
-
+## 來源
 - Hansen, P. R. (2005). [A Test for Superior Predictive Ability](https://cdr.lib.unc.edu/concern/articles/hd76s214m?locale=en). *Journal of Business & Economic Statistics*, 23(4), 365–380. DOI: https://doi.org/10.1198/073500105000000063
 - White, H. (2000). [A Reality Check for Data Snooping](https://ideas.repec.org/a/ecm/emetrp/v68y2000i5p1097-1126.html). *Econometrica*, 68(5), 1097–1126. DOI: https://doi.org/10.1111/1468-0262.00152
 

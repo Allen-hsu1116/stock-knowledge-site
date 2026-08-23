@@ -133,8 +133,7 @@ category: "操作策略"
 - [[風險管理/選擇權Greeks風險判讀|選擇權Greeks風險判讀]] — 理解 Greeks 才能管理鐵兀鷹的多維風險
 - [[操作策略/波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral|波動率套利與Delta-Neutral策略]] — 鐵兀鷹本質是 Delta-Neutral 的波動率賣出策略
 
-## 參考來源
-
+## 來源
 - Wikipedia: Iron condor
 - Guy Cohen, *The Bible of Options Strategies* (2005), Pearson Education
 - Fidelity Investments: Short Iron Condor Spread

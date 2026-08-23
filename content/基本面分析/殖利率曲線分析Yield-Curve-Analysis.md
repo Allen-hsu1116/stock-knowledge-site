@@ -177,8 +177,7 @@ category: "基本面分析"
 - [[操作策略/均值回歸策略MeanReversion]] — 曲線均值回歸的交易策略
 - [[風險管理/主權風險與主權違約Sovereign-Risk-and-Default]] — 國債殖利率反映主權風險
 
-## 參考資料
-
+## 來源
 - "Yield Curve." Wikipedia.
 - Federal Reserve Bank of New York. "The Probability of U.S. Recession." (使用 10年-3個月利差的衰退機率模型)
 - Harvey, C. (1988). "The Real Term Structure and Consumption Growth." Journal of Financial Economics.

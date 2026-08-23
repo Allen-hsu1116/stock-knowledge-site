@@ -1,3 +1,7 @@
+---
+title: "EP681 區間盤操作與CPU成為AI新瓶頸——AMD Venis發表與Google Frozen晶片解密"
+---
+
 # EP681 區間盤操作與CPU成為AI新瓶頸——AMD Venis發表與Google Frozen晶片解密
 
 > 市場回檔視為正常壓力測試，大盤反彈碰到均線套牢賣壓形成人道走廊；CPU成為AI伺服器最大瓶頸，AMD Venis SP7平台發表將帶動第二波CPU行情；Google Frozen V2疑為TPU推論加速器TIA由Marvel設計；Kimi K3算力不夠用打臉市場「算力過剩」論；老AI轉強因FORP 10倍便宜有業績有防守

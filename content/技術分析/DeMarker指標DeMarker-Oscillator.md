@@ -142,8 +142,7 @@ DeMarker 只是 Tom DeMark 指標體系的一員：
 - **TD Lines**：趨勢線系統
 - **TD Points**：支撐壓力點系統
 
-## 參考來源
-
+## 來源
 - Tom DeMark, *The New Science of Technical Analysis* (1994)
 - Tom DeMark, *DeMark on Day-Trading Options* (1999)
 - MQL5 技術指標文檔：iDeMarker，參數為 symbol, period, ma_period（預設14）

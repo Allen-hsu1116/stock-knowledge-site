@@ -163,8 +163,7 @@ Fama-French模型從學術走向實務，催生了整個因子投資產業：
 - [[基本面分析/盈餘公告後價格漂移PEAD]] — 在Fama-French五因子+動能框架下PEAD效應更大
 - [[風險管理/投資組合理論與分散投資的局限Portfolio-Theory-and-Diversification-Limits]] — 多因子模型比CAPM更準確但仍有局限
 
-## 參考資料
-
+## 來源
 - [Fama–French three-factor model - Wikipedia](https://en.wikipedia.org/wiki/Fama%E2%80%93French_three-factor_model)
 - Fama, E. F.; French, K. R. (1993). "Common risk factors in the returns on stocks and bonds". Journal of Financial Economics. 33: 3–56.
 - Fama, E. F.; French, K. R. (2015). "A Five-Factor Asset Pricing Model". Journal of Financial Economics. 116: 1–22.

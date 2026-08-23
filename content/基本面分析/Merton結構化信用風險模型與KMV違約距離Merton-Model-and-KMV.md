@@ -1,3 +1,7 @@
+---
+title: "Merton 結構化信用風險模型與 KMV 違約距離"
+---
+
 # Merton 結構化信用風險模型與 KMV 違約距離
 
 > 把股東權益看成一張買權——公司資產價值跌破負債就是違約。Robert Merton 1974年用選擇權定價理論拆解信用風險，KMV模型進一步把它變成可實戰的「違約距離」指標。
@@ -81,8 +85,9 @@ KMV 模型由 Kealhofer、McQuown 和 Vašíček 開發，現由 Moody's 提供�
 2. **計算違約距離 DD**：用短期負債 + 半長期負債作違約點
 3. **映射到 EDF**：用歷史資料庫找相同 DD 水準的實際違約率
 
-## 與其他信用風險模型的比較
+## 注意事項
 
+### 與其他信用風險模型的比較
 - **vs [[基本面分析/Altman-Z-Score破產預測模型|Altman Z-Score]]**：Z-Score 用會計比率（靜態），Merton/KMV 用市場數據（動態、前瞻）
 - **vs [[基本面分析/信用評等與公司債違約風險判讀Credit-Rating-and-Default-Risk|信用評等]]**：評等是離散等級（AAA/AA/A...），EDF 是連續機率，更靈敏
 - **vs [[基本面分析/信用違約交換CDS-Credit-Default-Swap|CDS]]**：CDS 價差反映市場對違約的定價，Merton 模型從資本結構推導違約機率，兩者可交叉驗證
@@ -119,8 +124,7 @@ KMV 模型由 Kealhofer、McQuown 和 Vašíček 開發，現由 Moody's 提供�
 4. **未考慮流動性風險**：公司可能資產 > 負債但因流動性枯竭而違約
 5. **台股適用性**：台股個股的權益波動率較易取得，但負債結構較複雜（可轉債、私募等），需調整違約點定義
 
-## 相關頁面
-
+## 相關主題
 - [[基本面分析/Altman-Z-Score破產預測模型]] — 會計基礎的破產預測，與 Merton 互補
 - [[基本面分析/信用評等與公司債違約風險判讀Credit-Rating-and-Default-Risk]] — 信用評等體系
 - [[基本面分析/信用違約交換CDS-Credit-Default-Swap]] — 信用風險的市場定價工具
@@ -128,8 +132,7 @@ KMV 模型由 Kealhofer、McQuown 和 Vašíček 開發，現由 Moody's 提供�
 - [[基本面分析/信用循環與明斯基時刻Credit-Cycle-and-Minsky-Moment]] — 信用循環的宏觀視角
 - [[風險管理/CVaR條件風險價值Conditional-Value-at-Risk]] — 信用損失的尾部風險衡量
 
-## 參考資料
-
+## 來源
 - [Merton model - Wikipedia](https://en.wikipedia.org/wiki/Merton_model)
 - Robert C. Merton, "On the Pricing of Corporate Debt," Journal of Finance, 1974
 - KMV Corporation, "Modeling Default Risk," 1993

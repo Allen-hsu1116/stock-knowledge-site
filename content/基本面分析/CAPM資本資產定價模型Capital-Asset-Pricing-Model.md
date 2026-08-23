@@ -196,8 +196,7 @@ CAPM假設投資人完全理性，但行為財務學證明投資人系統性地�
 - [[風險管理/風險調整報酬指標夏普比率與索提諾比率]] — CAPM框架下的風險調整報酬
 - [[風險管理/行為財務學總論Behavioral-Finance-Overview]] — CAPM理性假設的系統性挑戰
 
-## 參考資料
-
+## 來源
 - [Capital asset pricing model - Wikipedia](https://en.wikipedia.org/wiki/Capital_asset_pricing_model)
 - Sharpe, William F. (1964). "Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk". Journal of Finance. 19 (3): 425–442.
 - Lintner, John (1965). "The Valuation of Risk Assets and the Selection of Risky Investments in Stock Portfolios and Capital Budgets". Review of Economics and Statistics. 47 (1): 13–37.

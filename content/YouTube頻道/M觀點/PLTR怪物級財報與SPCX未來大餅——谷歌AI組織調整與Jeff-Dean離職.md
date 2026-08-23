@@ -1,3 +1,7 @@
+---
+title: "PLTR怪物級財報與SPCX未來大餅——谷歌AI組織調整與Jeff Dean離職"
+---
+
 # PLTR怪物級財報與SPCX未來大餅——谷歌AI組織調整與Jeff Dean離職
 
 > Palantir Q2財報暴漲29%滿分全壘打但只是三局下領先，SpaceX Q2營收成長強勁AI部門Q3將損益兩平，Google DeepMind CEO Hassabis升任主席Jeff Dean離職創業
