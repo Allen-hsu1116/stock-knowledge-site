@@ -113,7 +113,7 @@ $$Distance_{i,t}=1-NH_{i,t}$$
 
 - George, T. J., & Hwang, C. Y. (2004). [The 52-Week High and Momentum Investing](https://doi.org/10.1111/j.1540-6261.2004.00695.x), The Journal of Finance, 59(5), 2145–2176.
 - Wiest, T. (2023). [Momentum: what do we know 30 years after Jegadeesh and Titman’s seminal paper?](https://link.springer.com/article/10.1007/s11408-022-00417-8), Financial Markets and Portfolio Management, 37, 95–114.
-- [原始研究摘要與文獻回顧摘錄](../../raw/2026-08-27/52週高點與動能投資研究摘錄.md)
+
 
 ---
 

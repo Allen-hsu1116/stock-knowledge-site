@@ -139,7 +139,7 @@ Wiest整理Daniel與Moskowitz的結果：
 - Barroso, P., & Santa-Clara, P. (2015). [Momentum Has Its Moments](https://doi.org/10.1016/j.jfineco.2014.11.010), Journal of Financial Economics, 116(1), 111–120.
 - Chabot, B., Ghysels, E., & Jagannathan, R. (2014). [Momentum Trading, Return Chasing, and Predictable Crashes](https://www.chicagofed.org/publications/working-papers/2014/wp-27), Federal Reserve Bank of Chicago Working Paper 2014-27.
 - Wiest, T. (2023). [Momentum: what do we know 30 years after Jegadeesh and Titman’s seminal paper?](https://link.springer.com/article/10.1007/s11408-022-00417-8), Financial Markets and Portfolio Management, 37, 95–114.
-- [原始研究摘要與文獻回顧摘錄](../../raw/2026-08-27/風險管理動能與動能崩潰研究摘錄.md)
+
 
 ---
 

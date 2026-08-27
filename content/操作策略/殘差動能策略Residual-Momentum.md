@@ -116,7 +116,7 @@ Blitz、Huij與Martens（2011）指出，傳統動能具有顯著且時變的Fam
 - Blitz, D., Huij, J., & Martens, M. (2011). [Residual Momentum](https://doi.org/10.1016/j.jempfin.2011.01.003), Journal of Empirical Finance, 18(3), 506–521.
 - Hühn, H. L., & Scholz, H. (2018). [Alpha Momentum and Price Momentum](https://doi.org/10.3390/ijfs6020049), International Journal of Financial Studies, 6(2), 49.
 - Wiest, T. (2023). [Momentum: what do we know 30 years after Jegadeesh and Titman’s seminal paper?](https://link.springer.com/article/10.1007/s11408-022-00417-8), Financial Markets and Portfolio Management, 37, 95–114.
-- [原始研究摘要與文獻回顧摘錄](../../raw/2026-08-27/殘差動能與Alpha動能研究摘錄.md)
+
 
 ---
 
