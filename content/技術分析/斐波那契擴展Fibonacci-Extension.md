@@ -87,5 +87,5 @@ category: "技術分析"
 
 ## 來源
 
-- [斐波那契回撤怎麼畫預測反彈目標價的神奇數列-OP投資理財學院](../raw/2026-05-17/費波南希回撤Fibonacci-Retracement實戰.md)
-- [波浪理論與斐波那契結合-FM Studio](../raw/2026-05-17/艾略特波浪理論Elliott-Wave-Theory實戰.md)
+- [斐波那契回撤怎麼畫預測反彈目標價的神奇數列-OP投資理財學院](../../raw/2026-05-17/費波南希回撤Fibonacci-Retracement實戰.md)
+- [波浪理論與斐波那契結合-FM Studio](../../raw/2026-05-17/艾略特波浪理論Elliott-Wave-Theory實戰.md)

@@ -90,6 +90,6 @@ Price Action（價格行為）是一種僅根據價格本身變動來進行分�
 
 ## 來源
 
-- [什麼是PriceAction(價格行為)？從入門到精通 - FM Studio](../raw/2026-05-04/Price-Action價格行為裸K交易.md)
+- [什麼是PriceAction(價格行為)？從入門到精通 - FM Studio](../../raw/2026-05-04/Price-Action價格行為裸K交易.md)
 - [價格行為學 Price Action 完整教學 - 全職奶爸](https://homedadpro.com/price-action/)
-- [SMC基礎教學ICT交易策略聰明錢流動性訂單塊FVG - 全職奶爸](../raw/2026-05-18/SMC聰明錢概念基礎教學-全職奶爸.md)
+- [SMC基礎教學ICT交易策略聰明錢流動性訂單塊FVG - 全職奶爸](../../raw/2026-05-18/SMC聰明錢概念基礎教學-全職奶爸.md)

@@ -1,5 +1,6 @@
 ---
 title: "流動性溢價 Liquidity Premium"
+category: "基本面分析"
 ---
 
 # 流動性溢價 Liquidity Premium

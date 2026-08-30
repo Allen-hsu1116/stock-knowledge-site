@@ -7,7 +7,7 @@ category: "基本面分析"
 
 > 全球資金流向的總開關，八次會議決定全世界股市的呼吸節奏。
 
-## 什麼是 FOMC
+## 核心概念
 
 FOMC（Federal Open Market Committee，聯邦公開市場委員會）是美國聯邦準備系統（Fed）內部的委員會，負責制定美國貨幣政策，主要是決定聯邦資金利率（Federal Funds Rate）目標區間。
 
@@ -81,7 +81,7 @@ FOMC（Federal Open Market Committee，聯邦公開市場委員會）是美國�
 - **數據依賴**：每個經濟數據（CPI/PPI/NFP）對市場的影響被放大，因為缺乏前瞻指引的「錨」
 - **S&P 500 與 Fed 資產負債表高度聯動**：縮表期間股市承壓，擴表期間股市上漲
 
-## 散戶實戰要點
+## 實戰應用
 
 - FOMC 會議日是「超級事件日」，短線交易者要麼利用波動要麼避開
 - 看利率決定不如看聲明措辭變化（鷹派/鴿派措辭的微妙轉變）
@@ -90,7 +90,10 @@ FOMC（Federal Open Market Committee，聯邦公開市場委員會）是美國�
 - FOMC 會議之間的經濟數據（CPI/PPI/NFP）是修正利率預期的關鍵變數
 - 台股投資人要關注台指期夜盤在 FOMC 公布後的即時反應
 
-## 相關筆記
+## 注意事項
+（待補充）
+
+## 相關主題
 
 - [[基本面分析/CPI消費者物價指數Consumer-Price-Index|CPI 消費者物價指數]] — FOMC 利率決策的核心輸入
 - [[基本面分析/PPI生產者物價指數Producer-Price-Index|PPI 生產者物價指數]] — FOMC 利率決策的參考指標
@@ -102,18 +105,3 @@ FOMC（Federal Open Market Committee，聯邦公開市場委員會）是美國�
 - Wikipedia: Federal Open Market Committee
 - Federal Reserve 官方網站
 - 知識庫 YouTube 影片筆記中 2026 年多次 FOMC 相關分析
-
-## 核心概念
-（待補充）
-
-
-## 實戰應用
-（待補充）
-
-
-## 注意事項
-（待補充）
-
-
-## 相關主題
-（待補充）

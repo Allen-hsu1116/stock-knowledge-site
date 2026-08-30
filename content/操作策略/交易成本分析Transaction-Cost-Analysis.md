@@ -132,7 +132,13 @@ TCA 是實現 [[操作策略/實施短缺與最佳執行Implementation-Shortfall
 - TCA 是「方法」——量化衡量是否達成 Best Execution
 - MiFID II 要求機構每季發布 Best Execution 報告，TCA 是其數據基礎
 
-## 相關連結
+## 實戰應用
+（待補充）
+
+## 注意事項
+（待補充）
+
+## 相關主題
 
 - [[操作策略/實施短缺與最佳執行Implementation-Shortfall-and-Best-Execution]] — TCA 的核心基準
 - [[操作策略/執行演算法VWAP-TWAP-Execution-Algorithm]] — 執行策略選擇
@@ -142,18 +148,6 @@ TCA 是實現 [[操作策略/實施短缺與最佳執行Implementation-Shortfall
 - [[風險管理/滑價與交易執行風險]] — 滑價風險
 - [[風險管理/交易執行力缺口Execution-Gap]] — 執行落差
 - [[風險管理/市場微結構與流動性定價Market-Microstructure-and-Liquidity-Pricing]] — 微結構基礎
-
-
-## 實戰應用
-（待補充）
-
-
-## 注意事項
-（待補充）
-
-
-## 相關主題
-（待補充）
 
 ## 來源
 

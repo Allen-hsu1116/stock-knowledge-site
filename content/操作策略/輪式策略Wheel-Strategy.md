@@ -120,42 +120,6 @@ Wheel 策略最大的盲點是「賣 Put 等於限價買進」，如果標的基
 - Wheel 的完整循環包含賣 Put 和賣 Call 兩個階段
 - 純 Covered Call 只做賣 Call 端，不需要循環
 
-## 實戰操作 SOP
-
-### Step 1：篩選標的
-
-- 選擇你願意持有的好公司（基本面穩健、有配息、產業前景正向）
-- IV Rank 在 30-50 區間（IV Rank > 50 權利金多但風險也高）
-- 選擇權流動性好（日成交量 > 500 口，Bid-Ask Spread < 5%）
-
-### Step 2：賣 Put
-
-- 賣 30-45 天到期的價外 Put（Delta 約 -0.3，大約是 1-2 個標準差價外）
-- 確保帳戶有足額現金擔保
-- 收到的權利金 = 你的時間租
-
-### Step 3：管理 Put 部位
-
-- **如果股價維持在履約價上方**：到期前 21 天左右 Roll 出去（賣下一期），或讓它過期
-- **如果股價接近履約價**：考慮 Roll Down（降履約價）或接受指派
-- **不要硬扛**：如果基本面惡化，寧願虧權利金停損也不要被指派進垃圾股
-
-### Step 4：被指派 → 持股 → 賣 Call
-
-- 以履約價 - 權利金的成本持有股票
-- 賣 30-45 天到期的價外 Call（Delta 約 0.3）
-- 履約價選擇：你願意賣出的價格（通常是成本 + 10-15%）
-
-### Step 5：管理 Call 部位
-
-- **股價維持在履約價下方**：到期前 Roll 出去，繼續收租
-- **股價漲破履約價**：接受指派，獲利了結，回到 Step 2
-
-### Step 6：循環
-
-- 股票被 Call 走 → 回到賣 Put → 接股票 → 賣 Call → ...無限循環
-- 這就是「輪式」的名稱由來
-
 ## 常見迷思
 
 **迷思一：Wheel 是無風險的收租策略**
@@ -204,15 +168,41 @@ Wheel 策略最大的盲點是「賣 Put 等於限價買進」，如果標的基
 - [[存股策略與股息成長投資Dividend-Growth-Investing|存股策略]] — Wheel + 存股的結合
 - [[操作策略/均值回歸策略MeanReversion|均值回歸策略]] — Wheel 隱含均值回歸假設（股價回到履約價附近）
 
-## 來源
-- [Wikipedia - Dark pool](https://en.wikipedia.org/wiki/Dark_pool)（結構參考）
-- [Investopedia - Wheel Strategy](https://www.investopedia.com/terms/w/wheel-strategy.asp)
-- YouTube 搜尋結果：Best Beginner Options Trading Strategy (Wheel Strategy Explained) - Brad Finn
-- YouTube 搜尋結果：The "Wheel" Options Strategy - Markus Heitkoetter
-
 ## 實戰應用
 
-（待補充）
+### Step 1：篩選標的
+
+- 選擇你願意持有的好公司（基本面穩健、有配息、產業前景正向）
+- IV Rank 在 30-50 區間（IV Rank > 50 權利金多但風險也高）
+- 選擇權流動性好（日成交量 > 500 口，Bid-Ask Spread < 5%）
+
+### Step 2：賣 Put
+
+- 賣 30-45 天到期的價外 Put（Delta 約 -0.3，大約是 1-2 個標準差價外）
+- 確保帳戶有足額現金擔保
+- 收到的權利金 = 你的時間租
+
+### Step 3：管理 Put 部位
+
+- **如果股價維持在履約價上方**：到期前 21 天左右 Roll 出去（賣下一期），或讓它過期
+- **如果股價接近履約價**：考慮 Roll Down（降履約價）或接受指派
+- **不要硬扛**：如果基本面惡化，寧願虧權利金停損也不要被指派進垃圾股
+
+### Step 4：被指派 → 持股 → 賣 Call
+
+- 以履約價 - 權利金的成本持有股票
+- 賣 30-45 天到期的價外 Call（Delta 約 0.3）
+- 履約價選擇：你願意賣出的價格（通常是成本 + 10-15%）
+
+### Step 5：管理 Call 部位
+
+- **股價維持在履約價下方**：到期前 Roll 出去，繼續收租
+- **股價漲破履約價**：接受指派，獲利了結，回到 Step 2
+
+### Step 6：循環
+
+- 股票被 Call 走 → 回到賣 Put → 接股票 → 賣 Call → ...無限循環
+- 這就是「輪式」的名稱由來
 
 ## 注意事項
 
@@ -221,3 +211,11 @@ Wheel 策略最大的盲點是「賣 Put 等於限價買進」，如果標的基
 ## 相關主題
 
 （待補充）
+
+- [[操作策略/操作策略總論]]
+
+## 來源
+- [Wikipedia - Dark pool](https://en.wikipedia.org/wiki/Dark_pool)（結構參考）
+- [Investopedia - Wheel Strategy](https://www.investopedia.com/terms/w/wheel-strategy.asp)
+- YouTube 搜尋結果：Best Beginner Options Trading Strategy (Wheel Strategy Explained) - Brad Finn
+- YouTube 搜尋結果：The "Wheel" Options Strategy - Markus Heitkoetter

@@ -1,6 +1,7 @@
 ---
 title: "強化學習交易 Reinforcement Learning for Trading"
 tags: [操作策略, 機器學習, 量化交易, 強化學習, AI交易]
+category: "操作策略"
 ---
 
 # 強化學習交易 Reinforcement Learning for Trading
@@ -17,52 +18,6 @@ tags: [操作策略, 機器學習, 量化交易, 強化學習, AI交易]
 - **強化學習**：不需要每步都有標籤，只在交易結束時收到獎勵（報酬），模型自己學會「什麼狀態下做什麼動作長期最優」
 
 **最大優勢**：RL 能學會「延遲滿足」策略——短期虧損但長期獲利的決策。傳統 ML 做不到這件事，因為它在每個時間點都在追求預測準確。
-
-## 實戰應用
-
-### RL 的五大組件（交易語境）
-### 1. 狀態（State）
-
-狀態是決策所需的資訊集合。交易中的 state 可以包含：
-- 技術指標（RSI、MACD、均線偏離等）
-- 歷史價量數據
-- 籌碼面資訊（法人買賣超、融資餘額）
-- 基本面數據（營收動能、本益比）
-- 情緒面數據（新聞情緒、社群討論度）
-
-**關鍵要求**：state 數據應該弱預測性（weakly predictive）且弱平穩性（weakly stationary），ML 模型在平穩數據上表現較好。
-
-### 2. 動作（Action）
-
-代理人可以執行的操作：
-- 單一標的：買進、賣出、持有
-- 投資組合：各資產的資金配置權重
-- 倉位管理：加碼、減碼、平倉
-
-### 3. 獎勵（Reward）
-
-策略的終極目標函數：
-- 每筆交易利潤
-- Sharpe Ratio
-- 每筆報酬率
-- **實測最有效**：用 PnL 正負號（二元獎勵）——模型學得更快，專注於穩定獲利而非追逐大賺
-
-### 4. 策略（Policy）
-
-策略是 state 到 action 的映射函數 $\pi(s, a) = \Pr(A_t = a \mid S_t = s)$，分兩階段：
-
-- **探索（Exploration）**：初期什麼都不懂，隨機嘗試不同動作，從結果中學習
-- **利用（Exploitation）**：用學到的經驗選擇長期報酬最大的動作
-
-**探索-利用權衡**是 RL 最核心的難題。常用的 ε-greedy 策略：
-
-$$\varepsilon_t = \frac{1}{t^k} + \varepsilon_{\min}$$
-
-隨時間衰減探索率，但保留最低探索機率防止策略僵化。
-
-### 5. 環境（Environment）
-
-環境處理代理人的動作，計算獎勵並轉移到下一狀態。交易中環境就是市場本身（或回測引擎）。
 
 ## Q-Learning：RL 的核心演算法
 
@@ -133,16 +88,55 @@ RL 不是取代傳統技術分析或基本面分析，而是提供一個**自動
 - 用 RL 學習在這些 state 下的最優動作序列
 - 用傳統風控框架限制 RL 的風險承擔
 
+## 實戰應用
+
+### RL 的五大組件（交易語境）
+### 1. 狀態（State）
+
+狀態是決策所需的資訊集合。交易中的 state 可以包含：
+- 技術指標（RSI、MACD、均線偏離等）
+- 歷史價量數據
+- 籌碼面資訊（法人買賣超、融資餘額）
+- 基本面數據（營收動能、本益比）
+- 情緒面數據（新聞情緒、社群討論度）
+
+**關鍵要求**：state 數據應該弱預測性（weakly predictive）且弱平穩性（weakly stationary），ML 模型在平穩數據上表現較好。
+
+### 2. 動作（Action）
+
+代理人可以執行的操作：
+- 單一標的：買進、賣出、持有
+- 投資組合：各資產的資金配置權重
+- 倉位管理：加碼、減碼、平倉
+
+### 3. 獎勵（Reward）
+
+策略的終極目標函數：
+- 每筆交易利潤
+- Sharpe Ratio
+- 每筆報酬率
+- **實測最有效**：用 PnL 正負號（二元獎勵）——模型學得更快，專注於穩定獲利而非追逐大賺
+
+### 4. 策略（Policy）
+
+策略是 state 到 action 的映射函數 $\pi(s, a) = \Pr(A_t = a \mid S_t = s)$，分兩階段：
+
+- **探索（Exploration）**：初期什麼都不懂，隨機嘗試不同動作，從結果中學習
+- **利用（Exploitation）**：用學到的經驗選擇長期報酬最大的動作
+
+**探索-利用權衡**是 RL 最核心的難題。常用的 ε-greedy 策略：
+
+$$\varepsilon_t = \frac{1}{t^k} + \varepsilon_{\min}$$
+
+隨時間衰減探索率，但保留最低探索機率防止策略僵化。
+
+### 5. 環境（Environment）
+
+環境處理代理人的動作，計算獎勵並轉移到下一狀態。交易中環境就是市場本身（或回測引擎）。
+
 ## 注意事項
 
 本文方法不保證未來績效；實際使用須檢查資料品質、樣本外穩定性、交易成本、流動性與適用市場。
-
-## 來源
-
-- Wikipedia: [Reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning)
-- QuantInsti: [Reinforcement Learning in Trading](https://blog.quantinsti.com/reinforcement-learning-trading/)
-- Sutton, R. & Barto, A. (2018). *Reinforcement Learning: An Introduction* (2nd ed.). MIT Press.
-- Dr. Tom Starke, *Deep Reinforcement Learning in Trading*
 
 ## 相關主題
 - [[技術分析/XGBoost技術指標整合策略]] — 監督式 ML 在交易中的應用
@@ -151,3 +145,10 @@ RL 不是取代傳統技術分析或基本面分析，而是提供一個**自動
 - [[風險管理/回測過擬合Backtest-Overfitting]] — 回測過擬合通用框架
 - [[操作策略/交易策略回測與過擬合Backtesting-and-Overfitting]] — 回測框架
 - [[操作策略/交易系統體制適應策略Adaptive-Trading-System]] — 自適應交易系統
+
+## 來源
+
+- Wikipedia: [Reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning)
+- QuantInsti: [Reinforcement Learning in Trading](https://blog.quantinsti.com/reinforcement-learning-trading/)
+- Sutton, R. & Barto, A. (2018). *Reinforcement Learning: An Introduction* (2nd ed.). MIT Press.
+- Dr. Tom Starke, *Deep Reinforcement Learning in Trading*

@@ -1,5 +1,5 @@
 ---
-title: "二階與三階Greeks進階 Vanna Vomma Charm"
+title: 二階與三階 Greeks 進階：Vanna、Vomma、Charm
 date: 2026-06-27
 category: "操作策略"
 ---
@@ -149,4 +149,4 @@ category: "操作策略"
 
 ## 來源
 
-- [Greeks (Finance) - Wikipedia](../raw/2026-06-27/Greeks-Second-Third-Order-Wikipedia.md)
+- [Greeks (Finance) - Wikipedia](../../raw/2026-06-27/Greeks-Second-Third-Order-Wikipedia.md)

@@ -129,5 +129,5 @@ TEJ用台指買權TXO202304C15500驗證：
 
 ## 來源
 
-- [Black-Scholes模型與Greeks](../raw/2026-05-03/Black-Scholes模型與Greeks.md)
-- [蘋果的啟示-Delta-Theta-Gamma](../raw/2026-05-03/蘋果的啟示-Delta-Theta-Gamma.md)
+- [Black-Scholes模型與Greeks](../../raw/2026-05-03/Black-Scholes模型與Greeks.md)
+- [蘋果的啟示-Delta-Theta-Gamma](../../raw/2026-05-03/蘋果的啟示-Delta-Theta-Gamma.md)

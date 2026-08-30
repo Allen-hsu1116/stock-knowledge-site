@@ -101,6 +101,6 @@ VaR的事後檢驗只需觀察超過VaR的次數是否接近預期（如95% VaR�
 
 ## 來源
 
-- [CVaR條件風險價值](../raw/2026-05-08/CVaR條件風險價值.md)
+- [CVaR條件風險價值](../../raw/2026-05-08/CVaR條件風險價值.md)
 - Rockafellar & Uryasev (2000). Optimization of Conditional Value-at-Risk
 - Artzner et al. (1999). Coherent Measures of Risk

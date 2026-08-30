@@ -100,6 +100,6 @@ ZigZag的**最後一段線會「事後修正」**！當價格創新高/新低時
 
 ## 來源
 
-- [將市場變動自動轉換為視覺效果的ZigZag指標 - OANDA Lab](../raw/2026-05-11/ZigZag鋸齒形指標OANDA.md)
-- [神奇ZigZag指標 - 匯匯文學](../raw/2026-05-11/ZigZag鋸齒形指標匯匯文學.md)
-- [6個觀察重點：Zig Zag 之字轉折指標 - TrendlinearXCash](../raw/2026-05-11/ZigZag鋸齒形指標峰谷高低TrendlinearXCash.md)
+- [將市場變動自動轉換為視覺效果的ZigZag指標 - OANDA Lab](../../raw/2026-05-11/ZigZag鋸齒形指標OANDA.md)
+- [神奇ZigZag指標 - 匯匯文學](../../raw/2026-05-11/ZigZag鋸齒形指標匯匯文學.md)
+- [6個觀察重點：Zig Zag 之字轉折指標 - TrendlinearXCash](../../raw/2026-05-11/ZigZag鋸齒形指標峰谷高低TrendlinearXCash.md)

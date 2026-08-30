@@ -153,6 +153,6 @@ Step 6：賣出紀律
 
 ## 來源
 
-- [CANSLIM選股法 — StockFeel](../raw/2026-05-18/CANSLIM選股法-StockFeel.md)
-- [RS線舉例說明 — 尼克萊](../raw/2026-05-18/RS線舉例說明-尼克萊.md)
-- [怎樣定義強勢股？RS、SCTR](../raw/2026-05-18/怎樣定義強勢股RS-SCTR.md)
+- [CANSLIM選股法 — StockFeel](../../raw/2026-05-18/CANSLIM選股法-StockFeel.md)
+- [RS線舉例說明 — 尼克萊](../../raw/2026-05-18/RS線舉例說明-尼克萊.md)
+- [怎樣定義強勢股？RS、SCTR](../../raw/2026-05-18/怎樣定義強勢股RS-SCTR.md)

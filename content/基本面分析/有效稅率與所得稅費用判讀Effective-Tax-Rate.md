@@ -130,6 +130,6 @@ ETR直接影響稅後淨利，進而影響EPS和估值：
 
 ## 來源
 
-- [有效稅率（ETR）是什麼？ - PG財經筆記](../raw/2026-05-17/effective-tax-rate-etr.md)
-- [一次就看懂所得稅之會計處理 - 小會計師的大視界](../raw/2026-05-17/effective-tax-rate-etr.md)
-- [盈餘品質指標 - 薛兆亨](../raw/2026-05-17/effective-tax-rate-etr.md)
+- [有效稅率（ETR）是什麼？ - PG財經筆記](../../raw/2026-05-17/effective-tax-rate-etr.md)
+- [一次就看懂所得稅之會計處理 - 小會計師的大視界](../../raw/2026-05-17/effective-tax-rate-etr.md)
+- [盈餘品質指標 - 薛兆亨](../../raw/2026-05-17/effective-tax-rate-etr.md)

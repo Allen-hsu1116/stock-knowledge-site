@@ -74,4 +74,4 @@ VA 更像是一種**投資目標設定方式**，而非策略或技巧。適合�
 
 ## 來源
 
-- [定期定值投資策略 Value Averaging 完整分析](../raw/2026-05-21/定期定值投資策略ValueAveraging完整分析.md)
+- [定期定值投資策略 Value Averaging 完整分析](../../raw/2026-05-21/定期定值投資策略ValueAveraging完整分析.md)

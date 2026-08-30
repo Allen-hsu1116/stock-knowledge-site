@@ -1,6 +1,6 @@
 ---
 category: "風險管理"
-title: "SQN系統品質指數System Quality Number"
+title: SQN 系統品質指數 System Quality Number
 date: 2026-06-13
 ---
 
@@ -84,4 +84,4 @@ SQN 適合拿來比較不同交易策略，例如突破、均值回歸、波段�
 
 ## 來源
 
-- [Van K. Tharp’s System Quality Number Function](../raw/2026-06-13/Hightick-Van-Tharp-System-Quality-Number.md)
+- [Van K. Tharp’s System Quality Number Function](../../raw/2026-06-13/Hightick-Van-Tharp-System-Quality-Number.md)

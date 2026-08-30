@@ -50,5 +50,9 @@ Bernstein預測全球伺服器市場2028年突破一兆美元，ASIC在XPU市場
 - Google TPU 9轉單聯發科不代表博通完全失去TPU業務，博通仍保留部分——競爭格局比想像中複雜
 - ASIC浪潮受益者不只晶片設計，也包括晶圓代工（台積電）、封測（日月光、Amkor）、記憶體（SK海力士、三星）、系統整合（Celestica）
 
+## 相關主題
+
+- [[風險管理/風險管理總論]]
+
 ## 來源
 - [OpenAI 9個月做出一顆晶片！Anthropic也加一！](https://www.youtube.com/watch?v=t-1KNMKunWE)

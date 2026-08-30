@@ -114,24 +114,6 @@ Thaler 用心理帳戶提出了**行為生命週期假說**（Behavioral Life Cy
 
 同樣一塊錢，放在「當期收入」帳戶裡就很容易花掉，放在「未來收入」帳戶裡就捨不得花。這解釋了為什麼退稅、年終獎金容易被花掉，而退休金很難被提前動用。
 
-## 實戰應用
-
-### 心理帳戶在股市交易的表現
-### 1. 獲利了結 vs 帳面虧損的分帳
-散戶把「已實現損益」和「未實現損益」放在不同心理帳戶。已實現的獲利是「真錢」，未實現的虧損是「帳面數字」。這就是 [[風險管理/處置效應進階實戰Disposition-Effect-Advanced|處置效應]] 的心理帳戶根源。
-
-### 2. 股息和資本利得的分帳
-很多投資人把「賺價差」和「領股息」當成兩個不同的帳戶。領到股息就覺得「賺到了」，即使股價已經跌掉更多。這就是「高殖利率陷阱」的心理基礎。
-
-### 3. 本金 vs 獲利的分帳
-賺到的錢被放入「賭場的錢」（House Money）帳戶，變得更容易冒險。這被稱為**賭場金效應**（House Money Effect）——你對「贏來的錢」比對「自己的錢」更不在乎。
-
-### 4. 不同來源資金的分帳
-融資借來的錢、退稅、繼承的錢、賣股獲利的錢——雖然都是錢，但心理帳戶把它們分開對待。借來的錢花得最謹慎（因為要還），退稅花得最隨便（因為「意外之財」）。
-
-### 5. 每日/每週/每月的分帳
-日內交易者把每天的損益當成獨立帳戶——今天賠了就想「今天回本」，導致過度交易。週末看整週績效可能比每天看更理性，但多數人做不到。
-
 ## 心理帳戶的成本
 
 ### 1. 資金配置效率降低
@@ -165,18 +147,36 @@ Thaler 用心理帳戶提出了**行為生命週期假說**（Behavioral Life Cy
 - [[風險管理/行為財務學總論Behavioral-Finance-Overview|行為財務學總論]] — 心理帳戶是行為財務學核心概念
 - [[風險管理/交易情緒控制與紀律心法Emotional-Control-and-Discipline-Mindset|交易情緒控制]] — 克服心理帳戶是情緒控制的一環
 
+## 實戰應用
+
+### 心理帳戶在股市交易的表現
+### 1. 獲利了結 vs 帳面虧損的分帳
+散戶把「已實現損益」和「未實現損益」放在不同心理帳戶。已實現的獲利是「真錢」，未實現的虧損是「帳面數字」。這就是 [[風險管理/處置效應進階實戰Disposition-Effect-Advanced|處置效應]] 的心理帳戶根源。
+
+### 2. 股息和資本利得的分帳
+很多投資人把「賺價差」和「領股息」當成兩個不同的帳戶。領到股息就覺得「賺到了」，即使股價已經跌掉更多。這就是「高殖利率陷阱」的心理基礎。
+
+### 3. 本金 vs 獲利的分帳
+賺到的錢被放入「賭場的錢」（House Money）帳戶，變得更容易冒險。這被稱為**賭場金效應**（House Money Effect）——你對「贏來的錢」比對「自己的錢」更不在乎。
+
+### 4. 不同來源資金的分帳
+融資借來的錢、退稅、繼承的錢、賣股獲利的錢——雖然都是錢，但心理帳戶把它們分開對待。借來的錢花得最謹慎（因為要還），退稅花得最隨便（因為「意外之財」）。
+
+### 5. 每日/每週/每月的分帳
+日內交易者把每天的損益當成獨立帳戶——今天賠了就想「今天回本」，導致過度交易。週末看整週績效可能比每天看更理性，但多數人做不到。
+
 ## 注意事項
 
 本文方法不保證未來績效；實際使用須檢查資料品質、樣本外穩定性、交易成本、流動性與適用市場。
-
-## 來源
-- Thaler, R. (1985). "Using Mental Accounting in a Theory of Consumer Behavior". Marketing Science, 4(3), 199-214.
-- Thaler, R. (1999). "Mental Accounting Matters". Journal of Behavioral Decision Making, 12(3), 183-206.
-- Shefrin, H. & Thaler, R. (1988). "The Behavioral Life-Cycle Hypothesis". Economic Inquiry, 26(4), 609-643.
-- Prelec, D. & Loewenstein, G. (1998). "The Red and the Black: Mental Accounting of Savings and Debt". Marketing Science, 17(1), 4-28.
 
 ## 相關主題
 - [[風險管理/前景理論Prospect-Theory]] — 心理帳戶的理論基礎
 - [[風險管理/處置效應進階實戰Disposition-Effect-Advanced]] — 心理帳戶最直接的交易應用
 - [[風險管理/行為財務學總論Behavioral-Finance-Overview]] — 行為財務學完整框架
 - [[風險管理/交易情緒控制與紀律心法Emotional-Control-and-Discipline-Mindset]] — 情緒管理實戰
+
+## 來源
+- Thaler, R. (1985). "Using Mental Accounting in a Theory of Consumer Behavior". Marketing Science, 4(3), 199-214.
+- Thaler, R. (1999). "Mental Accounting Matters". Journal of Behavioral Decision Making, 12(3), 183-206.
+- Shefrin, H. & Thaler, R. (1988). "The Behavioral Life-Cycle Hypothesis". Economic Inquiry, 26(4), 609-643.
+- Prelec, D. & Loewenstein, G. (1998). "The Red and the Black: Mental Accounting of Savings and Debt". Marketing Science, 17(1), 4-28.

@@ -1,5 +1,5 @@
 ---
-title: OBV能量潮指標量價趨勢判讀
+title: OBV 能量潮指標量價趨勢判讀
 date: 2026-05-04
 category: 技術分析
 ---
@@ -168,8 +168,8 @@ OBV 最有價值的用法之一——**領先價格突破**：
 
 ## 來源
 
-- [OBV 能量潮指標 - MBA智库百科](../raw/2026-05-04/OBV能量潮指標MBA百科.md)
+- [OBV 能量潮指標 - MBA智库百科](../../raw/2026-05-04/OBV能量潮指標MBA百科.md)
 - [用技術分析看BTC和ETH走勢 Day22: 能量潮指標 - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10208222)
-- [OBV指標完整教學：一篇搞懂能量潮用法、背離及關鍵買賣訊號 - Bowie錢錢投資日記](../raw/2026-05-16/OBV能量潮指標完整教學-Bowie.md)
-- [OBV 指標與公式完整解析：新手必學的成交量密碼 - 學吧LearningPa](../raw/2026-05-16/OBV能量潮指標新手必學-LearningPa.md)
-- [OBV能量潮指標是什麼？ - StockFeel股感](../raw/2026-05-16/OBV能量潮指標StockFeel版.md)
+- [OBV指標完整教學：一篇搞懂能量潮用法、背離及關鍵買賣訊號 - Bowie錢錢投資日記](../../raw/2026-05-16/OBV能量潮指標完整教學-Bowie.md)
+- [OBV 指標與公式完整解析：新手必學的成交量密碼 - 學吧LearningPa](../../raw/2026-05-16/OBV能量潮指標新手必學-LearningPa.md)
+- [OBV能量潮指標是什麼？ - StockFeel股感](../../raw/2026-05-16/OBV能量潮指標StockFeel版.md)

@@ -92,6 +92,6 @@ Mass = Summation(Value1, MassSum);
 
 ## 來源
 
-- [Mass Index - taindicators](../raw/2026-05-18/梅斯線Mass-Index質量指標.md)
-- [梅斯線 - MBA智庫百科](../raw/2026-05-18/梅斯線Mass-Index質量指標.md)
-- [程式交易≠Holy Grail - 梅斯線回測](../raw/2026-05-18/梅斯線Mass-Index質量指標.md)
+- [Mass Index - taindicators](../../raw/2026-05-18/梅斯線Mass-Index質量指標.md)
+- [梅斯線 - MBA智庫百科](../../raw/2026-05-18/梅斯線Mass-Index質量指標.md)
+- [程式交易≠Holy Grail - 梅斯線回測](../../raw/2026-05-18/梅斯線Mass-Index質量指標.md)

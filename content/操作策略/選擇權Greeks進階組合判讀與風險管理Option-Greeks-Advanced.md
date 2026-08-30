@@ -72,6 +72,27 @@ Vega 和 Theta 同源於時間價值，是一體兩面：
 | 鐵兀鷹 | 0 | -- | -- | + | 不看方向+波動率高+限風險 |
 | 買日曆價差 | 0 | + | + | + | 不看方向+低IV+收Theta |
 
+## 進階觀念
+
+### Vanna 和 Charm：二階 Greeks
+
+- **Vanna** = ∂Delta/∂IV = ∂Vega/∂S：IV 變動對 Delta 的影響
+  - IV 上升 → 價外 Delta 變大，價內 Delta 變小
+  - 暴跌時 Put Delta 加速變大（IV飆升 + 價格下跌雙重效果）
+
+- **Charm** = ∂Delta/∂t：時間流逝對 Delta 的影響
+  - 價內 Delta → 1，價外 Delta → 0
+  - 賣價外選擇權最後幾天特別安穩的原因
+
+### Greeks 時間演化
+
+| Greek | 趨近到期 | 實戰意義 |
+|-------|---------|---------|
+| Delta | 價內→1，價外→0 | 越接近到期越兩極化 |
+| Gamma | 價平急速放大 | 到期前 Gamma 爆炸 |
+| Theta | 價平加速衰減 | 賣方最後幾天 Theta 最大 |
+| Vega | 逐漸縮小 | 遠月 Vega 大，近月 Vega 小 |
+
 ## 實戰應用
 
 ### Delta Neutral 動態調整
@@ -126,27 +147,6 @@ Delta Neutral 不是設好就忘，需要持續 Rebalance：
 | 高波動+急跌 | 賣 Call+買 Put | 買 Call（Vega虧損） |
 | 高波動+盤整 | 賣 Iron Condor | 買 Straddle（Theta虧損） |
 
-## 進階觀念
-
-### Vanna 和 Charm：二階 Greeks
-
-- **Vanna** = ∂Delta/∂IV = ∂Vega/∂S：IV 變動對 Delta 的影響
-  - IV 上升 → 價外 Delta 變大，價內 Delta 變小
-  - 暴跌時 Put Delta 加速變大（IV飆升 + 價格下跌雙重效果）
-
-- **Charm** = ∂Delta/∂t：時間流逝對 Delta 的影響
-  - 價內 Delta → 1，價外 Delta → 0
-  - 賣價外選擇權最後幾天特別安穩的原因
-
-### Greeks 時間演化
-
-| Greek | 趨近到期 | 實戰意義 |
-|-------|---------|---------|
-| Delta | 價內→1，價外→0 | 越接近到期越兩極化 |
-| Gamma | 價平急速放大 | 到期前 Gamma 爆炸 |
-| Theta | 價平加速衰減 | 賣方最後幾天 Theta 最大 |
-| Vega | 逐漸縮小 | 遠月 Vega 大，近月 Vega 小 |
-
 ## 注意事項
 
 1. **Greeks 是瞬時值**：每一秒都在變化，不是靜態數字，需要持續監控和調整
@@ -176,4 +176,4 @@ Delta Neutral 不是設好就忘，需要持續 Rebalance：
 
 ## 來源
 
-- [選擇權Greeks進階組合判讀與風險管理](../raw/2026-05-10/選擇權Greeks進階組合判讀與風險管理.md)
+- [選擇權Greeks進階組合判讀與風險管理](../../raw/2026-05-10/選擇權Greeks進階組合判讀與風險管理.md)

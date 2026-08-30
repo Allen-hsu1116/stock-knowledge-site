@@ -7,7 +7,7 @@ category: "技術分析"
 
 > Marc Chaikin 設計的波動率指標，用高低價差的 EMA 變化率衡量波動程度——不是像 ATR 那樣看絕對波動大小，而是看波動「正在擴大還是收縮」。
 
-## 什麼是 Chaikin Volatility
+## 核心概念
 
 Chaikin Volatility（CHV）是由 Marc Chaikin 開發的技術指標，用來衡量市場波動程度的變化。與 [[技術分析/ATR平均真實波幅-Average-True-Range|ATR（平均真實波動幅度）]]不同，ATR 衡量波動的「絕對大小」，CHV 衡量波動的「變化率」——波動正在加速還是減速。
 
@@ -92,7 +92,33 @@ CHV = (EMA_HL(今日) - EMA_HL(m日前)) / EMA_HL(m日前) × 100
 - CHV 衡量標的高低價差的變化率
 - VVIX 是市場層級情緒指標，CHV 是個股或指數層級技術指標
 
-## 實戰策略
+## 與 Chaikin 指標家族的關係
+
+Marc Chaikin 設計了一系列指標，知識庫中已有的：
+
+- [[技術分析/Chaikin-Money-Flow佳慶資金流量指標|Chaikin Money Flow (CMF)]] — 用收盤位置×成交量衡量資金流向
+- [[技術分析/Chaikin-Oscillator佳慶震盪指標|Chaikin Oscillator]] — A/D 線的 MACD 版
+
+CHV 與 CMF/CO 的差異：
+- CMF 和 CO 衡量「資金流向」（用成交量）
+- CHV 衡量「波動率變化」（用高低價差）
+- 三者可以組合使用：CMF 看資金方向 + CHV 看波動狀態
+
+## 相關文章
+
+- [[技術分析/ATR平均真實波幅-Average-True-Range|ATR 平均真實波幅]] — 波動率絕對值指標，CHV 的互補
+- [[技術分析/布林通道Bollinger-Bands三軌八型態|布林通道 Bollinger Bands]] — 用標準差衡量波動的視覺化工具
+- [[技術分析/Chaikin-Money-Flow佳慶資金流量指標|Chaikin Money Flow]] — 同作者的資金流向指標
+- [[技術分析/Chaikin-Oscillator佳慶震盪指標|Chaikin Oscillator]] — 同作者的震盪指標
+- [[技術分析/TTM-Squeeze壓縮指標實戰判讀|TTM Squeeze]] — 波動壓縮偵測指標，可與 CHV 搭配
+- [[風險管理/GARCH模型與波動率預測GARCH-Model-and-Volatility-Forecasting|GARCH 模型]] — 波動率的統計建模方法
+- [[風險管理/波動率的波動率VVIX-Volatility-of-Volatility|VVIX]] — 波動率的波動率
+
+---
+
+*標籤：#技術分析 #波動率指標 #Marc-Chaikin #壓縮突破 #背離訊號*
+
+## 實戰應用
 
 ### 策略 1：壓縮突破
 
@@ -115,19 +141,7 @@ CHV = (EMA_HL(今日) - EMA_HL(m日前)) / EMA_HL(m日前) × 100
 3. CHV 急劇暴衝 = 可能過熱，考慮 [[操作策略/分批停利策略Partial-Exit-Strategy|分批停利]]
 4. CHV 背離價格 = 警訊，加強 [[風險管理/移動停利停損Trailing-Stop|移動停利]]
 
-## 與 Chaikin 指標家族的關係
-
-Marc Chaikin 設計了一系列指標，知識庫中已有的：
-
-- [[技術分析/Chaikin-Money-Flow佳慶資金流量指標|Chaikin Money Flow (CMF)]] — 用收盤位置×成交量衡量資金流向
-- [[技術分析/Chaikin-Oscillator佳慶震盪指標|Chaikin Oscillator]] — A/D 線的 MACD 版
-
-CHV 與 CMF/CO 的差異：
-- CMF 和 CO 衡量「資金流向」（用成交量）
-- CHV 衡量「波動率變化」（用高低價差）
-- 三者可以組合使用：CMF 看資金方向 + CHV 看波動狀態
-
-## 優缺點
+## 注意事項
 
 **優點**：
 - 捕捉波動率轉折——領先價格轉折的早期訊號
@@ -142,35 +156,11 @@ CHV 與 CMF/CO 的差異：
 - 單獨使用效果有限——必須搭配趨勢指標和量能確認
 - 極端行情下失真——連續漲停/跌停時高低價差失真
 
-## 相關文章
-
-- [[技術分析/ATR平均真實波幅-Average-True-Range|ATR 平均真實波幅]] — 波動率絕對值指標，CHV 的互補
-- [[技術分析/布林通道Bollinger-Bands三軌八型態|布林通道 Bollinger Bands]] — 用標準差衡量波動的視覺化工具
-- [[技術分析/Chaikin-Money-Flow佳慶資金流量指標|Chaikin Money Flow]] — 同作者的資金流向指標
-- [[技術分析/Chaikin-Oscillator佳慶震盪指標|Chaikin Oscillator]] — 同作者的震盪指標
-- [[技術分析/TTM-Squeeze壓縮指標實戰判讀|TTM Squeeze]] — 波動壓縮偵測指標，可與 CHV 搭配
-- [[風險管理/GARCH模型與波動率預測GARCH-Model-and-Volatility-Forecasting|GARCH 模型]] — 波動率的統計建模方法
-- [[風險管理/波動率的波動率VVIX-Volatility-of-Volatility|VVIX]] — 波動率的波動率
-
----
-
-*標籤：#技術分析 #波動率指標 #Marc-Chaikin #壓縮突破 #背離訊號*
-
-## 核心概念
-
-（待補充）
-
-## 實戰應用
-
-（待補充）
-
-## 注意事項
-
-（待補充）
-
 ## 相關主題
 
 （待補充）
+
+- [[技術分析/技術分析總論]]
 
 ## 來源
 

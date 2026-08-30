@@ -12,7 +12,7 @@ tags:
 
 > MES回答的不是「這檔股票自己最慘時跌多少」，而是「市場最慘時它平均跌多少」。危機來時還在拿平常Beta安慰自己，跟颱風天拿昨天晴天預報出門差不多。
 
-## 核心定義
+## 核心概念
 
 MES（Marginal Expected Shortfall）是個別機構或股票報酬在市場落入尾部壓力狀態時的條件期望：
 
@@ -91,7 +91,16 @@ $$
 
 其中$d$是危機期間市場跌幅，常見設定為約六個月下跌40%。近似法快速，但假設Beta在危機中固定；模擬法可加入波動率聚集、相關性變動與路徑依賴。
 
-## 台股實戰用法
+## 實戰檢查清單
+
+- [ ] 市場基準與尾部門檻事前固定
+- [ ] 使用還原權息價格
+- [ ] 檢查尾部樣本數與信賴區間
+- [ ] 同時觀察Beta、波動率與動態相關性
+- [ ] 比較不同窗口與市場基準的穩健性
+- [ ] 將MES當風險配置工具，不當單獨買賣訊號
+
+## 實戰應用
 
 ### 個股壓力脆弱度篩選
 
@@ -111,7 +120,7 @@ $$
 - MES惡化但一般Beta穩定：可能代表下行非對稱或尾部相關上升。
 - MES與流動性同時惡化：優先減少難以退出的高衝擊部位。
 
-## 限制與陷阱
+## 注意事項
 
 - **門檻敏感**：1%、5%或固定負報酬門檻會得到不同答案。
 - **樣本稀少**：越極端越貼近危機，估計卻越不穩。
@@ -120,24 +129,15 @@ $$
 - **非同步交易**：小型股或停牌股票的價格僵滯可能低估真實尾部共振。
 - **靜態失真**：正常期估出的平均相關性可能在危機時直接報廢。
 
-## 實戰檢查清單
-
-- [ ] 市場基準與尾部門檻事前固定
-- [ ] 使用還原權息價格
-- [ ] 檢查尾部樣本數與信賴區間
-- [ ] 同時觀察Beta、波動率與動態相關性
-- [ ] 比較不同窗口與市場基準的穩健性
-- [ ] 將MES當風險配置工具，不當單獨買賣訊號
-
-## 來源
-
-- [NYU V-Lab Systemic Risk Documentation](https://vlab.stern.nyu.edu/docs/srisk)
-- [Acharya et al., Measuring Systemic Risk, Review of Financial Studies](https://doi.org/10.1093/rfs/hhw088)
-- 本地研究素材：`raw/2026-08-28/Acharya等人-MES研究摘錄.md`
-
 ## 相關主題
 
 - [[風險管理/條件風險價值CVaR與期望短缺Expected-Shortfall|CVaR與Expected Shortfall]]
 - [[風險管理/GARCH模型與波動率預測GARCH-Model-and-Volatility-Forecasting|GARCH模型與波動率預測]]
 - [[風險管理/相關性崩潰Correlation-Breakdown|相關性崩潰]]
 - [[風險管理/策略壓力測試Stress-Testing|策略壓力測試]]
+
+## 來源
+
+- [NYU V-Lab Systemic Risk Documentation](https://vlab.stern.nyu.edu/docs/srisk)
+- [Acharya et al., Measuring Systemic Risk, Review of Financial Studies](https://doi.org/10.1093/rfs/hhw088)
+- 本地研究素材：`raw/2026-08-28/Acharya等人-MES研究摘錄.md`

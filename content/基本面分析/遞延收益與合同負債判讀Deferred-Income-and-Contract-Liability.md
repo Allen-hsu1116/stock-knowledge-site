@@ -98,5 +98,5 @@ category: "基本面分析"
 
 ## 來源
 
-- [遞延收益](../raw/2026-05-05/遞延收益Deferred-Income.md)
-- [合同負債](../raw/2026-05-05/合同負債Contract-Liability.md)
+- [遞延收益](../../raw/2026-05-05/遞延收益Deferred-Income.md)
+- [合同負債](../../raw/2026-05-05/合同負債Contract-Liability.md)

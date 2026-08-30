@@ -115,6 +115,6 @@ TRP 不按傳統資產類別分組，而是按**壓力情境下的行為**分桶
 
 ## 來源
 
-- [Tail Risk Parity - Wikipedia](../raw/2026-05-09/tail-risk-parity.md)
-- [Risk Parity - Wikipedia](../raw/2026-05-09/tail-risk-parity.md)
-- [Tail Risk - Wikipedia](../raw/2026-05-09/tail-risk-parity.md)
+- [Tail Risk Parity - Wikipedia](../../raw/2026-05-09/tail-risk-parity.md)
+- [Risk Parity - Wikipedia](../../raw/2026-05-09/tail-risk-parity.md)
+- [Tail Risk - Wikipedia](../../raw/2026-05-09/tail-risk-parity.md)

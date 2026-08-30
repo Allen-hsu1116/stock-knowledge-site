@@ -173,7 +173,7 @@ Acharya & Pedersen（2005）提出三個 β：
 
 ## 來源
 
-- [Market Microstructure - Wikipedia](../raw/2026-05-09/市場微結構與流動性定價.md)
+- [Market Microstructure - Wikipedia](../../raw/2026-05-09/市場微結構與流動性定價.md)
 - Larry Harris, "Trading and Exchanges: Market Microstructure for Practitioners", Oxford Press, 2003
 - O'Hara, Maureen, "Market Microstructure Theory", Blackwell, 1995
 - Glosten & Milgrom (1985), "Bid, Ask and Transaction Prices in a Specialist Market with Heterogeneously Informed Traders"

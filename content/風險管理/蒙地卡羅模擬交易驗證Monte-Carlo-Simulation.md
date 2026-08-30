@@ -28,6 +28,27 @@ category: "風險管理"
 | **Randomized（隨機出場）** | 保留原始進場，隨機化出場 | 檢測進場是否真有edge，抓過擬出場 |
 | **Permutation（置換）** | 打亂價格變動的統計特性，重建合成數據 | 策略穩健性壓力測試 |
 
+## Python 實作框架
+
+```python
+import numpy as np
+
+def monte_carlo_reshuffle(trades, n_sim=5000):
+    results = []
+    for _ in range(n_sim):
+        shuffled = np.random.permutation(trades)
+        equity = np.cumsum(shuffled)
+        mdd = np.max(np.maximum.accumulate(equity) - equity)
+        results.append(mdd)
+    return np.array(results)
+
+# 使用方式
+trades = np.array([...])  # 你的交易損益列表
+mdd_dist = monte_carlo_reshuffle(trades, 10000)
+print(f"95% MDD: {np.percentile(mdd_dist, 95):.1f}")
+print(f"破產機率: {np.mean(mdd_dist > 破產閾值):.2%}")
+```
+
 ## 實戰應用
 
 ### 1. 預估真實MDD（95%信賴區間）
@@ -108,27 +129,6 @@ category: "風險管理"
 - 以此設定保證金和資金準備
 - 不是用回測的 MDD，而是用蒙地卡羅 95% 的 MDD
 
-## Python 實作框架
-
-```python
-import numpy as np
-
-def monte_carlo_reshuffle(trades, n_sim=5000):
-    results = []
-    for _ in range(n_sim):
-        shuffled = np.random.permutation(trades)
-        equity = np.cumsum(shuffled)
-        mdd = np.max(np.maximum.accumulate(equity) - equity)
-        results.append(mdd)
-    return np.array(results)
-
-# 使用方式
-trades = np.array([...])  # 你的交易損益列表
-mdd_dist = monte_carlo_reshuffle(trades, 10000)
-print(f"95% MDD: {np.percentile(mdd_dist, 95):.1f}")
-print(f"破產機率: {np.mean(mdd_dist > 破產閾值):.2%}")
-```
-
 ## 相關主題
 
 - [[回測過擬合Backtest-Overfitting|回測過擬合 Backtest Overfitting]]
@@ -141,9 +141,9 @@ print(f"破產機率: {np.mean(mdd_dist > 破產閾值):.2%}")
 
 ## 來源
 
-- [蒙地卡羅模擬在程式交易中的應用 - OP投資理財學院](../raw/2026-05-01/蒙地卡羅模擬程式交易壓力測試.md)
-- [Monte Carlo Simulation Complete Guide](../raw/2026-05-01/MonteCarloSimulationCompleteGuide.md)
-- [Monte Carlo Practical Guide Strategy Validation](../raw/2026-05-01/MonteCarloPracticalGuideStrategyValidation.md)
-- [蒙特卡罗模拟法 - 知乎](../raw/2026-05-01/蒙特卡罗模拟法专业交易员.md)
-- [蒙地卡羅模擬程式交易壓力測試 - OP投資理財學院](../raw/2026-05-10/蒙地卡羅模擬程式交易壓力測試.md)
-- [活用蒙地卡羅法估算未來回落 - OANDA Lab](../raw/2026-05-10/蒙地卡羅法估算未來回落OANDA.md)
+- [蒙地卡羅模擬在程式交易中的應用 - OP投資理財學院](../../raw/2026-05-01/蒙地卡羅模擬程式交易壓力測試.md)
+- [Monte Carlo Simulation Complete Guide](../../raw/2026-05-01/MonteCarloSimulationCompleteGuide.md)
+- [Monte Carlo Practical Guide Strategy Validation](../../raw/2026-05-01/MonteCarloPracticalGuideStrategyValidation.md)
+- [蒙特卡罗模拟法 - 知乎](../../raw/2026-05-01/蒙特卡罗模拟法专业交易员.md)
+- [蒙地卡羅模擬程式交易壓力測試 - OP投資理財學院](../../raw/2026-05-10/蒙地卡羅模擬程式交易壓力測試.md)
+- [活用蒙地卡羅法估算未來回落 - OANDA Lab](../../raw/2026-05-10/蒙地卡羅法估算未來回落OANDA.md)

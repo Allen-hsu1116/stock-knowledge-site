@@ -80,4 +80,4 @@ VPT 背離是核心訊號：
 
 ## 來源
 
-- [Volume Price Trend - Wikipedia](../raw/2026-06-29/量價趨勢指標Volume-Price-Trend.md)
+- [Volume Price Trend - Wikipedia](../../raw/2026-06-29/量價趨勢指標Volume-Price-Trend.md)

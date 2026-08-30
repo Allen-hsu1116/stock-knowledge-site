@@ -1,5 +1,6 @@
 ---
 title: "Betting Against Beta (BAB) 做空Beta因子"
+category: "操作策略"
 ---
 
 # Betting Against Beta (BAB) 做空Beta因子
@@ -75,6 +76,13 @@ Frazzini & Pedersen 的核心理論：
 - **BAB vs [[基本面分析/效率市場假說Efficient-Market-Hypothesis|EMH]]**：BAB 是對 EMH 半強式效率的直接挑戰
 - **BAB vs 品質因子**：低Beta股票常具高品質特徵（穩定獲利、低槓桿）
 
+## 與投資哲學的連結
+
+- **Warren Buffett**：實質上是 BAB 策略的實踐者——偏好低波動、高品質、合理價格的股票
+- **Bob Dylan 基金（Bob Dylan 的投資組合）**：極度保守、低Beta、長期持有
+- **Risk Parity**：[[風險管理/風險預算Risk Budgeting|風險平價]] 策略天然傾向低Beta資產，與 BAB 理念一致
+- **All-Weather Portfolio**：橋水基金的全天候組合實質上大量配置低Beta資產
+
 ## 實戰應用
 ### 低Beta策略在台股
 - 台積電(2330) Beta 約 1.2-1.5，屬高Beta，但長期報酬極佳——BAB 因子在集中型市場可能失靈
@@ -104,13 +112,6 @@ Frazzini & Pedersen 的核心理論：
 - 低Beta不等於低風險：2020 年疫情時部分「低Beta」股票暴跌
 - Beta 是歷史估計，未來可能變化
 - 極端市場環境下 Beta 估計失效
-
-## 與投資哲學的連結
-
-- **Warren Buffett**：實質上是 BAB 策略的實踐者——偏好低波動、高品質、合理價格的股票
-- **Bob Dylan 基金（Bob Dylan 的投資組合）**：極度保守、低Beta、長期持有
-- **Risk Parity**：[[風險管理/風險預算Risk Budgeting|風險平價]] 策略天然傾向低Beta資產，與 BAB 理念一致
-- **All-Weather Portfolio**：橋水基金的全天候組合實質上大量配置低Beta資產
 
 ## 相關主題
 

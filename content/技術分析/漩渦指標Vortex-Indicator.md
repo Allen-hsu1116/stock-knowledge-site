@@ -81,4 +81,4 @@ category: "技術分析"
 
 ## 來源
 
-- [漩渦指標 — XQ官方部落格](../raw/2026-05-18/漩渦指標Vortex-Indicator.md)
+- [漩渦指標 — XQ官方部落格](../../raw/2026-05-18/漩渦指標Vortex-Indicator.md)

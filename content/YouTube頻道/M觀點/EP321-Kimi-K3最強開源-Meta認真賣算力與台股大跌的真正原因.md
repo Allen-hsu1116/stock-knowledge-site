@@ -40,5 +40,9 @@ title: "EP321 Kimi K3最強開源與Meta認真賣算力——台股大跌的真�
 - 台積電毛利率微降是新製程量產正常現象，不是基本面惡化
 - 模型最終是 commodity 但不代表 OpenAI 和 Anthropic 賺不到錢
 
+## 相關主題
+
+- [[風險管理/風險管理總論]]
+
 ## 來源
 - [EP321. Kimi K3 最強開源、Meta 認真要賣算力、台股要大崩盤了嗎 | M觀點](https://www.youtube.com/watch?v=lcA6hGaZsOM)

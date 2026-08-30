@@ -52,5 +52,9 @@ Leopold Aschenbrenner 的 Situational Awareness 基金被清算，部位被 Cita
 - 均值回歸不代表立即反彈，十年線五年線位置超級遠，短期內不認為會碰到
 - 後面可能還有餘波——台面下很多中小型基金也要做戰場整理
 
+## 相關主題
+
+- [[風險管理/風險管理總論]]
+
 ## 來源
 - [EP684](https://www.youtube.com/watch?v=AmYcb52jMTU)

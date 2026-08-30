@@ -142,7 +142,7 @@ F-Score 不建議單獨使用，最佳組合：
 
 ## 來源
 
-- [F-score是什麼？如何用來選股？— 市場先生](../raw/2026-05-12/Piotroski-F-Score-進階實戰.md)
-- [TQuant Lab F-score 策略 — TEJ台灣經濟新報](../raw/2026-05-12/Piotroski-F-Score-進階實戰.md)
-- [皮爾托斯基分數(F-score) — 鉅亨易策略](../raw/2026-05-12/Piotroski-F-Score-進階實戰.md)
+- [F-score是什麼？如何用來選股？— 市場先生](../../raw/2026-05-12/Piotroski-F-Score-進階實戰.md)
+- [TQuant Lab F-score 策略 — TEJ台灣經濟新報](../../raw/2026-05-12/Piotroski-F-Score-進階實戰.md)
+- [皮爾托斯基分數(F-score) — 鉅亨易策略](../../raw/2026-05-12/Piotroski-F-Score-進階實戰.md)
 - Piotroski, J. (2000). "Value Investing: The Use of Historical Financial Statement Information to Separate Winners from Losers"

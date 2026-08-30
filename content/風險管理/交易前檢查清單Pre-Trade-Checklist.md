@@ -137,7 +137,7 @@ Mark Douglas 在《Trading in the Zone》中強調：**一致性贏家與一般�
 
 ## 來源
 
-- [TheMarketMemo 簡易交易流程表](../raw/2026-05-15/交易前檢查清單Pre-Trade-Checklist.md)
-- [TradingView Capital.com Pre-Trade Checklist](../raw/2026-05-15/交易前檢查清單Pre-Trade-Checklist.md)
-- [Mark Douglas 七大一致性原則](../raw/2026-05-15/交易前檢查清單Pre-Trade-Checklist.md)
-- [Trader_Joe_Lee 交易紀律分析](../raw/2026-05-15/交易前檢查清單Pre-Trade-Checklist.md)
+- [TheMarketMemo 簡易交易流程表](../../raw/2026-05-15/交易前檢查清單Pre-Trade-Checklist.md)
+- [TradingView Capital.com Pre-Trade Checklist](../../raw/2026-05-15/交易前檢查清單Pre-Trade-Checklist.md)
+- [Mark Douglas 七大一致性原則](../../raw/2026-05-15/交易前檢查清單Pre-Trade-Checklist.md)
+- [Trader_Joe_Lee 交易紀律分析](../../raw/2026-05-15/交易前檢查清單Pre-Trade-Checklist.md)

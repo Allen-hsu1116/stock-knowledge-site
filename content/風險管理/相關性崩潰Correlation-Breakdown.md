@@ -178,9 +178,9 @@ VIX飆升時，個股之間的相關性急劇上升。這是因為VIX反映了�
 
 ## 來源
 
-- [分散投資 - MBA智库百科](../raw/2026-05-08/相關性崩潰Correlation-Breakdown.md)
-- [系統性風險 - MBA智库百科](../raw/2026-05-08/相關性崩潰Correlation-Breakdown.md)
-- [相關係數 - MBA智库百科](../raw/2026-05-08/相關性崩潰Correlation-Breakdown.md)
+- [分散投資 - MBA智库百科](../../raw/2026-05-08/相關性崩潰Correlation-Breakdown.md)
+- [系統性風險 - MBA智库百科](../../raw/2026-05-08/相關性崩潰Correlation-Breakdown.md)
+- [相關係數 - MBA智库百科](../../raw/2026-05-08/相關性崩潰Correlation-Breakdown.md)
 - Longin & Solnik (2001). "Extreme Correlation of International Equity Markets"
 - Ang & Chen (2002). "Asymmetric Correlations of Equity Portfolios"
 - Forbes & Rigobon (2002). "No Contagion, Only Interdependence: Measuring Stock Market Comovements"

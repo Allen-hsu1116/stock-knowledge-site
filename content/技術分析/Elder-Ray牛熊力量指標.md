@@ -23,6 +23,27 @@ category: "技術分析"
    - 公式：Bear Power = Low – 13日 EMA
    - 意義：空頭能把價格壓離價值共識多深
 
+## XScript 指標腳本
+
+```
+// 指標名稱：Elder-Ray Index (艾爾德射線 / 牛熊力量指標)
+// 理論基礎：Dr. Alexander Elder
+Input: Length(13, "EMA 計算週期");
+Variable: ValueEMA(0), BullPower(0), BearPower(0);
+
+// 1. 計算市場價值共識 (13 日 EMA)
+ValueEMA = XAverage(Close, Length);
+
+// 2. 計算多頭力量與空頭力量
+BullPower = High - ValueEMA;
+BearPower = Low - ValueEMA;
+
+// 3. 繪圖輸出
+Plot1(BullPower, "多頭力量(Bull)");
+Plot2(BearPower, "空頭力量(Bear)");
+Plot3(0, "價值共識(零軸)");
+```
+
 ## 實戰應用
 
 ### 最高勝率買點：多頭趨勢中的「空頭力竭」
@@ -46,27 +67,6 @@ Elder-Ray 是 [[三重濾網交易系統]] 中第二重濾網的理想工具：
 - 第二重：日線 Elder-Ray 找空頭力竭買點
 - 第三重：60分鐘線確認突破進場
 
-## XScript 指標腳本
-
-```
-// 指標名稱：Elder-Ray Index (艾爾德射線 / 牛熊力量指標)
-// 理論基礎：Dr. Alexander Elder
-Input: Length(13, "EMA 計算週期");
-Variable: ValueEMA(0), BullPower(0), BearPower(0);
-
-// 1. 計算市場價值共識 (13 日 EMA)
-ValueEMA = XAverage(Close, Length);
-
-// 2. 計算多頭力量與空頭力量
-BullPower = High - ValueEMA;
-BearPower = Low - ValueEMA;
-
-// 3. 繪圖輸出
-Plot1(BullPower, "多頭力量(Bull)");
-Plot2(BearPower, "空頭力量(Bear)");
-Plot3(0, "價值共識(零軸)");
-```
-
 ## 注意事項
 
 - **EMA 方向是前提**：不看EMA方向就讀Bull/Bear Power毫無意義，多頭趨勢中看空頭力竭，空頭趨勢中看多頭力竭
@@ -87,5 +87,5 @@ Plot3(0, "價值共識(零軸)");
 
 ## 來源
 
-- [Elder-Ray Index - XQ官方部落格](../raw/2026-04-30/Elder-Ray-Index牛熊力量指標.md)
-- [Elder-Ray Index 進階 - XQ官方部落格](../raw/2026-05-11/Elder-Ray-Index牛熊力量指標.md)
+- [Elder-Ray Index - XQ官方部落格](../../raw/2026-04-30/Elder-Ray-Index牛熊力量指標.md)
+- [Elder-Ray Index 進階 - XQ官方部落格](../../raw/2026-05-11/Elder-Ray-Index牛熊力量指標.md)

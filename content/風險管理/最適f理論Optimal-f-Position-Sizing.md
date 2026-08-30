@@ -130,6 +130,6 @@ Vince 建議使用 Optimal f 的一個分數，而非完整比例：
 
 ## 來源
 
-- [Kelly Criterion - Wikipedia](../raw/2026-05-09/Kelly-Criterion-Wikipedia.md)
+- [Kelly Criterion - Wikipedia](../../raw/2026-05-09/Kelly-Criterion-Wikipedia.md)
 - Ralph Vince, "Portfolio Management Formulas" (1990)
 - Ralph Vince, "The Mathematics of Money Management" (1992)

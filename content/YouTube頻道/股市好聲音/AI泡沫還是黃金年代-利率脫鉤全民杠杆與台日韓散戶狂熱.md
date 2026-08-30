@@ -51,10 +51,12 @@ Google想透過AI代理人重新奪回寶座：不只聊天要幫你做事——
 - 銀行買CDS避險代表借錢方也有違約風險
 - 散戶狂熱離職潮是市場過熱訊號之一
 
-## 來源
-
-- [這波漲去哪? 2026 AI泡沫還是AI黃金年代?](https://www.youtube.com/watch?v=HlGuKabtxg8)
-
 ## 相關主題
 
 - 股票知識庫索引
+
+- [[風險管理/風險管理總論]]
+
+## 來源
+
+- [這波漲去哪? 2026 AI泡沫還是AI黃金年代?](https://www.youtube.com/watch?v=HlGuKabtxg8)

@@ -78,5 +78,5 @@ category: "技術分析"
 
 ## 來源
 
-- [Relative Vigor Index - IFC Markets](../raw/2026-05-18/相對活力指標RVI.md)
-- [What Is The Relative Vigor Index - Fidelity](../raw/2026-05-18/相對活力指標RVI.md)
+- [Relative Vigor Index - IFC Markets](../../raw/2026-05-18/相對活力指標RVI.md)
+- [What Is The Relative Vigor Index - Fidelity](../../raw/2026-05-18/相對活力指標RVI.md)

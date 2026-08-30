@@ -96,4 +96,4 @@ $$\Delta y_t = \Delta x_t \cdot b + \alpha \cdot \hat{u}_{t-1} + \varepsilon_t$$
 
 ## 來源
 
-- [Cointegration - Wikipedia](../raw/2026-06-20/共整合檢定Cointegration-Wikipedia.md)
+- [Cointegration - Wikipedia](../../raw/2026-06-20/共整合檢定Cointegration-Wikipedia.md)

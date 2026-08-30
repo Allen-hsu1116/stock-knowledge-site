@@ -1,12 +1,14 @@
 ---
-title: Rough Heston粗糙Heston模型
+title: Rough Heston粗糙Heston模型 (Rough Affine Volatility)
 aliases: [Rough Heston Model, 粗糙Heston模型, Rough Affine Volatility, Volterra Heston]
+category: "操作策略"
 ---
 
 # Rough Heston粗糙Heston模型 (Rough Affine Volatility)
 
 
 > Rough Heston 把經典 Heston 的平方根變異數改成帶冪次記憶核的 Volterra 過程，在保留非負變異數、槓桿效應與仿射轉換結構的同時，讓波動率路徑具有 $H<1/2$ 的粗糙度；代價是模型不再有限維 Markov，普通 Riccati 方程也升級成分數階 Riccati 方程。
+
 ## 核心概念
 Rough Heston 把經典 Heston 的平方根變異數改成帶冪次記憶核的 Volterra 過程，在保留非負變異數、槓桿效應與仿射轉換結構的同時，讓波動率路徑具有 $H<1/2$ 的粗糙度；代價是模型不再有限維 Markov，普通 Riccati 方程也升級成分數階 Riccati 方程。
 
@@ -186,6 +188,28 @@ $$h(t)=\frac{1}{\Gamma(\alpha)}\int_0^t(t-s)^{\alpha-1}F(u,h(s))ds$$
 
 單日 RMSE 很小不代表模型很好。只代表優化器成功討好今天的報價，明天參數全部翻臉照樣算你倒楣。
 
+## 實戰檢查清單
+
+- 核 $K(t)$ 的正規化與參考文獻是否一致
+- 使用的是 $H$ 還是 $\alpha=H+1/2$
+- $\nu$ 是否因核正規化不同而不可直接比較
+- 分數階 Riccati 解是否通過 $\alpha\to1$ 的 Heston 極限測試
+- 特徵函數是否滿足 $\phi(0)=1$
+- 折現標的是否維持鞅性
+- 時間網格是否解析了 $t=0$ 附近的核奇異性
+- Markovian lift 的因子數是否足以覆蓋交易期限
+- 模型 IV 誤差是否小於 bid-ask，而不是只追求小數點後幻覺
+- 參數是否跨日穩定，且樣本外避險誤差有改善
+- 已知事件是否需要額外跳躍或確定時點衝擊
+
+## 關鍵啟示
+
+1. Rough Heston 是 Heston 的 Volterra 粗糙化，不只是把波動率參數調大
+2. $H=\alpha-1/2$ 控制局部粗糙度，$\alpha=1$ 時回到經典 Heston
+3. 模型雖非 Markov，仍保留仿射結構，普通 Riccati 方程改為分數階 Riccati 方程
+4. 相較 rBergomi，Rough Heston 更重視平方根變異數與特徵函數可計算性
+5. 真正風險不只在參數，而在卷積核、數值離散、曲面外插與缺少跳躍
+
 ## 實戰應用
 ### 短天期skew相對價值
 
@@ -223,28 +247,6 @@ Rough Heston 提供一套由 roughness、vol-of-vol 與槓桿相關性共同產�
 - **roughness估計有爭議**：市場微結構雜訊與時間聚合可能影響 $H$ 的估計
 - **核外插是模型假設**：超長期限資料不足時，記憶結構不是市場直接告訴你的
 - **校準快不等於避險好**：特徵函數能快速算香草價格，不代表路徑商品與動態 Greeks 自動正確
-
-## 實戰檢查清單
-
-- 核 $K(t)$ 的正規化與參考文獻是否一致
-- 使用的是 $H$ 還是 $\alpha=H+1/2$
-- $\nu$ 是否因核正規化不同而不可直接比較
-- 分數階 Riccati 解是否通過 $\alpha\to1$ 的 Heston 極限測試
-- 特徵函數是否滿足 $\phi(0)=1$
-- 折現標的是否維持鞅性
-- 時間網格是否解析了 $t=0$ 附近的核奇異性
-- Markovian lift 的因子數是否足以覆蓋交易期限
-- 模型 IV 誤差是否小於 bid-ask，而不是只追求小數點後幻覺
-- 參數是否跨日穩定，且樣本外避險誤差有改善
-- 已知事件是否需要額外跳躍或確定時點衝擊
-
-## 關鍵啟示
-
-1. Rough Heston 是 Heston 的 Volterra 粗糙化，不只是把波動率參數調大
-2. $H=\alpha-1/2$ 控制局部粗糙度，$\alpha=1$ 時回到經典 Heston
-3. 模型雖非 Markov，仍保留仿射結構，普通 Riccati 方程改為分數階 Riccati 方程
-4. 相較 rBergomi，Rough Heston 更重視平方根變異數與特徵函數可計算性
-5. 真正風險不只在參數，而在卷積核、數值離散、曲面外插與缺少跳躍
 
 ## 相關主題
 - [[操作策略/Heston隨機波動率模型Heston-Stochastic-Volatility-Model]]

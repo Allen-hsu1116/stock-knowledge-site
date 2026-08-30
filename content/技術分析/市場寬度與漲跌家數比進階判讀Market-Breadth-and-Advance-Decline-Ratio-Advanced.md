@@ -1,6 +1,6 @@
 ---
 category: "技術分析"
-title: 市場寬度與漲跌家數比進階判讀
+title: 市場寬度與漲跌家數比進階判讀 Market Breadth & Advance-Decline Ratio Advanced
 date: 2026-06-07
 ---
 

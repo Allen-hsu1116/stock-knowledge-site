@@ -66,4 +66,4 @@ MIRR 更保守也更實際。
 
 ## 來源
 
-- [內部報酬率IRR是什麼？優缺點分析 - OANDA Lab](../raw/2026-05-12/IRR優缺點與MIRR修正-OANDA.md)
+- [內部報酬率IRR是什麼？優缺點分析 - OANDA Lab](../../raw/2026-05-12/IRR優缺點與MIRR修正-OANDA.md)

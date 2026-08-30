@@ -109,7 +109,15 @@ Fama-French模型從學術走向實務，催生了整個因子投資產業：
 - **獲利因子**：高ROE公司在台股長期跑贏大盤，與品質因子重疊
 - **在地化因子**：Griffin（2002）研究顯示本地因子比全球因子更能解釋各國股票報酬，台股應用在地化因子數據更有效
 
-## 因子的爭議與局限
+
+
+1. **不要只看單一指標選股**：本益比低可能只是價值因子曝險，不代表真的好
+2. **了解自己的因子曝險**：重壓小型股+低本益比 = 承擔SMB+HML因子風險
+3. **因子分散比個股分散更重要**：單一因子可能長期失效（如價值因子2007-2020），多因子組合更穩健
+4. **因子輪動是進階技巧**：不同經濟週期不同因子表現不同，但擇時輪動極難
+5. **用因子模型做績效歸因**：你的選股報酬到底是Alpha還是因子Beta？回歸一下就知道
+
+## 注意事項
 
 ### 1. 因子是否為風險溢酬還是行為偏差
 
@@ -143,15 +151,7 @@ Fama-French模型從學術走向實務，催生了整個因子投資產業：
 
 > 相關頁面：[[風險管理/投資組合理論與分散投資的局限Portfolio-Theory-and-Diversification-Limits]] — Fama-French比CAPM更準確但仍無法解釋所有異象
 
-## 散戶實戰要點
-
-1. **不要只看單一指標選股**：本益比低可能只是價值因子曝險，不代表真的好
-2. **了解自己的因子曝險**：重壓小型股+低本益比 = 承擔SMB+HML因子風險
-3. **因子分散比個股分散更重要**：單一因子可能長期失效（如價值因子2007-2020），多因子組合更穩健
-4. **因子輪動是進階技巧**：不同經濟週期不同因子表現不同，但擇時輪動極難
-5. **用因子模型做績效歸因**：你的選股報酬到底是Alpha還是因子Beta？回歸一下就知道
-
-## 相關頁面
+## 相關主題
 
 - [[風險管理/詹森Alpha與特雷諾比率Jensen-Alpha-and-Treynor-Ratio]] — 用Fama-French三因子Alpha取代單因子Alpha評估選股能力
 - [[風險管理/因子風險管理Factor-Risk-Management]] — 因子曝險拆解、因子擁擠監控與多因子分散框架
@@ -169,10 +169,3 @@ Fama-French模型從學術走向實務，催生了整個因子投資產業：
 - Fama, E. F.; French, K. R. (2015). "A Five-Factor Asset Pricing Model". Journal of Financial Economics. 116: 1–22.
 - Carhart, M. M. (1997). "On Persistence in Mutual Fund Performance". The Journal of Finance. 52 (1): 57–82.
 - Kenneth French Data Library: [https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html)
-
-## 注意事項
-（待補充）
-
-
-## 相關主題
-（待補充）

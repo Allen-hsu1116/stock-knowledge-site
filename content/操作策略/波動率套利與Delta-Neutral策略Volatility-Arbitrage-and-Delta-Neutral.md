@@ -1,6 +1,6 @@
 ---
 category: "操作策略"
-title: 波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral
+title: 波動率套利與Delta Neutral策略
 created: 2026-05-10
 ---
 
@@ -223,6 +223,10 @@ Theta 成本 = Theta × 持有天數
 | 賣出鐵兀鷹 | 無/小 | Short | 正 | 負 | IV 高、預期盤整 |
 | [[跨式Straddle與勒式Strangle]] | 無 | Long | 負 | 正 | 大波動、方向不確定 |
 
+## 實戰應用
+
+實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。
+
 ## 注意事項
 
 1. **Delta Neutral 不等於零風險**：只是消除了方向風險，Gamma、Vega、Theta 風險仍然存在
@@ -258,7 +262,3 @@ Theta 成本 = Theta × 持有天數
 - [Greeks (Finance) - Wikipedia](https://en.wikipedia.org/wiki/Greeks_(finance))
 - [Kelly Criterion - Wikipedia](https://en.wikipedia.org/wiki/Kelly_criterion)
 - 綜合專業知識整理（2026-05-10）
-
-## 實戰應用
-
-實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。

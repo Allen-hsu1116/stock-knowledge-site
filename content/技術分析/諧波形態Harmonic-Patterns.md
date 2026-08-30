@@ -145,6 +145,13 @@ D點遠超X點，代表極端反轉。
 | Shark | 1.13~1.618 of XA | 0.886~1.13 of XA | 特殊結構 | 強 | 稀有 |
 | Cypher | 38.2%~61.8% of XA | 78.6% of XC | 回撤XC | 中強 | 中等 |
 
+## 諧波形態與其他型態的關係
+
+- 諧波形態是[[整理型態旗形三角旗形楔形三角形|三角形]]的進階版，用精確比例取代「大概像」
+- 與[[艾略特波浪理論Elliott-Wave-Theory|波浪理論]]相關但不相同——波浪理論看波數，諧波看比例
+- 與[[斐波那契回撤Fibonacci-Retracement|斐波那契回撤]]直接相關——諧波形態就是Fibonacci比例的具體應用
+- 與[[威科夫方法|威科夫方法]]互補——威科夫看主力行為，諧波看比例結構
+
 ## 實戰應用
 
 ### 辨識三步法
@@ -228,13 +235,6 @@ D點遠超X點，代表極端反轉。
 
 諧波型態是「預期型」交易法，需要耐心等待型態完成。不要預判D點位置就提早進場，寧可錯過也不要追。型態完成後的確認才是真正的觸發條件，不是斐波那契比率本身。
 
-## 諧波形態與其他型態的關係
-
-- 諧波形態是[[整理型態旗形三角旗形楔形三角形|三角形]]的進階版，用精確比例取代「大概像」
-- 與[[艾略特波浪理論Elliott-Wave-Theory|波浪理論]]相關但不相同——波浪理論看波數，諧波看比例
-- 與[[斐波那契回撤Fibonacci-Retracement|斐波那契回撤]]直接相關——諧波形態就是Fibonacci比例的具體應用
-- 與[[威科夫方法|威科夫方法]]互補——威科夫看主力行為，諧波看比例結構
-
 ## 相關主題
 
 - [[斐波那契回撤Fibonacci-Retracement]]
@@ -251,10 +251,10 @@ D點遠超X點，代表極端反轉。
 
 ## 來源
 
-- [諧波形態Harmonic Patterns](../raw/2026-05-04/諧波形態Harmonic-Patterns.md)
-- [Harmonic Patterns: Gartley, Bat, Butterfly & Crab 2026 - TradingSim](../raw/2026-05-11/Harmonic-Patterns-諧波交易型態-TradingSim.md)
-- [學習和諧型態前 不能錯過的重要結構 - DA Labs](../raw/2026-05-11/諧波交易基礎AB等於CD結構-DA-Labs.md)
-- [蝴蝶型態：揭秘金融市場高勝率反轉訊號 - Marcon](../raw/2026-05-11/蝴蝶型態Butterfly-Pattern諧波交易-Marcon.md)
+- [諧波形態Harmonic Patterns](../../raw/2026-05-04/諧波形態Harmonic-Patterns.md)
+- [Harmonic Patterns: Gartley, Bat, Butterfly & Crab 2026 - TradingSim](../../raw/2026-05-11/Harmonic-Patterns-諧波交易型態-TradingSim.md)
+- [學習和諧型態前 不能錯過的重要結構 - DA Labs](../../raw/2026-05-11/諧波交易基礎AB等於CD結構-DA-Labs.md)
+- [蝴蝶型態：揭秘金融市場高勝率反轉訊號 - Marcon](../../raw/2026-05-11/蝴蝶型態Butterfly-Pattern諧波交易-Marcon.md)
 - Gartley, H.M. (1935). Profits in the Stock Market
 - Pesavento, Larry. Fibonacci Ratios with Pattern Recognition
 - Carney, Scott M. The Harmonic Trader (1999)

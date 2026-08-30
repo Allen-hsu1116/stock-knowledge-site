@@ -83,4 +83,4 @@ PPO 最大優勢是跨標的比較：
 
 ## 來源
 
-- [StockCharts ChartSchool: Percentage Price Oscillator PPO](../raw/2026-06-15/PPO百分比價格震盪指標-StockCharts.md)
+- [StockCharts ChartSchool: Percentage Price Oscillator PPO](../../raw/2026-06-15/PPO百分比價格震盪指標-StockCharts.md)

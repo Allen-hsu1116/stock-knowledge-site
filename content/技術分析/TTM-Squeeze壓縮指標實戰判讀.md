@@ -88,5 +88,5 @@ TradingView上通常以紅/橙/黃色圓點區分多層壓縮。
 
 ## 來源
 
-- [TTM Squeeze壓縮指標實戰判讀](../raw/2026-05-18/TTM-Squeeze壓縮指標實戰判讀.md)
+- [TTM Squeeze壓縮指標實戰判讀](../../raw/2026-05-18/TTM-Squeeze壓縮指標實戰判讀.md)
 - John Carter, *Mastering the Trade* (3rd Edition)

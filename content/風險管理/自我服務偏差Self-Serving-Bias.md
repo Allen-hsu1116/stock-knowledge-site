@@ -112,4 +112,4 @@ category: "風險管理"
 
 ## 來源
 
-- [自我服務偏差 - MBA智库百科](../raw/2026-05-08/自我服務偏差Self-Serving-Bias-mbalib.md)
+- [自我服務偏差 - MBA智库百科](../../raw/2026-05-08/自我服務偏差Self-Serving-Bias-mbalib.md)

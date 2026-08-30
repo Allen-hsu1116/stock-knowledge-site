@@ -110,4 +110,4 @@ MCTR（Marginal Contribution to Risk）是風險歸因的核心工具，量化�
 
 ## 來源
 
-- [Risk Attribution: How to Decompose and Explain the Risk and Return of Your Investments](../raw/2026-05-09/Risk-Attribution風險歸因分解.md)
+- [Risk Attribution: How to Decompose and Explain the Risk and Return of Your Investments](../../raw/2026-05-09/Risk-Attribution風險歸因分解.md)

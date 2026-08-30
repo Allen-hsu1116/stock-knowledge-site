@@ -119,10 +119,10 @@ TEJ 回測（2013-2021，全上市櫃）：
 - [[選股流程系統化總論Stock-Screening-Systematic-Approach]]
 
 ## 來源
-- [StockFeel：營收成長率是什麼？YoY、QoQ、MoM 怎麼算？](../raw/2026-05-17/營收成長率YoY-QoQ-MoM完整教學-StockFeel.md)
-- [價值思維學堂：營收成長率是什麼？](../raw/2026-05-17/營收成長率判讀企業獲利-價值思維學堂.md)
-- [羊羽：為何營收創新高，股價跌？營收動能選股策略](../raw/2026-05-17/營收創新高股價跌原因與動能選股策略-羊羽.md)
-- [Yahoo商益：上市櫃每月營收如何查？轉機股](../raw/2026-05-17/月營收看門道查詢優缺點轉機股-Yahoo.md)
+- [StockFeel：營收成長率是什麼？YoY、QoQ、MoM 怎麼算？](../../raw/2026-05-17/營收成長率YoY-QoQ-MoM完整教學-StockFeel.md)
+- [價值思維學堂：營收成長率是什麼？](../../raw/2026-05-17/營收成長率判讀企業獲利-價值思維學堂.md)
+- [羊羽：為何營收創新高，股價跌？營收動能選股策略](../../raw/2026-05-17/營收創新高股價跌原因與動能選股策略-羊羽.md)
+- [Yahoo商益：上市櫃每月營收如何查？轉機股](../../raw/2026-05-17/月營收看門道查詢優缺點轉機股-Yahoo.md)
 - [財報狗：單月營收年增率](https://statementdog.com/explain/mSalesYOY.html)
 - [玉山證券：什麼是營收增長率？](https://www.esunsec.com.tw/article/post/69)
 - [CMoney：營收成長率 YoY 是什麼？](https://www.cmoney.tw/learn/course/0520/topic/762)

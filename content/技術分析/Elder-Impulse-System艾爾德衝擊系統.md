@@ -101,4 +101,4 @@ Elder 名言：**「進場謹慎、出場快速」**（Enter cautiously, exit fa
 
 ## 來源
 
-- [Elder Impulse System - StockCharts ChartSchool](../raw/2026-05-18/Elder-Impulse-System.md)
+- [Elder Impulse System - StockCharts ChartSchool](../../raw/2026-05-18/Elder-Impulse-System.md)

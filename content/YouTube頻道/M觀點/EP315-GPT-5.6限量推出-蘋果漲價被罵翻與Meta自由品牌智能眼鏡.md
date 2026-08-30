@@ -46,3 +46,7 @@ Meta推出「Meta Glasses」不再用雷朋聯名，改用自有品牌，價格�
 - [[YouTube頻道/M觀點/EP314-iPhone漲價-SpaceX估值拆解與AI工作流]]
 - [[YouTube頻道/M觀點/EP313-Google痛失AI大將-Fable5配方解密-Meta士氣崩盤與FSD入台]]
 - [[YouTube頻道/股市好聲音/蘋果漲價潮與科技通膨-美光暴噴16%費半獨強與中國電氣化長期抑制油價]]
+
+## 來源
+
+- [原始影片](https://www.youtube.com/watch?v=NUeoDgrEiG4)

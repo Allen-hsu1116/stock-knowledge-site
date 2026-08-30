@@ -124,6 +124,6 @@ Plot3(38.2, "趨勢界線");
 
 ## 來源
 
-- [斬波指標 Choppiness Index (CHOP) - XQ](../raw/2026-05-18/斬波指標Choppiness-Index-XQ.md)
-- [Choppiness Index Indicator: Trading Guide - TradingSim](../raw/2026-05-18/Choppiness-Index-TradingSim.md)
-- [Choppiness Index (CHOP) - TradingView](../raw/2026-05-18/Choppiness-Index-TradingView.md)
+- [斬波指標 Choppiness Index (CHOP) - XQ](../../raw/2026-05-18/斬波指標Choppiness-Index-XQ.md)
+- [Choppiness Index Indicator: Trading Guide - TradingSim](../../raw/2026-05-18/Choppiness-Index-TradingSim.md)
+- [Choppiness Index (CHOP) - TradingView](../../raw/2026-05-18/Choppiness-Index-TradingView.md)

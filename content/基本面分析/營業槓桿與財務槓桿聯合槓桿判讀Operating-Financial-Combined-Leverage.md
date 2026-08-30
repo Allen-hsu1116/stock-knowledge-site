@@ -129,5 +129,5 @@ DCL = DOL × DFL = 邊際貢獻 / (EBIT - I)
 
 ## 來源
 
-- [經營槓桿 Operating Leverage](../raw/2026-05-05/經營槓桿Operating-Leverage.md)
-- [財務槓桿 Financial Leverage](../raw/2026-05-05/財務槓桿Financial-Leverage.md)
+- [經營槓桿 Operating Leverage](../../raw/2026-05-05/經營槓桿Operating-Leverage.md)
+- [財務槓桿 Financial Leverage](../../raw/2026-05-05/財務槓桿Financial-Leverage.md)

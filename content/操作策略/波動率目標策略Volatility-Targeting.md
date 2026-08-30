@@ -84,6 +84,21 @@ $$\sigma_t^2 = \omega + \alpha r_{t-1}^2 + \beta \sigma_{t-1}^2$$
 - 加入市場狀態判斷（如 VIX 水準、趨勢方向）
 - 只在特定條件下啟動波動率目標（例如 VIX > 30 才減碼）
 
+## 台股實戰考量
+
+- 台股加權指數年化波動率長期約 15-20%，2026 年 AI 行情期間曾飆至 30%+
+- 散戶可用台指期或 0050/00631L 做 波動率目標
+- 台股有 7% 漲跌幅限制，波動率結構跟美股不同
+- 處置股制度影響調整能力，需納入流動性考量
+- 建議用周層級調整，搭配 [[技術分析/ATR平均真實波幅-Average-True-Range|ATR]] 輔助判斷
+
+## 與相關策略的比較
+
+- **vs 固定權重**：波動率目標風險更穩定，但需要主動調整
+- **vs 風險平價**：風險平價是多資產版本的波動率目標
+- **vs 凱利公式**：[[操作策略/凱利公式Kelly-Criterion最佳下注比例|凱利公式]]最大化長期成長率，波動率目標控制風險水準，兩者可結合
+- **vs 均值回歸**：波動率目標利用波動率聚集（持續性），均值回歸利用價格反轉
+
 ## 實戰應用
 
 ### 實戰參數選擇
@@ -127,27 +142,6 @@ $$\sigma_t^2 = \omega + \alpha r_{t-1}^2 + \beta \sigma_{t-1}^2$$
 - 效果取決於波動率聚集是否持續
 - 如果波動率突然從低檔跳到極高（跳躍風險），策略來不及反應
 
-## 台股實戰考量
-
-- 台股加權指數年化波動率長期約 15-20%，2026 年 AI 行情期間曾飆至 30%+
-- 散戶可用台指期或 0050/00631L 做 波動率目標
-- 台股有 7% 漲跌幅限制，波動率結構跟美股不同
-- 處置股制度影響調整能力，需納入流動性考量
-- 建議用周層級調整，搭配 [[技術分析/ATR平均真實波幅-Average-True-Range|ATR]] 輔助判斷
-
-## 與相關策略的比較
-
-- **vs 固定權重**：波動率目標風險更穩定，但需要主動調整
-- **vs 風險平價**：風險平價是多資產版本的波動率目標
-- **vs 凱利公式**：[[操作策略/凱利公式Kelly-Criterion最佳下注比例|凱利公式]]最大化長期成長率，波動率目標控制風險水準，兩者可結合
-- **vs 均值回歸**：波動率目標利用波動率聚集（持續性），均值回歸利用價格反轉
-
-## 來源
-- Moreira & Muir (2017), "Volatility-Managed Portfolios", Journal of Finance
-- Fleming, Kirby & Ostdiek (2001/2003), "The Economic Value of Volatility Timing"
-- Barroso & Santa-Clara (2015), "Momentum has its moments", Journal of Financial Economics
-- Moskowitz & Grinblatt (1999), "Do Industries Explain Momentum?"
-
 ## 相關主題
 - [[風險管理/GARCH模型與波動率預測GARCH-Model-and-Volatility-Forecasting|GARCH 模型與波動率預測]]
 - [[風險管理/風險平價進階實戰Risk-Parity-Advanced-Practice|風險平價進階實戰]]
@@ -155,3 +149,9 @@ $$\sigma_t^2 = \omega + \alpha r_{t-1}^2 + \beta \sigma_{t-1}^2$$
 - [[操作策略/凱利公式Kelly-Criterion最佳下注比例|凱利公式]]
 - [[操作策略/交易成本分析Transaction-Cost-Analysis|交易成本分析]]
 - [[技術分析/ATR平均真實波幅-Average-True-Range|ATR 平均真實波幅]]
+
+## 來源
+- Moreira & Muir (2017), "Volatility-Managed Portfolios", Journal of Finance
+- Fleming, Kirby & Ostdiek (2001/2003), "The Economic Value of Volatility Timing"
+- Barroso & Santa-Clara (2015), "Momentum has its moments", Journal of Financial Economics
+- Moskowitz & Grinblatt (1999), "Do Industries Explain Momentum?"

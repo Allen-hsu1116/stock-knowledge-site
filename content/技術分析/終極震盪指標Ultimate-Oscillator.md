@@ -81,5 +81,5 @@ Larry Williams 認為所有震盪指標都對參數選擇極度敏感——不�
 
 ## 來源
 
-- [終極震盪指標 — taindicators](../raw/2026-05-18/終極震盪指標Ultimate-Oscillator.md)
-- [Ultimate Oscillator 詳細解讀 — hillstrader](../raw/2026-05-18/終極震盪指標Ultimate-Oscillator.md)
+- [終極震盪指標 — taindicators](../../raw/2026-05-18/終極震盪指標Ultimate-Oscillator.md)
+- [Ultimate Oscillator 詳細解讀 — hillstrader](../../raw/2026-05-18/終極震盪指標Ultimate-Oscillator.md)

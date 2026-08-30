@@ -7,7 +7,7 @@ category: "風險管理"
 
 > 用年化報酬除以平均年度回撤衡量風險調整報酬——Calmar 的「平均版」，不看單一最壞回撤而是看每年回撤的平均值。
 
-## 什麼是 Sterling Ratio
+## 核心概念
 
 Sterling Ratio 是風險調整報酬指標，由 Deane Sterling Jones 於 1981 年提出。與 [[風險管理/Calmar比率與最大回撤分析Calmar-Ratio-and-Maximum-Drawdown|Calmar比率]] 類似都是用回撤做分母，但關鍵差異在於：
 
@@ -70,19 +70,16 @@ SR = (Annual Portfolio Return - Annual Risk-Free Rate) / Average Largest Drawdow
 - **SR > 3.0**：頂級策略
 - **SR < 0.5**：風險報酬權衡差，回撤太大相對於報酬
 
-## 優缺點
+## 與回撤分析體系的關聯
 
-**優點**：
-- 平均回撤比最大回撤更穩定——不受單一極端事件扭曲
-- 更貼近投資者「常態體感」——每年都會經歷回撤，平均更有意義
-- 適合評估長期運作的策略，樣本越多越準確
+Sterling 是回撤分析體系的一環：
 
-**缺點**：
-- 定義不統一——原始版和現代版結果不同，跨來源比較要小心
-- 10% 固定無風險利率過時——1981 年時 T-Bill 10%，現在利率環境完全不同
-- 平均回掩蓋極端風險——如果某年回撤 50% 但其他年回撤都 3%，平均值會稀釋那 50% 的恐怖
-- 樣本期間敏感——只有 2-3 年的數據算平均回撤不夠穩健
-- 不如 Calmar 直覺——最大回撤是「最多虧多少」，平均回撤意義較模糊
+- [[風險管理/回撤分析進階Drawdown-Analysis-Advanced|回撤分析進階]] — 回撤有深度和持續時間兩個維度
+- [[風險管理/Calmar比率與最大回撤分析Calmar-Ratio-and-Maximum-Drawdown|Calmar比率]] — 用單一最大回撤
+- [[風險管理/CDaR條件回撤風險Conditional-Drawdown-at-Risk|CDaR]] — 用回撤的尾部期望值
+- [[風險管理/Ulcer-Index潰瘍指數與Martin-Ratio|Ulcer Index & Martin Ratio]] — 用回撤深度×持續時間
+
+Sterling 用「平均回撤」，在這個體系中介於 Calmar（最保守）和 CDaR（最激進）之間。
 
 ## 實戰應用
 
@@ -98,16 +95,25 @@ SR = (Annual Portfolio Return - Annual Risk-Free Rate) / Average Largest Drawdow
 - 算台股 ETF 的 Sterling 比率需要至少 3 年以上月度淨值數據
 - 適合用來比較 0050、006208 等大盤 ETF 和產業型 ETF 的風險調整報酬
 
-## 與回撤分析體系的關聯
+## 注意事項
 
-Sterling 是回撤分析體系的一環：
+**優點**：
+- 平均回撤比最大回撤更穩定——不受單一極端事件扭曲
+- 更貼近投資者「常態體感」——每年都會經歷回撤，平均更有意義
+- 適合評估長期運作的策略，樣本越多越準確
 
-- [[風險管理/回撤分析進階Drawdown-Analysis-Advanced|回撤分析進階]] — 回撤有深度和持續時間兩個維度
-- [[風險管理/Calmar比率與最大回撤分析Calmar-Ratio-and-Maximum-Drawdown|Calmar比率]] — 用單一最大回撤
-- [[風險管理/CDaR條件回撤風險Conditional-Drawdown-at-Risk|CDaR]] — 用回撤的尾部期望值
-- [[風險管理/Ulcer-Index潰瘍指數與Martin-Ratio|Ulcer Index & Martin Ratio]] — 用回撤深度×持續時間
+**缺點**：
+- 定義不統一——原始版和現代版結果不同，跨來源比較要小心
+- 10% 固定無風險利率過時——1981 年時 T-Bill 10%，現在利率環境完全不同
+- 平均回掩蓋極端風險——如果某年回撤 50% 但其他年回撤都 3%，平均值會稀釋那 50% 的恐怖
+- 樣本期間敏感——只有 2-3 年的數據算平均回撤不夠穩健
+- 不如 Calmar 直覺——最大回撤是「最多虧多少」，平均回撤意義較模糊
 
-Sterling 用「平均回撤」，在這個體系中介於 Calmar（最保守）和 CDaR（最激進）之間。
+## 相關主題
+
+（待補充）
+
+- [[風險管理/風險管理總論]]
 
 ## 來源
 - Wikipedia: Sterling ratio
@@ -116,15 +122,3 @@ Sterling 用「平均回撤」，在這個體系中介於 Calmar（最保守）�
 ---
 
 *標籤：#風險管理 #績效評估 #回撤分析 #風險調整報酬*
-
-## 核心概念
-
-（待補充）
-
-## 注意事項
-
-（待補充）
-
-## 相關主題
-
-（待補充）

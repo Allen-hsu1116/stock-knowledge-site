@@ -72,4 +72,4 @@ category: "風險管理"
 
 ## 來源
 
-- [沉沒成本謬誤 - MBA智庫百科](../raw/2026-05-08/沉沒成本謬誤Sunk-Cost-Fallacy.md)
+- [沉沒成本謬誤 - MBA智庫百科](../../raw/2026-05-08/沉沒成本謬誤Sunk-Cost-Fallacy.md)

@@ -109,4 +109,4 @@ category: "風險管理"
 
 ## 來源
 
-- [5 Steps to a Rule-Based Trading System That Works - Trading Heroes](../raw/2026-05-01/rule-based-trading-system-tradingheroes.md)
+- [5 Steps to a Rule-Based Trading System That Works - Trading Heroes](../../raw/2026-05-01/rule-based-trading-system-tradingheroes.md)

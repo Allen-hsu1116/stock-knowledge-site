@@ -104,6 +104,6 @@ Risk Reversal 是 [[Risk-Reversal風險逆轉策略|風險逆轉策略]] 的定�
 
 ## 來源
 
-- [隱含波動率偏斜與微笑](../raw/2026-08-07/隱含波動率偏斜與微笑Implied-Volatility-Skink-and-Smile.md)
+- [隱含波動率偏斜與微笑](../../raw/2026-08-07/隱含波動率偏斜與微笑Implied-Volatility-Skink-and-Smile.md)
 - Wikipedia: Volatility smile
 - Natenberg, S. (2015). Option Volatility and Pricing, 2nd ed. McGraw-Hill

@@ -87,35 +87,6 @@ VIX = 100 × √(σ² 30天)
 
 方差Swap的改良版——權重隨股價調整，避免標的下跌時權重過大，讓曝險更平穩。
 
-## 實戰用途
-
-### 1. 波動率投機
-
-機構用方差交換對整體市場波動率下注：
-
-- **做多方差**：預期事件驅動（財報、選舉、政策）會讓波動率跳升，買方差交換
-- **做空方差**：預期市場平靜，賣出方差交換收權利金
-
-### 2. 避險
-
-長期投資組合可以用方差交換避險：
-
-- 股票組合買入方差交換，當市場大跌波動率飆升時，方差交換獲利抵消組合虧損
-- 比 Protective Put 便宜，因為沒有 delta 成分
-- 相關頁面 [[尾部風險對沖Tail-Risk-Hedging]]、[[保護性賣權與Collar避險策略Protective-Put-and-Collar]]
-
-### 3. 相對價值
-
-方差交換與選擇權組合可以做相對價值套利：
-
-- 隱含方差 vs 已實現方差的利差——賣隱含買實現（或反向）
-- 不同到期日的方差交換利差——方差曲線套利
-- 相關頁面 [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]、[[波動率期限結構與曲面演化Volatility-Term-Structure-and-Surface-Evolution]]
-
-### 4. 離散度交易
-
-方差交換是離散度交易的基石，相關頁面 [[離散度交易Dispersion-Trading]]。
-
 ## 風險
 
 ### 跳空風險
@@ -155,7 +126,39 @@ OTC 衍生品的對手可能違約。相關頁面 [[交易對手風險Counterpar
 
 但實戰必須注意跳空風險、流動性、交易對手、模型假設等隱性陷阱。
 
-## 延伸閱讀
+## 實戰應用
+
+### 1. 波動率投機
+
+機構用方差交換對整體市場波動率下注：
+
+- **做多方差**：預期事件驅動（財報、選舉、政策）會讓波動率跳升，買方差交換
+- **做空方差**：預期市場平靜，賣出方差交換收權利金
+
+### 2. 避險
+
+長期投資組合可以用方差交換避險：
+
+- 股票組合買入方差交換，當市場大跌波動率飆升時，方差交換獲利抵消組合虧損
+- 比 Protective Put 便宜，因為沒有 delta 成分
+- 相關頁面 [[尾部風險對沖Tail-Risk-Hedging]]、[[保護性賣權與Collar避險策略Protective-Put-and-Collar]]
+
+### 3. 相對價值
+
+方差交換與選擇權組合可以做相對價值套利：
+
+- 隱含方差 vs 已實現方差的利差——賣隱含買實現（或反向）
+- 不同到期日的方差交換利差——方差曲線套利
+- 相關頁面 [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]、[[波動率期限結構與曲面演化Volatility-Term-Structure-and-Surface-Evolution]]
+
+### 4. 離散度交易
+
+方差交換是離散度交易的基石，相關頁面 [[離散度交易Dispersion-Trading]]。
+
+## 注意事項
+（待補充）
+
+## 相關主題
 
 - Demeterfi, Derman, Kamal, Zou (1999) "More Than You Ever Wanted to Know About Volatility Swaps"
 - Carr, Madan (2002) "Towards a Theory of Volatility Trading"
@@ -165,17 +168,6 @@ OTC 衍生品的對手可能違約。相關頁面 [[交易對手風險Counterpar
 - [[波動率期限結構與曲面演化Volatility-Term-Structure-and-Surface-Evolution]]
 - [[離散度交易Dispersion-Trading]]
 - [[隱含波動率IV與歷史波動率HV實戰判讀]]
-
-## 實戰應用
-（待補充）
-
-
-## 注意事項
-（待補充）
-
-
-## 相關主題
-（待補充）
 
 ## 來源
 

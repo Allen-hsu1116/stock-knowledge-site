@@ -215,12 +215,12 @@ SMMA 是 SMA 和 EMA 的中間體：比 SMA 更平滑、比 EMA 更穩定，專�
 
 ## 來源
 
-- [置換移動平均線是什麼？介紹DiNapoli與鱷魚線指標（Alligator）](../raw/2026-05-04/鱷魚線Alligator-Indicator置換移動平均線DMA.md)
-- [鱷魚線(Alligator)詳解2025：怎麼看趨勢、找入場點？](../raw/2026-05-04/鱷魚線Alligator-Indicator實戰四階段與碎形進場.md)
-- [鱷魚線四階段進場策略 - EBC金融集團](../raw/2026-05-11/鱷魚線Alligator四階段進場策略-EBC.md)
+- [置換移動平均線是什麼？介紹DiNapoli與鱷魚線指標（Alligator）](../../raw/2026-05-04/鱷魚線Alligator-Indicator置換移動平均線DMA.md)
+- [鱷魚線(Alligator)詳解2025：怎麼看趨勢、找入場點？](../../raw/2026-05-04/鱷魚線Alligator-Indicator實戰四階段與碎形進場.md)
+- [鱷魚線四階段進場策略 - EBC金融集團](../../raw/2026-05-11/鱷魚線Alligator四階段進場策略-EBC.md)
 - [什麼是鱷魚線技術指標？-大昌期貨](https://www.dcnfutures.tw/news/details.php?id=2052)
 - [Fractals trading and how to use the Alligator - Tradeciety](https://tradeciety.com/fractals-trading-use-alligator-williams-chaos-theory)
 - [置換移動平均線與鱷魚線 - OANDA Lab](https://www.oanda.com/bvi-ft/lab-education/technical_analysis/moving_average-displaced/)
 - [簡單易上手！鱷魚線指標的操作應用 - FX110](https://www.fx110.com.tw/special/9584)
 - [MoneyDJ 鱷魚線解釋頁](https://concords.moneydj.com/z/glossary/glexp_5140.djhtm)
-- [鱷魚線Alligator指標與碎形交易](../raw/2026-05-16/鱷魚線Alligator指標與碎形交易.md)
+- [鱷魚線Alligator指標與碎形交易](../../raw/2026-05-16/鱷魚線Alligator指標與碎形交易.md)

@@ -126,6 +126,6 @@ category: "技術分析"
 
 ## 來源
 
-- [盤整突破交易SOP](../raw/2026-05-18/盤整突破交易SOP.md)
+- [盤整突破交易SOP](../../raw/2026-05-18/盤整突破交易SOP.md)
 - Stan Weinstein, *Secrets for Profiting in Bull and Bear Markets*
 - Nicholas Darvas, *How I Made $2,000,000 in the Stock Market*

@@ -1,6 +1,6 @@
 ---
 category: "風險管理"
-title: 投資政策聲明IPS-Investment-Policy-Statement
+title: 投資政策聲明 IPS Investment Policy Statement
 date: 2026-06-12
 ---
 
@@ -19,6 +19,37 @@ date: 2026-06-12
 3. **行動規則**：資產偏離多少再平衡，跌到什麼程度減碼，什麼情況禁止交易。
 
 沒有 IPS 的投資人，市場一震就改策略；有 IPS 的投資人，至少知道自己是在偏離計畫，而不是把情緒包裝成「靈活應變」。
+
+```markdown
+## 目標
+- 主要目標：
+- 次要目標：
+- 時間框架：
+
+## 風險限制
+- 單筆最大風險：
+- 單月最大虧損：
+- 最大可承受回撤：
+- 單一標的上限：
+- 槓桿限制：
+
+## 配置規則
+- 核心部位：
+- 衛星部位：
+- 現金水位：
+- 再平衡門檻：
+
+## 交易規則
+- 可交易策略：
+- 禁止事項：
+- 停損與停利規則：
+
+## 檢討頻率
+- 每日：
+- 每週：
+- 每月：
+- 每季：
+```
 
 ## 實戰應用
 
@@ -60,34 +91,6 @@ date: 2026-06-12
 ```markdown
 # 我的投資政策聲明 IPS
 
-## 目標
-- 主要目標：
-- 次要目標：
-- 時間框架：
-
-## 風險限制
-- 單筆最大風險：
-- 單月最大虧損：
-- 最大可承受回撤：
-- 單一標的上限：
-- 槓桿限制：
-
-## 配置規則
-- 核心部位：
-- 衛星部位：
-- 現金水位：
-- 再平衡門檻：
-
-## 交易規則
-- 可交易策略：
-- 禁止事項：
-- 停損與停利規則：
-
-## 檢討頻率
-- 每日：
-- 每週：
-- 每月：
-- 每季：
 ```
 
 ## 注意事項
@@ -109,4 +112,4 @@ date: 2026-06-12
 
 ## 來源
 
-- [What is an Investment Policy Statement, and What Smart Investors Include in It](../raw/2026-06-12/投資政策聲明IPS-Investment-Policy-Statement.md)
+- [What is an Investment Policy Statement, and What Smart Investors Include in It](../../raw/2026-06-12/投資政策聲明IPS-Investment-Policy-Statement.md)

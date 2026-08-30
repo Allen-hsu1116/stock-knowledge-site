@@ -1,5 +1,6 @@
 ---
 title: "Avellaneda-Stoikov 做市模型 Avellaneda-Stoikov Market Making Model"
+category: "操作策略"
 ---
 
 # Avellaneda-Stoikov 做市模型 Avellaneda-Stoikov Market Making Model
@@ -96,6 +97,16 @@ Avellaneda-Stoikov 模型的核心貢獻是引入**效用函數**來動態調整
 - Avellaneda-Stoikov 描述做市商如何報價（定價面）
 - 兩者互補：Kyle 告訴你大單怎麼影響市場，A-S 告訴你做市商怎麼應對
 
+## 數學推導簡述
+
+1. 定義做市商財富過程 X(t) 和庫存 q(t)
+2. 目標函數：maximize E[U(X(T) + q(T)×S(T))]
+3. 用動態規劃求解 HJB 方程
+4. 假設指數效用函數可得解析解
+5. 最優報價為儲備價格 ± 偏移量 ± 庫存調整
+
+完整的 HJB 方程推導涉及隨機控制理論，有興趣可參考原論文。
+
 ## 實戰應用
 
 ### 1. 參數估計
@@ -127,16 +138,6 @@ Avellaneda-Stoikov 模型的核心貢獻是引入**效用函數**來動態調整
   - **了解外資行為**：外資大單執行時的造市商反應可預測
 - 台股漲跌幅限制（10%）使模型中的波動率假設需要修正
 - 處置股制度抽流動性，與 A-S 模型的連續交易假設衝突（可參考 [[YouTube頻道/股癌-Gooaye/EP684-Situational-Awareness清算事件與流動性陷阱|股癌 EP684 流動性陷阱]]）
-
-## 數學推導簡述
-
-1. 定義做市商財富過程 X(t) 和庫存 q(t)
-2. 目標函數：maximize E[U(X(T) + q(T)×S(T))]
-3. 用動態規劃求解 HJB 方程
-4. 假設指數效用函數可得解析解
-5. 最優報價為儲備價格 ± 偏移量 ± 庫存調整
-
-完整的 HJB 方程推導涉及隨機控制理論，有興趣可參考原論文。
 
 ## 相關主題
 

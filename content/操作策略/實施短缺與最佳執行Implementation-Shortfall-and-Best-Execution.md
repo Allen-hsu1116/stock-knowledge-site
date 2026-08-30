@@ -104,6 +104,14 @@ Almgren和Chriss（2000）提出的模型是最佳執行的經典框架：
 
 > 相關頁面：[[技術分析/Kyle-Lambda與價格衝擊模型Price-Impact-Model]] — Almgren-Chriss模型的詳細數學框架
 
+## IS vs VWAP vs TWAP 三種基準比較
+
+- **IS基準**：以決策價格為基準，衡量全部成本（延遲+執行+機會）。最全面但計算複雜，適合績效評估
+- **VWAP基準**：以當日成交量加權均價為基準，衡量相對市場均價的表現。最常用但只看當日，忽略決策到開盤的延遲成本
+- **TWAP基準**：以時間均勻分布的均價為基準。最簡單但完全不考慮成交量分佈，容易被市場看出意圖
+
+實務上，機構會同時用多種基準交叉驗證執行品質。
+
 ## 實戰應用
 
 ### 1. 交易成本分析（TCA）
@@ -144,15 +152,7 @@ Almgren和Chriss（2000）提出的模型是最佳執行的經典框架：
 
 > 相關頁面：[[技術分析/VWAP偏差與機構執行足跡VWAP-Deviation-Institutional-Footprint]]
 
-## IS vs VWAP vs TWAP 三種基準比較
 
-- **IS基準**：以決策價格為基準，衡量全部成本（延遲+執行+機會）。最全面但計算複雜，適合績效評估
-- **VWAP基準**：以當日成交量加權均價為基準，衡量相對市場均價的表現。最常用但只看當日，忽略決策到開盤的延遲成本
-- **TWAP基準**：以時間均勻分布的均價為基準。最簡單但完全不考慮成交量分佈，容易被市場看出意圖
-
-實務上，機構會同時用多種基準交叉驗證執行品質。
-
-## 散戶實戰要點
 
 1. **你的滑價就是你的IS**：市價單買在盤口高點、限價單沒成交錯過行情，都是實施短缺
 2. **大型股用市價、小型股用限價**：流動性好的大型股滑價小，市價單IS低；流動性差的小型股用市價單會被坑
@@ -160,7 +160,10 @@ Almgren和Chriss（2000）提出的模型是最佳執行的經典框架：
 4. **避開流動性低谷**：12:30-13:00午休前後、13:30前最後30分鐘是流動性最差的時段
 5. **懂IS就能讀懂機構足跡**：盤中看到規律小單單向流出，可能是機構在執行IS或VWAP，跟著走或反向操作都是策略
 
-## 相關頁面
+## 注意事項
+（待補充）
+
+## 相關主題
 
 - [[操作策略/執行演算法VWAP-TWAP-Execution-Algorithm]] — VWAP和TWAP執行演算法詳解
 - [[操作策略/VWAP執行演算法與機構交易策略VWAP-Execution-Algorithms]] — 機構大單執行的三大演算法深度分析
@@ -175,10 +178,3 @@ Almgren和Chriss（2000）提出的模型是最佳執行的經典框架：
 - [Implementation shortfall - Wikipedia](https://en.wikipedia.org/wiki/Implementation_shortfall)
 - [Trade Strategy and Execution - CFA Institute](https://www.cfainstitute.org/)
 - Almgren, R.; Chriss, N. (2000). "Optimal Execution of Portfolio Transactions". Journal of Risk. 3: 5-39.
-
-## 注意事項
-（待補充）
-
-
-## 相關主題
-（待補充）

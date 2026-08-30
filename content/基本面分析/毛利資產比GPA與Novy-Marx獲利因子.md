@@ -73,4 +73,4 @@ GPA 可以拆成兩個概念：
 
 ## 來源
 
-- [Gross Profit to Total Assets : Definition, Formula & How UQS Uses It](../raw/2026-06-16/Gross-Profit-to-Total-Assets-UQS.md)
+- [Gross Profit to Total Assets : Definition, Formula & How UQS Uses It](../../raw/2026-06-16/Gross-Profit-to-Total-Assets-UQS.md)

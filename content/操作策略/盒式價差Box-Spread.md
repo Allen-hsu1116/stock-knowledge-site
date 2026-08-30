@@ -2,6 +2,7 @@
 title: "盒式價差 Box Spread"
 tags: [操作策略, 選擇權, 套利, 無風險策略, Put-Call Parity]
 created: 2026-07-06
+category: "操作策略"
 ---
 
 # 盒式價差 Box Spread
@@ -121,24 +122,6 @@ $$(c_1 - c_2) - (p_2 - p_1) = (K_2 - K_1) \cdot e^{-rT}$$
 
 Box Spread 的隱含利率可作為市場無風險利率的替代指標。與國庫券利率的差距（convenience yield）約 35 基點，金融不穩定時差距擴大。
 
-## 散戶陷阱：Robinhood 事件
-
-2019年1月，Reddit /r/WallStreetBets 一名用戶用 $5,000 本金在 Robinhood 上做了 Box Spread，宣稱「literally cannot go tits up」，結果虧損超過 $57,000。
-
-### 為什麼會虧
-
-1. **美式選擇權**：他使用的是美式選擇權（可提前行使），不是歐式
-2. **提前行使風險**：Box Spread 的某一腿被提前行使，整個組合失去對沖
-3. **裸部位曝險**：被行使後的裸部位面臨無限風險（暴露達 $212,500）
-4. **Robinhood 保證金不足**：平台未正確計算組合保證金，允許過度槓桿
-
-### 教訓
-
-- **只用歐式選擇權做 Box Spread**——到期前不可行使
-- **不是真正無風險**——有提前行使風險、流動性風險、保證金風險
-- **手續費吞噬利潤**——四腿交易的手續費可能吃掉微薄套利空間（故又稱「alligator spread」）
-- Robinhood 事件後禁止平台用戶開 Box Spread
-
 ## 台股適用性分析
 
 ### 台指選擇權
@@ -174,21 +157,37 @@ Box Spread 的隱含利率可作為市場無風險利率的替代指標。與國
 4. **除息風險**：若標的在到期前除息，Box Spread 報酬會受影響（股價下降影響 Call/Put 內含價值）
 5. **美式 vs 歐式**：美式選擇權有提前行使風險，只在歐式選擇權上做 Box Spread
 
-## 來源
-- Wikipedia: Box spread（含完整數學推導、Robinhood 事件、BOXX ETF）
-- CME Group: "Index Options Box Spreads as Financing Tool" (2024)
-- Cboe: "Long-Dated Box Spreads: A Better Way to Buy a Home" (2025)
-- SyntheticFi: 機構級 Box Spread 借貸服務
-- Put-Call Parity 基礎理論
-
 ## 實戰應用
 
 （待補充）
 
 ## 注意事項
 
-（待補充）
+2019年1月，Reddit /r/WallStreetBets 一名用戶用 $5,000 本金在 Robinhood 上做了 Box Spread，宣稱「literally cannot go tits up」，結果虧損超過 $57,000。
+
+### 為什麼會虧
+
+1. **美式選擇權**：他使用的是美式選擇權（可提前行使），不是歐式
+2. **提前行使風險**：Box Spread 的某一腿被提前行使，整個組合失去對沖
+3. **裸部位曝險**：被行使後的裸部位面臨無限風險（暴露達 $212,500）
+4. **Robinhood 保證金不足**：平台未正確計算組合保證金，允許過度槓桿
+
+### 教訓
+
+- **只用歐式選擇權做 Box Spread**——到期前不可行使
+- **不是真正無風險**——有提前行使風險、流動性風險、保證金風險
+- **手續費吞噬利潤**——四腿交易的手續費可能吃掉微薄套利空間（故又稱「alligator spread」）
+- Robinhood 事件後禁止平台用戶開 Box Spread
 
 ## 相關主題
 
 （待補充）
+
+- [[操作策略/操作策略總論]]
+
+## 來源
+- Wikipedia: Box spread（含完整數學推導、Robinhood 事件、BOXX ETF）
+- CME Group: "Index Options Box Spreads as Financing Tool" (2024)
+- Cboe: "Long-Dated Box Spreads: A Better Way to Buy a Home" (2025)
+- SyntheticFi: 機構級 Box Spread 借貸服務
+- Put-Call Parity 基礎理論

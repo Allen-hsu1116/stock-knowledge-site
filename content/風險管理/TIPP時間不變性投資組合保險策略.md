@@ -75,4 +75,4 @@ TIPP（Time-Invariant Portfolio Protection）是對CPPI策略的改進，核心�
 
 ## 來源
 
-- [保本基金策略：CPPI、TIPP、OBPI](../raw/2026-05-01/TIPP保本基金策略改進.md)
+- [保本基金策略：CPPI、TIPP、OBPI](../../raw/2026-05-01/TIPP保本基金策略改進.md)

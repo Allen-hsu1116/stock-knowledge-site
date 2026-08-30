@@ -76,4 +76,4 @@ StatArb 的核心特徵：
 
 ## 來源
 
-- [Statistical Arbitrage - Wikipedia](../raw/2026-06-20/統計套利Statistical-Arbitrage-Wikipedia.md)
+- [Statistical Arbitrage - Wikipedia](../../raw/2026-06-20/統計套利Statistical-Arbitrage-Wikipedia.md)

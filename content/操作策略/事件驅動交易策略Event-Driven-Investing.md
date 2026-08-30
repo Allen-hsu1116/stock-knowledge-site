@@ -64,4 +64,4 @@ date: 2026-06-18
 
 ## 來源
 
-- [Event-driven investing - Wikipedia](../raw/2026-06-18/Event-driven-investing-Wikipedia.md)
+- [Event-driven investing - Wikipedia](../../raw/2026-06-18/Event-driven-investing-Wikipedia.md)

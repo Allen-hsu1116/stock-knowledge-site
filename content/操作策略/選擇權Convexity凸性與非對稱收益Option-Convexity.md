@@ -109,5 +109,5 @@ Long Gamma 的 Scalping 策略本質上就是在收割 Convexity：
 
 ## 來源
 
-- [Anton Cheng-選擇權的定價與避險參數](../raw/2026-05-10/Greeks進階-選擇權定價與避險參數.md)
-- [OP凱文-Greeks風險儀表板](../raw/2026-05-10/Greeks基礎-Delta-Gamma-Vega-Theta開車比喻.md)
+- [Anton Cheng-選擇權的定價與避險參數](../../raw/2026-05-10/Greeks進階-選擇權定價與避險參數.md)
+- [OP凱文-Greeks風險儀表板](../../raw/2026-05-10/Greeks基礎-Delta-Gamma-Vega-Theta開車比喻.md)

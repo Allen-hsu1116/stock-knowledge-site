@@ -123,4 +123,4 @@ category: "操作策略"
 - [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
 
 ## 來源
-- [對角價差與比率價差知識整理](../raw/2026-05-10/對角價差與比率價差知識整理.md)
+- [對角價差與比率價差知識整理](../../raw/2026-05-10/對角價差與比率價差知識整理.md)

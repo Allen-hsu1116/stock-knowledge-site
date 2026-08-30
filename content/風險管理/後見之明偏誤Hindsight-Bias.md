@@ -72,4 +72,4 @@ category: "風險管理"
 
 ## 來源
 
-- [後見之明偏誤 - MBA智庫百科](../raw/2026-05-08/後見之明偏誤Hindsight-Bias.md)
+- [後見之明偏誤 - MBA智庫百科](../../raw/2026-05-08/後見之明偏誤Hindsight-Bias.md)

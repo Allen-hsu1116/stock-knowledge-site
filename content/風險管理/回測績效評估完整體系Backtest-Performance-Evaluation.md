@@ -211,7 +211,7 @@ category: "風險管理"
 - [[回撤恢復數學與帳戶生存Drawdown-Recovery-Math]]
 
 ## 來源
-- [程式交易 Part 2：如何評估策略績效？ — 富果](../raw/2026-05-15/程式交易策略績效評估-富果.md)
-- [量化投資的關鍵指標 — K.S.的量化投資](../raw/2026-05-15/量化投資關鍵指標Sortino-Calmar-ProfitFactor-TailRatio.md)
-- [索提諾比率(Sortino Ratio)是什麼？ — 市場先生](../raw/2026-05-15/索提諾比率Sortino-Ratio-市場先生.md)
-- [快速看懂MultiCharts策略績效報告 — 程式交易快譯通](../raw/2026-05-15/MultiCharts策略績效報告解讀-程式交易快譯通.md)
+- [程式交易 Part 2：如何評估策略績效？ — 富果](../../raw/2026-05-15/程式交易策略績效評估-富果.md)
+- [量化投資的關鍵指標 — K.S.的量化投資](../../raw/2026-05-15/量化投資關鍵指標Sortino-Calmar-ProfitFactor-TailRatio.md)
+- [索提諾比率(Sortino Ratio)是什麼？ — 市場先生](../../raw/2026-05-15/索提諾比率Sortino-Ratio-市場先生.md)
+- [快速看懂MultiCharts策略績效報告 — 程式交易快譯通](../../raw/2026-05-15/MultiCharts策略績效報告解讀-程式交易快譯通.md)

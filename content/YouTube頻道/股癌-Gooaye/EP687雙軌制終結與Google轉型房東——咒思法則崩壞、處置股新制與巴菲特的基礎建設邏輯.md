@@ -47,5 +47,9 @@ Hassabis從CEO變SVP直接向Pichai報告，雙軌制變單軌，DeepMind被拉�
 - Google敘事改變不一定是利空，短期rerate下修但長期現金流轉正更快，需觀察人事變動後股價是否破底
 - 前沿模型競爭最大風險不是西方內部勝負，而是中國追兵把價值鏈吃走
 
+## 相關主題
+
+- [[風險管理/風險管理總論]]
+
 ## 來源
 - [EP687 | 🐧](https://www.youtube.com/watch?v=hasrdP2S7LA)

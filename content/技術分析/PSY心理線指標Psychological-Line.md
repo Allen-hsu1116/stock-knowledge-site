@@ -171,7 +171,7 @@ PSY 純粹以市場情緒作為參考，沒有考慮市場的基本面，所以�
 
 ## 來源
 
-- [PSY心理線解讀使用方法 OANDA Lab](../raw/2026-05-03/PSY心理線指標OANDA.md)
-- [PSY指標完整教學 QuantPass](../raw/2026-05-03/PSY心理線指標QuantPass.md)
-- [PSY心理線指標 QuantPass 2026-05-18](../raw/2026-05-18/PSY心理線指標QuantPass.md)
-- [PSY心理線 OANDA Lab 2026-05-18](../raw/2026-05-18/PSY心理線OANDA.md)
+- [PSY心理線解讀使用方法 OANDA Lab](../../raw/2026-05-03/PSY心理線指標OANDA.md)
+- [PSY指標完整教學 QuantPass](../../raw/2026-05-03/PSY心理線指標QuantPass.md)
+- [PSY心理線指標 QuantPass 2026-05-18](../../raw/2026-05-18/PSY心理線指標QuantPass.md)
+- [PSY心理線 OANDA Lab 2026-05-18](../../raw/2026-05-18/PSY心理線OANDA.md)

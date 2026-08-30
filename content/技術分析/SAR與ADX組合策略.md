@@ -79,6 +79,6 @@ SAR 和 ADX 都出自 Wilder 1978 年同一本書，天生就是一家人。但�
 
 ## 來源
 
-- [SAR拋物線指標-OANDA](../raw/2026-05-04/OANDA-SAR拋物線指標.md)
-- [ADX指標使用策略-OANDA](../raw/2026-05-04/OANDA-ADX指標使用策略.md)
-- [SAR指標完整教學-量化通](../raw/2026-05-04/QuantPass-SAR指標完整教學.md)
+- [SAR拋物線指標-OANDA](../../raw/2026-05-04/OANDA-SAR拋物線指標.md)
+- [ADX指標使用策略-OANDA](../../raw/2026-05-04/OANDA-ADX指標使用策略.md)
+- [SAR指標完整教學-量化通](../../raw/2026-05-04/QuantPass-SAR指標完整教學.md)

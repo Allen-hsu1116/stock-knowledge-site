@@ -80,4 +80,4 @@ category: "風險管理"
 
 ## 來源
 
-- [代表性啟發法 - MBA智庫百科](../raw/2026-05-08/代表性啟發法與小數定律Representativeness-Heuristic.md)
+- [代表性啟發法 - MBA智庫百科](../../raw/2026-05-08/代表性啟發法與小數定律Representativeness-Heuristic.md)

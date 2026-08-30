@@ -73,7 +73,27 @@ Typical Price = (High + Low + Close) / 3
 - 對執行品質要求極高的機構
 - 佔日均量 > 10% 的大型委託
 
-## VWAP 在台股的實戰意義
+## VWAP vs MVWAP（Moving VWAP）
+
+- **VWAP**：每個交易日重新計算，從開盤累積到收盤，是日內指標
+- **MVWAP**：將每日 VWAP 當成數據點，用移動平均計算跨日 VWAP，適合跨日趨勢判斷
+- VWAP 更平滑、MVWAP 反應更快但雜訊更多
+- 詳見 [[技術分析/VWAP成交量加權均價]]
+
+## 進階：VWAP 的自我實現預言
+
+VWAP 有一個有趣的特性——**自我實現（self-fulfilling）**：
+
+1. 大量機構用 VWAP 演算法執行
+2. 他們的執行讓價格自然趨向 VWAP
+3. 其他交易者觀察到價格回歸 VWAP，認為 VWAP 是「磁吸線」
+4. 更多人在 VWAP 附近設定止損和目標價
+5. VWAP 的支撐壓力效果更強
+6. 進一步強化機構使用 VWAP 演算法的信心
+
+**這就是為什麼 VWAP 不只是一個指標——它是整個市場的博弈框架。**
+
+## 實戰應用
 
 ### 散戶如何利用 VWAP
 
@@ -110,27 +130,7 @@ Typical Price = (High + Low + Close) / 3
 - 價格拉回 VWAP = 機構在收尾
 - 價格遠離 VWAP = 真實趨勢強勁或突發消息
 
-## VWAP vs MVWAP（Moving VWAP）
-
-- **VWAP**：每個交易日重新計算，從開盤累積到收盤，是日內指標
-- **MVWAP**：將每日 VWAP 當成數據點，用移動平均計算跨日 VWAP，適合跨日趨勢判斷
-- VWAP 更平滑、MVWAP 反應更快但雜訊更多
-- 詳見 [[技術分析/VWAP成交量加權均價]]
-
-## 進階：VWAP 的自我實現預言
-
-VWAP 有一個有趣的特性——**自我實現（self-fulfilling）**：
-
-1. 大量機構用 VWAP 演算法執行
-2. 他們的執行讓價格自然趨向 VWAP
-3. 其他交易者觀察到價格回歸 VWAP，認為 VWAP 是「磁吸線」
-4. 更多人在 VWAP 附近設定止損和目標價
-5. VWAP 的支撐壓力效果更強
-6. 進一步強化機構使用 VWAP 演算法的信心
-
-**這就是為什麼 VWAP 不只是一個指標——它是整個市場的博弈框架。**
-
-## 優缺點
+## 注意事項
 
 **VWAP 演算法的優點：**
 - 標準化程度高，容易評估執行品質
@@ -153,25 +153,13 @@ VWAP 有一個有趣的特性——**自我實現（self-fulfilling）**：
 - 對數據品質要求高
 - 參數調整更困難
 
-## 相關頁面
+## 相關主題
 
 - [[技術分析/VWAP成交量加權均價]] — VWAP 的基礎計算與日內判讀
 - [[技術分析/VWAP偏差與機構執行足跡VWAP-Deviation-Institutional-Footprint]] — 價格與 VWAP 偏離的機構行為解讀
 - [[技術分析/內外盤比與五檔報價判讀InOut-Disk-Ratio-and-Order-Book]] — 盤中買賣力道判讀
 - [[技術分析/成交量加權移動平均線VWMA-Volume-Weighted-Moving-Average]] — 把成交量揉進均線
 - [[籌碼面分析/暗池交易與大戶足跡Dark-Pool-Trading-and-Institutional-Footprint]] — 機構場外交易的足跡追蹤
-
-## 實戰應用
-
-（待補充）
-
-## 注意事項
-
-（待補充）
-
-## 相關主題
-
-（待補充）
 
 ## 來源
 

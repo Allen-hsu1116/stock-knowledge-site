@@ -141,5 +141,5 @@ Renko的反轉需要「2塊磚」確認（設定磚塊大小×2的價格移動�
 
 ## 來源
 
-- [The Complete Guide To Renko Charts](../raw/2026-05-11/Renko磚形圖完整指南.md)
-- [Renko Chart Basics: What They Are and How to Use Them](../raw/2026-05-11/Renko磚形圖基礎入門.md)
+- [The Complete Guide To Renko Charts](../../raw/2026-05-11/Renko磚形圖完整指南.md)
+- [Renko Chart Basics: What They Are and How to Use Them](../../raw/2026-05-11/Renko磚形圖基礎入門.md)

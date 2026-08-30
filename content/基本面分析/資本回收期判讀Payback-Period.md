@@ -91,4 +91,4 @@ Payback Period = 初始投資額 / 每期現金流入
 - [[現金流量折現法DCF估值]]
 
 ## 來源
-- [資本回收期與投資決策 Payback Period 實戰判讀](../raw/2026-05-19/資本回收期與投資決策Payback-Period實戰判讀.md)
+- [資本回收期與投資決策 Payback Period 實戰判讀](../../raw/2026-05-19/資本回收期與投資決策Payback-Period實戰判讀.md)

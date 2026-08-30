@@ -112,4 +112,4 @@ category: "風險管理"
 
 ## 來源
 
-- [Stress Testing & Scenario Analysis - Ryan OConnell, CFA](../raw/2026-05-15/Stress-Testing-Scenario-Analysis-RyanOConnell.md)
+- [Stress Testing & Scenario Analysis - Ryan OConnell, CFA](../../raw/2026-05-15/Stress-Testing-Scenario-Analysis-RyanOConnell.md)

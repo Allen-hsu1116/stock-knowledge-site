@@ -101,4 +101,4 @@ Volume Delta = 買方成交量 - 賣方成交量
 
 ## 來源
 
-- [什麼是訂單流足跡圖？](../raw/2026-05-04/訂單流足跡圖Footprint-Chart.md)
+- [什麼是訂單流足跡圖？](../../raw/2026-05-04/訂單流足跡圖Footprint-Chart.md)

@@ -33,6 +33,65 @@ WFA 的核心思想：**模擬真實交易環境中的決策過程——你只�
 3. **窗口前移**：訓練和測試窗口同時向右移動，重複上述步驟
 4. **彙整所有樣本外結果**：拼接成完整的實戰模擬績效
 
+## Python 實作框架
+
+```python
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import ParameterGrid
+
+def walk_forward_analysis(data, strategy_func, param_grid, 
+                          train_size, test_size):
+    """Walk-Forward Analysis 基本框架"""
+    results = []
+    train_start = 0
+    
+    while train_start + train_size + test_size <= len(data):
+        train_end = train_start + train_size
+        test_end = train_end + test_size
+        
+        train_data = data[train_start:train_end]
+        test_data = data[train_end:test_end]
+        
+        # 在訓練期找最佳參數
+        best_params = None
+        best_score = -np.inf
+        for params in ParameterGrid(param_grid):
+            score = strategy_func(train_data, **params)
+            if score > best_score:
+                best_score = score
+                best_params = params
+        
+        # 用最佳參數在測試期驗證
+        test_score = strategy_func(test_data, **best_params)
+        
+        results.append({
+            'train_period': (train_start, train_end),
+            'test_period': (train_end, test_end),
+            'best_params': best_params,
+            'train_score': best_score,
+            'test_score': test_score
+        })
+        
+        # 窗口前移
+        train_start += test_size
+    
+    return pd.DataFrame(results)
+
+# 使用範例
+results = walk_forward_analysis(
+    data=price_data,
+    strategy_func=ma_crossover_strategy,
+    param_grid={'fast': [5,10,20], 'slow': [30,50,60]},
+    train_size=500,
+    test_size=100
+)
+
+# 計算 WFA 效率比
+wfe = results['test_score'].mean() / results['train_score'].mean()
+print(f"WFA Efficiency: {wfe:.1%}")
+```
+
 ## 實戰應用
 
 ### Step 1：選擇數據
@@ -124,65 +183,6 @@ $$WFE = \frac{\text{樣本外年化報酬}}{\text{樣本內年化報酬}} \times
 - WFA 驗證的是「策略在過去市場環境下的適應性」，不保證未來
 - 需要搭配 [[蒙地卡羅模擬交易驗證Monte-Carlo-Simulation|蒙地卡羅模擬]] 做壓力測試
 
-## Python 實作框架
-
-```python
-import numpy as np
-import pandas as pd
-from sklearn.model_selection import ParameterGrid
-
-def walk_forward_analysis(data, strategy_func, param_grid, 
-                          train_size, test_size):
-    """Walk-Forward Analysis 基本框架"""
-    results = []
-    train_start = 0
-    
-    while train_start + train_size + test_size <= len(data):
-        train_end = train_start + train_size
-        test_end = train_end + test_size
-        
-        train_data = data[train_start:train_end]
-        test_data = data[train_end:test_end]
-        
-        # 在訓練期找最佳參數
-        best_params = None
-        best_score = -np.inf
-        for params in ParameterGrid(param_grid):
-            score = strategy_func(train_data, **params)
-            if score > best_score:
-                best_score = score
-                best_params = params
-        
-        # 用最佳參數在測試期驗證
-        test_score = strategy_func(test_data, **best_params)
-        
-        results.append({
-            'train_period': (train_start, train_end),
-            'test_period': (train_end, test_end),
-            'best_params': best_params,
-            'train_score': best_score,
-            'test_score': test_score
-        })
-        
-        # 窗口前移
-        train_start += test_size
-    
-    return pd.DataFrame(results)
-
-# 使用範例
-results = walk_forward_analysis(
-    data=price_data,
-    strategy_func=ma_crossover_strategy,
-    param_grid={'fast': [5,10,20], 'slow': [30,50,60]},
-    train_size=500,
-    test_size=100
-)
-
-# 計算 WFA 效率比
-wfe = results['test_score'].mean() / results['train_score'].mean()
-print(f"WFA Efficiency: {wfe:.1%}")
-```
-
 ## 相關主題
 
 - [[回測框架與偏差防範Backtesting-Framework-and-Bias-Prevention|回測框架與偏差防範]]
@@ -196,5 +196,5 @@ print(f"WFA Efficiency: {wfe:.1%}")
 
 ## 來源
 
-- [Walk Forward Optimization 讓回測與實戰永不脫節 - 老余的智能顧投](../raw/2026-05-10/Walk-Forward-Optimization前向優化.md)
-- [回測框架與偏差防範](../raw/2026-05-02/交易策略開發流程與回測框架.md)
+- [Walk Forward Optimization 讓回測與實戰永不脫節 - 老余的智能顧投](../../raw/2026-05-10/Walk-Forward-Optimization前向優化.md)
+- [回測框架與偏差防範](../../raw/2026-05-02/交易策略開發流程與回測框架.md)

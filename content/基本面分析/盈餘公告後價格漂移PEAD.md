@@ -244,9 +244,9 @@ Zhang等（2024）在英國股市發現：
 
 ## 來源
 
-- [PEAD - Wikipedia](../raw/2026-05-12/PEAD盈餘公告後價格漂移-Wikipedia.md)
-- [PEAD進階 - Freeport Logbook](../raw/2026-05-12/PEAD盈餘公告後價格漂移進階-FreeportLogbook.md)
-- [PEAD投資策略 - Familiarize](../raw/2026-05-12/PEAD盈餘公告後價格漂移-Familiarize.md)
+- [PEAD - Wikipedia](../../raw/2026-05-12/PEAD盈餘公告後價格漂移-Wikipedia.md)
+- [PEAD進階 - Freeport Logbook](../../raw/2026-05-12/PEAD盈餘公告後價格漂移進階-FreeportLogbook.md)
+- [PEAD投資策略 - Familiarize](../../raw/2026-05-12/PEAD盈餘公告後價格漂移-Familiarize.md)
 - Ball & Brown (1968) - 首次發現PEAD
 - Bernard & Thomas (1989, 1990) - PEAD持續性驗證、自相關結構
 - Mendenhall (2004) - PEAD三種解釋

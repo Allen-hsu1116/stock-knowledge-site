@@ -6,7 +6,12 @@ title: "EP318 科技股能持續打敗大盤嗎 — 曼報Pro Vincent深度對�
 
 > **頻道**：M觀點 | **日期**：2026-07-09 | **影片**：[UBqg6zio5SE](https://www.youtube.com/watch?v=UBqg6zio5SE)
 
-## 摘要
+## 影片資訊
+
+- **頻道**：M觀點
+- **影片連結**：[YouTube](https://www.youtube.com/watch?v=UBqg6zio5SE)
+
+## 核心觀點
 
 漫報Pro共同創辦人Vincent（V神）來賓對談，從避險基金TMT研究員的視角，深度解析科技股為何過去15年outperform大盤，以及AI時代未來10年科技股的投資前景。核心框架：市場規模（AI讓蛋糕變大）、incremental ROIC（從Asset Light轉重資產）、利率環境（不再QE）。
 
@@ -54,3 +59,19 @@ title: "EP318 科技股能持續打敗大盤嗎 — 曼報Pro Vincent深度對�
 - AI可能是20年CapEx cycle（vs傳統3-5年產品週期）
 - 台積電先進製程市佔70-80%
 - 記憶體PE從single digit可能升到13-15倍
+
+## 實戰重點
+
+- 把影片中的預測拆成可驗證條件，追蹤財報、價格、成交量與籌碼是否同步；未驗證前不因單一敘事重押。
+
+## 注意事項
+
+- 影片內容具有時效性，口述數字、公司消息與政策判斷應回查原始公告；本文是知識整理，不是買賣建議。
+
+## 相關主題
+
+- [[風險管理/風險管理總論]]
+
+## 來源
+
+- [原始影片](https://www.youtube.com/watch?v=UBqg6zio5SE)

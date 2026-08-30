@@ -125,6 +125,6 @@ Basel III監管框架已從VaR轉向Expected Shortfall（ES/CVaR），對因子�
 
 ## 來源
 
-- [Factor Investing Wikipedia](../raw/2026-06-26/Factor-Investing-Wikipedia.md)
+- [Factor Investing Wikipedia](../../raw/2026-06-26/Factor-Investing-Wikipedia.md)
 - Fama, E.F. & French, K.R. (1992, 2015). Three-factor and Five-factor models
 - Arnott, R., Harvey, C.R. et al. (2019). Alice's Adventures in Factorland

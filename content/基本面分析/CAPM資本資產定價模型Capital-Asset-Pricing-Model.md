@@ -86,6 +86,18 @@ CAPM建立在以下理想化假設上：
 7. **同質預期**：所有投資人對未來有相同預期
 8. **資訊同時可得**：所有投資人同時獲得所有資訊
 
+## CAPM的延伸模型
+
+為了解決CAPM的局限，學界發展了多個延伸模型：
+
+- **Black CAPM（零Beta CAPM）**：用零Beta投資組合報酬取代無風險利率，不需假設無風險資產存在
+- **跨期CAPM（ICAPM）**：Merton（1973）允許多期投資和投資組合再平衡
+- **消費CAPM（CCAPM）**：用資產與總消費的共變異取代與市場的共變異
+- **Fama-French三因子/五因子模型**：加入規模、價值、獲利能力、投資因子
+- **套利定價理論（APT）**：Ross（1976）的多因子模型，不要求CAPM的嚴格假設
+
+> 相關頁面：[[操作策略/Black-Litterman模型結合觀點與市場均衡Black-Litterman-Model]] — 在CAPM基礎上加入投資人觀點的資產配置模型
+
 ## 實戰應用
 
 ### 1. 計算必要報酬率作為折現率
@@ -132,7 +144,16 @@ CAPM是評估基金經理和投資策略績效的基準模型。將實際報酬�
 - **金融股Beta**：通常<1，防禦性較強
 - **AI概念股Beta**：通常>1.5，高系統性風險高報酬
 
-## CAPM的局限與批評
+
+
+1. **Beta不是萬能指標**：高Beta不代表一定高報酬，CAPM只是理論框架
+2. **用CAPM計算折現率**：估計股票內在價值時，CAPM是計算股權成本的標準方法
+3. **分散投資消除非系統性風險**：持有30-40檔不同產業股票，非系統性風險基本消除
+4. **Beta會變**：用歷史Beta預測未來有風險，牛市和熊市的Beta可能不同
+5. **市場溢酬是主觀估計**：不同人用不同市場溢酬會得到完全不同的必要報酬率
+6. **CAPM是起點不是終點**：理解CAPM才能理解Fama-French等更進階的模型
+
+## 注意事項
 
 ### 1. 實證失敗
 
@@ -162,28 +183,7 @@ CAPM假設投資人完全理性，但行為財務學證明投資人系統性地�
 
 > 相關頁面：[[風險管理/行為財務學總論Behavioral-Finance-Overview]] — CAPM理性假設的系統性挑戰
 
-## CAPM的延伸模型
-
-為了解決CAPM的局限，學界發展了多個延伸模型：
-
-- **Black CAPM（零Beta CAPM）**：用零Beta投資組合報酬取代無風險利率，不需假設無風險資產存在
-- **跨期CAPM（ICAPM）**：Merton（1973）允許多期投資和投資組合再平衡
-- **消費CAPM（CCAPM）**：用資產與總消費的共變異取代與市場的共變異
-- **Fama-French三因子/五因子模型**：加入規模、價值、獲利能力、投資因子
-- **套利定價理論（APT）**：Ross（1976）的多因子模型，不要求CAPM的嚴格假設
-
-> 相關頁面：[[操作策略/Black-Litterman模型結合觀點與市場均衡Black-Litterman-Model]] — 在CAPM基礎上加入投資人觀點的資產配置模型
-
-## 散戶實戰要點
-
-1. **Beta不是萬能指標**：高Beta不代表一定高報酬，CAPM只是理論框架
-2. **用CAPM計算折現率**：估計股票內在價值時，CAPM是計算股權成本的標準方法
-3. **分散投資消除非系統性風險**：持有30-40檔不同產業股票，非系統性風險基本消除
-4. **Beta會變**：用歷史Beta預測未來有風險，牛市和熊市的Beta可能不同
-5. **市場溢酬是主觀估計**：不同人用不同市場溢酬會得到完全不同的必要報酬率
-6. **CAPM是起點不是終點**：理解CAPM才能理解Fama-French等更進階的模型
-
-## 相關頁面
+## 相關主題
 
 - [[風險管理/Beta係數實戰判讀]] — Beta的實戰判讀與台股應用
 - [[風險管理/詹森Alpha與特雷諾比率Jensen-Alpha-and-Treynor-Ratio]] — CAPM框架下的績效評估指標
@@ -202,10 +202,3 @@ CAPM假設投資人完全理性，但行為財務學證明投資人系統性地�
 - Lintner, John (1965). "The Valuation of Risk Assets and the Selection of Risky Investments in Stock Portfolios and Capital Budgets". Review of Economics and Statistics. 47 (1): 13–37.
 - Black, Fischer (1972). "Capital Market Equilibrium with Restricted Borrowing". Journal of Business. 45 (3): 444–454.
 - Fama, E. F.; French, K. R. (2004). "The Capital Asset Pricing Model: Theory and Evidence". Journal of Economic Perspectives. 18 (3): 25–46.
-
-## 注意事項
-（待補充）
-
-
-## 相關主題
-（待補充）

@@ -68,4 +68,4 @@ date: 2026-06-18
 
 ## 來源
 
-- [Barbell strategy - Wikipedia](../raw/2026-06-18/Barbell-strategy-Wikipedia.md)
+- [Barbell strategy - Wikipedia](../../raw/2026-06-18/Barbell-strategy-Wikipedia.md)

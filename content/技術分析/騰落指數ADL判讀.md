@@ -102,7 +102,7 @@ ADL 背離是警示訊號而非立即行動指令。當以下三個條件**同�
 
 ## 來源
 
-- [ADL指標幫你判斷台股盤勢-FinLab](../raw/2026-05-17/ADL指標幫你判斷台股盤勢-FinLab.md)
-- [騰落指標ADL如何使用-StockFeel](../raw/2026-05-17/騰落指標ADL如何使用-StockFeel.md)
-- [騰落指標完整教學-QuantPass](../raw/2026-05-17/騰落指標完整教學-QuantPass.md)
-- [ADL指標3種策略-知識獲利大聯盟](../raw/2026-05-17/ADL指標3種策略-知識獲利大聯盟.md)
+- [ADL指標幫你判斷台股盤勢-FinLab](../../raw/2026-05-17/ADL指標幫你判斷台股盤勢-FinLab.md)
+- [騰落指標ADL如何使用-StockFeel](../../raw/2026-05-17/騰落指標ADL如何使用-StockFeel.md)
+- [騰落指標完整教學-QuantPass](../../raw/2026-05-17/騰落指標完整教學-QuantPass.md)
+- [ADL指標3種策略-知識獲利大聯盟](../../raw/2026-05-17/ADL指標3種策略-知識獲利大聯盟.md)

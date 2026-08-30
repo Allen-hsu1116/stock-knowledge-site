@@ -73,4 +73,4 @@ Kahneman & Tversky（1974）的經典實驗：隨機轉盤選出 10 和 65 兩�
 
 ## 來源
 
-- [錨定效應 - MBA智库百科](../raw/2026-05-08/錨定效應Anchoring-Bias.md)
+- [錨定效應 - MBA智库百科](../../raw/2026-05-08/錨定效應Anchoring-Bias.md)

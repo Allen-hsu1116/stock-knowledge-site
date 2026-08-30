@@ -199,6 +199,6 @@ P/B判斷：
 
 ## 來源
 
-- [剩餘收益估價模型 - MBA智庫百科](../raw/2026-05-12/剩餘收益估價模型MBA智庫.md)
-- [剩餘收益模式 - 美股價值投資筆記](../raw/2026-05-12/剩餘收益模式美股價值投資筆記.md)
-- [CFA Residual Income Valuation](../raw/2026-05-12/CFA殘餘收益估值Residual-Income-Valuation.md)
+- [剩餘收益估價模型 - MBA智庫百科](../../raw/2026-05-12/剩餘收益估價模型MBA智庫.md)
+- [剩餘收益模式 - 美股價值投資筆記](../../raw/2026-05-12/剩餘收益模式美股價值投資筆記.md)
+- [CFA Residual Income Valuation](../../raw/2026-05-12/CFA殘餘收益估值Residual-Income-Valuation.md)

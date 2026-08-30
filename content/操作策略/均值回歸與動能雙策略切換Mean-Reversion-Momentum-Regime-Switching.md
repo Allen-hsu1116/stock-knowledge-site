@@ -110,7 +110,21 @@ category: "操作策略"
 - 問題：只看 ADX 判斷體制，ADX 是滯後指標可能誤判
 - 解法：至少用三個不同類型的指標交叉確認
 
-## 台股實戰應用
+## 量化驗證
+
+### 學術發現
+- Moskowitz, Ooi & Pedersen (2012)：動能因子在 58 種資產中長期有效
+- 但動能因子在每年 3-5 月表現最差（均值回歸更強）
+- 均值回歸因子在高波動期間表現最好
+
+### 回測建議
+- 分別回測均值回歸和動能策略在不同體制下的績效
+- 計算切換策略的 Sharpe Ratio vs 單一策略
+- 切換策略的理想 Sharpe > 1.5（優於任一單一策略的 0.8-1.0）
+- 注意避免過度擬合：切換規則不能太複雜
+- 詳見 [[技術分析/技術分析回測方法與過度擬合Backtesting-and-Overfitting|回測方法與過度擬合]]
+
+## 實戰應用
 
 ### 台股的體制特徵
 - 台股的均值回歸性比美股更強（週轉率高、散戶占比高）
@@ -130,33 +144,16 @@ category: "操作策略"
 - [[風險管理/交易系統魯棒性Robustness-of-Trading-System|交易系統魯棒性]] — 體制切換的穩健性
 - [[操作策略/短期動能反轉策略Short-Term-Reversal|短期動能反轉]] — 短期均值回歸的特殊應用
 
-## 量化驗證
+## 注意事項
+（待補充）
 
-### 學術發現
-- Moskowitz, Ooi & Pedersen (2012)：動能因子在 58 種資產中長期有效
-- 但動能因子在每年 3-5 月表現最差（均值回歸更強）
-- 均值回歸因子在高波動期間表現最好
+## 相關主題
+（待補充）
 
-### 回測建議
-- 分別回測均值回歸和動能策略在不同體制下的績效
-- 計算切換策略的 Sharpe Ratio vs 單一策略
-- 切換策略的理想 Sharpe > 1.5（優於任一單一策略的 0.8-1.0）
-- 注意避免過度擬合：切換規則不能太複雜
-- 詳見 [[技術分析/技術分析回測方法與過度擬合Backtesting-and-Overfitting|回測方法與過度擬合]]
+- [[操作策略/操作策略總論]]
 
 ## 來源
 - Moskowitz, T., Ooi, Y. & Pedersen, L. (2012). "Time Series Momentum." Journal of Financial Economics.
 - Hurst, H.E. (1951). "Long-term storage capacity of reservoirs."（Hurst Exponent 原始論文）
 - Connors, L. & Alvarez, C. "An Introduction to Regime Switching Strategies."
 - Quantitative Research: "Mean Reversion vs Momentum: When to Switch."
-
-## 實戰應用
-（待補充）
-
-
-## 注意事項
-（待補充）
-
-
-## 相關主題
-（待補充）

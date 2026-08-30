@@ -152,7 +152,7 @@ FCF Margin = 自由現金流 ÷ 營收
 
 ## 來源
 
-- [股價現金流量比是什麼？和本益比有什麼差別？ - Mr.Market市場先生](../raw/2026-05-12/股價現金流量比P-CF市場先生.md)
-- [自由現金流量是什麼？ - Mr.Market市場先生](../raw/2026-05-12/自由現金流量FCF市場先生.md)
-- [Cash Flow Coverage Ratio - Investing.com](../raw/2026-05-12/Cash-Flow-Coverage-Ratio-Investingcom.md)
-- [FCF 15個核心公式 - PG財經筆記](../raw/2026-05-12/FCF-15核心公式PG財經筆記.md)
+- [股價現金流量比是什麼？和本益比有什麼差別？ - Mr.Market市場先生](../../raw/2026-05-12/股價現金流量比P-CF市場先生.md)
+- [自由現金流量是什麼？ - Mr.Market市場先生](../../raw/2026-05-12/自由現金流量FCF市場先生.md)
+- [Cash Flow Coverage Ratio - Investing.com](../../raw/2026-05-12/Cash-Flow-Coverage-Ratio-Investingcom.md)
+- [FCF 15個核心公式 - PG財經筆記](../../raw/2026-05-12/FCF-15核心公式PG財經筆記.md)

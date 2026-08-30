@@ -125,6 +125,6 @@ MDD是回撤序列的最大值（一個點），CDaR是尾部回撤的條件期�
 
 ## 來源
 
-- [Expected Shortfall Wikipedia](../raw/2026-06-26/Expected-Shortfall-Wikipedia.md)
+- [Expected Shortfall Wikipedia](../../raw/2026-06-26/Expected-Shortfall-Wikipedia.md)
 - Chekhlov, A., Uryasev, S., & Zabarankin, M. (2005). Drawdown Measure in Portfolio Optimization
 - Rockafellar, R.T. & Uryasev, S. (2000). Optimization of Conditional Value-at-Risk

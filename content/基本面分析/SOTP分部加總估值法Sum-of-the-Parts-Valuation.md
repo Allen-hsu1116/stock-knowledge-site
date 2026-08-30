@@ -161,6 +161,6 @@ Implied Equity Value = Total TEV - 淨負債 - 企業總部成本 - 少數股權
 
 ## 來源
 
-- [如何評估跨產業集團的股價？為何要拆分子公司上市？](../raw/2026-05-12/PG財經筆記-SOTP跨產業集團估值.md)
-- [Sum of the Parts (SOTP) - Wall Street Prep](../raw/2026-05-12/WallStreetPrep-SOTP估值法教學.md)
-- [Sum-of-parts valuation: How to break down conglomerates for value](../raw/2026-05-12/Winvesta-SOTP集團折價與拆分案例.md)
+- [如何評估跨產業集團的股價？為何要拆分子公司上市？](../../raw/2026-05-12/PG財經筆記-SOTP跨產業集團估值.md)
+- [Sum of the Parts (SOTP) - Wall Street Prep](../../raw/2026-05-12/WallStreetPrep-SOTP估值法教學.md)
+- [Sum-of-parts valuation: How to break down conglomerates for value](../../raw/2026-05-12/Winvesta-SOTP集團折價與拆分案例.md)

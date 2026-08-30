@@ -100,7 +100,7 @@ FOMO追高 → 買在頂部 → 價格回落 → 虧損 → FUD恐慌殺低 → 
 
 ## 來源
 
-- [FOMO與FUD交易心理學完整指南 - HyperCapital](../raw/2026-05-15/FOMO與FUD交易心理學完整指南-HyperCapital.md)
-- [FOMO恐慌性拋售情緒控制 - TradingKey](../raw/2026-05-15/FOMO恐慌性拋售情緒控制-TradingKey.md)
-- [紀律交易者七步驟 - 商周財富](../raw/2026-05-15/紀律交易者七步驟Mark-Douglas-商周財富.md)
+- [FOMO與FUD交易心理學完整指南 - HyperCapital](../../raw/2026-05-15/FOMO與FUD交易心理學完整指南-HyperCapital.md)
+- [FOMO恐慌性拋售情緒控制 - TradingKey](../../raw/2026-05-15/FOMO恐慌性拋售情緒控制-TradingKey.md)
+- [紀律交易者七步驟 - 商周財富](../../raw/2026-05-15/紀律交易者七步驟Mark-Douglas-商周財富.md)
 - [CME Group交易心理](https://www.cmegroup.com/cn-t/education/courses/trading-psychology.html)

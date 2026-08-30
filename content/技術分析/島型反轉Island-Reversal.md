@@ -92,7 +92,7 @@ category: "技術分析"
 
 ## 來源
 
-- [3分鐘學會V型與島型反轉 - HiStock](../raw/2026-05-04/V型與島型反轉-histock.md)
-- [島型反轉3步驟布局 - CMoney](../raw/2026-05-04/島型反轉實戰操作-CMoney.md)
+- [3分鐘學會V型與島型反轉 - HiStock](../../raw/2026-05-04/V型與島型反轉-histock.md)
+- [島型反轉3步驟布局 - CMoney](../../raw/2026-05-04/島型反轉實戰操作-CMoney.md)
 - [大盤島狀反轉 - 鉅亨](https://news.cnyes.com/news/id/5530740)
 - [島狀反轉如何運用 - 蔣明誠/微股力](https://scantrader.com/article/0185949c8391000005f7000000000000)

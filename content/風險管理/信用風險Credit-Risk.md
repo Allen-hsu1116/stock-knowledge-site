@@ -109,5 +109,5 @@ category: "風險管理"
 
 ## 來源
 
-- [Credit risk - Wikipedia](../raw/2026-05-09/信用風險Credit-Risk-Wikipedia.md)
-- [Concentration risk - Wikipedia](../raw/2026-05-09/信用風險Credit-Risk-Wikipedia.md)
+- [Credit risk - Wikipedia](../../raw/2026-05-09/信用風險Credit-Risk-Wikipedia.md)
+- [Concentration risk - Wikipedia](../../raw/2026-05-09/信用風險Credit-Risk-Wikipedia.md)

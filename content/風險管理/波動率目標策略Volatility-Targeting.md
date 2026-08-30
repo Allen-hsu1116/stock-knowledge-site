@@ -85,4 +85,4 @@ Man Group 文章指出，金融市場有「波動叢聚」特性：最近高波�
 
 ## 來源
 
-- [The Impact of Volatility Targeting](../raw/2026-06-14/波動率目標策略Volatility-Targeting.md)
+- [The Impact of Volatility Targeting](../../raw/2026-06-14/波動率目標策略Volatility-Targeting.md)

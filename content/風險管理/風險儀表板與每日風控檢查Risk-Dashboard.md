@@ -1,6 +1,6 @@
 ---
 category: "風險管理"
-title: 風險儀表板與每日風控檢查Risk-Dashboard
+title: 風險儀表板與每日風控檢查 Risk Dashboard
 date: 2026-06-05
 ---
 
@@ -103,6 +103,7 @@ date: 2026-06-05
 ## 風險儀表板日誌模板
 
 ```markdown
+
 ## 風控日誌 YYYY-MM-DD
 
 **帳戶淨值**：NT$ XXX,XXX
@@ -118,6 +119,10 @@ date: 2026-06-05
 **交易能量值**：X/10
 **備註**：自由記錄
 ```
+
+## 實戰應用
+
+實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。
 
 ## 注意事項
 
@@ -143,7 +148,3 @@ date: 2026-06-05
 - Alexander Elder, *Come Into My Trading Room*
 - Van K. Tharp, *Trade Your Way to Financial Freedom*
 - 風險管理實務框架
-
-## 實戰應用
-
-實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。

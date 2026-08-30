@@ -72,31 +72,6 @@ $$V = \sum_{i=1}^{n} \pi(p_i) \cdot v(x_i)$$
 - $\pi(p_i)$ = 機率加權函數
 - $v(x_i)$ = 價值函數
 
-## 注意事項
-
-### 四重風險態度（Fourfold Pattern）
-前景理論最強大的預測力來自「四重模式」——把情境分成「高機率/低機率」×「獲利/虧損」四個象限：
-
-**高機率獲利** → 風險趨避
-- 95% 賺 $10000 vs 100% 賺 $9499
-- 多數人選後者（確定效應），即使期望值更低
-- 股市對應：賺很多的股票急著賣
-
-**高機率虧損** → 風險偏好
-- 95% 賠 $10000 vs 100% 賠 $9499
-- 多數人選前者（賭一把看能不能不賠），即使期望值更差
-- 股市對應：明明該停損卻不砍，想等反彈
-
-**低機率獲利** → 風險偏好
-- 5% 賺 $10000 vs 100% 賺 $501
-- 多數人選前者（小機率被高估），即使期望值更低
-- 股市對應：買 OTM 權證、買消息股
-
-**低機率虧損** → 風險趨避
-- 5% 賠 $10000 vs 100% 賠 $501
-- 多數人選後者（花小錢消災），即使期望值更高
-- 股市對應：買保護性 Put、停損設太緊
-
 ## 編輯階段與評估階段
 
 前景理論把決策過程分成兩個階段：
@@ -122,24 +97,6 @@ Benartzi 和 Thaler（1995）用前景理論解釋了**股權溢價之謎**（Eq
 答案：投資人太頻繁地檢查投資組合。每次看到虧損，損失厭惡就讓他們痛苦一次。如果一個月看一次，一年痛 12 次；如果一天看一次，一年痛 250 次。看得越頻繁，痛苦越大，就越傾向於持有「不會跌」的債券。
 
 **Gneezy 和 Potters（1997）的實驗證實了這點**：參與者在可以更頻繁調整投資時反而表現更差，因為他們對短期損益過度反應。
-
-## 實戰應用
-
-### 前景理論在股市交易的應用
-### 1. 處置效應的根源
-散戶賣贏家留輸家，不是因為笨，是因為前景理論讓虧損區的風險偏好自然產生——「不賣就沒賠」的心理讓人在該停損時反而加碼。
-
-### 2. 為什麼停損這麼難
-停損 = 把「未實現虧損」變成「已實現虧損」= 把參考點從「買進價」強制重設為「賣出價」。這在前景理論框架下是一個巨大的心理痛苦。
-
-### 3. 平均成本法的行為學基礎
-定期定額投資之所以有效，部分原因是它把「一次大額決策」拆成「多次小額決策」，降低了每次決策時的損失厭惡強度。
-
-### 4. 為什麼利多出盡會跌
-好消息公布前，參考點是「預期會漲」；公布後即使數字好，如果不如預期，就變成「相對於預期的虧損」，觸發損失厭惡。
-
-### 5. 解釋波動率微笑
-選擇權市場的波動率微笑——OTM Put 的 IV 永遠比 OTM Call 高——正是因為投資人對「低機率大虧損」過度恐懼（低機率虧損→風險趨避→買保護性 Put），對「低機率大獲利」過度樂觀（低機率獲利→風險偏好→買 OTM Call）。
 
 ## 累積前景理論（Cumulative Prospect Theory）
 
@@ -181,12 +138,48 @@ CPT 引入了等級依賴效用（Rank-Dependent Utility），用累積分佈函
 5. **用部位大小管理情緒**：如果某個部位的波動讓你睡不著，代表你已經進入損失厭惡區，應該縮小部位
 6. **理解四重模式**：當你發現自己在「賭一把」時，問自己——我是不是在高機率虧損區做出風險偏好決策？
 
-## 來源
-- Kahneman, D. & Tversky, A. (1979). "Prospect Theory: An Analysis of Decision under Risk". Econometrica, 47(2), 263-291.
-- Tversky, A. & Kahneman, D. (1992). "Advances in Prospect Theory: Cumulative Representation of Uncertainty". Journal of Risk and Uncertainty, 5, 297-323.
-- Benartzi, S. & Thaler, R. (1995). "Myopic Loss Aversion and the Equity Premium Puzzle". Quarterly Journal of Economics, 110(1), 73-92.
-- Gneezy, U. & Potters, J. (1997). "An Experiment on Risk Taking and Evaluation Periods". Quarterly Journal of Economics, 112(2), 631-645.
-- Kahneman, D. (2011). "Thinking, Fast and Slow". Farrar, Straus and Giroux.
+## 實戰應用
+
+### 前景理論在股市交易的應用
+### 1. 處置效應的根源
+散戶賣贏家留輸家，不是因為笨，是因為前景理論讓虧損區的風險偏好自然產生——「不賣就沒賠」的心理讓人在該停損時反而加碼。
+
+### 2. 為什麼停損這麼難
+停損 = 把「未實現虧損」變成「已實現虧損」= 把參考點從「買進價」強制重設為「賣出價」。這在前景理論框架下是一個巨大的心理痛苦。
+
+### 3. 平均成本法的行為學基礎
+定期定額投資之所以有效，部分原因是它把「一次大額決策」拆成「多次小額決策」，降低了每次決策時的損失厭惡強度。
+
+### 4. 為什麼利多出盡會跌
+好消息公布前，參考點是「預期會漲」；公布後即使數字好，如果不如預期，就變成「相對於預期的虧損」，觸發損失厭惡。
+
+### 5. 解釋波動率微笑
+選擇權市場的波動率微笑——OTM Put 的 IV 永遠比 OTM Call 高——正是因為投資人對「低機率大虧損」過度恐懼（低機率虧損→風險趨避→買保護性 Put），對「低機率大獲利」過度樂觀（低機率獲利→風險偏好→買 OTM Call）。
+
+## 注意事項
+
+### 四重風險態度（Fourfold Pattern）
+前景理論最強大的預測力來自「四重模式」——把情境分成「高機率/低機率」×「獲利/虧損」四個象限：
+
+**高機率獲利** → 風險趨避
+- 95% 賺 $10000 vs 100% 賺 $9499
+- 多數人選後者（確定效應），即使期望值更低
+- 股市對應：賺很多的股票急著賣
+
+**高機率虧損** → 風險偏好
+- 95% 賠 $10000 vs 100% 賠 $9499
+- 多數人選前者（賭一把看能不能不賠），即使期望值更差
+- 股市對應：明明該停損卻不砍，想等反彈
+
+**低機率獲利** → 風險偏好
+- 5% 賺 $10000 vs 100% 賺 $501
+- 多數人選前者（小機率被高估），即使期望值更低
+- 股市對應：買 OTM 權證、買消息股
+
+**低機率虧損** → 風險趨避
+- 5% 賠 $10000 vs 100% 賠 $501
+- 多數人選後者（花小錢消災），即使期望值更高
+- 股市對應：買保護性 Put、停損設太緊
 
 ## 相關主題
 - [[風險管理/行為財務學總論Behavioral-Finance-Overview]] — 前景理論是行為財務學的基石
@@ -194,3 +187,10 @@ CPT 引入了等級依賴效用（Rank-Dependent Utility），用累積分佈函
 - [[風險管理/光譜風險測度Spectral-Risk-Measure]] — 前景理論的風險態度模型在風險測度中的應用
 - [[風險管理/市場情緒週期與反脆弱交易系統Market-Sentiment-Cycle-and-Antifragile-System]] — 前景理論解釋市場情緒週期
 - [[風險管理/風險調整報酬指標夏普比率與索提諾比率|夏普比率]] — 傳統指標的「理性人」假設被前景理論挑戰
+
+## 來源
+- Kahneman, D. & Tversky, A. (1979). "Prospect Theory: An Analysis of Decision under Risk". Econometrica, 47(2), 263-291.
+- Tversky, A. & Kahneman, D. (1992). "Advances in Prospect Theory: Cumulative Representation of Uncertainty". Journal of Risk and Uncertainty, 5, 297-323.
+- Benartzi, S. & Thaler, R. (1995). "Myopic Loss Aversion and the Equity Premium Puzzle". Quarterly Journal of Economics, 110(1), 73-92.
+- Gneezy, U. & Potters, J. (1997). "An Experiment on Risk Taking and Evaluation Periods". Quarterly Journal of Economics, 112(2), 631-645.
+- Kahneman, D. (2011). "Thinking, Fast and Slow". Farrar, Straus and Giroux.

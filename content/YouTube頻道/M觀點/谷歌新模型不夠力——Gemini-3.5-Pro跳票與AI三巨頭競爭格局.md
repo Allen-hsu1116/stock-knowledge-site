@@ -43,3 +43,11 @@ M觀點用Agentic Workflow把馬斯克帝國週報做成Podcast。流程：電�
 - 本篇為影片內容整理，非投資建議
 - Whisper部分轉錄（約前20分鐘），後半段內容未完整捕捉
 - AI模型競爭格局變化快速，排行榜排名可能隨時變動
+
+## 相關主題
+
+- [[風險管理/風險管理總論]]
+
+## 來源
+
+- [原始影片](https://www.youtube.com/watch?v=LjLONE12zFs)

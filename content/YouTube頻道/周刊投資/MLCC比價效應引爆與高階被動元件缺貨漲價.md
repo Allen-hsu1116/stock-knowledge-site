@@ -45,9 +45,11 @@ category: "YouTube頻道"
 - 比價效應下的補漲行情可能來得快去得也快
 - 更多分析見《先探投資週刊》第2403期
 
-## 來源
-- [族群內比價效應持續引爆，推升高階MLCC缺貨與漲價！鎖定投資最錢線](https://www.youtube.com/watch?v=Ddk1CTvZVYk)
-
 ## 相關主題
 
 - 股票知識庫索引
+
+- [[風險管理/風險管理總論]]
+
+## 來源
+- [族群內比價效應持續引爆，推升高階MLCC缺貨與漲價！鎖定投資最錢線](https://www.youtube.com/watch?v=Ddk1CTvZVYk)

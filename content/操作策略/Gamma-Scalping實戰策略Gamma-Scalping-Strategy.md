@@ -2,6 +2,7 @@
 title: "Gamma Scalping實戰策略 Gamma Scalping Strategy"
 tags: [操作策略, 選擇權, Greeks, 波動率交易, Delta-Neutral]
 created: 2026-07-05
+category: "操作策略"
 ---
 
 # Gamma Scalping實戰策略 Gamma Scalping Strategy
@@ -103,34 +104,6 @@ $$\text{Theta成本} = |\Theta| \times T$$
 - 如果IV已經很高（VIX > 25），建倉成本昂貴，盈虧平衡波動率被拉高
 - **最佳進場時機**：IV偏低但預期波動即將增加（例如重大事件前）
 
-## 實戰策略變體
-
-### 1. 純Gamma Scalping（Long Straddle + 期貨再平衡）
-
-- 最直接的版本
-- 適合：預期高波動但不確定方向
-- 風險：Theta消耗，波動不夠就虧
-
-### 2. Gamma Scalping with IV Edge
-
-- 在IV低於歷史平均時建倉
-- 同時賺Gamma Scalping利潤 + IV回升的Vega利潤
-- 雙重獲利來源降低Theta風險
-
-### 3. 日內Gamma Scalping
-
-- 當天建倉當天平倉
-- 避免隔夜Theta成本
-- 適合：預期單日高波動（例如FOMC當天）
-- 需要極低交易成本才有可行性
-
-### 4. 寬幅Gamma Scalping
-
-- 不每5點再平衡，而是等價格移動20-50點才再平衡
-- 減少再平衡次數→降低手續費侵蝕
-- 但每次再平衡利潤更大
-- **關鍵trade-off**：再平衡頻率 vs 手續費
-
 ## 台股實戰可行性
 
 ### 有利因素
@@ -153,20 +126,6 @@ $$\text{Theta成本} = |\Theta| \times T$$
 - 避開最後30天（Theta加速期）
 - 選擇IV低於20日歷史波動率的時機建倉
 - 總部位不超過帳戶的10-15%
-
-## 常見誤區
-
-**誤區1：Gamma Scalping穩賺**
-→ 如果波動不夠大，Theta會吃光所有利潤。Gamma Scalping的勝率取決於實際波動 vs 隱含波動的差距。
-
-**誤區2：越頻繁再平衡越好**
-→ 理論上連續再平衡最優，但手續費讓連續再平衡變成虧損策略。存在最佳再平衡頻率。
-
-**誤區3：只看Gamma不看Theta**
-→ Gamma/Theta比值是核心指標。Gamma/|Theta| > 5才算有利的Gamma Scalping環境。
-
-**誤區4：方向不重要**
-→ 雖然Delta Neutral不賭方向，但強趨勢日（單邊大漲或大跌）的Gamma Scalping效果遠不如震盪日。趨勢日你只在單邊再平衡，錯過另一邊的利潤。
 
 ## 與其他策略的關係
 
@@ -200,15 +159,51 @@ Gamma Scalping是選擇權交易「聖盃級」的策略——理論上完美（
 
 ## 實戰應用
 
-（待補充）
+### 1. 純Gamma Scalping（Long Straddle + 期貨再平衡）
+
+- 最直接的版本
+- 適合：預期高波動但不確定方向
+- 風險：Theta消耗，波動不夠就虧
+
+### 2. Gamma Scalping with IV Edge
+
+- 在IV低於歷史平均時建倉
+- 同時賺Gamma Scalping利潤 + IV回升的Vega利潤
+- 雙重獲利來源降低Theta風險
+
+### 3. 日內Gamma Scalping
+
+- 當天建倉當天平倉
+- 避免隔夜Theta成本
+- 適合：預期單日高波動（例如FOMC當天）
+- 需要極低交易成本才有可行性
+
+### 4. 寬幅Gamma Scalping
+
+- 不每5點再平衡，而是等價格移動20-50點才再平衡
+- 減少再平衡次數→降低手續費侵蝕
+- 但每次再平衡利潤更大
+- **關鍵trade-off**：再平衡頻率 vs 手續費
 
 ## 注意事項
 
-（待補充）
+**誤區1：Gamma Scalping穩賺**
+→ 如果波動不夠大，Theta會吃光所有利潤。Gamma Scalping的勝率取決於實際波動 vs 隱含波動的差距。
+
+**誤區2：越頻繁再平衡越好**
+→ 理論上連續再平衡最優，但手續費讓連續再平衡變成虧損策略。存在最佳再平衡頻率。
+
+**誤區3：只看Gamma不看Theta**
+→ Gamma/Theta比值是核心指標。Gamma/|Theta| > 5才算有利的Gamma Scalping環境。
+
+**誤區4：方向不重要**
+→ 雖然Delta Neutral不賭方向，但強趨勢日（單邊大漲或大跌）的Gamma Scalping效果遠不如震盪日。趨勢日你只在單邊再平衡，錯過另一邊的利潤。
 
 ## 相關主題
 
 （待補充）
+
+- [[操作策略/操作策略總論]]
 
 ## 來源
 

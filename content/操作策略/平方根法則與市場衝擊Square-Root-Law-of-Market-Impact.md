@@ -1,5 +1,6 @@
 ---
 title: "平方根法則與市場衝擊 Square Root Law of Market Impact"
+category: "操作策略"
 ---
 
 # 平方根法則與市場衝擊 Square Root Law of Market Impact
@@ -96,6 +97,26 @@ $$\Delta P \propto \sigma \cdot \sqrt{\frac{Q}{V}}$$
   即約 89 bps 的價格衝擊
 ```
 
+## 與相關概念的關聯
+
+- **與[[技術分析/Kyle-Lambda與價格衝擊模型Price-Impact-Model|Kyle's Lambda]]**：Lambda 是線性衝擊模型，平方根法則是非線性修正——Lambda 衡量 ΔP/Q，平方根法則衡量 ΔP/√Q
+- **與[[操作策略/Almgren-Chriss最優執行模型Almgren-Chriss-Optimal-Execution|Almgren-Chriss 模型]]**：平方根法則是 Almgren-Chriss 暫時衝擊項的實證基礎
+- **與[[操作策略/交易成本分析Transaction-Cost-Analysis|交易成本分析 TCA]]**：平方根法則是衝擊成本預估的核心工具
+- **與[[風險管理/Amihud非流動性指標Amihud-Illiquidity-Measure|Amihud 非流動性指標]]**：Amihud 衡量每單位成交金額的價格衝擊，與平方根法則的 c 係數直接相關
+- **與[[風險管理/流動性風險Liquidity-Risk|流動性風險]]**：平方根法則的 c 係數越高，流動性風險越大
+- **與[[風險管理/滑價與交易執行風險|滑價與交易執行風險]]**：滑價的根源就是市場衝擊，平方根法則提供滑價的量化預估
+- **與[[操作策略/高頻交易與做市策略High-Frequency-Trading-and-Market-Making|高頻交易與做市策略]]**：HFT 做市商利用平方根法則定價——大單的衝擊讓他們在價差中獲利更多
+- **與[[基本面分析/流動性溢價Liquidity-Premium|流動性溢價]]**：平方根法則解釋了為什麼低流動性資產要求更高報酬——高衝擊成本是流動性溢價的微觀來源
+
+## 歷史背景
+
+- **Kyle（1985）**：線性衝擊模型的奠基，為平方根法則提供理論起點
+- **Almgren & Chriss（1999/2000）**：最優執行模型將非線性衝擊正式納入
+- **Almgren et al.（2005）**：首次大規模實證確認平方根法則，被業界廣泛採用
+- **Bouchaud et al.（2004）**：從統計物理角度解釋平方根的來源
+- **Gabaix et al.（2006）**：提出基於冪律分佈的理論框架解釋平方根法則的普適性
+- **Zarinelli et al.（2015）**：用更大數據修正，指出對數關係在極端交易中更優
+
 ## 實戰應用
 
 ### 散戶的隱形成本意識
@@ -134,32 +155,12 @@ $$\Delta P \propto \sigma \cdot \sqrt{\frac{Q}{V}}$$
   1000 張 × 100 萬 × 0.566% = 566 萬的交易成本
 ```
 
-## 與相關概念的關聯
-
-- **與[[技術分析/Kyle-Lambda與價格衝擊模型Price-Impact-Model|Kyle's Lambda]]**：Lambda 是線性衝擊模型，平方根法則是非線性修正——Lambda 衡量 ΔP/Q，平方根法則衡量 ΔP/√Q
-- **與[[操作策略/Almgren-Chriss最優執行模型Almgren-Chriss-Optimal-Execution|Almgren-Chriss 模型]]**：平方根法則是 Almgren-Chriss 暫時衝擊項的實證基礎
-- **與[[操作策略/交易成本分析Transaction-Cost-Analysis|交易成本分析 TCA]]**：平方根法則是衝擊成本預估的核心工具
-- **與[[風險管理/Amihud非流動性指標Amihud-Illiquidity-Measure|Amihud 非流動性指標]]**：Amihud 衡量每單位成交金額的價格衝擊，與平方根法則的 c 係數直接相關
-- **與[[風險管理/流動性風險Liquidity-Risk|流動性風險]]**：平方根法則的 c 係數越高，流動性風險越大
-- **與[[風險管理/滑價與交易執行風險|滑價與交易執行風險]]**：滑價的根源就是市場衝擊，平方根法則提供滑價的量化預估
-- **與[[操作策略/高頻交易與做市策略High-Frequency-Trading-and-Market-Making|高頻交易與做市策略]]**：HFT 做市商利用平方根法則定價——大單的衝擊讓他們在價差中獲利更多
-- **與[[基本面分析/流動性溢價Liquidity-Premium|流動性溢價]]**：平方根法則解釋了為什麼低流動性資產要求更高報酬——高衝擊成本是流動性溢價的微觀來源
-
 ## 注意事項
 - **僅適用正常市場條件**：在極端壓力下（如2020年3月COVID拋售），衝擊可能遠超平方根預測
 - **不考慮方向性資訊**：平方根法則假設訂單無資訊含量，但知情交易者的衝擊遠大於不知情——需搭配[[籌碼面分析/VPIN訂單流毒性指標Volume-Synchronized-PIN|VPIN]]過濾
 - **市場碎裂影響**：同一標的在多個場所交易時，單一場所的 V 被高估，衝擊預測偏低
 - **非線性區間限制**：超大交易（Q/V > 30%）的衝擊偏離平方根（Zarinelli et al. 2015 指出可能更接近對數）
 - **台股特殊性**：漲跌幅限制 10%、處置股制度、盤中瞬間價格穩定措施等都會扭曲平方根法則的適用性
-
-## 歷史背景
-
-- **Kyle（1985）**：線性衝擊模型的奠基，為平方根法則提供理論起點
-- **Almgren & Chriss（1999/2000）**：最優執行模型將非線性衝擊正式納入
-- **Almgren et al.（2005）**：首次大規模實證確認平方根法則，被業界廣泛採用
-- **Bouchaud et al.（2004）**：從統計物理角度解釋平方根的來源
-- **Gabaix et al.（2006）**：提出基於冪律分佈的理論框架解釋平方根法則的普適性
-- **Zarinelli et al.（2015）**：用更大數據修正，指出對數關係在極端交易中更優
 
 ## 相關主題
 

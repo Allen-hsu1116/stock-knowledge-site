@@ -142,8 +142,8 @@ s值（初始資金除以單筆最大虧損）是破產風險最敏感的變數�
 
 ## 來源
 
-- [Risk of Ruin - Wikipedia](../raw/2026-05-08/Risk-of-Ruin-Wikipedia.md)
-- [賭徒破產理論(Gambler's Ruin)機率公式證明](../raw/2026-05-15/賭徒破產理論Gamblers-Ruin.md)
+- [Risk of Ruin - Wikipedia](../../raw/2026-05-08/Risk-of-Ruin-Wikipedia.md)
+- [賭徒破產理論(Gambler's Ruin)機率公式證明](../../raw/2026-05-15/賭徒破產理論Gamblers-Ruin.md)
 - Taranto & Khan (2020). "Gambler's ruin problem and bi-directional grid constrained trading and investment strategies"
 - Dickson (2005). Insurance Risk And Ruin. Cambridge University Press
 - Powers (2001). Starting Out in Futures Trading. McGraw-Hill

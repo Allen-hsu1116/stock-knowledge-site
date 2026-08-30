@@ -2,6 +2,7 @@
 title: "Omega比率 Omega Ratio"
 tags: [風險管理, 風險調整報酬, 績效評估, 量化指標]
 created: 2026-07-06
+category: "風險管理"
 ---
 
 # Omega比率 Omega Ratio
@@ -114,7 +115,7 @@ Omega = 3.83 表示每承受1單位損失風險，可獲得3.83單位的收益�
 
 用 Omega 比率取代夏普比率作為最佳化目標函數，可以避免常態分佈假設的限制，適用於包含選擇權、不動產等非傳統資產的投資組合。
 
-## 台股實戰應用
+
 
 ### 個股選擇
 
@@ -134,7 +135,7 @@ Omega = 3.83 表示每承受1單位損失風險，可獲得3.83單位的收益�
 - **Omega Ratio**：全分佈風險調整報酬
 - **[[獲利因子Profit-Factor|Profit Factor]]**：毛利/毛損比
 
-## Omega 的限制
+## 注意事項
 
 1. **計算複雜**：需要完整報酬序列而非摘要統計量，計算量比夏普/索提諾大
 2. **樣本依賴**：小樣本下 Omega 估計不穩定，建議至少36個月數據
@@ -142,16 +143,14 @@ Omega = 3.83 表示每承受1單位損失風險，可獲得3.83單位的收益�
 4. **缺乏直覺**：不像 Sharpe 或 Calmar 有「每單位風險賺多少」的直觀解讀
 5. **不區分路徑**：Omega 基於分佈而非時間序列，不考慮回撤的路徑風險（[[MDD最大回撤進階實戰各資產歷史回撤與管理方法|MDD]] 和 [[CDaR條件回撤風險Conditional-Drawdown-at-Risk|CDaR]] 補充）
 
+## 相關主題
+
+（待補充）
+
+- [[風險管理/風險管理總論]]
+
 ## 來源
 - Keating, C. & Shadwick, W.F. (2002). "A Universal Performance Measure". Journal of Performance Measurement.
 - Sortino, F.A. & Price, L.N. (1994). "Performance measurement in a downside risk framework". Journal of Investing.
 - Wikipedia: Sortino ratio（Omega 的數學基礎）
 - Post-Modern Portfolio Theory（後現代投資組合理論）核心指標之一
-
-## 注意事項
-
-（待補充）
-
-## 相關主題
-
-（待補充）

@@ -82,7 +82,7 @@ category: "風險管理"
 
 ## 來源
 
-- [光譜風險測度 Spectral Risk Measure](../raw/2026-08-07/光譜風險測度Spectral-Risk-Measure.md)
+- [光譜風險測度 Spectral Risk Measure](../../raw/2026-08-07/光譜風險測度Spectral-Risk-Measure.md)
 - Wikipedia: Spectral risk measure
 - Acerbi, C. (2002). "Spectral measures of risk: A coherent representation of subjective risk aversion." Journal of Banking & Finance, 26(7), 1505-1518.
 - Dowd, K., Cotter, J., Sorwar, G. (2008). "Spectral Risk Measures: Properties and Limitations." CRIS Discussion Paper Series.

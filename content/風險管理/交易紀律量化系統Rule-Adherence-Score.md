@@ -111,5 +111,5 @@ Rule Adherence Score = (遵守規則的交易數 / 總交易數) × 100
 
 ## 來源
 
-- [Trading Discipline: The Rule Adherence Score - TradeZella](../raw/2026-05-01/rule-adherence-score-tradezella.md)
-- [5 Steps to a Rule-Based Trading System - Trading Heroes](../raw/2026-05-01/rule-based-trading-system-tradingheroes.md)
+- [Trading Discipline: The Rule Adherence Score - TradeZella](../../raw/2026-05-01/rule-adherence-score-tradezella.md)
+- [5 Steps to a Rule-Based Trading System - Trading Heroes](../../raw/2026-05-01/rule-based-trading-system-tradingheroes.md)

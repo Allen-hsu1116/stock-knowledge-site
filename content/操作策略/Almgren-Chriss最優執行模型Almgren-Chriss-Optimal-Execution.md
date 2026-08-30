@@ -1,6 +1,7 @@
 ---
-title: "Almgren-Chriss 最優執行模型 Almgren-Chriss Optimal Execution Model"
+title: Almgren-Chriss 最優執行模型
 tags: [操作策略, 機構交易, 演算法交易, 市場衝擊, 最優執行]
+category: "操作策略"
 ---
 
 # Almgren-Chriss 最優執行模型
@@ -88,6 +89,13 @@ $$x_k = X \frac{\sinh(\kappa(T - t_k))}{\sinh(\kappa T)}$$
 - 開頭賣多一點降低時間風險，後段慢慢收尾
 - 這就是多數機構執行演算法的實際形狀
 
+## 模型延伸
+
+- **非線性衝擊**：Almgren（2003）將臨時衝擊改為冪律形式，因實證發現價格讓步隨交易量次線性成長
+- **連續時間**：用 Hamilton-Jacobi-Bellman 方法推導連續時間版本，允許動態重新優化
+- **適應性策略**：Almgren & Lorenz（2007）指出變異數目標具有動態不一致性，需要適應性重優化
+- **Lévy 過程**：Løkka & Xu（2020）將價格動態推廣到 Lévy 過程，納入跳躍風險
+
 ## 實戰應用
 
 ### 實戰意義
@@ -118,25 +126,11 @@ Kyle（1985）的 $\lambda$ 衡量的是「價格衝擊係數」——每單位�
 3. 算出最優軌跡
 4. 即時監控偏離度，必要時動態調整
 
-## 模型延伸
-
-- **非線性衝擊**：Almgren（2003）將臨時衝擊改為冪律形式，因實證發現價格讓步隨交易量次線性成長
-- **連續時間**：用 Hamilton-Jacobi-Bellman 方法推導連續時間版本，允許動態重新優化
-- **適應性策略**：Almgren & Lorenz（2007）指出變異數目標具有動態不一致性，需要適應性重優化
-- **Lévy 過程**：Løkka & Xu（2020）將價格動態推廣到 Lévy 過程，納入跳躍風險
-
 ## 注意事項
 
 - 本指標/概念僅供參考，實際操作需結合當時市場環境與其他指標綜合判斷
 - 歷史數據不代表未來表現，回測結果可能存在過度擬合風險
 - 散戶在使用時應注意自身風險承受能力，避免過度槓桿
-
-## 來源
-
-- Almgren, R. & Chriss, N. (2001). "Optimal execution of portfolio transactions." *Journal of Risk*, 3(2), 5-39.
-- Cartea, Á., Jaimungal, S. & Penalva, J. (2015). *Algorithmic and High-Frequency Trading*. Cambridge University Press.
-- Bertsimas, D. & Lo, A. (1998). "Optimal control of execution costs." *Journal of Financial Markets*, 1(1), 1-50.
-- Wikipedia: [Almgren–Chriss model](https://en.wikipedia.org/wiki/Almgren%E2%80%93Chriss_model)
 
 ## 相關主題
 - [[操作策略/執行演算法VWAP-TWAP-Execution-Algorithm]] — Almgren-Chriss 在 $\lambda=0$ 時收斂至 TWAP
@@ -145,3 +139,10 @@ Kyle（1985）的 $\lambda$ 衡量的是「價格衝擊係數」——每單位�
 - [[操作策略/交易成本分析Transaction-Cost-Analysis]] — 交易成本完整分析
 - [[技術分析/Kyle-Lambda與價格衝擊模型Price-Impact-Model]] — Kyle Lambda 價格衝擊模型
 - [[風險管理/滑價與交易執行風險]] — 滑價風險基礎
+
+## 來源
+
+- Almgren, R. & Chriss, N. (2001). "Optimal execution of portfolio transactions." *Journal of Risk*, 3(2), 5-39.
+- Cartea, Á., Jaimungal, S. & Penalva, J. (2015). *Algorithmic and High-Frequency Trading*. Cambridge University Press.
+- Bertsimas, D. & Lo, A. (1998). "Optimal control of execution costs." *Journal of Financial Markets*, 1(1), 1-50.
+- Wikipedia: [Almgren–Chriss model](https://en.wikipedia.org/wiki/Almgren%E2%80%93Chriss_model)

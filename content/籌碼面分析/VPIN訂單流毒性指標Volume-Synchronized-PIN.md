@@ -1,5 +1,6 @@
 ---
 title: "VPIN訂單流毒性指標 Volume-Synchronized PIN"
+category: "籌碼面分析"
 ---
 
 # VPIN訂單流毒性指標 Volume-Synchronized PIN
@@ -98,6 +99,22 @@ VPIN 最著名的實戰案例：
 - **與[[風險管理/市場微結構與流動性定價Market-Microstructure-and-Liquidity-Pricing|市場微結構與流動性定價]]**：VPIN 量化逆向選擇風險，是流動性定價的核心輸入
 - **與[[操作策略/Avellaneda-Stoikov做市模型Market-Making-Model|Avellaneda-Stoikov 做市模型]]**：做市商可根據 VPIN 動態調整報價寬度——毒性高時加寬價差
 
+## YouTube 學習來源
+
+- **"Order Flow Toxicity Explained: A Complete Guide to VPIN"**（WaveLabs 頻道）- 7分40秒，詳細解釋 VPIN 如何在 2010 閃崩前一小時發出預警，涵蓋 Volume Time vs Clock Time、0.9 警戒線、做市商實務應用與批評者觀點
+- **"The VPIN Flow Toxicity metric and liquidity crashes"**（QuantCongressUSA2011）- Easley 團隊親自解說 VPIN 與流動性危機的關聯
+
+## 實戰應用
+
+### 散戶實戰用法
+散戶無法精確計算 VPIN，但可以觀察其代理訊號：
+
+1. **盤中異常大單方向一致性**：連續大單同方向→毒性升高→趨勢可能加速
+2. **法人買賣超與價格方向**：法人買超但價格不漲=有更聰明的賣方在出貨
+3. **買賣價差突然擴大**：造市商感受到毒性撤退的訊號
+4. **委買委賣比極端值**：與 VPIN 的 order imbalance 概念相通
+5. **結算日前後毒性變化**：法人可能利用結算日集中操作，毒性通常升高
+
 ## 注意事項
 ### Andersen & Bondarenko（2014）的質疑
 
@@ -111,22 +128,6 @@ VPIN 最著名的實戰案例：
 - **參數敏感**：V 和 N 的選擇影響結果，沒有普適最優值
 - **台股適用性**：台股無逐筆成交公開數據（僅有最佳五檔），精確 VPIN 計算困難
 - **高頻時代的有效性**：隨著 HFT 佔比提升，VPIN 的訊號可能被噪音淹沒
-
-## 實戰應用
-
-### 散戶實戰用法
-散戶無法精確計算 VPIN，但可以觀察其代理訊號：
-
-1. **盤中異常大單方向一致性**：連續大單同方向→毒性升高→趨勢可能加速
-2. **法人買賣超與價格方向**：法人買超但價格不漲=有更聰明的賣方在出貨
-3. **買賣價差突然擴大**：造市商感受到毒性撤退的訊號
-4. **委買委賣比極端值**：與 VPIN 的 order imbalance 概念相通
-5. **結算日前後毒性變化**：法人可能利用結算日集中操作，毒性通常升高
-
-## YouTube 學習來源
-
-- **"Order Flow Toxicity Explained: A Complete Guide to VPIN"**（WaveLabs 頻道）- 7分40秒，詳細解釋 VPIN 如何在 2010 閃崩前一小時發出預警，涵蓋 Volume Time vs Clock Time、0.9 警戒線、做市商實務應用與批評者觀點
-- **"The VPIN Flow Toxicity metric and liquidity crashes"**（QuantCongressUSA2011）- Easley 團隊親自解說 VPIN 與流動性危機的關聯
 
 ## 相關主題
 

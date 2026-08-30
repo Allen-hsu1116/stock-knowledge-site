@@ -168,4 +168,4 @@ MDD = (Trough - Peak) / Peak
 - [Backtesting - Corporate Finance Institute](https://corporatefinanceinstitute.com/resources/data-science/backtesting/)
 - [Sharpe Ratio - Corporate Finance Institute](https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/sharpe-ratio-definition-formula/)
 - [Maximum Drawdown - Corporate Finance Institute](https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/maximum-drawdown/)
-- [回測與過擬合原始素材](../raw/2026-05-10/backtesting-and-overfitting.md)
+- [回測與過擬合原始素材](../../raw/2026-05-10/backtesting-and-overfitting.md)

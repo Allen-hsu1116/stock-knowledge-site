@@ -178,6 +178,6 @@ P/B < 1 既是機會，也是風險——必須搭配 ROE、現金流、產業�
 
 ## 來源
 
-- [每股淨值（BVPS）：定義、Graham Number 與投資應用 - TITAN FX Research Hub](../raw/2026-05-09/每股淨值BVPS定義Graham-Number與投資應用.md)
-- [股價淨值比有這麼神？ - FinLab](../raw/2026-05-09/股價淨值比有這麼神-FinLab回測.md)
-- [股價淨值比是什麼？多少合理？ - 平凡暄誓](../raw/2026-05-09/股價淨值比PB-Ratio評估合理價.md)
+- [每股淨值（BVPS）：定義、Graham Number 與投資應用 - TITAN FX Research Hub](../../raw/2026-05-09/每股淨值BVPS定義Graham-Number與投資應用.md)
+- [股價淨值比有這麼神？ - FinLab](../../raw/2026-05-09/股價淨值比有這麼神-FinLab回測.md)
+- [股價淨值比是什麼？多少合理？ - 平凡暄誓](../../raw/2026-05-09/股價淨值比PB-Ratio評估合理價.md)

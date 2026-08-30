@@ -129,4 +129,4 @@ Piotroski F-Score是9項0/1評分，專門設計用於低本益比價值股篩�
 
 ## 來源
 
-- [財報綜合健康評分法](../raw/2026-05-19/財報綜合健康評分法Comprehensive-Financial-Health-Scoring.md)
+- [財報綜合健康評分法](../../raw/2026-05-19/財報綜合健康評分法Comprehensive-Financial-Health-Scoring.md)

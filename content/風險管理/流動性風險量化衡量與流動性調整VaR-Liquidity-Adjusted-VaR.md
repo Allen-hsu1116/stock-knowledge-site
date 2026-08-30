@@ -208,6 +208,6 @@ Nassim Taleb 稱依賴機率分布的風險衡量為「騙術」——最嚴重�
 
 ## 來源
 
-- [流動性風險 Liquidity Risk - Wikipedia](../raw/2026-05-09/流動性風險Liquidity-Risk.md)
-- [市場流動性 Market Liquidity - Wikipedia](../raw/2026-05-09/市場流動性Market-Liquidity.md)
+- [流動性風險 Liquidity Risk - Wikipedia](../../raw/2026-05-09/流動性風險Liquidity-Risk.md)
+- [市場流動性 Market Liquidity - Wikipedia](../../raw/2026-05-09/市場流動性Market-Liquidity.md)
 - [Liquidity at Risk - Wikipedia](https://en.wikipedia.org/wiki/Liquidity_at_risk)

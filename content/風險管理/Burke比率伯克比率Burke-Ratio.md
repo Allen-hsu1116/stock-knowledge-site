@@ -1,5 +1,6 @@
 ---
 title: "Burke 比率（伯克比率）Burke Ratio"
+category: "風險管理"
 ---
 
 # Burke 比率（伯克比率）Burke Ratio
@@ -45,6 +46,16 @@ Burke Ratio = (R_p - R_f) / √(Σ DD_i²)
 - Martin Ratio = (R_p - R_f) / Ulcer Index
 - Burke 不除以 N，所以不考慮回撤持續時間，只看深度
 
+## 與其他回撤指標的系統定位
+
+Burke Ratio 屬於回撤調整報酬指標家族的一員：
+
+- **深度導向**：Calmar（只看 MDD）、Burke（看所有回撤平方和）
+- **持續時間導向**：Ulcer Index、Martin Ratio
+- **條件回撤**：[[風險管理/CDaR條件回撤風險Conditional-Drawdown-at-Risk|CDaR]]（只看特定分位數以上的回撤）
+
+選擇哪個指標取決於你最在意什麼：只怕一次大崩盤用 Calmar，怕頻繁回撤用 Burke，怕長期套牢用 Ulcer/Martin。
+
 ## 實戰應用
 
 ### 何時用 Burke？
@@ -85,16 +96,6 @@ Burke Ratio = (0.15 - 0.02) / 0.1556 ≈ 0.836
 - 不考慮回撤持續時間（一個 -10% 持續 3 天和持續 3 個月在 Burke 中權重相同）
 - 樣本量小時計算不穩定，需要至少 3 年以上月度數據
 - 學術文獻較少，不如 Sharpe / Sortino 普及
-
-## 與其他回撤指標的系統定位
-
-Burke Ratio 屬於回撤調整報酬指標家族的一員：
-
-- **深度導向**：Calmar（只看 MDD）、Burke（看所有回撤平方和）
-- **持續時間導向**：Ulcer Index、Martin Ratio
-- **條件回撤**：[[風險管理/CDaR條件回撤風險Conditional-Drawdown-at-Risk|CDaR]]（只看特定分位數以上的回撤）
-
-選擇哪個指標取決於你最在意什麼：只怕一次大崩盤用 Calmar，怕頻繁回撤用 Burke，怕長期套牢用 Ulcer/Martin。
 
 ## 相關主題
 

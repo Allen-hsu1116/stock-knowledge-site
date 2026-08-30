@@ -83,6 +83,13 @@ subject to:
 
 其中 J 是模擬次數，ℓ 是損失函數，w 是組合權重。選擇線性損失函數後，整個問題變成標準線性規劃，可高效求解。
 
+## 與其他風險指標的關係
+
+- **VaR → CVaR**：CVaR 是 VaR 的上推 (superquantile)，永遠 ≥ VaR
+- **CVaR 與 [[風險管理/一致性風險測度Coherent-Risk-Measures|一致性風險測度]]**：CVaR 是最常用的一致性測度之一，滿足次可加性
+- **CVaR 與 [[風險管理/光譜風險測度Spectral-Risk-Measure|光譜風險測度]]**：CVaR 是光譜測度的特例（等權重光譜）
+- **CVaR 與 [[風險管理/索提諾比率進階實戰Sortino-Ratio-Advanced|Sortino 比率]]**：Sortino 只看下行波動，CVaR 更進一步只看尾部期望損失
+
 ## 實戰應用
 
 **1. 資本準備 (Capital Reserve)**
@@ -103,13 +110,6 @@ subject to:
 - 常態分配假設下的 VaR 會嚴重低估此類情境的損失
 - 使用歷史模擬法或 t 分配計算 ES 更貼近實際
 
-## 與其他風險指標的關係
-
-- **VaR → CVaR**：CVaR 是 VaR 的上推 (superquantile)，永遠 ≥ VaR
-- **CVaR 與 [[風險管理/一致性風險測度Coherent-Risk-Measures|一致性風險測度]]**：CVaR 是最常用的一致性測度之一，滿足次可加性
-- **CVaR 與 [[風險管理/光譜風險測度Spectral-Risk-Measure|光譜風險測度]]**：CVaR 是光譜測度的特例（等權重光譜）
-- **CVaR 與 [[風險管理/索提諾比率進階實戰Sortino-Ratio-Advanced|Sortino 比率]]**：Sortino 只看下行波動，CVaR 更進一步只看尾部期望損失
-
 ## 注意事項
 
 - **非時間一致性**：標準 ES 不是時間一致的風險測度，動態版本需要特殊處理
@@ -117,15 +117,15 @@ subject to:
 - **尾部估計不確定性**：ES 依賴尾部估計，而尾部數據本來就少，樣本 ES 有較大估計誤差
 - **計算成本**：歷史模擬法需要足夠多的歷史數據，蒙特卡洛法需要大量模擬
 
-## 來源
-- Rockafellar & Uryasev (2000), "Optimization of conditional value-at-risk", Journal of Risk
-- Acerbi & Tasche (2002), "Expected Shortfall: a natural coherent alternative to Value at Risk"
-- Artzner, Delbaen, Eber & Heath (1999), "Coherent Measures of Risk"
-- Basel Committee on Banking Supervision (2019), Basel III market risk framework (FRTB)
-
 ## 相關主題
 - [[風險管理/一致性風險測度Coherent-Risk-Measures|一致性風險測度]]
 - [[風險管理/光譜風險測度Spectral-Risk-Measure|光譜風險測度]]
 - [[風險管理/通縮夏普比率Deflated-Sharpe-Ratio|通縮夏普比率]]
 - [[風險管理/風險管理總論|風險管理總論]]
 - [[風險管理/Copula連接函數與尾部相依性Copula-and-Tail-Dependence|Copula 連接函數與尾部相依性]]
+
+## 來源
+- Rockafellar & Uryasev (2000), "Optimization of conditional value-at-risk", Journal of Risk
+- Acerbi & Tasche (2002), "Expected Shortfall: a natural coherent alternative to Value at Risk"
+- Artzner, Delbaen, Eber & Heath (1999), "Coherent Measures of Risk"
+- Basel Committee on Banking Supervision (2019), Basel III market risk framework (FRTB)

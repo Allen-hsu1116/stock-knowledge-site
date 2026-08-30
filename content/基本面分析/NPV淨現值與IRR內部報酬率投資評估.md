@@ -109,6 +109,6 @@ category: 基本面分析
 
 ## 來源
 
-- [IRR、年化報酬率與淨現值法怎麼用在投資上？ - Win 投資](../raw/2026-05-12/IRR年化報酬率與淨現值法投資應用-Win投資.md)
-- [內部報酬率IRR是什麼？優缺點分析 - OANDA Lab](../raw/2026-05-12/IRR優缺點與MIRR修正-OANDA.md)
-- [IRR內部報酬率5步驟建立計算機 - AUME](../raw/2026-05-12/IRR內部報酬率計算與Excel應用-AUME.md)
+- [IRR、年化報酬率與淨現值法怎麼用在投資上？ - Win 投資](../../raw/2026-05-12/IRR年化報酬率與淨現值法投資應用-Win投資.md)
+- [內部報酬率IRR是什麼？優缺點分析 - OANDA Lab](../../raw/2026-05-12/IRR優缺點與MIRR修正-OANDA.md)
+- [IRR內部報酬率5步驟建立計算機 - AUME](../../raw/2026-05-12/IRR內部報酬率計算與Excel應用-AUME.md)

@@ -88,6 +88,6 @@ Fisher-Tippett-Gnedenko 定理指出，在滿足一定規則性條件下，獨�
 - [[策略壓力測試Stress-Testing]]
 
 ## 來源
-- [極端值理論：量化肥尾風險與金融黑天鵝的終極指南 - xglamdring](../raw/2026-05-15/極端值理論EVT量化肥尾風險與金融黑鵝-xglamdring.md)
+- [極端值理論：量化肥尾風險與金融黑天鵝的終極指南 - xglamdring](../../raw/2026-05-15/極端值理論EVT量化肥尾風險與金融黑天鵝-xglamdring.md)
 - Tsay, R. S. (2010). Analysis of Financial Time Series. Wiley.
 - McNeil, A. J., Frey, R., & Embrechts, P. (2015). Quantitative Risk Management. Princeton University Press.

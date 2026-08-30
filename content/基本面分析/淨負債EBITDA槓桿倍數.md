@@ -75,4 +75,4 @@ Net Debt/EBITDA 常用在信用評級、併購融資與企業價值分析。當�
 
 ## 來源
 
-- [Net Debt/EBITDA Ratio](../raw/2026-06-16/Net-Debt-EBITDA-CFI.md)
+- [Net Debt/EBITDA Ratio](../../raw/2026-06-16/Net-Debt-EBITDA-CFI.md)

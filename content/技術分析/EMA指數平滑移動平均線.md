@@ -108,5 +108,5 @@ MACD（Moving Average Convergence Divergence）就是基於 EMA 計算的：
 
 ## 來源
 
-- [EMA指標完整教學](../raw/2026-05-04/EMA指標完整教學.md)
-- [移動平均線MA完整教學](../raw/2026-05-04/移動平均線MA完整教學.md)
+- [EMA指標完整教學](../../raw/2026-05-04/EMA指標完整教學.md)
+- [移動平均線MA完整教學](../../raw/2026-05-04/移動平均線MA完整教學.md)

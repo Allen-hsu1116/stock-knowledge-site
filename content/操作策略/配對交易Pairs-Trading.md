@@ -2,6 +2,7 @@
 title: "配對交易 Pairs Trading"
 tags: [操作策略, 統計套利, 市場中性, 共整合, 配對交易]
 created: 2026-07-08
+category: "操作策略"
 ---
 
 # 配對交易 Pairs Trading
@@ -148,7 +149,25 @@ Long-Term Capital Management 曾大量使用配對交易，最終因為：
 - **除權息影響**：除權息造成的價格調整會扭曲價差
 - **漲跌幅限制**：10% 漲跌停可能導致一腿鎖死無法平倉
 
-## 優缺點
+## 進階技巧
+
+### Kalman Filter 動態 Hedge Ratio
+
+傳統 OLS 估計的 hedge ratio 是固定的，但現實中兩檔股票的關係會緩慢變化。使用 Kalman Filter 動態調整 hedge ratio 可以更精準追蹤均衡關係。
+
+### 機器學習配對篩選
+
+用機器學習（如 DBSCAN 聚類、t-SNE 降視覺化）從全市場自動篩選共整合配對，取代人工配對。
+
+### 多配對組合
+
+不要只做一個配對，同時持有 5-10 個獨立配對分散單一配對破裂的風險。配對之間的相關性也要控制。
+
+## 實戰應用
+
+（待補充）
+
+## 注意事項
 
 ### 優點
 
@@ -165,21 +184,7 @@ Long-Term Capital Management 曾大量使用配對交易，最終因為：
 - **手續成本**：兩腿開倉+平倉共四次交易成本
 - **融券成本**：做空的一腿有借券成本
 
-## 進階技巧
-
-### Kalman Filter 動態 Hedge Ratio
-
-傳統 OLS 估計的 hedge ratio 是固定的，但現實中兩檔股票的關係會緩慢變化。使用 Kalman Filter 動態調整 hedge ratio 可以更精準追蹤均衡關係。
-
-### 機器學習配對篩選
-
-用機器學習（如 DBSCAN 聚類、t-SNE 降視覺化）從全市場自動篩選共整合配對，取代人工配對。
-
-### 多配對組合
-
-不要只做一個配對，同時持有 5-10 個獨立配對分散單一配對破裂的風險。配對之間的相關性也要控制。
-
-## 相關頁面
+## 相關主題
 
 - [[操作策略/統計套利Statistical-Arbitrage]] — 配對交易的上位概念
 - [[操作策略/市場中性策略Market-Neutral-Strategy]] — 市場中性策略框架
@@ -193,15 +198,3 @@ Long-Term Capital Management 曾大量使用配對交易，最終因為：
 - [Pairs trade - Wikipedia](https://en.wikipedia.org/wiki/Pairs_trade)
 - Gerry Bamberger & Nunzio Tartaglia, Morgan Stanley, 1980s
 - Long-Term Capital Management 的反面教材案例
-
-## 實戰應用
-
-（待補充）
-
-## 注意事項
-
-（待補充）
-
-## 相關主題
-
-（待補充）

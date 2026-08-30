@@ -7,7 +7,7 @@ category: "基本面分析"
 
 > 量化選股能力的標準答案——IC衡量預測與實際報酬的相關性，Rank IC更穩健地用Spearman等級相關避開極端值干擾，IR=IC×√BR揭示選股能力×交易頻率的乘法關係
 
-## 核心定義
+## 核心概念
 
 **資訊係數（Information Coefficient, IC）** 衡量預測值與實際結果之間的線性相關程度，是量化投資中衡量選股預測能力的核心指標
 
@@ -101,6 +101,15 @@ $$IR = IC \times \sqrt{BR} \times \sqrt{TC}$$
 
 **核心洞見**：選股能力（IC）× 交易廣度（BR）× 執行效率（TC）三者缺一不可
 
+## IC 與其他績效指標的關係
+
+| 指標 | 衡量什麼 | 與IC的關係 |
+|------|----------|-----------|
+| IR | 主動報酬/追蹤誤差 | IR = IC × √BR |
+| Sharpe | 超額報酬/總風險 | 高IC策略通常高Sharpe |
+| Hit Rate | 預測正確比例 | IC高不代表Hit Rate高 |
+| 回測報酬 | 策略絕對報酬 | IC是報酬的因，報酬是果 |
+
 ## 實戰應用
 
 ### 1. 因子選股能力評估
@@ -126,7 +135,7 @@ $$IR = IC \times \sqrt{BR} \times \sqrt{TC}$$
 - 法說會預期差的IC：超預期的公司在之後1個月有正IC
 - 詳見 [[基本面分析/盈餘公告後價格漂移PEAD|盈餘公告後價格漂移PEAD]]
 
-## IC 的局限與陷阱
+## 注意事項
 
 ### 1. 線性假設
 - Pearson IC 只衡量線性關係
@@ -153,16 +162,7 @@ $$IR = IC \times \sqrt{BR} \times \sqrt{TC}$$
 - 需要至少3-5年月度IC才能判斷穩定性
 - 新上市公司的IC數據不足
 
-## IC 與其他績效指標的關係
-
-| 指標 | 衡量什麼 | 與IC的關係 |
-|------|----------|-----------|
-| IR | 主動報酬/追蹤誤差 | IR = IC × √BR |
-| Sharpe | 超額報酬/總風險 | 高IC策略通常高Sharpe |
-| Hit Rate | 預測正確比例 | IC高不代表Hit Rate高 |
-| 回測報酬 | 策略絕對報酬 | IC是報酬的因，報酬是果 |
-
-## 相關連結
+## 相關主題
 
 - [[風險管理/信息比率與追蹤誤差Information-Ratio-and-Tracking-Error|信息比率與追蹤誤差]]
 - [[基本面分析/基本面因子選股總論Quantitative-Fundamental-Factors|基本面因子選股總論]]
@@ -177,17 +177,6 @@ $$IR = IC \times \sqrt{BR} \times \sqrt{TC}$$
 
 **來源**: Wikipedia Information Coefficient 條目；Grinold & Kahn《Active Portfolio Management》；量化投資實務
 **建立日期**: 2026-07-23
-
-## 核心概念
-（待補充）
-
-
-## 注意事項
-（待補充）
-
-
-## 相關主題
-（待補充）
 
 ## 來源
 

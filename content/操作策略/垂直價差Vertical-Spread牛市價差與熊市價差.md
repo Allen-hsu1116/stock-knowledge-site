@@ -1,6 +1,6 @@
 ---
 category: "操作策略"
-title: 垂直價差 Vertical Spread 牛市價差與熊市價差
+title: 垂直價差 Vertical Spread：牛市價差與熊市價差
 date: 2026-06-04
 ---
 

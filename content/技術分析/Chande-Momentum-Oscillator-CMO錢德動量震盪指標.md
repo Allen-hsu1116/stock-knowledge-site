@@ -140,5 +140,5 @@ CMO 比 Stochastic 更敏感但更不平滑。如果需要穩定的訊號，Stoc
 
 ## 來源
 
-- [Chande Momentum Oscillator (CMO): A Complete Guide - Deepvue](../raw/2026-05-11/Chande-Momentum-Oscillator-CMO-錢德動量震盪指標.md)
-- [Chande Momentum Oscillator (CMO) — TradingView](../raw/2026-05-11/Chande-Momentum-Oscillator-CMO-錢德動量震盪指標.md)
+- [Chande Momentum Oscillator (CMO): A Complete Guide - Deepvue](../../raw/2026-05-11/Chande-Momentum-Oscillator-CMO-錢德動量震盪指標.md)
+- [Chande Momentum Oscillator (CMO) — TradingView](../../raw/2026-05-11/Chande-Momentum-Oscillator-CMO-錢德動量震盪指標.md)

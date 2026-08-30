@@ -41,7 +41,39 @@ McClellan Oscillator的累計版本：
 - McClellan Oscillator = **短期**市場寬度動能（像MACD柱狀圖）
 - McClellan Summation Index = **中長期**市場寬度趨勢（像MACD的訊號線）
 
-## 實戰判讀
+## 台股應用注意事項
+
+1. **數據來源**：台灣證券交易所每日公布漲跌家數，可計算加權指數的McClellan Oscillator。櫃買指數建議分開計算。
+
+2. **參數調整**：19日和39日是原始設計參數，對應約1個月和2個月的交易天數。台股可以考慮用20日和40日（整數更容易計算）。
+
+3. **搭配TRIN使用**：McClellan Oscillator只看家數不看量，TRIN同時看家數和量。兩者搭配：
+   - McClellan Oscillator正 + TRIN < 1 = 最強多頭確認
+   - McClellan Oscillator負 + TRIN > 1 = 最強空頭確認
+   - 兩者矛盾時 = 結構性分化，需進一步分析
+
+4. **搭配ADL使用**：McClellan Oscillator是ADL的動能版本。ADL看長期趨勢方向，McClellan Oscillator看動能轉折點。
+
+5. **寬度推升的台股特徵**：台股底部常出現寬度推升，但推升幅度可能不如美股劇烈。觀察從-40以下推升至+40以上即可視為有效推升。
+
+6. **背離的時間框架**：日線背離看1-2週轉折，週線背離看1-3個月轉折。短線操作用日線，波段操作用週線。
+
+7. **Summation Index趨勢線**：在MSI上畫趨勢線，跌破上升趨勢線是中期空頭訊號，突破下降趨勢線是中期多頭訊號。
+
+## 與MACD的類比理解
+
+| 概念 | MACD（個股） | McClellan Oscillator（大盤） |
+|------|-------------|------------------------------|
+| 原始數據 | 股價 | 淨漲跌家數 |
+| 快線 | 12日EMA | 19日EMA |
+| 慢線 | 26日EMA | 39日EMA |
+| 柱狀圖 | DIF - DEA | McClellan Oscillator值 |
+| 累計版本 | MACD本身 | Summation Index |
+| 零軸穿越 | 多空轉換 | 寬度多空轉換 |
+| 背離 | 價格背離 | 大盤背離 |
+| 推升 | — | 寬度推升（特有） |
+
+## 實戰應用
 
 ### 三大訊號類型
 
@@ -103,37 +135,9 @@ McClellan Oscillator的累計版本：
 
 ⚠️ 以上是NYSE歷史經驗值，台股需要自行回測調整。
 
-## 台股應用注意事項
 
-1. **數據來源**：台灣證券交易所每日公布漲跌家數，可計算加權指數的McClellan Oscillator。櫃買指數建議分開計算。
 
-2. **參數調整**：19日和39日是原始設計參數，對應約1個月和2個月的交易天數。台股可以考慮用20日和40日（整數更容易計算）。
-
-3. **搭配TRIN使用**：McClellan Oscillator只看家數不看量，TRIN同時看家數和量。兩者搭配：
-   - McClellan Oscillator正 + TRIN < 1 = 最強多頭確認
-   - McClellan Oscillator負 + TRIN > 1 = 最強空頭確認
-   - 兩者矛盾時 = 結構性分化，需進一步分析
-
-4. **搭配ADL使用**：McClellan Oscillator是ADL的動能版本。ADL看長期趨勢方向，McClellan Oscillator看動能轉折點。
-
-5. **寬度推升的台股特徵**：台股底部常出現寬度推升，但推升幅度可能不如美股劇烈。觀察從-40以下推升至+40以上即可視為有效推升。
-
-6. **背離的時間框架**：日線背離看1-2週轉折，週線背離看1-3個月轉折。短線操作用日線，波段操作用週線。
-
-7. **Summation Index趨勢線**：在MSI上畫趨勢線，跌破上升趨勢線是中期空頭訊號，突破下降趨勢線是中期多頭訊號。
-
-## 與MACD的類比理解
-
-| 概念 | MACD（個股） | McClellan Oscillator（大盤） |
-|------|-------------|------------------------------|
-| 原始數據 | 股價 | 淨漲跌家數 |
-| 快線 | 12日EMA | 19日EMA |
-| 慢線 | 26日EMA | 39日EMA |
-| 柱狀圖 | DIF - DEA | McClellan Oscillator值 |
-| 累計版本 | MACD本身 | Summation Index |
-| 零軸穿越 | 多空轉換 | 寬度多空轉換 |
-| 背離 | 價格背離 | 大盤背離 |
-| 推升 | — | 寬度推升（特有） |
+實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。
 
 ## 注意事項
 
@@ -155,11 +159,7 @@ McClellan Oscillator的累計版本：
 - [[多指標共振交易系統Multi-Indicator-Confluence]]
 
 ## 來源
-- [McClellan Oscillator - StockCharts ChartSchool](../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)
-- [McClellan Summation Index - StockCharts ChartSchool](../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)
-- [市場寬度 - Finetic](../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)
-- [TRIN 交易者指數 - taindicators](../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)
-
-## 實戰應用
-
-實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。
+- [McClellan Oscillator - StockCharts ChartSchool](../../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)
+- [McClellan Summation Index - StockCharts ChartSchool](../../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)
+- [市場寬度 - Finetic](../../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)
+- [TRIN 交易者指數 - taindicators](../../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)

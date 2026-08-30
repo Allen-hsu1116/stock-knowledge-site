@@ -126,5 +126,5 @@ Stochastic RSI 是「指標的指標」，距離價格**兩步之遙**：
 - [[布林通道Bollinger-Bands三軌八型態]] - 另一種超買超賣判斷工具
 
 ## 來源
-- [隨機RSI (Stoch RSI) - TradingView](../raw/2026-05-04/Stochastic-RSI隨機RSI.md)
-- [隨機RSI - 投機者博客](../raw/2026-05-04/Stochastic-RSI隨機RSI.md)
+- [隨機RSI (Stoch RSI) - TradingView](../../raw/2026-05-04/Stochastic-RSI隨機RSI.md)
+- [隨機RSI - 投機者博客](../../raw/2026-05-04/Stochastic-RSI隨機RSI.md)

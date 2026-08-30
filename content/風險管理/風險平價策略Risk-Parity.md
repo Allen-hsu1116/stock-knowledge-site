@@ -194,5 +194,5 @@ Dalio的經濟環境四象限框架：
 
 ## 來源
 
-- [Risk Parity - Wikipedia](../raw/2026-05-08/Risk-Parity-風險平價策略.md)
-- [Risk Parity 策略和全天候基金 - 狂徒](../raw/2026-05-15/風險平價策略與全天候基金-狂徒.md)
+- [Risk Parity - Wikipedia](../../raw/2026-05-08/Risk-Parity-風險平價策略.md)
+- [Risk Parity 策略和全天候基金 - 狂徒](../../raw/2026-05-15/風險平價策略與全天候基金-狂徒.md)

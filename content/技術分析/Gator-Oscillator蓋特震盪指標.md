@@ -135,6 +135,6 @@ Gator 本身不判斷多空方向，需要搭配鱷魚線：
 
 ## 來源
 
-- [均線伴侶——鱷魚震蕩指標Gator Oscillator - GKFXPrime](../raw/2026-05-16/Gator-Oscillator蓋特震盪指標.md)
-- [鱷魚線(Alligator)詳解2025 - EBC金融集團](../raw/2026-05-16/鱷魚線進階Gator-Oscillator與碎形搭配.md)
-- [簡單易上手！鱷魚線指標的操作應用 - FX110](../raw/2026-05-16/鱷魚線Alligator教學-理財研究室-大昌期貨-FX110.md)
+- [均線伴侶——鱷魚震蕩指標Gator Oscillator - GKFXPrime](../../raw/2026-05-16/Gator-Oscillator蓋特震盪指標.md)
+- [鱷魚線(Alligator)詳解2025 - EBC金融集團](../../raw/2026-05-16/鱷魚線進階Gator-Oscillator與碎形搭配.md)
+- [簡單易上手！鱷魚線指標的操作應用 - FX110](../../raw/2026-05-16/鱷魚線Alligator教學-理財研究室-大昌期貨-FX110.md)

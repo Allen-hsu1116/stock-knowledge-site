@@ -2,6 +2,7 @@
 title: "DeMarker指標 DeMarker Oscillator"
 tags: [技術分析, 動量指標, 震盪指標, Tom DeMark]
 created: 2026-07-06
+category: "技術分析"
 ---
 
 # DeMarker指標 DeMarker Oscillator
@@ -95,7 +96,24 @@ $$DeM = \frac{3+3+0}{(3+3+0)+(2+0+3)} = \frac{6}{11} \approx 0.545$$
 - DeMarker 通常比 RSI 更平滑，訊號更少但更可靠
 - RSI 在強趨勢中容易鈍化（[[RSI鈍化應對策略RSI-Passivation-Response|RSI鈍化]]），DeMarker 也有同樣問題
 
-## 實戰策略
+## DeMarker 的限制
+
+1. **盤整失效**：跟所有震盪指標一樣，盤整市中 DeMarker 會在0.3-0.7間來回波動產生大量假訊號
+2. **鈍化問題**：強趨勢中 DeMarker 可能長時間停留在超買或超賣區，類似 [[技術指標鈍化與對策|RSI鈍化]]
+3. **落後性**：作為動量指標，DeMarker 本質上是落後指標，背離確認需要等待
+4. **參數敏感**：不同N值對結果影響顯著，需根據標的特性調整
+
+## Tom DeMark 指標家族
+
+DeMarker 只是 Tom DeMark 指標體系的一員：
+
+- **[[TD-Sequential序列指標Setup9Countdown13|TD Sequential]]**：計數9和13捕捉趨勢耗盡
+- **TD Combo**：類似 TD Sequential 但計數規則不同
+- **DeMarker**：連續震盪指標，本頁所述
+- **TD Lines**：趨勢線系統
+- **TD Points**：支撐壓力點系統
+
+## 實戰應用
 
 ### 策略一：超買超賣均值回歸
 
@@ -118,44 +136,21 @@ $$DeM = \frac{3+3+0}{(3+3+0)+(2+0+3)} = \frac{6}{11} \approx 0.545$$
 3. 進場後用[[ATR平均真實波幅-Average-True-Range|ATR]]設停損
 4. 目標設在前一個結構高低點
 
-## 台股實戰注意事項
+## 注意事項
 
 - DeMarker 在台股的適用性與 RSI 類似，適合震盪市或趨勢中的回檔判讀
 - 台股個股波動較大時，可考慮將參數從14調整為9（更靈敏）或21（更平滑）
 - 搭配[[量價關係九種型態高低檔判讀|量價關係]]確認：DeMarker 超賣 + 縮量整理 → 更可靠的底部訊號
 - 權值股如台積電、鴻海等大市值股票的 DeMarker 訊號比小型股更可靠
 
-## DeMarker 的限制
+## 相關主題
 
-1. **盤整失效**：跟所有震盪指標一樣，盤整市中 DeMarker 會在0.3-0.7間來回波動產生大量假訊號
-2. **鈍化問題**：強趨勢中 DeMarker 可能長時間停留在超買或超賣區，類似 [[技術指標鈍化與對策|RSI鈍化]]
-3. **落後性**：作為動量指標，DeMarker 本質上是落後指標，背離確認需要等待
-4. **參數敏感**：不同N值對結果影響顯著，需根據標的特性調整
+（待補充）
 
-## Tom DeMark 指標家族
-
-DeMarker 只是 Tom DeMark 指標體系的一員：
-
-- **[[TD-Sequential序列指標Setup9Countdown13|TD Sequential]]**：計數9和13捕捉趨勢耗盡
-- **TD Combo**：類似 TD Sequential 但計數規則不同
-- **DeMarker**：連續震盪指標，本頁所述
-- **TD Lines**：趨勢線系統
-- **TD Points**：支撐壓力點系統
+- [[技術分析/技術分析總論]]
 
 ## 來源
 - Tom DeMark, *The New Science of Technical Analysis* (1994)
 - Tom DeMark, *DeMark on Day-Trading Options* (1999)
 - MQL5 技術指標文檔：iDeMarker，參數為 symbol, period, ma_period（預設14）
 - DeMarker 的0.3/0.7閾值與 MQL5 示例代碼中的 indicator_level1=0.3, indicator_level2=0.7 一致
-
-## 實戰應用
-
-（待補充）
-
-## 注意事項
-
-（待補充）
-
-## 相關主題
-
-（待補充）

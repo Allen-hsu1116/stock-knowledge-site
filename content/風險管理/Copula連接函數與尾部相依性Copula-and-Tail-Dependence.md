@@ -142,6 +142,32 @@ $$
 - (1-π) 代表「危機狀態」的權重
 - 類似 [[風險管理/波動率體制轉換模型Volatility-Regime-Switching-Model|波動率體制轉換模型]] 的概念，但應用於相依結構
 
+## 估計方法
+
+### 一、Inference Functions for Margins (IFM)
+
+1. 第一步：用最大概似法估計各資產的邊際分佈參數
+2. 第二步：固定邊際參數，估計 Copula 參數
+- 優點：計算簡單，兩步分開
+- 缺點：估計效率不如聯合估計
+
+### 二、全最大概似法（Full MLE）
+
+同時估計所有邊際和 Copula 參數，精度最高但計算量大。
+
+### 三、基於經驗分佈的非參數估計
+
+用經驗 CDF 代替理論邊際，直接估計 Copula。適合邊際分佈難以確定的情況。
+
+## 與其他風險管理的關係
+
+- **與 [[風險管理/相關性崩潰Correlation-Breakdown|相關性崩潰]] 的關係**：相關性崩潰是 Copula 參數在危機時變化的現象，Copula 是其數學描述
+- **與 [[風險管理/相關性風險Correlation-Risk|相關性風險]] 的關係**：Correlation Risk 是 Copula 參數不確定性的風險
+- **與 [[風險管理/VaR風險值Value-at-Risk|VaR]] 的關係**：Copula-VaR 是 VaR 的進階版，考慮尾部相依
+- **與 [[風險管理/CVaR條件風險價值Conditional-Value-at-Risk|CVaR]] 的關係**：Copula-CVaR 比 Copula-VaR 更穩健，因為 CVaR 是一致性風險測度
+- **與 [[風險管理/極端值理論EVT量化肥尾風險|EVT 極值理論]] 的關係**：EVT 擬合單變量尾部，Copula 連接多變量尾部，兩者組合 = 完整的尾部風險建模
+- **與 [[風險管理/分散投資七法與相關係數Diversification-Seven-Methods|分散投資]] 的關係**：Copula 下尾相依係數量化分散在危機時的失效程度
+
 ## 實戰應用
 
 ### 一、投資組合風險評估
@@ -171,24 +197,7 @@ $$
 - 下尾相依高的資產組合，在危機時分散效果崩潰
 - 選擇下尾相依低的資產組合，才能在危機中真正分散
 
-## 估計方法
-
-### 一、Inference Functions for Margins (IFM)
-
-1. 第一步：用最大概似法估計各資產的邊際分佈參數
-2. 第二步：固定邊際參數，估計 Copula 參數
-- 優點：計算簡單，兩步分開
-- 缺點：估計效率不如聯合估計
-
-### 二、全最大概似法（Full MLE）
-
-同時估計所有邊際和 Copula 參數，精度最高但計算量大。
-
-### 三、基於經驗分佈的非參數估計
-
-用經驗 CDF 代替理論邊際，直接估計 Copula。適合邊際分佈難以確定的情況。
-
-## 優缺點
+## 注意事項
 
 ### 優點
 - 分離邊際分佈與相依結構，靈活組合
@@ -204,22 +213,11 @@ $$
 - 維度詛咒：資產數量增加時，高維 Copula 估計極困難
 - Gaussian Copula 的誤用是 2008 危機的重要原因
 
-## 與其他風險管理的關係
-
-- **與 [[風險管理/相關性崩潰Correlation-Breakdown|相關性崩潰]] 的關係**：相關性崩潰是 Copula 參數在危機時變化的現象，Copula 是其數學描述
-- **與 [[風險管理/相關性風險Correlation-Risk|相關性風險]] 的關係**：Correlation Risk 是 Copula 參數不確定性的風險
-- **與 [[風險管理/VaR風險值Value-at-Risk|VaR]] 的關係**：Copula-VaR 是 VaR 的進階版，考慮尾部相依
-- **與 [[風險管理/CVaR條件風險價值Conditional-Value-at-Risk|CVaR]] 的關係**：Copula-CVaR 比 Copula-VaR 更穩健，因為 CVaR 是一致性風險測度
-- **與 [[風險管理/極端值理論EVT量化肥尾風險|EVT 極值理論]] 的關係**：EVT 擬合單變量尾部，Copula 連接多變量尾部，兩者組合 = 完整的尾部風險建模
-- **與 [[風險管理/分散投資七法與相關係數Diversification-Seven-Methods|分散投資]] 的關係**：Copula 下尾相依係數量化分散在危機時的失效程度
-
-## 注意事項
-
-（待補充）
-
 ## 相關主題
 
 （待補充）
+
+- [[風險管理/風險管理總論]]
 
 ## 來源
 

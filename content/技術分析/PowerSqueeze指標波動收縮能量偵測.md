@@ -78,4 +78,4 @@ PowerSqueeze 與 VCP 的結合是高效選股流程：
 
 ## 來源
 
-- [VCP實例操作與PowerSqueeze指標-Growin](../raw/2026-05-10/VCP實例操作與PowerSqueeze指標-Growin.md)
+- [VCP實例操作與PowerSqueeze指標-Growin](../../raw/2026-05-10/VCP實例操作與PowerSqueeze指標-Growin.md)

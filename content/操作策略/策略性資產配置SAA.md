@@ -76,4 +76,4 @@ SAA 最好寫進 [[風險管理/投資政策聲明IPS-Investment-Policy-Statemen
 
 ## 來源
 
-- [Strategic Asset Allocation (SAA)](../raw/2026-06-14/策略性資產配置SAA.md)
+- [Strategic Asset Allocation (SAA)](../../raw/2026-06-14/策略性資產配置SAA.md)

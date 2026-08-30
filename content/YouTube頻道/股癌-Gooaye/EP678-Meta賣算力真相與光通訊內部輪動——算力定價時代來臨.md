@@ -6,7 +6,12 @@ title: "EP678 Meta賣算力真相與光通訊內部輪動 — 算力定價時代
 
 > **頻道**：股癌 Gooaye | **日期**：2026-07-11 | **影片**：[dF-Fhpmh_8c](https://www.youtube.com/watch?v=dF-Fhpmh_8c)
 
-## 摘要
+## 影片資訊
+
+- **頻道**：股癌-Gooaye
+- **影片連結**：[YouTube](https://www.youtube.com/watch?v=dF-Fhpmh_8c)
+
+## 核心觀點
 
 颱風假後市場觀察：輝達攻上200億重新站回季線，Meta跳上去。核心議題：Meta賣算力不是退出AI而是double down，Zuckerberg親自證實。Meta加入算力租賃大賽衝擊Neocloud，算力定價趨穩意味本夢比炒作空間收縮。記憶體/被動元件/功率元件漲價持續但收斂，光通訊內部出現Narrow and Fast vs Wide and Slow的類股輪動。
 
@@ -81,3 +86,19 @@ Meta加入算力租賃大賽 = 多一個超級大玩家進來。Meta本身是AI�
 - 功率元件ADI漲價信 → 台股MOSFET/封裝走強
 - 導線架lead time從3-4個月→7-8個月 漲價10-20%
 - 光通訊內部輪動：SiPh/InP弱 VCSEL/AOC強
+
+## 實戰重點
+
+- 把影片中的預測拆成可驗證條件，追蹤財報、價格、成交量與籌碼是否同步；未驗證前不因單一敘事重押。
+
+## 注意事項
+
+- 影片內容具有時效性，口述數字、公司消息與政策判斷應回查原始公告；本文是知識整理，不是買賣建議。
+
+## 相關主題
+
+- [[風險管理/風險管理總論]]
+
+## 來源
+
+- [原始影片](https://www.youtube.com/watch?v=dF-Fhpmh_8c)

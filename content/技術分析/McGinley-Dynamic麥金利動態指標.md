@@ -154,6 +154,6 @@ N 值越小，MD 越貼合價格、越靈敏；N 值越大，MD 越平滑、越�
 
 ## 來源
 
-- [McGinley Dynamic Indicator - earn2trade](../raw/2026-05-11/McGinley-Dynamic-指標%20earn2trade.md)
-- [McGinley Dynamic + Majority Rule - tradejini](../raw/2026-05-11/McGinley-Dynamic-Majority-Rule-組合策略%20tradejini.md)
-- [你從未聽說過的最可靠的指標 - 班傑明投資教室](../raw/2026-05-11/McGinley-Dynamic-麥金利動態指標%20班傑明投資教室.md)
+- [McGinley Dynamic Indicator - earn2trade](../../raw/2026-05-11/McGinley-Dynamic-指標 earn2trade.md)
+- [McGinley Dynamic + Majority Rule - tradejini](../../raw/2026-05-11/McGinley-Dynamic-Majority-Rule-組合策略 tradejini.md)
+- [你從未聽說過的最可靠的指標 - 班傑明投資教室](../../raw/2026-05-11/McGinley-Dynamic-麥金利動態指標 班傑明投資教室.md)

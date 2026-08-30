@@ -1,6 +1,6 @@
 ---
 category: "風險管理"
-title: "MAE/MFE交易復盤與出場優化"
+title: MAE/MFE 交易復盤與出場優化
 date: 2026-06-13
 ---
 
@@ -83,4 +83,4 @@ MAE/MFE 的重點不是事後懊悔「早知道在最高點賣」，那種廢話
 
 ## 來源
 
-- [MAE and MFE explained](../raw/2026-06-13/TradingDiaryPro-MAE-and-MFE-explained.md)
+- [MAE and MFE explained](../../raw/2026-06-13/TradingDiaryPro-MAE-and-MFE-explained.md)

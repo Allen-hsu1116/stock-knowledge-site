@@ -105,5 +105,5 @@ EPS為負時P/E無意義。解決方案：改用P/S（股價營收比）、EV/EB
 
 ## 來源
 
-- [本益比市盈率PE-Ratio](../raw/2026-05-05/本益比市盈率PE-Ratio.md)
-- [企業價值倍數EV/EBITDA](../raw/2026-05-05/企業價值倍數EV-EBITDA.md)
+- [本益比市盈率PE-Ratio](../../raw/2026-05-05/本益比市盈率PE-Ratio.md)
+- [企業價值倍數EV/EBITDA](../../raw/2026-05-05/企業價值倍數EV-EBITDA.md)

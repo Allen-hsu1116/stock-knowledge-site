@@ -75,7 +75,17 @@ $$
 - **CoVaR**：衡量機構處於某狀態時，系統尾部分位數落在哪裡。
 - **Delta CoVaR**：衡量機構從正常轉為壓力狀態時，系統尾部風險的變化。
 
-## 台股實戰用法
+## 實戰檢查清單
+
+- [ ] 系統投資組合定義固定且可重現
+- [ ] 報酬率與損失率符號一致
+- [ ] 尾部分位數與估計窗口事前固定
+- [ ] 使用調整後價格並處理停牌與缺值
+- [ ] 有信賴區間或重抽樣穩健性檢查
+- [ ] 與槓桿、規模、流動性和共同曝險交叉驗證
+- [ ] 不把條件關聯寫成因果結論
+
+## 實戰應用
 
 ### 金融股風險排名
 
@@ -89,7 +99,7 @@ $$
 - 高Delta CoVaR部位可搭配較低權重、較嚴格風險預算或市場壓力時自動降曝險。
 - 搭配[[風險管理/Copula連接函數與尾部相依性Copula-and-Tail-Dependence|Copula尾部相依性]]與[[風險管理/金融傳染風險Financial-Contagion|金融傳染風險]]，分辨一般相關與危機尾部共振。
 
-## 常見誤區
+## 注意事項
 
 - **把相關當因果**：共同持有相同資產、同受利率衝擊，也會產生高CoVaR。
 - **系統定義亂換**：用大盤、金融指數或等權金融股組合，結果不是同一件事。
@@ -97,25 +107,15 @@ $$
 - **只看點估計**：尾部樣本少，沒有信賴區間的精確排名常常只是小數點演戲。
 - **直接當買賣訊號**：Delta CoVaR是風險配置工具，不是明天漲跌預言機。
 
-## 實戰檢查清單
-
-- [ ] 系統投資組合定義固定且可重現
-- [ ] 報酬率與損失率符號一致
-- [ ] 尾部分位數與估計窗口事前固定
-- [ ] 使用調整後價格並處理停牌與缺值
-- [ ] 有信賴區間或重抽樣穩健性檢查
-- [ ] 與槓桿、規模、流動性和共同曝險交叉驗證
-- [ ] 不把條件關聯寫成因果結論
-
-## 來源
-
-- [Adrian & Brunnermeier, CoVaR, NBER Working Paper 17454](https://www.nber.org/papers/w17454)
-- [Adrian & Brunnermeier, CoVaR, American Economic Review](https://www.aeaweb.org/articles?id=10.1257/aer.20120555)
-- 本地研究素材：`raw/2026-08-28/Adrian-Brunnermeier-CoVaR研究摘錄.md`
-
 ## 相關主題
 
 - [[風險管理/VaR風險值Value-at-Risk|VaR風險值]]
 - [[風險管理/條件風險價值CVaR與期望短缺Expected-Shortfall|CVaR與Expected Shortfall]]
 - [[風險管理/金融傳染風險Financial-Contagion|金融傳染風險]]
 - [[風險管理/Copula連接函數與尾部相依性Copula-and-Tail-Dependence|Copula與尾部相依性]]
+
+## 來源
+
+- [Adrian & Brunnermeier, CoVaR, NBER Working Paper 17454](https://www.nber.org/papers/w17454)
+- [Adrian & Brunnermeier, CoVaR, American Economic Review](https://www.aeaweb.org/articles?id=10.1257/aer.20120555)
+- 本地研究素材：`raw/2026-08-28/Adrian-Brunnermeier-CoVaR研究摘錄.md`

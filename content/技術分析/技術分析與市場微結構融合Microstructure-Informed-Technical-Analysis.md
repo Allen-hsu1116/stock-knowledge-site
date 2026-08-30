@@ -163,6 +163,10 @@ date: 2026-06-08
 - **訂單流分析平台**：如 Bookmap、Quantower
 - **期貨委買委賣口數**：期交所提供
 
+## 實戰應用
+
+實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。
+
 ## 注意事項
 
 - **數據延遲**：微結構分析依賴即時數據，延遲 1 秒的分析價值大幅下降
@@ -191,7 +195,3 @@ date: 2026-06-08
 - O'Hara, M. (1995). *Market Microstructure Theory*
 - Cartea, A., Jaimungal, S., & Penalva, J. (2015). *Algorithmic and High-Frequency Trading*
 - Vo, M.T. (2017). *The Value of Order Flow Data in Technical Analysis* (學術研究)
-
-## 實戰應用
-
-實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。

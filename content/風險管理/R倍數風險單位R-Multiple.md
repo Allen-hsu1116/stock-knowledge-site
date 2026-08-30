@@ -1,6 +1,6 @@
 ---
 category: "風險管理"
-title: R倍數風險單位R-Multiple
+title: R倍數風險單位 R-Multiple
 date: 2026-06-12
 ---
 
@@ -89,4 +89,4 @@ R 只處理單筆交易，不處理相關部位。兩筆各 1R 的 AI 伺服器�
 
 ## 來源
 
-- [The R-Multiple Framework: Position Sizing for Systematic Traders](../raw/2026-06-12/R倍數風險單位R-Multiple.md)
+- [The R-Multiple Framework: Position Sizing for Systematic Traders](../../raw/2026-06-12/R倍數風險單位R-Multiple.md)

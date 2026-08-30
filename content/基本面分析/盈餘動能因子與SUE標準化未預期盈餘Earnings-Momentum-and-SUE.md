@@ -128,7 +128,7 @@ SUE = (實際EPS - 預期EPS) / 歷史盈餘驚喜的標準差
 
 ## 來源
 
-- [盈餘動能因子與SUE標準化未預期盈餘](../raw/2026-05-19/盈餘動能因子與SUE標準化未預期盈餘.md)
+- [盈餘動能因子與SUE標準化未預期盈餘](../../raw/2026-05-19/盈餘動能因子與SUE標準化未預期盈餘.md)
 - Ball & Brown (1968): An Empirical Evaluation of Accounting Income Numbers
 - Bernard & Thomas (1989, 1990): Post-Earnings-Announcement Drift
 - Chan, Jegadeesh & Lakonishok (1996): Momentum Strategies

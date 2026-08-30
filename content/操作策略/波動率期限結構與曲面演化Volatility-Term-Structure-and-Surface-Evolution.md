@@ -1,5 +1,5 @@
 ---
-title: "波動率期限結構與曲面演化Volatility-Term-Structure-and-Surface-Evolution"
+title: 波動率期限結構與曲面演化 Volatility Term Structure & Surface Evolution
 date: 2026-06-27
 category: "操作策略"
 ---
@@ -156,4 +156,4 @@ Black-Scholes 假設標的報酬為常態分配（log-normal），但真實市�
 
 ## 來源
 
-- [Volatility Smile & Surface - Wikipedia](../raw/2026-06-27/Volatility-Smile-Surface-Wikipedia.md)
+- [Volatility Smile & Surface - Wikipedia](../../raw/2026-06-27/Volatility-Smile-Surface-Wikipedia.md)

@@ -149,7 +149,7 @@ Williams原始參數(5, 34)為20多年前設計：
 
 ## 來源
 
-- [AC Acceleration Deceleration Oscillator 實戰](../raw/2026-05-16/AC加速震盪指標實戰.md)
+- [AC Acceleration Deceleration Oscillator 實戰](../../raw/2026-05-16/AC加速震盪指標實戰.md)
 - [ForexTester: Accelerator Decelerator Indicator](https://forextester.com/blog/accelerator-decelerator-indicator/)
 - [IFC Markets: Accelerator Oscillator](https://www.ifcmarkets.com/en/ntx-indicators/accelerator-decelerator-oscillator)
 - [期權加油站: AC和AO技術指標](https://ey90223.pixnet.net/blog/post/257920462)

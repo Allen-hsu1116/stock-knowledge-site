@@ -1,6 +1,6 @@
 ---
 category: "技術分析"
-title: 圓底圓頂型態 Rounding Top and Bottom
+title: 圓底圓頂型態Rounding-Top-and-Bottom
 ---
 
 # 圓底圓頂型態Rounding-Top-and-Bottom
@@ -98,6 +98,6 @@ title: 圓底圓頂型態 Rounding Top and Bottom
 
 ## 來源
 
-- [Rounded Top and Rounded Bottom - Titan FX](../raw/2026-05-17/圓底圓頂型態實戰判讀.md)
-- [圓型底 Rounding Bottom - 庫加老師 TIFA Life](../raw/2026-05-17/圓底圓頂型態實戰判讀.md)
-- [出現「圓弧底」型態，股價大漲55.1% - CMoney](../raw/2026-05-17/圓底圓頂型態實戰判讀.md)
+- [Rounded Top and Rounded Bottom - Titan FX](../../raw/2026-05-17/圓底圓頂型態實戰判讀.md)
+- [圓型底 Rounding Bottom - 庫加老師 TIFA Life](../../raw/2026-05-17/圓底圓頂型態實戰判讀.md)
+- [出現「圓弧底」型態，股價大漲55.1% - CMoney](../../raw/2026-05-17/圓底圓頂型態實戰判讀.md)

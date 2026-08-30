@@ -95,7 +95,7 @@ Doris用$200,000投資，配置50%股票、30%債券、15%商品、5%現金。�
 
 ## 來源
 
-- [善用比重還原法（Rebalancing）確保投資組合緊貼目標 - Endowus](../raw/2026-05-08/比重還原法Rebalancing-Endowus.md)
-- [How and When to Rebalance Your Portfolio - SmartAsset](../raw/2026-05-08/再平衡策略SmartAsset.md)
-- [2026投資策略指南：5大資產配置實戰回測 - FM Studio](../raw/2026-05-15/投資組合風險審計五大策略回測與隱藏成本.md)
-- [資產配置的再平衡是什麼意思 - 市場先生](../raw/2026-05-15/資產配置再平衡頻率與實務.md)
+- [善用比重還原法（Rebalancing）確保投資組合緊貼目標 - Endowus](../../raw/2026-05-08/比重還原法Rebalancing-Endowus.md)
+- [How and When to Rebalance Your Portfolio - SmartAsset](../../raw/2026-05-08/再平衡策略SmartAsset.md)
+- [2026投資策略指南：5大資產配置實戰回測 - FM Studio](../../raw/2026-05-15/投資組合風險審計五大策略回測與隱藏成本.md)
+- [資產配置的再平衡是什麼意思 - 市場先生](../../raw/2026-05-15/資產配置再平衡頻率與實務.md)

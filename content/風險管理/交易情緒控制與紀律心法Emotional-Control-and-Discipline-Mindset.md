@@ -109,4 +109,4 @@ category: "風險管理"
 
 ## 來源
 
-- [12 Best Risk Management, Types, Techniques and Strategies for Traders](../raw/2026-06-19/12-Best-Risk-Management-Techniques-and-Strategies.md)
+- [12 Best Risk Management, Types, Techniques and Strategies for Traders](../../raw/2026-06-19/12-Best-Risk-Management-Techniques-and-Strategies.md)

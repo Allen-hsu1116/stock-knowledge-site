@@ -101,6 +101,6 @@ CHO 和 CMF 是同一個設計師（Marc Chaikin）的不同面向工具：
 
 ## 來源
 
-- [Chaikin Oscillator 蔡金擺動指標 - taindicators](../raw/2026-05-18/Chaikin-Oscillator蔡金擺動指標-taindicators.md)
+- [Chaikin Oscillator 蔡金擺動指標 - taindicators](../../raw/2026-05-18/Chaikin-Oscillator蔡金擺動指標-taindicators.md)
 - [蔡金擺動指標 — TradingView](https://tw.tradingview.com/support/solutions/43000501979/)
 - [蔡金擺動指標 (CHO) - FxCodeBaseWiki](https://fxcodebase.com/wiki/index.php/%E8%94%A1%E9%87%91%E6%93%BA%E5%8B%95%E6%8C%87%E6%A8%99_(CHO))

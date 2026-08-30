@@ -84,4 +84,4 @@ NVI 對台股可用於：
 
 ## 來源
 
-- [StockCharts ChartSchool: Negative Volume Index NVI](../raw/2026-06-15/NVI負成交量指標-StockCharts.md)
+- [StockCharts ChartSchool: Negative Volume Index NVI](../../raw/2026-06-15/NVI負成交量指標-StockCharts.md)

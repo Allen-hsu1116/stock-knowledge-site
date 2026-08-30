@@ -98,4 +98,4 @@ date: 2026-05-18
 
 ## 來源
 
-- [RSI鈍化怎麼辦？一篇搞懂RSI指標缺點與3大應對策略（MammonAcad）](../raw/2026-05-18/RSI鈍化應對策略-MammonAcad.md)
+- [RSI鈍化怎麼辦？一篇搞懂RSI指標缺點與3大應對策略（MammonAcad）](../../raw/2026-05-18/RSI鈍化應對策略-MammonAcad.md)

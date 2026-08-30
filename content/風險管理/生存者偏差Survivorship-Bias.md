@@ -61,4 +61,4 @@ category: "風險管理"
 - [[模型風險Model Risk]]
 
 ## 來源
-- [無所不在的生存者誤差 — 綠角財經筆記](../raw/2026-05-01/生存者偏差Survivorship-Bias.md)
+- [無所不在的生存者誤差 — 綠角財經筆記](../../raw/2026-05-01/生存者偏差Survivorship-Bias.md)

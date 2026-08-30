@@ -98,5 +98,5 @@ category: "風險管理"
 
 ## 來源
 
-- [跳空缺口是什麼？交易中如何使用？ - OANDA Lab](../raw/2026-05-01/跳空缺口Gap四種型態與交易.md)
-- [Price Gaps: Types, Causes, and How to Analyze and Trade Them - Titan FX](../raw/2026-05-01/跳空缺口Gap四種型態與交易.md)
+- [跳空缺口是什麼？交易中如何使用？ - OANDA Lab](../../raw/2026-05-01/跳空缺口Gap四種型態與交易.md)
+- [Price Gaps: Types, Causes, and How to Analyze and Trade Them - Titan FX](../../raw/2026-05-01/跳空缺口Gap四種型態與交易.md)

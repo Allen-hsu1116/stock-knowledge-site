@@ -1,5 +1,6 @@
 ---
 title: "資產成長異象 Asset Growth Anomaly"
+category: "基本面分析"
 ---
 
 # 資產成長異象 Asset Growth Anomaly
@@ -80,11 +81,6 @@ Cooper et al. 的原始研究：
 - **時間漂移**：2008 金融危機後資產成長異象的強度有所減弱
 - **理性解釋**：高資產成長承擔更多系統性風險（投資機會曝險），低報酬可能是風險溢價補償而非錯誤定價
 
-## 來源
-- Cooper, M.J., Gulen, H., & Schill, M.J. (2008). "Asset Growth and the Cross-Section of Stock Returns." *Journal of Finance*, 63(4), 1609-1651.
-- Fama, E.F., & French, K.R. (2015). "A five-factor asset pricing model." *Journal of Financial Economics*, 116(1), 1-22. (CMA 因子)
-- Hou, K., Xue, C., & Zhang, L. (2015). "Digesting Anomalies: An Investment Approach." *Review of Financial Studies*, 28(3), 650-705. (q-factor model 中的投資因子)
-
 ## 相關主題
 - [[基本面分析/Fama-French多因子模型Fama-French-Multi-Factor-Model|Fama-French 多因子模型]]
 - [[基本面分析/應計項目異象Accrual-Anomaly|應計項目異象]]
@@ -95,3 +91,8 @@ Cooper et al. 的原始研究：
 
 ---
 *建立日期：2026-08-13*
+
+## 來源
+- Cooper, M.J., Gulen, H., & Schill, M.J. (2008). "Asset Growth and the Cross-Section of Stock Returns." *Journal of Finance*, 63(4), 1609-1651.
+- Fama, E.F., & French, K.R. (2015). "A five-factor asset pricing model." *Journal of Financial Economics*, 116(1), 1-22. (CMA 因子)
+- Hou, K., Xue, C., & Zhang, L. (2015). "Digesting Anomalies: An Investment Approach." *Review of Financial Studies*, 28(3), 650-705. (q-factor model 中的投資因子)

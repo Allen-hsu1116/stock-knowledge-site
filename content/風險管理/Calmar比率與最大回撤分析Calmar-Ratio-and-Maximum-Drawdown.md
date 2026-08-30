@@ -2,6 +2,7 @@
 title: "Calmar比率與最大回撤分析 Calmar Ratio and Maximum Drawdown"
 tags: [風險管理, 績效評估, 回撤分析, Terry Young]
 created: 2026-07-08
+category: "風險管理"
 ---
 
 # Calmar比率與最大回撤分析 Calmar Ratio and Maximum Drawdown
@@ -103,6 +104,28 @@ Sterling 在分母減 10% 是因為認為 10% 以內的回撤不算「真正風�
 
 CDaR 比 Calmar 更穩健——單一最大回撤可能是極端異常值，CDaR 取條件期望值更穩定。
 
+## 台股實戰框架
+
+### 個股 Calmar 計算
+
+1. 取過去 36 個月月收盤價
+2. 計算每月報酬率的算術平均 × 12 = 年化報酬
+3. 計算累積淨值曲線的最大回撤
+4. Calmar = 年化報酬 / 最大回撤
+
+### 選股應用
+
+- 篩選 Calmar > 1.5 的個股作為候選池
+- 搭配 [[基本面分析/Piotroski-F-Score進階實戰|F-Score]] 過濾基本面
+- 搭配 [[技術分析/相對成交量RVOL-Relative-Volume|RVOL]] 確認流動性
+- 定期重新計算（至少每季），監控 Calmar 變化
+
+### 投資組合層面
+
+- 計算整體投資組合的 Calmar
+- 目標組合 Calmar > 2
+- 如果組合 Calmar < 1，檢視是否需要降低槓桿或調整持倉結構
+
 ## 實戰應用
 
 ### 應用一：策略評估
@@ -135,7 +158,7 @@ CDaR 比 Calmar 更穩健——單一最大回撤可能是極端異常值，CDaR
 - 快速恢復（< 3 個月） → Calmar 數字的含金量高
 - 慢速恢復（> 12 個月） → 即使 Calmar 數字好看，心理承受難度高
 
-## 限制與陷阱
+## 注意事項
 
 ### 1. 樣本期間敏感性
 
@@ -161,29 +184,7 @@ Calmar 用 36 個月數據，不同起點計算可能差異很大。一個恰好
 
 Calmar 完全不區分這兩種路徑。
 
-## 台股實戰框架
-
-### 個股 Calmar 計算
-
-1. 取過去 36 個月月收盤價
-2. 計算每月報酬率的算術平均 × 12 = 年化報酬
-3. 計算累積淨值曲線的最大回撤
-4. Calmar = 年化報酬 / 最大回撤
-
-### 選股應用
-
-- 篩選 Calmar > 1.5 的個股作為候選池
-- 搭配 [[基本面分析/Piotroski-F-Score進階實戰|F-Score]] 過濾基本面
-- 搭配 [[技術分析/相對成交量RVOL-Relative-Volume|RVOL]] 確認流動性
-- 定期重新計算（至少每季），監控 Calmar 變化
-
-### 投資組合層面
-
-- 計算整體投資組合的 Calmar
-- 目標組合 Calmar > 2
-- 如果組合 Calmar < 1，檢視是否需要降低槓桿或調整持倉結構
-
-## 相關頁面
+## 相關主題
 
 - [[風險管理/VaR風險值Value-at-Risk]] — Sharpe 比率的風險衡量基礎
 - [[風險管理/Omega比率Omega-Ratio]] — Sortino 和 Omega 比率
@@ -197,11 +198,3 @@ Calmar 完全不區分這兩種路徑。
 - [Calmar ratio - Wikipedia](https://en.wikipedia.org/wiki/Calmar_ratio)
 - Terry W. Young, "Calmar Ratio", Futures Magazine, 1991
 - California Managed Accounts (CMA) Reports
-
-## 注意事項
-
-（待補充）
-
-## 相關主題
-
-（待補充）

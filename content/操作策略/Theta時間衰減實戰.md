@@ -103,5 +103,5 @@ Theta（Θ）衡量選擇權價格對時間變化的敏感度，即「每過一�
 
 ## 來源
 
-- [深入了解選擇權中的Theta](../raw/2026-05-03/深入了解選擇權中的Theta.md)
-- [蘋果的啟示-Delta-Theta-Gamma](../raw/2026-05-03/蘋果的啟示-Delta-Theta-Gamma.md)
+- [深入了解選擇權中的Theta](../../raw/2026-05-03/深入了解選擇權中的Theta.md)
+- [蘋果的啟示-Delta-Theta-Gamma](../../raw/2026-05-03/蘋果的啟示-Delta-Theta-Gamma.md)

@@ -93,4 +93,4 @@ SMMA（Smoothed Moving Average）的計算讓它比一般 SMA 更平滑，對突
 
 ## 來源
 
-- [Impulse MACD 期貨交易策略](../raw/2026-05-18/Impulse-MACD期貨交易策略.md)
+- [Impulse MACD 期貨交易策略](../../raw/2026-05-18/Impulse-MACD期貨交易策略.md)

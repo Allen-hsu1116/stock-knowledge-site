@@ -1,5 +1,6 @@
 ---
 title: "季節性交易策略與月份效應 Seasonality Trading"
+category: "技術分析"
 ---
 
 # 季節性交易策略與月份效應 Seasonality Trading
@@ -133,6 +134,12 @@ title: "季節性交易策略與月份效應 Seasonality Trading"
 
 兩者可以疊加使用：在季節性偏多的月份 + 經濟循環上升期 → 最強做多訊號。
 
+## 實戰應用
+
+- 在台股市場中，本概念需結合台股特性（如漲跌幅限制、法人結構）調整使用
+- 建議搭配多指標共振系統（趨勢+動量+成交量+波動率）提高勝率
+- 實戰操作時應設好停損停利，嚴格執行紀律
+
 ## 注意事項
 
 本文方法不保證未來績效；實際使用須檢查資料品質、樣本外穩定性、交易成本、流動性與適用市場。
@@ -143,12 +150,6 @@ title: "季節性交易策略與月份效應 Seasonality Trading"
 - [[基本面分析/效率市場假說Efficient-Market-Hypothesis]] — 效率市場假說
 - [[風險管理/行為財務學總論Behavioral-Finance-Overview]] — 行為財務學
 - [[操作策略/均值回歸與動能雙策略切換Mean-Reversion-Momentum-Regime-Switching]] — 均值回歸策略
-
-## 實戰應用
-
-- 在台股市場中，本概念需結合台股特性（如漲跌幅限制、法人結構）調整使用
-- 建議搭配多指標共振系統（趨勢+動量+成交量+波動率）提高勝率
-- 實戰操作時應設好停損停利，嚴格執行紀律
 
 ## 來源
 - Wikipedia: Calendar effect, Seasonal spread trading

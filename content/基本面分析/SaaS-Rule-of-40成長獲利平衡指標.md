@@ -72,4 +72,4 @@ Rule of 40 高不代表可以無腦買，還要搭配估值：
 
 ## 來源
 
-- [The SaaS Rule of 40 Explained](../raw/2026-06-16/Rule-of-40-CFI.md)
+- [The SaaS Rule of 40 Explained](../../raw/2026-06-16/Rule-of-40-CFI.md)

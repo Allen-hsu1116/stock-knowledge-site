@@ -94,4 +94,4 @@ Richard Thaler（2017諾貝爾經濟學獎）提出四個框架原則：
 
 ## 來源
 
-- [框架效應 - MBA智库百科](../raw/2026-05-08/框架效應Framing-Effect-mbalib.md)
+- [框架效應 - MBA智库百科](../../raw/2026-05-08/框架效應Framing-Effect-mbalib.md)

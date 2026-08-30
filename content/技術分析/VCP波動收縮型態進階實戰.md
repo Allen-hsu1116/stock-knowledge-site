@@ -99,6 +99,10 @@ PowerSqueeze 由 John Carter 提出 Squeeze 概念，經 Growin 團隊改良，�
 - 再手動確認 VCP 型態
 - 篩選條件：週線 VCP + AI趨勢分數 > 4 + PowerSqueeze 能量累積
 
+## 實戰應用
+
+實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。
+
 ## 注意事項
 
 - **常見誤解**：VCP 不是單純用肉眼判斷收縮型態，必須搭配 SEPA 策略
@@ -121,9 +125,5 @@ PowerSqueeze 由 John Carter 提出 Squeeze 概念，經 Growin 團隊改良，�
 
 ## 來源
 
-- [VCP型態選股方法 - 市場先生](../raw/2026-05-11/VCP型態選股方法與SEPA策略.md)
-- [VCP實例操作PowerSqueeze - Growin Blog](../raw/2026-05-11/VCP實例操作PowerSqueeze指標搭配.md)
-
-## 實戰應用
-
-實戰使用時需搭配進出場規則、部位控制與市場情境確認，不可單靠單一概念硬上。
+- [VCP型態選股方法 - 市場先生](../../raw/2026-05-11/VCP型態選股方法與SEPA策略.md)
+- [VCP實例操作PowerSqueeze - Growin Blog](../../raw/2026-05-11/VCP實例操作PowerSqueeze指標搭配.md)

@@ -17,6 +17,15 @@ channel: 股癌 Gooaye
 
 > Google以認股權憑證綁住Marvell至2033年的客製晶片合作，重點不是Marvell立刻搶走既有TPU主晶片，而是Google正由Turnkey走向Customer Owned Tooling（COT），把設計、光罩與關鍵料件掌握在自己手上；這會壓縮博通最肥的統包利潤，卻也可能因Google開出更多晶片案，替Marvell、聯發科及其他ASIC設計夥伴擴大市場。
 
+## 影片資訊
+
+- **頻道**：股癌-Gooaye
+- **影片連結**：[YouTube](https://www.youtube.com/watch?v=4DuhZyepr08)
+
+## 核心觀點
+
+本文依下列主題整理影片的主要論點與數據，判讀時應把事件時點、估值與風險條件一起考慮。
+
 ## 影片資料
 
 - **頻道**：股癌 Gooaye
@@ -152,6 +161,10 @@ Customer Owned Tooling代表客戶把高單價與高控制權的環節收回，�
 
 重點不是10日線有魔法，而是先把「不知道怎麼賣」改造成可驗證、可重複、可調整的規則。
 
+## 一句話總結
+
+Google與Marvell協議真正改變的不是單一TPU訂單歸屬，而是Google把客製晶片主導權由Turnkey收回COT：博通最肥的統包利潤面臨壓縮，但Google若因此大量開新案，Marvell、聯發科與其他ASIC設計夥伴反而可能在更大的市場裡分到新工作。
+
 ## 實戰重點
 
 - **盤面判讀**：失土持續收復、基本面股能墊高，代表結構仍健康；但動能延續性差，不宜用四、五月的追價節奏硬做。
@@ -176,10 +189,6 @@ Customer Owned Tooling代表客戶把高單價與高控制權的環節收回，�
 - [[產業地圖/IC設計｜IP授權與客製ASIC設計服務]]
 - [[操作策略/出場策略總論Exit-Strategy-Overview]]
 - [[風險管理/動態部位管理Dynamic-Position-Sizing]]
-
-## 一句話總結
-
-Google與Marvell協議真正改變的不是單一TPU訂單歸屬，而是Google把客製晶片主導權由Turnkey收回COT：博通最肥的統包利潤面臨壓縮，但Google若因此大量開新案，Marvell、聯發科與其他ASIC設計夥伴反而可能在更大的市場裡分到新工作。
 
 ## 來源
 

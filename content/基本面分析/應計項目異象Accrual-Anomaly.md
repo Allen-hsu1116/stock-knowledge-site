@@ -132,5 +132,5 @@ Detzel, Schabel, Strauss (2018) 發現異象實際上是**兩個獨立現象**�
 
 ## 來源
 
-- [應計項目異象 Accrual Anomaly - Quantpedia](../raw/2026-05-12/應計項目異象Accrual-Anomaly與盈餘品質.md)
-- [盈餘品質指標七項量化分析](../raw/2026-05-12/盈餘品質指標七項量化分析.md)
+- [應計項目異象 Accrual Anomaly - Quantpedia](../../raw/2026-05-12/應計項目異象Accrual-Anomaly與盈餘品質.md)
+- [盈餘品質指標七項量化分析](../../raw/2026-05-12/盈餘品質指標七項量化分析.md)

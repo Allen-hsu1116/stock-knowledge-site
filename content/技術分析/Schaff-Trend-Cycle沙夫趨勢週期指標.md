@@ -100,4 +100,4 @@ Schaff Trend Cycle（STC）由 Doug Schaff 在 1990 年代開發，核心觀察�
 
 ## 來源
 
-- [Schaff Trend Cycle Indicator Explained - LiteFinance](../raw/2026-05-18/Schaff-Trend-Cycle-STC.md)
+- [Schaff Trend Cycle Indicator Explained - LiteFinance](../../raw/2026-05-18/Schaff-Trend-Cycle-STC.md)

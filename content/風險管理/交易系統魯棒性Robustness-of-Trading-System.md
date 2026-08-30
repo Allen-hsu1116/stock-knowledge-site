@@ -125,4 +125,4 @@ K-fold交叉驗證，每個fold都做IS+OOS，避免單一OOS期間偶然性。
 - [[交易策略回測與過擬合Backtesting-and-Overfitting]]
 
 ## 來源
-- [交易系統魯棒性](../raw/2026-05-22/交易系統魯棒性Robustness-of-Trading-System.md)
+- [交易系統魯棒性](../../raw/2026-05-22/交易系統魯棒性Robustness-of-Trading-System.md)

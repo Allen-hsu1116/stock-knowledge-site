@@ -1,5 +1,6 @@
 ---
 title: "適應市場假說 Adaptive Market Hypothesis"
+category: "操作策略"
 ---
 
 # 適應市場假說 Adaptive Market Hypothesis
@@ -66,6 +67,26 @@ AMH 描述的市場效率循環：
 
 這正是 AMH 預測的：因子不會永遠有效也不會永遠失效。
 
+## AMH 的數學表達
+
+Lo 用演化動力學模型描述 AMH：
+
+- 市場參與者群體由不同策略的代表組成
+- 每個策略的「適應度」由其報酬率決定
+- 高報酬策略吸引更多資金（繁殖），低報酬策略資金流出（淘汰）
+- 環境變化改變各策略的適應度排名
+- 市場效率程度 = 套利策略資金占總資金的比例
+
+當套利資金充足 → 市場有效 → 套利報酬下降 → 套利資金流出 → 市場變無效 → 套利機會重現 → 套利資金回流 → 循環往復
+
+## 與其他理論的關係
+
+- **調和 [[基本面分析/效率市場假說Efficient-Market-Hypothesis|EMH]] 與 [[風險管理/行為財務學總論Behavioral-Finance-Overview|行為財務學]]**：不是誰對誰錯，而是各描述了市場的不同狀態
+- **與 [[操作策略/隨機漫步假說Random-Walk-Hypothesis|隨機漫步假說]] 的關係**：AMH 認為短期價格可能偏離隨機漫步（行為偏誤驅動），但長期趨向效率
+- **與 [[風險管理/因子衰退Factor-Decay|因子衰退]] 的關係**：因子衰退是 AMH 預測的自然現象
+- **與 [[操作策略/市場體制識別Market-Regime-Detection|市場體制識別]] 的關係**：體制識別是 AMH 的實戰應用——判斷市場處於效率循環的哪個階段
+- **與 [[風險管理/動量崩潰Momentum-Crash|動量崩潰]] 的關係**：動量崩潰是 AMH 的典型案例——策略擁擠到極限後環境突變導致崩潰
+
 ## 實戰應用
 
 ### 對投資的實戰啟示
@@ -95,36 +116,11 @@ AMH 描述的市場效率循環：
 
 散戶相對機構的劣勢不是資訊（EMH 說資訊已反映在價格中），而是適應速度。機構能快速調整策略，散戶反應慢。但散戶的優勢是沒有短期績效壓力——可以等待環境對自己有利時才出手。
 
-## AMH 的數學表達
-
-Lo 用演化動力學模型描述 AMH：
-
-- 市場參與者群體由不同策略的代表組成
-- 每個策略的「適應度」由其報酬率決定
-- 高報酬策略吸引更多資金（繁殖），低報酬策略資金流出（淘汰）
-- 環境變化改變各策略的適應度排名
-- 市場效率程度 = 套利策略資金占總資金的比例
-
-當套利資金充足 → 市場有效 → 套利報酬下降 → 套利資金流出 → 市場變無效 → 套利機會重現 → 套利資金回流 → 循環往復
-
-## 與其他理論的關係
-
-- **調和 [[基本面分析/效率市場假說Efficient-Market-Hypothesis|EMH]] 與 [[風險管理/行為財務學總論Behavioral-Finance-Overview|行為財務學]]**：不是誰對誰錯，而是各描述了市場的不同狀態
-- **與 [[操作策略/隨機漫步假說Random-Walk-Hypothesis|隨機漫步假說]] 的關係**：AMH 認為短期價格可能偏離隨機漫步（行為偏誤驅動），但長期趨向效率
-- **與 [[風險管理/因子衰退Factor-Decay|因子衰退]] 的關係**：因子衰退是 AMH 預測的自然現象
-- **與 [[操作策略/市場體制識別Market-Regime-Detection|市場體制識別]] 的關係**：體制識別是 AMH 的實戰應用——判斷市場處於效率循環的哪個階段
-- **與 [[風險管理/動量崩潰Momentum-Crash|動量崩潰]] 的關係**：動量崩潰是 AMH 的典型案例——策略擁擠到極限後環境突變導致崩潰
-
 ## 注意事項
 - **缺乏可檢驗的精確預測**：AMH 是概念框架而非可量化檢驗的模型，批評者認為它「什麼都能解釋等於什麼都沒解釋」
 - **實證困難**：如何量化「市場效率程度」隨時間變化？需要定義可操作的效率度量
 - **可能過度包容**：AMH 似乎可以解釋任何現象（有效時說 EMH 對、無效時說行為財務學對），缺乏 falsifiability
 - **演化類比的限制**：生物演化有明確的基因傳遞機制，市場「演化」的機制更模糊
-
-## 來源
-- Lo, A.W. (2004). "The Adaptive Markets Hypothesis: Market Efficiency from an Evolutionary Perspective." *Journal of Portfolio Management*, 30th Anniversary Issue, 15-29.
-- Lo, A.W. (2017). *Adaptive Markets: Financial Evolution at the Speed of Thought*. Princeton University Press.
-- Lo, A.W. (2005). "Reconciling Efficient Markets with Behavioral Finance: The Adaptive Markets Hypothesis." *Journal of Investment Consulting*, 7(2), 21-44.
 
 ## 相關主題
 - [[基本面分析/效率市場假說Efficient-Market-Hypothesis|效率市場假說 EMH]]
@@ -139,3 +135,8 @@ Lo 用演化動力學模型描述 AMH：
 
 ---
 *建立日期：2026-08-13*
+
+## 來源
+- Lo, A.W. (2004). "The Adaptive Markets Hypothesis: Market Efficiency from an Evolutionary Perspective." *Journal of Portfolio Management*, 30th Anniversary Issue, 15-29.
+- Lo, A.W. (2017). *Adaptive Markets: Financial Evolution at the Speed of Thought*. Princeton University Press.
+- Lo, A.W. (2005). "Reconciling Efficient Markets with Behavioral Finance: The Adaptive Markets Hypothesis." *Journal of Investment Consulting*, 7(2), 21-44.

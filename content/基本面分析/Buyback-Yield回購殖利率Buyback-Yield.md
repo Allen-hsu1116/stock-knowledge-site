@@ -97,4 +97,4 @@ Buyback Yield（回購殖利率）是指公司過去一年買回自家股票的�
 
 ## 來源
 
-- [Buyback Yield回購殖利率](../raw/2026-06-02/Buyback-Yield回購殖利率庫藏股買回效益量化分析.md)
+- [Buyback Yield回購殖利率](../../raw/2026-06-02/Buyback-Yield回購殖利率庫藏股買回效益量化分析.md)

@@ -122,6 +122,6 @@ ERC依賴共變異數矩陣Σ的估計，但：
 
 ## 來源
 
-- [Risk Parity Wikipedia](../raw/2026-06-26/Risk-Parity-Wikipedia.md)
+- [Risk Parity Wikipedia](../../raw/2026-06-26/Risk-Parity-Wikipedia.md)
 - Edward Qian (2005). Risk Parity and Diversification
 - Bridgewater All Weather Strategy

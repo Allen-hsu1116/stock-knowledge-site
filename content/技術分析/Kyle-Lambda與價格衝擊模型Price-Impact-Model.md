@@ -84,24 +84,6 @@ ILLIQ = |Return_t| / Volume_t
 - Lambda 的倒數概念：ILLIQ 越大 = Lambda 越大 = 流動性越差
 - 詳見 [[風險管理/Amihud非流動性指標Amihud-Illiquidity-Measure|Amihud 非流動性指標]]
 
-## Lambda 的實戰應用
-
-### 對散戶的意義
-- **Lambda 大的股票**：大單進出會顯著推動價格，散戶容易看到「大戶腳印」
-- **Lambda 小的股票**：大單能悄無聲息地進出，散戶看不出資金流向
-- 台股小型股 Lambda 通常遠大於大型股，這就是為什麼小型股容易被「作線」
-
-### 機構交易者的考量
-- 估計自己的 Lambda → 計算執行成本 → 決定最適執行策略
-- 大單拆小單（VWAP/TWAP/IS 演算法）就是為了降低 Lambda 的衝擊
-- 一般建議：單筆交易不超過日成交量 5-10%，超過就必須拆單
-
-### 與流動性的關係
-- Lambda = 1/市場深度 = 流動性的反向指標
-- 高 Lambda = 淺碟市場 = 容易被大單操縱
-- 低 Lambda = 深度市場 = 大單也能平穩執行
-- 詳見 [[風險管理/市場微結構與流動性定價Market-Microstructure-and-Liquidity-Pricing|市場微結構與流動性定價]]
-
 ## 與既有知識的連結
 
 ### 與 OFI 的關係
@@ -138,20 +120,35 @@ Kyle 的線性模型是基礎，實證顯示真實市場更接近**凹函數**�
 3. **部位控制**：散戶雖然不會造成市場衝擊，但要理解大戶在 Lambda 高的環境中必須拆單，這解釋了為什麼盤中會出現規律性的小單買賣
 4. **除權息旺季**：Lambda 會因流動性下降而上升，大戶的執行成本增加，這也是為什麼除權息季節大單動作會更謹慎
 
+## 實戰應用
+
+### 對散戶的意義
+- **Lambda 大的股票**：大單進出會顯著推動價格，散戶容易看到「大戶腳印」
+- **Lambda 小的股票**：大單能悄無聲息地進出，散戶看不出資金流向
+- 台股小型股 Lambda 通常遠大於大型股，這就是為什麼小型股容易被「作線」
+
+### 機構交易者的考量
+- 估計自己的 Lambda → 計算執行成本 → 決定最適執行策略
+- 大單拆小單（VWAP/TWAP/IS 演算法）就是為了降低 Lambda 的衝擊
+- 一般建議：單筆交易不超過日成交量 5-10%，超過就必須拆單
+
+### 與流動性的關係
+- Lambda = 1/市場深度 = 流動性的反向指標
+- 高 Lambda = 淺碟市場 = 容易被大單操縱
+- 低 Lambda = 深度市場 = 大單也能平穩執行
+- 詳見 [[風險管理/市場微結構與流動性定價Market-Microstructure-and-Liquidity-Pricing|市場微結構與流動性定價]]
+
+## 注意事項
+（待補充）
+
+## 相關主題
+（待補充）
+
+- [[技術分析/技術分析總論]]
+
 ## 來源
 - Kyle, A.S. (1985). "Continuous Auctions and Insider Trading." Econometrica.
 - Almgren, R. & Chriss, N. (2000). "Optimal Execution of Portfolio Transactions." Journal of Risk.
 - Bouchaud, J.P. et al. (2004). "Fluctuations and Response in Financial Markets: The Minor Game." (Square Root Law)
 - Wikipedia: Market Impact
 - Easley, D. & O'Hara, M. — VPIN 相關論文系列
-
-## 實戰應用
-（待補充）
-
-
-## 注意事項
-（待補充）
-
-
-## 相關主題
-（待補充）

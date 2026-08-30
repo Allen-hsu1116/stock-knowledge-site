@@ -166,8 +166,8 @@ category: "技術分析"
 
 ## 來源
 
-- [OANDA：如何使用點數圖計算目標價格](../raw/2026-05-11/點數圖Point-and-Figure-Chart-OANDA.md)
-- [OANDA：如何使用點數圖分析趨勢](../raw/2026-05-11/點數圖Point-and-Figure-Chart-OANDA.md)
-- [OANDA：點數圖指標說明](../raw/2026-05-11/點數圖Point-and-Figure-Chart-OANDA.md)
-- [Incredible Charts：Point and Figure Charting Guide](../raw/2026-05-11/點數圖Point-and-Figure-Chart進階教學.md)
-- [Elearnmarkets：Point and Figure Chart](../raw/2026-05-11/點數圖Point-and-Figure-Chart型態與實戰.md)
+- [OANDA：如何使用點數圖計算目標價格](../../raw/2026-05-11/點數圖Point-and-Figure-Chart-OANDA.md)
+- [OANDA：如何使用點數圖分析趨勢](../../raw/2026-05-11/點數圖Point-and-Figure-Chart-OANDA.md)
+- [OANDA：點數圖指標說明](../../raw/2026-05-11/點數圖Point-and-Figure-Chart-OANDA.md)
+- [Incredible Charts：Point and Figure Charting Guide](../../raw/2026-05-11/點數圖Point-and-Figure-Chart進階教學.md)
+- [Elearnmarkets：Point and Figure Chart](../../raw/2026-05-11/點數圖Point-and-Figure-Chart型態與實戰.md)

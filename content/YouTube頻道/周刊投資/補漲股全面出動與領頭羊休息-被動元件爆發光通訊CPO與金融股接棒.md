@@ -44,3 +44,7 @@ AI伺服器對高階MLCC需求暴增，國巨市值突破兩兆元。禾伸堂�
 - [[YouTube頻道/周刊投資/光通訊與CPO兆元商機-環宇KY與穩懋卡位AI高速傳輸]]
 - [[YouTube頻道/周刊投資/NVIDIA-Blackwell帶動MLCC大缺貨與日韓被動元件定價權]]
 - [[YouTube頻道/周刊投資/台股下半年大解析-SpaceX概念股體檢與Q3定海神針]]
+
+## 來源
+
+- [原始影片](https://www.youtube.com/watch?v=3Eazw6_4lmg)

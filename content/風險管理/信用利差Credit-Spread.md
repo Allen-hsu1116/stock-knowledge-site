@@ -116,5 +116,5 @@ category: "風險管理"
 
 ## 來源
 
-- [Yield spread - Wikipedia](../raw/2026-05-09/信用利差Credit-Spread-Wikipedia.md)
-- [Credit risk - Wikipedia](../raw/2026-05-09/信用風險Credit-Risk-Wikipedia.md)
+- [Yield spread - Wikipedia](../../raw/2026-05-09/信用利差Credit-Spread-Wikipedia.md)
+- [Credit risk - Wikipedia](../../raw/2026-05-09/信用風險Credit-Risk-Wikipedia.md)

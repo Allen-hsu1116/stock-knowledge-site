@@ -1,6 +1,6 @@
 ---
 category: "操作策略"
-title: 台股月份效應與元月效應實戰
+title: 台股月份效應與元月效應實戰 Monthly Effect & January Effect in Taiwan Stock Market
 date: 2026-06-07
 ---
 

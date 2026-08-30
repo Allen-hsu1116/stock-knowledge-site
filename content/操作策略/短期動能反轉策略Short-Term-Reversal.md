@@ -90,6 +90,6 @@ Blitz et al. (2011)提出殘差反轉（Residual Reversal）：
 
 ## 來源
 
-- [RSI是什麼？量化交易中最經典的均值回歸Alpha因子](../raw/2026-05-07/RSI量化交易均值回歸Alpha因子.md)
+- [RSI是什麼？量化交易中最經典的均值回歸Alpha因子](../../raw/2026-05-07/RSI量化交易均值回歸Alpha因子.md)
 - [機構投資人行為與台灣股市報酬的關聯性](https://www.airitilibrary.com/Article/Detail/10222898-200606-201506120011-201506120011-111-150)
 - [Barra多因子之長期反轉因子和短期反轉因子](https://zhuanlan.zhihu.com/p/695211784)

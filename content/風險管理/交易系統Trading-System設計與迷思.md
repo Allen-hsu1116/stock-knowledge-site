@@ -112,4 +112,4 @@ category: "風險管理"
 
 ## 來源
 
-- [交易系統 - MBA智库百科](../raw/2026-05-08/交易系統Trading-System-mbalib.md)
+- [交易系統 - MBA智库百科](../../raw/2026-05-08/交易系統Trading-System-mbalib.md)

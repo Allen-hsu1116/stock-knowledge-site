@@ -57,5 +57,5 @@ category: "風險管理"
 
 ## 來源
 
-- [蒙地卡羅模擬在程式交易中的應用](../raw/2026-05-01/蒙地卡羅模擬程式交易壓力測試.md)
-- [Monte Carlo Practical Guide Strategy Validation](../raw/2026-05-01/MonteCarloPracticalGuideStrategyValidation.md)
+- [蒙地卡羅模擬在程式交易中的應用](../../raw/2026-05-01/蒙地卡羅模擬程式交易壓力測試.md)
+- [Monte Carlo Practical Guide Strategy Validation](../../raw/2026-05-01/MonteCarloPracticalGuideStrategyValidation.md)

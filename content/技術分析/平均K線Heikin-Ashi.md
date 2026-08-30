@@ -83,7 +83,7 @@ Heikin Ashi（平均K線）源自日文「平均足」，是一種使用平均�
 
 ## 來源
 
-- [平均K線(Heiken Ashi)是什麼？如何用於交易策略？ - IG](../raw/2026-05-04/平均K線Heikin-Ashi交易策略.md)
+- [平均K線(Heiken Ashi)是什麼？如何用於交易策略？ - IG](../../raw/2026-05-04/平均K線Heikin-Ashi交易策略.md)
 - [平均K線圖（Heikin Ashi） — TradingView](https://cn.tradingview.com/support/solutions/43000619436/)
 - [永政的投機生活: Heikin-Ashi 平均K線](https://www.yctseng.net/2012/04/heikin-ashi-k.html)
-- [平均K線從計算公式到5大交易訊號教學 - 理財研究室 FM Studio](../raw/2026-05-18/平均K線Heikin-Ashi教學-FMStudio.md)
+- [平均K線從計算公式到5大交易訊號教學 - 理財研究室 FM Studio](../../raw/2026-05-18/平均K線Heikin-Ashi教學-FMStudio.md)

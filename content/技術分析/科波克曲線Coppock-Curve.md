@@ -66,4 +66,4 @@ date: 2026-06-15
 
 ## 來源
 
-- [StockCharts ChartSchool: Coppock Curve](../raw/2026-06-15/科波克曲線Coppock-Curve-StockCharts.md)
+- [StockCharts ChartSchool: Coppock Curve](../../raw/2026-06-15/科波克曲線Coppock-Curve-StockCharts.md)

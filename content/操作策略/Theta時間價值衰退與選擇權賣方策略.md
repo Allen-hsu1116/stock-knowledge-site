@@ -189,7 +189,7 @@ Long Option的收益曲線是凸的（convex）——「賺的時候越賺越多
 
 ## 來源
 
-- [深入了解選擇權中的Theta：時間對選擇權價值的影響](../raw/2026-05-10/Theta時間價值衰退與選擇權賣方策略.md)
+- [深入了解選擇權中的Theta：時間對選擇權價值的影響](../../raw/2026-05-10/Theta時間價值衰退與選擇權賣方策略.md)
 - [Theta for Option Sellers: Why Time Decay is the Ultimate Friend - Passive Seeds](https://www.passiveseeds.com/stock-and-options/theta-for-option-sellers-why-time-decay-is-the-ultimate-friend/)
 - [選擇權的定價與避險參數 - Anton Cheng](https://medium.com/defi-taiwan/%E9%82%A3%E4%BA%9B%E5%B9%B4-%E6%B2%92%E5%AD%B8%E5%A5%BD%E7%9A%84%E9%81%B8%E6%93%87%E6%AC%8A-2-6934483b2f78)
 - [Option Greeks for Beginners - SlashTraders](https://slashtraders.com/en/blog/option-greeks/)

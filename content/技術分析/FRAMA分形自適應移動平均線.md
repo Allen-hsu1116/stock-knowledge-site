@@ -102,5 +102,5 @@ FRAMA 本身可作為移動停損線：
 
 ## 來源
 
-- [FRAMA - 分形自適應移動平均線](../raw/2026-06-29/分形自適應移動平均線FRAMA.md)
+- [FRAMA - 分形自適應移動平均線](../../raw/2026-06-29/分形自適應移動平均線FRAMA.md)
 - Ehlers, John F. (2005). "FRAMA - Fractal Adaptive Moving Average". Technical Analysis of Stocks & Commodities.

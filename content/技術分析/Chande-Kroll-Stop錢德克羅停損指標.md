@@ -120,5 +120,5 @@ Chande Kroll Stop 由 Tushar Chande 和 Stanley Kroll 在《The New Technical Tr
 
 ## 來源
 
-- [Chande Kroll Stop 錢德克羅停損指標](../raw/2026-05-10/Chande-Kroll-Stop錢德克羅停損指標.md)
+- [Chande Kroll Stop 錢德克羅停損指標](../../raw/2026-05-10/Chande-Kroll-Stop錢德克羅停損指標.md)
 - Tushar Chande & Stanley Kroll, *The New Technical Trader* (1994)

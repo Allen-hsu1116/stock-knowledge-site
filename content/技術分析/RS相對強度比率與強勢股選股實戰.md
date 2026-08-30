@@ -139,7 +139,7 @@ Step 5：大盤方向配合（M=Market Direction）
 
 ## 來源
 
-- [用RS指標篩選強勢股的完整操作指南](../raw/2026-05-18/RS指標篩選強勢股完整操作指南.md)
-- [RS線舉例說明 — 尼克萊](../raw/2026-05-18/RS線舉例說明-尼克萊.md)
-- [怎樣定義強勢股？RS、SCTR](../raw/2026-05-18/怎樣定義強勢股RS-SCTR.md)
-- [CANSLIM選股法 — StockFeel](../raw/2026-05-18/CANSLIM選股法-StockFeel.md)
+- [用RS指標篩選強勢股的完整操作指南](../../raw/2026-05-18/RS指標篩選強勢股完整操作指南.md)
+- [RS線舉例說明 — 尼克萊](../../raw/2026-05-18/RS線舉例說明-尼克萊.md)
+- [怎樣定義強勢股？RS、SCTR](../../raw/2026-05-18/怎樣定義強勢股RS-SCTR.md)
+- [CANSLIM選股法 — StockFeel](../../raw/2026-05-18/CANSLIM選股法-StockFeel.md)

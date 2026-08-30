@@ -127,7 +127,7 @@ NorthCoast資產管理公司根據CAN SLIM策略推出績效指數與基金（CA
 
 ## 來源
 
-- [CAN SLIM - Wikipedia](../raw/2026-04-30/CAN-SLIM-Wikipedia.md)
-- [William O'Neil's CAN SLIM Trading Strategy Explained - Macro Ops](../raw/2026-04-30/CAN-SLIM-Macro-Ops.md)
-- [《笑傲股市》— 選股系統起手式：CANSLIM - StockFeel](../raw/2026-05-17/CANSLIM選股法-StockFeel.md)
-- [CANSLIM選股法是什麼？威廉歐尼爾的7個選股策略介紹 - Mr.Market市場先生](../raw/2026-05-17/CANSLIM選股法-市場先生.md)
+- [CAN SLIM - Wikipedia](../../raw/2026-04-30/CAN-SLIM-Wikipedia.md)
+- [William O'Neil's CAN SLIM Trading Strategy Explained - Macro Ops](../../raw/2026-04-30/CAN-SLIM-Macro-Ops.md)
+- [《笑傲股市》— 選股系統起手式：CANSLIM - StockFeel](../../raw/2026-05-17/CANSLIM選股法-StockFeel.md)
+- [CANSLIM選股法是什麼？威廉歐尼爾的7個選股策略介紹 - Mr.Market市場先生](../../raw/2026-05-17/CANSLIM選股法-市場先生.md)

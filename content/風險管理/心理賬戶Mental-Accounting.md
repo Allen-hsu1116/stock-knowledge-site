@@ -98,4 +98,4 @@ category: "風險管理"
 
 ## 來源
 
-- [心理賬戶 - MBA智库百科](../raw/2026-05-08/心理賬戶Mental-Accounting-mbalib.md)
+- [心理賬戶 - MBA智库百科](../../raw/2026-05-08/心理賬戶Mental-Accounting-mbalib.md)

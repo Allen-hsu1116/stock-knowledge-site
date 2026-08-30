@@ -1,12 +1,14 @@
 ---
-title: Heston隨機波動率模型
+title: Heston隨機波動率模型 (Heston Stochastic Volatility Model)
 aliases: [Heston Model, Stochastic Volatility Model, 隨機波動率模型]
+category: "操作策略"
 ---
 
 # Heston隨機波動率模型 (Heston Stochastic Volatility Model)
 
 
 > Black-Scholes 假設波動率是常數，但現實中波動率會隨機變動。Steven Heston 1993 年提出讓波動率自己也是一個隨機過程，用 CIR (Cox-Ingersoll-Ross) 平方根過程驅動，能同時定價選擇權和重現波動率微笑。
+
 ## 核心概念
 Black-Scholes 假設波動率是常數，但現實中波動率會隨機變動。Steven Heston 1993 年提出讓波動率自己也是一個隨機過程，用 CIR (Cox-Ingersoll-Ross) 平方根過程驅動，能同時定價選擇權和重現波動率微笑。
 
@@ -84,6 +86,21 @@ $$C = S_0 e^{-qT} P_1 - K e^{-rT} P_2$$
 - 過度擬合——完美擬合當前微笑但對未來預測力差
 - 解不唯一——不同參數組合可能產生相近的價格曲面
 
+## 實作要點
+
+在 Python 中可以用 `QuantLib` 或 `fftpacked` 來實作：
+
+- **QuantLib**：內建 HestonModel 和 HestonEngine，校準用 HestonModelHelper
+- **自建**：用特徵函數 + FFT（Fast Fourier Transform）計算選擇權價格，Lewis 2001 或 Carr-Madan 方法
+- **校準稳定性**：建議固定 v_0 用當日 ATM IV 平方，只校準其他四個參數，可减少不穩定性
+
+## 關鍵啟示
+
+1. 波動率不是常數，它有自己的隨機動態——這是選擇權交易者必須內化的概念
+2. 負相關係數 ρ 是股票市場的常態，理解它就能理解為什麼 Put 比 Call 貴
+3. Heston 不是萬能的——校準穩定性是實務上最大的痛點，但作為理解波動率曲面的框架仍然是最重要的基礎模型
+4. 與 [[風險管理/波動率的波動率VVIX-Volatility-of-Volatility|VVIX]] 的概念呼應：ξ 參數就是「波動率的波動率」的數學化表達
+
 ## 實戰應用
 ### 1. 波動率曲面建模
 
@@ -109,21 +126,6 @@ VIX 本質上是 S&P 500 選擇權的隱含波動率指數。Heston 模型可以
 - **無法完美擬合短期微笑**：Heston 產生的微笑曲線形狀不夠靈活，尤其對短期價外選擇權
 - **跳躍風險未考慮**：純擴散過程無法捕捉市場崩盤時的跳躍，需要結合 Merton 跳躍擴散模型
 - **計算複雜度**：雖然有半封閉解，但特徵函數的數值積分仍需小心處理分支問題
-
-## 實作要點
-
-在 Python 中可以用 `QuantLib` 或 `fftpacked` 來實作：
-
-- **QuantLib**：內建 HestonModel 和 HestonEngine，校準用 HestonModelHelper
-- **自建**：用特徵函數 + FFT（Fast Fourier Transform）計算選擇權價格，Lewis 2001 或 Carr-Madan 方法
-- **校準稳定性**：建議固定 v_0 用當日 ATM IV 平方，只校準其他四個參數，可减少不穩定性
-
-## 關鍵啟示
-
-1. 波動率不是常數，它有自己的隨機動態——這是選擇權交易者必須內化的概念
-2. 負相關係數 ρ 是股票市場的常態，理解它就能理解為什麼 Put 比 Call 貴
-3. Heston 不是萬能的——校準穩定性是實務上最大的痛點，但作為理解波動率曲面的框架仍然是最重要的基礎模型
-4. 與 [[風險管理/波動率的波動率VVIX-Volatility-of-Volatility|VVIX]] 的概念呼應：ξ 參數就是「波動率的波動率」的數學化表達
 
 ## 相關主題
 

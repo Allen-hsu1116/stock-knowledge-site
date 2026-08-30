@@ -178,5 +178,5 @@ MDD 是單一事件統計量，嚴重依賴觀察期間：
 
 ## 來源
 
-- [Drawdown (economics) - Wikipedia](../raw/2026-05-09/drawdown-analysis-advanced.md)
-- [Maximum drawdown - Wikipedia](../raw/2026-05-09/drawdown-analysis-advanced.md)
+- [Drawdown (economics) - Wikipedia](../../raw/2026-05-09/drawdown-analysis-advanced.md)
+- [Maximum drawdown - Wikipedia](../../raw/2026-05-09/drawdown-analysis-advanced.md)

@@ -178,11 +178,6 @@ date: 2026-07-09
 - [[籌碼面分析/恐懼貪婪指標與市場情緒量化Fear-and-Greed-Index|恐懼貪婪指標]] — 暗池活動可以作為機構情緒的代理指標
 - [[操作策略/配對交易Pairs-Trading|配對交易]] — 機構在暗池同時交易配對的兩檔股票
 
-## 來源
-- [Wikipedia - Dark pool](https://en.wikipedia.org/wiki/Dark_pool)
-- Michael Lewis, *Flash Boys: A Wall Street Revolt* (2014)
-- Bloomberg (2025) — Dark pool trading volume exceeds 50% of U.S. equity volume
-
 ## 實戰應用
 
 （待補充）
@@ -194,3 +189,10 @@ date: 2026-07-09
 ## 相關主題
 
 （待補充）
+
+- [[籌碼面分析/籌碼面分析總論]]
+
+## 來源
+- [Wikipedia - Dark pool](https://en.wikipedia.org/wiki/Dark_pool)
+- Michael Lewis, *Flash Boys: A Wall Street Revolt* (2014)
+- Bloomberg (2025) — Dark pool trading volume exceeds 50% of U.S. equity volume

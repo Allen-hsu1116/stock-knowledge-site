@@ -58,6 +58,6 @@ Pain Ratio 的結構跟 Sharpe Ratio 一模一樣，只是把分母從標準差�
 
 ## 來源
 
-- [一致性風險測度 Coherent Risk Measures](../raw/2026-08-07/Pain-Index與Pain-Ratio.md)
+- [一致性風險測度 Coherent Risk Measures](../../raw/2026-08-07/Pain-Index與Pain-Ratio.md)
 - Zephyr Associates / StyleAdvisor 原始定義
 - 行業知識整理

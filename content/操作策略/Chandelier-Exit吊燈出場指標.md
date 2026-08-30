@@ -64,8 +64,8 @@ Chandelier Exit 由 Charles Le Beau 開發、Alexander Elder 推廣，是一種�
 
 ## 來源
 
-- [Chandelier Exit 吊燈式追蹤出場](../raw/2026-05-07/Chandelier-Exit吊燈式追蹤出場.md)
+- [Chandelier Exit 吊燈式追蹤出場](../../raw/2026-05-07/Chandelier-Exit吊燈式追蹤出場.md)
 - [OANDA: Chandelier Stop](https://www.oanda.com/bvi-ft/lab-education/technical_analysis/chandelier-stop/)
-- [出場策略(2)：Chandelier Exit - Trading with Technical Analysis](../raw/2026-05-11/Chandelier-Exit吊燈出場法.md)
-- [運用ATR決定獲利結算目標 - OANDA Lab](../raw/2026-05-11/ATR停利停損目標策略-OANDA.md)
-- [吊燈式追蹤停損 Chandelier Stop OANDA（更新版）](../raw/2026-05-14/吊燈式追蹤停損Chandelier-Stop-OANDA.md)
+- [出場策略(2)：Chandelier Exit - Trading with Technical Analysis](../../raw/2026-05-11/Chandelier-Exit吊燈出場法.md)
+- [運用ATR決定獲利結算目標 - OANDA Lab](../../raw/2026-05-11/ATR停利停損目標策略-OANDA.md)
+- [吊燈式追蹤停損 Chandelier Stop OANDA（更新版）](../../raw/2026-05-14/吊燈式追蹤停損Chandelier-Stop-OANDA.md)

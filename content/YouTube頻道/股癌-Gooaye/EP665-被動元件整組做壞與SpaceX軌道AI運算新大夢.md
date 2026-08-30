@@ -47,10 +47,12 @@ category: "YouTube頻道"
 - 台積電分紅減少可能影響員工留任和市場信心
 - Whisper辨識品質較差，內容可能有誤差
 
-## 來源
-
-- [EP665 | 🌸](https://www.youtube.com/watch?v=Vdy7_ihnpJ4)
-
 ## 相關主題
 
 - 股票知識庫索引
+
+- [[風險管理/風險管理總論]]
+
+## 來源
+
+- [EP665 | 🌸](https://www.youtube.com/watch?v=Vdy7_ihnpJ4)
