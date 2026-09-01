@@ -119,8 +119,10 @@ WACC 本身不是投資訊號，要搭配 ROIC（投入資本報酬率）：
 - [[ROIC投入資本報酬率]] - ROIC > WACC 才是價值創造
 - [[EVA經濟附加價值]] - EVA = (ROIC - WACC) × 投入資本，WACC 是 EVA 的核心減項
 - [[企業價值倍數EV-EBIT與EV-EBITDA]] - EV/EBITDA 是 WACC 的倒推應用
-- [[現金流量折現法DCF估值]] - WACC 是 DCF 的折現率
-- [[營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]] - 槓桿影響 WACC 和資本結構
+- [[基本面分析/現金流量折現法DCF估值|現金流量折現法DCF估值]] - WACC 是 DCF 的折現率
+- [[基本面分析/調整現值法APV-Adjusted-Present-Value|調整現值法APV]] - 槓桿明顯變動時，把無槓桿價值與融資效果分開估算
+- [[基本面分析/利息稅盾估值Interest-Tax-Shield-Valuation|利息稅盾估值]] - 拆解WACC稅後債務成本隱含的稅盾假設
+- [[基本面分析/營業槓桿與財務槓桿聯合槓桿判讀Operating-Financial-Combined-Leverage]] - 槓桿影響 WACC 和資本結構
 - [[本益比進階判讀PE-Ratio-Advanced]] - PE 是 WACC 和成長率的簡化版本
 - [[負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] - 資本結構決定 WACC
 - [[經濟護城河Economic-Moat]] - 有護城河的公司 ROIC 持續大於 WACC

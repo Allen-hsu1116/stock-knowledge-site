@@ -94,6 +94,7 @@ Moody's 研究顯示 5 年累積違約率：
 ## 相關主題
 
 - [[基本面分析/Altman-Z-Score破產預測模型]] — 量化的信用風險替代指標
+- [[基本面分析/預期財務困境成本與最適資本結構Expected-Distress-Cost-and-Optimal-Capital-Structure]] — 將違約機率轉成估值中的預期價值損失
 - [[基本面分析/負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] — 評等的基礎財務指標
 - [[基本面分析/利息保障倍數實戰判讀Interest-Coverage-Ratio]] — 評等機構最看重的指標之一
 - [[基本面分析/現金流量表三大現金流判讀]] — 現金流是償債能力的根本
