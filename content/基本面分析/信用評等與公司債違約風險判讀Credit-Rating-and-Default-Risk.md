@@ -93,6 +93,9 @@ Moody's 研究顯示 5 年累積違約率：
 
 ## 相關主題
 
+- [[基本面分析/縮減式信用風險模型與違約強度Reduced-Form-Intensity-Model]] — 以違約強度建立各期限存活與累積違約機率
+- [[基本面分析/違約損失率LGD與回收率Recovery-Rate]] — 評等只描述信用風險等級，LGD補上違約後損失幅度
+- [[基本面分析/利差隱含違約機率與信用利差分解Spread-Implied-Default-Probability]] — 將市場利差轉成風險中立強度並拆除非違約成分
 - [[基本面分析/Altman-Z-Score破產預測模型]] — 量化的信用風險替代指標
 - [[基本面分析/預期財務困境成本與最適資本結構Expected-Distress-Cost-and-Optimal-Capital-Structure]] — 將違約機率轉成估值中的預期價值損失
 - [[基本面分析/負債比率與財務結構分析Debt-Ratio-and-Financial-Structure]] — 評等的基礎財務指標

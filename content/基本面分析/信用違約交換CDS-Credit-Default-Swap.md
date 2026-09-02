@@ -145,6 +145,9 @@ category: "基本面分析"
 
 ## 相關主題
 
+- [[基本面分析/縮減式信用風險模型與違約強度Reduced-Form-Intensity-Model|縮減式信用風險模型與違約強度]]
+- [[基本面分析/違約損失率LGD與回收率Recovery-Rate|違約損失率LGD與回收率]]
+- [[基本面分析/利差隱含違約機率與信用利差分解Spread-Implied-Default-Probability|利差隱含違約機率與信用利差分解]]
 - [[風險管理/信用利差Credit-Spread|信用利差]]
 - [[基本面分析/信用循環與明斯基時刻Credit-Cycle-and-Minsky-Moment|信用循環與明斯基時刻]]
 - [[基本面分析/信用評等與公司債違約風險判讀Credit-Rating-and-Default-Risk|信用評等與公司債違約風險判讀]]
