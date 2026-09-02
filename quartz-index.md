@@ -42,7 +42,7 @@ K線、均線、指標、型態、量價關係 — 看懂圖表的一切
 | 頻道 | 最新影片 | 日期 | 一句話摘要 |
 |------|---------|------|------------|
 | [M觀點](/YouTube頻道/M觀點/) | [EP332 九月升息機率與Waymo路線戰——OpenAI斷供Cursor的供應商風險](/YouTube頻道/M觀點/EP332-九月升息機率與Waymo路線戰——OpenAI斷供Cursor的供應商風險) | 2026-08-31 | 通膨與就業較支持九月按兵不動；Waymo仍未證偽特斯拉純視覺路線，OpenAI斷供則會加速企業採用多模型與開源替代。 |
-| [周刊投資](/YouTube頻道/周刊投資/) | [液冷散熱從題材走向出貨——健策四倍ASP、奇鋐ASIC接棒與Rubin Ultra提前](/YouTube頻道/周刊投資/液冷散熱從題材走向出貨——健策四倍ASP、奇鋐ASIC接棒與Rubin Ultra提前) | 2026-09-02 | 健策營收毛利與Rubin訂單支撐散熱回升，TPU v8及Trainium 3讓液冷擴散至ASIC；四倍ASP與遠期EPS仍須用量產、良率和現金流驗證。 |
+| [周刊投資](/YouTube頻道/周刊投資/) | [液冷散熱從題材走向出貨——健策四倍ASP、奇鋐ASIC接棒與Rubin Ultra提前](/YouTube頻道/周刊投資/液冷散熱從題材走向出貨——健策四倍ASP、奇鋐ASIC接棒與Rubin-Ultra提前) | 2026-09-02 | 健策營收毛利與Rubin訂單支撐散熱回升，TPU v8及Trainium 3讓液冷擴散至ASIC；四倍ASP與遠期EPS仍須用量產、良率和現金流驗證。 |
 | [宏爺講股](/YouTube頻道/宏爺講股/) | [美債40兆與高利率夾擊AI——台灣PMI缺料、日債返鄉與外資期權分歧](/YouTube頻道/宏爺講股/美債40兆與高利率夾擊AI——台灣PMI缺料、日債返鄉與外資期權分歧) | 2026-09-02 | 油價、美元與長債殖利率共振上行；台灣PMI 62.5卻伴隨缺料，外資現貨期貨偏多、選擇權加空，AI訂單進入高利率現金流測試。 |
 | [股市好聲音](/YouTube頻道/股市好聲音/) | [高利率炸彈逼AI算現金流——全球發債排擠與台日韓主權AI沉沒成本](/YouTube頻道/股市好聲音/高利率炸彈逼AI算現金流——全球發債排擠與台日韓主權AI沉沒成本) | 2026-09-02 | 政府與AI企業發債排擠資金，台日韓製造業仍強卻被主權AI承諾推著投資；下一階段要驗證每美元CapEx能否快過利息與債務。 |
 | [股癌 Gooaye](/YouTube頻道/股癌-Gooaye/) | [EP693 聯發科ECB綁樁——NVIDIA Fusion、NVHBM與XPU共存的總解法](/YouTube頻道/股癌-Gooaye/EP693-聯發科ECB綁樁——NVIDIA-Fusion、NVHBM與XPU共存的總解法) | 2026-09-02 | 聯發科35億美元零息ECB綁定NVIDIA與Alphabet；NVIDIA以Fusion和NVHBM因應XPU，Broadcom雖受拆單挑戰但總市場擴大仍可能多贏。 |
