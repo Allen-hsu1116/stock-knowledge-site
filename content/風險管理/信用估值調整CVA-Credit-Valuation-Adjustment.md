@@ -131,4 +131,3 @@ $$CVA=0.60\times(10\times0.02+8\times0.03)=0.264$$
 
 - [Basel Framework MAR50：Credit valuation adjustment framework](https://www.bis.org/committees/bcbs/basel-framework/standard/mar/50/inforce/2023-01-01/published/2020-03-27)
 - [Basel Framework CRE50：Counterparty credit risk definitions and terminology](https://www.bis.org/committees/bcbs/basel-framework/standard/cre/50/inforce/2019-12-15/published/2024-07-05)
-- [本次來源學習紀錄](../../raw/2026-09-04/Basel-CVA風險框架學習紀錄.md)

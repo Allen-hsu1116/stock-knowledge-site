@@ -132,4 +132,3 @@ Basel定義的一般錯向風險，是交易對手違約機率與廣泛市場風
 
 - [Basel Framework CRE50：Counterparty credit risk definitions and terminology](https://www.bis.org/committees/bcbs/basel-framework/standard/cre/50/inforce/2019-12-15/published/2024-07-05)
 - [Basel Framework CRE53：Internal models method for counterparty credit risk](https://www.bis.org/committees/bcbs/basel-framework/standard/cre/53/inforce/2023-01-01/published/2020-06-05)
-- [本次來源學習紀錄](../../raw/2026-09-04/Basel-交易對手曝險與錯向風險學習紀錄.md)

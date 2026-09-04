@@ -123,4 +123,3 @@ LGD與EAD的設定可搭配[[基本面分析/違約損失率LGD與回收率Recov
 ## 來源
 
 - [Federal Reserve Board：A Comparative Anatomy of Credit Risk Models](https://www.federalreserve.gov/econres/feds/a-comparative-anatomy-of-credit-risk-models.htm)
-- [本次來源學習紀錄](../../raw/2026-09-04/FRB-CreditRisk-Plus比較模型學習紀錄.md)
