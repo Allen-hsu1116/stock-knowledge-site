@@ -133,5 +133,5 @@ $$EAD=1.4\times(5+8)=18.2$$
 
 ## 來源
 
-- [Basel Framework CRE52原文摘錄](../../raw/2026-09-05/Basel-CRE52-SA-CCR.md)
+- 本地原始素材：`raw/2026-09-05/Basel-CRE52-SA-CCR.md`
 - [Basel Framework CRE52：Standardised approach to counterparty credit risk](https://www.bis.org/committees/bcbs/basel-framework/standard/cre/52/inforce/2023-01-01/published/2020-06-05)

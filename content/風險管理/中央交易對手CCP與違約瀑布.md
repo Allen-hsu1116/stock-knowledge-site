@@ -133,6 +133,6 @@ Basel只有在擔保品由託管機構持有且對CCP具bankruptcy remote效果�
 
 ## 來源
 
-- [Basel Framework CRE54原文摘錄](../../raw/2026-09-05/Basel-CRE54-CCP-Capital.md)
+- 本地原始素材：`raw/2026-09-05/Basel-CRE54-CCP-Capital.md`
 - [Basel Framework CRE54：Capital requirements for bank exposures to central counterparties](https://www.bis.org/committees/bcbs/basel-framework/standard/cre/54/inforce/2023-01-01/published/2020-03-27)
 - [CPMI-IOSCO：Recovery of financial market infrastructures](https://www.bis.org/publications/recovery-financial-market-infrastructures-revised-report)
