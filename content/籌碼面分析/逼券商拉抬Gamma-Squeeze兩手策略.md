@@ -4,7 +4,7 @@ category: "籌碼面分析"
 source: memory
 source_date: 2026-05-06
 status: raw_linked
-raw_file: 自營商權證避險Delta動態避險與逼券商拉抬.md
+raw_file: raw/2026-05-06/自營商權證避險Delta動態避險與逼券商拉抬.md
 ---
 
 # 逼券商拉抬Gamma Squeeze兩手策略

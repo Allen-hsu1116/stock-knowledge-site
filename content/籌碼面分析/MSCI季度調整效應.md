@@ -4,7 +4,7 @@ category: "籌碼面分析"
 source: memory
 source_date: 2026-04-29
 status: raw_linked
-raw_file: MSCI季度調整與台股影響.md
+raw_file: raw/2026-04-29/MSCI季度調整與台股影響.md
 ---
 
 # MSCI季度調整效應

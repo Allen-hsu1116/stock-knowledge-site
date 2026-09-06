@@ -4,7 +4,7 @@ category: "籌碼面分析"
 source: memory
 source_date: 2026-04-29
 status: raw_linked
-raw_file: 未平倉量Open-Interest基礎與判讀.md
+raw_file: raw/2026-04-29/未平倉量Open-Interest基礎與判讀.md
 ---
 
 # 期貨未平倉量 Open Interest

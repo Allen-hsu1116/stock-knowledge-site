@@ -27,6 +27,9 @@ rsync -av --delete \
 # 複製首頁（獨立維護，不受 wiki/INDEX.md 影響）
 cp "$QUARTZ_DIR/quartz-index.md" "$QUARTZ_DIR/content/index.md"
 
+# INDEX.md 保留為完整目錄；以中文頁名發布，不取代獨立維護的首頁。
+cp "$WIKI_DIR/INDEX.md" "$QUARTZ_DIR/content/股票知識庫索引.md"
+
 echo "✅ 同步完成"
 echo ""
 echo "📊 同步統計:"

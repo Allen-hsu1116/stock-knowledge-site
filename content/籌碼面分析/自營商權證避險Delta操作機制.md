@@ -4,7 +4,7 @@ category: "籌碼面分析"
 source: memory
 source_date: 2026-04-29
 status: raw_linked
-raw_file: 自營商買賣超與避險意義.md
+raw_file: raw/2026-04-29/自營商買賣超與避險意義.md
 ---
 
 # 自營商權證避險Delta操作機制
