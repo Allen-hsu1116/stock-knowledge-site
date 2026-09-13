@@ -2,6 +2,8 @@
 title: 交易情緒控制與紀律心法
 date: 2026-06-19
 category: "風險管理"
+raw_files:
+- raw/2026-06-19/12-Best-Risk-Management-Techniques-and-Strategies.md
 ---
 
 # 交易情緒控制與紀律心法
@@ -109,4 +111,4 @@ category: "風險管理"
 
 ## 來源
 
-- [12 Best Risk Management, Types, Techniques and Strategies for Traders](../../raw/2026-06-19/12-Best-Risk-Management-Techniques-and-Strategies.md)
+- [12 Best Risk Management, Types, Techniques and Strategies for Traders](<https://www.quantifiedstrategies.com/risk-management-trading/>)

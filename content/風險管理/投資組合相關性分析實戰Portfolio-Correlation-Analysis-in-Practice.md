@@ -2,6 +2,9 @@
 title: 投資組合相關性分析實戰 Portfolio Correlation Analysis in Practice
 date: 2026-05-15
 category: 風險管理
+raw_files:
+- raw/2026-05-15/Portfolio-Correlation-Analysis-Risk-Management.md
+- raw/2026-05-15/Portfolio-Risk-Management-In-Uncertain-Times.md
 ---
 
 # 投資組合相關性分析實戰 Portfolio Correlation Analysis in Practice
@@ -175,5 +178,5 @@ Bitcoin和Ethereum相關性0.85+，同時持有分散效果極低。而且加密
 
 ## 來源
 
-- [Portfolio Correlation Analysis: Risk Management - Guardfolio](../../raw/2026-05-15/Portfolio-Correlation-Analysis-Risk-Management.md)
-- [Portfolio Risk Management In Uncertain Times - Uncorrelated Alts](../../raw/2026-05-15/Portfolio-Risk-Management-In-Uncertain-Times.md)
+- [Portfolio Correlation Analysis: Risk Management - Guardfolio](<https://www.guardfolio.ai/blog/correlation>)
+- [Portfolio Risk Management In Uncertain Times - Uncorrelated Alts](<https://www.uncorrelatedalts.com/articles/portfolio-risk-management-in-uncertain-times>)

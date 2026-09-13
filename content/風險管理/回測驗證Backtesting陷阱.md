@@ -1,6 +1,12 @@
 ---
 title: "回測驗證Backtesting陷阱"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/市場先生回測局限性與避免無效回測.md
+- raw/2026-05-01/FinLab策略優化如何避免過擬合.md
+- raw/2026-05-01/他思笔记回測過擬合多重檢驗.md
+- raw/2026-05-07/回測局限性與避免無效回測.md
+- raw/2026-05-07/策略回測探討FinLab.md
 ---
 
 # 回測驗證Backtesting陷阱
@@ -134,8 +140,8 @@ category: "風險管理"
 - [[生存者偏差Survivorship-Bias]]
 
 ## 來源
-- [回測局限性：回測有哪些限制？要怎麼避免無效回測？](../../raw/2026-05-01/市場先生回測局限性與避免無效回測.md)
-- [策略優化 – 如何避免過擬合？](../../raw/2026-05-01/FinLab策略優化如何避免過擬合.md)
-- [為什麼實盤不如回測？如何檢驗多重測試導致的回測過擬合](../../raw/2026-05-01/他思笔记回測過擬合多重檢驗.md)
-- [回測局限性：回測有哪些限制？要怎麼避免無效回測？(2026-05-07)](../../raw/2026-05-07/回測局限性與避免無效回測.md)
-- [反思菲式思考 Part.2｜策略回測探討](../../raw/2026-05-07/策略回測探討FinLab.md)
+- [回測局限性：回測有哪些限制？要怎麼避免無效回測？](<https://rich01.com/limitation-of-backtesting/>)
+- [策略優化 – 如何避免過擬合？](<https://www.finlab.tw/backtesting-overfitting-probability/>)
+- [為什麼實盤不如回測？如何檢驗多重測試導致的回測過擬合](<https://heth.ink/BacktestOverfit2/>)
+- [回測局限性：回測有哪些限制？要怎麼避免無效回測？(2026-05-07)](<https://rich01.com/limitation-of-backtesting/>)
+- [反思菲式思考 Part.2｜策略回測探討](<https://www.finlab.tw/phcebus-thinking-report-part2-backtest-sop/>)

@@ -1,6 +1,10 @@
 ---
 title: "選股流程系統化總論 Stock Screening Systematic Approach"
 category: "操作策略"
+raw_files:
+- raw/2026-05-16/FinLab選股條件五步驟.md
+- raw/2026-05-16/StockFeel新手選股完整入門攻略.md
+- raw/2026-05-16/玉山證券策略選股台股價值投資大師策略.md
 ---
 
 # 選股流程系統化總論 Stock Screening Systematic Approach
@@ -139,6 +143,6 @@ category: "操作策略"
 
 ## 來源
 
-- [FinLab 5個步驟設定選股條件](../../raw/2026-05-16/FinLab選股條件五步驟.md)
-- [StockFeel 新手選股完整入門攻略](../../raw/2026-05-16/StockFeel新手選股完整入門攻略.md)
-- [玉山證券 策略選股工具實戰](../../raw/2026-05-16/玉山證券策略選股台股價值投資大師策略.md)
+- [FinLab 5個步驟設定選股條件](<https://www.finlab.tw/5-%E5%80%8B%E6%AD%A5%E9%A9%9F%E8%A8%AD%E5%AE%9A%E9%81%B8%E8%82%A1%E6%A2%9D%E4%BB%B6%EF%BC%8C%E8%82%A1%E7%A5%A8%E7%88%86%E7%99%BC%E5%8A%9B%E6%9B%B4%E4%B8%8A%E4%B8%80%E5%B1%A4%E6%A8%93%EF%BC%81/>)
+- [StockFeel 新手選股完整入門攻略](<https://www.stockfeel.com.tw/%E6%96%B0%E6%89%8B%E6%8A%95%E8%B3%87%E5%85%A5%E9%96%80-%E5%A6%82%E4%BD%95%E9%81%B8%E8%82%A1%E7%AF%87/>)
+- [玉山證券 策略選股工具實戰](<https://www.esunsec.com.tw/article/post/220>)

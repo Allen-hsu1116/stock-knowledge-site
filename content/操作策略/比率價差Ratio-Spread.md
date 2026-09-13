@@ -1,6 +1,8 @@
 ---
 title: "比率價差Ratio-Spread"
 category: "操作策略"
+raw_files:
+- raw/2026-05-10/對角價差與比率價差知識整理.md
 ---
 
 # 比率價差Ratio-Spread
@@ -123,4 +125,4 @@ category: "操作策略"
 - [[波動率套利與Delta-Neutral策略Volatility-Arbitrage-and-Delta-Neutral]]
 
 ## 來源
-- [對角價差與比率價差知識整理](../../raw/2026-05-10/對角價差與比率價差知識整理.md)
+- 對角價差與比率價差知識整理（本機留存素材，未公開全文；原始網址待核對）

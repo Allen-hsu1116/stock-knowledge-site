@@ -1,6 +1,8 @@
 ---
 category: "風險管理"
 title: 交易心理五原則Five-Trading-Psychology-Principles
+raw_files:
+- raw/2026-05-15/投資心理學交易五原則.md
 ---
 
 # 交易心理五原則Five-Trading-Psychology-Principles
@@ -96,4 +98,4 @@ title: 交易心理五原則Five-Trading-Psychology-Principles
 
 ## 來源
 
-- [投資心理學》笑到最後的人才是贏！了解5個交易原則](../../raw/2026-05-15/投資心理學交易五原則.md)
+- [投資心理學》笑到最後的人才是贏！了解5個交易原則](<https://wealth.businessweekly.com.tw/GArticle.aspx?id=ARTL003005549>)

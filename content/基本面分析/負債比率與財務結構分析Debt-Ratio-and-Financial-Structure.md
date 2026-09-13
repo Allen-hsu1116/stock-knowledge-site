@@ -1,6 +1,9 @@
 ---
 title: "負債比率與財務結構分析Debt-Ratio-and-Financial-Structure"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/負債比率越低越好嗎BOS巴菲特線上學院.md
+- raw/2026-05-05/公司財務體質好不好財務結構分析.md
 ---
 
 # 負債比率與財務結構分析Debt-Ratio-and-Financial-Structure
@@ -89,5 +92,5 @@ category: "基本面分析"
 
 ## 來源
 
-- [負債比率越低越好嗎？BOS巴菲特線上學院](../../raw/2026-05-05/負債比率越低越好嗎BOS巴菲特線上學院.md)
-- [公司財務體質好不好？財務結構分析](../../raw/2026-05-05/公司財務體質好不好財務結構分析.md)
+- [負債比率越低越好嗎？BOS巴菲特線上學院](<https://buffettonlineschool.com.tw/debt-ratio/>)
+- [公司財務體質好不好？財務結構分析](<https://nabi.104.com.tw/posts/nabi_post_aa27199d-5407-48a2-92b6-8e5888915ead>)

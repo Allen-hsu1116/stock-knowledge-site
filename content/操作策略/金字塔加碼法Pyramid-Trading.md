@@ -1,6 +1,11 @@
 ---
 title: "金字塔加碼法Pyramid Trading"
 category: "操作策略"
+raw_files:
+- raw/2026-05-07/金字塔加碼策略正倒金字塔建倉法.md
+- raw/2026-05-14/金字塔投資法與部位管理.md
+- raw/2026-05-17/金字塔買法正倒金字塔與定期定額差異-StockFeel.md
+- raw/2026-05-17/傑西李佛摩金字塔加碼策略-Rex大叔.md
 ---
 
 # 金字塔加碼法Pyramid Trading
@@ -182,11 +187,11 @@ category: "操作策略"
 **「小孩子才做選擇」**：假設有100元可投入，可分成50元短線金字塔買法 + 50元定期定額長線投資，時間拉長看哪邊獲利更好再調整比例。
 
 ## 來源
-- [買股只買一次？太傻了！金字塔買法讓你賺更多！](../../raw/2026-05-07/金字塔加碼策略正倒金字塔建倉法.md) (StockFeel)
-- [金字塔投資法是什麼？金字塔買入/賣出策略全解析](../../raw/2026-05-07/金字塔加碼策略正倒金字塔建倉法.md) (市場先生)
-- [股票越漲越不敢買？阮慕驊「金字塔加碼法」3步驟](../../raw/2026-05-07/金字塔加碼策略正倒金字塔建倉法.md) (50+/阮慕驊)
-- [投資加碼最怕風險飆高！積極、保守都能學「金字塔建倉法」](../../raw/2026-05-07/金字塔加碼策略正倒金字塔建倉法.md) (橘世代/阮慕驊)
-- [金字塔投資法是什麼？金字塔買入/賣出策略全解析](../../raw/2026-05-14/金字塔投資法與部位管理.md) (市場先生 2026更新)
-- [買股只買一次？太傻了！金字塔買法讓你賺更多！](../../raw/2026-05-14/金字塔投資法與部位管理.md) (StockFeel 2026更新)
-- [金字塔買法正倒金字塔與定期定額差異](../../raw/2026-05-17/金字塔買法正倒金字塔與定期定額差異-StockFeel.md) (StockFeel 2026更新)
-- [傑西·李佛摩的金字塔加碼策略](../../raw/2026-05-17/傑西李佛摩金字塔加碼策略-Rex大叔.md) (Rex大叔 2024)
+- 買股只買一次？太傻了！金字塔買法讓你賺更多！（原始來源：[1](<https://www.stockfeel.com.tw/%E9%87%91%E5%AD%97%E5%A1%94%E8%B2%B7%E6%B3%95-%E5%80%92%E9%87%91%E5%AD%97%E5%A1%94%E8%B2%B7%E6%B3%95/>)、[2](<https://rich01.com/what-is-pyramid-trading/>)、[3](<https://www.fiftyplus.com.tw/articles/35530>)、[4](<https://orange.udn.com/orange/story/121198/9276933>)） (StockFeel)
+- 金字塔投資法是什麼？金字塔買入/賣出策略全解析（原始來源：[1](<https://www.stockfeel.com.tw/%E9%87%91%E5%AD%97%E5%A1%94%E8%B2%B7%E6%B3%95-%E5%80%92%E9%87%91%E5%AD%97%E5%A1%94%E8%B2%B7%E6%B3%95/>)、[2](<https://rich01.com/what-is-pyramid-trading/>)、[3](<https://www.fiftyplus.com.tw/articles/35530>)、[4](<https://orange.udn.com/orange/story/121198/9276933>)） (市場先生)
+- 股票越漲越不敢買？阮慕驊「金字塔加碼法」3步驟（原始來源：[1](<https://www.stockfeel.com.tw/%E9%87%91%E5%AD%97%E5%A1%94%E8%B2%B7%E6%B3%95-%E5%80%92%E9%87%91%E5%AD%97%E5%A1%94%E8%B2%B7%E6%B3%95/>)、[2](<https://rich01.com/what-is-pyramid-trading/>)、[3](<https://www.fiftyplus.com.tw/articles/35530>)、[4](<https://orange.udn.com/orange/story/121198/9276933>)） (50+/阮慕驊)
+- 投資加碼最怕風險飆高！積極、保守都能學「金字塔建倉法」（原始來源：[1](<https://www.stockfeel.com.tw/%E9%87%91%E5%AD%97%E5%A1%94%E8%B2%B7%E6%B3%95-%E5%80%92%E9%87%91%E5%AD%97%E5%A1%94%E8%B2%B7%E6%B3%95/>)、[2](<https://rich01.com/what-is-pyramid-trading/>)、[3](<https://www.fiftyplus.com.tw/articles/35530>)、[4](<https://orange.udn.com/orange/story/121198/9276933>)） (橘世代/阮慕驊)
+- 金字塔投資法是什麼？金字塔買入/賣出策略全解析（原始來源：[1](<https://rich01.com/what-is-pyramid-trading/,>)、[2](<https://www.stockfeel.com.tw/金字母塔買法-倒金字塔買法/>)） (市場先生 2026更新)
+- 買股只買一次？太傻了！金字塔買法讓你賺更多！（原始來源：[1](<https://rich01.com/what-is-pyramid-trading/,>)、[2](<https://www.stockfeel.com.tw/金字母塔買法-倒金字塔買法/>)） (StockFeel 2026更新)
+- [金字塔買法正倒金字塔與定期定額差異](<https://www.stockfeel.com.tw/%E9%87%91%E5%AD%97%E5%A1%94%E8%B2%B7%E6%B3%95-%E5%80%92%E9%87%91%E5%AD%97%E5%A1%94%E8%B2%B7%E6%B3%95/>) (StockFeel 2026更新)
+- [傑西·李佛摩的金字塔加碼策略](<https://vocus.cc/article/663194bafd89780001e9bfd8>) (Rex大叔 2024)

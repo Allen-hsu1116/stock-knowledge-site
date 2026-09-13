@@ -1,6 +1,8 @@
 ---
 title: "資本公積判讀 Capital Reserve"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/資本公積判讀StockFeel.md
 ---
 
 # 資本公積判讀 Capital Reserve
@@ -91,4 +93,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [資本公積是什麼？公積配股的公司值得投資嗎？資本公積轉增資是好是壞？ - StockFeel](../../raw/2026-05-19/資本公積判讀StockFeel.md)
+- [資本公積是什麼？公積配股的公司值得投資嗎？資本公積轉增資是好是壞？ - StockFeel](<https://www.stockfeel.com.tw/%E8%B3%87%E6%9C%AC%E5%85%AC%E7%A9%8D/>)

@@ -1,6 +1,10 @@
 ---
 title: "N型理論N-Pattern-Theory"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/N型理論進階實務篇.md
+- raw/2026-05-11/波動力學N型理論.md
+- raw/2026-05-11/關鍵K棒與N型理論.md
 ---
 
 # N型理論N-Pattern-Theory
@@ -122,6 +126,6 @@ a
 
 ## 來源
 
-- [N型理論-進階班之實務篇](../../raw/2026-05-11/N型理論進階實務篇.md)
-- [深入瞭解波動力學中的N型理論](../../raw/2026-05-11/波動力學N型理論.md)
-- [關鍵K棒+N型理論 輕鬆搞懂行情多空](../../raw/2026-05-11/關鍵K棒與N型理論.md)
+- [N型理論-進階班之實務篇](<https://judylee16898.pixnet.net/blog/post/59439547>)
+- [深入瞭解波動力學中的N型理論](<https://vocus.cc/article/66bb825ffd89780001bc13ea>)
+- [關鍵K棒+N型理論 輕鬆搞懂行情多空](<https://www.businesstoday.com.tw/article/category/80401/post/201409190021/>)

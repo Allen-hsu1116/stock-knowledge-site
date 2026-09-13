@@ -1,6 +1,9 @@
 ---
 title: "區間交易策略Range-Trading"
 category: "操作策略"
+raw_files:
+- raw/2026-05-07/區間交易策略Range-Trading完整教學.md
+- raw/2026-05-07/交易策略完整指南趨勢區間突破反轉.md
 ---
 
 # 區間交易策略Range-Trading
@@ -211,5 +214,5 @@ category: "操作策略"
 
 ## 來源
 
-- [區間交易策略完整教學](../../raw/2026-05-07/區間交易策略Range-Trading完整教學.md)
-- [交易策略完整指南](../../raw/2026-05-07/交易策略完整指南趨勢區間突破反轉.md)
+- [區間交易策略完整教學](<https://www.gate.com/zh-tw/crypto-wiki/article/what-is-range-trading-strategy-how-it-works-and-its-application-in-the-crypto-market-20260115>)
+- [交易策略完整指南](<https://www.ig.com/cn/trading-strategies/the-complete-guide-to-trading-strategies-221031>)

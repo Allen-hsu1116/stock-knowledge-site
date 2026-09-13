@@ -1,6 +1,11 @@
 ---
 title: "Volume Profile 成交量分佈分析"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/成交量分佈分析Volume-Profile-EdgeTrader.md
+- raw/2026-05-11/成交量分佈分析Volume-Profile-FinTastic.md
+- raw/2026-05-11/Volume-Profile運用Alpha群創實戰.md
+- raw/2026-05-11/成交量分佈分析Volume-Profile進階實戰-EdgeTrader.md
 ---
 
 # Volume Profile 成交量分佈分析
@@ -189,7 +194,7 @@ VP 是**確認性指標**，不預測趨勢，需要與其他工具搭配：
 - [[突破交易策略]]
 
 ## 來源
-- [Volume Profile 如何用於交易中 - EdgeTrader](../../raw/2026-05-11/成交量分佈分析Volume-Profile-EdgeTrader.md)
-- [Volume Profile Analysis 成交量分佈分析 - FinTastic](../../raw/2026-05-11/成交量分佈分析Volume-Profile-FinTastic.md)
-- [Alpha公開-04-Volume Profile運用 - 群創實戰](../../raw/2026-05-11/Volume-Profile運用Alpha群創實戰.md)
-- [成交量分佈分析 Volume Profile 進階實戰 - EdgeTrader](../../raw/2026-05-11/成交量分佈分析Volume-Profile進階實戰-EdgeTrader.md)
+- [Volume Profile 如何用於交易中 - EdgeTrader](<https://edgetradertw.com/%E6%88%90%E4%BA%A4%E9%87%8F%E5%88%86%E4%BD%88%E5%88%86%E6%9E%90-volume-profile-%E5%A6%82%E4%BD%95%E7%94%A8%E6%96%BC%E4%BA%A4%E6%98%93%E4%B8%AD/>)
+- [Volume Profile Analysis 成交量分佈分析 - FinTastic](<https://fintastic.trading/trading_strategy/volume-profile-analysis-%E6%88%90%E4%BA%A4%E9%87%8F%E5%88%86%E4%BD%88%E5%88%86%E6%9E%90/>)
+- [Alpha公開-04-Volume Profile運用 - 群創實戰](<https://vocus.cc/article/66a06b84fd897800013b9071>)
+- [成交量分佈分析 Volume Profile 進階實戰 - EdgeTrader](<https://edgetradertw.com/成交量分佈分析-volume-profile-如何用於交易中/>)

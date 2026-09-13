@@ -1,6 +1,8 @@
 ---
 title: "葛蘭碧八大法則 Granville's 8 Rules"
 category: "技術分析"
+raw_files:
+- raw/2026-05-17/葛蘭碧八大法則.md
 ---
 
 # 葛蘭碧八大法則 Granville's 8 Rules
@@ -162,5 +164,5 @@ category: "技術分析"
 
 ## 來源
 
-- [葛蘭碧八大法則圖解（學吧LearningPa）](../../raw/2026-05-17/葛蘭碧八大法則.md)
+- 葛蘭碧八大法則圖解（學吧LearningPa）（原始來源：[1](<https://learningpa.cc/tech13/>)、[2](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/moving_average-granvilles_law/>)）
 - [OANDA 葛蘭碧八大法則](https://www.oanda.com/bvi-ft/lab-education/technical_analysis/moving_average-granvilles_law/)

@@ -1,6 +1,10 @@
 ---
 title: "McGinley Dynamic 麥金利動態指標"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/McGinley-Dynamic-指標 earn2trade.md
+- raw/2026-05-11/McGinley-Dynamic-Majority-Rule-組合策略 tradejini.md
+- raw/2026-05-11/McGinley-Dynamic-麥金利動態指標 班傑明投資教室.md
 ---
 
 # McGinley Dynamic 麥金利動態指標
@@ -154,6 +158,6 @@ N 值越小，MD 越貼合價格、越靈敏；N 值越大，MD 越平滑、越�
 
 ## 來源
 
-- [McGinley Dynamic Indicator - earn2trade](../../raw/2026-05-11/McGinley-Dynamic-指標 earn2trade.md)
-- [McGinley Dynamic + Majority Rule - tradejini](../../raw/2026-05-11/McGinley-Dynamic-Majority-Rule-組合策略 tradejini.md)
-- [你從未聽說過的最可靠的指標 - 班傑明投資教室](../../raw/2026-05-11/McGinley-Dynamic-麥金利動態指標 班傑明投資教室.md)
+- [McGinley Dynamic Indicator - earn2trade](<https://www.earn2trade.com/blog/mcginley-dynamic-indicator/>)
+- [McGinley Dynamic + Majority Rule - tradejini](<https://www.tradejini.com/blogs/how-mcginley-dynamic-and-majority-rule-improve-trend-decisions>)
+- [你從未聽說過的最可靠的指標 - 班傑明投資教室](<https://benjamin-investingroom.com/%E4%BD%A0%E5%BE%9E%E6%9C%AA%E8%81%BD%E8%AA%AA%E9%81%8E%E7%9A%84%E6%9C%80%E5%8F%AF%E9%9D%A0%E7%9A%84%E6%8C%87%E6%A8%99/>)

@@ -2,6 +2,8 @@
 category: "基本面分析"
 title: "SaaS Rule of 40 成長獲利平衡指標"
 date: 2026-06-16
+raw_files:
+- raw/2026-06-16/Rule-of-40-CFI.md
 ---
 
 # SaaS Rule of 40 成長獲利平衡指標
@@ -72,4 +74,4 @@ Rule of 40 高不代表可以無腦買，還要搭配估值：
 
 ## 來源
 
-- [The SaaS Rule of 40 Explained](../../raw/2026-06-16/Rule-of-40-CFI.md)
+- [The SaaS Rule of 40 Explained](<https://corporatefinanceinstitute.com/resources/valuation/rule-of-40/>)

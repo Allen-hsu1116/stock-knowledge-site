@@ -4,6 +4,8 @@ category: "籌碼面分析"
 date: 2026-08-29
 source_date: 2026-08-29
 status: raw_linked
+raw_files:
+- raw/2026-08-29/0DTE選擇權與盤中Gamma風險研究摘錄.md
 ---
 
 # 0DTE當日到期選擇權與盤中Gamma風險
@@ -100,7 +102,7 @@ Cboe分析2023年SPX 0DTE市場時發現：
 
 ## 來源
 
-- [0DTE選擇權與盤中Gamma風險研究摘錄](../../raw/2026-08-29/0DTE選擇權與盤中Gamma風險研究摘錄.md)
+- 0DTE選擇權與盤中Gamma風險研究摘錄（原始來源：[1](<https://www.cboe.com/insights/posts/volatility-insights-evaluating-the-market-impact-of-spx-0-dte-options/>)、[2](<https://doi.org/10.2139/ssrn.4692190>)、[3](<https://doi.org/10.2139/ssrn.4426358>)、[4](<https://www.taifex.com.tw/cht/2/tXO>)、[5](<https://www.taifex.com.tw/enl/eng2/tXO>)）
 - [Cboe：Evaluating the Market Impact of SPX 0DTE Options](https://www.cboe.com/insights/posts/volatility-insights-evaluating-the-market-impact-of-spx-0-dte-options/)
 - [臺灣期貨交易所：臺指選擇權契約規格](https://www.taifex.com.tw/cht/2/tXO)
 - [Dim、Eraker、Vilkov：0DTEs Trading Gamma Risk and Volatility Propagation](https://doi.org/10.2139/ssrn.4692190)

@@ -1,6 +1,8 @@
 ---
 title: "確認偏誤 Confirmation Bias"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/確認偏誤Confirmation-Bias.md
 ---
 
 # 確認偏誤 Confirmation Bias
@@ -68,4 +70,4 @@ category: "風險管理"
 
 ## 來源
 
-- [確認偏誤 - MBA智庫百科](../../raw/2026-05-08/確認偏誤Confirmation-Bias.md)
+- [確認偏誤 - MBA智庫百科](<https://wiki.mbalib.com/zh-tw/确认偏误>)

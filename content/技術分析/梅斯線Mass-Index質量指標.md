@@ -1,6 +1,8 @@
 ---
 title: "梅斯線 Mass Index 質量指標"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/梅斯線Mass-Index質量指標.md
 ---
 
 # 梅斯線 Mass Index 質量指標
@@ -92,6 +94,6 @@ Mass = Summation(Value1, MassSum);
 
 ## 來源
 
-- [Mass Index - taindicators](../../raw/2026-05-18/梅斯線Mass-Index質量指標.md)
-- [梅斯線 - MBA智庫百科](../../raw/2026-05-18/梅斯線Mass-Index質量指標.md)
-- [程式交易≠Holy Grail - 梅斯線回測](../../raw/2026-05-18/梅斯線Mass-Index質量指標.md)
+- Mass Index - taindicators（原始來源：[1](<https://www.taindicators.com/massindex/>)、[2](<https://wiki.mbalib.com/wiki/%E6%A2%85%E6%96%AF%E7%BA%BF>)、[3](<https://wenschair.blogspot.com/2014/04/mass-index.html>)）
+- 梅斯線 - MBA智庫百科（原始來源：[1](<https://www.taindicators.com/massindex/>)、[2](<https://wiki.mbalib.com/wiki/%E6%A2%85%E6%96%AF%E7%BA%BF>)、[3](<https://wenschair.blogspot.com/2014/04/mass-index.html>)）
+- 程式交易≠Holy Grail - 梅斯線回測（原始來源：[1](<https://www.taindicators.com/massindex/>)、[2](<https://wiki.mbalib.com/wiki/%E6%A2%85%E6%96%AF%E7%BA%BF>)、[3](<https://wenschair.blogspot.com/2014/04/mass-index.html>)）

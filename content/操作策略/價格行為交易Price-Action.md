@@ -1,6 +1,9 @@
 ---
 title: "價格行為交易 Price Action"
 category: "操作策略"
+raw_files:
+- raw/2026-04-30/價格行為交易Price-Action完整教學.md
+- raw/2026-04-30/Price-Action本質假象訊號.md
 ---
 
 # 價格行為交易 Price Action
@@ -104,5 +107,5 @@ Price Action就像外國語言，有單字、文法、句型：
 
 ## 來源
 
-- [價格行為交易 Price Action 完整教學](../../raw/2026-04-30/價格行為交易Price-Action完整教學.md)
-- [Price Action本質假象訊號](../../raw/2026-04-30/Price-Action本質假象訊號.md)
+- [價格行為交易 Price Action 完整教學](<https://homedadpro.com/price-action/>)
+- [Price Action本質假象訊號](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/price_action-price_action_essence/>)

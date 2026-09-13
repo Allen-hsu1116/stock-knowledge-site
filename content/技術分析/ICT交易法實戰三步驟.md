@@ -1,6 +1,10 @@
 ---
 title: "ICT交易法實戰三步驟"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/SMC基礎ICT交易策略聰明錢流動性訂單塊FVG.md
+- raw/2026-05-11/SMC進階BOS與CHoCH市場結構突破與轉變.md
+- raw/2026-05-11/ICT-Market-Structure-流動性獵取與結構轉變判讀.md
 ---
 
 # ICT交易法實戰三步驟
@@ -121,6 +125,6 @@ ICT（Inner Circle Trader）交易法是 SMC 聰明錢概念的實戰執行框�
 - [[三重濾網交易系統|三重濾網交易系統]]
 
 ## 來源
-- [SMC基礎ICT交易策略聰明錢流動性訂單塊FVG](../../raw/2026-05-11/SMC基礎ICT交易策略聰明錢流動性訂單塊FVG.md)
-- [SMC進階BOS與CHoCH市場結構突破與轉變](../../raw/2026-05-11/SMC進階BOS與CHoCH市場結構突破與轉變.md)
-- [ICT-Market-Structure-流動性獵取與結構轉變判讀](../../raw/2026-05-11/ICT-Market-Structure-流動性獵取與結構轉變判讀.md)
+- [SMC基礎ICT交易策略聰明錢流動性訂單塊FVG](<https://homedadpro.com/smart-money-concepts/>)
+- [SMC進階BOS與CHoCH市場結構突破與轉變](<https://homedadpro.com/break-of-structure/>)
+- [ICT-Market-Structure-流動性獵取與結構轉變判讀](<https://vocus.cc/article/64e94e59fd89780001e9cd89>)

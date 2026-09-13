@@ -1,6 +1,8 @@
 ---
 title: "後見之明偏誤 Hindsight Bias"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/後見之明偏誤Hindsight-Bias.md
 ---
 
 # 後見之明偏誤 Hindsight Bias
@@ -72,4 +74,4 @@ category: "風險管理"
 
 ## 來源
 
-- [後見之明偏誤 - MBA智庫百科](../../raw/2026-05-08/後見之明偏誤Hindsight-Bias.md)
+- [後見之明偏誤 - MBA智庫百科](<https://wiki.mbalib.com/zh-tw/后见之明偏误>)

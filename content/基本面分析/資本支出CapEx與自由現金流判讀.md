@@ -1,6 +1,8 @@
 ---
 title: "資本支出CapEx與自由現金流判讀"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/MBA智庫-資本支出CapEx.md
 ---
 
 # 資本支出CapEx與自由現金流判讀
@@ -128,4 +130,4 @@ CapEx 是自由現金流的「減項」。一家公司即使營運現金流很�
 
 ## 來源
 
-- [資本性支出 Capital Expenditure - MBA智庫百科](../../raw/2026-05-05/MBA智庫-資本支出CapEx.md)
+- [資本性支出 Capital Expenditure - MBA智庫百科](<https://wiki.mbalib.com/zh-tw/资本支出>)

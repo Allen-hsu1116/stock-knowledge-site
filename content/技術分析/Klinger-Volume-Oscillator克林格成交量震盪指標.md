@@ -2,6 +2,8 @@
 category: "技術分析"
 title: Klinger Volume Oscillator 克林格成交量震盪指標
 date: 2026-05-18
+raw_files:
+- raw/2026-05-18/Klinger-Volume-Oscillator-KVO.md
 ---
 
 # Klinger Volume Oscillator 克林格成交量震盪指標
@@ -91,4 +93,4 @@ Volume Force = V × [2 × ((dm/cm) − 1)] × T × 100
 
 ## 來源
 
-- [Klinger Volume Oscillator Indicator - HowToTrade](../../raw/2026-05-18/Klinger-Volume-Oscillator-KVO.md)
+- [Klinger Volume Oscillator Indicator - HowToTrade](<https://howtotrade.com/indicators/klinger-volume-oscillator/>)

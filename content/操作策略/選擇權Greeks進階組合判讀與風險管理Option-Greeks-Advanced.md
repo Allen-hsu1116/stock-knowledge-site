@@ -1,6 +1,8 @@
 ---
 title: "選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced"
 category: "操作策略"
+raw_files:
+- raw/2026-05-10/選擇權Greeks進階組合判讀與風險管理.md
 ---
 
 # 選擇權Greeks進階組合判讀與風險管理Option-Greeks-Advanced
@@ -176,4 +178,4 @@ Delta Neutral 不是設好就忘，需要持續 Rebalance：
 
 ## 來源
 
-- [選擇權Greeks進階組合判讀與風險管理](../../raw/2026-05-10/選擇權Greeks進階組合判讀與風險管理.md)
+- 選擇權Greeks進階組合判讀與風險管理（本機留存素材，未公開全文；原始網址待核對）

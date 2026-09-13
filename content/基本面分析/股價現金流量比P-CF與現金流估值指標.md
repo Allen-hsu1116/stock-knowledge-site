@@ -1,6 +1,11 @@
 ---
 title: "股價現金流量比P-CF與現金流估值指標"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-12/股價現金流量比P-CF市場先生.md
+- raw/2026-05-12/自由現金流量FCF市場先生.md
+- raw/2026-05-12/Cash-Flow-Coverage-Ratio-Investingcom.md
+- raw/2026-05-12/FCF-15核心公式PG財經筆記.md
 ---
 
 # 股價現金流量比P-CF與現金流估值指標
@@ -56,8 +61,8 @@ category: "基本面分析"
 
 ### 範例計算
 
-A公司：股價$25，每股現金流$5 → P/CF = 5
-B公司：股價$25，每股現金流$10 → P/CF = 2.5
+A公司：股價\$25，每股現金流\$5 → P/CF = 5
+B公司：股價\$25，每股現金流\$10 → P/CF = 2.5
 
 其他條件相同，B公司P/CF較低，可能被低估。
 
@@ -152,7 +157,7 @@ FCF Margin = 自由現金流 ÷ 營收
 
 ## 來源
 
-- [股價現金流量比是什麼？和本益比有什麼差別？ - Mr.Market市場先生](../../raw/2026-05-12/股價現金流量比P-CF市場先生.md)
-- [自由現金流量是什麼？ - Mr.Market市場先生](../../raw/2026-05-12/自由現金流量FCF市場先生.md)
-- [Cash Flow Coverage Ratio - Investing.com](../../raw/2026-05-12/Cash-Flow-Coverage-Ratio-Investingcom.md)
-- [FCF 15個核心公式 - PG財經筆記](../../raw/2026-05-12/FCF-15核心公式PG財經筆記.md)
+- [股價現金流量比是什麼？和本益比有什麼差別？ - Mr.Market市場先生](<https://rich01.com/price-to-cash-flow-ratio-definition/>)
+- [自由現金流量是什麼？ - Mr.Market市場先生](<https://rich01.com/what-free-cash-flow/>)
+- [Cash Flow Coverage Ratio - Investing.com](<https://www.investing.com/academy/analysis/cash-flow-coverage-ratio-definition/>)
+- [FCF 15個核心公式 - PG財經筆記](<https://pgfinnote.substack.com/p/fcf-15>)

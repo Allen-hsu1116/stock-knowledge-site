@@ -1,6 +1,8 @@
 ---
 title: "Awesome Oscillator動能震盪指標"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/Awesome-Oscillator動能震盪指標.md
 ---
 
 # Awesome Oscillator動能震盪指標
@@ -83,4 +85,4 @@ Alligator（鱷魚指標）判趨勢方向，AO在趨勢確認後找進場點位
 
 ## 來源
 
-- [Awesome Oscillator動能震盪指標](../../raw/2026-05-04/Awesome-Oscillator動能震盪指標.md)
+- [Awesome Oscillator動能震盪指標](<https://sabiotrade.com/blog/awesome-oscillator-the-gift-from-bill-williams>)

@@ -1,6 +1,10 @@
 ---
 title: "過度擬合Overfitting量化判斷"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/他思笔记回測過擬合多重檢驗.md
+- raw/2026-05-01/FinLab策略優化如何避免過擬合.md
+- raw/2026-05-07/防範過度擬合避免AI交易策略失效.md
 ---
 
 # 過度擬合Overfitting量化判斷
@@ -124,6 +128,6 @@ Bailey等人用CSCV方法測試策略：
 - [[策略壓力測試Stress-Testing]]
 
 ## 來源
-- [為什麼實盤不如回測？如何檢驗多重測試導致的回測過擬合](../../raw/2026-05-01/他思笔记回測過擬合多重檢驗.md)
-- [策略優化 – 如何避免過擬合？](../../raw/2026-05-01/FinLab策略優化如何避免過擬合.md)
-- [回測的陷阱：防範過度擬合，避免AI交易策略失效的關鍵技巧](../../raw/2026-05-07/防範過度擬合避免AI交易策略失效.md)
+- [為什麼實盤不如回測？如何檢驗多重測試導致的回測過擬合](<https://heth.ink/BacktestOverfit2/>)
+- [策略優化 – 如何避免過擬合？](<https://www.finlab.tw/backtesting-overfitting-probability/>)
+- [回測的陷阱：防範過度擬合，避免AI交易策略失效的關鍵技巧](<https://tw.xglamdring.com/key-techniques-to-avoid-ai-trading-strategy-failure/>)

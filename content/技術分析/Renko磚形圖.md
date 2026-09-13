@@ -1,6 +1,9 @@
 ---
 title: "Renko磚形圖"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/Renko磚形圖完整指南.md
+- raw/2026-05-11/Renko磚形圖基礎入門.md
 ---
 
 # Renko磚形圖
@@ -35,7 +38,7 @@ Renko（練行）來自日文「煉瓦」（renga），意為「磚塊」。與K
 **三種設定方法：**
 
 1. **固定值（Traditional）**
-   - 手動設定數值（如10點、$1、50 pips）
+   - 手動設定數值（如10點、\$1、50 pips）
    - 優點：簡單直觀、回測一致
    - 缺點：無法適應波動變化
 
@@ -141,5 +144,5 @@ Renko的反轉需要「2塊磚」確認（設定磚塊大小×2的價格移動�
 
 ## 來源
 
-- [The Complete Guide To Renko Charts](../../raw/2026-05-11/Renko磚形圖完整指南.md)
-- [Renko Chart Basics: What They Are and How to Use Them](../../raw/2026-05-11/Renko磚形圖基礎入門.md)
+- [The Complete Guide To Renko Charts](<https://www.tradingwithrayner.com/renko-charts/>)
+- [Renko Chart Basics: What They Are and How to Use Them](<https://lacois.com/renko-chart-basics/>)

@@ -1,6 +1,10 @@
 ---
 title: "策略失效偵測與策略健康監控Strategy-Failure-Detection"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/如何判定策略失效-幣圖誌Bituzi.md
+- raw/2026-05-15/量化交易策略評估指南-5大核心指標.md
+- raw/2026-05-15/技術分析失效三情境-市場先生.md
 ---
 
 # 策略失效偵測與策略健康監控Strategy-Failure-Detection
@@ -122,6 +126,6 @@ category: "風險管理"
 - [[勝率與賺賠比WinRate-and-RiskReward|勝率與賺賠比WinRate and RiskReward]]
 
 ## 來源
-- [如何判定策略失效 - 幣圖誌Bituzi](../../raw/2026-05-15/如何判定策略失效-幣圖誌Bituzi.md)
-- [量化交易策略評估指南：5大核心指標 - xglamdring](../../raw/2026-05-15/量化交易策略評估指南-5大核心指標.md)
-- [為什麼技術分析會失效？3個失效情境 - Mr.Market市場先生](../../raw/2026-05-15/技術分析失效三情境-市場先生.md)
+- [如何判定策略失效 - 幣圖誌Bituzi](<https://www.bituzi.com/2014/01/strategy-failure.html>)
+- [量化交易策略評估指南：5大核心指標 - xglamdring](<https://tw.xglamdring.com/a-practical-guide-to-evaluating-quantitative-trading-strategies/>)
+- [為什麼技術分析會失效？3個失效情境 - Mr.Market市場先生](<https://rich01.com/technical-analysis-benefits/>)

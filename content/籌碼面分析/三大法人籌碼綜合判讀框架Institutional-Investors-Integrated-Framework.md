@@ -1,6 +1,10 @@
 ---
 title: "三大法人籌碼綜合判讀框架"
 category: "籌碼面分析"
+raw_files:
+- raw/2026-05-17/StockFeel籌碼分析教學三大法人融資融券判讀.md
+- raw/2026-05-17/玉山證券淺碟市場操作策略三大法人.md
+- raw/2026-05-17/OANDA何謂籌碼面分析優缺點與運用方式.md
 ---
 
 # 三大法人籌碼綜合判讀框架
@@ -134,6 +138,6 @@ category: "籌碼面分析"
 
 ## 來源
 
-- [StockFeel 籌碼分析教學 EP1](../../raw/2026-05-17/StockFeel籌碼分析教學三大法人融資融券判讀.md)
-- [玉山證券 淺碟市場的操作策略](../../raw/2026-05-17/玉山證券淺碟市場操作策略三大法人.md)
-- [OANDA 何謂籌碼面分析](../../raw/2026-05-17/OANDA何謂籌碼面分析優缺點與運用方式.md)
+- [StockFeel 籌碼分析教學 EP1](<https://www.stockfeel.com.tw/籌碼分析-三大法人-融資/>)
+- [玉山證券 淺碟市場的操作策略](<https://www.esunsec.com.tw/article/post/49>)
+- [OANDA 何謂籌碼面分析](<https://www.oanda.com/bvi-ft/lab-education/invest_us_stock/chip-analysis/>)

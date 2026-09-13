@@ -1,6 +1,9 @@
 ---
 title: "交易期望值Trading Expectancy"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/風險報酬比深度解析.md
+- raw/2026-05-01/停損與部位管理.md
 ---
 
 # 交易期望值Trading Expectancy
@@ -84,5 +87,5 @@ category: "風險管理"
 
 ## 來源
 
-- [風險報酬比深度解析](../../raw/2026-05-01/風險報酬比深度解析.md)
-- [停損與部位管理](../../raw/2026-05-01/停損與部位管理.md)
+- [風險報酬比深度解析](<https://fmstudio.blog/risk-reward-ratio-guide-2025/>)
+- [停損與部位管理](<https://medium.com/@trading-psychology/stop-loss-position-sizing-risk-management-f34c456cf249>)

@@ -1,6 +1,10 @@
 ---
 title: "內外盤比與五檔報價判讀 In-Out Disk Ratio & Order Book"
 category: "技術分析"
+raw_files:
+- raw/2026-05-10/內外盤比與五檔報價判讀-FM-Studio.md
+- raw/2026-05-10/內外盤比與五檔報價判讀-US-Market360.md
+- raw/2026-05-10/內外盤比與五檔報價判讀-fiisual.md
 ---
 
 # 內外盤比與五檔報價判讀 In-Out Disk Ratio & Order Book
@@ -142,6 +146,6 @@ category: "技術分析"
 
 ## 來源
 
-- [內盤外盤怎麼看？3大指標秒懂主力動向與股價漲跌秘密 - FM Studio](../../raw/2026-05-10/內外盤比與五檔報價判讀-FM-Studio.md)
-- [內外盤是什麼？一篇看懂五檔報價、內外盤比 - US Market360](../../raw/2026-05-10/內外盤比與五檔報價判讀-US-Market360.md)
-- [價量延伸：五檔報價＆內外盤 - fiisual](../../raw/2026-05-10/內外盤比與五檔報價判讀-fiisual.md)
+- [內盤外盤怎麼看？3大指標秒懂主力動向與股價漲跌秘密 - FM Studio](<https://fmstudio.blog/read-in-out-disk-guide-2025/>)
+- [內外盤是什麼？一篇看懂五檔報價、內外盤比 - US Market360](<https://www.usmarket360.com/news/sell-buy-in-out-ratio>)
+- [價量延伸：五檔報價＆內外盤 - fiisual](<https://tw.fiisual.com/blog/post/2023/stock-trade-bid-and-ask>)

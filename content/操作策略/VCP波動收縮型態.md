@@ -1,6 +1,13 @@
 ---
 title: "VCP波動收縮型態 Volatility Contraction Pattern"
 category: "操作策略"
+raw_files:
+- raw/2026-04-30/VCP型態是什麼-市場先生.md
+- raw/2026-04-30/VCP波動收斂型態台股選股-丹尼爾.md
+- raw/2026-04-30/VCP價格波動收縮形態-技術分析指標.md
+- raw/2026-05-10/VCP型態是什麼-市場先生.md
+- raw/2026-05-10/VCP實例操作與PowerSqueeze指標-Growin.md
+- raw/2026-05-10/VCP波動收斂選股-丹尼爾台股回測.md
 ---
 
 # VCP波動收縮型態 Volatility Contraction Pattern
@@ -163,9 +170,9 @@ Mark Minervini 的 SEPA 策略對 VCP 選股有明確的量化條件：
 - [[量先價行原則]]
 
 ## 來源
-- [VCP 型態是什麼？- 市場先生](../../raw/2026-04-30/VCP型態是什麼-市場先生.md)
-- [VCP波動收斂型態台股選股 - 丹尼爾](../../raw/2026-04-30/VCP波動收斂型態台股選股-丹尼爾.md)
-- [VCP 價格波動收縮形態 - 技術分析指標](../../raw/2026-04-30/VCP價格波動收縮形態-技術分析指標.md)
-- [VCP型態是什麼-市場先生（2026-05-10更新）](../../raw/2026-05-10/VCP型態是什麼-市場先生.md)
-- [VCP實例操作與PowerSqueeze指標-Growin](../../raw/2026-05-10/VCP實例操作與PowerSqueeze指標-Growin.md)
-- [VCP波動收斂選股-丹尼爾台股回測](../../raw/2026-05-10/VCP波動收斂選股-丹尼爾台股回測.md)
+- [VCP 型態是什麼？- 市場先生](<https://rich01.com/volatility-contraction-pattern-vcp/>)
+- [VCP波動收斂型態台股選股 - 丹尼爾](<https://www.cmoney.tw/notes/note-detail.aspx?nid=507888>)
+- [VCP 價格波動收縮形態 - 技術分析指標](<https://www.taindicators.com/vcp/>)
+- [VCP型態是什麼-市場先生（2026-05-10更新）](<https://rich01.com/volatility-contraction-pattern-vcp/>)
+- [VCP實例操作與PowerSqueeze指標-Growin](<https://blog.growin.tv/super-performance-account02/>)
+- [VCP波動收斂選股-丹尼爾台股回測](<https://www.cmoney.tw/notes/note-detail.aspx?nid=507888>)

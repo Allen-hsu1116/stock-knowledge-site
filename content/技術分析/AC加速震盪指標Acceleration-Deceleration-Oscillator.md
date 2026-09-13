@@ -1,6 +1,8 @@
 ---
 title: "AC加速震盪指標 Acceleration/Deceleration Oscillator"
 category: "技術分析"
+raw_files:
+- raw/2026-05-16/AC加速震盪指標實戰.md
 ---
 
 # AC加速震盪指標 Acceleration/Deceleration Oscillator
@@ -149,7 +151,7 @@ Williams原始參數(5, 34)為20多年前設計：
 
 ## 來源
 
-- [AC Acceleration Deceleration Oscillator 實戰](../../raw/2026-05-16/AC加速震盪指標實戰.md)
+- AC Acceleration Deceleration Oscillator 實戰（原始來源：[1](<https://forextester.com/blog/accelerator-decelerator-indicator/>)、[2](<https://www.ifcmarkets.com/en/ntx-indicators/accelerator-decelerator-oscillator>)、[3](<https://ey90223.pixnet.net/blog/post/257920462>)）
 - [ForexTester: Accelerator Decelerator Indicator](https://forextester.com/blog/accelerator-decelerator-indicator/)
 - [IFC Markets: Accelerator Oscillator](https://www.ifcmarkets.com/en/ntx-indicators/accelerator-decelerator-oscillator)
 - [期權加油站: AC和AO技術指標](https://ey90223.pixnet.net/blog/post/257920462)

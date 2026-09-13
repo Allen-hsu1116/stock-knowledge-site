@@ -2,6 +2,9 @@
 title: "隔日沖分點辨識SOP"
 category: "籌碼面分析"
 created: 2026-05-14
+raw_files:
+- raw/2026-05-14/隔日沖分點陷阱拆解主力鎖漲停手法.md
+- raw/2026-05-13/隔日沖分點陷阱拆解主力鎖漲停手法與籌碼判讀教學.md
 ---
 
 # 隔日沖分點辨識SOP
@@ -97,5 +100,5 @@ created: 2026-05-14
 
 ## 來源
 
-- [2026 隔日沖分點陷阱拆解：主力鎖漲停手法與籌碼判讀教學 - E大成長股](../../raw/2026-05-14/隔日沖分點陷阱拆解主力鎖漲停手法.md)
-- [2026 隔日沖分點陷阱拆解 - E大成長股](../../raw/2026-05-13/隔日沖分點陷阱拆解主力鎖漲停手法與籌碼判讀教學.md)
+- [2026 隔日沖分點陷阱拆解：主力鎖漲停手法與籌碼判讀教學 - E大成長股](<https://efrontrade.com/2026/05/next-day-trading-broker-traps-analysis.html>)
+- [2026 隔日沖分點陷阱拆解 - E大成長股](<https://efrontrade.com/2026/05/next-day-trading-broker-traps-analysis.html>)

@@ -1,6 +1,8 @@
 ---
 title: "規則化交易系統 Rule-Based Trading System"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/rule-based-trading-system-tradingheroes.md
 ---
 
 # 規則化交易系統 Rule-Based Trading System
@@ -109,4 +111,4 @@ category: "風險管理"
 
 ## 來源
 
-- [5 Steps to a Rule-Based Trading System That Works - Trading Heroes](../../raw/2026-05-01/rule-based-trading-system-tradingheroes.md)
+- [5 Steps to a Rule-Based Trading System That Works - Trading Heroes](<https://www.tradingheroes.com/rule-based-trading-system/>)

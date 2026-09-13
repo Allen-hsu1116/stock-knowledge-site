@@ -1,6 +1,10 @@
 ---
 title: "停損設定方法Stop-Loss-Placement"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/停損與部位管理.md
+- raw/2026-05-01/風險報酬比深度解析.md
+- raw/2026-05-14/停損設定方法與優缺點分析-市場先生.md
 ---
 
 # 停損設定方法Stop-Loss-Placement
@@ -120,6 +124,6 @@ ATR 停損確保停損位於正常市場噪音之外，同時數學可控。
 
 ## 來源
 
-- [停損與部位管理](../../raw/2026-05-01/停損與部位管理.md)
-- [風險報酬比深度解析](../../raw/2026-05-01/風險報酬比深度解析.md)
-- [停損是什麼？如何設置停損點？停損優缺點分析](../../raw/2026-05-14/停損設定方法與優缺點分析-市場先生.md)
+- [停損與部位管理](<https://medium.com/@trading-psychology/stop-loss-position-sizing-risk-management-f34c456cf249>)
+- [風險報酬比深度解析](<https://fmstudio.blog/risk-reward-ratio-guide-2025/>)
+- [停損是什麼？如何設置停損點？停損優缺點分析](<https://rich01.com/stop-loss-point/>)

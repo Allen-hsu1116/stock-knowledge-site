@@ -1,6 +1,8 @@
 ---
 title: "同業比較分析選股實戰 Peer Comparison"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/同業比較分析選股實戰.md
 ---
 
 # 同業比較分析選股實戰 Peer Comparison
@@ -119,4 +121,4 @@ A公司的ROE品質遠高於B公司，因為A靠獲利能力，B靠財務槓桿�
 
 ## 來源
 
-- [同業比較分析選股實戰](../../raw/2026-05-19/同業比較分析選股實戰.md)
+- [同業比較分析選股實戰](<https://www.stockfeel.com.tw/>)

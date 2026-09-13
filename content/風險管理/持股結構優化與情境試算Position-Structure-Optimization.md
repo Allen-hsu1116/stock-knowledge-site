@@ -1,6 +1,8 @@
 ---
 title: "持股結構優化與情境試算Position-Structure-Optimization"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/持股結構優化與情境試算.md
 ---
 
 # 持股結構優化與情境試算Position-Structure-Optimization
@@ -71,4 +73,4 @@ category: "風險管理"
 
 ## 來源
 
-- [持股結構優化與情境試算](../../raw/2026-05-15/持股結構優化與情境試算.md)
+- [持股結構優化與情境試算](<https://readmo.cmoney.tw/article/b22b5760-e9ea-414d-905a-4e59eaa7e45a>)

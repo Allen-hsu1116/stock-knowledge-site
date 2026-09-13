@@ -1,6 +1,8 @@
 ---
 title: "通膨風險與實質報酬 Inflation Risk and Real Return"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/通膨風險與實質報酬.md
 ---
 
 # 通膨風險與實質報酬 Inflation Risk and Real Return
@@ -122,6 +124,6 @@ CPI是落後指標，公布的數據反映1-2個月前的物價。用落後數�
 
 ## 來源
 
-- [通膨風險與實質報酬](../../raw/2026-05-08/通膨風險與實質報酬.md)
+- [通膨風險與實質報酬](<https://wiki.mbalib.com/zh-tw/通货膨胀风险>)
 - Fisher, I. (1930). The Theory of Interest
 - 台灣主計處CPI歷史數據

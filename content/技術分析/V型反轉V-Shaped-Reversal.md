@@ -1,6 +1,8 @@
 ---
 title: "V型反轉 V-Shaped Reversal"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/V型與島型反轉-histock.md
 ---
 
 # V型反轉 V-Shaped Reversal
@@ -73,4 +75,4 @@ V型反轉的形成需要兩個同時存在的條件：
 
 ## 來源
 
-- [3分鐘學會V型與島型反轉 - HiStock](../../raw/2026-05-04/V型與島型反轉-histock.md)
+- [3分鐘學會V型與島型反轉 - HiStock](<https://histock.tw/blog/histock1688/199>)

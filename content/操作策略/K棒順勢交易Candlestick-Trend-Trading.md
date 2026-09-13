@@ -1,6 +1,8 @@
 ---
 title: "K棒順勢交易 Candlestick Trend Trading"
 category: "操作策略"
+raw_files:
+- raw/2026-05-10/K棒順勢交易四大優勢與致命陷阱-工商時報.md
 ---
 
 # K棒順勢交易 Candlestick Trend Trading
@@ -85,4 +87,4 @@ K棒順勢交易是最基礎也最常見的操作方式：以K棒型態與排列
 
 ## 來源
 
-- [K棒順勢交易的4大優勢與致命陷阱 - 工商時報](../../raw/2026-05-10/K棒順勢交易四大優勢與致命陷阱-工商時報.md)
+- [K棒順勢交易的4大優勢與致命陷阱 - 工商時報](<https://www.ctee.com.tw/news/20260227700010-431001>)

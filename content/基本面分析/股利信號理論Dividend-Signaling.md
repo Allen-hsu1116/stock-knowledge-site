@@ -2,6 +2,8 @@
 title: 股利信號理論 Dividend Signaling
 date: 2026-06-23
 category: "基本面分析"
+raw_files:
+- raw/2026-06-23/信號理論Wikipedia.md
 ---
 
 # 股利信號理論 Dividend Signaling
@@ -76,7 +78,7 @@ category: "基本面分析"
 
 ## 來源
 
-- [Signalling (Economics) - Wikipedia](../../raw/2026-06-23/信號理論Wikipedia.md)
+- [Signalling (Economics) - Wikipedia](<https://en.wikipedia.org/wiki/Signalling_(economics)>)
 - Spence, M. (1973). "Job Market Signaling"
 - Bhattacharya, S. (1979). "Imperfect Information, Dividend Policy, and 'the Bird in the Hand' Fallacy"
 - Miller, M. & Rock, K. (1985). "Dividend Policy under Asymmetric Information"

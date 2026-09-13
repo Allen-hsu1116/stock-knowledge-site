@@ -1,6 +1,8 @@
 ---
 title: "股本與流通在外股數判讀Share-Capital-and-Shares-Outstanding"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/股本是什麼影響股本變動的四因素.md
 ---
 
 # 股本與流通在外股數判讀Share-Capital-and-Shares-Outstanding
@@ -58,4 +60,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [股本是什麼？4個影響公司股本變動的因素解析](../../raw/2026-05-19/股本是什麼影響股本變動的四因素.md)
+- [股本是什麼？4個影響公司股本變動的因素解析](<https://rich01.com/what-is-stock-share-capital/>)

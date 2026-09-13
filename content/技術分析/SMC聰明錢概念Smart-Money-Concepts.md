@@ -1,6 +1,11 @@
 ---
 title: "SMC聰明錢概念 Smart Money Concepts"
 category: "技術分析"
+raw_files:
+- raw/2026-05-03/SMC交易策略深度解析-聰明錢概念教學與實戰應用.md
+- raw/2026-05-03/SMC聰明錢概念介紹-市場結構流動性訂單區塊虛假突破.md
+- raw/2026-05-11/SMC基礎ICT交易策略聰明錢流動性訂單塊FVG.md
+- raw/2026-05-18/SMC聰明錢概念基礎教學-全職奶爸.md
 ---
 
 # SMC聰明錢概念 Smart Money Concepts
@@ -111,7 +116,7 @@ FVG = 三根連續K線中，第一根最高點與第三根最低點之間沒有�
 - [[三重濾網交易系統|三重濾網交易系統]]
 
 ## 來源
-- [SMC交易策略深度解析-聰明錢概念教學與實戰應用](../../raw/2026-05-03/SMC交易策略深度解析-聰明錢概念教學與實戰應用.md)
-- [SMC聰明錢概念介紹-市場結構流動性訂單區塊虛假突破](../../raw/2026-05-03/SMC聰明錢概念介紹-市場結構流動性訂單區塊虛假突破.md)
-- [SMC基礎ICT交易策略聰明錢流動性訂單塊FVG](../../raw/2026-05-11/SMC基礎ICT交易策略聰明錢流動性訂單塊FVG.md)
-- [SMC聰明錢概念基礎教學（全職奶爸homdedpro）](../../raw/2026-05-18/SMC聰明錢概念基礎教學-全職奶爸.md)
+- [SMC交易策略深度解析-聰明錢概念教學與實戰應用](<https://fmstudio.blog/smc-trading-strategy-guide-2025/>)
+- [SMC聰明錢概念介紹-市場結構流動性訂單區塊虛假突破](<https://edgetradertw.com/%E4%BB%80%E9%BA%BC%E6%98%AFsmc%E8%81%B0%E6%98%8E%E9%8C%A2%EF%BC%9Fsmart-money-concepts-%E4%BB%8B%E7%B4%B9/>)
+- [SMC基礎ICT交易策略聰明錢流動性訂單塊FVG](<https://homedadpro.com/smart-money-concepts/>)
+- [SMC聰明錢概念基礎教學（全職奶爸homdedpro）](<https://homedadpro.com/smart-money-concepts/>)

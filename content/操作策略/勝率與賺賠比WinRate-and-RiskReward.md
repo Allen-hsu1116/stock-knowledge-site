@@ -1,6 +1,9 @@
 ---
 title: "勝率與賺賠比 Win Rate & Risk-Reward Ratio"
 category: "操作策略"
+raw_files:
+- raw/2026-05-14/當沖八大步驟建立短線策略-玉山證券.md
+- raw/2026-05-14/風險報酬比決定市場勝敗的關鍵.md
 ---
 
 # 勝率與賺賠比 Win Rate & Risk-Reward Ratio
@@ -117,5 +120,5 @@ category: "操作策略"
 
 ## 來源
 
-- [當沖八大步驟建立短線策略 - 玉山證券](../../raw/2026-05-14/當沖八大步驟建立短線策略-玉山證券.md)
-- [風險報酬比決定市場勝敗的關鍵 - homedadpro](../../raw/2026-05-14/風險報酬比決定市場勝敗的關鍵.md)
+- [當沖八大步驟建立短線策略 - 玉山證券](<https://www.esunsec.com.tw/article/post/208>)
+- [風險報酬比決定市場勝敗的關鍵 - homedadpro](<https://homedadpro.com/risk-reward/>)

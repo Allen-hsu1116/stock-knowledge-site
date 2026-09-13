@@ -1,6 +1,8 @@
 ---
 title: "操盤手五階段成長模型 Trader Development Five Stages"
 category: "風險管理"
+raw_files:
+- raw/2026-05-09/操盤手五階段成長模型.md
 ---
 
 # 操盤手五階段成長模型 Trader Development Five Stages
@@ -136,4 +138,4 @@ category: "風險管理"
 - [[過度自信偏誤Overconfidence-Bias]]
 
 ## 來源
-- [操盤手五階段成長模型](../../raw/2026-05-09/操盤手五階段成長模型.md)
+- [操盤手五階段成長模型](<https://vocus.cc/article/65f631a1fd89780001770674>)

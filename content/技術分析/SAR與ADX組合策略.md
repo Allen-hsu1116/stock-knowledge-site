@@ -1,6 +1,10 @@
 ---
 title: "SAR與ADX組合策略"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/OANDA-SAR拋物線指標.md
+- raw/2026-05-04/OANDA-ADX指標使用策略.md
+- raw/2026-05-04/QuantPass-SAR指標完整教學.md
 ---
 
 # SAR與ADX組合策略
@@ -79,6 +83,6 @@ SAR 和 ADX 都出自 Wilder 1978 年同一本書，天生就是一家人。但�
 
 ## 來源
 
-- [SAR拋物線指標-OANDA](../../raw/2026-05-04/OANDA-SAR拋物線指標.md)
-- [ADX指標使用策略-OANDA](../../raw/2026-05-04/OANDA-ADX指標使用策略.md)
-- [SAR指標完整教學-量化通](../../raw/2026-05-04/QuantPass-SAR指標完整教學.md)
+- [SAR拋物線指標-OANDA](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/parabolic/>)
+- [ADX指標使用策略-OANDA](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/adx/>)
+- [SAR指標完整教學-量化通](<https://quantpass.org/sar/>)

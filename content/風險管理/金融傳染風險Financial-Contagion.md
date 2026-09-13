@@ -1,6 +1,8 @@
 ---
 title: "金融傳染風險 Financial Contagion"
 category: "風險管理"
+raw_files:
+- raw/2026-05-09/Financial-Contagion.md
 ---
 
 # 金融傳染風險 Financial Contagion
@@ -108,4 +110,4 @@ De Gregorio 和 Valdes (2001) 研究1982年債務危機、1994年墨西哥危機
 
 ## 來源
 
-- [Financial Contagion - Wikipedia](../../raw/2026-05-09/Financial-Contagion.md)
+- [Financial Contagion - Wikipedia](<https://en.wikipedia.org/wiki/Financial_contagion>)

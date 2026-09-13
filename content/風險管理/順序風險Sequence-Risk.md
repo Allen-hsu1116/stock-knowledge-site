@@ -1,6 +1,9 @@
 ---
 title: "順序風險 Sequence Risk"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/蒙地卡羅模擬程式交易壓力測試.md
+- raw/2026-05-01/MonteCarloPracticalGuideStrategyValidation.md
 ---
 
 # 順序風險 Sequence Risk
@@ -57,5 +60,5 @@ category: "風險管理"
 
 ## 來源
 
-- [蒙地卡羅模擬在程式交易中的應用](../../raw/2026-05-01/蒙地卡羅模擬程式交易壓力測試.md)
-- [Monte Carlo Practical Guide Strategy Validation](../../raw/2026-05-01/MonteCarloPracticalGuideStrategyValidation.md)
+- [蒙地卡羅模擬在程式交易中的應用](<https://opop.tw/monte-carlo-simulation-trading/>)
+- [Monte Carlo Practical Guide Strategy Validation](<https://quantproof.io/blog/monte-carlo-simulations-trading-strategy-validation>)

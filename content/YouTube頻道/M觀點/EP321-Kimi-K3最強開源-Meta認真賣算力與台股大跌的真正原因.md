@@ -15,7 +15,7 @@ title: "EP321 Kimi K3最強開源與Meta認真賣算力——台股大跌的真�
 
 ## 核心觀點
 
-**Kimi K3 不是 DeepSeek 時刻**：Kimi K3 實力達到前沿模型水準（AII 57分，僅次於 Fable 5 60分和 GPT 5.6 Soul 59分），但與 DeepSeek 不同的是它沒有用更少算力達成同等能力。2.8T 參數與 GPT 5.6（約3T）大小相當，推論成本甚至更高（完成任務消耗 Token 更多）。日常任務成本 $0.95 vs GPT 5.6 Terra $0.55 vs Grok 4.5 $0.31。沒有商業競爭力優勢——除非需要 Local 端模型。中國開源模型目前落後美國前沿模型約3-9個月。
+**Kimi K3 不是 DeepSeek 時刻**：Kimi K3 實力達到前沿模型水準（AII 57分，僅次於 Fable 5 60分和 GPT 5.6 Soul 59分），但與 DeepSeek 不同的是它沒有用更少算力達成同等能力。2.8T 參數與 GPT 5.6（約3T）大小相當，推論成本甚至更高（完成任務消耗 Token 更多）。日常任務成本 \$0.95 vs GPT 5.6 Terra \$0.55 vs Grok 4.5 \$0.31。沒有商業競爭力優勢——除非需要 Local 端模型。中國開源模型目前落後美國前沿模型約3-9個月。
 
 **模型是 Commodity 但不會消滅前沿模型**：M觀點從2023年起連續四年講模型是 commodity。開源模型不會消滅前沿模型，就像 Linux 沒有消滅 Windows、手機是通用商品但蘋果三星仍能各自賺錢。未來會是多個前沿模型實力接近但各有擅長領域的分割市場。
 
@@ -26,7 +26,7 @@ title: "EP321 Kimi K3最強開源與Meta認真賣算力——台股大跌的真�
 ## 實戰重點
 
 - **Kimi K3 排名**：AII 第三名（57分）、AACI 第四名（被 Quark 4.5 超車）
-- **成本比較**：Kimi K3 日常 $0.95/Agentic $3.18 → GPT 5.6 Terra 日常 $0.55/Agentic $2.76 → Grok 4.5 日常 $0.31/Agentic $2.59
+- **成本比較**：Kimi K3 日常 \$0.95/Agentic \$3.18 → GPT 5.6 Terra 日常 \$0.55/Agentic \$2.76 → Grok 4.5 日常 \$0.31/Agentic \$2.59
 - **中國模型差距**：目前落後3-9個月（Kimi K3 約落後 GPT 5.5 三個月）
 - **Meta Compute**：挖角 AWS 高層 Dave Brown、與 Anthropic 談百億美元算力租賃
 - **台積電法報**：營收成長40%（+10%）、資本支出60-64B+亞利桑那1000億美元

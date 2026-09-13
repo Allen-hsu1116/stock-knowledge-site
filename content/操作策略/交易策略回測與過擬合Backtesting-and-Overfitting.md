@@ -1,6 +1,8 @@
 ---
 title: "交易策略回測與過擬合"
 category: "操作策略"
+raw_files:
+- raw/2026-05-10/backtesting-and-overfitting.md
 ---
 
 # 交易策略回測與過擬合
@@ -168,4 +170,4 @@ MDD = (Trough - Peak) / Peak
 - [Backtesting - Corporate Finance Institute](https://corporatefinanceinstitute.com/resources/data-science/backtesting/)
 - [Sharpe Ratio - Corporate Finance Institute](https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/sharpe-ratio-definition-formula/)
 - [Maximum Drawdown - Corporate Finance Institute](https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/maximum-drawdown/)
-- [回測與過擬合原始素材](../../raw/2026-05-10/backtesting-and-overfitting.md)
+- 回測與過擬合原始素材（本機留存素材，未公開全文；原始網址待核對）

@@ -5,6 +5,9 @@ source: memory
 source_date: 2026-05-06
 status: raw_linked
 raw_file: raw/2026-05-06/自營商權證避險Delta動態避險與逼券商拉抬.md
+raw_files:
+- raw/2026-05-06/自營商權證避險Delta動態避險與逼券商拉抬.md
+- raw/2026-05-13/自營商權證避險與Gamma-Squeeze逼券商.md
 ---
 
 # 逼券商拉抬Gamma Squeeze兩手策略
@@ -130,5 +133,5 @@ raw_file: raw/2026-05-06/自營商權證避險Delta動態避險與逼券商拉�
 
 ## 來源
 
-- [自營商是什麼?自營商買進分2種：自行買進vs避險 - Yotta](../../raw/2026-05-13/自營商權證避險與Gamma-Squeeze逼券商.md)
-- [自營商買賣超與避險盤判讀完整教學 - Mr.Market市場先生](../../raw/2026-05-13/自營商權證避險與Gamma-Squeeze逼券商.md)
+- 自營商是什麼?自營商買進分2種：自行買進vs避險 - Yotta（原始來源：[1](<https://www.yottau.com.tw/article/1206>)、[2](<https://www.cmoney.tw/learn/course/michelle/topic/729>)、[3](<https://rich01.com/dealer-overbought-oversold/>)）
+- 自營商買賣超與避險盤判讀完整教學 - Mr.Market市場先生（原始來源：[1](<https://www.yottau.com.tw/article/1206>)、[2](<https://www.cmoney.tw/learn/course/michelle/topic/729>)、[3](<https://rich01.com/dealer-overbought-oversold/>)）

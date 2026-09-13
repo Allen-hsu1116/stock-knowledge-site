@@ -1,6 +1,8 @@
 ---
 title: "沉沒成本謬誤 Sunk Cost Fallacy"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/沉沒成本謬誤Sunk-Cost-Fallacy.md
 ---
 
 # 沉沒成本謬誤 Sunk Cost Fallacy
@@ -72,4 +74,4 @@ category: "風險管理"
 
 ## 來源
 
-- [沉沒成本謬誤 - MBA智庫百科](../../raw/2026-05-08/沉沒成本謬誤Sunk-Cost-Fallacy.md)
+- [沉沒成本謬誤 - MBA智庫百科](<https://wiki.mbalib.com/zh-tw/沉没成本谬误>)

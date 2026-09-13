@@ -1,6 +1,11 @@
 ---
 title: "融券放空策略與軋空判讀實戰Short-Selling-Strategy-and-Short-Squeeze"
 category: "操作策略"
+raw_files:
+- raw/2026-05-17/工商時報-台股軋空軋成形融券暴增釋出哪些訊號.md
+- raw/2026-05-17/Yahoo奇摩-想不被軋空搞懂融券強制回補的5大原因.md
+- raw/2026-05-17/StockFeel-放空教學與注意事項.md
+- raw/2026-05-17/市場先生-融券最完整懶人包.md
 ---
 
 # 融券放空策略與軋空判讀實戰Short-Selling-Strategy-and-Short-Squeeze
@@ -205,7 +210,7 @@ category: "操作策略"
 - [[風險管理決策框架Risk-Management-Decision-Framework]]
 
 ## 來源
-- [台股軋空軋成形？融券暴增釋出哪些訊號？](../../raw/2026-05-17/工商時報-台股軋空軋成形融券暴增釋出哪些訊號.md)
-- [想不被軋空 搞懂融券強制回補的5大原因](../../raw/2026-05-17/Yahoo奇摩-想不被軋空搞懂融券強制回補的5大原因.md)
-- [放空是什麼？股票怎麼放空？放空教學＆注意事項！](../../raw/2026-05-17/StockFeel-放空教學與注意事項.md)
-- [融券是什麼？最完整的股票融券交易懶人包](../../raw/2026-05-17/市場先生-融券最完整懶人包.md)
+- [台股軋空軋成形？融券暴增釋出哪些訊號？](<https://www.ctee.com.tw/news/20250607700017-430201>)
+- [想不被軋空 搞懂融券強制回補的5大原因](<https://tw.stock.yahoo.com/news/%E6%83%B3%E4%B8%8D%E8%A2%AB%E8%BB%8B%E7%A9%BA%EF%BC%8C%E6%90%9E%E6%87%82%E8%9E%8D%E5%88%B8%E5%BC%B7%E5%88%B6%E5%9B%9E%E8%A3%9C%E7%9A%845%E5%A4%A7%E5%8E%9F%E5%9B%A0-055003602.html>)
+- [放空是什麼？股票怎麼放空？放空教學＆注意事項！](<https://www.stockfeel.com.tw/%E6%94%BE%E7%A9%BA-%E6%84%8F%E6%80%9D-%E8%A6%8F%E5%89%87-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85/>)
+- [融券是什麼？最完整的股票融券交易懶人包](<https://rich01.com/how-margin-short-stock/>)

@@ -1,6 +1,9 @@
 ---
 title: "營業槓桿與財務槓桿聯合槓桿判讀"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/經營槓桿Operating-Leverage.md
+- raw/2026-05-05/財務槓桿Financial-Leverage.md
 ---
 
 # 營業槓桿與財務槓桿聯合槓桿判讀
@@ -129,5 +132,5 @@ DCL = DOL × DFL = 邊際貢獻 / (EBIT - I)
 
 ## 來源
 
-- [經營槓桿 Operating Leverage](../../raw/2026-05-05/經營槓桿Operating-Leverage.md)
-- [財務槓桿 Financial Leverage](../../raw/2026-05-05/財務槓桿Financial-Leverage.md)
+- [經營槓桿 Operating Leverage](<https://wiki.mbalib.com/zh-tw/%E8%90%A5%E4%B8%9A%E6%9D%A0%E6%9D%86>)
+- [財務槓桿 Financial Leverage](<https://wiki.mbalib.com/zh-tw/%E8%B4%A2%E5%8A%A1%E6%9D%A0%E6%9D%86>)

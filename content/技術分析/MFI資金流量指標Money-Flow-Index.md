@@ -1,6 +1,12 @@
 ---
 title: "MFI資金流量指標 Money Flow Index"
 category: "技術分析"
+raw_files:
+- raw/2026-05-02/MFI資金流量指標.md
+- raw/2026-05-11/MFI資金流量指標-市場先生.md
+- raw/2026-05-11/MFI資金流量指標-Yahoo股市.md
+- raw/2026-05-17/MFI資金流量指標XQ教學.md
+- raw/2026-05-17/MFI資金流量指標市場先生完整教學.md
 ---
 
 # MFI資金流量指標 Money Flow Index
@@ -153,8 +159,8 @@ XQ 稱 MFI 為「價量結合的 RSI」，其計算邏輯中不考慮漲跌幅�
 
 ## 來源
 
-- [MFI資金流量指標](../../raw/2026-05-02/MFI資金流量指標.md)
-- [MFI資金流量指標 - 市場先生](../../raw/2026-05-11/MFI資金流量指標-市場先生.md)
-- [MFI資金流量指標 - Yahoo股市](../../raw/2026-05-11/MFI資金流量指標-Yahoo股市.md)
-- [MFI資金流量指標XQ教學](../../raw/2026-05-17/MFI資金流量指標XQ教學.md)
-- [MFI資金流量指標市場先生完整教學](../../raw/2026-05-17/MFI資金流量指標市場先生完整教學.md)
+- MFI資金流量指標（原始來源：[1](<https://rich01.com/what-is-mfi-indicator-0/>)、[2](<https://tw.stock.yahoo.com/news/技術分析-mfi-mfi背離-超買超賣-資金流量指標-100044902.html>)、[3](<https://edgetradertw.com/money-flow-index-資金流量指標-mfi：衡量市場買賣壓力的技術工/>)、[4](<https://www.taindicators.com/mfi/>)、[5](<https://www.fx110.com.tw/special/8841>)）
+- [MFI資金流量指標 - 市場先生](<https://rich01.com/what-is-mfi-indicator-0/>)
+- [MFI資金流量指標 - Yahoo股市](<https://tw.stock.yahoo.com/news/技術分析-mfi-mfi背離-超買超賣-資金流量指標-100044902.html>)
+- [MFI資金流量指標XQ教學](<https://www.xq.com.tw/xstrader/money-flow-index-mfi%E6%8C%87%E6%A8%99/>)
+- [MFI資金流量指標市場先生完整教學](<https://rich01.com/what-is-mfi-indicator-0/>)

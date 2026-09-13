@@ -1,6 +1,10 @@
 ---
 title: "FVG 公允價值缺口 (Fair Value Gap)"
 category: "技術分析"
+raw_files:
+- raw/2026-05-03/FVG公允價值缺口實戰-homedadpro.md
+- raw/2026-05-11/FVG公平價值缺口失衡區判斷與iFVG.md
+- raw/2026-05-11/FVG公允價值缺口定義及應用.md
 ---
 
 # FVG 公允價值缺口 (Fair Value Gap)
@@ -111,6 +115,6 @@ iFVG代表供需平衡已重新調整，角色轉換後仍是有效的交易區�
 
 ## 來源
 
-- [【SMC進階教學】FVG知識：如何判斷關鍵失衡區 - 全職奶爸](../../raw/2026-05-03/FVG公允價值缺口實戰-homedadpro.md)
-- [FVG公平價值缺口失衡區判斷與iFVG - 全職奶爸](../../raw/2026-05-11/FVG公平價值缺口失衡區判斷與iFVG.md)
-- [FVG公允價值缺口定義及應用 - EdgeTrader](../../raw/2026-05-11/FVG公允價值缺口定義及應用.md)
+- [【SMC進階教學】FVG知識：如何判斷關鍵失衡區 - 全職奶爸](<https://homedadpro.com/fair-value-gap/>)
+- [FVG公平價值缺口失衡區判斷與iFVG - 全職奶爸](<https://homedadpro.com/fair-value-gap/>)
+- [FVG公允價值缺口定義及應用 - EdgeTrader](<https://edgetradertw.com/fvg%E6%98%AF%E4%BB%80%E9%BA%BC-%E5%85%AC%E5%85%81%E5%83%B9%E5%80%BC%E7%BC%BA%E5%8F%A3%E5%AE%9A%E7%BE%A9%E5%8F%8A%E6%87%89%E7%94%A8-smc%E5%9F%BA%E7%A4%8E/>)

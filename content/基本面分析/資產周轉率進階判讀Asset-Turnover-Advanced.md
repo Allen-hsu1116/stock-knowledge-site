@@ -1,6 +1,9 @@
 ---
 title: "資產周轉率進階判讀Asset-Turnover-Advanced"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/資產周轉率.md
+- raw/2026-05-05/股東權益報酬率ROE.md
 ---
 
 # 資產周轉率進階判讀Asset-Turnover-Advanced
@@ -95,5 +98,5 @@ category: "基本面分析"
 
 ## 來源
 
-- [資產周轉率](../../raw/2026-05-05/資產周轉率.md)
-- [股東權益報酬率ROE](../../raw/2026-05-05/股東權益報酬率ROE.md)
+- [資產周轉率](<https://wiki.mbalib.com/zh-tw/資產周轉率>)
+- [股東權益報酬率ROE](<https://wiki.mbalib.com/zh-tw/股東權益報酬率>)

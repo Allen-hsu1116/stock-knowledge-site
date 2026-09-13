@@ -1,6 +1,8 @@
 ---
 title: "TIPP時間不變性投資組合保險策略"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/TIPP保本基金策略改進.md
 ---
 
 # TIPP時間不變性投資組合保險策略
@@ -75,4 +77,4 @@ TIPP（Time-Invariant Portfolio Protection）是對CPPI策略的改進，核心�
 
 ## 來源
 
-- [保本基金策略：CPPI、TIPP、OBPI](../../raw/2026-05-01/TIPP保本基金策略改進.md)
+- [保本基金策略：CPPI、TIPP、OBPI](<https://m.jiemian.com/article/1130185_yidian.html>)

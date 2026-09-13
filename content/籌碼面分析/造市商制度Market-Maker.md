@@ -1,6 +1,10 @@
 ---
 title: "造市商制度Market-Maker"
 category: "籌碼面分析"
+raw_files:
+- raw/2026-05-13/自營商買賣超與避險部位判讀-市場先生.md
+- raw/2026-05-13/造市商制度與台股造市者機制.md
+- raw/2026-05-13/自營商避險大買與兩手策略實戰.md
 ---
 
 # 造市商制度Market-Maker
@@ -144,6 +148,6 @@ category: "籌碼面分析"
 
 ## 來源
 
-- [自營商買賣超與避險部位判讀 - 市場先生](../../raw/2026-05-13/自營商買賣超與避險部位判讀-市場先生.md)
-- [造市商制度與台股造市者機制](../../raw/2026-05-13/造市商制度與台股造市者機制.md)
-- [自營商避險大買與兩手策略實戰](../../raw/2026-05-13/自營商避險大買與兩手策略實戰.md)
+- [自營商買賣超與避險部位判讀 - 市場先生](<https://rich01.com/dealer-overbought-oversold/>)
+- 造市商制度與台股造市者機制（原始來源：[1](<https://rich01.com/what-is-market-maker/>)、[2](<https://www.twse.com.tw/market_insights/zh/detail/8a8216d6993bf15101999e969aad0199>)）
+- [自營商避險大買與兩手策略實戰](<https://www.chinatimes.com/newspapers/20180725000238-260202>)

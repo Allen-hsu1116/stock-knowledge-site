@@ -1,6 +1,9 @@
 ---
 title: "斐波那契擴展 Fibonacci Extension"
 category: "技術分析"
+raw_files:
+- raw/2026-05-17/費波南希回撤Fibonacci-Retracement實戰.md
+- raw/2026-05-17/艾略特波浪理論Elliott-Wave-Theory實戰.md
 ---
 
 # 斐波那契擴展 Fibonacci Extension
@@ -87,5 +90,5 @@ category: "技術分析"
 
 ## 來源
 
-- [斐波那契回撤怎麼畫預測反彈目標價的神奇數列-OP投資理財學院](../../raw/2026-05-17/費波南希回撤Fibonacci-Retracement實戰.md)
-- [波浪理論與斐波那契結合-FM Studio](../../raw/2026-05-17/艾略特波浪理論Elliott-Wave-Theory實戰.md)
+- 斐波那契回撤怎麼畫預測反彈目標價的神奇數列-OP投資理財學院（原始來源：[1](<https://opop.tw/fibonacci-retracement-guide/>)、[2](<https://quantpass.org/fibonacci/>)、[3](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/fibonacci/>)）
+- 波浪理論與斐波那契結合-FM Studio（原始來源：[1](<https://fmstudio.blog/elliott-wave-theory-guide-2025-3/>)、[2](<https://www.investbrother.com/brother-academy/艾略特波浪理論教學：掌握8大波浪定律從入門到精通/>)）

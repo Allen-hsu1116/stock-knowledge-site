@@ -1,6 +1,8 @@
 ---
 title: "股價淨值比河流圖 PBR Band / PBR River Chart"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-17/股價淨值比河流圖PBR-Band.md
 ---
 
 # 股價淨值比河流圖 PBR Band / PBR River Chart
@@ -143,6 +145,6 @@ PBR 河流圖最強大的應用在於景氣循環股：
 
 ## 來源
 
-- [股價淨值比介紹：股價淨值比河流圖怎麼用？- 懶人經濟學](../../raw/2026-05-17/股價淨值比河流圖PBR-Band.md)
-- [看懂河流圖找到甜甜價！本益比、股價淨值比河流圖 - Yahoo股市](../../raw/2026-05-17/股價淨值比河流圖PBR-Band.md)
-- [本益比河流圖是什麼？怎麼看？- Mr.Market市場先生](../../raw/2026-05-17/股價淨值比河流圖PBR-Band.md)
+- 股價淨值比介紹：股價淨值比河流圖怎麼用？- 懶人經濟學（原始來源：[1](<https://earning.tw/what-is-price-book-ratio/>)、[2](<https://tw.stock.yahoo.com/news/本益比河流圖-股價淨值比河流圖-甜甜價-合理價-134959238.html>)、[3](<https://rich01.com/price-to-earning-ratio-river/>)）
+- 看懂河流圖找到甜甜價！本益比、股價淨值比河流圖 - Yahoo股市（原始來源：[1](<https://earning.tw/what-is-price-book-ratio/>)、[2](<https://tw.stock.yahoo.com/news/本益比河流圖-股價淨值比河流圖-甜甜價-合理價-134959238.html>)、[3](<https://rich01.com/price-to-earning-ratio-river/>)）
+- 本益比河流圖是什麼？怎麼看？- Mr.Market市場先生（原始來源：[1](<https://earning.tw/what-is-price-book-ratio/>)、[2](<https://tw.stock.yahoo.com/news/本益比河流圖-股價淨值比河流圖-甜甜價-合理價-134959238.html>)、[3](<https://rich01.com/price-to-earning-ratio-river/>)）

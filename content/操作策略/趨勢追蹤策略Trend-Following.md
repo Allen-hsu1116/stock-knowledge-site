@@ -1,6 +1,10 @@
 ---
 title: "趨勢追蹤策略 Trend Following"
 category: "操作策略"
+raw_files:
+- raw/2026-05-07/海龜交易法教你順勢賺錢.md
+- raw/2026-05-07/Curtis-Faith海龜交易高手投資策略解析.md
+- raw/2026-05-07/順勢交易八大失敗原因與獲利秘訣.md
 ---
 
 # 趨勢追蹤策略 Trend Following
@@ -109,6 +113,6 @@ Curtis Faith（海龜最成功交易員）認為交易成功80%取決於心理�
 - [[交易心理紀律執行力]] - 趨勢追蹤80%靠心理素質
 
 ## 來源
-- [海龜交易法教你順勢賺錢 - CMoney](../../raw/2026-05-07/海龜交易法教你順勢賺錢.md)
-- [Curtis Faith海龜交易高手投資策略解析 - 理財周刊](../../raw/2026-05-07/Curtis-Faith海龜交易高手投資策略解析.md)
-- [順勢交易八大失敗原因與獲利秘訣 - efxselects](../../raw/2026-05-07/順勢交易八大失敗原因與獲利秘訣.md)
+- [海龜交易法教你順勢賺錢 - CMoney](<https://www.cmoney.tw/notes/note-detail.aspx?nid=935540>)
+- [Curtis Faith海龜交易高手投資策略解析 - 理財周刊](<https://www.moneyweekly.com.tw/ArticleData/Info/%E7%90%86%E8%B2%A1%E5%91%A8%E5%88%8A/198777>)
+- [順勢交易八大失敗原因與獲利秘訣 - efxselects](<https://efxselects.com/master-trend-trading-success-strategies/>)

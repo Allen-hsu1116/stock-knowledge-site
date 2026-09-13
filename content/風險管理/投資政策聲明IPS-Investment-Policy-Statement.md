@@ -2,6 +2,8 @@
 category: "風險管理"
 title: 投資政策聲明 IPS Investment Policy Statement
 date: 2026-06-12
+raw_files:
+- raw/2026-06-12/投資政策聲明IPS-Investment-Policy-Statement.md
 ---
 
 # 投資政策聲明 IPS Investment Policy Statement
@@ -112,4 +114,4 @@ date: 2026-06-12
 
 ## 來源
 
-- [What is an Investment Policy Statement, and What Smart Investors Include in It](../../raw/2026-06-12/投資政策聲明IPS-Investment-Policy-Statement.md)
+- [What is an Investment Policy Statement, and What Smart Investors Include in It](<https://www.assetvantage.com/blogs/investment-policy-statement/>)

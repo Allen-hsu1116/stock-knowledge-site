@@ -1,6 +1,9 @@
 ---
 title: "定期定額DCA策略"
 category: "操作策略"
+raw_files:
+- raw/2026-05-21/定期定額vs定期定股差異與優缺點比較.md
+- raw/2026-05-21/美股定期定額投資方式與手續費比較.md
 ---
 
 # 定期定額DCA策略
@@ -68,5 +71,5 @@ DCA 的核心哲學是**不預測市場、不擇時**，用紀律取代判斷。
 
 ## 來源
 
-- [定期定額 vs 定期定股 差異與優缺點比較](../../raw/2026-05-21/定期定額vs定期定股差異與優缺點比較.md)
-- [美股定期定額投資方式與手續費比較](../../raw/2026-05-21/美股定期定額投資方式與手續費比較.md)
+- [定期定額 vs 定期定股 差異與優缺點比較](<https://rich01.com/dollar-cost-averaging-vs-constant-share-purchase/>)
+- [美股定期定額投資方式與手續費比較](<https://rich01.com/us-stock-dollar-cost-averaging/>)

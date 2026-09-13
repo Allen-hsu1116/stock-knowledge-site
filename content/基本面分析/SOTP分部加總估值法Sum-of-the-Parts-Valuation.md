@@ -1,6 +1,10 @@
 ---
 title: "SOTP分部加總估值法Sum-of-the-Parts-Valuation"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-12/PG財經筆記-SOTP跨產業集團估值.md
+- raw/2026-05-12/WallStreetPrep-SOTP估值法教學.md
+- raw/2026-05-12/Winvesta-SOTP集團折價與拆分案例.md
 ---
 
 # SOTP分部加總估值法Sum-of-the-Parts-Valuation
@@ -95,9 +99,9 @@ Implied Equity Value = Total TEV - 淨負債 - 企業總部成本 - 少數股權
 |------|------|------|
 | **GE 三方拆分** | 2021-2024 | 拆分後三家公司合計市值為拆分前的 **4 倍** |
 | **eBay 分拆 PayPal** | 2014 | Carl Icahn 推動，PayPal 上市後市值超過 eBay |
-| **J&J 分拆 Kenvue** | 2023 | 約 $41B 估值，J&J 減少 1.91 億股並獲 $13.2B 現金 |
-| **Kellogg 拆分** | 2023 | Kellanova 被 Mars 以 $30B 收購，WK Kellogg 被 Ferrero 以 $3.1B 收購，合計 $33.1B |
-| **Motorola 拆分** | 2007-2011 | Mobility 被 Google 以 $12.5B 收購（溢價 63%） |
+| **J&J 分拆 Kenvue** | 2023 | 約 \$41B 估值，J&J 減少 1.91 億股並獲 \$13.2B 現金 |
+| **Kellogg 拆分** | 2023 | Kellanova 被 Mars 以 \$30B 收購，WK Kellogg 被 Ferrero 以 \$3.1B 收購，合計 \$33.1B |
+| **Motorola 拆分** | 2007-2011 | Mobility 被 Google 以 \$12.5B 收購（溢價 63%） |
 
 ### 台灣實務特點
 
@@ -161,6 +165,6 @@ Implied Equity Value = Total TEV - 淨負債 - 企業總部成本 - 少數股權
 
 ## 來源
 
-- [如何評估跨產業集團的股價？為何要拆分子公司上市？](../../raw/2026-05-12/PG財經筆記-SOTP跨產業集團估值.md)
-- [Sum of the Parts (SOTP) - Wall Street Prep](../../raw/2026-05-12/WallStreetPrep-SOTP估值法教學.md)
-- [Sum-of-parts valuation: How to break down conglomerates for value](../../raw/2026-05-12/Winvesta-SOTP集團折價與拆分案例.md)
+- [如何評估跨產業集團的股價？為何要拆分子公司上市？](<https://pgfinnote.substack.com/p/802>)
+- [Sum of the Parts (SOTP) - Wall Street Prep](<https://www.wallstreetprep.com/knowledge/sum-of-the-parts-sotp/>)
+- [Sum-of-parts valuation: How to break down conglomerates for value](<https://www.winvesta.in/blog/investors/sum-of-parts-valuation-breaking-down-conglomerates>)

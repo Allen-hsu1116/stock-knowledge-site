@@ -1,6 +1,9 @@
 ---
 title: "Chaikin Money Flow 佳慶資金流量指標"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/CMF蔡金資金流量指標-XQ.md
+- raw/2026-05-18/資金流向指標全攻略-MFI-OBV-CMF.md
 ---
 
 # Chaikin Money Flow 佳慶資金流量指標
@@ -93,5 +96,5 @@ CMF 可以結合趨勢線及支撐壓力線突破進行分析，在突破關鍵�
 - [佳慶資金流量指標 - MBA智库百科](https://wiki.mbalib.com/zh-tw/%E4%BD%B3%E5%BA%86%E8%B5%84%E9%87%91%E6%B5%81%E9%87%8F%E6%8C%87%E6%A8%99)
 - [柴京資金流量指標 Chaikin Money Flow - iT邦幫忙](https://ithelp.ithome.com.tw/articles/10208438)
 - [蔡金資金流量 (CMF) — TradingView](https://tw.tradingview.com/support/solutions/43000501974/)
-- [CMF蔡金資金流量指標 - XQ官方部落格](../../raw/2026-05-18/CMF蔡金資金流量指標-XQ.md)
-- [資金流向指標全攻略：MFI、OBV、CMF - 鏈股調查局](../../raw/2026-05-18/資金流向指標全攻略-MFI-OBV-CMF.md)
+- [CMF蔡金資金流量指標 - XQ官方部落格](<https://www.xq.com.tw/xstrader/chaikin-money-flow-cmf%EF%BC%8C%E8%94%A1%E9%87%91%E8%B3%87%E9%87%91%E6%B5%81%E9%87%8F%E6%8C%87%E6%A8%99/>)
+- [資金流向指標全攻略：MFI、OBV、CMF - 鏈股調查局](<https://chainstockalchemy.com/money-flow-indicators-guide-2025/>)

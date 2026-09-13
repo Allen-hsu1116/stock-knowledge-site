@@ -1,6 +1,8 @@
 ---
 category: "技術分析"
 title: 擴散型態與菱形型態Broadening-and-Diamond
+raw_files:
+- raw/2026-05-17/擴散型態與菱形型態實戰判讀.md
 ---
 
 # 擴散型態與菱形型態Broadening-and-Diamond
@@ -81,5 +83,5 @@ title: 擴散型態與菱形型態Broadening-and-Diamond
 
 ## 來源
 
-- [K線型態：喇叭形賣出 - 方格子 3droid](../../raw/2026-05-17/擴散型態與菱形型態實戰判讀.md)
-- [Diamond Pattern Features & Trading Strategies - Titan FX](../../raw/2026-05-17/擴散型態與菱形型態實戰判讀.md)
+- K線型態：喇叭形賣出 - 方格子 3droid（原始來源：[1](<https://vocus.cc/article/67a58400fd89780001deb522>)、[2](<https://research.titanfx.com/technical-analysis/candlestick-chart/diamond-top-bottom>)）
+- Diamond Pattern Features & Trading Strategies - Titan FX（原始來源：[1](<https://vocus.cc/article/67a58400fd89780001deb522>)、[2](<https://research.titanfx.com/technical-analysis/candlestick-chart/diamond-top-bottom>)）

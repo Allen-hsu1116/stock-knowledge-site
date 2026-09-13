@@ -1,6 +1,15 @@
 ---
 title: "一目均衡表Ichimoku Kinko Hyo"
 category: "技術分析"
+raw_files:
+- raw/2026-05-03/一目均衡表Ichimoku-Cloud-OANDA.md
+- raw/2026-05-03/一目均衡表Ichimoku-MBA百科.md
+- raw/2026-05-04/一目均衡表進階判讀.md
+- raw/2026-05-16/OANDA一目均衡表交易方法.md
+- raw/2026-05-16/TEJ一目均衡表策略回測.md
+- raw/2026-05-16/市場先生一目均衡表三役好轉逆轉.md
+- raw/2026-05-18/一目均衡表5大組件與3大交易策略-FMStudio.md
+- raw/2026-05-18/一目均衡表三役好轉逆轉與Kumo-Twist進階實戰.md
 ---
 
 # 一目均衡表Ichimoku Kinko Hyo
@@ -301,11 +310,11 @@ TEJ TQuant Lab 對一目均衡表三役好轉策略進行了5年回測（2019-04
 - [[一目均衡表進階判讀時間論波動論值幅觀測論]] - 三大隱藏理論的深入實戰應用
 
 ## 來源
-- [使用一目均衡表的交易方法 - OANDA Lab](../../raw/2026-05-03/一目均衡表Ichimoku-Cloud-OANDA.md)
-- [一目均衡表 - MBA智库百科](../../raw/2026-05-03/一目均衡表Ichimoku-MBA百科.md)
-- [一目均衡表进阶判读 - OANDA/MBA百科](../../raw/2026-05-04/一目均衡表進階判讀.md)
-- [OANDA一目均衡表交易方法](../../raw/2026-05-16/OANDA一目均衡表交易方法.md)
-- [TEJ一目均衡表策略回測](../../raw/2026-05-16/TEJ一目均衡表策略回測.md)
-- [市場先生一目均衡表三役好轉逆轉](../../raw/2026-05-16/市場先生一目均衡表三役好轉逆轉.md)
-- [一目均衡表5大組件與3大交易策略-FMStudio](../../raw/2026-05-18/一目均衡表5大組件與3大交易策略-FMStudio.md)
-- [一目均衡表三役好轉逆轉與Kumo Twist進階實戰](../../raw/2026-05-18/一目均衡表三役好轉逆轉與Kumo-Twist進階實戰.md)
+- [使用一目均衡表的交易方法 - OANDA Lab](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/ichimoku/>)
+- [一目均衡表 - MBA智库百科](<https://wiki.mbalib.com/zh-tw/%E4%B8%80%E7%9B%AE%E5%9D%87%E8%A1%A1%E8%A1%A8>)
+- 一目均衡表进阶判读 - OANDA/MBA百科（原始來源：[1](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/ichimoku-2/>)、[2](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/ichimoku/>)、[3](<https://wiki.mbalib.com/zh-tw/一目均衡表>)）
+- [OANDA一目均衡表交易方法](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/ichimoku/>)
+- [TEJ一目均衡表策略回測](<https://www.tejwin.com/insight/%E4%B8%80%E7%9B%AE%E5%9D%87%E8%A1%A1%E8%A1%A8%E7%AD%96%E7%95%A5/>)
+- [市場先生一目均衡表三役好轉逆轉](<https://rich01.com/oanda-index-chimoku-3/>)
+- [一目均衡表5大組件與3大交易策略-FMStudio](<https://fmstudio.blog/what-is-ichimoku-cloud-2025/>)
+- 一目均衡表三役好轉逆轉與Kumo Twist進階實戰（原始來源：[1](<https://fmstudio.blog/what-is-ichimoku-cloud-2025/>)、[2](<https://rich01.com/oanda-index-chimoku-3/>)）

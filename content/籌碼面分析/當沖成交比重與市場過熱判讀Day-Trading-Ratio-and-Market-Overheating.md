@@ -1,6 +1,8 @@
 ---
 title: "當沖成交比重與市場過熱判讀Day-Trading-Ratio-and-Market-Overheating"
 category: "籌碼面分析"
+raw_files:
+- raw/2026-05-13/當沖成交比重與市場過熱.md
 ---
 
 # 當沖成交比重與市場過熱判讀Day-Trading-Ratio-and-Market-Overheating
@@ -117,7 +119,7 @@ XQ的短線過熱選股條件：
 
 ## 來源
 
-- [RTI中央廣播電台：散戶當沖占比勝過法人](../../raw/2026-05-13/當沖成交比重與市場過熱.md)
-- [XQ全球贏家：短線過熱的指標](../../raw/2026-05-13/當沖成交比重與市場過熱.md)
-- [方格子羊羽：股市情緒指標](../../raw/2026-05-13/當沖成交比重與市場過熱.md)
-- [量化通：散戶指標](../../raw/2026-05-13/當沖成交比重與市場過熱.md)
+- RTI中央廣播電台：散戶當沖占比勝過法人（原始來源：[1](<https://www.rti.org.tw/news?uid=3&pid=207149>)、[2](<https://www.xq.com.tw/lesson/indicator/短線過熱的指標/>)、[3](<https://vocus.cc/article/6596bc2efd897800013bf322>)、[4](<https://quantpass.org/retail-investor-index/>)）
+- XQ全球贏家：短線過熱的指標（原始來源：[1](<https://www.rti.org.tw/news?uid=3&pid=207149>)、[2](<https://www.xq.com.tw/lesson/indicator/短線過熱的指標/>)、[3](<https://vocus.cc/article/6596bc2efd897800013bf322>)、[4](<https://quantpass.org/retail-investor-index/>)）
+- 方格子羊羽：股市情緒指標（原始來源：[1](<https://www.rti.org.tw/news?uid=3&pid=207149>)、[2](<https://www.xq.com.tw/lesson/indicator/短線過熱的指標/>)、[3](<https://vocus.cc/article/6596bc2efd897800013bf322>)、[4](<https://quantpass.org/retail-investor-index/>)）
+- 量化通：散戶指標（原始來源：[1](<https://www.rti.org.tw/news?uid=3&pid=207149>)、[2](<https://www.xq.com.tw/lesson/indicator/短線過熱的指標/>)、[3](<https://vocus.cc/article/6596bc2efd897800013bf322>)、[4](<https://quantpass.org/retail-investor-index/>)）

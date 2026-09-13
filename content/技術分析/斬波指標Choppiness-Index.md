@@ -3,6 +3,10 @@ title: 斬波指標 Choppiness Index (CHOP)
 date: 2026-05-18
 categories: [技術分析]
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/斬波指標Choppiness-Index-XQ.md
+- raw/2026-05-18/Choppiness-Index-TradingSim.md
+- raw/2026-05-18/Choppiness-Index-TradingView.md
 ---
 
 # 斬波指標 Choppiness Index (CHOP)
@@ -124,6 +128,6 @@ Plot3(38.2, "趨勢界線");
 
 ## 來源
 
-- [斬波指標 Choppiness Index (CHOP) - XQ](../../raw/2026-05-18/斬波指標Choppiness-Index-XQ.md)
-- [Choppiness Index Indicator: Trading Guide - TradingSim](../../raw/2026-05-18/Choppiness-Index-TradingSim.md)
-- [Choppiness Index (CHOP) - TradingView](../../raw/2026-05-18/Choppiness-Index-TradingView.md)
+- [斬波指標 Choppiness Index (CHOP) - XQ](<https://www.xq.com.tw/xstrader/%E6%96%AC%E6%B3%A2%E6%8C%87%E6%A8%99choppiness-index-chop/>)
+- [Choppiness Index Indicator: Trading Guide - TradingSim](<https://www.tradingsim.com/blog/choppiness-index-indicator>)
+- [Choppiness Index (CHOP) - TradingView](<https://www.tradingview.com/support/solutions/43000501980-choppiness-index-chop/>)

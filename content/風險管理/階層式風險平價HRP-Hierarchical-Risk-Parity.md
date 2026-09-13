@@ -1,6 +1,9 @@
 ---
 title: "階層式風險平價 HRP（Hierarchical Risk Parity）"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/階層式風險平價HRP-Hayden.md
+- raw/2026-05-15/風險平價策略與全天候基金-狂徒.md
 ---
 
 # 階層式風險平價 HRP（Hierarchical Risk Parity）
@@ -159,5 +162,5 @@ Lopez de Prado 原論文的模擬結果顯示：
 
 ## 來源
 
-- [第五代資產配置理論：階層式風險平價 - Hayden海頓君](../../raw/2026-05-15/階層式風險平價HRP-Hayden.md)
-- [Risk Parity 策略和全天候基金 - 狂徒](../../raw/2026-05-15/風險平價策略與全天候基金-狂徒.md)
+- [第五代資產配置理論：階層式風險平價 - Hayden海頓君](<https://medium.com/data-driven-investment/%E8%B3%87%E7%94%A2%E9%85%8D%E7%BD%AE-%E7%AC%AC%E4%BA%94%E4%BB%A3%E8%B3%87%E7%94%A2%E9%85%8D%E7%BD%AE%E7%90%86%E8%AB%96-%E9%9A%8E%E5%B1%A4%E5%BC%8F%E9%A2%A8%E9%9A%AA%E5%B9%B3%E5%83%B9-ed606276b652>)
+- [Risk Parity 策略和全天候基金 - 狂徒](<https://vocus.cc/article/6133983cfd897800010defd5>)

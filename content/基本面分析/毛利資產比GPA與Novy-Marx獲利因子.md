@@ -2,6 +2,8 @@
 category: "基本面分析"
 title: "毛利資產比 GPA 與 Novy-Marx 獲利因子"
 date: 2026-06-16
+raw_files:
+- raw/2026-06-16/Gross-Profit-to-Total-Assets-UQS.md
 ---
 
 # 毛利資產比 GPA 與 Novy-Marx 獲利因子
@@ -73,4 +75,4 @@ GPA 可以拆成兩個概念：
 
 ## 來源
 
-- [Gross Profit to Total Assets : Definition, Formula & How UQS Uses It](../../raw/2026-06-16/Gross-Profit-to-Total-Assets-UQS.md)
+- [Gross Profit to Total Assets : Definition, Formula & How UQS Uses It](<https://uqs-score.com/learn/gross-profit-to-assets>)

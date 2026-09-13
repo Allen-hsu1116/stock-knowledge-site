@@ -1,6 +1,10 @@
 ---
 title: "交易日誌與交易檢討Trading-Journal"
 category: "操作策略"
+raw_files:
+- raw/2026-05-14/交易日誌四步驟教學.md
+- raw/2026-05-14/交易日誌提升獲利筆記技巧.md
+- raw/2026-05-14/交易日記寫法與範例.md
 ---
 
 # 交易日誌與交易檢討Trading-Journal
@@ -159,6 +163,6 @@ category: "操作策略"
 
 ## 來源
 
-- [史上最完整交易日誌教學，只要簡單4步驟](../../raw/2026-05-14/交易日誌四步驟教學.md)
-- [交易日誌怎麼寫？提高獲利的筆記技巧大公開](../../raw/2026-05-14/交易日誌提升獲利筆記技巧.md)
-- [交易日記怎麼寫？要寫哪些內容？（附交易日誌範例 excel）](../../raw/2026-05-14/交易日記寫法與範例.md)
+- [史上最完整交易日誌教學，只要簡單4步驟](<https://vocus.cc/article/60d86371fd89780001dd30d8>)
+- [交易日誌怎麼寫？提高獲利的筆記技巧大公開](<https://investlifestyle.com/how-to-write-transaction-log/>)
+- [交易日記怎麼寫？要寫哪些內容？（附交易日誌範例 excel）](<https://7evenguy.com/how-to-write-transaction-record/>)

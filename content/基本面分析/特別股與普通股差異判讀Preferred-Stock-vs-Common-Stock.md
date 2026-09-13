@@ -1,6 +1,8 @@
 ---
 title: "特別股與普通股差異判讀 Preferred Stock vs Common Stock"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/特別股是什麼StockFeel.md
 ---
 
 # 特別股與普通股差異判讀 Preferred Stock vs Common Stock
@@ -99,4 +101,4 @@ category: "基本面分析"
 - [[可轉債操作策略]]
 
 ## 來源
-- [特別股是什麼？特別股股利？缺點？一文搞懂特別股！](../../raw/2026-05-19/特別股是什麼StockFeel.md)
+- [特別股是什麼？特別股股利？缺點？一文搞懂特別股！](<https://www.stockfeel.com.tw/%e7%89%b9%e5%88%a5%e8%82%a1-%e7%94%b2%e7%a8%ae%e7%89%b9%e5%88%a5%e8%82%a1-%e4%b9%99%e7%a8%ae%e7%89%b9%e5%88%a5%e8%82%a1-%e4%b8%ad%e9%8b%bc%e7%89%b9/>)

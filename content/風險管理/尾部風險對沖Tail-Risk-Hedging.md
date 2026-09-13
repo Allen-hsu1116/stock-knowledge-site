@@ -1,6 +1,8 @@
 ---
 title: "尾部風險對沖 Tail Risk Hedging"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/尾部風險對沖Tail-Risk-Hedging.md
 ---
 
 # 尾部風險對沖 Tail Risk Hedging
@@ -96,4 +98,4 @@ category: "風險管理"
 
 ## 來源
 
-- [Tail Risk Hedging: Strategies for Extreme Market Protection](../../raw/2026-05-01/尾部風險對沖Tail-Risk-Hedging.md)
+- [Tail Risk Hedging: Strategies for Extreme Market Protection](<https://docs.familiarize.com/glossary/tail-risk-hedging/>)

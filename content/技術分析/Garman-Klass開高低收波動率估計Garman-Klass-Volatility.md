@@ -4,6 +4,8 @@ category: "技術分析"
 date: 2026-08-31
 source_date: 2026-08-31
 status: raw_linked
+raw_files:
+- raw/2026-08-31/Parkinson與Garman-Klass區間波動率來源學習紀錄.md
 ---
 
 # Garman-Klass開高低收波動率估計
@@ -70,6 +72,6 @@ $$
 
 ## 來源
 
-- [Parkinson與Garman-Klass區間波動率來源學習紀錄](../../raw/2026-08-31/Parkinson與Garman-Klass區間波動率來源學習紀錄.md)
+- Parkinson與Garman-Klass區間波動率來源學習紀錄（本機留存素材，未公開全文；原始網址待核對）
 - [Garman與Klass（1980）：On the Estimation of Security Price Volatilities from Historical Data](https://doi.org/10.1086/296072)
 - [CRAN TTR volatility文件](https://search.r-project.org/CRAN/refmans/TTR/html/volatility.html)

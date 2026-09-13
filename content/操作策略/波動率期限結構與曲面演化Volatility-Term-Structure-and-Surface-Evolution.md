@@ -2,6 +2,8 @@
 title: 波動率期限結構與曲面演化 Volatility Term Structure & Surface Evolution
 date: 2026-06-27
 category: "操作策略"
+raw_files:
+- raw/2026-06-27/Volatility-Smile-Surface-Wikipedia.md
 ---
 
 # 波動率期限結構與曲面演化 Volatility Term Structure & Surface Evolution
@@ -52,12 +54,12 @@ category: "操作策略"
 
 #### Sticky Strike（黏性履約價）
 - 標的價格變動時，特定履約價的 IV 不變
-- 例如標的從 $100 漲到 $120，$120 履約價的 IV 維持不變（雖然從 OTM 變成 ATM）
+- 例如標的從 \$100 漲到 \$120，\$120 履約價的 IV 維持不變（雖然從 OTM 變成 ATM）
 - 適用於流動性高、履約價密集的市場
 
 #### Sticky Delta / Sticky Moneyness（黏性 Delta）
 - 標的價格變動時，特定 Moneyness/Delta 的 IV 不變
-- 例如標的從 $100 漲到 $120，ATM 的 IV（現在是 $120 履約價）= 之前 $100 履約價的 ATM IV
+- 例如標的從 \$100 漲到 \$120，ATM 的 IV（現在是 \$120 履約價）= 之前 \$100 履約價的 ATM IV
 - 適用於偏斜穩定、曲面隨標的移動的市場
 
 #### 實戰判斷
@@ -156,4 +158,4 @@ Black-Scholes 假設標的報酬為常態分配（log-normal），但真實市�
 
 ## 來源
 
-- [Volatility Smile & Surface - Wikipedia](../../raw/2026-06-27/Volatility-Smile-Surface-Wikipedia.md)
+- [Volatility Smile & Surface - Wikipedia](<https://en.wikipedia.org/wiki/Volatility_smile>)

@@ -1,6 +1,8 @@
 ---
 title: "左側交易與右側交易 Left-Side vs Right-Side Trading"
 category: "操作策略"
+raw_files:
+- raw/2026-05-28/左側交易與右側交易.md
 ---
 
 # 左側交易與右側交易 Left-Side vs Right-Side Trading
@@ -137,6 +139,6 @@ category: "操作策略"
 
 ## 來源
 
-- [左側交易與右側交易](../../raw/2026-05-28/左側交易與右側交易.md)
+- 左側交易與右側交易（本機留存素材，未公開全文；原始網址待核對）
 - 《市場技術分析》John Murphy
 - Minervini 趨勢型態確認進場法

@@ -2,6 +2,10 @@
 title: "底部訊號綜合判讀Bottom-Signal-Confluence"
 category: "技術分析"
 created: 2026-05-16
+raw_files:
+- raw/2026-05-16/窒息量凹洞量底部買股訊號-今周刊.md
+- raw/2026-05-16/價量分析九種情形-CMoney.md
+- raw/2026-05-16/大盤融資餘額全解析-看懂散戶指標-FMStudio.md
 ---
 
 # 底部訊號綜合判讀Bottom-Signal-Confluence
@@ -150,6 +154,6 @@ Step 5: 分批進場，設定停損在窒息量低點下方
 
 ## 來源
 
-- [窒息量凹洞量底部買股訊號—今周刊](../../raw/2026-05-16/窒息量凹洞量底部買股訊號-今周刊.md)
-- [價量分析九種情形—CMoney](../../raw/2026-05-16/價量分析九種情形-CMoney.md)
-- [大盤融資餘額全解析—看懂散戶指標—FM Studio](../../raw/2026-05-16/大盤融資餘額全解析-看懂散戶指標-FMStudio.md)
+- [窒息量凹洞量底部買股訊號—今周刊](<https://www.businesstoday.com.tw/article/category/80401/post/201806190015/>)
+- [價量分析九種情形—CMoney](<https://www.cmoney.tw/notes/note-detail.aspx?nid=94704>)
+- [大盤融資餘額全解析—看懂散戶指標—FM Studio](<https://fmstudio.blog/market-margin-balance-analysis-2025/>)

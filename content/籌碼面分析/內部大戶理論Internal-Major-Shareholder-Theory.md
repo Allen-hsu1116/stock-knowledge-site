@@ -1,6 +1,8 @@
 ---
 title: "內部大戶理論 Internal Major Shareholder Theory"
 category: "籌碼面分析"
+raw_files:
+- raw/2026-05-13/內部大戶理論與集保股權分散判讀.md
 ---
 
 # 內部大戶理論 Internal Major Shareholder Theory
@@ -102,6 +104,6 @@ CMoney整理的6大籌碼集中度指標，可與內部大戶理論搭配使用�
 
 ## 來源
 
-- [內部大戶理論與集保股權分散判讀](../../raw/2026-05-13/內部大戶理論與集保股權分散判讀.md)
-- [籌碼集中度6大指標](../../raw/2026-05-13/內部大戶理論與集保股權分散判讀.md)
-- [集保股權分散表基礎](../../raw/2026-05-13/內部大戶理論與集保股權分散判讀.md)
+- 內部大戶理論與集保股權分散判讀（原始來源：[1](<https://www.mirrormedia.mg/story/20210108fin012>)、[2](<https://www.cmoney.tw/learn/course/k/topic/339>)、[3](<https://www.tejwin.com/insight/【tej知識集】認識集保股權分散/>)）
+- 籌碼集中度6大指標（原始來源：[1](<https://www.mirrormedia.mg/story/20210108fin012>)、[2](<https://www.cmoney.tw/learn/course/k/topic/339>)、[3](<https://www.tejwin.com/insight/【tej知識集】認識集保股權分散/>)）
+- 集保股權分散表基礎（原始來源：[1](<https://www.mirrormedia.mg/story/20210108fin012>)、[2](<https://www.cmoney.tw/learn/course/k/topic/339>)、[3](<https://www.tejwin.com/insight/【tej知識集】認識集保股權分散/>)）

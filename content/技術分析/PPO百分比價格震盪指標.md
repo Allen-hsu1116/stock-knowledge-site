@@ -2,6 +2,8 @@
 category: "技術分析"
 title: "PPO百分比價格震盪指標 Percentage Price Oscillator"
 date: 2026-06-15
+raw_files:
+- raw/2026-06-15/PPO百分比價格震盪指標-StockCharts.md
 ---
 
 # PPO百分比價格震盪指標 Percentage Price Oscillator
@@ -83,4 +85,4 @@ PPO 最大優勢是跨標的比較：
 
 ## 來源
 
-- [StockCharts ChartSchool: Percentage Price Oscillator PPO](../../raw/2026-06-15/PPO百分比價格震盪指標-StockCharts.md)
+- [StockCharts ChartSchool: Percentage Price Oscillator PPO](<https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/percentage-price-oscillator-ppo.md>)

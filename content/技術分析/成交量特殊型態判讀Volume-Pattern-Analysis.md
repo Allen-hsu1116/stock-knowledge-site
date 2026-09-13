@@ -1,6 +1,10 @@
 ---
 title: "成交量特殊型態判讀Volume-Pattern-Analysis"
 category: "技術分析"
+raw_files:
+- raw/2026-05-10/成交量特殊型態判讀-知識庫整合.md
+- raw/2026-05-16/窒息量凹洞量底部買股訊號-今周刊.md
+- raw/2026-05-16/價量分析九種情形-CMoney.md
 ---
 
 # 成交量特殊型態判讀Volume-Pattern-Analysis
@@ -263,6 +267,6 @@ category: "技術分析"
 
 ## 來源
 
-- [成交量特殊型態判讀知識庫整合](../../raw/2026-05-10/成交量特殊型態判讀-知識庫整合.md)
-- [窒息量凹洞量底部買股訊號—今周刊](../../raw/2026-05-16/窒息量凹洞量底部買股訊號-今周刊.md)
-- [價量分析九種情形—CMoney](../../raw/2026-05-16/價量分析九種情形-CMoney.md)
+- 成交量特殊型態判讀知識庫整合（本機留存素材，未公開全文；原始網址待核對）
+- [窒息量凹洞量底部買股訊號—今周刊](<https://www.businesstoday.com.tw/article/category/80401/post/201806190015/>)
+- [價量分析九種情形—CMoney](<https://www.cmoney.tw/notes/note-detail.aspx?nid=94704>)

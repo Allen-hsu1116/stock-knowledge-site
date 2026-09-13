@@ -1,6 +1,16 @@
 ---
 title: "跳空缺口 Gap Theory"
 category: "技術分析"
+raw_files:
+- raw/2026-05-02/跳空缺口OANDA.md
+- raw/2026-05-02/跳空缺口CMoney.md
+- raw/2026-05-02/跳空缺口玉山證券.md
+- raw/2026-05-03/跳空缺口四種型態-StockFeel.md
+- raw/2026-05-03/技術分析找買點跳空缺口-玉山證券.md
+- raw/2026-05-03/缺口技術型態竭盡缺口-康和期貨.md
+- raw/2026-05-10/跳空缺口四種型態與川普缺口-Yahoo財經.md
+- raw/2026-05-14/跳空缺口四大類型與實戰策略.md
+- raw/2026-05-14/台股跳空缺口交易策略與判斷.md
 ---
 
 # 跳空缺口 Gap Theory
@@ -146,12 +156,12 @@ category: "技術分析"
 - [[V型反轉V-Shaped-Reversal]]
 
 ## 來源
-- [跳空缺口是什麼？交易中如何使用？ - OANDA](../../raw/2026-05-02/跳空缺口OANDA.md)
-- [跳空缺口是什麼意思？ - CMoney](../../raw/2026-05-02/跳空缺口CMoney.md)
-- [技術分析找買點（四）跳空缺口 - 玉山證券](../../raw/2026-05-02/跳空缺口玉山證券.md)
-- [跳空缺口四種型態 - StockFeel](../../raw/2026-05-03/跳空缺口四種型態-StockFeel.md)
-- [技術分析找買點跳空缺口 - 玉山證券](../../raw/2026-05-03/技術分析找買點跳空缺口-玉山證券.md)
-- [缺口技術型態竭盡缺口 - 康和期貨](../../raw/2026-05-03/缺口技術型態竭盡缺口-康和期貨.md)
-- [跳空缺口四種型態與川普缺口 - Yahoo財經](../../raw/2026-05-10/跳空缺口四種型態與川普缺口-Yahoo財經.md)
-- [跳空缺口四大類型與實戰策略 - 米拉有料投資指南](../../raw/2026-05-14/跳空缺口四大類型與實戰策略.md)
-- [台股跳空缺口交易策略與判斷 - FX市場週報](../../raw/2026-05-14/台股跳空缺口交易策略與判斷.md)
+- [跳空缺口是什麼？交易中如何使用？ - OANDA](<https://www.oanda.com/bvi-ft/lab-education/dictionary/gap/>)
+- [跳空缺口是什麼意思？ - CMoney](<https://www.cmoney.tw/learn/course/technicals/topic/1154>)
+- [技術分析找買點（四）跳空缺口 - 玉山證券](<https://www.esunsec.com.tw/article/post/57>)
+- [跳空缺口四種型態 - StockFeel](<https://www.stockfeel.com.tw/%E8%B7%B3%E7%A9%BA%E7%BC%BA%E5%8F%A3-%E7%BC%BA%E5%8F%A3-%E5%A4%9A%E6%96%B9%E7%BC%BA%E5%8F%A3-%E7%A9%BA%E6%96%B9%E7%BC%BA%E5%8F%A3/>)
+- [技術分析找買點跳空缺口 - 玉山證券](<https://www.esunsec.com.tw/article/post/57>)
+- [缺口技術型態竭盡缺口 - 康和期貨](<https://futures.com.tw/futures-instruction/%E7%BC%BA%E5%8F%A3%E6%8A%80%E8%A1%93%E5%9E%8B%E6%85%8B%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%8D%E7%AB%AD%E7%9B%A1%E7%BC%BA%E5%8F%A3/>)
+- [跳空缺口四種型態與川普缺口 - Yahoo財經](<https://tw.stock.yahoo.com/news/%E5%9C%96%E8%A7%A3%E3%80%8C%E8%B7%B3%E7%A9%BA%E7%BC%BA%E5%8F%A3%E3%80%8D%EF%BC%81%E5%8F%B0%E8%82%A1%E6%AD%A3%E5%BC%8F%E6%94%B6%E5%BE%A9%E3%80%8C%E5%B7%9D%E6%99%AE%E7%BC%BA%E5%8F%A3%E3%80%8D%E4%B8%80%E6%96%87%E5%B8%B6%E4%BD%A0%E7%9C%8B%E6%87%82%E5%9B%9B%E7%A8%AE%E7%BC%BA%E5%8F%A3%E5%9E%8B%E6%85%8B%EF%BC%81%EF%BD%9C%E7%9C%8B%E5%9C%96%E8%AA%AA%E8%82%A1%E5%B8%82-051050501.html>)
+- [跳空缺口四大類型與實戰策略 - 米拉有料投資指南](<https://mila4real.com/what-is-trading-gap-2025/>)
+- [台股跳空缺口交易策略與判斷 - FX市場週報](<https://efxselects.com/stock-gap-analysis-trading-strategy/>)

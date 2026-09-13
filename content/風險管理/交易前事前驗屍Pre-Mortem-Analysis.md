@@ -2,6 +2,8 @@
 category: "風險管理"
 title: 交易前事前驗屍 Pre-Mortem Analysis
 date: 2026-06-12
+raw_files:
+- raw/2026-06-12/交易前事前驗屍Pre-Mortem-Analysis.md
 ---
 
 # 交易前事前驗屍 Pre-Mortem Analysis
@@ -82,4 +84,4 @@ date: 2026-06-12
 
 ## 來源
 
-- [Pre-Mortem Analysis: A Step-by-Step Guide](../../raw/2026-06-12/交易前事前驗屍Pre-Mortem-Analysis.md)
+- [Pre-Mortem Analysis: A Step-by-Step Guide](<https://www.worldlyinvest.com/p/pre-mortem-analysis-a-step-by-step>)

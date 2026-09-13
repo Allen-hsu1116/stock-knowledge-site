@@ -1,6 +1,8 @@
 ---
 category: "風險管理"
 title: 交易執行力缺口 Execution Gap
+raw_files:
+- raw/2026-05-10/交易執行力缺口分析Execution-Gap.md
 ---
 
 # 交易執行力缺口 Execution Gap
@@ -180,4 +182,4 @@ title: 交易執行力缺口 Execution Gap
 
 ## 來源
 
-- [交易執行力缺口分析（知識庫編譯）](../../raw/2026-05-10/交易執行力缺口分析Execution-Gap.md)
+- 交易執行力缺口分析（知識庫編譯）（本機留存素材，未公開全文；原始網址待核對）

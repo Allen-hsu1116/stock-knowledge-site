@@ -1,6 +1,8 @@
 ---
 title: "漩渦指標 Vortex Indicator (VI)"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/漩渦指標Vortex-Indicator.md
 ---
 
 # 漩渦指標 Vortex Indicator (VI)
@@ -81,4 +83,4 @@ category: "技術分析"
 
 ## 來源
 
-- [漩渦指標 — XQ官方部落格](../../raw/2026-05-18/漩渦指標Vortex-Indicator.md)
+- [漩渦指標 — XQ官方部落格](<https://www.xq.com.tw/xstrader/%E6%BC%A9%E6%B8%A6%E6%8C%87%E6%A8%99/>)

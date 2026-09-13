@@ -1,6 +1,9 @@
 ---
 title: "成長股與價值股投資策略Growth-vs-Value-Investing"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-16/成長股價值股投資哲學StockFeel.md
+- raw/2026-05-16/由下而上由上而下投資策略市場先生.md
 ---
 
 # 成長股與價值股投資策略Growth-vs-Value-Investing
@@ -115,5 +118,5 @@ category: "基本面分析"
 
 ## 來源
 
-- [成長股價值股投資哲學（StockFeel）](../../raw/2026-05-16/成長股價值股投資哲學StockFeel.md)
-- [由下而上由上而下投資策略（市場先生）](../../raw/2026-05-16/由下而上由上而下投資策略市場先生.md)
+- [成長股價值股投資哲學（StockFeel）](<https://www.stockfeel.com.tw/%E6%88%90%E9%95%B7%E8%82%A1-%E5%83%B9%E5%80%BC%E8%82%A1-%E5%83%B9%E5%80%BC%E6%8A%95%E8%B3%87/>)
+- [由下而上由上而下投資策略（市場先生）](<https://rich01.com/bottom-up-and-top-down/>)

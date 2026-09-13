@@ -2,6 +2,9 @@
 category: "操作策略"
 title: 交易紀錄與模擬練習方法Trading-Journal-and-Paper-Trading
 date: 2026-05-14
+raw_files:
+- raw/2026-05-14/當沖進出場3步驟.md
+- raw/2026-05-14/波段交易4策略加速資產累積.md
 ---
 
 # 交易紀錄與模擬練習方法Trading-Journal-and-Paper-Trading
@@ -139,5 +142,5 @@ date: 2026-05-14
 
 ## 來源
 
-- [當沖進出場怎麼抓？3步驟掌握進出時機與獲利關鍵 — LearningPa](../../raw/2026-05-14/當沖進出場3步驟.md)
-- [波段交易4策略 加速資產累積 — Smart自學網](../../raw/2026-05-14/波段交易4策略加速資產累積.md)
+- [當沖進出場怎麼抓？3步驟掌握進出時機與獲利關鍵 — LearningPa](<https://learningpa.cc/daytrade2/>)
+- [波段交易4策略 加速資產累積 — Smart自學網](<https://smart.businessweekly.com.tw/Reading/WebArticle.aspx?id=7011361>)

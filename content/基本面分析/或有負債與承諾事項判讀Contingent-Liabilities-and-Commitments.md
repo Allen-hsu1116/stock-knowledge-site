@@ -1,6 +1,8 @@
 ---
 title: "或有負債與承諾事項判讀 Contingent Liabilities & Commitments"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/或有負債與承諾事項判讀.md
 ---
 
 # 或有負債與承諾事項判讀 Contingent Liabilities & Commitments
@@ -79,4 +81,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [或有負債與承諾事項判讀](../../raw/2026-05-19/或有負債與承諾事項判讀.md)
+- 或有負債與承諾事項判讀（本機留存素材，未公開全文；原始網址待核對）

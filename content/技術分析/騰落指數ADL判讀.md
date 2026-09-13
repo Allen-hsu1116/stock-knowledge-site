@@ -2,6 +2,11 @@
 title: "騰落指數ADL判讀"
 category: "技術分析"
 date: 2026-05-17
+raw_files:
+- raw/2026-05-17/ADL指標幫你判斷台股盤勢-FinLab.md
+- raw/2026-05-17/騰落指標ADL如何使用-StockFeel.md
+- raw/2026-05-17/騰落指標完整教學-QuantPass.md
+- raw/2026-05-17/ADL指標3種策略-知識獲利大聯盟.md
 ---
 
 # 騰落指數ADL判讀
@@ -102,7 +107,7 @@ ADL 背離是警示訊號而非立即行動指令。當以下三個條件**同�
 
 ## 來源
 
-- [ADL指標幫你判斷台股盤勢-FinLab](../../raw/2026-05-17/ADL指標幫你判斷台股盤勢-FinLab.md)
-- [騰落指標ADL如何使用-StockFeel](../../raw/2026-05-17/騰落指標ADL如何使用-StockFeel.md)
-- [騰落指標完整教學-QuantPass](../../raw/2026-05-17/騰落指標完整教學-QuantPass.md)
-- [ADL指標3種策略-知識獲利大聯盟](../../raw/2026-05-17/ADL指標3種策略-知識獲利大聯盟.md)
+- [ADL指標幫你判斷台股盤勢-FinLab](<https://www.finlab.tw/adl-in-tw-stock/>)
+- [騰落指標ADL如何使用-StockFeel](<https://www.stockfeel.com.tw/%E9%A8%B0%E8%90%BD%E6%8C%87%E6%A8%99-adl-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8/>)
+- [騰落指標完整教學-QuantPass](<https://quantpass.org/adl/>)
+- [ADL指標3種策略-知識獲利大聯盟](<https://chan-yi.com/adl%E6%8C%87%E6%A8%99/>)

@@ -2,6 +2,8 @@
 title: 價內程度 Moneyness 實戰判讀
 date: 2026-06-27
 category: "操作策略"
+raw_files:
+- raw/2026-06-27/Moneyness-Wikipedia.md
 ---
 
 # 價內程度 Moneyness 實戰判讀
@@ -111,4 +113,4 @@ Moneyness 是波動率曲面的核心座標：
 
 ## 來源
 
-- [Moneyness - Wikipedia](../../raw/2026-06-27/Moneyness-Wikipedia.md)
+- [Moneyness - Wikipedia](<https://en.wikipedia.org/wiki/Moneyness>)

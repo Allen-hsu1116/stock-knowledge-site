@@ -1,6 +1,8 @@
 ---
 title: "反向壓力測試 Reverse Stress Testing"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/Stress-Testing-Scenario-Analysis-RyanOConnell.md
 ---
 
 # 反向壓力測試 Reverse Stress Testing
@@ -112,4 +114,4 @@ category: "風險管理"
 
 ## 來源
 
-- [Stress Testing & Scenario Analysis - Ryan OConnell, CFA](../../raw/2026-05-15/Stress-Testing-Scenario-Analysis-RyanOConnell.md)
+- [Stress Testing & Scenario Analysis - Ryan OConnell, CFA](<https://ryanoconnellfinance.com/stress-testing-scenario-analysis/>)

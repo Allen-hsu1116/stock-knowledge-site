@@ -1,6 +1,8 @@
 ---
 title: "財報綜合健康評分法 Comprehensive Financial Health Scoring"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/財報綜合健康評分法Comprehensive-Financial-Health-Scoring.md
 ---
 
 # 財報綜合健康評分法 Comprehensive Financial Health Scoring
@@ -129,4 +131,4 @@ Piotroski F-Score是9項0/1評分，專門設計用於低本益比價值股篩�
 
 ## 來源
 
-- [財報綜合健康評分法](../../raw/2026-05-19/財報綜合健康評分法Comprehensive-Financial-Health-Scoring.md)
+- 財報綜合健康評分法（本機留存素材，未公開全文；原始網址待核對）

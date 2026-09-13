@@ -2,6 +2,8 @@
 category: "操作策略"
 title: 策略性資產配置 SAA
 date: 2026-06-14
+raw_files:
+- raw/2026-06-14/策略性資產配置SAA.md
 ---
 
 # 策略性資產配置 SAA
@@ -76,4 +78,4 @@ SAA 最好寫進 [[風險管理/投資政策聲明IPS-Investment-Policy-Statemen
 
 ## 來源
 
-- [Strategic Asset Allocation (SAA)](../../raw/2026-06-14/策略性資產配置SAA.md)
+- [Strategic Asset Allocation (SAA)](<https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/strategic-asset-allocation-saa/>)

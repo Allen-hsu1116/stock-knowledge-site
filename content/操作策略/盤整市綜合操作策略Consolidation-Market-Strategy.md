@@ -2,6 +2,10 @@
 category: "操作策略"
 title: 盤整市綜合操作策略Consolidation-Market-Strategy
 date: 2026-05-10
+raw_files:
+- raw/2026-05-10/盤整剋星5大方法-WINSMART.md
+- raw/2026-05-10/盤整行情怎麼賺-今周刊.md
+- raw/2026-05-10/指數盤整交易方式調整-理財通.md
 ---
 
 # 盤整市綜合操作策略Consolidation-Market-Strategy
@@ -189,6 +193,6 @@ ADX < 25 → 無明顯趨勢 → 適合盤整策略。詳見[[ADX趨勢強度過
 
 ## 來源
 
-- [盤整剋星5大方法—WINSMART](../../raw/2026-05-10/盤整剋星5大方法-WINSMART.md)
-- [台股盤整行情怎麼賺—今周刊](../../raw/2026-05-10/盤整行情怎麼賺-今周刊.md)
-- [指數盤整交易方式調整—理財通](../../raw/2026-05-10/指數盤整交易方式調整-理財通.md)
+- [盤整剋星5大方法—WINSMART](<https://winsmart.tw/online_teaching/%E7%9B%A4%E6%95%B4/>)
+- [台股盤整行情怎麼賺—今周刊](<https://www.businesstoday.com.tw/article/category/1830088/post/202502260007/>)
+- [指數盤整交易方式調整—理財通](<https://www.my-finance.com.tw/tw/News_Detail/2250>)

@@ -5,6 +5,8 @@ source: memory
 source_date: 2026-05-18
 status: raw_filled
 raw_files:
+- raw/2026-05-18/十字線怎麼看-UpToGo.md
+- raw/2026-05-18/十字線Doji交易策略-TMGM.md
 ---
 
 # 十字線Doji判讀實戰
@@ -134,5 +136,5 @@ raw_files:
 
 ## 來源
 
-- [新手必學的K線基本功：十字線怎麼看？ - UpToGo](../../raw/2026-05-18/十字線怎麼看-UpToGo.md)
-- [十字星蠟燭圖形態：不同類型及其在交易策略中的運用 - TMGM](../../raw/2026-05-18/十字線Doji交易策略-TMGM.md)
+- [新手必學的K線基本功：十字線怎麼看？ - UpToGo](<https://uptogo.com.tw/%E8%B2%A1%E7%B6%93/%E8%82%A1%E7%A5%A8/%E5%8D%81%E5%AD%97%E7%B7%9A%E6%80%8E%E9%BA%BC%E7%9C%8B%EF%BC%9F/>)
+- [十字星蠟燭圖形態：不同類型及其在交易策略中的運用 - TMGM](<https://www.tmgm.com/zh-hant/academy/trading-academy/doji-candle-stick-pattern>)

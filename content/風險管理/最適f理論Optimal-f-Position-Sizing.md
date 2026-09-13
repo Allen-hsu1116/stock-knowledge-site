@@ -1,6 +1,8 @@
 ---
 title: "最適f理論Optimal-f-Position-Sizing"
 category: "風險管理"
+raw_files:
+- raw/2026-05-09/Kelly-Criterion-Wikipedia.md
 ---
 
 # 最適f理論Optimal-f-Position-Sizing
@@ -130,6 +132,6 @@ Vince 建議使用 Optimal f 的一個分數，而非完整比例：
 
 ## 來源
 
-- [Kelly Criterion - Wikipedia](../../raw/2026-05-09/Kelly-Criterion-Wikipedia.md)
+- [Kelly Criterion - Wikipedia](<https://en.wikipedia.org/wiki/Kelly_criterion>)
 - Ralph Vince, "Portfolio Management Formulas" (1990)
 - Ralph Vince, "The Mathematics of Money Management" (1992)

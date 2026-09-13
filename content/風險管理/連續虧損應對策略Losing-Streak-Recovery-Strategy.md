@@ -1,6 +1,8 @@
 ---
 title: "連續虧損應對策略Losing-Streak-Recovery-Strategy"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/連續虧損應對與心態復原.md
 ---
 
 # 連續虧損應對策略Losing-Streak-Recovery-Strategy
@@ -73,5 +75,5 @@ category: "風險管理"
 
 ## 來源
 
-- [連續虧損應對與心態復原](../../raw/2026-05-15/連續虧損應對與心態復原.md)
+- [連續虧損應對與心態復原](<https://www.fx110.com.tw/special/4623>)
 - [[報復性交易防禦體系Revenge-Trading-Defense]]（既有）

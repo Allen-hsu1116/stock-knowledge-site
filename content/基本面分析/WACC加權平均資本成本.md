@@ -1,6 +1,8 @@
 ---
 title: "WACC加權平均資本成本"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/WACC加權平均資本成本.md
 ---
 
 # WACC加權平均資本成本
@@ -131,4 +133,4 @@ WACC 本身不是投資訊號，要搭配 ROIC（投入資本報酬率）：
 
 ## 來源
 
-- [加權平均資本成本 - MBA智库百科](../../raw/2026-05-05/WACC加權平均資本成本.md)
+- [加權平均資本成本 - MBA智库百科](<https://wiki.mbalib.com/zh-tw/WACC>)

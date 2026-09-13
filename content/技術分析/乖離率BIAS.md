@@ -1,6 +1,13 @@
 ---
 title: "乖離率 BIAS"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/乖離率教學BIAS指標-FMStudio.md
+- raw/2026-05-18/乖離率是什麼市場先生.md
+- raw/2026-05-18/乖離率技術分析StockFeel.md
+- raw/2026-05-02/均線乖離率BIAS完整教學-量化通.md
+- raw/2026-05-02/乖離率看圖說股市-Yahoo.md
+- raw/2026-05-17/乖離率BIAS完整解析LearningPa.md
 ---
 
 # 乖離率 BIAS
@@ -138,9 +145,9 @@ FM Studio、市場先生與 StockFeel 都強調：乖離率沒有全市場通用
 
 ## 來源
 
-- [乖離率教學｜BIAS指標怎麼看？一篇搞懂參數設定、買賣訊號與實戰應用 - 理財研究室 FM Studio](../../raw/2026-05-18/乖離率教學BIAS指標-FMStudio.md)
-- [乖離率是什麼？代表意義/計算與查詢方式/運用注意事項介紹 - Mr.Market市場先生](../../raw/2026-05-18/乖離率是什麼市場先生.md)
-- [乖離率怎麼計算？BIAS 技術指標完整教學 - StockFeel 股感](../../raw/2026-05-18/乖離率技術分析StockFeel.md)
-- [均線乖離率BIAS完整教學 - 量化通 QuantPass](../../raw/2026-05-02/均線乖離率BIAS完整教學-量化通.md)
-- [乖離過大的股票不要追 - Yahoo奇摩股市](../../raw/2026-05-02/乖離率看圖說股市-Yahoo.md)
-- [乖離率（BIAS）完整解析 - 學吧 LearningPa](../../raw/2026-05-17/乖離率BIAS完整解析LearningPa.md)
+- [乖離率教學｜BIAS指標怎麼看？一篇搞懂參數設定、買賣訊號與實戰應用 - 理財研究室 FM Studio](<https://fmstudio.blog/bias-ratio-guide-2025/>)
+- [乖離率是什麼？代表意義/計算與查詢方式/運用注意事項介紹 - Mr.Market市場先生](<https://rich01.com/what-is-bias-ratio/>)
+- [乖離率怎麼計算？BIAS 技術指標完整教學 - StockFeel 股感](<https://www.stockfeel.com.tw/%E4%B9%96%E9%9B%A2%E7%8E%87-%E6%8A%80%E8%A1%93%E5%88%86%E6%9E%90-%E5%9D%87%E7%B7%9A/>)
+- [均線乖離率BIAS完整教學 - 量化通 QuantPass](<https://quantpass.org/bias-2/>)
+- [乖離過大的股票不要追 - Yahoo奇摩股市](<https://tw.stock.yahoo.com/news/技術分析-乖離率-bias-正乖離-負乖離-125719746.html>)
+- [乖離率（BIAS）完整解析 - 學吧 LearningPa](<https://learningpa.cc/tech11/>)

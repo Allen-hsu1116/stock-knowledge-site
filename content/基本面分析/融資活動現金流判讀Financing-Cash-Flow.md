@@ -1,6 +1,9 @@
 ---
 title: "融資活動現金流判讀 Financing Cash Flow Analysis"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/看懂現金流量表三大現金流與財務比率StockFeel.md
+- raw/2026-05-19/投資活動現金流量與資本支出判讀市場先生.md
 ---
 
 # 融資活動現金流判讀 Financing Cash Flow Analysis
@@ -119,6 +122,6 @@ category: "基本面分析"
 
 ## 來源
 
-- [看懂現金流量表三大現金流與財務比率](../../raw/2026-05-19/看懂現金流量表三大現金流與財務比率StockFeel.md)
-- [投資活動現金流量與資本支出判讀市場先生](../../raw/2026-05-19/投資活動現金流量與資本支出判讀市場先生.md)
+- [看懂現金流量表三大現金流與財務比率](<https://www.stockfeel.com.tw/三大報表-財報分析-現金流量/>)
+- [投資活動現金流量與資本支出判讀市場先生](<https://rich01.com/what-is-cash-flows-from-investing/>)
 - IFRS準則與台灣財報實務

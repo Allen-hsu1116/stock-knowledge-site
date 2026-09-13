@@ -1,6 +1,11 @@
 ---
 title: "背離 Divergence 進階實戰"
 category: "技術分析"
+raw_files:
+- raw/2026-05-02/指標背離完整教學-量化通.md
+- raw/2026-05-02/牛市背離與熊市背離-瑪門財策.md
+- raw/2026-05-02/一般背離與隱藏背離-JYForex.md
+- raw/2026-05-11/指標背離完整教學-QuantPass.md
 ---
 
 # 背離 Divergence 進階實戰
@@ -146,7 +151,7 @@ category: "技術分析"
 
 ## 來源
 
-- [指標背離完整教學 - 量化通 QuantPass](../../raw/2026-05-02/指標背離完整教學-量化通.md)
-- [牛市背離是什麼 - 瑪門財策](../../raw/2026-05-02/牛市背離與熊市背離-瑪門財策.md)
-- [背離是什麼？一般背離與隱藏背離 - JYForex](../../raw/2026-05-02/一般背離與隱藏背離-JYForex.md)
-- [指標背離完整教學（更新）- 量化通 QuantPass](../../raw/2026-05-11/指標背離完整教學-QuantPass.md)
+- [指標背離完整教學 - 量化通 QuantPass](<https://quantpass.org/divergence/>)
+- [牛市背離是什麼 - 瑪門財策](<https://mammonacad.com/bullish-divergence-guide/>)
+- [背離是什麼？一般背離與隱藏背離 - JYForex](<https://jyforex.com/what-is-divergence/>)
+- [指標背離完整教學（更新）- 量化通 QuantPass](<https://quantpass.org/divergence/>)

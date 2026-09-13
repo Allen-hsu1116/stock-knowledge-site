@@ -1,6 +1,9 @@
 ---
 title: "台灣持續性動能策略 Momentum Persistency"
 category: "操作策略"
+raw_files:
+- raw/2026-05-07/動能效應為何在台灣股市失效持續性動能策略.md
+- raw/2026-05-14/動能效應為何在台灣股市失效-持續性動能策略-政大商業評論.md
 ---
 
 # 台灣持續性動能策略 Momentum Persistency
@@ -72,6 +75,6 @@ Watkins (2003, 2006) 的研究指出：股票表現是否**持續穩定**才是�
 
 ## 來源
 
-- [動能效應為何在台灣股市失效？揭示投資策略新方向 - 政大商業評論](../../raw/2026-05-07/動能效應為何在台灣股市失效持續性動能策略.md)
-- [動能效應為何在台灣股市失效 - 政大商業評論（完整原文）](../../raw/2026-05-14/動能效應為何在台灣股市失效-持續性動能策略-政大商業評論.md)
+- [動能效應為何在台灣股市失效？揭示投資策略新方向 - 政大商業評論](<https://nccubr.nccu.edu.tw/articles/30>)
+- [動能效應為何在台灣股市失效 - 政大商業評論（完整原文）](<https://nccubr.nccu.edu.tw/articles/30>)
 - Chen, H. Y., Hsieh, C. H., & Lee, C. F. (2023). Revisiting the momentum effect in Taiwan: The role of persistency. Pacific-Basin Finance Journal, 78.

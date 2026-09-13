@@ -1,6 +1,8 @@
 ---
 title: "TTM-Squeeze壓縮指標實戰判讀"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/TTM-Squeeze壓縮指標實戰判讀.md
 ---
 
 # TTM-Squeeze壓縮指標實戰判讀
@@ -88,5 +90,5 @@ TradingView上通常以紅/橙/黃色圓點區分多層壓縮。
 
 ## 來源
 
-- [TTM Squeeze壓縮指標實戰判讀](../../raw/2026-05-18/TTM-Squeeze壓縮指標實戰判讀.md)
+- TTM Squeeze壓縮指標實戰判讀（本機留存素材，未公開全文；原始網址待核對）
 - John Carter, *Mastering the Trade* (3rd Edition)

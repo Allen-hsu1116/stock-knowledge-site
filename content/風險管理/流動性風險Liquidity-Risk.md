@@ -1,6 +1,11 @@
 ---
 title: "流動性風險 Liquidity Risk"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/流動性風險市場先生.md
+- raw/2026-05-01/流動性風險散戶反向利用.md
+- raw/2026-05-01/流動性風險CMoney.md
+- raw/2026-05-01/流動性風險Liquidity-Risk.md
 ---
 
 # 流動性風險 Liquidity Risk
@@ -135,7 +140,7 @@ Grossman-Stiglitz悖論：如果市場完全理性有效率，研究股票將無
 
 ## 來源
 
-- [流動性風險是什麼？流動性高低對投資有什麼影響？ - Mr.Market市場先生](../../raw/2026-05-01/流動性風險市場先生.md)
-- [交易越頻繁越窮？散戶反向利用「流動性風險」創造長期投資的超額報酬 - 迷途的羊羹](../../raw/2026-05-01/流動性風險散戶反向利用.md)
-- [什麼是流動性風險？投資新手需要了解的基本概念 - CMoney財經百科](../../raw/2026-05-01/流動性風險CMoney.md)
-- [流動性風險是什麼？流動性高低對投資有什麼影響？ - Mr.Market市場先生（更新版）](../../raw/2026-05-01/流動性風險Liquidity-Risk.md)
+- [流動性風險是什麼？流動性高低對投資有什麼影響？ - Mr.Market市場先生](<https://rich01.com/liquidity-risk/>)
+- [交易越頻繁越窮？散戶反向利用「流動性風險」創造長期投資的超額報酬 - 迷途的羊羹](<https://vocus.cc/article/6951f345fd89780001b56d56>)
+- [什麼是流動性風險？投資新手需要了解的基本概念 - CMoney財經百科](<https://wiki.cmoney.tw/finance/article/liquidity-risk>)
+- [流動性風險是什麼？流動性高低對投資有什麼影響？ - Mr.Market市場先生（更新版）](<https://rich01.com/liquidity-risk/>)

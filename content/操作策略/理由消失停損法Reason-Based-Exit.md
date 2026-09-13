@@ -1,8 +1,9 @@
 ---
 title: "理由消失停損法Reason-Based-Exit"
 category: "操作策略"
-source:
 date: 2026-05-14
+raw_files:
+- raw/2026-05-14/停損設定方法與優缺點分析-市場先生.md
 ---
 
 # 理由消失停損法Reason-Based-Exit
@@ -85,4 +86,4 @@ date: 2026-05-14
 
 ## 來源
 
-- [停損是什麼？如何設置停損點？停損優缺點分析](../../raw/2026-05-14/停損設定方法與優缺點分析-市場先生.md)
+- [停損是什麼？如何設置停損點？停損優缺點分析](<https://rich01.com/stop-loss-point/>)

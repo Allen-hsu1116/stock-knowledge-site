@@ -1,6 +1,12 @@
 ---
 title: "現金流量折現法DCF估值"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-03/現金流量折現法DCF是什麼.md
+- raw/2026-05-03/如何用DCF推估一家公司的真正價值.md
+- raw/2026-05-12/現金流量折現法DCF模型-市場先生.md
+- raw/2026-05-12/現金流量折現模型DCF-DavidTalks.md
+- raw/2026-05-12/淺談DCF現金流量折現法-方格子.md
 ---
 
 # 現金流量折現法DCF估值
@@ -209,8 +215,8 @@ DCF算出企業價值後，可用兩種方式評估投資決策：
 - [[基本面分析/NPV淨現值與IRR內部報酬率投資評估|NPV與IRR]] - IRR就是讓DCF的NPV=0的折現率
 
 ## 來源
-- [現金流量折現法DCF是什麼](../../raw/2026-05-03/現金流量折現法DCF是什麼.md)
-- [如何用DCF推估一家公司的真正價值](../../raw/2026-05-03/如何用DCF推估一家公司的真正價值.md)
-- [現金流量折現法DCF模型 - 市場先生](../../raw/2026-05-12/現金流量折現法DCF模型-市場先生.md)
-- [現金流量折現模型DCF - DavidTalks](../../raw/2026-05-12/現金流量折現模型DCF-DavidTalks.md)
-- [淺談DCF現金流量折現法 - 方格子](../../raw/2026-05-12/淺談DCF現金流量折現法-方格子.md)
+- [現金流量折現法DCF是什麼](<https://rich01.com/discounted-cash-flow-dcf-model/>)
+- [如何用DCF推估一家公司的真正價值](<https://www.cmoney.tw/notes/note-detail.aspx?nid=491213>)
+- [現金流量折現法DCF模型 - 市場先生](<https://rich01.com/discounted-cash-flow-dcf-model/>)
+- [現金流量折現模型DCF - DavidTalks](<https://davidtalk1995.wordpress.com/2019/04/30/%E7%8F%BE%E9%87%91%E6%B5%81%E9%87%8F%E6%8A%98%E7%8F%BE%E6%A8%A1%E5%9E%8Bdiscounted-cashflow-dcf/>)
+- [淺談DCF現金流量折現法 - 方格子](<https://vocus.cc/article/63653deefd897800019ba0a2>)

@@ -1,6 +1,10 @@
 ---
 title: "資產負債表深度判讀"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-16/資產負債表五大要點判讀-StockFeel.md
+- raw/2026-05-16/資產負債表核心指標與異常訊號快速篩選-EBC.md
+- raw/2026-05-16/資產負債表重要科目判讀-OANDA.md
 ---
 
 # 資產負債表深度判讀
@@ -147,6 +151,6 @@ category: "基本面分析"
 
 ## 來源
 
-- [資產負債表五大要點判讀 - StockFeel](../../raw/2026-05-16/資產負債表五大要點判讀-StockFeel.md)
-- [資產負債表核心指標與異常訊號快速篩選 - EBC](../../raw/2026-05-16/資產負債表核心指標與異常訊號快速篩選-EBC.md)
-- [資產負債表重要科目判讀 - OANDA](../../raw/2026-05-16/資產負債表重要科目判讀-OANDA.md)
+- [資產負債表五大要點判讀 - StockFeel](<https://www.stockfeel.com.tw/%E5%A6%82%E4%BD%95%E7%9C%8B%E6%87%82%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%B2%A1%E5%A0%B1%E7%B3%BB%E5%88%97%EF%BC%9A%E8%B3%87%E7%94%A2%E8%B2%A0%E5%82%B5%E8%A1%A8%E7%AF%87/>)
+- [資產負債表核心指標與異常訊號快速篩選 - EBC](<https://www.ebc.com/zh/jinrong/284633.html>)
+- [資產負債表重要科目判讀 - OANDA](<https://www.oanda.com/bvi-ft/lab-education/invest_us_stock/balance-sheet/>)

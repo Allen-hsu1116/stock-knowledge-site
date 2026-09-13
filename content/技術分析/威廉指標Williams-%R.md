@@ -1,6 +1,19 @@
 ---
 title: "威廉指標 Williams %R"
 category: "技術分析"
+raw_files:
+- raw/2026-05-02/威廉指標Williams-%R-Yahoo.md
+- raw/2026-05-02/Williams-%R-StockCharts.md
+- raw/2026-05-02/Williams-%R-HeyGoTrade.md
+- raw/2026-05-03/威廉指標QuantPass.md
+- raw/2026-05-03/威廉指標杜金龍台股回測.md
+- raw/2026-05-04/威廉指標QuantPass完整教學.md
+- raw/2026-05-16/威廉指標Williams-R詳細介紹及使用方法-EdgeTrader.md
+- raw/2026-05-16/威廉指標WMSR超買超賣參數設定-Yahoo股市.md
+- raw/2026-05-18/威廉指標QuantPass.md
+- raw/2026-05-18/威廉指標StockFeel.md
+- raw/2026-05-18/威廉指標EdgeTrader.md
+- raw/2026-05-18/威廉指標Williams-%R-Yahoo奇摩-TEJ回測.md
 ---
 
 # 威廉指標 Williams %R
@@ -213,15 +226,15 @@ Kinder %R（k%R）用成交量代替成交價計算，代表量的變化：
 
 ## 來源
 
-- [威廉指標年賺百倍 Yahoo股市](../../raw/2026-05-02/威廉指標Williams-%R-Yahoo.md)
-- [Williams %R StockCharts ChartSchool](../../raw/2026-05-02/Williams-%R-StockCharts.md)
-- [Williams %R HeyGoTrade](../../raw/2026-05-02/Williams-%R-HeyGoTrade.md)
-- [威廉指標完整教學 QuantPass](../../raw/2026-05-03/威廉指標QuantPass.md)
-- [杜金龍台股技術分析回測 WMS%R](../../raw/2026-05-03/威廉指標杜金龍台股回測.md)
-- [威廉指標完整教學 QuantPass](../../raw/2026-05-04/威廉指標QuantPass完整教學.md)
-- [威廉指標Failure信號與時間要素 EdgeTrader](../../raw/2026-05-16/威廉指標Williams-R詳細介紹及使用方法-EdgeTrader.md)
-- [威廉指標WMSR超買超賣參數設定 Yahoo股市](../../raw/2026-05-16/威廉指標WMSR超買超賣參數設定-Yahoo股市.md)
-- [威廉指標完整教學 QuantPass（參數設定選股）](../../raw/2026-05-18/威廉指標QuantPass.md)
-- [威廉指標KD對比背離黃金交叉 StockFeel](../../raw/2026-05-18/威廉指標StockFeel.md)
-- [威廉指標Failure信號與時間要素 EdgeTrader](../../raw/2026-05-18/威廉指標EdgeTrader.md)
-- [威廉指標WMSR超買超賣參數設定 Yahoo奇摩股市 + TEJ回測](../../raw/2026-05-18/威廉指標Williams-%R-Yahoo奇摩-TEJ回測.md)
+- [威廉指標年賺百倍 Yahoo股市](<https://tw.stock.yahoo.com/news/%E6%8A%80%E8%A1%93%E5%88%86%E6%9E%90-%E5%A8%81%E5%BB%89%E6%8C%87%E6%A8%99-wmsr-%E8%B6%85%E8%B2%B7-%E8%B6%85%E8%B3%A3-%E5%8F%83%E6%95%B8%E8%A8%AD%E5%AE%9A-130132784.html>)
+- [Williams %R StockCharts ChartSchool](<https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/williams-r>)
+- [Williams %R HeyGoTrade](<https://www.heygotrade.com/en/blog/williams-r-indicator-explained/>)
+- [威廉指標完整教學 QuantPass](<https://quantpass.org/williams-r/>)
+- [杜金龍台股技術分析回測 WMS%R](<https://vocus.cc/article/65f01c8efd89780001fd428f>)
+- [威廉指標完整教學 QuantPass](<https://quantpass.org/williams-r/>)
+- [威廉指標Failure信號與時間要素 EdgeTrader](<https://edgetradertw.com/williamsr%E5%A8%81%E5%BB%89%E6%8C%87%E6%A8%99%E8%A9%B3%E7%B4%B0%E4%BB%8B%E7%B4%B9%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/>)
+- [威廉指標WMSR超買超賣參數設定 Yahoo股市](<https://tw.stock.yahoo.com/news/%E6%8A%80%E8%A1%93%E5%88%86%E6%9E%90-%E5%A8%81%E5%BB%89%E6%8C%87%E6%A8%99-wmsr-%E8%B6%85%E8%B2%B7-%E8%B6%85%E8%B3%A3-%E5%8F%83%E6%95%B8%E8%A8%AD%E5%AE%9A-130132784.html>)
+- [威廉指標完整教學 QuantPass（參數設定選股）](<https://quantpass.org/williams-r/>)
+- [威廉指標KD對比背離黃金交叉 StockFeel](<https://www.stockfeel.com.tw/%E5%A8%81%E5%BB%89%E6%8C%87%E6%A8%99-%E5%A8%81%E5%BB%89%E6%8C%87%E6%95%B8-wmsr/>)
+- [威廉指標Failure信號與時間要素 EdgeTrader](<https://edgetradertw.com/williamsr%E5%A8%81%E5%BB%89%E6%8C%87%E6%A8%99%E8%A9%B3%E7%B4%B9%E4%BB%8B%E7%B4%B9%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/>)
+- 威廉指標WMSR超買超賣參數設定 Yahoo奇摩股市 + TEJ回測（原始來源：[1](<https://tw.stock.yahoo.com/news/技術分析-威廉指標-wmsr-超買-超賣-參數設定-130132784.html>)、[2](<https://www.tejwin.com/insight/威廉指標策略/>)）

@@ -2,6 +2,8 @@
 title: Smart Beta 因子投資策略
 date: 2026-06-25
 category: "操作策略"
+raw_files:
+- raw/2026-06-25/Smart-Beta因子投資策略.md
 ---
 
 # Smart Beta 因子投資策略
@@ -109,5 +111,5 @@ Smart Beta 策略圍繞以下因子進行最佳化：
 
 ## 來源
 
-- [Smart Beta 因子投資策略](../../raw/2026-06-25/Smart-Beta因子投資策略.md)
+- [Smart Beta 因子投資策略](<https://en.wikipedia.org/wiki/Smart_beta>)
 - Wikipedia: Smart beta

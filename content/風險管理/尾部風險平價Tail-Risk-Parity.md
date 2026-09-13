@@ -1,6 +1,8 @@
 ---
 title: "尾部風險平價 Tail Risk Parity"
 category: "風險管理"
+raw_files:
+- raw/2026-05-09/tail-risk-parity.md
 ---
 
 # 尾部風險平價 Tail Risk Parity
@@ -115,6 +117,6 @@ TRP 不按傳統資產類別分組，而是按**壓力情境下的行為**分桶
 
 ## 來源
 
-- [Tail Risk Parity - Wikipedia](../../raw/2026-05-09/tail-risk-parity.md)
-- [Risk Parity - Wikipedia](../../raw/2026-05-09/tail-risk-parity.md)
-- [Tail Risk - Wikipedia](../../raw/2026-05-09/tail-risk-parity.md)
+- Tail Risk Parity - Wikipedia（原始來源：[1](<https://en.wikipedia.org/wiki/Tail_risk_parity,>)、[2](<https://en.wikipedia.org/wiki/Risk_parity,>)、[3](<https://en.wikipedia.org/wiki/Tail_risk>)）
+- Risk Parity - Wikipedia（原始來源：[1](<https://en.wikipedia.org/wiki/Tail_risk_parity,>)、[2](<https://en.wikipedia.org/wiki/Risk_parity,>)、[3](<https://en.wikipedia.org/wiki/Tail_risk>)）
+- Tail Risk - Wikipedia（原始來源：[1](<https://en.wikipedia.org/wiki/Tail_risk_parity,>)、[2](<https://en.wikipedia.org/wiki/Risk_parity,>)、[3](<https://en.wikipedia.org/wiki/Tail_risk>)）

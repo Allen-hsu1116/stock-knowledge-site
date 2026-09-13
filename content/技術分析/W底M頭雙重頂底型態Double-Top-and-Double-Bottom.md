@@ -1,6 +1,10 @@
 ---
 title: "W底M頭雙重頂底型態 Double Top and Double Bottom"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/K線型態目標價計算W底M頭頭肩底頂.md
+- raw/2026-05-11/W底M頭特徵與目標價-Growin.md
+- raw/2026-05-11/型態學11種K線組合型態-QuantPass.md
 ---
 
 # W底M頭雙重頂底型態 Double Top and Double Bottom
@@ -156,6 +160,6 @@ M頭由兩個相近的高點和中間一個回調低點組成，形成"M"形狀�
 
 ## 來源
 
-- [K線型態目標價計算W底M頭頭肩底頂實戰教學](../../raw/2026-05-11/K線型態目標價計算W底M頭頭肩底頂.md)
-- [W底M頭特徵與目標價-Growin](../../raw/2026-05-11/W底M頭特徵與目標價-Growin.md)
-- [型態學11種K線組合型態-QuantPass](../../raw/2026-05-11/型態學11種K線組合型態-QuantPass.md)
+- [K線型態目標價計算W底M頭頭肩底頂實戰教學](<https://fmstudio.blog/k-pattern-target-price-2025/>)
+- [W底M頭特徵與目標價-Growin](<https://blog.growin.tv/double-botton-top-pattern-introduction/>)
+- [型態學11種K線組合型態-QuantPass](<https://quantpass.org/kbar-pattern-3/>)

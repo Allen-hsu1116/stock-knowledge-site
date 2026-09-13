@@ -1,6 +1,8 @@
 ---
 title: "有效稅率與所得稅費用判讀 Effective Tax Rate & Income Tax Analysis"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-17/effective-tax-rate-etr.md
 ---
 
 # 有效稅率與所得稅費用判讀 Effective Tax Rate & Income Tax Analysis
@@ -130,6 +132,6 @@ ETR直接影響稅後淨利，進而影響EPS和估值：
 
 ## 來源
 
-- [有效稅率（ETR）是什麼？ - PG財經筆記](../../raw/2026-05-17/effective-tax-rate-etr.md)
-- [一次就看懂所得稅之會計處理 - 小會計師的大視界](../../raw/2026-05-17/effective-tax-rate-etr.md)
-- [盈餘品質指標 - 薛兆亨](../../raw/2026-05-17/effective-tax-rate-etr.md)
+- 有效稅率（ETR）是什麼？ - PG財經筆記（原始來源：[1](<https://pgfinnote.substack.com/p/effective-tax-rate-etr>)、[2](<https://garrickcpa.wordpress.com/2020/03/21/一次就看懂所得稅之會計處理/>)、[3](<https://www.fishhuang.idv.tw/2022/07/Financial-Statement-Analysis-34-earnings-quality-index.html>)）
+- 一次就看懂所得稅之會計處理 - 小會計師的大視界（原始來源：[1](<https://pgfinnote.substack.com/p/effective-tax-rate-etr>)、[2](<https://garrickcpa.wordpress.com/2020/03/21/一次就看懂所得稅之會計處理/>)、[3](<https://www.fishhuang.idv.tw/2022/07/Financial-Statement-Analysis-34-earnings-quality-index.html>)）
+- 盈餘品質指標 - 薛兆亨（原始來源：[1](<https://pgfinnote.substack.com/p/effective-tax-rate-etr>)、[2](<https://garrickcpa.wordpress.com/2020/03/21/一次就看懂所得稅之會計處理/>)、[3](<https://www.fishhuang.idv.tw/2022/07/Financial-Statement-Analysis-34-earnings-quality-index.html>)）

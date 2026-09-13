@@ -1,6 +1,8 @@
 ---
 title: "交易指標體系架構 Indicator Framework"
 category: "技術分析"
+raw_files:
+- raw/2026-05-10/交易指標體系架構-五大類別系統化整理.md
 ---
 
 # 交易指標體系架構 Indicator Framework
@@ -185,5 +187,5 @@ RSI 是簡單且行為良好的建構模組，但只是起點。還可以搭配�
 
 ## 來源
 
-- [What Are the Core Indicators You Can Use to Build Trading Algorithms? - Josh Malizzi](../../raw/2026-05-10/交易指標體系架構-五大類別系統化整理.md)
+- [What Are the Core Indicators You Can Use to Build Trading Algorithms? - Josh Malizzi](<https://medium.com/@josh.malizzi/what-are-the-core-indicators-you-can-use-to-build-trading-algorithms-81853b6b9a70>)
 - 知識庫既有內容整合（ADX、RSI、ATR、量價、布林通道等）

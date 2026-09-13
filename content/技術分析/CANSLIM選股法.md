@@ -1,6 +1,10 @@
 ---
 title: "CANSLIM選股法"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/CANSLIM選股法-StockFeel.md
+- raw/2026-05-18/RS線舉例說明-尼克萊.md
+- raw/2026-05-18/怎樣定義強勢股RS-SCTR.md
 ---
 
 # CANSLIM選股法
@@ -153,6 +157,6 @@ Step 6：賣出紀律
 
 ## 來源
 
-- [CANSLIM選股法 — StockFeel](../../raw/2026-05-18/CANSLIM選股法-StockFeel.md)
-- [RS線舉例說明 — 尼克萊](../../raw/2026-05-18/RS線舉例說明-尼克萊.md)
-- [怎樣定義強勢股？RS、SCTR](../../raw/2026-05-18/怎樣定義強勢股RS-SCTR.md)
+- [CANSLIM選股法 — StockFeel](<https://www.stockfeel.com.tw/《笑傲股市》-選股系統起手式：canslim/>)
+- [RS線舉例說明 — 尼克萊](<https://cmnews.com.tw/article/nicklai-a6a35c00-d8c9-11ef-887d-3957ecb78805>)
+- [怎樣定義強勢股？RS、SCTR](<https://vocus.cc/article/627cbb74fd8978000126f83f>)

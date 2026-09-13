@@ -1,6 +1,10 @@
 ---
 title: "TD Sequential 序列指標 Setup 9 Countdown 13"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/OANDA-TD序列指標教學.md
+- raw/2026-05-04/FM-Studio-TD序列指標完整教學.md
+- raw/2026-05-04/科技兔-TD序列指標教學.md
 ---
 
 # TD Sequential 序列指標 Setup 9 Countdown 13
@@ -127,6 +131,6 @@ TD Sequential 是「警示」而非「操作訊號」，永遠搭配其他指標
 
 ## 來源
 
-- [掌握趨勢轉換的TD序列指標 - OANDA Lab](../../raw/2026-05-04/OANDA-TD序列指標教學.md)
-- [TD序列指標初學者完整教學 - 理財研究室 FM Studio](../../raw/2026-05-04/FM-Studio-TD序列指標完整教學.md)
-- [TD序列指標教學 - 科技兔](../../raw/2026-05-04/科技兔-TD序列指標教學.md)
+- [掌握趨勢轉換的TD序列指標 - OANDA Lab](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/td-sequential/>)
+- [TD序列指標初學者完整教學 - 理財研究室 FM Studio](<https://fmstudio.blog/td-sequential-indicator-guide-2025/>)
+- [TD序列指標教學 - 科技兔](<https://www.techrabbit.biz/42684/>)

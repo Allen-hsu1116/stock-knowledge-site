@@ -1,6 +1,8 @@
 ---
 title: "移動平均線種類比較 SMA EMA WMA"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/移動平均線種類比較SMA-EMA-WMA.md
 ---
 
 # 移動平均線種類比較 SMA EMA WMA
@@ -171,4 +173,4 @@ WMA 反應最快，適合需要及時反應的場景：
 
 ## 來源
 
-- [指數平滑移動平均線的計算方法以及與其他移動平均線的差異 - OANDA](../../raw/2026-05-04/移動平均線種類比較SMA-EMA-WMA.md)
+- [指數平滑移動平均線的計算方法以及與其他移動平均線的差異 - OANDA](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/moving_average-exponential_smoothing_moving_average/>)

@@ -1,6 +1,8 @@
 ---
 title: "終極震盪指標 Ultimate Oscillator (UO)"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/終極震盪指標Ultimate-Oscillator.md
 ---
 
 # 終極震盪指標 Ultimate Oscillator (UO)
@@ -81,5 +83,5 @@ Larry Williams 認為所有震盪指標都對參數選擇極度敏感——不�
 
 ## 來源
 
-- [終極震盪指標 — taindicators](../../raw/2026-05-18/終極震盪指標Ultimate-Oscillator.md)
-- [Ultimate Oscillator 詳細解讀 — hillstrader](../../raw/2026-05-18/終極震盪指標Ultimate-Oscillator.md)
+- 終極震盪指標 — taindicators（原始來源：[1](<https://www.taindicators.com/ultimate/>)、[2](<https://hillstrader.com/ultimate-oscillator_1/>)）
+- Ultimate Oscillator 詳細解讀 — hillstrader（原始來源：[1](<https://www.taindicators.com/ultimate/>)、[2](<https://hillstrader.com/ultimate-oscillator_1/>)）

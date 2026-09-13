@@ -3,6 +3,9 @@ title: 調整現值法APV Adjusted Present Value
 aliases: [調整現值法, APV, Adjusted Present Value, 分拆式估值]
 category: 基本面分析
 date: 2026-09-01
+raw_files:
+- raw/2026-09-01/MIT-WACC與APV課程講義學習紀錄.md
+- raw/2026-09-01/Damodaran企業估值成本資本與APV學習紀錄.md
 ---
 
 # 調整現值法APV Adjusted Present Value
@@ -156,5 +159,5 @@ $$Equity\ Value=1{,}544+100-400=1{,}244$$
 
 ## 來源
 
-- [MIT Finance Theory II：WACC and APV](../../raw/2026-09-01/MIT-WACC與APV課程講義學習紀錄.md)
-- [Damodaran：Firm Valuation—Cost of Capital and APV Approaches](../../raw/2026-09-01/Damodaran企業估值成本資本與APV學習紀錄.md)
+- MIT Finance Theory II：WACC and APV（原始來源：[1](<https://ocw.mit.edu/courses/15-402-finance-theory-ii-spring-2003/resources/lec14awaccapv/>)、[2](<https://ocw.mit.edu/courses/15-402-finance-theory-ii-spring-2003/51227cf624ebb0b4043c743d84e1335d_lec14awaccapv.pdf>)）
+- [Damodaran：Firm Valuation—Cost of Capital and APV Approaches](<https://pages.stern.nyu.edu/~adamodar/pdfiles/valn2ed/ch15.pdf>)

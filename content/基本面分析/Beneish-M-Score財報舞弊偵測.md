@@ -3,6 +3,8 @@ title: "Beneish M-Score財報舞弊偵測模型"
 category: "基本面分析"
 source: web
 source_date: 2026-05-12
+raw_files:
+- raw/2026-05-12/Beneish-M-Score財報舞弊偵測模型-雷司紀.md
 ---
 
 # Beneish M-Score財報舞弊偵測模型
@@ -117,4 +119,4 @@ Netflix淨利潤逐年上升，但營業現金流越來越低。原因：影集�
 
 ## 來源
 
-- [破解企業財報造假模型：Beneish model (M-Score) - 雷司紀](../../raw/2026-05-12/Beneish-M-Score財報舞弊偵測模型-雷司紀.md)
+- [破解企業財報造假模型：Beneish model (M-Score) - 雷司紀](<https://www.rayskyinvest.com/17977/beneish-model-m-score>)

@@ -1,6 +1,8 @@
 ---
 title: "量價背離深度實戰"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/量價背離深度實戰.md
 ---
 
 # 量價背離深度實戰
@@ -117,7 +119,7 @@ category: "技術分析"
 
 ## 來源
 
-- [解碼量價背離：股票投資者不可錯過的市場反轉信號](../../raw/2026-05-18/量價背離深度實戰.md)
-- [楊忠憲：價量背離出現怎麼辦？](../../raw/2026-05-18/量價背離深度實戰.md)
-- [QuantPass：量價背離7種量價關係](../../raw/2026-05-18/量價背離深度實戰.md)
-- [QuantPass：指標背離完整教學](../../raw/2026-05-18/量價背離深度實戰.md)
+- 解碼量價背離：股票投資者不可錯過的市場反轉信號（原始來源：[1](<https://vocus.cc/article/6750512ffd89780001c51b97>)、[2](<https://vocus.cc/article/68758cdffd89780001e58ebb>)、[3](<https://quantpass.org/price-and-volume/>)、[4](<https://quantpass.org/divergence/>)）
+- 楊忠憲：價量背離出現怎麼辦？（原始來源：[1](<https://vocus.cc/article/6750512ffd89780001c51b97>)、[2](<https://vocus.cc/article/68758cdffd89780001e58ebb>)、[3](<https://quantpass.org/price-and-volume/>)、[4](<https://quantpass.org/divergence/>)）
+- QuantPass：量價背離7種量價關係（原始來源：[1](<https://vocus.cc/article/6750512ffd89780001c51b97>)、[2](<https://vocus.cc/article/68758cdffd89780001e58ebb>)、[3](<https://quantpass.org/price-and-volume/>)、[4](<https://quantpass.org/divergence/>)）
+- QuantPass：指標背離完整教學（原始來源：[1](<https://vocus.cc/article/6750512ffd89780001c51b97>)、[2](<https://vocus.cc/article/68758cdffd89780001e58ebb>)、[3](<https://quantpass.org/price-and-volume/>)、[4](<https://quantpass.org/divergence/>)）

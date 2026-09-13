@@ -1,6 +1,8 @@
 ---
 title: "程式交易停止時機與回收係數 EA Stop Timing and Recovery Factor"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/停止程式交易EA的判斷基準-OANDA.md
 ---
 
 # 程式交易停止時機與回收係數 EA Stop Timing and Recovery Factor
@@ -110,4 +112,4 @@ category: "風險管理"
 
 ## 來源
 
-- [停止自動程式交易EA時的判斷基準 - OANDA Lab](../../raw/2026-05-15/停止程式交易EA的判斷基準-OANDA.md)
+- [停止自動程式交易EA時的判斷基準 - OANDA Lab](<https://www.oanda.com/bvi-ft/lab-education/ea_trading/ea_stop/>)

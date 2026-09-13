@@ -1,3 +1,12 @@
+---
+title: EP695 Google算力回收期與TPU成本優勢——循環融資風險和震盪盤紀律
+date: '2026-09-09'
+category: YouTube頻道
+source: https://www.youtube.com/watch?v=OcTI4yvvn2I
+raw_files:
+- raw/youtube/2026-09-09-gooaye.md
+---
+
 # EP695 Google算力回收期與TPU成本優勢——循環融資風險和震盪盤紀律
 
 > Google Cloud回收期說法支持AI基建投資邏輯，但設備回本不等於整體自由現金流無風險；模型價格競爭、客戶融資與CPO瓶頸仍要分層驗證，震盪盤先管住追價成本。

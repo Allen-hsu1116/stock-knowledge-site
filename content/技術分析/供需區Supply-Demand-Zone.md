@@ -1,6 +1,8 @@
 ---
 title: "供需區 Supply & Demand Zone"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/供需區Supply-Demand-Zone完整教學.md
 ---
 
 # 供需區 Supply & Demand Zone
@@ -116,5 +118,5 @@ category: "技術分析"
 
 ## 來源
 
-- [供需區Supply & Demand Zone完整教學](../../raw/2026-05-04/供需區Supply-Demand-Zone完整教學.md)
+- 供需區Supply & Demand Zone完整教學（本機留存素材，未公開全文；原始網址待核對）
 - [TradingView Supply and Demand Indicators](https://www.tradingview.com/scripts/supplyanddemand/)

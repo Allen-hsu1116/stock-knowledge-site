@@ -1,6 +1,9 @@
 ---
 title: "量價關係實戰操作SOP"
 category: "操作策略"
+raw_files:
+- raw/2026-05-14/9種量價關係與交易訊號-Yahoo股市.md
+- raw/2026-05-14/量價關係多頭格局解析-StockFeel.md
 ---
 
 # 量價關係實戰操作SOP
@@ -119,5 +122,5 @@ category: "操作策略"
 
 ## 來源
 
-- [9種量價關係與交易訊號 - Yahoo股市](../../raw/2026-05-14/9種量價關係與交易訊號-Yahoo股市.md)
-- [量價關係多頭格局解析 - StockFeel](../../raw/2026-05-14/量價關係多頭格局解析-StockFeel.md)
+- [9種量價關係與交易訊號 - Yahoo股市](<https://tw.stock.yahoo.com/news/%E6%88%90%E4%BA%A4%E9%87%8F-%E9%87%8F%E5%83%B9%E9%97%9C%E4%BF%82-%E5%83%B9%E9%87%8F%E8%83%8C%E9%9B%A2-%E5%83%B9%E6%BC%B2%E9%87%8F%E7%B8%AE-%E7%84%A1%E9%87%8F%E4%B8%8B%E8%B7%8C-124705981.html>)
+- [量價關係多頭格局解析 - StockFeel](<https://www.stockfeel.com.tw/%E4%B8%80%E7%9C%8B%E5%B0%B1%E6%87%82%E7%9A%84%E9%87%8F%E5%83%B9%E9%97%9C%E4%BF%82/>)

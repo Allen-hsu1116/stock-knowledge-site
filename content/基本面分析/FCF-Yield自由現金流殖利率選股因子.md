@@ -1,6 +1,8 @@
 ---
 title: "FCF-Yield自由現金流殖利率選股因子"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-12/FCF-Yield選股因子學術驗證.md
 ---
 
 # FCF-Yield自由現金流殖利率選股因子
@@ -104,4 +106,4 @@ FCF 策略的核心定位是「慢慢變富」：
 
 ## 來源
 
-- [FCF-Yield選股因子學術驗證](../../raw/2026-05-12/FCF-Yield選股因子學術驗證.md)
+- [FCF-Yield選股因子學術驗證](<https://finance.sina.com.cn/stock/stockzmt/2025-03-26/doc-ineqxtzu5067569.shtml>)

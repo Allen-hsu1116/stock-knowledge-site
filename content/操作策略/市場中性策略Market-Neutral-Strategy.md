@@ -2,6 +2,8 @@
 title: "市場中性策略 Market Neutral Strategy"
 date: 2026-06-20
 category: "操作策略"
+raw_files:
+- raw/2026-06-20/市場中性策略Market-Neutral-Wikipedia.md
 ---
 
 # 市場中性策略 Market Neutral Strategy
@@ -108,4 +110,4 @@ category: "操作策略"
 
 ## 來源
 
-- [Market Neutral - Wikipedia](../../raw/2026-06-20/市場中性策略Market-Neutral-Wikipedia.md)
+- [Market Neutral - Wikipedia](<https://en.wikipedia.org/wiki/Market_neutral>)

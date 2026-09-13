@@ -1,6 +1,9 @@
 ---
 title: "MTM動量指標 Momentum Index"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/MTM動量指標完整教學.md
+- raw/2026-05-04/ROC變動率指標與動量指標比較.md
 ---
 
 # MTM動量指標 Momentum Index
@@ -100,5 +103,5 @@ MTM 的角色是「動能溫度計」，不是獨立的交易系統。一定要�
 - [[均線判斷]] - MTM 搭配均線判斷趨勢方向
 
 ## 來源
-- [MTM動量指標完整教學](../../raw/2026-05-04/MTM動量指標完整教學.md)
-- [ROC變動率指標與動量指標比較](../../raw/2026-05-04/ROC變動率指標與動量指標比較.md)
+- [MTM動量指標完整教學](<https://quantpass.org/mtm/>)
+- [ROC變動率指標與動量指標比較](<https://rich01.com/what-is-rate-of-change-indicator/>)

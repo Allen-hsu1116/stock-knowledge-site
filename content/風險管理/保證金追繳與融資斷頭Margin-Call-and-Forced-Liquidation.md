@@ -1,6 +1,10 @@
 ---
 title: "保證金追繳與融資斷頭 Margin Call and Forced Liquidation"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/融資維持率看穿市場轉折訊號-TEJWIN.md
+- raw/2026-05-15/斷頭強制平倉與保證金追繳機制-MrMarket.md
+- raw/2026-05-08/融資維持率與保證金追繳Margin-Call.md
 ---
 
 # 保證金追繳與融資斷頭 Margin Call and Forced Liquidation
@@ -150,8 +154,8 @@ TEJ回測發現，當個股融資維持率異常偏低時，存在短期反轉�
 
 ## 來源
 
-- [TEJ：市場恐慌還是機會？從融資維持率看穿轉折訊號](../../raw/2026-05-15/融資維持率看穿市場轉折訊號-TEJWIN.md)
-- [Mr.Market：斷頭是什麼？斷頭門檻及規則總整理](../../raw/2026-05-15/斷頭強制平倉與保證金追繳機制-MrMarket.md)
-- [StockFeel：Margin call 與 Force sell](../../raw/2026-05-08/融資維持率與保證金追繳Margin-Call.md)
-- [Money101：融資追繳令怎麼辦](../../raw/2026-05-08/融資維持率與保證金追繳Margin-Call.md)
-- [Mr.Market市場先生：維持保證金完整教學](../../raw/2026-05-08/融資維持率與保證金追繳Margin-Call.md)
+- [TEJ：市場恐慌還是機會？從融資維持率看穿轉折訊號](<https://www.tejwin.com/insight/tquant-融資維持率/>)
+- [Mr.Market：斷頭是什麼？斷頭門檻及規則總整理](<https://rich01.com/forced-selling-forced-liquidation/>)
+- StockFeel：Margin call 與 Force sell（原始來源：[1](<https://www.tejwin.com/insight/tquant-融資維持率/>)、[2](<https://www.stockfeel.com.tw/margin-call-與-force-sell─融資交易新手必看！/>)、[3](<https://www.money101.com.tw/blog/融資-融資斷頭-融資維持率-融資追繳令-股票>)、[4](<https://rich01.com/maintenance-margin-0/>)）
+- Money101：融資追繳令怎麼辦（原始來源：[1](<https://www.tejwin.com/insight/tquant-融資維持率/>)、[2](<https://www.stockfeel.com.tw/margin-call-與-force-sell─融資交易新手必看！/>)、[3](<https://www.money101.com.tw/blog/融資-融資斷頭-融資維持率-融資追繳令-股票>)、[4](<https://rich01.com/maintenance-margin-0/>)）
+- Mr.Market市場先生：維持保證金完整教學（原始來源：[1](<https://www.tejwin.com/insight/tquant-融資維持率/>)、[2](<https://www.stockfeel.com.tw/margin-call-與-force-sell─融資交易新手必看！/>)、[3](<https://www.money101.com.tw/blog/融資-融資斷頭-融資維持率-融資追繳令-股票>)、[4](<https://rich01.com/maintenance-margin-0/>)）

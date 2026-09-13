@@ -1,6 +1,9 @@
 ---
 title: "EPS每股盈餘進階判讀"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/MBA智庫-每股收益EPS.md
+- raw/2026-05-05/MBA智庫-稀釋每股收益.md
 ---
 
 # EPS每股盈餘進階判讀
@@ -128,5 +131,5 @@ EPS成長≠淨利成長，因為股本會變：
 
 ## 來源
 
-- [MBA智庫-每股收益EPS](../../raw/2026-05-05/MBA智庫-每股收益EPS.md)
-- [MBA智庫-稀釋每股收益](../../raw/2026-05-05/MBA智庫-稀釋每股收益.md)
+- [MBA智庫-每股收益EPS](<https://wiki.mbalib.com/zh-tw/%E6%AF%8F%E8%82%A1%E7%9B%88%E4%BD%99>)
+- [MBA智庫-稀釋每股收益](<https://wiki.mbalib.com/zh-tw/%E7%A8%80%E9%87%8A%E6%AF%8F%E8%82%A1%E6%94%B6%E7%9B%8A>)

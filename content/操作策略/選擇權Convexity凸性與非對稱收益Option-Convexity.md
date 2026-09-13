@@ -1,6 +1,9 @@
 ---
 title: "選擇權Convexity凸性與非對稱收益Option-Convexity"
 category: "操作策略"
+raw_files:
+- raw/2026-05-10/Greeks進階-選擇權定價與避險參數.md
+- raw/2026-05-10/Greeks基礎-Delta-Gamma-Vega-Theta開車比喻.md
 ---
 
 # 選擇權Convexity凸性與非對稱收益Option-Convexity
@@ -109,5 +112,5 @@ Long Gamma 的 Scalping 策略本質上就是在收割 Convexity：
 
 ## 來源
 
-- [Anton Cheng-選擇權的定價與避險參數](../../raw/2026-05-10/Greeks進階-選擇權定價與避險參數.md)
-- [OP凱文-Greeks風險儀表板](../../raw/2026-05-10/Greeks基礎-Delta-Gamma-Vega-Theta開車比喻.md)
+- [Anton Cheng-選擇權的定價與避險參數](<https://medium.com/defi-taiwan/那些年-沒學好的選擇權-2-6934483b2f78>)
+- [OP凱文-Greeks風險儀表板](<https://opop.tw/options-greeks-explained/>)

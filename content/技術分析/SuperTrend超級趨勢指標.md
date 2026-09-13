@@ -1,6 +1,11 @@
 ---
 title: "SuperTrend超級趨勢指標"
 category: "技術分析"
+raw_files:
+- raw/2026-04-30/ADX指標完整教學QuantPass.md
+- raw/2026-04-30/超級趨勢策略TEJ.md
+- raw/2026-04-30/Supertrend指標FinTastic.md
+- raw/2026-05-11/SuperTrend超級趨勢指標.md
 ---
 
 # SuperTrend超級趨勢指標
@@ -132,7 +137,7 @@ SuperTrend 最大缺點：**盤整時反覆反轉**。
 
 ## 來源
 
-- [ADX指標完整教學QuantPass](../../raw/2026-04-30/ADX指標完整教學QuantPass.md)
-- [超級趨勢策略TEJ](../../raw/2026-04-30/超級趨勢策略TEJ.md)
-- [Supertrend指標FinTastic](../../raw/2026-04-30/Supertrend指標FinTastic.md)
-- [SUPERTREND超級趨勢指標波段操作密技 - WINSMART](../../raw/2026-05-11/SuperTrend超級趨勢指標.md)
+- [ADX指標完整教學QuantPass](<https://quantpass.org/adx/>)
+- [超級趨勢策略TEJ](<https://www.tejwin.com/insight/tquant-lab-超級趨勢策略/>)
+- [Supertrend指標FinTastic](<https://fintastic.trading/wisdom_box/supertrend-指標/>)
+- [SUPERTREND超級趨勢指標波段操作密技 - WINSMART](<https://winsmart.tw/en/online_teaching/supertrend%E8%B6%85%E7%B4%9A%E8%B6%A8%E5%8B%A2%E6%8C%87%E6%A8%99/>)

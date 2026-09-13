@@ -2,6 +2,8 @@
 title: "部位控制2%法則 Position Sizing 2% Rule"
 category: "風險管理"
 date: 2026-05-14
+raw_files:
+- raw/2026-05-14/2%法則與凱利公式部位控制.md
 ---
 
 # 部位控制2%法則 Position Sizing 2% Rule
@@ -159,5 +161,5 @@ Alexander Elder 在《Come Into My Trading Room》提出雙重風控：
 
 ## 來源
 
-- [2%法則教學：投資新手必學的風險控管與自動化倉位計算](../../raw/2026-05-14/2%法則與凱利公式部位控制.md) (Titan FX)
-- [凱利公式深度解析：易懂的資金管理與風險控制指南](../../raw/2026-05-14/2%法則與凱利公式部位控制.md) (方格子/Thor Lin)
+- 2%法則教學：投資新手必學的風險控管與自動化倉位計算（原始來源：[1](<https://research.titanfx.com/zh-hant/column/2-rule,>)、[2](<https://vocus.cc/article/67f88da1fd897800015ef113>)） (Titan FX)
+- 凱利公式深度解析：易懂的資金管理與風險控制指南（原始來源：[1](<https://research.titanfx.com/zh-hant/column/2-rule,>)、[2](<https://vocus.cc/article/67f88da1fd897800015ef113>)） (方格子/Thor Lin)

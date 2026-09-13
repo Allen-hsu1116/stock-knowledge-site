@@ -1,6 +1,8 @@
 ---
 title: "投資組合理論與分散投資的局限 Portfolio Theory and Diversification Limits"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/黑天鵝事件與尾部風險.md
 ---
 
 # 投資組合理論與分散投資的局限 Portfolio Theory and Diversification Limits
@@ -138,4 +140,4 @@ CAPM的結論：只有系統性風險（β）有溢價，非系統性風險沒�
 
 ## 來源
 
-- [黑天鵝事件與尾部風險](../../raw/2026-05-08/黑天鵝事件與尾部風險.md)
+- 黑天鵝事件與尾部風險（原始來源：[1](<https://wiki.mbalib.com/zh-tw/黑天鹅效应,>)、[2](<https://wiki.mbalib.com/zh-tw/尾部风险>)）

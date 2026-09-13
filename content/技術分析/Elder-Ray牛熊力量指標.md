@@ -1,6 +1,9 @@
 ---
 title: "Elder-Ray牛熊力量指標"
 category: "技術分析"
+raw_files:
+- raw/2026-04-30/Elder-Ray-Index牛熊力量指標.md
+- raw/2026-05-11/Elder-Ray-Index牛熊力量指標.md
 ---
 
 # Elder-Ray牛熊力量指標
@@ -87,5 +90,5 @@ Elder-Ray 是 [[三重濾網交易系統]] 中第二重濾網的理想工具：
 
 ## 來源
 
-- [Elder-Ray Index - XQ官方部落格](../../raw/2026-04-30/Elder-Ray-Index牛熊力量指標.md)
-- [Elder-Ray Index 進階 - XQ官方部落格](../../raw/2026-05-11/Elder-Ray-Index牛熊力量指標.md)
+- [Elder-Ray Index - XQ官方部落格](<https://www.xq.com.tw/xstrader/elder-ray-index/>)
+- [Elder-Ray Index 進階 - XQ官方部落格](<https://www.xq.com.tw/xstrader/elder-ray-index/>)

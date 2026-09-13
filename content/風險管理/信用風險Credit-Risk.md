@@ -1,6 +1,8 @@
 ---
 title: "信用風險Credit Risk"
 category: "風險管理"
+raw_files:
+- raw/2026-05-09/信用風險Credit-Risk-Wikipedia.md
 ---
 
 # 信用風險Credit Risk
@@ -109,5 +111,5 @@ category: "風險管理"
 
 ## 來源
 
-- [Credit risk - Wikipedia](../../raw/2026-05-09/信用風險Credit-Risk-Wikipedia.md)
-- [Concentration risk - Wikipedia](../../raw/2026-05-09/信用風險Credit-Risk-Wikipedia.md)
+- [Credit risk - Wikipedia](<https://en.wikipedia.org/wiki/Credit_risk>)
+- [Concentration risk - Wikipedia](<https://en.wikipedia.org/wiki/Credit_risk>)

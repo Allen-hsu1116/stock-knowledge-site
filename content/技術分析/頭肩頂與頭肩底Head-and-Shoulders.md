@@ -1,6 +1,10 @@
 ---
 title: "頭肩頂與頭肩底Head-and-Shoulders"
 category: "技術分析"
+raw_files:
+- raw/2026-05-03/頭肩頂頭肩底83%勝率型態全解析.md
+- raw/2026-05-03/頭肩頂頭肩底技術分析特點-市場先生.md
+- raw/2026-05-03/反轉技術型態頭肩頂頭肩底-康和期貨.md
 ---
 
 # 頭肩頂與頭肩底Head-and-Shoulders
@@ -126,6 +130,6 @@ category: "技術分析"
 
 ## 來源
 
-- [頭肩頂、頭肩底83%勝率型態全解析 - 學吧LearningPa](../../raw/2026-05-03/頭肩頂頭肩底83%勝率型態全解析.md)
-- [頭肩頂/頭肩底技術分析特點 - Mr.Market市場先生](../../raw/2026-05-03/頭肩頂頭肩底技術分析特點-市場先生.md)
-- [反轉技術型態（一）頭肩頂、頭肩底 - 康和期貨劉信源](../../raw/2026-05-03/反轉技術型態頭肩頂頭肩底-康和期貨.md)
+- [頭肩頂、頭肩底83%勝率型態全解析 - 學吧LearningPa](<https://learningpa.cc/pattern1/>)
+- [頭肩頂/頭肩底技術分析特點 - Mr.Market市場先生](<https://rich01.com/what-is-head-and-shoulders-technical-analysis/>)
+- [反轉技術型態（一）頭肩頂、頭肩底 - 康和期貨劉信源](<https://futures.com.tw/futures-instruction/反轉技術型態>)

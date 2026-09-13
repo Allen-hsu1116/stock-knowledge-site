@@ -1,6 +1,8 @@
 ---
 title: "KDJ指標與J值實戰"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/KDJ指標交易策略.md
 ---
 
 # KDJ指標與J值實戰
@@ -92,4 +94,4 @@ KDJ 在高位形成 M 頂，多方力量耗盡，空方即將反攻 → 賣出�
 
 ## 來源
 
-- [KDJ指標交易策略](../../raw/2026-05-18/KDJ指標交易策略.md)
+- [KDJ指標交易策略](<https://www.mitrade.com/zh/insights/others/technical-analysis/kdj-0526>)

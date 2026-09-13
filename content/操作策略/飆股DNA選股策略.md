@@ -1,6 +1,8 @@
 ---
 title: "飆股DNA選股策略"
 category: "操作策略"
+raw_files:
+- raw/2026-05-07/飆股DNA選股策略雙成長創新高4步籌碼SOP.md
 ---
 
 # 飆股DNA選股策略
@@ -89,4 +91,4 @@ category: "操作策略"
 
 ## 來源
 
-- [飆股DNA選股策略：雙成長+創新高的4步籌碼SOP](../../raw/2026-05-07/飆股DNA選股策略雙成長創新高4步籌碼SOP.md)
+- [飆股DNA選股策略：雙成長+創新高的4步籌碼SOP](<https://efrontrade.com/2026/01/growth-stock-dna-complete-guide-taiwan.html>)

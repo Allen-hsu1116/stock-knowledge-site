@@ -2,6 +2,8 @@
 category: "風險管理"
 title: Ulcer Index 潰瘍指數與 Martin Ratio
 date: 2026-06-13
+raw_files:
+- raw/2026-06-13/StockCharts-Ulcer-Index.md
 ---
 
 # Ulcer Index 潰瘍指數與 Martin Ratio
@@ -86,4 +88,4 @@ Martin Ratio = 超額報酬 / Ulcer Index
 
 ## 來源
 
-- [Ulcer Index - StockCharts ChartSchool](../../raw/2026-06-13/StockCharts-Ulcer-Index.md)
+- [Ulcer Index - StockCharts ChartSchool](<https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/ulcer-index>)

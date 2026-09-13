@@ -1,6 +1,8 @@
 ---
 title: "資產配置策略比較Asset-Allocation-Comparison"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/投資組合風險審計五大策略回測與隱藏成本.md
 ---
 
 # 資產配置策略比較Asset-Allocation-Comparison
@@ -107,4 +109,4 @@ category: "風險管理"
 
 ## 來源
 
-- [2026投資策略指南：5大資產配置實戰回測 - FM Studio](../../raw/2026-05-15/投資組合風險審計五大策略回測與隱藏成本.md)
+- [2026投資策略指南：5大資產配置實戰回測 - FM Studio](<https://fmstudio.blog/investment-strategy-guide-2026/>)

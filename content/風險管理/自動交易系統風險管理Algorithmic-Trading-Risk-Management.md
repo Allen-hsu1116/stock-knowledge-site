@@ -2,6 +2,9 @@
 title: "自動交易系統風險管理Algorithmic-Trading-Risk-Management"
 category: "風險管理"
 date: 2026-05-15
+raw_files:
+- raw/2026-05-15/自動交易風險管理教學.md
+- raw/2026-05-15/停止EA程式交易的判斷基準.md
 ---
 
 # 自動交易系統風險管理Algorithmic-Trading-Risk-Management
@@ -127,5 +130,5 @@ date: 2026-05-15
 
 ## 來源
 
-- [自動交易風險管理教學 - AI Trading Academy](../../raw/2026-05-15/自動交易風險管理教學.md)
-- [停止自動程式交易EA時的判斷基準 - OANDA Lab](../../raw/2026-05-15/停止EA程式交易的判斷基準.md)
+- [自動交易風險管理教學 - AI Trading Academy](<https://aitrading.academy/%E8%87%AA%E5%8B%95%E4%BA%A4%E6%98%93-%E9%A2%A8%E9%9A%AA%E7%AE%A1%E7%90%86-%E6%95%99%E5%AD%B8%EF%BC%9A%E5%A6%82%E4%BD%95%E9%99%8D%E4%BD%8E%E9%A2%A8%E9%9A%AA%E4%B8%A6%E6%8F%90%E9%AB%98%E7%9B%88%E5%88%A9/>)
+- [停止自動程式交易EA時的判斷基準 - OANDA Lab](<https://www.oanda.com/bvi-ft/lab-education/ea_trading/ea_stop/>)

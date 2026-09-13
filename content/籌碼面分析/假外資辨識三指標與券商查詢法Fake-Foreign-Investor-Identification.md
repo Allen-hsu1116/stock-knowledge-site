@@ -1,6 +1,8 @@
 ---
 title: "假外資辨識三指標與券商查詢法Fake-Foreign-Investor-Identification"
 category: "籌碼面分析"
+raw_files:
+- raw/2026-05-20/假外資辨識三指標與券商查詢法完整解析.md
 ---
 
 # 假外資辨識三指標與券商查詢法Fake-Foreign-Investor-Identification
@@ -75,4 +77,4 @@ category: "籌碼面分析"
 
 ## 來源
 
-- [假外資辨識三指標與券商查詢法完整解析](../../raw/2026-05-20/假外資辨識三指標與券商查詢法完整解析.md)
+- [假外資辨識三指標與券商查詢法完整解析](<https://blog.wistock.ai/wistalk/see-through-taiwan-fake-foreign-investors-three-indicators/>)

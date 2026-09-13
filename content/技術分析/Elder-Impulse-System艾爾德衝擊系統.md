@@ -2,6 +2,8 @@
 category: "技術分析"
 title: Elder Impulse System 艾爾德衝擊系統
 date: 2026-05-18
+raw_files:
+- raw/2026-05-18/Elder-Impulse-System.md
 ---
 
 # Elder Impulse System 艾爾德衝擊系統
@@ -101,4 +103,4 @@ Elder 名言：**「進場謹慎、出場快速」**（Enter cautiously, exit fa
 
 ## 來源
 
-- [Elder Impulse System - StockCharts ChartSchool](../../raw/2026-05-18/Elder-Impulse-System.md)
+- [Elder Impulse System - StockCharts ChartSchool](<https://chartschool.stockcharts.com/table-of-contents/chart-analysis/chart-types/elder-impulse-system>)

@@ -1,6 +1,9 @@
 ---
 title: "趨勢反轉判斷Trend-Reversal"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/趨勢反轉5種核心要領-Winsmart.md
+- raw/2026-05-18/K線圖教學全攻略2026-E大.md
 ---
 
 # 趨勢反轉判斷Trend-Reversal
@@ -98,5 +101,5 @@ RSI指標用於判斷市場是否處於超買或超賣狀態：
 
 ## 來源
 
-- [趨勢反轉判斷的5種核心要領 - Winsmart](../../raw/2026-05-18/趨勢反轉5種核心要領-Winsmart.md)
-- [K線圖教學全攻略：2026年從入門到精通 - E大成長股投資筆記](../../raw/2026-05-18/K線圖教學全攻略2026-E大.md)
+- [趨勢反轉判斷的5種核心要領 - Winsmart](<https://winsmart.tw/en/trading_knowledge/%E8%B6%A8%E5%8B%A2%E5%8F%8D%E8%BD%89/>)
+- [K線圖教學全攻略：2026年從入門到精通 - E大成長股投資筆記](<https://efrontrade.com/2026/05/k-line-pattern-complete-guide-2026.html>)

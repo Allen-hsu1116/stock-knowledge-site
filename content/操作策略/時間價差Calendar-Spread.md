@@ -1,6 +1,10 @@
 ---
 title: "時間價差Calendar Spread"
 category: "操作策略"
+raw_files:
+- raw/2026-04-30/OP凱文-選擇權時間價差Calendar-Spread.md
+- raw/2026-04-30/勳仔-日曆價差Calendar-Spread兩個訣竅.md
+- raw/2026-04-30/統一期貨-買進時間價差.md
 ---
 
 # 時間價差Calendar Spread
@@ -85,6 +89,6 @@ Sell 1週後到期 16500 Call，收30點；Buy 2週後到期 16500 Call，付55�
 - [[選擇權四大基本策略]]
 
 ## 來源
-- [OP凱文 - 選擇權策略：時間價差或稱為水平價差(Calendar Spread)](../../raw/2026-04-30/OP凱文-選擇權時間價差Calendar-Spread.md)
-- [勳仔 - 選擇權日曆價差(Calendar Spread)策略的2個應用小訣竅](../../raw/2026-04-30/勳仔-日曆價差Calendar-Spread兩個訣竅.md)
-- [統一期貨 - 選擇權策略-買進時間價差](../../raw/2026-04-30/統一期貨-買進時間價差.md)
+- [OP凱文 - 選擇權策略：時間價差或稱為水平價差(Calendar Spread)](<https://opkevin.cc/options-calendar-spread/>)
+- [勳仔 - 選擇權日曆價差(Calendar Spread)策略的2個應用小訣竅](<https://shiuncorner.com/2023/10/27/2tips_for_calendar_spread/>)
+- [統一期貨 - 選擇權策略-買進時間價差](<https://www.pfcf.com.tw/product/detail/978>)

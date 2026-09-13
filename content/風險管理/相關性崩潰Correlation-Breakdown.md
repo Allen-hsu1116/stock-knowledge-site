@@ -1,6 +1,8 @@
 ---
 title: "相關性崩潰 Correlation Breakdown"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/相關性崩潰Correlation-Breakdown.md
 ---
 
 # 相關性崩潰 Correlation Breakdown
@@ -178,9 +180,9 @@ VIX飆升時，個股之間的相關性急劇上升。這是因為VIX反映了�
 
 ## 來源
 
-- [分散投資 - MBA智库百科](../../raw/2026-05-08/相關性崩潰Correlation-Breakdown.md)
-- [系統性風險 - MBA智库百科](../../raw/2026-05-08/相關性崩潰Correlation-Breakdown.md)
-- [相關係數 - MBA智库百科](../../raw/2026-05-08/相關性崩潰Correlation-Breakdown.md)
+- 分散投資 - MBA智库百科（原始來源：[1](<https://wiki.mbalib.com/zh-tw/分散投资>)、[2](<https://wiki.mbalib.com/zh-tw/系统性风险>)、[3](<https://wiki.mbalib.com/zh-tw/相关系数>)）
+- 系統性風險 - MBA智库百科（原始來源：[1](<https://wiki.mbalib.com/zh-tw/分散投资>)、[2](<https://wiki.mbalib.com/zh-tw/系统性风险>)、[3](<https://wiki.mbalib.com/zh-tw/相关系数>)）
+- 相關係數 - MBA智库百科（原始來源：[1](<https://wiki.mbalib.com/zh-tw/分散投资>)、[2](<https://wiki.mbalib.com/zh-tw/系统性风险>)、[3](<https://wiki.mbalib.com/zh-tw/相关系数>)）
 - Longin & Solnik (2001). "Extreme Correlation of International Equity Markets"
 - Ang & Chen (2002). "Asymmetric Correlations of Equity Portfolios"
 - Forbes & Rigobon (2002). "No Contagion, Only Interdependence: Measuring Stock Market Comovements"

@@ -1,6 +1,8 @@
 ---
 title: "營業現金流對淨利比判斷盈餘品質 Operating Cash Flow to Net Income Ratio"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/營業現金流對淨利比判斷盈餘品質.md
 ---
 
 # 營業現金流對淨利比判斷盈餘品質 Operating Cash Flow to Net Income Ratio
@@ -100,4 +102,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [營業現金流對淨利比判斷盈餘品質](../../raw/2026-05-19/營業現金流對淨利比判斷盈餘品質.md)
+- 營業現金流對淨利比判斷盈餘品質（本機留存素材，未公開全文；原始網址待核對）

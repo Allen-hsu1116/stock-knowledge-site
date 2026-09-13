@@ -1,6 +1,8 @@
 ---
 title: "投資風險管理系統框架Risk-Management-System-Framework"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/風險管理策略完整指南-5大風險分散方法與4步驟建立投資風險控制系統.md
 ---
 
 # 投資風險管理系統框架Risk-Management-System-Framework
@@ -131,4 +133,4 @@ category: "風險管理"
 
 ## 來源
 
-- [風險管理策略完整指南](../../raw/2026-05-15/風險管理策略完整指南-5大風險分散方法與4步驟建立投資風險控制系統.md)
+- [風險管理策略完整指南](<https://chmfia.org/risk-management-strategy-guide-2026/>)

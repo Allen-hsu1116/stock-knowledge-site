@@ -1,6 +1,9 @@
 ---
 title: "KD 指標隨機指標"
 category: "技術分析"
+raw_files:
+- raw/2026-05-10/KD指標MBA智庫.md
+- raw/2026-05-18/KD指標實戰攻略參數調整與搭配-OANDA.md
 ---
 
 # KD 指標隨機指標
@@ -93,5 +96,5 @@ category: "技術分析"
 - [[KDJ指標與J值實戰]] — KD 的升級版，J 值提供更靈敏的轉折預警
 
 ## 來源
-- [KD指標MBA智庫](../../raw/2026-05-10/KD指標MBA智庫.md)
-- [KD指標實戰攻略（OANDA）](../../raw/2026-05-18/KD指標實戰攻略參數調整與搭配-OANDA.md)
+- [KD指標MBA智庫](<https://wiki.mbalib.com/zh-tw/KD指標>)
+- [KD指標實戰攻略（OANDA）](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/use_kd/>)

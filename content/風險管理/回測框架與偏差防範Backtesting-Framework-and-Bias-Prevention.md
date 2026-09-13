@@ -1,6 +1,8 @@
 ---
 title: "回測框架與偏差防範"
 category: "風險管理"
+raw_files:
+- raw/2026-05-02/交易策略開發流程與回測框架.md
 ---
 
 # 回測框架與偏差防範
@@ -114,6 +116,6 @@ category: "風險管理"
 
 ## 來源
 
-- [交易策略開發流程與回測框架](../../raw/2026-05-02/交易策略開發流程與回測框架.md)
+- 交易策略開發流程與回測框架（原始來源：[1](<https://seekingalpha-tainan.blogspot.com/2016/11/blog-post.html>)、[2](<https://mbrenndoerfer.com/writing/backtesting-trading-strategies-simulation-frameworks>)、[3](<https://rich01.com/what-is-backtesting/>)）
 - [Backtesting & Simulation Frameworks - Michael Brenndoerfer](https://mbrenndoerfer.com/writing/backtesting-trading-strategies-simulation-frameworks)
 - [回測是什麼？為什麼需要回測？- Mr.Market](https://rich01.com/what-is-backtesting/)

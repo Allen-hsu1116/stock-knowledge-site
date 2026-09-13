@@ -1,6 +1,9 @@
 ---
 title: "Walk-Forward Analysis 滾動前進驗證"
 category: "操作策略"
+raw_files:
+- raw/2026-05-10/Walk-Forward-Optimization前向優化.md
+- raw/2026-05-02/交易策略開發流程與回測框架.md
 ---
 
 # Walk-Forward Analysis 滾動前進驗證
@@ -196,5 +199,5 @@ $$WFE = \frac{\text{樣本外年化報酬}}{\text{樣本內年化報酬}} \times
 
 ## 來源
 
-- [Walk Forward Optimization 讓回測與實戰永不脫節 - 老余的智能顧投](../../raw/2026-05-10/Walk-Forward-Optimization前向優化.md)
-- [回測框架與偏差防範](../../raw/2026-05-02/交易策略開發流程與回測框架.md)
+- [Walk Forward Optimization 讓回測與實戰永不脫節 - 老余的智能顧投](<https://laoyulaoyu.com/index.php/2025/02/10/交易大神都在用！walk-forward优化，让你的回测与实战永不脱节/>)
+- 回測框架與偏差防範（原始來源：[1](<https://seekingalpha-tainan.blogspot.com/2016/11/blog-post.html>)、[2](<https://mbrenndoerfer.com/writing/backtesting-trading-strategies-simulation-frameworks>)、[3](<https://rich01.com/what-is-backtesting/>)）

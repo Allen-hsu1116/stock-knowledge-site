@@ -1,6 +1,9 @@
 ---
 title: "操作風險 Operational Risk"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/操作風險Operational-Risk全面指南.md
+- raw/2026-05-01/胖手指與閃崩Fat-Finger-and-Flash-Crash.md
 ---
 
 # 操作風險 Operational Risk
@@ -69,5 +72,5 @@ category: "風險管理"
 
 ## 來源
 
-- [什麼是操作風險？從定義、例子到管理的全面指南](../../raw/2026-05-01/操作風險Operational-Risk全面指南.md)
-- [胖手指是什麼？閃崩又是什麼？](../../raw/2026-05-01/胖手指與閃崩Fat-Finger-and-Flash-Crash.md)
+- [什麼是操作風險？從定義、例子到管理的全面指南](<https://fmstudio.blog/what-is-oprisk-guide-2025/>)
+- [胖手指是什麼？閃崩又是什麼？](<https://rich01.com/fat-finger-error/>)

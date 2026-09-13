@@ -1,6 +1,9 @@
 ---
 title: "當沖選股策略 Day Trading Stock Selection"
 category: "操作策略"
+raw_files:
+- raw/2026-05-14/當沖選股3必要6注意-市場先生.md
+- raw/2026-05-14/當沖八大步驟建立短線策略-玉山證券.md
 ---
 
 # 當沖選股策略 Day Trading Stock Selection
@@ -109,5 +112,5 @@ category: "操作策略"
 
 ## 來源
 
-- [當沖選股的3個必要 & 6個注意 - 市場先生](../../raw/2026-05-14/當沖選股3必要6注意-市場先生.md)
-- [當沖零基礎八大步驟 - 玉山證券](../../raw/2026-05-14/當沖八大步驟建立短線策略-玉山證券.md)
+- [當沖選股的3個必要 & 6個注意 - 市場先生](<https://rich01.com/day-trade-6-3/>)
+- [當沖零基礎八大步驟 - 玉山證券](<https://www.esunsec.com.tw/article/post/208>)

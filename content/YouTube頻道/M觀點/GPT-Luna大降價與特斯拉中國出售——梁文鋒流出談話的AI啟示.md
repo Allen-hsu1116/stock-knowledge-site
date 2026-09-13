@@ -17,7 +17,7 @@ title: "GPT Luna 大降價與特斯拉中國出售——梁文鋒流出談話的
 
 ### 1. GPT-5.6 Luna 降價 80% 顛覆前沿模型市場
 
-OpenAI 將 GPT-5.6 Luna 版本 API 價格砍 80%（打 2 折），Cost Per Task 僅 $0.07，是 Meta MuSpark 1.1 的四分之一、Grok 4.5 的六分之一、Gemini 3.6 Flash 的九分之一。Luna 雖然是 GPT-5.6 最低版本，但實力已摸到前沿模型尾端（AAI 得分 50-53 分區間），等同 Meta 拼了一年的 MuSpark 1.1 和一個月前最強開源模型 GLM 5.2。降價後 Luna 執行簡單任務的成本只有 Terra 版的十分之一，讓 Terra 位置尷尬，也直接打死其他第三梯隊模型。唯一能競爭的是 DeepSeek V4 Flash，成本還只有 Luna 的一半。
+OpenAI 將 GPT-5.6 Luna 版本 API 價格砍 80%（打 2 折），Cost Per Task 僅 \$0.07，是 Meta MuSpark 1.1 的四分之一、Grok 4.5 的六分之一、Gemini 3.6 Flash 的九分之一。Luna 雖然是 GPT-5.6 最低版本，但實力已摸到前沿模型尾端（AAI 得分 50-53 分區間），等同 Meta 拼了一年的 MuSpark 1.1 和一個月前最強開源模型 GLM 5.2。降價後 Luna 執行簡單任務的成本只有 Terra 版的十分之一，讓 Terra 位置尷尬，也直接打死其他第三梯隊模型。唯一能競爭的是 DeepSeek V4 Flash，成本還只有 Luna 的一半。
 
 ### 2. AI 公司賣 Token 是高毛利，不是虧錢賣
 
@@ -40,7 +40,7 @@ DeepSeek 創辦人梁文鋒在增資說明會的閉門談話流出，幾個重�
 
 ## 實戰重點
 
-- **AI 模型進入價格戰時代**：除 Tier 1 前沿模型外，其他模型都在討論價格，CP 值成為選擇核心。GPT-5.6 Luna 降價後 Cost Per Task $0.07，是最有競爭力的低階前沿模型
+- **AI 模型進入價格戰時代**：除 Tier 1 前沿模型外，其他模型都在討論價格，CP 值成為選擇核心。GPT-5.6 Luna 降價後 Cost Per Task \$0.07，是最有競爭力的低階前沿模型
 - **特斯拉中國業務切割是 SpaceX 併購的前置條件**：關注特斯拉中國業務動向，可能以賣工廠＋授權模式處理
 - **DeepSeek V4 Flash 成本只有 GPT-5.6 Luna 一半**：中國 AI 低成本路線持續領先，但使用中國模型有地緣政治考量
 - **華為晶片效率只有輝達的四分之一**：4 張華為卡才抵 1 張輝達卡，第三年後經濟效率更差

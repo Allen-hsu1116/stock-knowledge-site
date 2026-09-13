@@ -1,6 +1,11 @@
 ---
 title: "VIX恐慌指數實戰判讀"
 category: "風險管理"
+raw_files:
+- raw/2026-05-17/VIX恐慌指數實戰判讀-統一期貨.md
+- raw/2026-05-17/VIX恐慌指數實戰指南-OANDA.md
+- raw/2026-05-17/VIX投資法全攻略-雷司紀.md
+- raw/2026-05-17/台指VIX基礎知識-康和期貨與期交所.md
 ---
 
 # VIX恐慌指數實戰判讀
@@ -175,7 +180,7 @@ VIX最重要的特性之一就是均值回歸：
 
 ## 來源
 
-- [選擇權入門-認識隱含波動率及VIX指數 - 統一期貨](../../raw/2026-05-17/VIX恐慌指數實戰判讀-統一期貨.md)
-- [VIX恐慌指數實戰指南 - OANDA](../../raw/2026-05-17/VIX恐慌指數實戰指南-OANDA.md)
-- [VIX投資法全攻略 - 雷司紀](../../raw/2026-05-17/VIX投資法全攻略-雷司紀.md)
-- [台指VIX基礎知識 - 康和期貨與期交所](../../raw/2026-05-17/台指VIX基礎知識-康和期貨與期交所.md)
+- [選擇權入門-認識隱含波動率及VIX指數 - 統一期貨](<https://www.pfcf.com.tw/product/detail/2923>)
+- [VIX恐慌指數實戰指南 - OANDA](<https://www.oanda.com/bvi-ft/lab-education/dictionary/vix/>)
+- [VIX投資法全攻略 - 雷司紀](<https://www.rayskyinvest.com/17162/what-is-vix-vixvolatility-index>)
+- 台指VIX基礎知識 - 康和期貨與期交所（原始來源：[1](<https://dolag.com.tw/>)、[2](<https://www.taifex.com.tw/cht/7/vixQA>)）

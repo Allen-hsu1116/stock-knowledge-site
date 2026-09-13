@@ -1,6 +1,8 @@
 ---
 title: "專業復盤三層次Professional-Review-Three-Levels"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/專業交易員復盤心法.md
 ---
 
 # 專業復盤三層次Professional-Review-Three-Levels
@@ -104,4 +106,4 @@ J Law 的真實案例：花幾個月系統復盤上千筆交易後，震驚發�
 
 ## 來源
 
-- [專業交易員復盤心法](../../raw/2026-05-15/專業交易員復盤心法.md)
+- [專業交易員復盤心法](<https://www.jlawstock.com/blog/20250516>)

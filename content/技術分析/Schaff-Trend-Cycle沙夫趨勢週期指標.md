@@ -2,6 +2,8 @@
 category: "技術分析"
 title: Schaff Trend Cycle 沙夫趨勢週期指標
 date: 2026-05-18
+raw_files:
+- raw/2026-05-18/Schaff-Trend-Cycle-STC.md
 ---
 
 # Schaff Trend Cycle 沙夫趨勢週期指標
@@ -100,4 +102,4 @@ Schaff Trend Cycle（STC）由 Doug Schaff 在 1990 年代開發，核心觀察�
 
 ## 來源
 
-- [Schaff Trend Cycle Indicator Explained - LiteFinance](../../raw/2026-05-18/Schaff-Trend-Cycle-STC.md)
+- [Schaff Trend Cycle Indicator Explained - LiteFinance](<https://www.litefinance.org/blog/for-beginners/best-technical-indicators/schaff-trend-cycle/>)

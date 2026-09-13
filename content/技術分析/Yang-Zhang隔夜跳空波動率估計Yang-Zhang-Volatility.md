@@ -4,6 +4,8 @@ category: "技術分析"
 date: 2026-08-31
 source_date: 2026-08-31
 status: raw_linked
+raw_files:
+- raw/2026-08-31/Yang-Zhang隔夜跳空波動率來源學習紀錄.md
 ---
 
 # Yang-Zhang隔夜跳空波動率估計
@@ -89,7 +91,7 @@ $$
 
 ## 來源
 
-- [Yang-Zhang隔夜跳空波動率來源學習紀錄](../../raw/2026-08-31/Yang-Zhang隔夜跳空波動率來源學習紀錄.md)
+- Yang-Zhang隔夜跳空波動率來源學習紀錄（本機留存素材，未公開全文；原始網址待核對）
 - [Yang與Zhang（2000）：Drift-Independent Volatility Estimation Based on High, Low, Open, and Close Prices](https://doi.org/10.1086/209650)
 - [RePEc論文摘要](https://ideas.repec.org/a/ucp/jnlbus/v73y2000i3p477-91.html)
 - [CRAN TTR volatility文件](https://search.r-project.org/CRAN/refmans/TTR/html/volatility.html)

@@ -1,6 +1,9 @@
 ---
 title: "股價營收比P/S-Ratio市銷率"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-12/股價營收比PS-Ratio市場先生.md
+- raw/2026-05-12/股價營收比PS盈智iData.md
 ---
 
 # 股價營收比P/S-Ratio市銷率
@@ -125,5 +128,5 @@ P/S = 股價 ÷ 每股營業收入
 
 ## 來源
 
-- [股價營收比是什麼？股價營收比和本益比差在哪？ - 市場先生](../../raw/2026-05-12/股價營收比PS-Ratio市場先生.md)
-- [股價營收比是什麼？高效掌握市銷率(P/S)估值秘訣 - 盈智 iData](../../raw/2026-05-12/股價營收比PS盈智iData.md)
+- [股價營收比是什麼？股價營收比和本益比差在哪？ - 市場先生](<https://rich01.com/what-is-ps-ratio/>)
+- [股價營收比是什麼？高效掌握市銷率(P/S)估值秘訣 - 盈智 iData](<https://intelligentdata.cc/%E8%82%A1%E5%83%B9%E7%87%9F%E6%94%B6%E6%AF%94-%E6%98%AF%E4%BB%80%E9%BA%BC/>)

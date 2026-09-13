@@ -1,6 +1,11 @@
 ---
 title: "波特五力分析 Porter's Five Forces"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-02/五力分析Porter-Five-Forces-hububble.md
+- raw/2026-05-02/波特五力分析Porters-Five-Forces-udn.md
+- raw/2026-05-12/波特五力分析如何形塑策略-哈佛商業評論.md
+- raw/2026-05-12/五力分析Porter-Five-Forces實戰入門-Hububble.md
 ---
 
 # 波特五力分析 Porter's Five Forces
@@ -165,7 +170,7 @@ Porter精準列出削價競爭的四大條件：
 
 ## 來源
 
-- [五力分析（Porter's Five Force）是什麼？該怎麼做？一次搞懂！](../../raw/2026-05-02/五力分析Porter-Five-Forces-hububble.md)
-- [波特五力分析 Porter's Five Forces - Hsu's商管筆記](../../raw/2026-05-02/波特五力分析Porters-Five-Forces-udn.md)
-- [波特五力分析如何形塑策略（2008年版新論）- 哈佛商業評論](../../raw/2026-05-12/波特五力分析如何形塑策略-哈佛商業評論.md)
-- [五力分析（Porter's Five Forces）實戰入門 - Hububble](../../raw/2026-05-12/五力分析Porter-Five-Forces實戰入門-Hububble.md)
+- [五力分析（Porter's Five Force）是什麼？該怎麼做？一次搞懂！](<https://www.hububble.co/blog/porters-five-forces>)
+- [波特五力分析 Porter's Five Forces - Hsu's商管筆記](<https://blog.udn.com/HsuChunYi/46425941>)
+- [波特五力分析如何形塑策略（2008年版新論）- 哈佛商業評論](<https://www.hbrtaiwan.com/article/10616/the-five-competitive-forces-that-shape-strategy>)
+- [五力分析（Porter's Five Forces）實戰入門 - Hububble](<https://www.hububble.co/blog/porters-five-forces>)

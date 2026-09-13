@@ -1,6 +1,9 @@
 ---
 title: "威廉碎形 Williams Fractal"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/鱷魚線Alligator-Indicator實戰四階段與碎形進場.md
+- raw/2026-05-16/鱷魚線Alligator指標與碎形交易.md
 ---
 
 # 威廉碎形 Williams Fractal
@@ -112,8 +115,8 @@ category: "技術分析"
 
 ## 來源
 
-- [鱷魚線(Alligator)詳解2025](../../raw/2026-05-04/鱷魚線Alligator-Indicator實戰四階段與碎形進場.md)
+- [鱷魚線(Alligator)詳解2025](<https://www.ebc.com/zh/jinrong/277057.html>)
 - [什麼是鱷魚線技術指標？-大昌期貨](https://www.dcnfutures.tw/news/details.php?id=2052)
 - [MoneyDJ 鱷魚線解釋頁](https://concords.moneydj.com/z/glossary/glexp_5140.djhtm)
 - [Fractals trading and how to use the Alligator - Tradeciety](https://tradeciety.com/fractals-trading-use-alligator-williams-chaos-theory)
-- [鱷魚線Alligator指標與碎形交易](../../raw/2026-05-16/鱷魚線Alligator指標與碎形交易.md)
+- 鱷魚線Alligator指標與碎形交易（原始來源：[1](<https://tradeciety.com/fractals-trading-use-alligator-williams-chaos-theory,>)、[2](<https://concords.moneydj.com/z/glossary/glexp_5140.djhtm,>)、[3](<https://www.dcnfutures.tw/news/details.php?id=2052,>)、[4](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/moving_average-displaced/,>)、[5](<https://www.fx110.com.tw/special/9584>)）

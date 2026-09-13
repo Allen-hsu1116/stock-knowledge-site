@@ -1,6 +1,8 @@
 ---
 title: "籌碼面分析常見誤區與陷阱 Chip Analysis Pitfalls"
 category: "籌碼面分析"
+raw_files:
+- raw/2026-05-13/籌碼面分析常見誤區與實戰情境.md
 ---
 
 # 籌碼面分析常見誤區與陷阱 Chip Analysis Pitfalls
@@ -133,4 +135,4 @@ category: "籌碼面分析"
 
 ## 來源
 
-- [籌碼面分析常見誤區與實戰情境](../../raw/2026-05-13/籌碼面分析常見誤區與實戰情境.md)
+- [籌碼面分析常見誤區與實戰情境](<https://www.oanda.com/bvi-ft/lab-education/invest_us_stock/chip-analysis/>)

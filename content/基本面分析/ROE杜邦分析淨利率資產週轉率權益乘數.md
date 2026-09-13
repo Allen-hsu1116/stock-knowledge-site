@@ -1,6 +1,13 @@
 ---
 title: "ROE杜邦分析淨利率資產週轉率權益乘數"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/股東權益報酬率ROE.md
+- raw/2026-05-12/ROE選股實戰框架-EBC.md
+- raw/2026-05-12/五階層進階杜邦分析-阿勳.md
+- raw/2026-05-16/杜邦分析StockFeel.md
+- raw/2026-05-16/杜邦方程式CMoney.md
+- raw/2026-05-16/杜邦分析選股FinLab.md
 ---
 
 # ROE杜邦分析淨利率資產週轉率權益乘數
@@ -235,9 +242,9 @@ ROE可以進一步拆解為四大影響因素：
 
 ## 來源
 
-- [股東權益報酬率](../../raw/2026-05-05/股東權益報酬率ROE.md)
-- [ROE選股實戰框架-EBC](../../raw/2026-05-12/ROE選股實戰框架-EBC.md)
-- [五階層進階杜邦分析-阿勳](../../raw/2026-05-12/五階層進階杜邦分析-阿勳.md)
-- [杜邦分析StockFeel](../../raw/2026-05-16/杜邦分析StockFeel.md)
-- [杜邦方程式CMoney](../../raw/2026-05-16/杜邦方程式CMoney.md)
-- [杜邦分析選股FinLab](../../raw/2026-05-16/杜邦分析選股FinLab.md)
+- [股東權益報酬率](<https://wiki.mbalib.com/zh-tw/股東權益報酬率>)
+- [ROE選股實戰框架-EBC](<https://www.ebc.com/zh/jinrong/295155.html>)
+- [五階層進階杜邦分析-阿勳](<https://cmnews.com.tw/article/stockmantalk-e7d11439-d8cb-11ef-8838-15e15af14cc6>)
+- [杜邦分析StockFeel](<https://www.stockfeel.com.tw/%E6%9D%9C%E9%82%A6%E5%88%86%E6%9E%90-%E6%9D%9C%E9%82%A6%E5%88%86%E6%9E%90%E6%B3%95-%E6%9D%9C%E9%82%A6%E6%96%B9%E7%A8%8B%E5%BC%8F/>)
+- [杜邦方程式CMoney](<https://www.cmoney.tw/notes/note-detail.aspx?nid=17395>)
+- [杜邦分析選股FinLab](<https://www.finlab.tw/%E7%94%A8%E6%9D%9C%E9%82%A6%E5%88%86%E6%9E%90%E5%8A%A0%E5%BC%B7%E4%BD%A0%E7%9A%84%E9%81%B8%E8%82%A1%E6%8A%80%E5%B7%A7%EF%BC%88%E4%B8%8A%EF%BC%89/>)

@@ -1,6 +1,9 @@
 ---
 title: "流動性幻覺 Liquidity Illusion"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/Liquidity-Illusion-False-Security-Market-Crashes.md
+- raw/2026-05-01/Flash-Crash-Mechanics-Sudden-Market-Drops.md
 ---
 
 # 流動性幻覺 Liquidity Illusion
@@ -72,5 +75,5 @@ category: "風險管理"
 - [[系統性風險與非系統性風險|黑天鵝效應與反脆弱]]
 
 ## 來源
-- [Liquidity Illusion: How Liquidity Illusion Creates False Sense of Security and Leads to Market Crashes](../../raw/2026-05-01/Liquidity-Illusion-False-Security-Market-Crashes.md)
-- [What Causes a Flash Crash? Inside the Mechanics of Sudden Market Drops](../../raw/2026-05-01/Flash-Crash-Mechanics-Sudden-Market-Drops.md)
+- [Liquidity Illusion: How Liquidity Illusion Creates False Sense of Security and Leads to Market Crashes](<https://fastercapital.com/content/Liquidity-Illusion--How-Liquidity-Illusion-Creates-False-Sense-of-Security-and-Leads-to-Market-Crashes.html>)
+- [What Causes a Flash Crash? Inside the Mechanics of Sudden Market Drops](<https://bookmap.com/blog/what-causes-a-flash-crash-inside-the-mechanics-of-sudden-market-drops>)

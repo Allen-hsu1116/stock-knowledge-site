@@ -2,6 +2,8 @@
 category: "基本面分析"
 title: "CROIC 現金投入資本報酬率"
 date: 2026-06-16
+raw_files:
+- raw/2026-06-16/CROIC-ValueSense.md
 ---
 
 # CROIC 現金投入資本報酬率
@@ -70,4 +72,4 @@ CROIC 不能只看高低，要和資金成本比較：
 
 ## 來源
 
-- [What is Cash Return on Invested Capital (CROIC)?](../../raw/2026-06-16/CROIC-ValueSense.md)
+- [What is Cash Return on Invested Capital (CROIC)?](<https://blog.valuesense.io/croic/>)

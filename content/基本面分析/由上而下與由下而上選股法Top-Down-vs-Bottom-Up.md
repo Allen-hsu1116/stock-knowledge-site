@@ -1,6 +1,9 @@
 ---
 title: "由上而下與由下而上選股法Top-Down-vs-Bottom-Up"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-16/由下而上由上而下投資策略市場先生.md
+- raw/2026-05-16/產業分析與產業生命週期投資學筆記.md
 ---
 
 # 由上而下與由下而上選股法Top-Down-vs-Bottom-Up
@@ -92,5 +95,5 @@ category: "基本面分析"
 
 ## 來源
 
-- [由下而上由上而下投資策略（市場先生）](../../raw/2026-05-16/由下而上由上而下投資策略市場先生.md)
-- [產業分析與產業生命週期投資學筆記](../../raw/2026-05-16/產業分析與產業生命週期投資學筆記.md)
+- [由下而上由上而下投資策略（市場先生）](<https://rich01.com/bottom-up-and-top-down/>)
+- [產業分析與產業生命週期投資學筆記](<https://theriseofdavid.github.io/2020/12/06/NTUT_note/investment_stock_value_analysis_company_performance/>)

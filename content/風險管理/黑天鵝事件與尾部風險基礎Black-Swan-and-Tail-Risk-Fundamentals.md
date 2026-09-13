@@ -1,6 +1,11 @@
 ---
 title: "黑天鵝事件與尾部風險基礎 Black Swan and Tail Risk Fundamentals"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/黑天鵝事件與尾部風險.md
+- raw/2026-05-08/過度自信偏誤對交易的影響.md
+- raw/2026-05-15/黑天鵝事件是什麼3個策略教你控制風險.md
+- raw/2026-05-15/價值投資遇到黑天鵝事件怎麼辦.md
 ---
 
 # 黑天鵝事件與尾部風險基礎 Black Swan and Tail Risk Fundamentals
@@ -154,8 +159,8 @@ category: "風險管理"
 
 ## 來源
 
-- [黑天鵝事件 - MBA智库百科](../../raw/2026-05-08/黑天鵝事件與尾部風險.md)
-- [尾部風險 - MBA智库百科](../../raw/2026-05-08/黑天鵝事件與尾部風險.md)
-- [過度自信理論 - MBA智库百科](../../raw/2026-05-08/過度自信偏誤對交易的影響.md)
-- [黑天鵝事件是什麼？3個策略教你控制風險 - Smart自學網](../../raw/2026-05-15/黑天鵝事件是什麼3個策略教你控制風險.md)
-- [價值投資遇到黑天鵝事件怎麼辦 - Mr.Market市場先生](../../raw/2026-05-15/價值投資遇到黑天鵝事件怎麼辦.md)
+- 黑天鵝事件 - MBA智库百科（原始來源：[1](<https://wiki.mbalib.com/zh-tw/黑天鹅效应,>)、[2](<https://wiki.mbalib.com/zh-tw/尾部风险>)）
+- 尾部風險 - MBA智库百科（原始來源：[1](<https://wiki.mbalib.com/zh-tw/黑天鹅效应,>)、[2](<https://wiki.mbalib.com/zh-tw/尾部风险>)）
+- [過度自信理論 - MBA智库百科](<https://wiki.mbalib.com/zh-tw/过度自信偏差>)
+- [黑天鵝事件是什麼？3個策略教你控制風險 - Smart自學網](<https://smart.businessweekly.com.tw/Reading/IndepArticle.aspx?id=6016341>)
+- [價值投資遇到黑天鵝事件怎麼辦 - Mr.Market市場先生](<https://rich01.com/blog-post_86-3/>)

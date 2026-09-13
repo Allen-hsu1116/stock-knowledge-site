@@ -2,6 +2,8 @@
 title: RSI鈍化應對策略
 category: 技術分析
 date: 2026-05-18
+raw_files:
+- raw/2026-05-18/RSI鈍化應對策略-MammonAcad.md
 ---
 
 # RSI鈍化應對策略
@@ -98,4 +100,4 @@ date: 2026-05-18
 
 ## 來源
 
-- [RSI鈍化怎麼辦？一篇搞懂RSI指標缺點與3大應對策略（MammonAcad）](../../raw/2026-05-18/RSI鈍化應對策略-MammonAcad.md)
+- [RSI鈍化怎麼辦？一篇搞懂RSI指標缺點與3大應對策略（MammonAcad）](<https://mammonacad.com/rsi-passivation-guide/>)

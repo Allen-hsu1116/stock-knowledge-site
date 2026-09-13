@@ -1,6 +1,17 @@
 ---
 title: "VWAP成交量加權均價"
 category: "技術分析"
+raw_files:
+- raw/2026-05-02/VWAP成交量加權均價-真假突破判斷.md
+- raw/2026-05-02/VWAP三大實戰策略-主力成本線.md
+- raw/2026-05-02/VWAP進階應用-多日VWAP-Anchored-VWAP.md
+- raw/2026-05-04/VWAP進階-真假突破判斷與標準差通道.md
+- raw/2026-05-04/VWAP三大實戰策略-主力成本線.md
+- raw/2026-05-17/VWAP當沖實戰Leo投資教學.md
+- raw/2026-05-17/VWAP成交量加權均價QuantPass.md
+- raw/2026-05-18/VWAP主力成本線3大實戰策略-Bowie.md
+- raw/2026-05-18/VWAP進階法人執行邏輯與真假突破-Leo.md
+- raw/2026-05-18/VWAP進階-自營家Peter.md
 ---
 
 # VWAP成交量加權均價
@@ -136,13 +147,13 @@ VWAP(t) = Σ(Pi × Vi) / Σ(Vi)
 
 ## 來源
 
-- [【當沖進階】主力都在看的指標：VWAP 是什麼？教你 2 招判斷真假突破](../../raw/2026-05-02/VWAP成交量加權均價-真假突破判斷.md)
-- [VWAP指標教學：不只是均線！高手御用「主力成本線」3大實戰策略](../../raw/2026-05-02/VWAP三大實戰策略-主力成本線.md)
-- [20250429 VWAP的介紹](../../raw/2026-05-02/VWAP進階應用-多日VWAP-Anchored-VWAP.md)
-- [【當沖進階】VWAP真假突破與標準差通道（2026-05-04更新）](../../raw/2026-05-04/VWAP進階-真假突破判斷與標準差通道.md)
-- [VWAP主力成本線3大實戰策略（2026-05-04更新）](../../raw/2026-05-04/VWAP三大實戰策略-主力成本線.md)
-- [VWAP當沖實戰Leo投資教學](../../raw/2026-05-17/VWAP當沖實戰Leo投資教學.md)
-- [VWAP成交量加權均價QuantPass](../../raw/2026-05-17/VWAP成交量加權均價QuantPass.md)
-- [VWAP主力成本線3大實戰策略（Bowie錢錢投資日記）](../../raw/2026-05-18/VWAP主力成本線3大實戰策略-Bowie.md)
-- [VWAP進階法人執行邏輯與真假突破（Leo投資教學）](../../raw/2026-05-18/VWAP進階法人執行邏輯與真假突破-Leo.md)
-- [VWAP的介紹 - 自營家Peter](../../raw/2026-05-18/VWAP進階-自營家Peter.md)
+- [【當沖進階】主力都在看的指標：VWAP 是什麼？教你 2 招判斷真假突破](<https://richkpi.com/vwap-app/>)
+- [VWAP指標教學：不只是均線！高手御用「主力成本線」3大實戰策略](<https://bowiemoneydiary.com/2025/11/11/vwap-indicator-strategy-guide/>)
+- [20250429 VWAP的介紹](<https://individual-trader.blogspot.com/2025/04/20250429-vwap.html>)
+- [【當沖進階】VWAP真假突破與標準差通道（2026-05-04更新）](<https://richkpi.com/vwap-app/>)
+- [VWAP主力成本線3大實戰策略（2026-05-04更新）](<https://bowiemoneydiary.com/2025/11/11/vwap-indicator-strategy-guide/>)
+- [VWAP當沖實戰Leo投資教學](<https://richkpi.com/vwap-app/>)
+- [VWAP成交量加權均價QuantPass](<https://quantpass.org/vwap/>)
+- [VWAP主力成本線3大實戰策略（Bowie錢錢投資日記）](<https://bowiemoneydiary.com/2025/11/11/vwap-indicator-strategy-guide/>)
+- [VWAP進階法人執行邏輯與真假突破（Leo投資教學）](<https://richkpi.com/vwap-app/>)
+- [VWAP的介紹 - 自營家Peter](<https://individual-trader.blogspot.com/2025/04/20250429-vwap.html?m=1>)

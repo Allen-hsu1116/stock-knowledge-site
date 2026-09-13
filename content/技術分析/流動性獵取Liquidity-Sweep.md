@@ -1,6 +1,9 @@
 ---
 title: "流動性獵取 Liquidity Sweep"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/SMC基礎ICT交易策略聰明錢流動性訂單塊FVG.md
+- raw/2026-05-11/ICT-Market-Structure-流動性獵取與結構轉變判讀.md
 ---
 
 # 流動性獵取 Liquidity Sweep
@@ -104,5 +107,5 @@ ICT 強調：**Liquidity Raid 是第一要素，Strong Displacement 是第二要
 - [[支撐壓力|支撐壓力]]
 
 ## 來源
-- [SMC基礎ICT交易策略聰明錢流動性訂單塊FVG](../../raw/2026-05-11/SMC基礎ICT交易策略聰明錢流動性訂單塊FVG.md)
-- [ICT-Market-Structure-流動性獵取與結構轉變判讀](../../raw/2026-05-11/ICT-Market-Structure-流動性獵取與結構轉變判讀.md)
+- [SMC基礎ICT交易策略聰明錢流動性訂單塊FVG](<https://homedadpro.com/smart-money-concepts/>)
+- [ICT-Market-Structure-流動性獵取與結構轉變判讀](<https://vocus.cc/article/64e94e59fd89780001e9cd89>)

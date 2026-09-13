@@ -2,6 +2,8 @@
 title: 分形自適應移動平均線 FRAMA
 date: 2026-06-29
 category: "技術分析"
+raw_files:
+- raw/2026-06-29/分形自適應移動平均線FRAMA.md
 ---
 
 # 分形自適應移動平均線 FRAMA
@@ -102,5 +104,5 @@ FRAMA 本身可作為移動停損線：
 
 ## 來源
 
-- [FRAMA - 分形自適應移動平均線](../../raw/2026-06-29/分形自適應移動平均線FRAMA.md)
+- FRAMA - 分形自適應移動平均線（本機留存素材，未公開全文；原始網址待核對）
 - Ehlers, John F. (2005). "FRAMA - Fractal Adaptive Moving Average". Technical Analysis of Stocks & Commodities.

@@ -1,3 +1,12 @@
+---
+title: 台寶Treg免疫耐受與製程平台——臨床進度不等於藥證
+date: '2026-09-09'
+category: YouTube頻道
+source: https://www.youtube.com/watch?v=BJFBQ07grSM
+raw_files:
+- raw/youtube/2026-09-09-weekly-invest.md
+---
+
 # 台寶Treg免疫耐受與製程平台——臨床進度不等於藥證
 
 > 台寶的Treg腎移植抗排斥管線與跨國製程值得追蹤，但諾貝爾獎、同類產品上市和醫學中心合作，都不能跳過自家療效、收案與藥證審查。

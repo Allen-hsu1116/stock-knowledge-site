@@ -1,6 +1,8 @@
 ---
 title: "RSI 相對強弱指標"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/RSI相對強弱指標-市場先生.md
 ---
 
 # RSI 相對強弱指標
@@ -122,4 +124,4 @@ RSI 的运用分為兩種觀點：
 
 ## 來源
 
-- [RSI相對強弱指標（市場先生）](../../raw/2026-05-18/RSI相對強弱指標-市場先生.md)
+- [RSI相對強弱指標（市場先生）](<https://rich01.com/rsi-index-review/>)

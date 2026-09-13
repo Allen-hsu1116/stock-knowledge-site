@@ -3,6 +3,9 @@ title: 預期財務困境成本與最適資本結構 Expected Distress Cost and 
 aliases: [預期財務困境成本, Expected Distress Cost, Financial Distress Cost, 最適資本結構, Optimal Capital Structure]
 category: 基本面分析
 date: 2026-09-01
+raw_files:
+- raw/2026-09-01/Damodaran企業估值成本資本與APV學習紀錄.md
+- raw/2026-09-01/MIT資本結構與財務困境成本學習紀錄.md
 ---
 
 # 預期財務困境成本與最適資本結構 Expected Distress Cost and Optimal Capital Structure
@@ -192,5 +195,5 @@ $$D^*=\arg\max_D V_L(D)$$
 
 ## 來源
 
-- [Damodaran：Firm Valuation—Cost of Capital and APV Approaches](../../raw/2026-09-01/Damodaran企業估值成本資本與APV學習紀錄.md)
-- [MIT Finance Theory II：Capital Structure](../../raw/2026-09-01/MIT資本結構與財務困境成本學習紀錄.md)
+- [Damodaran：Firm Valuation—Cost of Capital and APV Approaches](<https://pages.stern.nyu.edu/~adamodar/pdfiles/valn2ed/ch15.pdf>)
+- MIT Finance Theory II：Capital Structure（原始來源：[1](<https://ocw.mit.edu/courses/15-402-finance-theory-ii-spring-2003/resources/lec8bcapitalstructure3/>)、[2](<https://ocw.mit.edu/courses/15-402-finance-theory-ii-spring-2003/44378851898a10a52d299fe70abd1107_lec8bcapitalstructure3.pdf>)）

@@ -1,6 +1,8 @@
 ---
 title: "固定資產週轉率判讀Fixed-Asset-Turnover"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-12/營運資金週轉率與資產週轉率判讀.md
 ---
 
 # 固定資產週轉率判讀Fixed-Asset-Turnover
@@ -118,4 +120,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [營運資金週轉率與資產週轉率判讀](../../raw/2026-05-12/營運資金週轉率與資產週轉率判讀.md)
+- 營運資金週轉率與資產週轉率判讀（原始來源：[1](<https://rich01.com/waht-is-working-capital-turnover/>)、[2](<https://rich01.com/asset-and-fixed-asset-turnover-ratio/>)、[3](<https://vocus.cc/article/674e351bfd8978000159bb85>)）

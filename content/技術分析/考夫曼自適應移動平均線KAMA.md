@@ -1,6 +1,10 @@
 ---
 title: "考夫曼自適應移動平均線 KAMA"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/KAMA考夫曼自適應均線XQ教學.md
+- raw/2026-05-11/KAMA自適應移動平均線實戰應用與優缺點.md
+- raw/2026-05-11/KAMA考夫曼自適應均線計算方法.md
 ---
 
 # 考夫曼自適應移動平均線 KAMA
@@ -150,6 +154,6 @@ KAMA = KAMA[1] + SC × (Close - KAMA[1])
 
 ## 來源
 
-- [考夫曼自適應均線 (KAMA) - XQ](../../raw/2026-05-11/KAMA考夫曼自適應均線XQ教學.md)
-- [KAMA 自適應移動平均線 - EdgeTrader](../../raw/2026-05-11/KAMA自適應移動平均線實戰應用與優缺點.md)
-- [考夫曼自適應均線計算方法 - 當啷啷](../../raw/2026-05-11/KAMA考夫曼自適應均線計算方法.md)
+- [考夫曼自適應均線 (KAMA) - XQ](<https://www.xq.com.tw/xstrader/考夫曼自適應均線-kaufmans-adaptive-moving-average-kama/>)
+- [KAMA 自適應移動平均線 - EdgeTrader](<https://edgetradertw.com/kama-ama-自適應移動平均線-更有效過濾雜訊/>)
+- [考夫曼自適應均線計算方法 - 當啷啷](<https://www.danglanglang.com/gupiao/2454>)

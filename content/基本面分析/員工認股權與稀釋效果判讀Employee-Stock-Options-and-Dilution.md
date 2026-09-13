@@ -1,6 +1,8 @@
 ---
 title: "員工認股權與稀釋效果判讀 Employee Stock Options and Dilution"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/員工認股權與稀釋效果判讀.md
 ---
 
 # 員工認股權與稀釋效果判讀 Employee Stock Options and Dilution
@@ -83,5 +85,5 @@ category: "基本面分析"
 
 ## 來源
 
-- [員工認股權與稀釋效果判讀](../../raw/2026-05-19/員工認股權與稀釋效果判讀.md)
+- 員工認股權與稀釋效果判讀（本機留存素材，未公開全文；原始網址待核對）
 - IFRS 2、台灣證交法第28-3條及實務知識

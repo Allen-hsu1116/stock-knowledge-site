@@ -2,6 +2,8 @@
 category: "技術分析"
 title: "科波克曲線 Coppock Curve"
 date: 2026-06-15
+raw_files:
+- raw/2026-06-15/科波克曲線Coppock-Curve-StockCharts.md
 ---
 
 # 科波克曲線 Coppock Curve
@@ -66,4 +68,4 @@ date: 2026-06-15
 
 ## 來源
 
-- [StockCharts ChartSchool: Coppock Curve](../../raw/2026-06-15/科波克曲線Coppock-Curve-StockCharts.md)
+- [StockCharts ChartSchool: Coppock Curve](<https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/coppock-curve.md>)

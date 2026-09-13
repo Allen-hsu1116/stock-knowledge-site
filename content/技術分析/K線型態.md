@@ -5,6 +5,10 @@ source: memory
 source_date: 2026-04-29
 status: raw_filled
 raw_file: raw/2026-04-29/K線型態-市場先生.md
+raw_files:
+- raw/2026-04-29/K線型態-市場先生.md
+- raw/2026-05-18/K線圖教學全攻略2026-E大.md
+- raw/2026-05-18/高檔反轉時機掌握-CMoney朱家泓.md
 ---
 
 # K線型態
@@ -122,5 +126,5 @@ raw_file: raw/2026-04-29/K線型態-市場先生.md
 ## 來源
 
 - stock-knowledge.md（2026-04-28 遷移）
-- [K線圖教學全攻略：2026年從入門到精通的型態辨識與實戰策略 - E大成長股投資筆記](../../raw/2026-05-18/K線圖教學全攻略2026-E大.md)
-- [技術分析輕鬆學｜如何掌握高檔反轉時機 - CMoney朱家泓](../../raw/2026-05-18/高檔反轉時機掌握-CMoney朱家泓.md)
+- [K線圖教學全攻略：2026年從入門到精通的型態辨識與實戰策略 - E大成長股投資筆記](<https://efrontrade.com/2026/05/k-line-pattern-complete-guide-2026.html>)
+- [技術分析輕鬆學｜如何掌握高檔反轉時機 - CMoney朱家泓](<https://www.cmoney.tw/notes/note-detail.aspx?nid=741535>)

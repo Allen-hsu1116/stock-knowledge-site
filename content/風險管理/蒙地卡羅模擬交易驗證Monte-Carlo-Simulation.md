@@ -1,6 +1,13 @@
 ---
 title: "蒙地卡羅模擬交易驗證 Monte Carlo Simulation for Trading"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/蒙地卡羅模擬程式交易壓力測試.md
+- raw/2026-05-01/MonteCarloSimulationCompleteGuide.md
+- raw/2026-05-01/MonteCarloPracticalGuideStrategyValidation.md
+- raw/2026-05-01/蒙特卡罗模拟法专业交易员.md
+- raw/2026-05-10/蒙地卡羅模擬程式交易壓力測試.md
+- raw/2026-05-10/蒙地卡羅法估算未來回落OANDA.md
 ---
 
 # 蒙地卡羅模擬交易驗證 Monte Carlo Simulation for Trading
@@ -141,9 +148,9 @@ print(f"破產機率: {np.mean(mdd_dist > 破產閾值):.2%}")
 
 ## 來源
 
-- [蒙地卡羅模擬在程式交易中的應用 - OP投資理財學院](../../raw/2026-05-01/蒙地卡羅模擬程式交易壓力測試.md)
-- [Monte Carlo Simulation Complete Guide](../../raw/2026-05-01/MonteCarloSimulationCompleteGuide.md)
-- [Monte Carlo Practical Guide Strategy Validation](../../raw/2026-05-01/MonteCarloPracticalGuideStrategyValidation.md)
-- [蒙特卡罗模拟法 - 知乎](../../raw/2026-05-01/蒙特卡罗模拟法专业交易员.md)
-- [蒙地卡羅模擬程式交易壓力測試 - OP投資理財學院](../../raw/2026-05-10/蒙地卡羅模擬程式交易壓力測試.md)
-- [活用蒙地卡羅法估算未來回落 - OANDA Lab](../../raw/2026-05-10/蒙地卡羅法估算未來回落OANDA.md)
+- [蒙地卡羅模擬在程式交易中的應用 - OP投資理財學院](<https://opop.tw/monte-carlo-simulation-trading/>)
+- [Monte Carlo Simulation Complete Guide](<https://www.buildalpha.com/monte-carlo-simulation/>)
+- [Monte Carlo Practical Guide Strategy Validation](<https://quantproof.io/blog/monte-carlo-simulations-trading-strategy-validation>)
+- [蒙特卡罗模拟法 - 知乎](<https://zhuanlan.zhihu.com/p/528292579>)
+- [蒙地卡羅模擬程式交易壓力測試 - OP投資理財學院](<https://opop.tw/monte-carlo-simulation-trading/>)
+- [活用蒙地卡羅法估算未來回落 - OANDA Lab](<https://www.oanda.com/bvi-ft/lab-education/ea_trading/beginner-drawdown_assumption/>)

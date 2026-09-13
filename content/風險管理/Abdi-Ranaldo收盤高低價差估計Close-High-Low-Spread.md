@@ -4,6 +4,8 @@ category: "風險管理"
 date: 2026-08-30
 source_date: 2026-08-30
 status: raw_linked
+raw_files:
+- raw/2026-08-30/Abdi-Ranaldo收盤高低價差來源學習紀錄.md
 ---
 
 # Abdi-Ranaldo收盤高低價差估計
@@ -118,7 +120,7 @@ Python驗算：
 
 ## 來源
 
-- [Abdi-Ranaldo收盤高低價差來源學習紀錄](../../raw/2026-08-30/Abdi-Ranaldo收盤高低價差來源學習紀錄.md)
+- Abdi-Ranaldo收盤高低價差來源學習紀錄（本機留存素材，未公開全文；原始網址待核對）
 - [Abdi與Ranaldo（2017）DOI](https://doi.org/10.1093/rfs/hhx084)
 - [Ødegaard教學講義](https://ba-odegaard.no/teach/notes/liquidity_estimators/abdi_ranaldo_high_low_estimator/slides_high_low_ar.pdf)
 - [CRAN bidask套件](https://cran.r-project.org/package=bidask)

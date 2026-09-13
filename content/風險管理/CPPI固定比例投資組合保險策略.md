@@ -1,6 +1,9 @@
 ---
 title: "CPPI固定比例投資組合保險策略"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/CPPI固定比例投資組合保險策略.md
+- raw/2026-05-01/TIPP保本基金策略改進.md
 ---
 
 # CPPI固定比例投資組合保險策略
@@ -77,5 +80,5 @@ CPPI（Constant Proportion Portfolio Insurance）由 Black & Jones 於1987年提
 
 ## 來源
 
-- [固定比例投資組合保險策略 - MBA智庫](../../raw/2026-05-01/CPPI固定比例投資組合保險策略.md)
-- [保本基金策略：CPPI、TIPP、OBPI](../../raw/2026-05-01/TIPP保本基金策略改進.md)
+- [固定比例投資組合保險策略 - MBA智庫](<https://wiki.mbalib.com/zh-tw/固定比例投资组合保险策略>)
+- [保本基金策略：CPPI、TIPP、OBPI](<https://m.jiemian.com/article/1130185_yidian.html>)

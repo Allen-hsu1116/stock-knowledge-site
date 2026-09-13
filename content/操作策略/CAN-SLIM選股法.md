@@ -1,6 +1,11 @@
 ---
 title: "CAN SLIM 選股法"
 category: "操作策略"
+raw_files:
+- raw/2026-04-30/CAN-SLIM-Wikipedia.md
+- raw/2026-04-30/CAN-SLIM-Macro-Ops.md
+- raw/2026-05-17/CANSLIM選股法-StockFeel.md
+- raw/2026-05-17/CANSLIM選股法-市場先生.md
 ---
 
 # CAN SLIM 選股法
@@ -15,13 +20,13 @@ CAN SLIM 是 O'Neil 在《How to Make Money in Stocks》一書中提出的選股
 - 最近一季 EPS 年增率至少 **25%**（理想 20-50%+）
 - 獲利**加速成長**更是正面訊號
 - 歷史數據：飆股在起漲前，當季獲利平均成長 **70%**
-- **實例**：Dell 74%/108% → 587%；Apple 350%/300% → $12→$202
+- **實例**：Dell 74%/108% → 587%；Apple 350%/300% → \$12→\$202
 
 ### A — Annual Earnings（年度獲利）
 - 近三年 EPS 逐年成長
 - 近五年複合年成長率至少 **24%**
 - 年度 ROE ≥ **17%**
-- **實例**：Wal-Mart 年增 43% → 11,200%；Priceline EPS $0.96→$2.03 → 股價 3 倍
+- **實例**：Wal-Mart 年增 43% → 11,200%；Priceline EPS \$0.96→\$2.03 → 股價 3 倍
 
 ### N — New（新事物）
 - 95% 的飆股有「新」：新產品、新服務、新管理、新市場、或產業變革
@@ -127,7 +132,7 @@ NorthCoast資產管理公司根據CAN SLIM策略推出績效指數與基金（CA
 
 ## 來源
 
-- [CAN SLIM - Wikipedia](../../raw/2026-04-30/CAN-SLIM-Wikipedia.md)
-- [William O'Neil's CAN SLIM Trading Strategy Explained - Macro Ops](../../raw/2026-04-30/CAN-SLIM-Macro-Ops.md)
-- [《笑傲股市》— 選股系統起手式：CANSLIM - StockFeel](../../raw/2026-05-17/CANSLIM選股法-StockFeel.md)
-- [CANSLIM選股法是什麼？威廉歐尼爾的7個選股策略介紹 - Mr.Market市場先生](../../raw/2026-05-17/CANSLIM選股法-市場先生.md)
+- [CAN SLIM - Wikipedia](<https://en.wikipedia.org/wiki/CAN_SLIM>)
+- [William O'Neil's CAN SLIM Trading Strategy Explained - Macro Ops](<https://macro-ops.com/william-oneils-can-slim-trading-strategy-explained/>)
+- [《笑傲股市》— 選股系統起手式：CANSLIM - StockFeel](<https://www.stockfeel.com.tw/%E3%80%8A%E7%AC%91%E5%82%B2%E8%82%A1%E5%B8%82%E3%80%8B-%E9%81%B8%E8%82%A1%E7%B3%BB%E7%B5%B1%E8%B5%B7%E6%89%8B%E5%BC%8F%EF%BC%9Acanslim/>)
+- [CANSLIM選股法是什麼？威廉歐尼爾的7個選股策略介紹 - Mr.Market市場先生](<https://rich01.com/what-is-canslim-william-o-neil/>)

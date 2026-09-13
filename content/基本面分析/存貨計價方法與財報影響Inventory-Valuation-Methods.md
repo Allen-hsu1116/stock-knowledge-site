@@ -1,6 +1,8 @@
 ---
 title: "存貨計價方法與財報影響Inventory-Valuation-Methods"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/存貨計價方法FIFO加權平均LIFO.md
 ---
 
 # 存貨計價方法與財報影響Inventory-Valuation-Methods
@@ -87,4 +89,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [存貨計價方法 - MBA智庫百科](../../raw/2026-05-05/存貨計價方法FIFO加權平均LIFO.md)
+- [存貨計價方法 - MBA智庫百科](<https://wiki.mbalib.com/zh-tw/存货计价方法>)

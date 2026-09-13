@@ -1,6 +1,10 @@
 ---
 title: "VSA成交量價差分析 Volume Spread Analysis"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/成交量分析全攻略八大價量關係VSA.md
+- raw/2026-05-11/VSA-Volume-Spread-Analysis-What-It-Is-How-It-Works.md
+- raw/2026-05-11/VSA量價差分析研究序.md
 ---
 
 # VSA成交量價差分析 Volume Spread Analysis
@@ -126,6 +130,6 @@ VSA 的學習曲線陡峭，建議：
 
 ## 來源
 
-- [成交量分析全攻略｜掌握8大價量關係法則](../../raw/2026-05-11/成交量分析全攻略八大價量關係VSA.md)
-- [Volume Spread Analysis: What It Is & How It Works](../../raw/2026-05-11/VSA-Volume-Spread-Analysis-What-It-Is-How-It-Works.md)
-- [成交量價差分析研究(VSA) - 序](../../raw/2026-05-11/VSA量價差分析研究序.md)
+- [成交量分析全攻略｜掌握8大價量關係法則](<https://chainstockalchemy.com/volume-analysis-guide-2025/>)
+- [Volume Spread Analysis: What It Is & How It Works](<https://www.stockgro.club/blogs/trading/volume-spread-analysis/>)
+- [成交量價差分析研究(VSA) - 序](<http://handchat-castle3.blogspot.com/2013/05/volume-spread-analysis-vsa.html>)

@@ -1,6 +1,10 @@
 ---
 title: "三大法人與融資融券基礎總論Institutional-Investors-and-Margin-Trading-Basics"
 category: "籌碼面分析"
+raw_files:
+- raw/2026-05-17/StockFeel籌碼分析教學三大法人融資融券判讀.md
+- raw/2026-05-17/StockFeel融券回補軋空行情判讀.md
+- raw/2026-05-17/OANDA何謂籌碼面分析優缺點與運用方式.md
 ---
 
 # 三大法人與融資融券基礎總論Institutional-Investors-and-Margin-Trading-Basics
@@ -131,7 +135,7 @@ category: "籌碼面分析"
 
 ## 來源
 
-- [StockFeel 籌碼分析教學 EP1](../../raw/2026-05-17/StockFeel籌碼分析教學三大法人融資融券判讀.md)
-- [StockFeel 融券回補教學](../../raw/2026-05-17/StockFeel融券回補軋空行情判讀.md)
-- [OANDA 籌碼面分析優缺點與運用方式](../../raw/2026-05-17/OANDA何謂籌碼面分析優缺點與運用方式.md)
-- [StockFeel 籌碼分析教學三大法人融資融券判讀](../../raw/2026-05-17/StockFeel籌碼分析教學三大法人融資融券判讀.md)
+- [StockFeel 籌碼分析教學 EP1](<https://www.stockfeel.com.tw/籌碼分析-三大法人-融資/>)
+- [StockFeel 融券回補教學](<https://www.stockfeel.com.tw/融券-融券回補-強制回補-最後回補日/>)
+- [OANDA 籌碼面分析優缺點與運用方式](<https://www.oanda.com/bvi-ft/lab-education/invest_us_stock/chip-analysis/>)
+- [StockFeel 籌碼分析教學三大法人融資融券判讀](<https://www.stockfeel.com.tw/籌碼分析-三大法人-融資/>)

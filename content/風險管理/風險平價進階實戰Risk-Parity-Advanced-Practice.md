@@ -2,6 +2,8 @@
 title: "風險平價進階實戰 Risk Parity Advanced Practice"
 date: 2026-06-26
 category: "風險管理"
+raw_files:
+- raw/2026-06-26/Risk-Parity-Wikipedia.md
 ---
 
 # 風險平價進階實戰 Risk Parity Advanced Practice
@@ -122,6 +124,6 @@ ERC依賴共變異數矩陣Σ的估計，但：
 
 ## 來源
 
-- [Risk Parity Wikipedia](../../raw/2026-06-26/Risk-Parity-Wikipedia.md)
+- [Risk Parity Wikipedia](<https://en.wikipedia.org/wiki/Risk_parity>)
 - Edward Qian (2005). Risk Parity and Diversification
 - Bridgewater All Weather Strategy

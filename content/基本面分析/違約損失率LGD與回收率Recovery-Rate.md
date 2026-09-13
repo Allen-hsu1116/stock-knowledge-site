@@ -3,6 +3,8 @@ title: 違約損失率LGD與回收率 Recovery Rate
 aliases: [違約損失率, LGD, Loss Given Default, 回收率, Recovery Rate, 預期信用損失]
 category: 基本面分析
 date: 2026-09-02
+raw_files:
+- raw/2026-09-02/Altman違約損失率與回收率學習紀錄.md
 ---
 
 # 違約損失率LGD與回收率 Recovery Rate
@@ -122,4 +124,4 @@ $$EL_{stress}=3\%\times60\%\times10{,}000{,}000=180{,}000$$
 
 ## 來源
 
-- [Altman：Loss Given Default—Default and Recovery Rates](../../raw/2026-09-02/Altman違約損失率與回收率學習紀錄.md)
+- [Altman：Loss Given Default—Default and Recovery Rates](<https://w4.stern.nyu.edu/salomon/docs/CreditRisk2008/ealtman_2008.pdf>)

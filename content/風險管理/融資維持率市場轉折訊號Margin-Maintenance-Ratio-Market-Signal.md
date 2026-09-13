@@ -1,6 +1,9 @@
 ---
 title: "融資維持率市場轉折訊號 Margin Maintenance Ratio Market Signal"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/融資維持率看穿市場轉折訊號-TEJWIN.md
+- raw/2026-05-15/斷頭強制平倉與保證金追繳機制-MrMarket.md
 ---
 
 # 融資維持率市場轉折訊號 Margin Maintenance Ratio Market Signal
@@ -115,5 +118,5 @@ TEJ回測「融資維持率異常偏低」的選股策略，績效如下：
 
 ## 來源
 
-- [市場恐慌還是機會？從融資維持率看穿轉折訊號 - TEJWIN](../../raw/2026-05-15/融資維持率看穿市場轉折訊號-TEJWIN.md)
-- [斷頭是什麼？斷頭後會發生什麼事？斷頭門檻及規則總整理 - Mr.Market](../../raw/2026-05-15/斷頭強制平倉與保證金追繳機制-MrMarket.md)
+- [市場恐慌還是機會？從融資維持率看穿轉折訊號 - TEJWIN](<https://www.tejwin.com/insight/tquant-融資維持率/>)
+- [斷頭是什麼？斷頭後會發生什麼事？斷頭門檻及規則總整理 - Mr.Market](<https://rich01.com/forced-selling-forced-liquidation/>)

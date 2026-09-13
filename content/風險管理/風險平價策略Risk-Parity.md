@@ -1,6 +1,9 @@
 ---
 title: "風險平價策略 Risk Parity"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/Risk-Parity-風險平價策略.md
+- raw/2026-05-15/風險平價策略與全天候基金-狂徒.md
 ---
 
 # 風險平價策略 Risk Parity
@@ -194,5 +197,5 @@ Dalio的經濟環境四象限框架：
 
 ## 來源
 
-- [Risk Parity - Wikipedia](../../raw/2026-05-08/Risk-Parity-風險平價策略.md)
-- [Risk Parity 策略和全天候基金 - 狂徒](../../raw/2026-05-15/風險平價策略與全天候基金-狂徒.md)
+- [Risk Parity - Wikipedia](<https://en.wikipedia.org/wiki/Risk_parity>)
+- [Risk Parity 策略和全天候基金 - 狂徒](<https://vocus.cc/article/6133983cfd897800010defd5>)

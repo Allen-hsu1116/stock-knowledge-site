@@ -1,6 +1,8 @@
 ---
 title: "情境分析與壓力測試框架 Scenario Analysis Framework"
 category: "風險管理"
+raw_files:
+- raw/2026-05-22/情境分析與壓力測試框架Scenario-Analysis.md
 ---
 
 # 情境分析與壓力測試框架 Scenario Analysis Framework
@@ -116,4 +118,4 @@ category: "風險管理"
 - [[跳空缺口風險Gap-Risk]]
 
 ## 來源
-- [情境分析與壓力測試框架](../../raw/2026-05-22/情境分析與壓力測試框架Scenario-Analysis.md)
+- 情境分析與壓力測試框架（本機留存素材，未公開全文；原始網址待核對）

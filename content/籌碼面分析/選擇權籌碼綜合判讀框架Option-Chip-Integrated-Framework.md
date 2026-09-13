@@ -1,6 +1,10 @@
 ---
 title: "選擇權籌碼綜合判讀框架Option-Chip-Integrated-Framework"
 category: "籌碼面分析"
+raw_files:
+- raw/2026-05-17/選擇權未平倉籌碼分析每日觀察重點-gooptions.md
+- raw/2026-05-17/台指選擇權Put-Call比4大重點-options.md
+- raw/2026-05-17/選擇權入門交易到未平倉意義解讀-永豐期貨.md
 ---
 
 # 選擇權籌碼綜合判讀框架Option-Chip-Integrated-Framework
@@ -167,6 +171,6 @@ category: "籌碼面分析"
 
 ## 來源
 
-- [選擇權未平倉籌碼分析每日觀察重點 - goptions.cc](../../raw/2026-05-17/選擇權未平倉籌碼分析每日觀察重點-gooptions.md)
-- [台指選擇權Put/Call比4大重點 - options.tw](../../raw/2026-05-17/台指選擇權Put-Call比4大重點-options.md)
-- [選擇權入門交易到未平倉意義解讀 - 永豐期貨](../../raw/2026-05-17/選擇權入門交易到未平倉意義解讀-永豐期貨.md)
+- [選擇權未平倉籌碼分析每日觀察重點 - goptions.cc](<https://gooptions.cc/%E9%81%B8%E6%93%87%E6%AC%8A%E6%9C%AA%E5%B9%B3%E5%80%89/>)
+- [台指選擇權Put/Call比4大重點 - options.tw](<https://options.tw/%E5%8F%B0%E6%8C%87%E9%81%B8%E6%93%87%E6%AC%8Aput-call%E6%AF%94/>)
+- [選擇權入門交易到未平倉意義解讀 - 永豐期貨](<https://www.spf.com.tw/mktinfo/Futures/OA/option-001.html>)

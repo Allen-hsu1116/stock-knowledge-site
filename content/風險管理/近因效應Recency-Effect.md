@@ -1,6 +1,8 @@
 ---
 title: "近因效應（Recency Effect）"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/近因效應.md
 ---
 
 # 近因效應（Recency Effect）
@@ -98,4 +100,4 @@ category: "風險管理"
 
 ## 來源
 
-- [近因效應](../../raw/2026-05-08/近因效應.md)
+- [近因效應](<https://wiki.mbalib.com/zh-tw/近因效应>)

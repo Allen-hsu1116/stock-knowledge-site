@@ -1,6 +1,9 @@
 ---
 title: "遞延收益與合同負債判讀"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/遞延收益Deferred-Income.md
+- raw/2026-05-05/合同負債Contract-Liability.md
 ---
 
 # 遞延收益與合同負債判讀
@@ -98,5 +101,5 @@ category: "基本面分析"
 
 ## 來源
 
-- [遞延收益](../../raw/2026-05-05/遞延收益Deferred-Income.md)
-- [合同負債](../../raw/2026-05-05/合同負債Contract-Liability.md)
+- [遞延收益](<https://wiki.mbalib.com/zh-tw/遞延收益>)
+- [合同負債](<https://wiki.mbalib.com/zh-tw/合同負債>)

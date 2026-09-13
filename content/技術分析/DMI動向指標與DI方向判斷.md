@@ -1,6 +1,13 @@
 ---
 title: "DMI動向指標與DI方向判斷"
 category: "技術分析"
+raw_files:
+- raw/2026-05-03/善用動向指標DMI-ADX找出大趨勢-OANDA.md
+- raw/2026-05-03/DMI指標完整教學當沖用法與參數設定-量化通.md
+- raw/2026-05-18/DMI指標終極教學與實戰策略-FMStudio.md
+- raw/2026-05-18/DMI指標用法ADX趨勢強度判讀與參數設定-CashbackIsland.md
+- raw/2026-05-03/ADX指標完整教學與DMI搭配-量化通.md
+- raw/2026-05-18/DMI指標使用方法指南.md
 ---
 
 # DMI動向指標與DI方向判斷
@@ -150,9 +157,9 @@ ADX 可以像 RSI 一樣觀察背離：
 
 ## 來源
 
-- [善用動向指標DMI-ADX找出大趨勢-OANDA](../../raw/2026-05-03/善用動向指標DMI-ADX找出大趨勢-OANDA.md)
-- [DMI指標完整教學當沖用法與參數設定-量化通](../../raw/2026-05-03/DMI指標完整教學當沖用法與參數設定-量化通.md)
-- [DMI指標終極教學與實戰策略-FMStudio](../../raw/2026-05-18/DMI指標終極教學與實戰策略-FMStudio.md)
-- [DMI指標用法ADX趨勢強度判讀與參數設定-CashbackIsland](../../raw/2026-05-18/DMI指標用法ADX趨勢強度判讀與參數設定-CashbackIsland.md)
-- [ADX指標完整教學與DMI搭配-量化通](../../raw/2026-05-03/ADX指標完整教學與DMI搭配-量化通.md)
-- [DMI指標使用方法指南-Mitrade](../../raw/2026-05-18/DMI指標使用方法指南.md)
+- [善用動向指標DMI-ADX找出大趨勢-OANDA](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/use_dmi_adx/>)
+- [DMI指標完整教學當沖用法與參數設定-量化通](<https://quantpass.org/dmi-2/>)
+- [DMI指標終極教學與實戰策略-FMStudio](<https://fmstudio.blog/dmi-indicator-guide-2025/>)
+- [DMI指標用法ADX趨勢強度判讀與參數設定-CashbackIsland](<https://www.cashbackisl.com/hant/dmi-indicator-adx-guide-hant/>)
+- [ADX指標完整教學與DMI搭配-量化通](<https://quantpass.org/adx/>)
+- [DMI指標使用方法指南-Mitrade](<https://www.mitrade.com/zh/insights/others/technical-analysis/dmi-indicator>)

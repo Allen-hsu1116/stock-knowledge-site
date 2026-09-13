@@ -1,6 +1,8 @@
 ---
 title: "錢德動量震盪指標 CMO (Chande Momentum Oscillator)"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/Chande-Momentum-Oscillator-CMO-錢德動量震盪指標.md
 ---
 
 # 錢德動量震盪指標 CMO (Chande Momentum Oscillator)
@@ -140,5 +142,5 @@ CMO 比 Stochastic 更敏感但更不平滑。如果需要穩定的訊號，Stoc
 
 ## 來源
 
-- [Chande Momentum Oscillator (CMO): A Complete Guide - Deepvue](../../raw/2026-05-11/Chande-Momentum-Oscillator-CMO-錢德動量震盪指標.md)
-- [Chande Momentum Oscillator (CMO) — TradingView](../../raw/2026-05-11/Chande-Momentum-Oscillator-CMO-錢德動量震盪指標.md)
+- Chande Momentum Oscillator (CMO): A Complete Guide - Deepvue（原始來源：[1](<https://deepvue.com/indicators/chande-momentum-oscillator-cmo/>)、[2](<https://www.tradingview.com/support/solutions/43000589109-chande-momentum-oscillator-cmo/>)）
+- Chande Momentum Oscillator (CMO) — TradingView（原始來源：[1](<https://deepvue.com/indicators/chande-momentum-oscillator-cmo/>)、[2](<https://www.tradingview.com/support/solutions/43000589109-chande-momentum-oscillator-cmo/>)）

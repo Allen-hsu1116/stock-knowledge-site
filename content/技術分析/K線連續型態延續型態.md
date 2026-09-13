@@ -1,6 +1,9 @@
 ---
 title: "K線連續型態（延續型態）"
 category: "技術分析"
+raw_files:
+- raw/2026-05-17/K線連續型態上升三法下降三法紅三兵黑三兵.md
+- raw/2026-05-03/上升三法帶量突破判讀.md
 ---
 
 # K線連續型態（延續型態）
@@ -182,7 +185,7 @@ K線型態分為兩大類：**反轉型態**和**連續型態（延續型態）*
 
 ## 來源
 
-- [量化通 QuantPass - K線型態學與裸K交易](../../raw/2026-05-17/K線連續型態上升三法下降三法紅三兵黑三兵.md)
-- [股澐 - K線第23章 上升三法與下降三法](../../raw/2026-05-17/K線連續型態上升三法下降三法紅三兵黑三兵.md)
-- [懶人經濟學 - K線指南：21種K線圖排列總整理](../../raw/2026-05-17/K線連續型態上升三法下降三法紅三兵黑三兵.md)
-- [急漲股價帶量突破，別急著買！等看到上升三法再進場](../../raw/2026-05-03/上升三法帶量突破判讀.md)
+- 量化通 QuantPass - K線型態學與裸K交易（原始來源：[1](<https://quantpass.org/kbar-pattern-2/>)、[2](<http://www.sharecloud.tw/2018/09/Candlesticks-23-Rising-and-Falling-Three-Methods.html>)、[3](<https://earning.tw/k-bar-chart-patterns/>)）
+- 股澐 - K線第23章 上升三法與下降三法（原始來源：[1](<https://quantpass.org/kbar-pattern-2/>)、[2](<http://www.sharecloud.tw/2018/09/Candlesticks-23-Rising-and-Falling-Three-Methods.html>)、[3](<https://earning.tw/k-bar-chart-patterns/>)）
+- 懶人經濟學 - K線指南：21種K線圖排列總整理（原始來源：[1](<https://quantpass.org/kbar-pattern-2/>)、[2](<http://www.sharecloud.tw/2018/09/Candlesticks-23-Rising-and-Falling-Three-Methods.html>)、[3](<https://earning.tw/k-bar-chart-patterns/>)）
+- [急漲股價帶量突破，別急著買！等看到上升三法再進場](<https://www.cmoney.tw/learn/course/gerogelin/topic/2235>)

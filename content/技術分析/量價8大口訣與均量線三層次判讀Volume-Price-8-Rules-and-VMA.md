@@ -1,6 +1,10 @@
 ---
 title: "量價8大口訣與均量線三層次判讀Volume-Price-8-Rules-and-VMA"
 category: "技術分析"
+raw_files:
+- raw/2026-05-09/量價關係8大口訣均量線法人籌碼背離警訊.md
+- raw/2026-05-09/量價關係全圖解量價配合量價背離VWAP實戰.md
+- raw/2026-05-09/股票成交量分析全攻略量價關係實戰技巧.md
 ---
 
 # 量價8大口訣與均量線三層次判讀Volume-Price-8-Rules-and-VMA
@@ -113,6 +117,6 @@ category: "技術分析"
 
 ## 來源
 
-- [成交量怎麼看？E 大解析量價關係 8 大口訣](../../raw/2026-05-09/量價關係8大口訣均量線法人籌碼背離警訊.md)
-- [量價關係全圖解：量價配合、背離與VWAP實戰](../../raw/2026-05-09/量價關係全圖解量價配合量價背離VWAP實戰.md)
-- [股票成交量分析全攻略](../../raw/2026-05-09/股票成交量分析全攻略量價關係實戰技巧.md)
+- [成交量怎麼看？E 大解析量價關係 8 大口訣](<https://efrontrade.com/2026/01/volume-price-rules-taiwan-stock.html>)
+- [量價關係全圖解：量價配合、背離與VWAP實戰](<https://mammonacad.com/volume-price-relationship-guide/>)
+- [股票成交量分析全攻略](<https://chainstockalchemy.com/stock-volume-analysis-guide-2025/>)

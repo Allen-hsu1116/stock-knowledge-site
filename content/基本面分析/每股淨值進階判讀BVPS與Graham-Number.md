@@ -1,6 +1,10 @@
 ---
 title: "每股淨值進階判讀 BVPS 與 Graham Number"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-09/每股淨值BVPS定義Graham-Number與投資應用.md
+- raw/2026-05-09/股價淨值比有這麼神-FinLab回測.md
+- raw/2026-05-09/股價淨值比PB-Ratio評估合理價.md
 ---
 
 # 每股淨值進階判讀 BVPS 與 Graham Number
@@ -178,6 +182,6 @@ P/B < 1 既是機會，也是風險——必須搭配 ROE、現金流、產業�
 
 ## 來源
 
-- [每股淨值（BVPS）：定義、Graham Number 與投資應用 - TITAN FX Research Hub](../../raw/2026-05-09/每股淨值BVPS定義Graham-Number與投資應用.md)
-- [股價淨值比有這麼神？ - FinLab](../../raw/2026-05-09/股價淨值比有這麼神-FinLab回測.md)
-- [股價淨值比是什麼？多少合理？ - 平凡暄誓](../../raw/2026-05-09/股價淨值比PB-Ratio評估合理價.md)
+- [每股淨值（BVPS）：定義、Graham Number 與投資應用 - TITAN FX Research Hub](<https://research.titanfx.com/zh-hant/us-stock-trading/what-is-bps>)
+- [股價淨值比有這麼神？ - FinLab](<https://www.finlab.tw/%E8%82%A1%E5%83%B9%E6%B7%A8%E5%80%BC%E6%AF%94%E6%9C%89%E9%80%99%E9%BA%BC%E7%A5%9E%EF%BC%9F/>)
+- [股價淨值比是什麼？多少合理？ - 平凡暄誓](<https://xuanstyl.com/pb-ratio/>)

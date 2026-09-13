@@ -1,6 +1,8 @@
 ---
 title: "研發費用資本化與費用化判讀R&D-Capitalization-vs-Expensing"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/研發費用資本化與費用化.md
 ---
 
 # 研發費用資本化與費用化判讀R&D-Capitalization-vs-Expensing
@@ -103,4 +105,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [研發費用 - MBA智庫百科](../../raw/2026-05-05/研發費用資本化與費用化.md)
+- [研發費用 - MBA智庫百科](<https://wiki.mbalib.com/zh-tw/研发费用>)

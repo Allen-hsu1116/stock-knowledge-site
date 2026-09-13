@@ -1,6 +1,9 @@
 ---
 title: "道氏理論 Dow Theory"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/道氏理論Dow-Theory趨勢定義與實戰.md
+- raw/2026-05-04/道氏理論OANDA基本原則與趨勢確認.md
 ---
 
 # 道氏理論 Dow Theory
@@ -132,5 +135,5 @@ category: "技術分析"
 
 ## 來源
 
-- [道氏理論 Dow Theory 趨勢定義與實戰](../../raw/2026-05-04/道氏理論Dow-Theory趨勢定義與實戰.md)
-- [道氏理論 OANDA 基本原則與趨勢確認](../../raw/2026-05-04/道氏理論OANDA基本原則與趨勢確認.md)
+- [道氏理論 Dow Theory 趨勢定義與實戰](<https://rich01.com/what-is-dow-theory-0/>)
+- [道氏理論 OANDA 基本原則與趨勢確認](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/dow-theory/>)

@@ -1,6 +1,9 @@
 ---
 title: "EMA指數平滑移動平均線"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/EMA指標完整教學.md
+- raw/2026-05-04/移動平均線MA完整教學.md
 ---
 
 # EMA指數平滑移動平均線
@@ -108,5 +111,5 @@ MACD（Moving Average Convergence Divergence）就是基於 EMA 計算的：
 
 ## 來源
 
-- [EMA指標完整教學](../../raw/2026-05-04/EMA指標完整教學.md)
-- [移動平均線MA完整教學](../../raw/2026-05-04/移動平均線MA完整教學.md)
+- [EMA指標完整教學](<https://quantpass.org/ema/>)
+- [移動平均線MA完整教學](<https://rich01.com/what-is-moving-average-line/>)

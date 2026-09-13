@@ -1,6 +1,11 @@
 ---
 title: "ROC變動率指標 Rate of Change"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/ROC變動率指標與動量指標比較.md
+- raw/2026-05-18/ROC變動率指標QuantPass.md
+- raw/2026-05-18/ROC變動率指標市場先生.md
+- raw/2026-05-18/ROC變動率指標taindicators.md
 ---
 
 # ROC變動率指標 Rate of Change
@@ -130,7 +135,7 @@ ROC 告訴你的是「過去 n 天的漲跌幅度」，不是未來的走勢。�
 - [[PSY心理線指標Psychological-Line]] - 純看方向不看幅度的情緒指標
 
 ## 來源
-- [ROC變動率指標與動量指標比較](../../raw/2026-05-04/ROC變動率指標與動量指標比較.md)
-- [ROC變動率指標 QuantPass](../../raw/2026-05-18/ROC變動率指標QuantPass.md)
-- [ROC價格變動率 市場先生](../../raw/2026-05-18/ROC變動率指標市場先生.md)
-- [ROC變動率指標 taindicators](../../raw/2026-05-18/ROC變動率指標taindicators.md)
+- [ROC變動率指標與動量指標比較](<https://rich01.com/what-is-rate-of-change-indicator/>)
+- [ROC變動率指標 QuantPass](<https://quantpass.org/roc/>)
+- [ROC價格變動率 市場先生](<https://rich01.com/what-is-rate-of-change-indicator/>)
+- [ROC變動率指標 taindicators](<https://www.taindicators.com/roc/>)

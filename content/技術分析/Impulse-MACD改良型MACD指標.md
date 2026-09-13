@@ -1,6 +1,8 @@
 ---
 title: "Impulse-MACD改良型MACD指標"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/Impulse-MACD期貨交易策略.md
 ---
 
 # Impulse-MACD改良型MACD指標
@@ -93,4 +95,4 @@ SMMA（Smoothed Moving Average）的計算讓它比一般 SMA 更平滑，對突
 
 ## 來源
 
-- [Impulse MACD 期貨交易策略](../../raw/2026-05-18/Impulse-MACD期貨交易策略.md)
+- [Impulse MACD 期貨交易策略](<https://www.tejwin.com/insight/impluse-macd-%e6%9c%9f%e8%b2%a8%e4%ba%a4%e6%98%93%e7%ad%96%e7%95%a5/>)

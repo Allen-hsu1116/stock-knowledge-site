@@ -5,6 +5,10 @@ source: memory
 source_date: 2026-04-29
 status: raw_linked
 raw_file: raw/2026-04-29/未平倉量Open-Interest基礎與判讀.md
+raw_files:
+- raw/2026-04-29/未平倉量Open-Interest基礎與判讀.md
+- raw/2026-04-29/期貨未平倉量價量關係與實戰判讀.md
+- raw/2026-04-29/外資期貨未平倉量實戰判讀與動能概念.md
 ---
 
 # 期貨未平倉量 Open Interest
@@ -114,6 +118,6 @@ raw_file: raw/2026-04-29/未平倉量Open-Interest基礎與判讀.md
 
 ## 來源
 
-- [未平倉量是什麼？怎麼查詢？多空未平倉量代表什麼意義？ - 市場先生](../../raw/2026-04-29/未平倉量Open-Interest基礎與判讀.md)
-- [期貨未平倉？未平倉怎麼看？主力動向看這邊 - 永豐期貨](../../raw/2026-04-29/期貨未平倉量價量關係與實戰判讀.md)
-- [期貨未平倉量：大盤多空的重要數據！ - HiStock](../../raw/2026-04-29/外資期貨未平倉量實戰判讀與動能概念.md)
+- [未平倉量是什麼？怎麼查詢？多空未平倉量代表什麼意義？ - 市場先生](<https://rich01.com/open-interest/>)
+- [期貨未平倉？未平倉怎麼看？主力動向看這邊 - 永豐期貨](<https://www.spf.com.tw/mktinfo/Futures/OA/strategy-001.html>)
+- [期貨未平倉量：大盤多空的重要數據！ - HiStock](<https://histock.tw/blog/histock1688/27>)

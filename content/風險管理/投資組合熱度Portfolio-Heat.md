@@ -2,6 +2,8 @@
 category: "風險管理"
 title: 投資組合熱度 Portfolio Heat
 date: 2026-06-12
+raw_files:
+- raw/2026-06-12/投資組合熱度Portfolio-Heat.md
 ---
 
 # 投資組合熱度 Portfolio Heat
@@ -87,4 +89,4 @@ Portfolio Heat 不能只機械加總，還要看部位是不是一起死：
 
 ## 來源
 
-- [Portfolio Heat Management: Control Your Total Risk Exposure](../../raw/2026-06-12/投資組合熱度Portfolio-Heat.md)
+- [Portfolio Heat Management: Control Your Total Risk Exposure](<https://protraderdashboard.com/blog/portfolio-heat-management/>)

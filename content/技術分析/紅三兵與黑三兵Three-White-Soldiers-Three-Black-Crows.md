@@ -1,6 +1,10 @@
 ---
 title: "紅三兵與黑三兵 Three White Soldiers & Three Black Crows"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/紅三兵不見得都是買進訊號-今周刊.md
+- raw/2026-05-04/K線型態學紅三兵黑三兵-QuantPass.md
+- raw/2026-05-04/Three-White-Soldiers-Black-Crows-TitanFX.md
 ---
 
 # 紅三兵與黑三兵 Three White Soldiers & Three Black Crows
@@ -116,6 +120,6 @@ category: "技術分析"
 
 ## 來源
 
-- [台股攻上萬七 為何K線出現「紅三兵」不見得都是買進訊號？ - 今周刊](../../raw/2026-05-04/紅三兵不見得都是買進訊號-今周刊.md)
-- [K線型態學與裸K交易｜晨星、夜星、吞噬、紅三兵、黑三兵 - QuantPass](../../raw/2026-05-04/K線型態學紅三兵黑三兵-QuantPass.md)
-- [Three White Soldiers & Three Black Crows Candlestick Patterns - Titan FX](../../raw/2026-05-04/Three-White-Soldiers-Black-Crows-TitanFX.md)
+- [台股攻上萬七 為何K線出現「紅三兵」不見得都是買進訊號？ - 今周刊](<https://www.businesstoday.com.tw/article/category/183008/post/202306140004/>)
+- [K線型態學與裸K交易｜晨星、夜星、吞噬、紅三兵、黑三兵 - QuantPass](<https://quantpass.org/kbar-pattern-2/>)
+- [Three White Soldiers & Three Black Crows Candlestick Patterns - Titan FX](<https://research.titanfx.com/technical-analysis/candlestick-chart/three-white-soldiers-black-crows>)

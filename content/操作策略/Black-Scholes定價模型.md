@@ -1,6 +1,9 @@
 ---
 title: "Black-Scholes定價模型"
 category: "操作策略"
+raw_files:
+- raw/2026-05-03/Black-Scholes模型與Greeks.md
+- raw/2026-05-03/蘋果的啟示-Delta-Theta-Gamma.md
 ---
 
 # Black-Scholes定價模型
@@ -129,5 +132,5 @@ TEJ用台指買權TXO202304C15500驗證：
 
 ## 來源
 
-- [Black-Scholes模型與Greeks](../../raw/2026-05-03/Black-Scholes模型與Greeks.md)
-- [蘋果的啟示-Delta-Theta-Gamma](../../raw/2026-05-03/蘋果的啟示-Delta-Theta-Gamma.md)
+- [Black-Scholes模型與Greeks](<https://www.tejwin.com/insight/black-scholes-%E6%A8%A1%E5%9E%8B%E8%88%87-greeks/>)
+- [蘋果的啟示-Delta-Theta-Gamma](<https://vocus.cc/article/65defc0ffd8978000197cbd3>)

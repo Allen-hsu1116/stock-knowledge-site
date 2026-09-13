@@ -1,6 +1,9 @@
 ---
 title: "市場情緒週期與反脆弱交易系統Market-Sentiment-Cycle-and-Antifragile-System"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/2026投資心理學穿越市場噪音掌握頂尖交易者心智模型.md
+- raw/2026-05-08/用一條線的紀律建立難以虧損的投資組合.md
 ---
 
 # 市場情緒週期與反脆弱交易系統Market-Sentiment-Cycle-and-Antifragile-System
@@ -121,5 +124,5 @@ category: "風險管理"
 
 ## 來源
 
-- [2026投資心理學：穿越市場噪音，掌握頂尖交易者的心智模型](../../raw/2026-05-08/2026投資心理學穿越市場噪音掌握頂尖交易者心智模型.md)
-- [用一條線的紀律，建立一個難以虧損的投資組合](../../raw/2026-05-08/用一條線的紀律建立難以虧損的投資組合.md)
+- [2026投資心理學：穿越市場噪音，掌握頂尖交易者的心智模型](<https://mila4real.com/investor-psychology-2026-mastering-mental-models/>)
+- [用一條線的紀律，建立一個難以虧損的投資組合](<https://vocus.cc/article/6954b983fd89780001956b3b>)

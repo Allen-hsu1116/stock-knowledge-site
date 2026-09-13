@@ -1,6 +1,9 @@
 ---
 title: "信用利差Credit Spread"
 category: "風險管理"
+raw_files:
+- raw/2026-05-09/信用利差Credit-Spread-Wikipedia.md
+- raw/2026-05-09/信用風險Credit-Risk-Wikipedia.md
 ---
 
 # 信用利差Credit Spread
@@ -119,5 +122,5 @@ category: "風險管理"
 
 ## 來源
 
-- [Yield spread - Wikipedia](../../raw/2026-05-09/信用利差Credit-Spread-Wikipedia.md)
-- [Credit risk - Wikipedia](../../raw/2026-05-09/信用風險Credit-Risk-Wikipedia.md)
+- [Yield spread - Wikipedia](<https://en.wikipedia.org/wiki/Credit_spread_(bond)>)
+- [Credit risk - Wikipedia](<https://en.wikipedia.org/wiki/Credit_risk>)

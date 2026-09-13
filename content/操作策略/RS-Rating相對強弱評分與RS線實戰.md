@@ -1,6 +1,10 @@
 ---
 title: "RS Rating相對強弱評分與RS線實戰"
 category: "操作策略"
+raw_files:
+- raw/2026-05-07/抓住股市領頭羊理解RS線與RS評分.md
+- raw/2026-05-07/尼克萊相對強度RS三大應用.md
+- raw/2026-05-17/RS相對強度選股-尼克萊與斜槓姐姐.md
 ---
 
 # RS Rating相對強弱評分與RS線實戰
@@ -112,8 +116,8 @@ RSS可替換比較基準：
 
 ## 來源
 
-- [抓住股市領頭羊：理解RS線與RS評分](../../raw/2026-05-07/抓住股市領頭羊理解RS線與RS評分.md)
-- [尼克萊｜相對強度（RS）是什麼？獨家公開三大應用](../../raw/2026-05-07/尼克萊相對強度RS三大應用.md)
+- [抓住股市領頭羊：理解RS線與RS評分](<https://www.marketsmith.hk/v2/blog/stock-leaders-understanding-rs-line-and-rs-rating-hk?lang=zh-hant>)
+- [尼克萊｜相對強度（RS）是什麼？獨家公開三大應用](<https://cmnews.com.tw/article/nicklai-a677b67d-d8c9-11ef-b34b-4fa117239aaa>)
 - [相對強度RS是什麼？先搞懂強勢股背後的真正風險與機會](https://readmo.cmoney.tw/article/ed4bae8c-3beb-4964-9200-1c4f6f5ba170)
-- [尼克萊｜RS線舉例說明 - CMoney](../../raw/2026-05-17/RS相對強度選股-尼克萊與斜槓姐姐.md)
-- [用RS指標篩選強勢股的完整操作指南 - 斜槓姐姐](../../raw/2026-05-17/RS相對強度選股-尼克萊與斜槓姐姐.md)
+- 尼克萊｜RS線舉例說明 - CMoney（原始來源：[1](<https://cmnews.com.tw/article/nicklai-a6a35c00-d8c9-11ef-887d-3957ecb78805>)、[2](<https://byslashie.com/rs-technical-indicator/>)）
+- 用RS指標篩選強勢股的完整操作指南 - 斜槓姐姐（原始來源：[1](<https://cmnews.com.tw/article/nicklai-a6a35c00-d8c9-11ef-887d-3957ecb78805>)、[2](<https://byslashie.com/rs-technical-indicator/>)）

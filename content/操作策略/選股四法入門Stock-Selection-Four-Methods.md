@@ -2,6 +2,8 @@
 category: "操作策略"
 title: 選股四法入門Stock-Selection-Four-Methods
 date: 2026-05-16
+raw_files:
+- raw/2026-05-16/新手選股完整入門攻略-StockFeel.md
 ---
 
 # 選股四法入門Stock-Selection-Four-Methods
@@ -103,4 +105,4 @@ date: 2026-05-16
 
 ## 來源
 
-- [新手選股完整入門攻略—StockFeel](../../raw/2026-05-16/新手選股完整入門攻略-StockFeel.md)
+- [新手選股完整入門攻略—StockFeel](<https://www.stockfeel.com.tw/%E6%96%B0%E6%89%8B%E6%8A%95%E8%B3%87%E5%85%A5%E9%96%80-%E5%A6%82%E4%BD%95%E9%81%B8%E8%82%A1%E7%AF%87/>)

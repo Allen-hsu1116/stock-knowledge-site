@@ -1,6 +1,11 @@
 ---
 title: "過度交易 Overtrading 防範體系"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/過度交易Overtrading防範體系.md
+- raw/2026-05-15/如何避免過度交易-CryptoPaul.md
+- raw/2026-05-15/過度交易判斷與避免-FX110.md
+- raw/2026-05-15/過度自信引發過度交易-中信證券.md
 ---
 
 # 過度交易 Overtrading 防範體系
@@ -172,7 +177,7 @@ Barber et al.（2009）以台灣股票市場所有投資人的完整交易資料
 
 ## 來源
 
-- [過度交易防範體系 - MBA智库百科](../../raw/2026-05-08/過度交易Overtrading防範體系.md)
-- [如何避免過度交易 - CryptoPaul](../../raw/2026-05-15/如何避免過度交易-CryptoPaul.md)
-- [過度交易判斷與避免 - FX110](../../raw/2026-05-15/過度交易判斷與避免-FX110.md)
-- [過度自信引發過度交易 - 中信證券](../../raw/2026-05-15/過度自信引發過度交易-中信證券.md)
+- [過度交易防範體系 - MBA智库百科](<https://wiki.mbalib.com/zh-tw/%E8%BF%87%E5%BA%A6%E4%BA%A4%E6%98%93>)
+- [如何避免過度交易 - CryptoPaul](<https://cryptopaul.net/overtrading/>)
+- [過度交易判斷與避免 - FX110](<https://www.fx110.com.tw/special/10493>)
+- [過度自信引發過度交易 - 中信證券](<https://www.ctbcsec.com/Article/Info/0b933866-b055-431d-a603-d05625c22dd0>)

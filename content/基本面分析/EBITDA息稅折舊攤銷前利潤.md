@@ -1,6 +1,9 @@
 ---
 title: "EBITDA 息稅折舊攤銷前利潤"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/企業價值倍數EV-EBIT-EBITDA市場先生.md
+- raw/2026-05-05/企業價值倍數Enterprise-Multiple口袋證券.md
 ---
 
 # EBITDA 息稅折舊攤銷前利潤
@@ -82,5 +85,5 @@ EBITDA忽略資本支出是最大缺陷。實戰中應計算：
 - [[現金流量折現法DCF估值|DCF估值]]
 
 ## 來源
-- [企業價值倍數EV/EBIT、EV/EBITDA是什麼？怎麼計算？- 市場先生](../../raw/2026-05-05/企業價值倍數EV-EBIT-EBITDA市場先生.md)
-- [企業價值倍數 Enterprise Multiple - 口袋證券](../../raw/2026-05-05/企業價值倍數Enterprise-Multiple口袋證券.md)
+- [企業價值倍數EV/EBIT、EV/EBITDA是什麼？怎麼計算？- 市場先生](<https://rich01.com/ev-ebitda-defination/>)
+- [企業價值倍數 Enterprise Multiple - 口袋證券](<https://www.pocket.tw/school/report/SCHOOL/4729/>)

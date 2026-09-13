@@ -1,6 +1,10 @@
 ---
 category: "操作策略"
 title: 型態學實戰操作策略Chart-Pattern-Trading-Strategy
+raw_files:
+- raw/2026-05-14/StockFeel底部型態與多空型態.md
+- raw/2026-05-14/QuantPass型態學組合K線型態.md
+- raw/2026-05-14/OANDA型態學誤區與指標搭配.md
 ---
 
 # 型態學實戰操作策略Chart-Pattern-Trading-Strategy
@@ -247,6 +251,6 @@ M頭目標價 = 頸線 - (頭部 - 頸線)
 
 ## 來源
 
-- [W 底、M 頭是什麼？股市還有哪些型態？教你運用型態抓買賣點！ - StockFeel](../../raw/2026-05-14/StockFeel底部型態與多空型態.md)
-- [一招找出頭肩底與三角收斂，11種常見的組合K線型態 - 量化通 QuantPass](../../raw/2026-05-14/QuantPass型態學組合K線型態.md)
-- [常見的K線型態有哪些？解說透過K線型態學掌握交易契機的方法 - OANDA Lab](../../raw/2026-05-14/OANDA型態學誤區與指標搭配.md)
+- [W 底、M 頭是什麼？股市還有哪些型態？教你運用型態抓買賣點！ - StockFeel](<https://www.stockfeel.com.tw/%E5%BC%B7%E5%8B%A2%E8%82%A1%E7%9A%84%E5%BA%95%E9%83%A8%E5%9E%8B%E6%85%8Bpart1/>)
+- [一招找出頭肩底與三角收斂，11種常見的組合K線型態 - 量化通 QuantPass](<https://quantpass.org/kbar-pattern-3/>)
+- [常見的K線型態有哪些？解說透過K線型態學掌握交易契機的方法 - OANDA Lab](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/chart-pattern/>)

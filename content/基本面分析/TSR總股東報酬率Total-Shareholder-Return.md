@@ -1,6 +1,8 @@
 ---
 title: "TSR總股東報酬率Total-Shareholder-Return"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-12/TSR總股東報酬率與提升企業價值計畫-TEJ.md
 ---
 
 # TSR總股東報酬率Total-Shareholder-Return
@@ -90,4 +92,4 @@ ROIC > WACC → 企業創造價值 → 自由現金流增加 → 市場評價提
 
 ## 來源
 
-- [TSR總股東報酬率與提升企業價值計畫-TEJ](../../raw/2026-05-12/TSR總股東報酬率與提升企業價值計畫-TEJ.md)
+- [TSR總股東報酬率與提升企業價值計畫-TEJ](<https://www.tejwin.com/insight/提升企業價值計畫修訂-新增tsr指標/>)

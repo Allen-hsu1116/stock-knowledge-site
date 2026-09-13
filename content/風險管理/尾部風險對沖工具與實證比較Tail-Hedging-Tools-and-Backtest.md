@@ -1,6 +1,9 @@
 ---
 title: "尾部風險對沖工具與實證比較 Tail Hedging Tools and Backtest"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/再談尾部風險對沖Tail-Hedging.md
+- raw/2026-05-15/尾部風險對沖策略與工具.md
 ---
 
 # 尾部風險對沖工具與實證比較 Tail Hedging Tools and Backtest
@@ -140,5 +143,5 @@ COVID-19大跌市前，投資者僅需用資產值的1-2%資金，平價買入�
 
 ## 來源
 
-- [再談尾部風險對沖 Tail Hedging - 股市漁夫](../../raw/2026-05-15/再談尾部風險對沖Tail-Hedging.md)
-- [尾部風險對沖策略與工具 - 帷幄網](../../raw/2026-05-15/尾部風險對沖策略與工具.md)
+- [再談尾部風險對沖 Tail Hedging - 股市漁夫](<https://www.stockfisher.com.hk/post/61db066c90535f2091424055/>)
+- [尾部風險對沖策略與工具 - 帷幄網](<https://weivol.cn/2018/04/tail-risk-hedging/>)

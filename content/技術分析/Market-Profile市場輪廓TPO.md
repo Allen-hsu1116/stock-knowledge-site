@@ -1,6 +1,8 @@
 ---
 title: "Market Profile 市場輪廓 TPO"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/Market-Profile市場輪廓TPO.md
 ---
 
 # Market Profile 市場輪廓 TPO
@@ -138,4 +140,4 @@ TPO是Market Profile的基本單位。當一個價格在一個時間單元被觸
 
 ## 來源
 
-- [Market Profile 是什麼？市場結構分析指南](../../raw/2026-05-04/Market-Profile市場輪廓TPO.md)
+- [Market Profile 是什麼？市場結構分析指南](<https://blockchaintips101.com/market-profile-guide/>)

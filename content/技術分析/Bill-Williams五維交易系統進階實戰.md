@@ -1,6 +1,11 @@
 ---
 title: "Bill Williams 五維交易系統進階實戰"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/Bill-Williams混沌交易法五維系統-CashbackIsland.md
+- raw/2026-05-11/Bill-Williams混沌操作法五階段-MBA智库.md
+- raw/2026-05-11/鱷魚線Alligator四階段進場策略-EBC.md
+- raw/2026-05-16/鱷魚線Alligator指標與碎形交易.md
 ---
 
 # Bill Williams 五維交易系統進階實戰
@@ -200,9 +205,9 @@ MFI = (最高價 - 最低價) / 成交量，與成交量結合判斷市場真實
 
 ## 來源
 
-- [混沌交易法全攻略：比爾威廉指標教學與實戰應用](../../raw/2026-05-11/Bill-Williams混沌交易法五維系統-CashbackIsland.md)
-- [混沌操作法五階段 - MBA智庫百科](../../raw/2026-05-11/Bill-Williams混沌操作法五階段-MBA智库.md)
-- [鱷魚線四階段進場策略 - EBC金融集團](../../raw/2026-05-11/鱷魚線Alligator四階段進場策略-EBC.md)
+- [混沌交易法全攻略：比爾威廉指標教學與實戰應用](<https://www.cashbackisl.com/bill-williams-chaos-theory/>)
+- [混沌操作法五階段 - MBA智庫百科](<https://wiki.mbalib.com/wiki/%E6%B7%B7%E6%B2%8C%E6%93%8D%E4%BD%9C%E6%B3%95>)
+- [鱷魚線四階段進場策略 - EBC金融集團](<https://www.ebc.com/zh/jinrong/277057.html>)
 - [Fractals trading and how to use the Alligator - Tradeciety](https://tradeciety.com/fractals-trading-use-alligator-williams-chaos-theory)
 - [The Chaos Theory of Bill Williams - FBS](https://fbs.com/fbs-academy/trading-tutorials/trading-handbook/bill-williams-s-theory)
-- [鱷魚線Alligator指標與碎形交易](../../raw/2026-05-16/鱷魚線Alligator指標與碎形交易.md)
+- 鱷魚線Alligator指標與碎形交易（原始來源：[1](<https://tradeciety.com/fractals-trading-use-alligator-williams-chaos-theory,>)、[2](<https://concords.moneydj.com/z/glossary/glexp_5140.djhtm,>)、[3](<https://www.dcnfutures.tw/news/details.php?id=2052,>)、[4](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/moving_average-displaced/,>)、[5](<https://www.fx110.com.tw/special/9584>)）

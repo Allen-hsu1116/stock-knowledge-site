@@ -1,6 +1,10 @@
 ---
 title: "布林通道 Bollinger Bands 三軌八型態"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/布林通道教學FM-Studio-8大實戰策略.md
+- raw/2026-05-18/布林通道OANDA軌道型態判讀.md
+- raw/2026-05-18/布林通道教學-市場先生.md
 ---
 
 # 布林通道 Bollinger Bands 三軌八型態
@@ -157,6 +161,6 @@ category: "技術分析"
 
 ## 來源
 
-- [布林通道教學｜從入門到精通的8大實戰策略](../../raw/2026-05-18/布林通道教學FM-Studio-8大實戰策略.md)
-- [布林通道OANDA軌道型態判讀](../../raw/2026-05-18/布林通道OANDA軌道型態判讀.md)
-- [布林通道教學-市場先生](../../raw/2026-05-18/布林通道教學-市場先生.md)
+- [布林通道教學｜從入門到精通的8大實戰策略](<https://fmstudio.blog/bollinger-bands-tut-2025/>)
+- [布林通道OANDA軌道型態判讀](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/bollinger_bands/>)
+- [布林通道教學-市場先生](<https://rich01.com/what-is-bollinger-band/>)

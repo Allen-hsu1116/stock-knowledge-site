@@ -4,6 +4,8 @@ category: "籌碼面分析"
 date: 2026-08-29
 source_date: 2026-08-29
 status: raw_linked
+raw_files:
+- raw/2026-08-29/Gamma-Exposure與造市商避險研究摘錄.md
 ---
 
 # 選擇權Gamma Exposure與Gamma Flip籌碼判讀
@@ -102,7 +104,7 @@ Anderegg、Ulmann與Sornette的模型及外匯市場實證支持這個回饋機�
 
 ## 來源
 
-- [Gamma Exposure與造市商避險研究摘錄](../../raw/2026-08-29/Gamma-Exposure與造市商避險研究摘錄.md)
+- Gamma Exposure與造市商避險研究摘錄（原始來源：[1](<https://www.cboe.com/insights/posts/volatility-insights-evaluating-the-market-impact-of-spx-0-dte-options/>)、[2](<https://doi.org/10.1016/j.jimonfin.2022.102627>)、[3](<https://doi.org/10.1016/j.jfineco.2021.04.029>)、[4](<https://api.openalex.org/works/https://doi.org/10.1016/j.jimonfin.2022.102627>)）
 - [Cboe：Evaluating the Market Impact of SPX 0DTE Options](https://www.cboe.com/insights/posts/volatility-insights-evaluating-the-market-impact-of-spx-0-dte-options/)
 - [Anderegg、Ulmann、Sornette：The impact of option hedging on the spot market volatility](https://doi.org/10.1016/j.jimonfin.2022.102627)
 - [Baltussen等人：Hedging demand and market intraday momentum](https://doi.org/10.1016/j.jfineco.2021.04.029)

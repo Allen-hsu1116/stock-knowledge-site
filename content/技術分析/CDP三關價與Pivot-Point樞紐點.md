@@ -1,6 +1,10 @@
 ---
 title: "CDP三關價與Pivot-Point樞紐點"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/CDP指標完整教學與三關價運用.md
+- raw/2026-05-04/Pivot-Point樞軸點順勢逆勢操作.md
+- raw/2026-05-18/樞紐點Pivot-Point期貨交易運用.md
 ---
 
 # CDP三關價與Pivot-Point樞紐點
@@ -133,6 +137,6 @@ S3（LBOP）= S1 - (H - L)
 
 ## 來源
 
-- [CDP指標完整教學｜pivot三關價運用](../../raw/2026-05-04/CDP指標完整教學與三關價運用.md)
-- [適用於反向操作、順向操作樞軸點（Pivot Point）](../../raw/2026-05-04/Pivot-Point樞軸點順勢逆勢操作.md)
-- [樞紐點Pivot Point期貨交易運用-OP凱文](../../raw/2026-05-18/樞紐點Pivot-Point期貨交易運用.md)
+- [CDP指標完整教學｜pivot三關價運用](<https://quantpass.org/cdp-2/>)
+- [適用於反向操作、順向操作樞軸點（Pivot Point）](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/pivot-point/>)
+- [樞紐點Pivot Point期貨交易運用-OP凱文](<https://opkevin.cc/%E6%9C%9F%E8%B2%A8pivot-point/>)

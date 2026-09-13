@@ -1,6 +1,9 @@
 ---
 title: "VaR風險值Value-at-Risk"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/VaR風險價值方法mbalib.md
+- raw/2026-05-15/TEJ-VaR變異數共變異數法.md
 ---
 
 # VaR風險值Value-at-Risk
@@ -163,5 +166,5 @@ CVaR比VaR更保守，對尾部風險的衡量更準確。
 
 ## 來源
 
-- [VaR風險價值方法mbalib](../../raw/2026-05-08/VaR風險價值方法mbalib.md)
-- [TEJ投資組合風險值—變異數-共變異數法實作](../../raw/2026-05-15/TEJ-VaR變異數共變異數法.md)
+- [VaR風險價值方法mbalib](<https://wiki.mbalib.com/zh-tw/VaR>)
+- [TEJ投資組合風險值—變異數-共變異數法實作](<https://www.tejwin.com/insight/%E3%80%90%E9%87%8F%E5%8C%96%E5%88%86%E6%9E%90%E3%80%91%E6%8A%95%E8%B3%87%E7%B5%84%E5%90%88%E9%A2%A8%E9%9A%AA%E5%80%BC/>)

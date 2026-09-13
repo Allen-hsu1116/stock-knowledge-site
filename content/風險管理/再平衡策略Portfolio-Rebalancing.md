@@ -1,6 +1,11 @@
 ---
 title: "再平衡策略Portfolio-Rebalancing"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/比重還原法Rebalancing-Endowus.md
+- raw/2026-05-08/再平衡策略SmartAsset.md
+- raw/2026-05-15/投資組合風險審計五大策略回測與隱藏成本.md
+- raw/2026-05-15/資產配置再平衡頻率與實務.md
 ---
 
 # 再平衡策略Portfolio-Rebalancing
@@ -21,7 +26,7 @@ category: "風險管理"
 
 ### 再平衡的數學範例
 
-Doris用$200,000投資，配置50%股票、30%債券、15%商品、5%現金。一年後組合增長至$215,050，比例變成52.1%股票、28.6%債券、14.6%商品、4.7%現金。再平衡就是賣出部分股票，買入債券、商品和現金，恢復到原始50/30/15/5的比例。
+Doris用\$200,000投資，配置50%股票、30%債券、15%商品、5%現金。一年後組合增長至\$215,050，比例變成52.1%股票、28.6%債券、14.6%商品、4.7%現金。再平衡就是賣出部分股票，買入債券、商品和現金，恢復到原始50/30/15/5的比例。
 
 ## 實戰應用
 
@@ -95,7 +100,7 @@ Doris用$200,000投資，配置50%股票、30%債券、15%商品、5%現金。�
 
 ## 來源
 
-- [善用比重還原法（Rebalancing）確保投資組合緊貼目標 - Endowus](../../raw/2026-05-08/比重還原法Rebalancing-Endowus.md)
-- [How and When to Rebalance Your Portfolio - SmartAsset](../../raw/2026-05-08/再平衡策略SmartAsset.md)
-- [2026投資策略指南：5大資產配置實戰回測 - FM Studio](../../raw/2026-05-15/投資組合風險審計五大策略回測與隱藏成本.md)
-- [資產配置的再平衡是什麼意思 - 市場先生](../../raw/2026-05-15/資產配置再平衡頻率與實務.md)
+- [善用比重還原法（Rebalancing）確保投資組合緊貼目標 - Endowus](<https://endowus.com/zh-hk/insights/rebalancing-strategy-explained>)
+- [How and When to Rebalance Your Portfolio - SmartAsset](<https://www.smartasset.com/investing/portfolio-rebalancing>)
+- [2026投資策略指南：5大資產配置實戰回測 - FM Studio](<https://fmstudio.blog/investment-strategy-guide-2026/>)
+- [資產配置的再平衡是什麼意思 - 市場先生](<https://rich01.com/what-asset-rebalancing/>)

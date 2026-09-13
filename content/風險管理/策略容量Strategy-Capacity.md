@@ -1,6 +1,8 @@
 ---
 title: "策略容量 Strategy Capacity"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/策略資金容量粗略估計-子楠講量化-FMZ.md
 ---
 
 # 策略容量 Strategy Capacity
@@ -108,4 +110,4 @@ category: "風險管理"
 - [[資金曲線管理Equity-Curve-Management]]
 
 ## 來源
-- [如何粗略估計一個策略的資金容量](../../raw/2026-05-15/策略資金容量粗略估計-子楠講量化-FMZ.md)
+- [如何粗略估計一個策略的資金容量](<https://www.fmz.com/bbs-topic/6142>)

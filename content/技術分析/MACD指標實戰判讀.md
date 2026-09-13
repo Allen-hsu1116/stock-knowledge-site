@@ -1,6 +1,14 @@
 ---
 title: "MACD指標實戰判讀 Moving Average Convergence Divergence"
 category: "技術分析"
+raw_files:
+- raw/2026-05-02/MACD指標三條線DIF-DEA-柱狀圖解析.md
+- raw/2026-05-02/MACD教學與交易策略-OANDA.md
+- raw/2026-05-02/MACD指標買賣點判斷-StockFeel.md
+- raw/2026-05-16/MACD指標完整教學-量化通.md
+- raw/2026-05-16/MACD背離黃金交叉教學-學吧.md
+- raw/2026-05-16/MACD背離黃金交叉怎麼看-市場先生.md
+- raw/2026-05-18/MACD指標教學-市場先生.md
 ---
 
 # MACD指標實戰判讀 Moving Average Convergence Divergence
@@ -172,10 +180,10 @@ MACD由三個相互關聯的元素組成：
 
 ## 來源
 
-- [MACD指標三條線DIF-DEA-柱狀圖解析](../../raw/2026-05-02/MACD指標三條線DIF-DEA-柱狀圖解析.md)
-- [MACD教學與交易策略-OANDA](../../raw/2026-05-02/MACD教學與交易策略-OANDA.md)
-- [MACD指標買賣點判斷-StockFeel](../../raw/2026-05-02/MACD指標買賣點判斷-StockFeel.md)
-- [MACD指標完整教學-量化通](../../raw/2026-05-16/MACD指標完整教學-量化通.md)
-- [MACD背離黃金交叉教學-學吧](../../raw/2026-05-16/MACD背離黃金交叉教學-學吧.md)
-- [MACD背離黃金交叉怎麼看-市場先生](../../raw/2026-05-16/MACD背離黃金交叉怎麼看-市場先生.md)
-- [MACD指標教學-市場先生](../../raw/2026-05-18/MACD指標教學-市場先生.md)
+- [MACD指標三條線DIF-DEA-柱狀圖解析](<https://www.kgicfd.com.tw/archives/9418>)
+- [MACD教學與交易策略-OANDA](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/macd/>)
+- [MACD指標買賣點判斷-StockFeel](<https://www.stockfeel.com.tw/macd-dif-eam/>)
+- [MACD指標完整教學-量化通](<https://quantpass.org/macd-2/>)
+- [MACD背離黃金交叉教學-學吧](<https://learningpa.cc/tech9/>)
+- [MACD背離黃金交叉怎麼看-市場先生](<https://rich01.com/what-is-macd-indicator/>)
+- [MACD指標教學-市場先生](<https://rich01.com/what-is-macd-indicator/>)

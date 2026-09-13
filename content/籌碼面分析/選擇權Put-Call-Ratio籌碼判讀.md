@@ -1,6 +1,14 @@
 ---
 title: "選擇權Put-Call-Ratio籌碼判讀"
 category: "籌碼面分析"
+raw_files:
+- raw/2026-05-02/期貨未平倉量OI與選擇權Put-Call-Ratio.md
+- raw/2026-05-06/Put-Call-Ratio解讀市場情緒逆向指標.md
+- raw/2026-05-06/Put-Call-Ratio選擇權未平倉分析回測.md
+- raw/2026-05-06/StockFeel-Put-Call-Ratio是什麼.md
+- raw/2026-05-06/永豐期貨-選擇權未平倉意義解讀.md
+- raw/2026-05-06/QuantPass-Put-Call-Ratio散戶指標.md
+- raw/2026-05-17/GoOptions選擇權PutCallRatio實戰教學.md
 ---
 
 # 選擇權Put-Call-Ratio籌碼判讀
@@ -174,12 +182,12 @@ PCR 作為逆向指標，極端值比中間值更有參考意義：
 
 ## 來源
 
-- [Put Call Ratio 散戶指標 QuantPass](../../raw/2026-05-02/期貨未平倉量OI與選擇權Put-Call-Ratio.md)
-- [選擇權未平倉意義解讀 永豐期貨](../../raw/2026-05-02/期貨未平倉量OI與選擇權Put-Call-Ratio.md)
-- [期貨未平倉怎麼看 options.tw](../../raw/2026-05-02/期貨未平倉量OI與選擇權Put-Call-Ratio.md)
-- [Put/Call Ratio 解讀：洞悉市場情緒 investbrother](../../raw/2026-05-06/Put-Call-Ratio解讀市場情緒逆向指標.md)
-- [Put/Call Ratio 選擇權未平倉分析回測](../../raw/2026-05-06/Put-Call-Ratio選擇權未平倉分析回測.md)
-- [Put Call Ratio 是什麼 StockFeel](../../raw/2026-05-06/StockFeel-Put-Call-Ratio是什麼.md)
-- [選擇權未平倉意義解讀 永豐期貨](../../raw/2026-05-06/永豐期貨-選擇權未平倉意義解讀.md)
-- [Put Call Ratio 散戶指標 QuantPass](../../raw/2026-05-06/QuantPass-Put-Call-Ratio散戶指標.md)
-- [GoOptions P/C Ratio 實戰教學](../../raw/2026-05-17/GoOptions選擇權PutCallRatio實戰教學.md)
+- Put Call Ratio 散戶指標 QuantPass（原始來源：[1](<https://www.stockfeel.com.tw/%E6%9C%AA%E5%B9%B3%E5%80%89%E9%87%8F-%E4%BA%A4%E6%98%93%E9%87%8F-%E6%9C%9F%E8%B2%A8/>)、[2](<https://rich01.com/open-interest/>)、[3](<https://options.tw/%E6%9C%9F%E8%B2%A8%E6%9C%AA%E5%B9%B3%E5%80%89/>)、[4](<https://quantpass.org/put-call-ratio/>)、[5](<https://www.spf.com.tw/mktinfo/Futures/OA/option-001.html>)）
+- 選擇權未平倉意義解讀 永豐期貨（原始來源：[1](<https://www.stockfeel.com.tw/%E6%9C%AA%E5%B9%B3%E5%80%89%E9%87%8F-%E4%BA%A4%E6%98%93%E9%87%8F-%E6%9C%9F%E8%B2%A8/>)、[2](<https://rich01.com/open-interest/>)、[3](<https://options.tw/%E6%9C%9F%E8%B2%A8%E6%9C%AA%E5%B9%B3%E5%80%89/>)、[4](<https://quantpass.org/put-call-ratio/>)、[5](<https://www.spf.com.tw/mktinfo/Futures/OA/option-001.html>)）
+- 期貨未平倉怎麼看 options.tw（原始來源：[1](<https://www.stockfeel.com.tw/%E6%9C%AA%E5%B9%B3%E5%80%89%E9%87%8F-%E4%BA%A4%E6%98%93%E9%87%8F-%E6%9C%9F%E8%B2%A8/>)、[2](<https://rich01.com/open-interest/>)、[3](<https://options.tw/%E6%9C%9F%E8%B2%A8%E6%9C%AA%E5%B9%B3%E5%80%89/>)、[4](<https://quantpass.org/put-call-ratio/>)、[5](<https://www.spf.com.tw/mktinfo/Futures/OA/option-001.html>)）
+- [Put/Call Ratio 解讀：洞悉市場情緒 investbrother](<https://www.investbrother.com/brother-academy/put-call-ratio-guide-2025/>)
+- [Put/Call Ratio 選擇權未平倉分析回測](<https://futuresinvest90223.com/put-call-ratio-選擇權的未平倉分析/>)
+- [Put Call Ratio 是什麼 StockFeel](<https://www.stockfeel.com.tw/put-call-ratio-p-c%E5%80%BC/>)
+- [選擇權未平倉意義解讀 永豐期貨](<https://www.spf.com.tw/mktinfo/Futures/OA/option-001.html>)
+- [Put Call Ratio 散戶指標 QuantPass](<https://quantpass.org/put-call-ratio/>)
+- [GoOptions P/C Ratio 實戰教學](<https://gooptions.cc/put-call-ratio/>)

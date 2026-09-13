@@ -1,6 +1,8 @@
 ---
 title: "EVA經濟附加價值"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/EVA經濟附加值.md
 ---
 
 # EVA經濟附加價值
@@ -125,4 +127,4 @@ MVA = 企業市值 - 投入資本
 
 ## 來源
 
-- [經濟附加值 - MBA智库百科](../../raw/2026-05-05/EVA經濟附加值.md)
+- [經濟附加值 - MBA智库百科](<https://wiki.mbalib.com/zh-tw/%E7%BB%8F%E6%B5%8E%E9%99%84%E5%8A%A0%E5%80%BC>)

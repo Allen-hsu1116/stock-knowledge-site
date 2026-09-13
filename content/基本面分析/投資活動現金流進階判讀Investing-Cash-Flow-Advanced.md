@@ -1,6 +1,9 @@
 ---
 title: "投資活動現金流進階判讀Investing-Cash-Flow-Advanced"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/投資活動現金流量與資本支出判讀市場先生.md
+- raw/2026-05-19/看懂現金流量表三大現金流與財務比率StockFeel.md
 ---
 
 # 投資活動現金流進階判讀Investing-Cash-Flow-Advanced
@@ -128,5 +131,5 @@ category: "基本面分析"
 
 ## 來源
 
-- [投資活動現金流量怎麼看？資本支出流入流出代表什麼 - Mr.Market市場先生](../../raw/2026-05-19/投資活動現金流量與資本支出判讀市場先生.md)
-- [看懂現金流量表！現金流量表完整解析 - StockFeel](../../raw/2026-05-19/看懂現金流量表三大現金流與財務比率StockFeel.md)
+- [投資活動現金流量怎麼看？資本支出流入流出代表什麼 - Mr.Market市場先生](<https://rich01.com/what-is-cash-flows-from-investing/>)
+- [看懂現金流量表！現金流量表完整解析 - StockFeel](<https://www.stockfeel.com.tw/三大報表-財報分析-現金流量/>)

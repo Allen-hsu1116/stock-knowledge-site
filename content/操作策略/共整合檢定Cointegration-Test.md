@@ -2,6 +2,8 @@
 title: "共整合檢定 Cointegration Test"
 date: 2026-06-20
 category: "操作策略"
+raw_files:
+- raw/2026-06-20/共整合檢定Cointegration-Wikipedia.md
 ---
 
 # 共整合檢定 Cointegration Test
@@ -96,4 +98,4 @@ $$\Delta y_t = \Delta x_t \cdot b + \alpha \cdot \hat{u}_{t-1} + \varepsilon_t$$
 
 ## 來源
 
-- [Cointegration - Wikipedia](../../raw/2026-06-20/共整合檢定Cointegration-Wikipedia.md)
+- [Cointegration - Wikipedia](<https://en.wikipedia.org/wiki/Cointegration>)

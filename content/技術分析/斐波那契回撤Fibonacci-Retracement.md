@@ -1,6 +1,8 @@
 ---
 title: "斐波那契回撤 Fibonacci Retracement"
 category: "技術分析"
+raw_files:
+- raw/2026-05-17/費波南希回撤Fibonacci-Retracement實戰.md
 ---
 
 # 斐波那契回撤 Fibonacci Retracement
@@ -96,6 +98,6 @@ category: "技術分析"
 
 ## 來源
 
-- [斐波那契回撤怎麼畫預測反彈目標價的神奇數列](../../raw/2026-05-17/費波南希回撤Fibonacci-Retracement實戰.md)
-- [費波那契回撤完整教學運用黃金比例做投資交易-量化通](../../raw/2026-05-17/費波南希回撤Fibonacci-Retracement實戰.md)
-- [斐波那契回調線的交易應用-OANDA](../../raw/2026-05-17/費波南希回撤Fibonacci-Retracement實戰.md)
+- 斐波那契回撤怎麼畫預測反彈目標價的神奇數列（原始來源：[1](<https://opop.tw/fibonacci-retracement-guide/>)、[2](<https://quantpass.org/fibonacci/>)、[3](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/fibonacci/>)）
+- 費波那契回撤完整教學運用黃金比例做投資交易-量化通（原始來源：[1](<https://opop.tw/fibonacci-retracement-guide/>)、[2](<https://quantpass.org/fibonacci/>)、[3](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/fibonacci/>)）
+- 斐波那契回調線的交易應用-OANDA（原始來源：[1](<https://opop.tw/fibonacci-retracement-guide/>)、[2](<https://quantpass.org/fibonacci/>)、[3](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/fibonacci/>)）

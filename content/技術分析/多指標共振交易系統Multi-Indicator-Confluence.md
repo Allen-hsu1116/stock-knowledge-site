@@ -1,6 +1,10 @@
 ---
 category: "技術分析"
 title: 多指標共振交易系統 Multi-Indicator Confluence
+raw_files:
+- raw/2026-05-10/MACD-RSI-KDJ-Combination-Strategy.md
+- raw/2026-05-10/Multi-Indicator-Confluence-Trading-System.md
+- raw/2026-05-10/Confluence-in-Forex-Technical-Analysis.md
 ---
 
 # 多指標共振交易系統 Multi-Indicator Confluence
@@ -168,6 +172,6 @@ title: 多指標共振交易系統 Multi-Indicator Confluence
 
 ## 來源
 
-- [MACD, RSI, and KDJ Indicators for Technical Analysis - Gate.io](../../raw/2026-05-10/MACD-RSI-KDJ-Combination-Strategy.md)
-- [Multi-Indicator Confluence Trading System - FMZQuant](../../raw/2026-05-10/Multi-Indicator-Confluence-Trading-System.md)
-- [Confluence in Forex Technical Analysis - Alphaexcapital](../../raw/2026-05-10/Confluence-in-Forex-Technical-Analysis.md)
+- [MACD, RSI, and KDJ Indicators for Technical Analysis - Gate.io](<https://www.gate.com/crypto-wiki/article/how-to-use-macd-rsi-and-kdj-indicators-for-technical-analysis-in-crypto-trading-20260119>)
+- [Multi-Indicator Confluence Trading System - FMZQuant](<https://medium.com/@FMZQuant/multi-indicator-confluence-trading-system-886f15b18ae5>)
+- [Confluence in Forex Technical Analysis - Alphaexcapital](<https://www.alphaexcapital.com/forex/forex-market-analysis/technical-analysis/confluence-in-forex-technical-analysis>)

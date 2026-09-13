@@ -2,6 +2,8 @@
 category: "操作策略"
 title: 積極型價值投資Active-Value-Investing
 date: 2026-05-10
+raw_files:
+- raw/2026-05-10/盤整行情怎麼賺-今周刊.md
 ---
 
 # 積極型價值投資Active-Value-Investing
@@ -43,4 +45,4 @@ date: 2026-05-10
 
 ## 來源
 
-- [台股盤整行情怎麼賺—今周刊](../../raw/2026-05-10/盤整行情怎麼賺-今周刊.md)
+- [台股盤整行情怎麼賺—今周刊](<https://www.businesstoday.com.tw/article/category/1830088/post/202502260007/>)

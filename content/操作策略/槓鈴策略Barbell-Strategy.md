@@ -2,6 +2,8 @@
 category: "操作策略"
 title: 槓鈴策略 Barbell Strategy
 date: 2026-06-18
+raw_files:
+- raw/2026-06-18/Barbell-strategy-Wikipedia.md
 ---
 
 # 槓鈴策略 Barbell Strategy
@@ -68,4 +70,4 @@ date: 2026-06-18
 
 ## 來源
 
-- [Barbell strategy - Wikipedia](../../raw/2026-06-18/Barbell-strategy-Wikipedia.md)
+- [Barbell strategy - Wikipedia](<https://en.wikipedia.org/wiki/Barbell_strategy>)

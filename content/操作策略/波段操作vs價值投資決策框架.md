@@ -1,6 +1,8 @@
 ---
 title: "波段操作vs價值投資決策框架"
 category: "操作策略"
+raw_files:
+- raw/2026-05-14/波段操作vs長期持股.md
 ---
 
 # 波段操作vs價值投資決策框架
@@ -102,4 +104,4 @@ category: "操作策略"
 
 ## 來源
 
-- [投資要「波段操作」還是「長期持股」不賣？ - StockFeel](../../raw/2026-05-14/波段操作vs長期持股.md)
+- [投資要「波段操作」還是「長期持股」不賣？ - StockFeel](<https://www.stockfeel.com.tw/%E6%8A%95%E8%B3%87-%E6%B3%A2%E6%AE%B5%E6%93%8D%E4%BD%9C-%E9%95%B7%E6%9C%9F%E6%8C%81%E8%82%A1-%E4%B8%8D%E8%B3%A3/>)

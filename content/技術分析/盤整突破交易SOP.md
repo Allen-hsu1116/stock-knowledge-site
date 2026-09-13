@@ -1,6 +1,8 @@
 ---
 title: "盤整突破交易SOP"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/盤整突破交易SOP.md
 ---
 
 # 盤整突破交易SOP
@@ -126,6 +128,6 @@ category: "技術分析"
 
 ## 來源
 
-- [盤整突破交易SOP](../../raw/2026-05-18/盤整突破交易SOP.md)
+- 盤整突破交易SOP（本機留存素材，未公開全文；原始網址待核對）
 - Stan Weinstein, *Secrets for Profiting in Bull and Bear Markets*
-- Nicholas Darvas, *How I Made $2,000,000 in the Stock Market*
+- Nicholas Darvas, *How I Made \$2,000,000 in the Stock Market*

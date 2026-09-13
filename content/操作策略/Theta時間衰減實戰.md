@@ -1,6 +1,9 @@
 ---
 title: "Theta時間衰減實戰"
 category: "操作策略"
+raw_files:
+- raw/2026-05-03/深入了解選擇權中的Theta.md
+- raw/2026-05-03/蘋果的啟示-Delta-Theta-Gamma.md
 ---
 
 # Theta時間衰減實戰
@@ -103,5 +106,5 @@ Theta（Θ）衡量選擇權價格對時間變化的敏感度，即「每過一�
 
 ## 來源
 
-- [深入了解選擇權中的Theta](../../raw/2026-05-03/深入了解選擇權中的Theta.md)
-- [蘋果的啟示-Delta-Theta-Gamma](../../raw/2026-05-03/蘋果的啟示-Delta-Theta-Gamma.md)
+- [深入了解選擇權中的Theta](<https://opkevin.cc/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3%E9%81%B8%E6%93%87%E6%AC%8A%E4%B8%AD%E7%9A%84theta%EF%BC%9A%E6%99%82%E9%96%93%E5%B0%8D%E9%81%B8%E6%93%87%E6%AC%8A%E5%83%B9%E5%80%BC%E7%9A%84%E5%BD%B1%E9%9F%BF/>)
+- [蘋果的啟示-Delta-Theta-Gamma](<https://vocus.cc/article/65defc0ffd8978000197cbd3>)

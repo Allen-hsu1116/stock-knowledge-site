@@ -1,6 +1,9 @@
 ---
 title: "斷頭強制平倉 Forced Liquidation"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/斷頭強制平倉與保證金追繳機制-MrMarket.md
+- raw/2026-05-01/斷頭強制平倉Forced-Liquidation.md
 ---
 
 # 斷頭強制平倉 Forced Liquidation
@@ -88,5 +91,5 @@ category: "風險管理"
 
 ## 來源
 
-- [斷頭是什麼？斷頭後會發生什麼事？斷頭門檻及規則總整理 - Mr.Market](../../raw/2026-05-15/斷頭強制平倉與保證金追繳機制-MrMarket.md)
-- [斷頭是什麼？斷頭後會發生什麼事？斷頭門檻及規則總整理](../../raw/2026-05-01/斷頭強制平倉Forced-Liquidation.md)
+- [斷頭是什麼？斷頭後會發生什麼事？斷頭門檻及規則總整理 - Mr.Market](<https://rich01.com/forced-selling-forced-liquidation/>)
+- [斷頭是什麼？斷頭後會發生什麼事？斷頭門檻及規則總整理](<https://rich01.com/forced-selling-forced-liquidation/>)

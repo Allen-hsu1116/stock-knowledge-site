@@ -1,6 +1,8 @@
 ---
 title: "交易計畫書Trading-Plan"
 category: "風險管理"
+raw_files:
+- raw/2026-05-03/交易計畫書制定方法.md
 ---
 
 # 交易計畫書Trading-Plan
@@ -154,4 +156,4 @@ category: "風險管理"
 
 ## 來源
 
-- [如何制定交易計劃？ - IG Academy](../../raw/2026-05-03/交易計畫書制定方法.md)
+- [如何制定交易計劃？ - IG Academy](<https://www.ig.com/cn/ig-academy/planning-and-risk-management/how-to-make-a-trading-plan>)

@@ -1,6 +1,9 @@
 ---
 title: "過度自信偏誤 Overconfidence Bias"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/過度自信偏誤對交易的影響.md
+- raw/2026-05-15/過度自信引發過度交易-中信證券.md
 ---
 
 # 過度自信偏誤 Overconfidence Bias
@@ -143,5 +146,5 @@ Barber et al.（2009）發現台灣散戶的特殊現象：許多人把股市視
 
 ## 來源
 
-- [過度自信理論 - MBA智库百科](../../raw/2026-05-08/過度自信偏誤對交易的影響.md)
-- [過度自信引發過度交易 - 中信證券](../../raw/2026-05-15/過度自信引發過度交易-中信證券.md)
+- [過度自信理論 - MBA智库百科](<https://wiki.mbalib.com/zh-tw/过度自信偏差>)
+- [過度自信引發過度交易 - 中信證券](<https://www.ctbcsec.com/Article/Info/0b933866-b055-431d-a603-d05625c22dd0>)

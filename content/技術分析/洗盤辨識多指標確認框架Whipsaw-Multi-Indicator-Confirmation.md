@@ -2,6 +2,10 @@
 title: 洗盤辨識多指標確認框架
 category: 技術分析
 date: 2026-05-16
+raw_files:
+- raw/2026-05-16/洗盤特徵辨識與多指標確認-OANDA.md
+- raw/2026-05-16/均線糾結判斷與順勢交易策略-Winsmart.md
+- raw/2026-05-18/洗盤辨識多指標確認框架-OANDA.md
 ---
 
 # 洗盤辨識多指標確認框架
@@ -148,6 +152,6 @@ date: 2026-05-16
 
 ## 來源
 
-- [什麼是洗盤？特徵與方式有哪些？（OANDA）](../../raw/2026-05-16/洗盤特徵辨識與多指標確認-OANDA.md)
-- [遇到均線糾結2大方法判斷後續行情（Winsmart）](../../raw/2026-05-16/均線糾結判斷與順勢交易策略-Winsmart.md)
-- [什麼是洗盤？特徵與方式有哪些？補強（OANDA 2026-05-18）](../../raw/2026-05-18/洗盤辨識多指標確認框架-OANDA.md)
+- [什麼是洗盤？特徵與方式有哪些？（OANDA）](<https://www.oanda.com/bvi-ft/lab-education/invest_us_stock/whipsaw/>)
+- [遇到均線糾結2大方法判斷後續行情（Winsmart）](<https://winsmart.tw/en/online_teaching/%E5%9D%87%E7%B7%9A%E7%B3%BE%E7%B5%90/>)
+- [什麼是洗盤？特徵與方式有哪些？補強（OANDA 2026-05-18）](<https://www.oanda.com/bvi-ft/lab-education/invest_us_stock/whipsaw/>)

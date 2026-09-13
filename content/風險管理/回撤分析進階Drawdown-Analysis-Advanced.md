@@ -1,6 +1,8 @@
 ---
 title: "回撤分析進階Drawdown-Analysis-Advanced"
 category: "風險管理"
+raw_files:
+- raw/2026-05-09/drawdown-analysis-advanced.md
 ---
 
 # 回撤分析進階Drawdown-Analysis-Advanced
@@ -178,5 +180,5 @@ MDD 是單一事件統計量，嚴重依賴觀察期間：
 
 ## 來源
 
-- [Drawdown (economics) - Wikipedia](../../raw/2026-05-09/drawdown-analysis-advanced.md)
-- [Maximum drawdown - Wikipedia](../../raw/2026-05-09/drawdown-analysis-advanced.md)
+- Drawdown (economics) - Wikipedia（原始來源：[1](<https://en.wikipedia.org/wiki/Drawdown_(economics),>)、[2](<https://en.wikipedia.org/wiki/Maximum_drawdown>)）
+- Maximum drawdown - Wikipedia（原始來源：[1](<https://en.wikipedia.org/wiki/Drawdown_(economics),>)、[2](<https://en.wikipedia.org/wiki/Maximum_drawdown>)）

@@ -1,6 +1,10 @@
 ---
 category: "操作策略"
 title: 杯柄型態 Cup and Handle
+raw_files:
+- raw/2026-04-30/杯柄型態介紹與目標價計算.md
+- raw/2026-04-30/杯柄型態主力洗盤與成交量線索.md
+- raw/2026-05-17/杯柄型態實戰判讀.md
 ---
 
 # 杯柄型態 Cup and Handle
@@ -35,7 +39,7 @@ title: 杯柄型態 Cup and Handle
 ### 目標價計算
 1. 找出杯口（最高點）和杯底（最低點），計算價差
 2. 將價差加到突破點上
-3. 範例：杯口 $100、杯底 $70 → 深度 $30 → 目標價 $100 + $30 = **$130**
+3. 範例：杯口 \$100、杯底 \$70 → 深度 \$30 → 目標價 \$100 + \$30 = **\$130**
 
 ### 買進時機
 - **最佳買點**：杯把區起點位置（洗盤結束後的突破點）
@@ -92,7 +96,7 @@ title: 杯柄型態 Cup and Handle
 - [[擴散型態與菱形型態Broadening-and-Diamond]] - 擴散三角形與菱形反轉型態
 
 ## 來源
-- [杯柄型態介紹與目標價計算](../../raw/2026-04-30/杯柄型態介紹與目標價計算.md)
-- [杯柄型態主力洗盤與成交量線索](../../raw/2026-04-30/杯柄型態主力洗盤與成交量線索.md)
-- [杯柄型態是什麼？帶你掌握杯柄型態和目標價計算！ - Growin Blog](../../raw/2026-05-17/杯柄型態實戰判讀.md)
-- [這檔突破「杯柄型態」，股價大漲120元 - CMoney](../../raw/2026-05-17/杯柄型態實戰判讀.md)
+- [杯柄型態介紹與目標價計算](<https://blog.growin.tv/cup-and-handle-introduction/>)
+- [杯柄型態主力洗盤與成交量線索](<https://wendellchuang.pixnet.net/blog/post/338910503>)
+- 杯柄型態是什麼？帶你掌握杯柄型態和目標價計算！ - Growin Blog（原始來源：[1](<https://blog.growin.tv/cup-and-handle-introduction/>)、[2](<https://www.cmoney.tw/notes/note-detail.aspx?nid=856143>)）
+- 這檔突破「杯柄型態」，股價大漲120元 - CMoney（原始來源：[1](<https://blog.growin.tv/cup-and-handle-introduction/>)、[2](<https://www.cmoney.tw/notes/note-detail.aspx?nid=856143>)）

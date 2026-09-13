@@ -2,6 +2,8 @@
 category: "基本面分析"
 title: "淨負債 EBITDA 槓桿倍數"
 date: 2026-06-16
+raw_files:
+- raw/2026-06-16/Net-Debt-EBITDA-CFI.md
 ---
 
 # 淨負債 EBITDA 槓桿倍數
@@ -75,4 +77,4 @@ Net Debt/EBITDA 常用在信用評級、併購融資與企業價值分析。當�
 
 ## 來源
 
-- [Net Debt/EBITDA Ratio](../../raw/2026-06-16/Net-Debt-EBITDA-CFI.md)
+- [Net Debt/EBITDA Ratio](<https://corporatefinanceinstitute.com/resources/valuation/net-debt-ebitda-ratio/>)

@@ -2,6 +2,9 @@
 title: AD 累積分配指標收盤位置加權
 date: 2026-05-04
 category: 技術分析
+raw_files:
+- raw/2026-05-04/AD累積分配指標MBA百科.md
+- raw/2026-05-04/Chaikin-Money-Flow佳慶資金流量指標.md
 ---
 
 # AD 累積分配指標收盤位置加權
@@ -121,5 +124,5 @@ OBV 在跳空缺口日只看收盤漲跌，但 AD 的 CLV 會考慮收盤價在�
 
 ## 來源
 
-- [AD 累積分配指標 - MBA智库百科](../../raw/2026-05-04/AD累積分配指標MBA百科.md)
-- [Chaikin Money Flow - MBA智库百科](../../raw/2026-05-04/Chaikin-Money-Flow佳慶資金流量指標.md)
+- [AD 累積分配指標 - MBA智库百科](<https://wiki.mbalib.com/zh-tw/累积/派发指标>)
+- Chaikin Money Flow - MBA智库百科（原始來源：[1](<https://wiki.mbalib.com/zh-tw/%E4%BD%B3%E5%BA%86%E8%B5%84%E9%87%91%E6%B5%81%E9%87%8F%E6%8C%87%E6%A8%99>)、[2](<https://ithelp.ithome.com.tw/articles/10208438>)、[3](<https://tw.tradingview.com/support/solutions/43000501974/>)）

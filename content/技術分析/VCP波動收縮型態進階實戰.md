@@ -1,6 +1,9 @@
 ---
 title: "VCP波動收縮型態進階實戰"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/VCP型態選股方法與SEPA策略.md
+- raw/2026-05-11/VCP實例操作PowerSqueeze指標搭配.md
 ---
 
 # VCP波動收縮型態進階實戰
@@ -125,5 +128,5 @@ PowerSqueeze 由 John Carter 提出 Squeeze 概念，經 Growin 團隊改良，�
 
 ## 來源
 
-- [VCP型態選股方法 - 市場先生](../../raw/2026-05-11/VCP型態選股方法與SEPA策略.md)
-- [VCP實例操作PowerSqueeze - Growin Blog](../../raw/2026-05-11/VCP實例操作PowerSqueeze指標搭配.md)
+- [VCP型態選股方法 - 市場先生](<https://rich01.com/volatility-contraction-pattern-vcp/>)
+- [VCP實例操作PowerSqueeze - Growin Blog](<https://blog.growin.tv/super-performance-account02/>)

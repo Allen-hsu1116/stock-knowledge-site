@@ -1,6 +1,8 @@
 ---
 title: "資本回收期與投資決策 Payback Period"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/資本回收期與投資決策Payback-Period實戰判讀.md
 ---
 
 # 資本回收期與投資決策 Payback Period
@@ -91,4 +93,4 @@ Payback Period = 初始投資額 / 每期現金流入
 - [[現金流量折現法DCF估值]]
 
 ## 來源
-- [資本回收期與投資決策 Payback Period 實戰判讀](../../raw/2026-05-19/資本回收期與投資決策Payback-Period實戰判讀.md)
+- 資本回收期與投資決策 Payback Period 實戰判讀（本機留存素材，未公開全文；原始網址待核對）

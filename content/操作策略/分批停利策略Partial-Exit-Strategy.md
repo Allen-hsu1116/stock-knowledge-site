@@ -1,8 +1,10 @@
 ---
 title: "分批停利策略Partial-Exit-Strategy"
 category: "操作策略"
-source:
 date: 2026-05-14
+raw_files:
+- raw/2026-05-14/停損停利比例與分批停利實戰-learningpa.md
+- raw/2026-05-14/停損設定方法與優缺點分析-市場先生.md
 ---
 
 # 分批停利策略Partial-Exit-Strategy
@@ -81,5 +83,5 @@ date: 2026-05-14
 
 ## 來源
 
-- [由賺變賠？2個細節守住你的獲利！—停損停利的比例、分批停利](../../raw/2026-05-14/停損停利比例與分批停利實戰-learningpa.md)
-- [停損是什麼？如何設置停損點？停損優缺點分析](../../raw/2026-05-14/停損設定方法與優缺點分析-市場先生.md)
+- [由賺變賠？2個細節守住你的獲利！—停損停利的比例、分批停利](<https://learningpa.cc/stop-profit/>)
+- [停損是什麼？如何設置停損點？停損優缺點分析](<https://rich01.com/stop-loss-point/>)

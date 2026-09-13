@@ -1,6 +1,8 @@
 ---
 title: "約當現金判讀 Cash Equivalents"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-20/約當現金是什麼約當現金增減對企業的影響.md
 ---
 
 # 約當現金判讀 Cash Equivalents
@@ -89,4 +91,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [約當現金是什麼？約當現金增減對企業的影響](../../raw/2026-05-20/約當現金是什麼約當現金增減對企業的影響.md)
+- [約當現金是什麼？約當現金增減對企業的影響](<https://rich01.com/cash-equivalents/>)

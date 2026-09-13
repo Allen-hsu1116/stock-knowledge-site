@@ -2,6 +2,8 @@
 category: "技術分析"
 title: "NVI負成交量指標 Negative Volume Index"
 date: 2026-06-15
+raw_files:
+- raw/2026-06-15/NVI負成交量指標-StockCharts.md
 ---
 
 # NVI負成交量指標 Negative Volume Index
@@ -84,4 +86,4 @@ NVI 對台股可用於：
 
 ## 來源
 
-- [StockCharts ChartSchool: Negative Volume Index NVI](../../raw/2026-06-15/NVI負成交量指標-StockCharts.md)
+- [StockCharts ChartSchool: Negative Volume Index NVI](<https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/negative-volume-index-nvi.md>)

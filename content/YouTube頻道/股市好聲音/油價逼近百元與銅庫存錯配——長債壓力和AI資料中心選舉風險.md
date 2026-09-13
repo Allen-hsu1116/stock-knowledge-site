@@ -1,3 +1,12 @@
+---
+title: 油價逼近百元與銅庫存錯配——長債壓力和AI資料中心選舉風險
+date: '2026-09-09'
+category: YouTube頻道
+source: https://www.youtube.com/watch?v=b2MbRUsIaU8
+raw_files:
+- raw/youtube/2026-09-09-yutinghao.md
+---
+
 # 油價逼近百元與銅庫存錯配——長債壓力和AI資料中心選舉風險
 
 > 油價推升通膨、發債拉高資金成本，半導體相對強勢仍不代表全面多頭；銅價創高須拆解庫存移轉，AI建置則要追蹤地方成本與政策時程。

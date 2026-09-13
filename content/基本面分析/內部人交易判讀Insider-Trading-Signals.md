@@ -2,6 +2,8 @@
 title: 內部人交易判讀 Insider Trading Signals
 date: 2026-06-23
 category: "基本面分析"
+raw_files:
+- raw/2026-06-23/內部人交易Wikipedia.md
 ---
 
 # 內部人交易判讀 Insider Trading Signals
@@ -79,7 +81,7 @@ category: "基本面分析"
 
 ## 來源
 
-- [Insider Trading - Wikipedia](../../raw/2026-06-23/內部人交易Wikipedia.md)
+- [Insider Trading - Wikipedia](<https://en.wikipedia.org/wiki/Insider_trading>)
 - SEC Form 4 申報制度
 - 證券交易法第 157 條
 - 公開資訊觀測站內部人持股變動查詢

@@ -1,6 +1,13 @@
 ---
 title: "MACD進階實戰：柱狀圖背離、零軸交易與雙背離確認"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/MACD背離全攻略-從頂背離底背離到選股策略.md
+- raw/2026-05-11/MACD背離黃金交叉完整應用教學.md
+- raw/2026-05-16/MACD指標完整教學-量化通.md
+- raw/2026-05-16/MACD背離黃金交叉教學-學吧.md
+- raw/2026-05-16/MACD背離黃金交叉怎麼看-市場先生.md
+- raw/2026-05-16/MACD背離全攻略-MammonAcad.md
 ---
 
 # MACD進階實戰：柱狀圖背離、零軸交易與雙背離確認
@@ -185,9 +192,9 @@ MACD在強勢趨勢中會鈍化——金叉後一直金叉、死叉後一直死�
 
 ## 來源
 
-- [MACD背離全攻略：從頂背離、底背離到3步驟選股策略](../../raw/2026-05-11/MACD背離全攻略-從頂背離底背離到選股策略.md)
-- [MACD背離、黃金交叉怎麼看！完整應用教學](../../raw/2026-05-11/MACD背離黃金交叉完整應用教學.md)
-- [MACD指標完整教學-量化通](../../raw/2026-05-16/MACD指標完整教學-量化通.md)
-- [MACD背離黃金交叉教學-學吧](../../raw/2026-05-16/MACD背離黃金交叉教學-學吧.md)
-- [MACD背離黃金交叉怎麼看-市場先生](../../raw/2026-05-16/MACD背離黃金交叉怎麼看-市場先生.md)
-- [MACD背離全攻略：從頂背離、底背離到3步驟選股策略 - MammonAcad](../../raw/2026-05-16/MACD背離全攻略-MammonAcad.md)
+- [MACD背離全攻略：從頂背離、底背離到3步驟選股策略](<https://mammonacad.com/macd-divergence-strategy/>)
+- [MACD背離、黃金交叉怎麼看！完整應用教學](<https://learningpa.cc/tech9/>)
+- [MACD指標完整教學-量化通](<https://quantpass.org/macd-2/>)
+- [MACD背離黃金交叉教學-學吧](<https://learningpa.cc/tech9/>)
+- [MACD背離黃金交叉怎麼看-市場先生](<https://rich01.com/what-is-macd-indicator/>)
+- [MACD背離全攻略：從頂背離、底背離到3步驟選股策略 - MammonAcad](<https://mammonacad.com/macd-divergence-strategy/>)

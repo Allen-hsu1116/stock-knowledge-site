@@ -1,6 +1,8 @@
 ---
 title: "股東權益變動表判讀Statement-of-Changes-in-Equity"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/誰偷吃了你的批薩權益變動表.md
 ---
 
 # 股東權益變動表判讀Statement-of-Changes-in-Equity
@@ -73,4 +75,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [誰偷吃了你的批薩?請看權益變動表](../../raw/2026-05-05/誰偷吃了你的批薩權益變動表.md)
+- [誰偷吃了你的批薩?請看權益變動表](<https://vocus.cc/article/636712b9fd89780001a75959>)

@@ -1,6 +1,9 @@
 ---
 title: "因子衰退 Factor Decay"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/因子衰退Factor-Decay.md
+- raw/2026-05-15/量化投資中因子衰退的核心原因-K.S的量化投資.md
 ---
 
 # 因子衰退 Factor Decay
@@ -83,5 +86,5 @@ category: "風險管理"
 - [[策略容量Strategy-Capacity]]
 
 ## 來源
-- [量化投資中「因子衰退」的核心原因](../../raw/2026-05-01/因子衰退Factor-Decay.md)
-- [量化投資中「因子衰退」的核心原因（Vocus）](../../raw/2026-05-15/量化投資中因子衰退的核心原因-K.S的量化投資.md)
+- [量化投資中「因子衰退」的核心原因](<https://vocus.cc/article/68870263fd897800012f76c6>)
+- [量化投資中「因子衰退」的核心原因（Vocus）](<https://vocus.cc/article/68870263fd897800012f76c6>)

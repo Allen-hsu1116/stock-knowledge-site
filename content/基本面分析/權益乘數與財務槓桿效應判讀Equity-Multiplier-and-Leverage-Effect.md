@@ -1,6 +1,8 @@
 ---
 title: "權益乘數與財務槓桿效應判讀 Equity Multiplier & Leverage Effect"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/權益乘數與財務槓桿效應判讀.md
 ---
 
 # 權益乘數與財務槓桿效應判讀 Equity Multiplier & Leverage Effect
@@ -128,4 +130,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [權益乘數與財務槓桿效應判讀](../../raw/2026-05-19/權益乘數與財務槓桿效應判讀.md)
+- 權益乘數與財務槓桿效應判讀（本機留存素材，未公開全文；原始網址待核對）

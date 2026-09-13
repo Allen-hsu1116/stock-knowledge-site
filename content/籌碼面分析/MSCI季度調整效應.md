@@ -5,6 +5,8 @@ source: memory
 source_date: 2026-04-29
 status: raw_linked
 raw_file: raw/2026-04-29/MSCI季度調整與台股影響.md
+raw_files:
+- raw/2026-04-29/MSCI季度調整與台股影響.md
 ---
 
 # MSCI季度調整效應
@@ -70,4 +72,4 @@ MSCI台灣指數以自由流通市值加權，台積電權重超過50%，意味�
 - [[ETF資金流向與籌碼效應判讀]]
 
 ## 來源
-- [MSCI是什麼？MSCI成分股有哪些？](../../raw/2026-04-29/MSCI季度調整與台股影響.md)
+- [MSCI是什麼？MSCI成分股有哪些？](<https://www.stockfeel.com.tw/msci-%E5%8F%B0%E7%81%A3-%E6%88%90%E5%88%86%E8%82%A1-%E6%AC%8A%E9%87%8D/>)

@@ -1,6 +1,8 @@
 ---
 title: "會計政策變更與會計估計變更判讀 Accounting Policy Change & Estimate Change"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/會計政策變更與會計估計變更判讀.md
 ---
 
 # 會計政策變更與會計估計變更判讀 Accounting Policy Change & Estimate Change
@@ -93,4 +95,4 @@ IAS 8還有「會計錯誤更正」（Correction of Errors），與政策變更�
 
 ## 來源
 
-- [會計政策變更與會計估計變更判讀](../../raw/2026-05-19/會計政策變更與會計估計變更判讀.md)
+- 會計政策變更與會計估計變更判讀（本機留存素材，未公開全文；原始網址待核對）

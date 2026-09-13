@@ -2,6 +2,8 @@
 title: "選擇權Greeks風險判讀"
 category: "風險管理"
 date: 2026-05-09
+raw_files:
+- raw/2026-05-09/選擇權Greeks風險判讀.md
 ---
 
 # 選擇權Greeks風險判讀
@@ -150,4 +152,4 @@ Greeks是瞬時指標，標的價格一動Greeks就跟著變：
 
 ## 來源
 
-- [選擇權Greeks風險判讀](../../raw/2026-05-09/選擇權Greeks風險判讀.md)
+- 選擇權Greeks風險判讀（本機留存素材，未公開全文；原始網址待核對）

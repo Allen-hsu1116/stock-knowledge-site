@@ -2,6 +2,8 @@
 category: "操作策略"
 title: 戰術資產配置 TAA
 date: 2026-06-14
+raw_files:
+- raw/2026-06-14/戰術資產配置TAA.md
 ---
 
 # 戰術資產配置 TAA
@@ -81,4 +83,4 @@ TAA 可分兩層：
 
 ## 來源
 
-- [Tactical Asset Allocation (TAA)](../../raw/2026-06-14/戰術資產配置TAA.md)
+- [Tactical Asset Allocation (TAA)](<https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/tactical-asset-allocation-taa/>)

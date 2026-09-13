@@ -4,6 +4,8 @@ category: "技術分析"
 date: 2026-08-31
 source_date: 2026-08-31
 status: raw_linked
+raw_files:
+- raw/2026-08-31/Rogers-Satchell漂移穩健波動率來源學習紀錄.md
 ---
 
 # Rogers-Satchell漂移穩健波動率估計
@@ -70,6 +72,6 @@ $$
 
 ## 來源
 
-- [Rogers-Satchell漂移穩健波動率來源學習紀錄](../../raw/2026-08-31/Rogers-Satchell漂移穩健波動率來源學習紀錄.md)
+- Rogers-Satchell漂移穩健波動率來源學習紀錄（本機留存素材，未公開全文；原始網址待核對）
 - [Rogers與Satchell（1991）：Estimating Variance From High, Low and Closing Prices](https://doi.org/10.1214/aoap/1177005835)
 - [CRAN TTR volatility文件](https://search.r-project.org/CRAN/refmans/TTR/html/volatility.html)

@@ -1,6 +1,9 @@
 ---
 title: "風險管理決策框架 Risk Management Decision Framework"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/如何做好投資風險管理-SparkSparkFinance.md
+- raw/2026-05-15/如何規劃避險策略-市場先生.md
 ---
 
 # 風險管理決策框架 Risk Management Decision Framework
@@ -172,5 +175,5 @@ category: "風險管理"
 
 ## 來源
 
-- [如何做好投資風險管理？4大風險管理策略一次看懂 - Spark Spark Finance](../../raw/2026-05-15/如何做好投資風險管理-SparkSparkFinance.md)
-- [如何規劃避險策略？沒經過事先規劃的避險，只是在打破投資紀律 - Mr.Market市場先生](../../raw/2026-05-15/如何規劃避險策略-市場先生.md)
+- [如何做好投資風險管理？4大風險管理策略一次看懂 - Spark Spark Finance](<https://sparksparkfinance.com/investment/investing-basics/how-to-manage-investment-risk/>)
+- [如何規劃避險策略？沒經過事先規劃的避險，只是在打破投資紀律 - Mr.Market市場先生](<https://rich01.com/hedging-02/>)

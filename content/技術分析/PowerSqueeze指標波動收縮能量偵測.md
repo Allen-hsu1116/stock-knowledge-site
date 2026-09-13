@@ -1,6 +1,8 @@
 ---
 title: "PowerSqueeze指標 波動收縮能量偵測"
 category: "技術分析"
+raw_files:
+- raw/2026-05-10/VCP實例操作與PowerSqueeze指標-Growin.md
 ---
 
 # PowerSqueeze指標 波動收縮能量偵測
@@ -78,4 +80,4 @@ PowerSqueeze 與 VCP 的結合是高效選股流程：
 
 ## 來源
 
-- [VCP實例操作與PowerSqueeze指標-Growin](../../raw/2026-05-10/VCP實例操作與PowerSqueeze指標-Growin.md)
+- [VCP實例操作與PowerSqueeze指標-Growin](<https://blog.growin.tv/super-performance-account02/>)

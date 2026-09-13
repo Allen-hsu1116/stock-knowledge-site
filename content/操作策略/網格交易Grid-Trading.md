@@ -1,6 +1,8 @@
 ---
 title: "網格交易Grid-Trading"
 category: "操作策略"
+raw_files:
+- raw/2026-05-07/網格交易程式交易實戰富果.md
 ---
 
 # 網格交易Grid-Trading
@@ -171,4 +173,4 @@ for pos in position_list:
 
 ## 來源
 
-- [網格交易程式交易實戰](../../raw/2026-05-07/網格交易程式交易實戰富果.md)
+- [網格交易程式交易實戰](<https://developer.fugle.tw/blog/2022-09-30-week4-grid-trading-method/>)

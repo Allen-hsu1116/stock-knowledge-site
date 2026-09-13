@@ -1,6 +1,8 @@
 ---
 title: "除權息填息率與操作策略 Ex-Dividend Fill Rate & Strategy"
 category: "操作策略"
+raw_files:
+- raw/2026-05-09/除權息填息率操作策略.md
 ---
 
 # 除權息填息率與操作策略 Ex-Dividend Fill Rate & Strategy
@@ -149,4 +151,4 @@ category: "操作策略"
 
 ## 來源
 
-- [除權息填息率操作策略](../../raw/2026-05-09/除權息填息率操作策略.md)
+- 除權息填息率操作策略（本機留存素材，未公開全文；原始網址待核對）

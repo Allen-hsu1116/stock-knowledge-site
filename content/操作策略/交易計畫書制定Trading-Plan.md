@@ -1,6 +1,9 @@
 ---
 title: "交易計畫書制定Trading-Plan"
 category: "操作策略"
+raw_files:
+- raw/2026-05-14/如何制定完整交易計畫.md
+- raw/2026-05-14/短線交易狙擊手心法.md
 ---
 
 # 交易計畫書制定Trading-Plan
@@ -109,5 +112,5 @@ category: "操作策略"
 
 ## 來源
 
-- [如何制定完整交易計畫](../../raw/2026-05-14/如何制定完整交易計畫.md)
-- [短線交易狙擊手心法](../../raw/2026-05-14/短線交易狙擊手心法.md)
+- [如何制定完整交易計畫](<https://dalabs.org/guide/trading-plan/>)
+- [短線交易狙擊手心法](<https://opop.tw/short-term-trading-strategy-technical-analysis/>)

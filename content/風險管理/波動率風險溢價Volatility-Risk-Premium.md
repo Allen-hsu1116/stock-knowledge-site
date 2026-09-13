@@ -1,6 +1,8 @@
 ---
 title: "波動率風險溢價 Volatility Risk Premium"
 category: "風險管理"
+raw_files:
+- raw/2026-05-22/波動率風險溢價Volatility-Risk-Premium.md
 ---
 
 # 波動率風險溢價 Volatility Risk Premium
@@ -113,4 +115,4 @@ Volatility Spike可能在幾小時內將IV從15推到60+：
 - [[黑天鵝事件與尾部風險基礎Black-Swan-and-Tail-Risk-Fundamentals]]
 
 ## 來源
-- [波動率風險溢價Volatility Risk Premium](../../raw/2026-05-22/波動率風險溢價Volatility-Risk-Premium.md)
+- 波動率風險溢價Volatility Risk Premium（本機留存素材，未公開全文；原始網址待核對）

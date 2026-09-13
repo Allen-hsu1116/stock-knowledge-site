@@ -1,6 +1,8 @@
 ---
 title: "資產重估價與重估增值判讀 Asset Revaluation and Revaluation Surplus"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/資產重估價與重估增值判讀.md
 ---
 
 # 資產重估價與重估增值判讀 Asset Revaluation and Revaluation Surplus
@@ -72,4 +74,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [資產重估價與重估增值判讀](../../raw/2026-05-19/資產重估價與重估增值判讀.md)
+- 資產重估價與重估增值判讀（本機留存素材，未公開全文；原始網址待核對）

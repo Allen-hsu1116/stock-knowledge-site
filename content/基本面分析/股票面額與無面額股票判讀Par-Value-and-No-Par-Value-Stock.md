@@ -1,6 +1,8 @@
 ---
 title: "股票面額與無面額股票判讀Par-Value-and-No-Par-Value-Stock"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/股票面額是什麼與淨值差異教學.md
 ---
 
 # 股票面額與無面額股票判讀Par-Value-and-No-Par-Value-Stock
@@ -64,4 +66,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [股票面額是什麼？跟淨值差在哪？最完整的股票面額教學](../../raw/2026-05-19/股票面額是什麼與淨值差異教學.md)
+- [股票面額是什麼？跟淨值差在哪？最完整的股票面額教學](<https://rich01.com/what-is-stock-par-value/>)

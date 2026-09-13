@@ -1,6 +1,9 @@
 ---
 title: "TRIX三重指數平滑移動平均指標"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/TRIX三重指數平滑移動平均指標.md
+- raw/2026-05-17/TRIX三重指數平滑移動平均指標教學.md
 ---
 
 # TRIX三重指數平滑移動平均指標
@@ -70,5 +73,5 @@ TRIX在日線圖上落後明顯，但放在五分鐘、十分鐘、十五分鐘�
 
 ## 來源
 
-- [TRIX - Triple Exponential 三重平滑移動平均指標](../../raw/2026-05-04/TRIX三重指數平滑移動平均指標.md)
-- [TRIX三重指數平滑移動平均指標教學](../../raw/2026-05-17/TRIX三重指數平滑移動平均指標教學.md)
+- TRIX - Triple Exponential 三重平滑移動平均指標（原始來源：[1](<https://www.taindicators.com/trix/>)、[2](<https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=4b508673-c4c3-4952-93be-f5368220a445>)）
+- [TRIX三重指數平滑移動平均指標教學](<https://www.taindicators.com/trix/>)

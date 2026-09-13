@@ -1,6 +1,11 @@
 ---
 title: "股價淨值比進階判讀 PBR Advanced"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-12/股價淨值比進階判讀-市場先生.md
+- raw/2026-05-12/股價淨值比進階判讀-夏綠蒂.md
+- raw/2026-05-12/股價淨值比進階判讀-股魚.md
+- raw/2026-05-03/股價淨值比PBR是什麼-StockFeel.md
 ---
 
 # 股價淨值比進階判讀 PBR Advanced
@@ -233,7 +238,7 @@ PBR 河流圖和 [[本益比河流圖PE-Band|PE Band]] 概念相同，用歷史 
 
 ## 來源
 
-- [股價淨值比PBR是什麼？PBR和本益比有什麼差別？ - 市場先生](../../raw/2026-05-12/股價淨值比進階判讀-市場先生.md)
-- [股價淨值比 PB 法 - 夏綠蒂聊投資](../../raw/2026-05-12/股價淨值比進階判讀-夏綠蒂.md)
-- [股價淨值比 – 簡單但常被誤用的指標 - 股魚](../../raw/2026-05-12/股價淨值比進階判讀-股魚.md)
-- [股價淨值比（PBR）是什麼？ - StockFeel](../../raw/2026-05-03/股價淨值比PBR是什麼-StockFeel.md)
+- [股價淨值比PBR是什麼？PBR和本益比有什麼差別？ - 市場先生](<https://rich01.com/what-is-pb-ratio/>)
+- [股價淨值比 PB 法 - 夏綠蒂聊投資](<https://ccinvest.com.tw/pb-ratio/>)
+- [股價淨值比 – 簡單但常被誤用的指標 - 股魚](<https://stocksardine.com/股價淨值比-簡單但常被誤用的指標/>)
+- [股價淨值比（PBR）是什麼？ - StockFeel](<https://www.stockfeel.com.tw/%E8%82%A1%E5%83%B9%E6%B7%A8%E5%80%BC%E6%AF%94-pb-ratio-%E6%8A%95%E8%B3%87%E6%8C%87%E6%A8%99/>)

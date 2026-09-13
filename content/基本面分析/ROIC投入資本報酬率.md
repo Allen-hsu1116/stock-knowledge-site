@@ -1,6 +1,8 @@
 ---
 title: "ROIC投入資本報酬率"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/ROIC投資資本回報率.md
 ---
 
 # ROIC投入資本報酬率
@@ -112,4 +114,4 @@ ROIC = EBIT ×（1 - 稅率）/（總資產 - 過剩現金 - 無息流動負債�
 
 ## 來源
 
-- [投資資本回報率 - MBA智库百科](../../raw/2026-05-05/ROIC投資資本回報率.md)
+- [投資資本回報率 - MBA智库百科](<https://wiki.mbalib.com/zh-tw/ROIC>)

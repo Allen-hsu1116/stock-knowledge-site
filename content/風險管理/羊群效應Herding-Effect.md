@@ -1,6 +1,8 @@
 ---
 title: "羊群效應（Herding Effect）"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/羊群效應.md
 ---
 
 # 羊群效應（Herding Effect）
@@ -87,4 +89,4 @@ category: "風險管理"
 
 ## 來源
 
-- [羊群效應](../../raw/2026-05-08/羊群效應.md)
+- [羊群效應](<https://wiki.mbalib.com/zh-tw/羊群效应>)

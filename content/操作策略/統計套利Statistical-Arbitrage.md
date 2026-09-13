@@ -2,6 +2,8 @@
 title: "統計套利 Statistical Arbitrage"
 date: 2026-06-20
 category: "操作策略"
+raw_files:
+- raw/2026-06-20/統計套利Statistical-Arbitrage-Wikipedia.md
 ---
 
 # 統計套利 Statistical Arbitrage
@@ -76,4 +78,4 @@ StatArb 的核心特徵：
 
 ## 來源
 
-- [Statistical Arbitrage - Wikipedia](../../raw/2026-06-20/統計套利Statistical-Arbitrage-Wikipedia.md)
+- [Statistical Arbitrage - Wikipedia](<https://en.wikipedia.org/wiki/Statistical_arbitrage>)

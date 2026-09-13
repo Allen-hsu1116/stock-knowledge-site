@@ -3,6 +3,8 @@ title: 縮減式信用風險模型與違約強度 Reduced-Form Intensity Model
 aliases: [縮減式信用風險模型, 違約強度, Default Intensity, Hazard Rate, Survival Probability]
 category: 基本面分析
 date: 2026-09-02
+raw_files:
+- raw/2026-09-02/NTU縮減式信用風險與違約強度學習紀錄.md
 ---
 
 # 縮減式信用風險模型與違約強度 Reduced-Form Intensity Model
@@ -117,4 +119,4 @@ $$Q(3)=1-e^{-(0.02+0.05+0.08)}=13.93\%$$
 
 ## 來源
 
-- [NTU Notes on Financial Risk and Analytics：Reduced-Form Approach](../../raw/2026-09-02/NTU縮減式信用風險與違約強度學習紀錄.md)
+- [NTU Notes on Financial Risk and Analytics：Reduced-Form Approach](<https://personal.ntu.edu.sg/nprivault/MH8331/credit_risk_reduced_form.pdf>)

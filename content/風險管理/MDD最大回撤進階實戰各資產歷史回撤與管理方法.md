@@ -1,6 +1,9 @@
 ---
 title: "MDD最大回撤進階實戰 各資產歷史回撤與管理方法"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/最大回撤MDD風險指標-市場先生.md
+- raw/2026-05-15/最大回撤MDD程式交易風險指標-jyforex.md
 ---
 
 # MDD最大回撤進階實戰 各資產歷史回撤與管理方法
@@ -149,5 +152,5 @@ MDD = (120 - 90) ÷ 120 = 25%
 - [[Calmar-Ratio年化報酬MDD]] - 報酬回撤比指標
 
 ## 來源
-- [Max drawdown(MDD)是什麼？最大回檔幅度的4個注意事項 - 市場先生](../../raw/2026-05-15/最大回撤MDD風險指標-市場先生.md)
-- [最大回撤（MDD）是什麼？程式交易風險指標 - jyforex](../../raw/2026-05-15/最大回撤MDD程式交易風險指標-jyforex.md)
+- [Max drawdown(MDD)是什麼？最大回檔幅度的4個注意事項 - 市場先生](<https://rich01.com/max-drawdown-mdd/>)
+- [最大回撤（MDD）是什麼？程式交易風險指標 - jyforex](<https://jyforex.com/maximum-drawdown/>)

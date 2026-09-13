@@ -2,6 +2,8 @@
 title: 量價趨勢指標 Volume Price Trend (VPT)
 date: 2026-06-29
 category: "技術分析"
+raw_files:
+- raw/2026-06-29/量價趨勢指標Volume-Price-Trend.md
 ---
 
 # 量價趨勢指標 Volume Price Trend (VPT)
@@ -80,4 +82,4 @@ VPT 背離是核心訊號：
 
 ## 來源
 
-- [Volume Price Trend - Wikipedia](../../raw/2026-06-29/量價趨勢指標Volume-Price-Trend.md)
+- [Volume Price Trend - Wikipedia](<https://en.wikipedia.org/wiki/Volume%E2%80%93price_trend>)

@@ -1,6 +1,8 @@
 ---
 title: "循主力線策略五訊號選股Following-the-Smart-Money"
 category: "籌碼面分析"
+raw_files:
+- raw/2026-05-20/主力動向五訊號找飆股與回測驗證.md
 ---
 
 # 循主力線策略五訊號選股Following-the-Smart-Money
@@ -83,4 +85,4 @@ category: "籌碼面分析"
 - [[主力操作生命週期]] - 主力操作的四大階段
 
 ## 來源
-- [主力動向怎麼追？5個訊號找飆股＋五年回測數據](../../raw/2026-05-20/主力動向五訊號找飆股與回測驗證.md)
+- [主力動向怎麼追？5個訊號找飆股＋五年回測數據](<https://blog.wistock.ai/wistalk/how-to-find-hot-stocks-main-force-indicators/>)

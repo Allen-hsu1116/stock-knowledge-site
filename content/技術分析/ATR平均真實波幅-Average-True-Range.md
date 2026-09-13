@@ -1,6 +1,11 @@
 ---
 title: "ATR平均真實波幅 Average True Range"
 category: "技術分析"
+raw_files:
+- raw/2026-05-02/進階版ATR指標怎麼用停損停利一次搞定.md
+- raw/2026-05-02/ATR指標完整教學真實平均波動區間.md
+- raw/2026-05-02/台股ATR指標3大內容教學使用方式參數設定公式.md
+- raw/2026-05-11/ATR停利停損目標策略-OANDA.md
 ---
 
 # ATR平均真實波幅 Average True Range
@@ -134,7 +139,7 @@ ATR 可用於計算每筆交易的合理部位大小：
 
 ## 來源
 
-- [進階版ATR指標怎麼用](../../raw/2026-05-02/進階版ATR指標怎麼用停損停利一次搞定.md)
-- [ATR指標完整教學](../../raw/2026-05-02/ATR指標完整教學真實平均波動區間.md)
-- [台股ATR指標3大內容教學](../../raw/2026-05-02/台股ATR指標3大內容教學使用方式參數設定公式.md)
-- [運用ATR決定獲利結算目標 - OANDA Lab](../../raw/2026-05-11/ATR停利停損目標策略-OANDA.md)
+- [進階版ATR指標怎麼用](<https://www.yuantatop.com/news-post/atr/>)
+- [ATR指標完整教學](<https://quantpass.org/atr/>)
+- [台股ATR指標3大內容教學](<https://gooptions.cc/atr指標/>)
+- [運用ATR決定獲利結算目標 - OANDA Lab](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/atr_targets/>)

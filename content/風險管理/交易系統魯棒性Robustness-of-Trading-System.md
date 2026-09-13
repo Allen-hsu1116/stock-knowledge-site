@@ -1,6 +1,8 @@
 ---
 title: "交易系統魯棒性 Robustness of Trading System"
 category: "風險管理"
+raw_files:
+- raw/2026-05-22/交易系統魯棒性Robustness-of-Trading-System.md
 ---
 
 # 交易系統魯棒性 Robustness of Trading System
@@ -125,4 +127,4 @@ K-fold交叉驗證，每個fold都做IS+OOS，避免單一OOS期間偶然性。
 - [[交易策略回測與過擬合Backtesting-and-Overfitting]]
 
 ## 來源
-- [交易系統魯棒性](../../raw/2026-05-22/交易系統魯棒性Robustness-of-Trading-System.md)
+- 交易系統魯棒性（本機留存素材，未公開全文；原始網址待核對）

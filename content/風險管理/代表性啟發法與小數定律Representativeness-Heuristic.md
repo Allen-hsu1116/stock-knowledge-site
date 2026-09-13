@@ -1,6 +1,8 @@
 ---
 title: "代表性啟發法與小數定律 Representativeness Heuristic"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/代表性啟發法與小數定律Representativeness-Heuristic.md
 ---
 
 # 代表性啟發法與小數定律 Representativeness Heuristic
@@ -80,4 +82,4 @@ category: "風險管理"
 
 ## 來源
 
-- [代表性啟發法 - MBA智庫百科](../../raw/2026-05-08/代表性啟發法與小數定律Representativeness-Heuristic.md)
+- [代表性啟發法 - MBA智庫百科](<https://wiki.mbalib.com/zh-tw/可得性偏差>)

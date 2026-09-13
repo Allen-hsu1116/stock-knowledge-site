@@ -1,6 +1,11 @@
 ---
 title: "集中度風險 Concentration Risk"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/集中度風險-MBA智库.md
+- raw/2026-05-01/分散投資vs集中投資-市場先生.md
+- raw/2026-05-01/系統性風險與非系統性風險-市場先生.md
+- raw/2026-05-01/集中度風險與分散投資.md
 ---
 
 # 集中度風險 Concentration Risk
@@ -91,7 +96,7 @@ category: "風險管理"
 
 ## 來源
 
-- [集中度風險 - MBA智库百科](../../raw/2026-05-01/集中度風險-MBA智库.md)
-- [分散投資 vs 集中投資 - 市場先生](../../raw/2026-05-01/分散投資vs集中投資-市場先生.md)
-- [系統性風險與非系統性風險 - 市場先生](../../raw/2026-05-01/系統性風險與非系統性風險-市場先生.md)
-- [追求報酬 也要懂得規避風險！分散投資能讓你熬過每次大跌 - Money錢雜誌](../../raw/2026-05-01/集中度風險與分散投資.md)
+- [集中度風險 - MBA智库百科](<https://wiki.mbalib.com/zh-tw/%E9%9B%86%E4%B8%AD%E5%BA%A6%E9%A3%8E%E9%99%A9>)
+- [分散投資 vs 集中投資 - 市場先生](<https://rich01.com/how-diversify-invest-risk/>)
+- [系統性風險與非系統性風險 - 市場先生](<https://rich01.com/systematic-risk-and-unsystematic-risk-invest/>)
+- [追求報酬 也要懂得規避風險！分散投資能讓你熬過每次大跌 - Money錢雜誌](<https://money.cmoney.tw/article/30079>)

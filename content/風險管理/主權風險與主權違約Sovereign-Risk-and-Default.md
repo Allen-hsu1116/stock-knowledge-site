@@ -1,6 +1,8 @@
 ---
 title: "主權風險與主權違約 Sovereign Risk & Default"
 category: "風險管理"
+raw_files:
+- raw/2026-05-09/Sovereign-Default-and-Credit-Risk.md
 ---
 
 # 主權風險與主權違約 Sovereign Risk & Default
@@ -111,5 +113,5 @@ Frenkel, Karmann 和 Scholtens (2004) 提出影響主權違約機率的五大因
 
 ## 來源
 
-- [Sovereign Default - Wikipedia](../../raw/2026-05-09/Sovereign-Default-and-Credit-Risk.md)
-- [Sovereign Credit Risk - Wikipedia](../../raw/2026-05-09/Sovereign-Default-and-Credit-Risk.md)
+- Sovereign Default - Wikipedia（原始來源：[1](<https://en.wikipedia.org/wiki/Sovereign_default,>)、[2](<https://en.wikipedia.org/wiki/Sovereign_risk>)）
+- Sovereign Credit Risk - Wikipedia（原始來源：[1](<https://en.wikipedia.org/wiki/Sovereign_default,>)、[2](<https://en.wikipedia.org/wiki/Sovereign_risk>)）

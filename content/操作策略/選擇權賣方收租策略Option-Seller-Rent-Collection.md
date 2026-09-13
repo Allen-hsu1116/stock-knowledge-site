@@ -1,6 +1,8 @@
 ---
 title: "選擇權賣方收租策略Option-Seller-Rent-Collection"
 category: "操作策略"
+raw_files:
+- raw/2026-05-10/選擇權賣方收租策略-價差單小資收租術.md
 ---
 
 # 選擇權賣方收租策略Option-Seller-Rent-Collection
@@ -65,7 +67,7 @@ category: "操作策略"
 小明預期股市小跌，建立買權空頭價差：
 - 買進履約價22,100點Call（支付125點）
 - 賣出履約價21,900點Call（收取250點）
-- 淨收權利金：250 - 125 = 125點（NT$6,250）
+- 淨收權利金：250 - 125 = 125點（NT\$6,250）
 
 **三種結果**：
 - 結算≤21,900點：最大獲利6,250元（兩個Call都失去價值）
@@ -145,7 +147,7 @@ category: "操作策略"
 
 ## 來源
 
-- [選擇權價差單價差交易:小資收租術 - Leo投資教學](../../raw/2026-05-10/選擇權賣方收租策略-價差單小資收租術.md)
-- [台指選擇權倍數獲利收租原理 - CMoney](../../raw/2026-05-10/選擇權賣方收租策略-價差單小資收租術.md)
-- [選擇權策略-買權空頭價差 - 統一期貨](../../raw/2026-05-10/選擇權賣方收租策略-價差單小資收租術.md)
-- [期權收租之路的第一步 - Vocus](../../raw/2026-05-10/選擇權賣方收租策略-價差單小資收租術.md)
+- 選擇權價差單價差交易:小資收租術 - Leo投資教學（原始來源：[1](<https://richkpi.com/option002/>)、[2](<https://www.cmoney.tw/notes/note-detail.aspx?nid=57263>)、[3](<https://www.pfcf.com.tw/product/detail/983>)、[4](<https://vocus.cc/article/69d09239fd8978000122e321>)）
+- 台指選擇權倍數獲利收租原理 - CMoney（原始來源：[1](<https://richkpi.com/option002/>)、[2](<https://www.cmoney.tw/notes/note-detail.aspx?nid=57263>)、[3](<https://www.pfcf.com.tw/product/detail/983>)、[4](<https://vocus.cc/article/69d09239fd8978000122e321>)）
+- 選擇權策略-買權空頭價差 - 統一期貨（原始來源：[1](<https://richkpi.com/option002/>)、[2](<https://www.cmoney.tw/notes/note-detail.aspx?nid=57263>)、[3](<https://www.pfcf.com.tw/product/detail/983>)、[4](<https://vocus.cc/article/69d09239fd8978000122e321>)）
+- 期權收租之路的第一步 - Vocus（原始來源：[1](<https://richkpi.com/option002/>)、[2](<https://www.cmoney.tw/notes/note-detail.aspx?nid=57263>)、[3](<https://www.pfcf.com.tw/product/detail/983>)、[4](<https://vocus.cc/article/69d09239fd8978000122e321>)）

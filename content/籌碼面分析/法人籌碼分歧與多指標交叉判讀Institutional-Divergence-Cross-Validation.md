@@ -1,6 +1,8 @@
 ---
 title: "法人籌碼分歧與多指標交叉判讀Institutional-Divergence-Cross-Validation"
 category: "籌碼面分析"
+raw_files:
+- raw/2026-05-20/法人籌碼分歧與融資融券借券數據判讀實戰.md
 ---
 
 # 法人籌碼分歧與多指標交叉判讀Institutional-Divergence-Cross-Validation
@@ -67,4 +69,4 @@ category: "籌碼面分析"
 
 ## 來源
 
-- [法人籌碼分歧時散戶怎麼辦？融資融券借券數據判讀實戰教學](../../raw/2026-05-20/法人籌碼分歧與融資融券借券數據判讀實戰.md)
+- [法人籌碼分歧時散戶怎麼辦？融資融券借券數據判讀實戰教學](<https://blog.wistock.ai/wistalk/interpret-institutional-divergence-track-smart-money-with-margin-data/>)

@@ -1,6 +1,8 @@
 ---
 title: "保留盈餘與股東權益成長判讀 Retained Earnings and Equity Growth"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/保留盈餘與股東權益成長判讀.md
 ---
 
 # 保留盈餘與股東權益成長判讀 Retained Earnings and Equity Growth
@@ -84,4 +86,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [保留盈餘與股東權益成長判讀](../../raw/2026-05-19/保留盈餘與股東權益成長判讀.md)
+- 保留盈餘與股東權益成長判讀（本機留存素材，未公開全文；原始網址待核對）

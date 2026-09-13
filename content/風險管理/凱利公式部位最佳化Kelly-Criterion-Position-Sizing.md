@@ -1,6 +1,10 @@
 ---
 title: "凱利公式部位最佳化Kelly-Criterion-Position-Sizing"
 category: "風險管理"
+raw_files:
+- raw/2026-05-03/凱利公式資金控管.md
+- raw/2026-05-09/Kelly-Criterion-Wikipedia.md
+- raw/2026-05-14/2%法則與凱利公式部位控制.md
 ---
 
 # 凱利公式部位最佳化Kelly-Criterion-Position-Sizing
@@ -142,7 +146,7 @@ Kelly 公式和 Ralph Vince 的 Optimal f 看起來相似但有根本差異：
 
 在一個受控實驗中（60%勝率的硬幣，even-money odds）：
 - 28% 的受試者破產
-- 平均報酬僅 $91（理論可達 $250）
+- 平均報酬僅 \$91（理論可達 \$250）
 - 18/61 人在某次全部押注
 - Kelly 最佳策略：每次下注20%，幾何成長率2.034%/round
 
@@ -172,6 +176,6 @@ Kelly 公式和 Ralph Vince 的 Optimal f 看起來相似但有根本差異：
 
 ## 來源
 
-- [凱利公式-賭博與投機者的資金控管經典 - 勳仔的理財小角落](../../raw/2026-05-03/凱利公式資金控管.md)
-- [Kelly Criterion - Wikipedia](../../raw/2026-05-09/Kelly-Criterion-Wikipedia.md)
-- [凱利公式深度解析：易懂的資金管理與風險控制指南](../../raw/2026-05-14/2%法則與凱利公式部位控制.md) (方格子/Thor Lin)
+- [凱利公式-賭博與投機者的資金控管經典 - 勳仔的理財小角落](<https://shiuncorner.com/2022/05/20/kelly_criterion/>)
+- [Kelly Criterion - Wikipedia](<https://en.wikipedia.org/wiki/Kelly_criterion>)
+- 凱利公式深度解析：易懂的資金管理與風險控制指南（原始來源：[1](<https://research.titanfx.com/zh-hant/column/2-rule,>)、[2](<https://vocus.cc/article/67f88da1fd897800015ef113>)） (方格子/Thor Lin)

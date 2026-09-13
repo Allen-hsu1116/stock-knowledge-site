@@ -1,6 +1,12 @@
 ---
 title: "成交量確認原則Volume-Confirmation"
 category: "技術分析"
+raw_files:
+- raw/2026-05-03/股票成交量分析全攻略-量價關係實戰技巧.md
+- raw/2026-05-03/價量分析只有成交量是不會騙人的.md
+- raw/2026-05-03/洗盤成交量判讀.md
+- raw/2026-05-03/上升三法帶量突破判讀.md
+- raw/2026-05-04/5均量判定量價關係-奧丁山川戰法.md
 ---
 
 # 成交量確認原則Volume-Confirmation
@@ -120,8 +126,8 @@ category: "技術分析"
 
 ## 來源
 
-- [股票成交量分析全攻略-從量價關係到實戰技巧](../../raw/2026-05-03/股票成交量分析全攻略-量價關係實戰技巧.md)
-- [價量分析，只有成交量是不會騙人的](../../raw/2026-05-03/價量分析只有成交量是不會騙人的.md)
-- [洗盤是什麼？其特徵與方式有哪些？](../../raw/2026-05-03/洗盤成交量判讀.md)
-- [急漲股價帶量突破，別急著買](../../raw/2026-05-03/上升三法帶量突破判讀.md)
-- [成交量究竟該怎麼看？用5均量判定量價關係 - Smart自學網](../../raw/2026-05-04/5均量判定量價關係-奧丁山川戰法.md)
+- [股票成交量分析全攻略-從量價關係到實戰技巧](<https://chainstockalchemy.com/stock-volume-analysis-guide-2025/>)
+- [價量分析，只有成交量是不會騙人的](<https://vocus.cc/article/639499c8fd897800019c7c20>)
+- [洗盤是什麼？其特徵與方式有哪些？](<https://www.oanda.com/bvi-ft/lab-education/invest_us_stock/whipsaw/>)
+- [急漲股價帶量突破，別急著買](<https://www.cmoney.tw/learn/course/gerogelin/topic/2235>)
+- [成交量究竟該怎麼看？用5均量判定量價關係 - Smart自學網](<https://smart.businessweekly.com.tw/Reading/IndepArticle.aspx?id=6007793>)

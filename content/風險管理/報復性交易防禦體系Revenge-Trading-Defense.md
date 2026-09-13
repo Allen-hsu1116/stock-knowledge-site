@@ -1,6 +1,10 @@
 ---
 title: "報復性交易防禦體系Revenge-Trading-Defense"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/如何避免報復性交易.md
+- raw/2026-05-01/風險報酬比深度解析.md
+- raw/2026-05-15/如何避免報復性交易.md
 ---
 
 # 報復性交易防禦體系Revenge-Trading-Defense
@@ -130,6 +134,6 @@ category: "風險管理"
 
 ## 來源
 
-- [如何避免報復性交易](../../raw/2026-05-01/如何避免報復性交易.md)
-- [風險報酬比深度解析](../../raw/2026-05-01/風險報酬比深度解析.md)
-- [如何避免報復性交易（森洋投資筆記）](../../raw/2026-05-15/如何避免報復性交易.md)
+- [如何避免報復性交易](<https://vocus.cc/article/67af68e9fd897800013a67f9>)
+- [風險報酬比深度解析](<https://fmstudio.blog/risk-reward-ratio-guide-2025/>)
+- [如何避免報復性交易（森洋投資筆記）](<https://vocus.cc/article/67af68e9fd897800013a67f9>)

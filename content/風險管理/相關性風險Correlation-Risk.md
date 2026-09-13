@@ -1,6 +1,8 @@
 ---
 title: "相關性風險 Correlation Risk"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/Risk-of-Ruin-Wikipedia.md
 ---
 
 # 相關性風險 Correlation Risk
@@ -113,7 +115,7 @@ category: "風險管理"
 
 ## 來源
 
-- [Risk of Ruin - Wikipedia](../../raw/2026-05-08/Risk-of-Ruin-Wikipedia.md)（相關性風險與破產風險的交叉分析）
+- [Risk of Ruin - Wikipedia](<https://en.wikipedia.org/wiki/Risk_of_ruin>)（相關性風險與破產風險的交叉分析）
 - 2008 Financial Crisis: 全球資產相關性趨向1的經典案例
 - Longin & Solnik (2001). "Extreme Correlation of International Equity Markets"
 - Ang & Chen (2002). "Asymmetric Correlations of Equity Portfolios"

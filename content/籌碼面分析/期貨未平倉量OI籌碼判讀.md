@@ -1,6 +1,10 @@
 ---
 title: "期貨未平倉量OI籌碼判讀"
 category: "籌碼面分析"
+raw_files:
+- raw/2026-05-02/期貨未平倉量OI與選擇權Put-Call-Ratio.md
+- raw/2026-05-06/期貨未平倉台指期主力動向.md
+- raw/2026-05-06/期貨未平倉量大盤多空數據.md
 ---
 
 # 期貨未平倉量OI籌碼判讀
@@ -132,8 +136,8 @@ OI 基本特性：
 
 ## 來源
 
-- [期貨未平倉是什麼？StockFeel](../../raw/2026-05-02/期貨未平倉量OI與選擇權Put-Call-Ratio.md)
-- [未平倉量怎麼查詢？市場先生](../../raw/2026-05-02/期貨未平倉量OI與選擇權Put-Call-Ratio.md)
-- [期貨未平倉怎麼看？options.tw](../../raw/2026-05-02/期貨未平倉量OI與選擇權Put-Call-Ratio.md)
-- [期貨未平倉主力動向 - 永豐期貨](../../raw/2026-05-06/期貨未平倉台指期主力動向.md)
-- [期貨未平倉量大盤多空 - HiStock](../../raw/2026-05-06/期貨未平倉量大盤多空數據.md)
+- 期貨未平倉是什麼？StockFeel（原始來源：[1](<https://www.stockfeel.com.tw/%E6%9C%AA%E5%B9%B3%E5%80%89%E9%87%8F-%E4%BA%A4%E6%98%93%E9%87%8F-%E6%9C%9F%E8%B2%A8/>)、[2](<https://rich01.com/open-interest/>)、[3](<https://options.tw/%E6%9C%9F%E8%B2%A8%E6%9C%AA%E5%B9%B3%E5%80%89/>)、[4](<https://quantpass.org/put-call-ratio/>)、[5](<https://www.spf.com.tw/mktinfo/Futures/OA/option-001.html>)）
+- 未平倉量怎麼查詢？市場先生（原始來源：[1](<https://www.stockfeel.com.tw/%E6%9C%AA%E5%B9%B3%E5%80%89%E9%87%8F-%E4%BA%A4%E6%98%93%E9%87%8F-%E6%9C%9F%E8%B2%A8/>)、[2](<https://rich01.com/open-interest/>)、[3](<https://options.tw/%E6%9C%9F%E8%B2%A8%E6%9C%AA%E5%B9%B3%E5%80%89/>)、[4](<https://quantpass.org/put-call-ratio/>)、[5](<https://www.spf.com.tw/mktinfo/Futures/OA/option-001.html>)）
+- 期貨未平倉怎麼看？options.tw（原始來源：[1](<https://www.stockfeel.com.tw/%E6%9C%AA%E5%B9%B3%E5%80%89%E9%87%8F-%E4%BA%A4%E6%98%93%E9%87%8F-%E6%9C%9F%E8%B2%A8/>)、[2](<https://rich01.com/open-interest/>)、[3](<https://options.tw/%E6%9C%9F%E8%B2%A8%E6%9C%AA%E5%B9%B3%E5%80%89/>)、[4](<https://quantpass.org/put-call-ratio/>)、[5](<https://www.spf.com.tw/mktinfo/Futures/OA/option-001.html>)）
+- [期貨未平倉主力動向 - 永豐期貨](<https://www.spf.com.tw/mktinfo/Futures/OA/strategy-001.html>)
+- [期貨未平倉量大盤多空 - HiStock](<https://histock.tw/blog/histock1688/27>)

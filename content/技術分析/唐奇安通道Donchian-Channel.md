@@ -1,6 +1,9 @@
 ---
 title: "唐奇安通道 Donchian Channel"
 category: "技術分析"
+raw_files:
+- raw/2026-05-03/唐奇安通道Donchian-Channel.md
+- raw/2026-05-11/唐奇安通道完整教學.md
 ---
 
 # 唐奇安通道 Donchian Channel
@@ -118,8 +121,8 @@ category: "技術分析"
 
 ## 來源
 
-- [EdgeTrader: DonChian Channel 唐奇安通道! 海龜交易法的核心](../../raw/2026-05-03/唐奇安通道Donchian-Channel.md)
-- [量化通: 唐奇安通道完整教學](../../raw/2026-05-03/唐奇安通道Donchian-Channel.md)
-- [程式交易快譯通: 唐奇安通道突破系統](../../raw/2026-05-03/唐奇安通道Donchian-Channel.md)
-- [EdgeTrader: DonChian Channel 唐奇安通道! 海龜交易法的核心](../../raw/2026-05-11/唐奇安通道完整教學.md)
-- [量化通: 唐奇安通道完整教學](../../raw/2026-05-11/唐奇安通道完整教學.md)
+- EdgeTrader: DonChian Channel 唐奇安通道! 海龜交易法的核心（原始來源：[1](<https://edgetradertw.com/donchian-channel-%E5%94%90%E5%A5%87%E5%AE%89%E9%80%9A%E9%81%93-%E6%B5%B7%E9%BE%9C%E4%BA%A4%E6%98%93%E6%B3%95%E7%9A%84%E6%A0%B8%E5%BF%83/>)、[2](<https://quantpass.org/donchian-channel/>)、[3](<https://seekingalpha-tainan.blogspot.com/2020/07/donchians-channel-breakout-system.html>)）
+- 量化通: 唐奇安通道完整教學（原始來源：[1](<https://edgetradertw.com/donchian-channel-%E5%94%90%E5%A5%87%E5%AE%89%E9%80%9A%E9%81%93-%E6%B5%B7%E9%BE%9C%E4%BA%A4%E6%98%93%E6%B3%95%E7%9A%84%E6%A0%B8%E5%BF%83/>)、[2](<https://quantpass.org/donchian-channel/>)、[3](<https://seekingalpha-tainan.blogspot.com/2020/07/donchians-channel-breakout-system.html>)）
+- 程式交易快譯通: 唐奇安通道突破系統（原始來源：[1](<https://edgetradertw.com/donchian-channel-%E5%94%90%E5%A5%87%E5%AE%89%E9%80%9A%E9%81%93-%E6%B5%B7%E9%BE%9C%E4%BA%A4%E6%98%93%E6%B3%95%E7%9A%84%E6%A0%B8%E5%BF%83/>)、[2](<https://quantpass.org/donchian-channel/>)、[3](<https://seekingalpha-tainan.blogspot.com/2020/07/donchians-channel-breakout-system.html>)）
+- EdgeTrader: DonChian Channel 唐奇安通道! 海龜交易法的核心（原始來源：[1](<https://edgetradertw.com/donchian-channel-唐奇安安通道-海龜交易法的核心/>)、[2](<https://quantpass.org/donchian-channel/>)）
+- 量化通: 唐奇安通道完整教學（原始來源：[1](<https://edgetradertw.com/donchian-channel-唐奇安安通道-海龜交易法的核心/>)、[2](<https://quantpass.org/donchian-channel/>)）

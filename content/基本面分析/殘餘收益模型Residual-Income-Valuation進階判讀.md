@@ -1,6 +1,10 @@
 ---
 title: "殘餘收益模型Residual Income Valuation進階判讀"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-12/剩餘收益估價模型MBA智庫.md
+- raw/2026-05-12/剩餘收益模式美股價值投資筆記.md
+- raw/2026-05-12/CFA殘餘收益估值Residual-Income-Valuation.md
 ---
 
 # 殘餘收益模型Residual Income Valuation進階判讀
@@ -68,15 +72,15 @@ Beaver、Freeman、Ohlson和Penman的研究發現：
 
 **實例：Wells Fargo（WFC）**
 - ROE = 14.26%
-- Book Value = $14.15
+- Book Value = \$14.15
 - re（要求報酬率）= 8%
 
 Fair Value = 14.15 × (1 + (14.26% - 8%) / 8%)
            = 14.15 × (1 + 0.7825)
            = 14.15 × 1.7825
-           = **$25.22**
+           = **\$25.22**
 
-2009/1/12收盤價 $25.14，模型估價非常接近！
+2009/1/12收盤價 \$25.14，模型估價非常接近！
 
 ### 兩階段模型（實務最常用）
 
@@ -199,6 +203,6 @@ P/B判斷：
 
 ## 來源
 
-- [剩餘收益估價模型 - MBA智庫百科](../../raw/2026-05-12/剩餘收益估價模型MBA智庫.md)
-- [剩餘收益模式 - 美股價值投資筆記](../../raw/2026-05-12/剩餘收益模式美股價值投資筆記.md)
-- [CFA Residual Income Valuation](../../raw/2026-05-12/CFA殘餘收益估值Residual-Income-Valuation.md)
+- [剩餘收益估價模型 - MBA智庫百科](<https://wiki.mbalib.com/zh-tw/%E5%89%A9%E4%BD%99%E6%94%B6%E7%9B%8A%E4%BC%B0%E4%BB%B7%E6%A8%A1%E5%9E%8B>)
+- [剩餘收益模式 - 美股價值投資筆記](<https://ustock.pixnet.net/blog/post/24072894>)
+- [CFA Residual Income Valuation](<https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/residual-income-valuation>)

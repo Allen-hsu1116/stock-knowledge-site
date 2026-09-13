@@ -2,6 +2,8 @@
 title: "CDaR條件回撤風險 Conditional Drawdown at Risk"
 date: 2026-06-26
 category: "風險管理"
+raw_files:
+- raw/2026-06-26/Expected-Shortfall-Wikipedia.md
 ---
 
 # CDaR條件回撤風險 Conditional Drawdown at Risk
@@ -125,6 +127,6 @@ MDD是回撤序列的最大值（一個點），CDaR是尾部回撤的條件期�
 
 ## 來源
 
-- [Expected Shortfall Wikipedia](../../raw/2026-06-26/Expected-Shortfall-Wikipedia.md)
+- [Expected Shortfall Wikipedia](<https://en.wikipedia.org/wiki/Expected_shortfall>)
 - Chekhlov, A., Uryasev, S., & Zabarankin, M. (2005). Drawdown Measure in Portfolio Optimization
 - Rockafellar, R.T. & Uryasev, S. (2000). Optimization of Conditional Value-at-Risk

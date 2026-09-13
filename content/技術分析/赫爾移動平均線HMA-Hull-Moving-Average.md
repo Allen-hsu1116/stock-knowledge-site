@@ -1,6 +1,8 @@
 ---
 title: "赫爾移動平均線 HMA (Hull Moving Average)"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/Hull-Moving-Average-HMA-赫爾移動平均線.md
 ---
 
 # 赫爾移動平均線 HMA (Hull Moving Average)
@@ -121,7 +123,7 @@ HMA 在 MT4/MT5 不是標準指標，需要另外安裝自定義指標。部分�
 
 ## 來源
 
-- [Hull（赫爾）移動平均線是什麼？ - OANDA Lab](../../raw/2026-05-11/Hull-Moving-Average-HMA-赫爾移動平均線.md)
-- [HMA - Hull Moving Average 赫爾移動平均線 - taindicators](../../raw/2026-05-11/Hull-Moving-Average-HMA-赫爾移動平均線.md)
-- [The Hull Moving Average - Alan Hull 官方](../../raw/2026-05-11/Hull-Moving-Average-HMA-赫爾移動平均線.md)
-- [【MultiCharts】Hull Moving Average(HMA) - 程式交易快譯通](../../raw/2026-05-11/Hull-Moving-Average-HMA-赫爾移動平均線.md)
+- Hull（赫爾）移動平均線是什麼？ - OANDA Lab（原始來源：[1](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/moving_average-hull/>)、[2](<https://www.taindicators.com/hma/>)、[3](<https://alanhull.com/the-hull-moving-average/>)、[4](<https://seekingalpha-tainan.blogspot.com/2017/07/hull-moving-averagehma.html>)）
+- HMA - Hull Moving Average 赫爾移動平均線 - taindicators（原始來源：[1](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/moving_average-hull/>)、[2](<https://www.taindicators.com/hma/>)、[3](<https://alanhull.com/the-hull-moving-average/>)、[4](<https://seekingalpha-tainan.blogspot.com/2017/07/hull-moving-averagehma.html>)）
+- The Hull Moving Average - Alan Hull 官方（原始來源：[1](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/moving_average-hull/>)、[2](<https://www.taindicators.com/hma/>)、[3](<https://alanhull.com/the-hull-moving-average/>)、[4](<https://seekingalpha-tainan.blogspot.com/2017/07/hull-moving-averagehma.html>)）
+- 【MultiCharts】Hull Moving Average(HMA) - 程式交易快譯通（原始來源：[1](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/moving_average-hull/>)、[2](<https://www.taindicators.com/hma/>)、[3](<https://alanhull.com/the-hull-moving-average/>)、[4](<https://seekingalpha-tainan.blogspot.com/2017/07/hull-moving-averagehma.html>)）

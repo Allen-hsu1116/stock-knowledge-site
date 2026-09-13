@@ -2,6 +2,8 @@
 title: 赫斯特指數 Hurst Exponent
 date: 2026-06-29
 category: "技術分析"
+raw_files:
+- raw/2026-06-29/赫斯特指數Hurst-Exponent.md
 ---
 
 # 赫斯特指數 Hurst Exponent
@@ -100,7 +102,7 @@ FRAMA 指標內部計算的分形維度 D 就是基於 Hurst 的理論。D = 2 -
 
 ## 來源
 
-- [Hurst Exponent - Wikipedia](../../raw/2026-06-29/赫斯特指數Hurst-Exponent.md)
+- [Hurst Exponent - Wikipedia](<https://en.wikipedia.org/wiki/Hurst_exponent>)
 - Hurst, H.E. (1951). "Long-term storage capacity of reservoirs". Transactions of the American Society of Civil Engineers.
 - Mandelbrot, B.B. (1968). "Noah, Joseph, and operational hydrology". Water Resources Research.
 - Weron, R. (2002). "Estimating long-range dependence: finite sample properties and confidence intervals". Physica A.

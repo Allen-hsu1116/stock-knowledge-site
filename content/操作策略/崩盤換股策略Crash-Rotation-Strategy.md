@@ -2,6 +2,8 @@
 category: "操作策略"
 title: 崩盤換股策略Crash-Rotation-Strategy
 date: 2026-05-16
+raw_files:
+- raw/2026-05-16/崩盤選股與換股策略-優分析林區.md
 ---
 
 # 崩盤換股策略Crash-Rotation-Strategy
@@ -110,4 +112,4 @@ date: 2026-05-16
 
 ## 來源
 
-- [崩盤選股與換股策略—優分析林區](../../raw/2026-05-16/崩盤選股與換股策略-優分析林區.md)
+- [崩盤選股與換股策略—優分析林區](<https://uanalyze.com.tw/articles/142085889>)

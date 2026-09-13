@@ -1,6 +1,8 @@
 ---
 title: "自我服務偏差 Self-Serving Bias"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/自我服務偏差Self-Serving-Bias-mbalib.md
 ---
 
 # 自我服務偏差 Self-Serving Bias
@@ -112,4 +114,4 @@ category: "風險管理"
 
 ## 來源
 
-- [自我服務偏差 - MBA智库百科](../../raw/2026-05-08/自我服務偏差Self-Serving-Bias-mbalib.md)
+- [自我服務偏差 - MBA智库百科](<https://wiki.mbalib.com/zh-tw/自我服务偏差>)

@@ -1,6 +1,8 @@
 ---
 title: "交易對手風險 Counterparty Risk"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/交易對手風險Counterparty-Risk.md
 ---
 
 # 交易對手風險 Counterparty Risk
@@ -73,4 +75,4 @@ category: "風險管理"
 
 ## 來源
 
-- [交易對手風險是什麼？投資時如何減少違約與信用風險？](../../raw/2026-05-01/交易對手風險Counterparty-Risk.md)
+- [交易對手風險是什麼？投資時如何減少違約與信用風險？](<https://rich01.com/what-is-counterparty-risk/>)

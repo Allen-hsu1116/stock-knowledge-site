@@ -1,6 +1,9 @@
 ---
 title: "破壞塊 Breaker Block"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/SMC基礎ICT交易策略聰明錢流動性訂單塊FVG.md
+- raw/2026-05-11/SMC進階BOS與CHoCH市場結構突破與轉變.md
 ---
 
 # 破壞塊 Breaker Block
@@ -72,5 +75,5 @@ category: "技術分析"
 - [[支撐壓力|支撐壓力]]
 
 ## 來源
-- [SMC基礎ICT交易策略聰明錢流動性訂單塊FVG](../../raw/2026-05-11/SMC基礎ICT交易策略聰明錢流動性訂單塊FVG.md)
-- [SMC進階BOS與CHoCH市場結構突破與轉變](../../raw/2026-05-11/SMC進階BOS與CHoCH市場結構突破與轉變.md)
+- [SMC基礎ICT交易策略聰明錢流動性訂單塊FVG](<https://homedadpro.com/smart-money-concepts/>)
+- [SMC進階BOS與CHoCH市場結構突破與轉變](<https://homedadpro.com/break-of-structure/>)

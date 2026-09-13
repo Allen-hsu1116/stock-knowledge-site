@@ -1,6 +1,8 @@
 ---
 title: "一致性風險測度 Coherent Risk Measures"
 category: "風險管理"
+raw_files:
+- raw/2026-08-07/一致性風險測度Coherent-Risk-Measures.md
 ---
 
 # 一致性風險測度 Coherent Risk Measures
@@ -90,6 +92,6 @@ CVaR 的數學性質：連續分配下 CVaR 必定是一致的；離散分配下
 
 ## 來源
 
-- [一致性風險測度 Coherent Risk Measures](../../raw/2026-08-07/一致性風險測度Coherent-Risk-Measures.md)
+- [一致性風險測度 Coherent Risk Measures](<https://en.wikipedia.org/wiki/Coherent_risk_measure>)
 - Wikipedia: Coherent risk measure
 - Artzner, P., Delbaen, F., Eber, J.M., Heath, D. (1999). "Coherent measures of risk"

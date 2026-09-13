@@ -4,6 +4,8 @@ category: "風險管理"
 date: 2026-08-30
 source_date: 2026-08-30
 status: raw_linked
+raw_files:
+- raw/2026-08-30/Roll隱含買賣價差來源學習紀錄.md
 ---
 
 # Roll隱含買賣價差估計
@@ -109,7 +111,7 @@ $$
 
 ## 來源
 
-- [Roll隱含買賣價差來源學習紀錄](../../raw/2026-08-30/Roll隱含買賣價差來源學習紀錄.md)
+- Roll隱含買賣價差來源學習紀錄（本機留存素材，未公開全文；原始網址待核對）
 - [Roll（1984）：A Simple Implicit Measure of the Effective Bid-Ask Spread](https://doi.org/10.1111/j.1540-6261.1984.tb03897.x)
 - [Corwin與Schultz公開論文，第3.1節重述Roll模型](https://users.nber.org/~confer/2009/mms09/Corwin_Schultz.pdf)
 - [CRAN bidask套件](https://cran.r-project.org/package=bidask)

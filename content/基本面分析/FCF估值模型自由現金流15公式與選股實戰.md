@@ -1,6 +1,9 @@
 ---
 title: "FCF估值模型自由現金流15公式與選股實戰"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-03/FCF自由現金流15個核心公式.md
+- raw/2026-05-03/自由現金流FCF選股實戰方法.md
 ---
 
 # FCF估值模型自由現金流15公式與選股實戰
@@ -114,5 +117,5 @@ category: "基本面分析"
 
 ## 來源
 
-- [FCF自由現金流15個核心公式](../../raw/2026-05-03/FCF自由現金流15個核心公式.md)
-- [自由現金流FCF選股實戰方法](../../raw/2026-05-03/自由現金流FCF選股實戰方法.md)
+- [FCF自由現金流15個核心公式](<https://pgfinnote.substack.com/p/fcf-15>)
+- 自由現金流FCF選股實戰方法（原始來源：[1](<https://sparksparkfinance.com/investment/investing-basics/free-cash-flow-fcf/>)、[2](<https://smart.businessweekly.com.tw/Reading/IndepArticle.aspx?id=38945>)）

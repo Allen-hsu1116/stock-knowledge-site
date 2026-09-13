@@ -2,6 +2,8 @@
 category: "技術分析"
 title: "TSI真實強度指標 True Strength Index"
 date: 2026-06-15
+raw_files:
+- raw/2026-06-15/TSI真實強度指標-StockCharts.md
 ---
 
 # TSI真實強度指標 True Strength Index
@@ -78,4 +80,4 @@ TSI 背離可與 [[技術分析/背離Divergence進階實戰]] 的確認規則�
 
 ## 來源
 
-- [StockCharts ChartSchool: True Strength Index](../../raw/2026-06-15/TSI真實強度指標-StockCharts.md)
+- [StockCharts ChartSchool: True Strength Index](<https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/true-strength-index.md>)

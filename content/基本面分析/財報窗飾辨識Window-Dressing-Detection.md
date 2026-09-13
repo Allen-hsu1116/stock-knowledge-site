@@ -4,6 +4,9 @@ category: "基本面分析"
 source: https://www.fishhuang.idv.tw/2022/08/Financial-Statement-Analysis-37-window-decoration-and-scam.html
 source_date: 2026-05-17
 status: raw_available
+raw_files:
+- raw/2026-05-17/財報窗飾與財務騙局-FishHuang.md
+- raw/2026-05-17/財報窗飾會計思考力-關鍵評論網.md
 ---
 
 # 財報窗飾辨識Window-Dressing-Detection
@@ -177,7 +180,7 @@ status: raw_available
 
 ## 來源
 
-- [財報窗飾與財務騙局 - Fish Huang](../../raw/2026-05-17/財報窗飾與財務騙局-FishHuang.md)
-- [會計思考力：窗飾財報伎倆 - 關鍵評論網](../../raw/2026-05-17/財報窗飾會計思考力-關鍵評論網.md)
+- [財報窗飾與財務騙局 - Fish Huang](<https://www.fishhuang.idv.tw/2022/08/Financial-Statement-Analysis-37-window-decoration-and-scam.html>)
+- [會計思考力：窗飾財報伎倆 - 關鍵評論網](<https://www.thenewslens.com/article/111589>)
 - 參考書籍：《財務報表分析：實務的運用》薛兆亨，雙葉書廊
 - 參考書籍：《會計思考力》矢部謙介，寶鼎出版

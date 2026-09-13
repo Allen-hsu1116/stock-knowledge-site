@@ -1,6 +1,9 @@
 ---
 title: "肯特納通道Keltner-Channel"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/肯特納通道Keltner-Channel完整教學.md
+- raw/2026-05-04/平均K線與肯特納通道當沖策略-OANDA.md
 ---
 
 # 肯特納通道Keltner-Channel
@@ -118,5 +121,5 @@ category: "技術分析"
 
 ## 來源
 
-- [肯特納通道完整教學，用Keltner Channel找出買賣點](../../raw/2026-05-04/肯特納通道Keltner-Channel完整教學.md)
-- [使用平均K線與肯特納通道進行當日沖銷的策略](../../raw/2026-05-04/平均K線與肯特納通道當沖策略-OANDA.md)
+- [肯特納通道完整教學，用Keltner Channel找出買賣點](<https://quantpass.org/keltner-channel-2/>)
+- [使用平均K線與肯特納通道進行當日沖銷的策略](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/average-candlestick-chart-keltner-channel/>)

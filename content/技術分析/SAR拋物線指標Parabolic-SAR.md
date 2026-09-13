@@ -1,6 +1,17 @@
 ---
 title: "SAR拋物線指標 Parabolic SAR"
 category: "技術分析"
+raw_files:
+- raw/2026-05-02/SAR拋物線指標完整教學.md
+- raw/2026-05-02/SAR拋物線指標盲點與當沖應用.md
+- raw/2026-05-02/SAR拋物線指標參數與策略.md
+- raw/2026-05-04/OANDA-SAR拋物線指標.md
+- raw/2026-05-04/QuantPass-SAR指標完整教學.md
+- raw/2026-05-04/SAR拋物線指標停損停利判斷.md
+- raw/2026-05-04/SAR拋物線指標完整教學與當沖優化.md
+- raw/2026-05-18/SAR拋物線指標QuantPass完整教學.md
+- raw/2026-05-18/拋物線SAR指標盲點與當沖實戰Winsmart.md
+- raw/2026-05-18/SAR拋物線指標看圖說股市Yahoo.md
 ---
 
 # SAR拋物線指標 Parabolic SAR
@@ -126,13 +137,13 @@ SAR 是追蹤工具，不是預測工具。它告訴你「趨勢已經反轉」�
 - [[Chandelier-Exit吊燈出場指標|Chandelier Exit]] - ATR 版追蹤停損，盤整中比 SAR 穩定
 
 ## 來源
-- [SAR指標完整教學](../../raw/2026-05-02/SAR拋物線指標完整教學.md)
-- [SAR拋物線指標盲點與當沖應用](../../raw/2026-05-02/SAR拋物線指標盲點與當沖應用.md)
-- [SAR拋物線指標參數與策略](../../raw/2026-05-02/SAR拋物線指標參數與策略.md)
-- [SAR拋物線指標-OANDA](../../raw/2026-05-04/OANDA-SAR拋物線指標.md)
-- [SAR指標完整教學-量化通](../../raw/2026-05-04/QuantPass-SAR指標完整教學.md)
-- [SAR拋物線指標停損停利判斷-Yahoo](../../raw/2026-05-04/SAR拋物線指標停損停利判斷.md)
-- [SAR拋物線指標完整教學與當沖優化-量化通](../../raw/2026-05-04/SAR拋物線指標完整教學與當沖優化.md)
-- [SAR指標完整教學-量化通](../../raw/2026-05-18/SAR拋物線指標QuantPass完整教學.md)
-- [SAR指標盲點與當沖實戰-Winsmart](../../raw/2026-05-18/拋物線SAR指標盲點與當沖實戰Winsmart.md)
-- [SAR指標停損停利判斷-Yahoo股市](../../raw/2026-05-18/SAR拋物線指標看圖說股市Yahoo.md)
+- [SAR指標完整教學](<https://quantpass.org/sar/>)
+- [SAR拋物線指標盲點與當沖應用](<https://winsmart.tw/en/online_teaching/%E6%8B%8B%E7%89%A9%E7%B7%9Asar%E6%8C%87%E6%A8%99/>)
+- [SAR拋物線指標參數與策略](<https://augustime.com/sar-index-stop-and-reverse/>)
+- [SAR拋物線指標-OANDA](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/parabolic/>)
+- [SAR指標完整教學-量化通](<https://quantpass.org/sar/>)
+- [SAR拋物線指標停損停利判斷-Yahoo](<https://tw.stock.yahoo.com/news/%E3%80%90%E7%9C%8B%E5%9C%96%E8%AA%AA%E8%82%A1%E5%B8%82%E3%80%91%E5%81%9C%E6%90%8D%E5%81%9C%E5%88%A9%E9%80%99%E6%A8%A3%E7%9C%8B%EF%BC%81sar%E6%8C%87%E6%A8%99%EF%BC%88%E6%8B%8B%E7%89%A9%E7%B7%9A%E6%8C%87%E6%A8%99%EF%BC%89%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F%E6%80%8E%E9%BA%BC%E5%88%A4%E6%96%B7%E5%8F%8D%E8%BD%89%E8%A8%8A%E8%99%9F%EF%BC%9F-100055207.html>)
+- [SAR拋物線指標完整教學與當沖優化-量化通](<https://quantpass.org/sar/>)
+- [SAR指標完整教學-量化通](<https://quantpass.org/sar/>)
+- [SAR指標盲點與當沖實戰-Winsmart](<https://winsmart.tw/en/online_teaching/%E6%8B%8B%E7%89%A9%E7%B7%9Asar%E6%8C%87%E6%A8%99/>)
+- [SAR指標停損停利判斷-Yahoo股市](<https://tw.stock.yahoo.com/news/%E3%80%90%E7%9C%8B%E5%9C%96%E8%AA%AA%E8%82%A1%E5%B8%82%E3%80%91%E5%81%9C%E6%90%8D%E5%81%9C%E5%88%A9%E9%80%99%E6%A8%A3%E7%9C%8B%EF%BC%81sar%E6%8C%87%E6%A8%99%EF%BC%88%E6%8B%8B%E7%89%A9%E7%B7%9A%E6%8C%87%E6%A8%99%EF%BC%89%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F%E6%80%8E%E9%BA%BC%E5%88%A4%E6%96%B7%E5%8F%8D%E8%BD%89%E8%A8%8A%E8%99%9F%EF%BC%9F-100055207.html>)

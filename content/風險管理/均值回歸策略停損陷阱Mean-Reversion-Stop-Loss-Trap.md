@@ -2,6 +2,8 @@
 title: 均值回歸策略停損陷阱
 date: 2026-06-19
 category: "風險管理"
+raw_files:
+- raw/2026-06-19/12-Best-Risk-Management-Techniques-and-Strategies.md
 ---
 
 # 均值回歸策略停損陷阱
@@ -89,4 +91,4 @@ category: "風險管理"
 
 ## 來源
 
-- [12 Best Risk Management, Types, Techniques and Strategies for Traders](../../raw/2026-06-19/12-Best-Risk-Management-Techniques-and-Strategies.md) — 含 RSI<20 均值回歸策略停損回測數據
+- [12 Best Risk Management, Types, Techniques and Strategies for Traders](<https://www.quantifiedstrategies.com/risk-management-trading/>) — 含 RSI<20 均值回歸策略停損回測數據

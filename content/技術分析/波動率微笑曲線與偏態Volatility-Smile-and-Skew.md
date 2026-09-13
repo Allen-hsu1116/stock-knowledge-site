@@ -1,6 +1,10 @@
 ---
 title: "波動率微笑曲線與偏態 Volatility Smile & Skew"
 category: "技術分析"
+raw_files:
+- raw/2026-05-03/波動率微笑曲線Volatility-Smile全解析.md
+- raw/2026-05-03/隱含波動率歷史波動率差異與實戰.md
+- raw/2026-05-16/選擇權波動率偏斜進階解析-OP凱文.md
 ---
 
 # 波動率微笑曲線與偏態 Volatility Smile & Skew
@@ -137,6 +141,6 @@ CBOE 的 SKEW 指數透過 S&P500 價外選擇權的 IV 偏斜程度度量市場
 
 ## 來源
 
-- [波動率微笑曲線全解析 - 老墨的市場觀測站](../../raw/2026-05-03/波動率微笑曲線Volatility-Smile全解析.md)
-- [隱含波動率與歷史波動率 - Mr.Market市場先生](../../raw/2026-05-03/隱含波動率歷史波動率差異與實戰.md)
-- [選擇權市場的波動率偏斜 - OP凱文](../../raw/2026-05-16/選擇權波動率偏斜進階解析-OP凱文.md)
+- [波動率微笑曲線全解析 - 老墨的市場觀測站](<https://mofiinvestment.com/volatility-smile>)
+- [隱含波動率與歷史波動率 - Mr.Market市場先生](<https://rich01.com/what-is-implied-volatility-0/>)
+- [選擇權市場的波動率偏斜 - OP凱文](<https://opkevin.cc/%E6%B3%A2%E5%8B%95%E7%8E%87%E5%81%8F%E6%96%9C/>)

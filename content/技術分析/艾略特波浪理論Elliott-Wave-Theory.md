@@ -1,6 +1,14 @@
 ---
 title: "艾略特波浪理論 Elliott Wave Theory"
 category: "技術分析"
+raw_files:
+- raw/2026-05-02/艾略特波浪理論完整教學三鐵律實戰策略.md
+- raw/2026-05-02/波浪理論規則邪惡第五波.md
+- raw/2026-05-02/波浪理論艾略特波浪基本形態與斐波那契回調.md
+- raw/2026-05-04/波浪理論是什麼波浪理論計算方式小心邪惡第五波-StockFeel.md
+- raw/2026-05-04/波浪理論規則小心邪惡第五波-市場先生.md
+- raw/2026-05-04/How-to-Use-Elliott-Wave-Theory-in-Trading-Equiti.md
+- raw/2026-05-17/艾略特波浪理論Elliott-Wave-Theory實戰.md
 ---
 
 # 艾略特波浪理論 Elliott Wave Theory
@@ -178,11 +186,11 @@ category: "技術分析"
 
 ## 來源
 
-- [艾略特波浪理論完整教學三鐵律實戰策略](../../raw/2026-05-02/艾略特波浪理論完整教學三鐵律實戰策略.md)
-- [波浪理論規則邪惡第五波](../../raw/2026-05-02/波浪理論規則邪惡第五波.md)
-- [波浪理論艾略特波浪基本形態與斐波那契回調](../../raw/2026-05-02/波浪理論艾略特波浪基本形態與斐波那契回調.md)
-- [波浪理論是什麼波浪理論計算方式小心邪惡第五波-StockFeel](../../raw/2026-05-04/波浪理論是什麼波浪理論計算方式小心邪惡第五波-StockFeel.md)
-- [波浪理論規則小心邪惡第五波-市場先生](../../raw/2026-05-04/波浪理論規則小心邪惡第五波-市場先生.md)
-- [How to Use Elliott Wave Theory in Trading-Equiti](../../raw/2026-05-04/How-to-Use-Elliott-Wave-Theory-in-Trading-Equiti.md)
-- [艾略特波浪理論5-3波浪循環三鐵律實戰策略-FM Studio](../../raw/2026-05-17/艾略特波浪理論Elliott-Wave-Theory實戰.md)
-- [艾略特波浪理論8大波浪定律入門到精通-投資兄弟](../../raw/2026-05-17/艾略特波浪理論Elliott-Wave-Theory實戰.md)
+- [艾略特波浪理論完整教學三鐵律實戰策略](<https://fmstudio.blog/elliott-wave-theory-guide-2025-3/>)
+- [波浪理論規則邪惡第五波](<https://rich01.com/what-is-elliott-%EF%BD%97aves/>)
+- [波浪理論艾略特波浪基本形態與斐波那契回調](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/elliott_wave-beginner/>)
+- [波浪理論是什麼波浪理論計算方式小心邪惡第五波-StockFeel](<https://www.stockfeel.com.tw/%E6%B3%A2%E6%B5%AA%E7%90%86%E8%AB%96-%E8%89%BE%E7%95%A5%E7%89%B9%E6%B3%A2%E6%B5%AA%E7%90%86%E8%AB%96-%E9%82%AA%E6%83%A1%E7%AC%AC%E4%BA%94%E6%B3%A2/>)
+- [波浪理論規則小心邪惡第五波-市場先生](<https://rich01.com/what-is-elliott-%EF%BD%97aves/>)
+- [How to Use Elliott Wave Theory in Trading-Equiti](<https://www.equiti.com/sc-en/news/trading-ideas/how-to-use-elliott-wave-theory-in-trading/>)
+- 艾略特波浪理論5-3波浪循環三鐵律實戰策略-FM Studio（原始來源：[1](<https://fmstudio.blog/elliott-wave-theory-guide-2025-3/>)、[2](<https://www.investbrother.com/brother-academy/艾略特波浪理論教學：掌握8大波浪定律從入門到精通/>)）
+- 艾略特波浪理論8大波浪定律入門到精通-投資兄弟（原始來源：[1](<https://fmstudio.blog/elliott-wave-theory-guide-2025-3/>)、[2](<https://www.investbrother.com/brother-academy/艾略特波浪理論教學：掌握8大波浪定律從入門到精通/>)）

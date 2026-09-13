@@ -1,6 +1,8 @@
 ---
 title: "Stochastic RSI隨機RSI"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/Stochastic-RSI隨機RSI.md
 ---
 
 # Stochastic RSI隨機RSI
@@ -126,5 +128,5 @@ Stochastic RSI 是「指標的指標」，距離價格**兩步之遙**：
 - [[布林通道Bollinger-Bands三軌八型態]] - 另一種超買超賣判斷工具
 
 ## 來源
-- [隨機RSI (Stoch RSI) - TradingView](../../raw/2026-05-04/Stochastic-RSI隨機RSI.md)
-- [隨機RSI - 投機者博客](../../raw/2026-05-04/Stochastic-RSI隨機RSI.md)
+- 隨機RSI (Stoch RSI) - TradingView（原始來源：[1](<https://tw.tradingview.com/support/solutions/43000502333/>)、[2](<http://bwtdteaching.blogspot.com/2009/10/rsistochastic-rsi.html>)、[3](<https://academy.binance.com/en/articles/stochastic-rsi-explained>)）
+- 隨機RSI - 投機者博客（原始來源：[1](<https://tw.tradingview.com/support/solutions/43000502333/>)、[2](<http://bwtdteaching.blogspot.com/2009/10/rsistochastic-rsi.html>)、[3](<https://academy.binance.com/en/articles/stochastic-rsi-explained>)）

@@ -1,6 +1,9 @@
 ---
 title: "隱含波動率IV與歷史波動率HV實戰判讀"
 category: "技術分析"
+raw_files:
+- raw/2026-05-03/隱含波動率歷史波動率差異與實戰.md
+- raw/2026-05-03/波動率微笑曲線Volatility-Smile全解析.md
 ---
 
 # 隱含波動率IV與歷史波動率HV實戰判讀
@@ -76,5 +79,5 @@ category: "技術分析"
 
 ## 來源
 
-- [隱含波動率、歷史波動率差異 - Mr.Market市場先生](../../raw/2026-05-03/隱含波動率歷史波動率差異與實戰.md)
-- [波動率微笑曲線全解析 - 老墨的市場觀測站](../../raw/2026-05-03/波動率微笑曲線Volatility-Smile全解析.md)
+- [隱含波動率、歷史波動率差異 - Mr.Market市場先生](<https://rich01.com/what-is-implied-volatility-0/>)
+- [波動率微笑曲線全解析 - 老墨的市場觀測站](<https://mofiinvestment.com/volatility-smile>)

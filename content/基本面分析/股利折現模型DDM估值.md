@@ -1,6 +1,8 @@
 ---
 title: "股利折現模型DDM估值"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/股利折現模型DDM估值.md
 ---
 
 # 股利折現模型DDM估值
@@ -134,7 +136,7 @@ V = D1 / (k - g)
 
 ## 來源
 
-- [股息貼現模型 - MBA智库百科](../../raw/2026-05-05/股利折現模型DDM估值.md)
+- [股息貼現模型 - MBA智库百科](<https://wiki.mbalib.com/zh-tw/股息貼現模型>)
 - [戈登股利增長模型 - MBA智库百科](https://wiki.mbalib.com/zh-tw/不變增長模型)
 - [零增長模型 - MBA智库百科](https://wiki.mbalib.com/zh-tw/零增長模型)
 - [二階段增長模型 - MBA智库百科](https://wiki.mbalib.com/zh-tw/二階段增長模型)

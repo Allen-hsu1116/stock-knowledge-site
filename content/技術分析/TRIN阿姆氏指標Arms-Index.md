@@ -2,6 +2,8 @@
 title: "TRIN阿姆氏指標 Arms Index"
 category: "技術分析"
 date: 2026-05-18
+raw_files:
+- raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md
 ---
 
 # TRIN阿姆氏指標 Arms Index
@@ -141,7 +143,7 @@ TRIN = (上漲家數 / 下跌家數) ÷ (上漲成交量 / 下跌成交量)
 - [[MFI資金流量指標Money-Flow-Index]]
 
 ## 來源
-- [TRIN 交易者指數 - taindicators](../../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)
-- [阿姆氏指標 - MBA智庫百科](../../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)
-- [Arms Index (TRIN) - StockCharts ChartSchool](../../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)
-- [市場寬度 - Finetic](../../raw/2026-05-18/TRIN阿姆氏指標與麥克萊倫震盪指標.md)
+- TRIN 交易者指數 - taindicators（原始來源：[1](<https://www.taindicators.com/trin/>)、[2](<https://wiki.mbalib.com/zh-tw/%E9%98%BF%E5%A7%86%E6%B0%8F%E6%8C%87%E6%A0%87>)、[3](<https://chartschool.stockcharts.com/table-of-contents/market-indicators/arms-index-trin>)、[4](<https://chartschool.stockcharts.com/table-of-contents/market-indicators/mcclellan-oscillator>)、[5](<https://www.finetic.ai/articles/%E5%B8%82%E5%A0%B4%E5%AF%AC%E5%BA%A6>)）
+- 阿姆氏指標 - MBA智庫百科（原始來源：[1](<https://www.taindicators.com/trin/>)、[2](<https://wiki.mbalib.com/zh-tw/%E9%98%BF%E5%A7%86%E6%B0%8F%E6%8C%87%E6%A0%87>)、[3](<https://chartschool.stockcharts.com/table-of-contents/market-indicators/arms-index-trin>)、[4](<https://chartschool.stockcharts.com/table-of-contents/market-indicators/mcclellan-oscillator>)、[5](<https://www.finetic.ai/articles/%E5%B8%82%E5%A0%B4%E5%AF%AC%E5%BA%A6>)）
+- Arms Index (TRIN) - StockCharts ChartSchool（原始來源：[1](<https://www.taindicators.com/trin/>)、[2](<https://wiki.mbalib.com/zh-tw/%E9%98%BF%E5%A7%86%E6%B0%8F%E6%8C%87%E6%A0%87>)、[3](<https://chartschool.stockcharts.com/table-of-contents/market-indicators/arms-index-trin>)、[4](<https://chartschool.stockcharts.com/table-of-contents/market-indicators/mcclellan-oscillator>)、[5](<https://www.finetic.ai/articles/%E5%B8%82%E5%A0%B4%E5%AF%AC%E5%BA%A6>)）
+- 市場寬度 - Finetic（原始來源：[1](<https://www.taindicators.com/trin/>)、[2](<https://wiki.mbalib.com/zh-tw/%E9%98%BF%E5%A7%86%E6%B0%8F%E6%8C%87%E6%A0%87>)、[3](<https://chartschool.stockcharts.com/table-of-contents/market-indicators/arms-index-trin>)、[4](<https://chartschool.stockcharts.com/table-of-contents/market-indicators/mcclellan-oscillator>)、[5](<https://www.finetic.ai/articles/%E5%B8%82%E5%A0%B4%E5%AF%AC%E5%BA%A6>)）

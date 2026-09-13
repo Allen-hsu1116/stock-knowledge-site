@@ -1,6 +1,8 @@
 ---
 title: "分散投資七法與相關係數 Diversification Seven Methods and Correlation Coefficient"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/相關係數與分散投資.md
 ---
 
 # 分散投資七法與相關係數 Diversification Seven Methods and Correlation Coefficient
@@ -108,5 +110,5 @@ category: "風險管理"
 
 ## 來源
 
-- [相關係數](../../raw/2026-05-08/相關係數與分散投資.md)
-- [分散投資](../../raw/2026-05-08/相關係數與分散投資.md)
+- 相關係數（原始來源：[1](<https://wiki.mbalib.com/zh-tw/相关系数>)、[2](<https://wiki.mbalib.com/zh-tw/分散投资>)）
+- 分散投資（原始來源：[1](<https://wiki.mbalib.com/zh-tw/相关系数>)、[2](<https://wiki.mbalib.com/zh-tw/分散投资>)）

@@ -1,6 +1,9 @@
 ---
 title: "安全邊際Margin of Safety進階實戰"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-12/安全邊際Margin-of-Safety五大迷思與實戰.md
+- raw/2026-05-12/安全邊際計算與實戰應用.md
 ---
 
 # 安全邊際Margin of Safety進階實戰
@@ -111,5 +114,5 @@ category: "基本面分析"
 - [[風險報酬比]]
 
 ## 來源
-- [安全邊際Margin of Safety五大迷思與實戰](../../raw/2026-05-12/安全邊際Margin-of-Safety五大迷思與實戰.md)
-- [安全邊際計算與實戰應用](../../raw/2026-05-12/安全邊際計算與實戰應用.md)
+- [安全邊際Margin of Safety五大迷思與實戰](<https://www.stockfeel.com.tw/如何使用安全邊際做投資？破除安全邊際的五大迷/>)
+- [安全邊際計算與實戰應用](<https://rich01.com/margin-of-safety-investing/>)

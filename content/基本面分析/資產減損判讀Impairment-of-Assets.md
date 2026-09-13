@@ -1,6 +1,8 @@
 ---
 title: "資產減損判讀 Impairment of Assets"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/資產減損判讀-IAS-36.md
 ---
 
 # 資產減損判讀 Impairment of Assets
@@ -154,4 +156,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [資產減損判讀IAS 36實戰指南](../../raw/2026-05-19/資產減損判讀-IAS-36.md)
+- 資產減損判讀IAS 36實戰指南（本機留存素材，未公開全文；原始網址待核對）

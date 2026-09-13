@@ -1,6 +1,8 @@
 ---
 title: "風險歸因 Risk Attribution"
 category: "風險管理"
+raw_files:
+- raw/2026-05-09/Risk-Attribution風險歸因分解.md
 ---
 
 # 風險歸因 Risk Attribution
@@ -110,4 +112,4 @@ MCTR（Marginal Contribution to Risk）是風險歸因的核心工具，量化�
 
 ## 來源
 
-- [Risk Attribution: How to Decompose and Explain the Risk and Return of Your Investments](../../raw/2026-05-09/Risk-Attribution風險歸因分解.md)
+- [Risk Attribution: How to Decompose and Explain the Risk and Return of Your Investments](<https://fastercapital.com/content/Risk-Attribution--How-to-Decompose-and-Explain-the-Risk-and-Return-of-Your-Investments.html>)

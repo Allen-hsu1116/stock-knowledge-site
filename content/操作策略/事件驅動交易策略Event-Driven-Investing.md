@@ -2,6 +2,8 @@
 category: "操作策略"
 title: 事件驅動交易策略 Event-Driven Investing
 date: 2026-06-18
+raw_files:
+- raw/2026-06-18/Event-driven-investing-Wikipedia.md
 ---
 
 # 事件驅動交易策略 Event-Driven Investing
@@ -64,4 +66,4 @@ date: 2026-06-18
 
 ## 來源
 
-- [Event-driven investing - Wikipedia](../../raw/2026-06-18/Event-driven-investing-Wikipedia.md)
+- [Event-driven investing - Wikipedia](<https://en.wikipedia.org/wiki/Event-driven_investing>)

@@ -1,6 +1,8 @@
 ---
 title: "XGBoost技術指標整合策略"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/XGBoost提升一目均衡表投資績效.md
 ---
 
 # XGBoost技術指標整合策略
@@ -105,4 +107,4 @@ ML 策略大幅優於純技術指標，主因是 XGBoost 能更早辨識漲勢�
 
 ## 來源
 
-- [機器學習算法 XGBoost 提升技術指標一目均衡表的投資績效](../../raw/2026-05-18/XGBoost提升一目均衡表投資績效.md)
+- [機器學習算法 XGBoost 提升技術指標一目均衡表的投資績效](<https://www.tejwin.com/insight/xgboost-%e6%8f%90%e5%8d%87%e6%8a%80%e8%a1%93%e6%8c%87%e6%a8%99%e4%b8%80%e7%9b%ae%e5%9d%87%e8%a1%a1%e8%a1%a8%e7%9a%84%e6%8a%95%e8%b3%87%e7%b8%be%e6%95%88/>)

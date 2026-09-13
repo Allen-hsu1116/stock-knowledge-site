@@ -1,6 +1,9 @@
 ---
 title: "回測到實盤落差與上線SOP"
 category: "風險管理"
+raw_files:
+- raw/2026-05-07/策略回測探討FinLab.md
+- raw/2026-05-07/回測局限性與避免無效回測.md
 ---
 
 # 回測到實盤落差與上線SOP
@@ -105,5 +108,5 @@ Step 5: 逐步放大
 - [[交易期望值Trading-Expectancy]]
 
 ## 來源
-- [反思菲式思考 Part.2｜策略回測探討](../../raw/2026-05-07/策略回測探討FinLab.md)
-- [回測局限性：回測有哪些限制？要怎麼避免無效回測？](../../raw/2026-05-07/回測局限性與避免無效回測.md)
+- [反思菲式思考 Part.2｜策略回測探討](<https://www.finlab.tw/phcebus-thinking-report-part2-backtest-sop/>)
+- [回測局限性：回測有哪些限制？要怎麼避免無效回測？](<https://rich01.com/limitation-of-backtesting/>)

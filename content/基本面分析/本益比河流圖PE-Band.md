@@ -1,6 +1,8 @@
 ---
 title: "本益比河流圖 PE Band / PE River Chart"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-02/本益比河流圖是什麼-市場先生.md
 ---
 
 # 本益比河流圖 PE Band / PE River Chart
@@ -110,5 +112,5 @@ category: "基本面分析"
 
 ## 來源
 
-- [本益比河流圖是什麼？怎麼看？本益比河流圖選股的注意事項 - Mr.Market市場先生](../../raw/2026-05-02/本益比河流圖是什麼-市場先生.md)
+- [本益比河流圖是什麼？怎麼看？本益比河流圖選股的注意事項 - Mr.Market市場先生](<https://rich01.com/price-to-earning-ratio-river/>)
 - 【2025本益比教學攻略】本益比多少才合理？越低越好？新手必學的2種河流圖估價法！ - AUME](../raw/2026-05-02/本益比河流圖估價法-AUME.md)

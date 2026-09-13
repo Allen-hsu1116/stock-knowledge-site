@@ -1,6 +1,10 @@
 ---
 title: "剝頭皮交易 Scalping"
 category: "操作策略"
+raw_files:
+- raw/2026-05-07/Scalping剝頭皮交易Wikipedia.md
+- raw/2026-05-07/期貨技術分析5大指標當沖與波段應用.md
+- raw/2026-05-07/交易策略完整指南趨勢區間突破反轉.md
 ---
 
 # 剝頭皮交易 Scalping
@@ -161,6 +165,6 @@ category: "操作策略"
 
 ## 來源
 
-- [Scalping Wikipedia](../../raw/2026-05-07/Scalping剝頭皮交易Wikipedia.md)
-- [期貨技術分析5大指標](../../raw/2026-05-07/期貨技術分析5大指標當沖與波段應用.md)
-- [交易策略完整指南](../../raw/2026-05-07/交易策略完整指南趨勢區間突破反轉.md)
+- [Scalping Wikipedia](<https://en.wikipedia.org/wiki/Scalping_(trading)>)
+- [期貨技術分析5大指標](<https://opop.tw/futures-technical-analysis-guide/>)
+- [交易策略完整指南](<https://www.ig.com/cn/trading-strategies/the-complete-guide-to-trading-strategies-221031>)

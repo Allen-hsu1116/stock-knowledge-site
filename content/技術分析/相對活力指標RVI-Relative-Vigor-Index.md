@@ -1,6 +1,8 @@
 ---
 title: "相對活力指標 RVI (Relative Vigor Index)"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/相對活力指標RVI.md
 ---
 
 # 相對活力指標 RVI (Relative Vigor Index)
@@ -78,5 +80,5 @@ category: "技術分析"
 
 ## 來源
 
-- [Relative Vigor Index - IFC Markets](../../raw/2026-05-18/相對活力指標RVI.md)
-- [What Is The Relative Vigor Index - Fidelity](../../raw/2026-05-18/相對活力指標RVI.md)
+- Relative Vigor Index - IFC Markets（原始來源：[1](<https://www.ifcmarkets.com/en/ntx-indicators/relative-vigor-index>)、[2](<https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/relative-vigor-index>)）
+- What Is The Relative Vigor Index - Fidelity（原始來源：[1](<https://www.ifcmarkets.com/en/ntx-indicators/relative-vigor-index>)、[2](<https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/relative-vigor-index>)）

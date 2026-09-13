@@ -1,6 +1,8 @@
 ---
 title: "訂單流足跡圖 Footprint Chart"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/訂單流足跡圖Footprint-Chart.md
 ---
 
 # 訂單流足跡圖 Footprint Chart
@@ -101,4 +103,4 @@ Volume Delta = 買方成交量 - 賣方成交量
 
 ## 來源
 
-- [什麼是訂單流足跡圖？](../../raw/2026-05-04/訂單流足跡圖Footprint-Chart.md)
+- [什麼是訂單流足跡圖？](<https://www.coinglass.com/zh-TW/learn/footprint-chart-tw>)

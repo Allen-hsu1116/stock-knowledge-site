@@ -2,6 +2,8 @@
 title: MIRR修正內部報酬率
 date: 2026-05-12
 category: 基本面分析
+raw_files:
+- raw/2026-05-12/IRR優缺點與MIRR修正-OANDA.md
 ---
 
 # MIRR修正內部報酬率
@@ -66,4 +68,4 @@ MIRR 更保守也更實際。
 
 ## 來源
 
-- [內部報酬率IRR是什麼？優缺點分析 - OANDA Lab](../../raw/2026-05-12/IRR優缺點與MIRR修正-OANDA.md)
+- [內部報酬率IRR是什麼？優缺點分析 - OANDA Lab](<https://www.oanda.com/bvi-ft/lab-education/invest_us_stock/irr/>)

@@ -1,6 +1,11 @@
 ---
 title: "BOS與CHoCH市場結構轉變"
 category: "技術分析"
+raw_files:
+- raw/2026-05-03/SMC交易策略深度解析-聰明錢概念教學與實戰應用.md
+- raw/2026-05-03/SMC聰明錢概念介紹-市場結構流動性訂單區塊虛假突破.md
+- raw/2026-05-11/SMC進階BOS與CHoCH市場結構突破與轉變.md
+- raw/2026-05-11/ICT-Market-Structure-流動性獵取與結構轉變判讀.md
 ---
 
 # BOS與CHoCH市場結構轉變
@@ -95,7 +100,7 @@ BOS（Break of Structure）和 CHoCH（Change of Character）是 SMC 聰明錢�
 - [[三重濾網交易系統|三重濾網交易系統]]
 
 ## 來源
-- [SMC交易策略深度解析-聰明錢概念教學與實戰應用](../../raw/2026-05-03/SMC交易策略深度解析-聰明錢概念教學與實戰應用.md)
-- [SMC聰明錢概念介紹-市場結構流動性訂單區塊虛假突破](../../raw/2026-05-03/SMC聰明錢概念介紹-市場結構流動性訂單區塊虛假突破.md)
-- [SMC進階BOS與CHoCH市場結構突破與轉變](../../raw/2026-05-11/SMC進階BOS與CHoCH市場結構突破與轉變.md)
-- [ICT-Market-Structure-流動性獵取與結構轉變判讀](../../raw/2026-05-11/ICT-Market-Structure-流動性獵取與結構轉變判讀.md)
+- [SMC交易策略深度解析-聰明錢概念教學與實戰應用](<https://fmstudio.blog/smc-trading-strategy-guide-2025/>)
+- [SMC聰明錢概念介紹-市場結構流動性訂單區塊虛假突破](<https://edgetradertw.com/%E4%BB%80%E9%BA%BC%E6%98%AFsmc%E8%81%B0%E6%98%8E%E9%8C%A2%EF%BC%9Fsmart-money-concepts-%E4%BB%8B%E7%B4%B9/>)
+- [SMC進階BOS與CHoCH市場結構突破與轉變](<https://homedadpro.com/break-of-structure/>)
+- [ICT-Market-Structure-流動性獵取與結構轉變判讀](<https://vocus.cc/article/64e94e59fd89780001e9cd89>)

@@ -1,6 +1,9 @@
 ---
 title: "產業生命週期Industry-Life-Cycle"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-16/產品生命週期StockFeel.md
+- raw/2026-05-16/產業分析與產業生命週期投資學筆記.md
 ---
 
 # 產業生命週期Industry-Life-Cycle
@@ -94,5 +97,5 @@ category: "基本面分析"
 
 ## 來源
 
-- [產品生命週期（StockFeel）](../../raw/2026-05-16/產品生命週期StockFeel.md)
-- [產業分析與產業生命週期投資學筆記](../../raw/2026-05-16/產業分析與產業生命週期投資學筆記.md)
+- [產品生命週期（StockFeel）](<https://www.stockfeel.com.tw/%E7%94%A2%E5%93%81%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F/>)
+- [產業分析與產業生命週期投資學筆記](<https://theriseofdavid.github.io/2020/12/06/NTUT_note/investment_stock_value_analysis_company_performance/>)

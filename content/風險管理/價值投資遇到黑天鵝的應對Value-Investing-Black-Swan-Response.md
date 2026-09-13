@@ -1,6 +1,9 @@
 ---
 title: "價值投資遇到黑天鵝的應對 Value Investing Black Swan Response"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/價值投資遇到黑天鵝事件怎麼辦.md
+- raw/2026-05-15/黑天鵝事件是什麼3個策略教你控制風險.md
 ---
 
 # 價值投資遇到黑天鵝的應對 Value Investing Black Swan Response
@@ -79,5 +82,5 @@ category: "風險管理"
 
 ## 來源
 
-- [價值投資遇到黑天鵝事件怎麼辦 - Mr.Market市場先生](../../raw/2026-05-15/價值投資遇到黑天鵝事件怎麼辦.md)
-- [黑天鵝事件是什麼？3個策略教你控制風險 - Smart自學網](../../raw/2026-05-15/黑天鵝事件是什麼3個策略教你控制風險.md)
+- [價值投資遇到黑天鵝事件怎麼辦 - Mr.Market市場先生](<https://rich01.com/blog-post_86-3/>)
+- [黑天鵝事件是什麼？3個策略教你控制風險 - Smart自學網](<https://smart.businessweekly.com.tw/Reading/IndepArticle.aspx?id=6016341>)

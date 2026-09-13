@@ -1,6 +1,11 @@
 ---
 title: "諧波形態 Harmonic Patterns"
 category: "技術分析"
+raw_files:
+- raw/2026-05-04/諧波形態Harmonic-Patterns.md
+- raw/2026-05-11/Harmonic-Patterns-諧波交易型態-TradingSim.md
+- raw/2026-05-11/諧波交易基礎AB等於CD結構-DA-Labs.md
+- raw/2026-05-11/蝴蝶型態Butterfly-Pattern諧波交易-Marcon.md
 ---
 
 # 諧波形態 Harmonic Patterns
@@ -251,10 +256,10 @@ D點遠超X點，代表極端反轉。
 
 ## 來源
 
-- [諧波形態Harmonic Patterns](../../raw/2026-05-04/諧波形態Harmonic-Patterns.md)
-- [Harmonic Patterns: Gartley, Bat, Butterfly & Crab 2026 - TradingSim](../../raw/2026-05-11/Harmonic-Patterns-諧波交易型態-TradingSim.md)
-- [學習和諧型態前 不能錯過的重要結構 - DA Labs](../../raw/2026-05-11/諧波交易基礎AB等於CD結構-DA-Labs.md)
-- [蝴蝶型態：揭秘金融市場高勝率反轉訊號 - Marcon](../../raw/2026-05-11/蝴蝶型態Butterfly-Pattern諧波交易-Marcon.md)
+- 諧波形態Harmonic Patterns（本機留存素材，未公開全文；原始網址待核對）
+- [Harmonic Patterns: Gartley, Bat, Butterfly & Crab 2026 - TradingSim](<https://www.tradingsim.com/blog/harmonic-patterns-in-stock-trading>)
+- [學習和諧型態前 不能錯過的重要結構 - DA Labs](<https://dalabs.org/technical-analysis/harmonic-patterns/>)
+- [蝴蝶型態：揭秘金融市場高勝率反轉訊號 - Marcon](<https://marconmktgroup.com/2025/forex-technical-analysis/butterfly-pattern-harmonic-trading-reversal-strategy/>)
 - Gartley, H.M. (1935). Profits in the Stock Market
 - Pesavento, Larry. Fibonacci Ratios with Pattern Recognition
 - Carney, Scott M. The Harmonic Trader (1999)

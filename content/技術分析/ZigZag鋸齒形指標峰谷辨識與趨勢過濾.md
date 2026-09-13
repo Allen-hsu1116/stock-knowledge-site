@@ -1,6 +1,10 @@
 ---
 title: "ZigZag鋸齒形指標峰谷辨識與趨勢過濾"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/ZigZag鋸齒形指標OANDA.md
+- raw/2026-05-11/ZigZag鋸齒形指標匯匯文學.md
+- raw/2026-05-11/ZigZag鋸齒形指標峰谷高低TrendlinearXCash.md
 ---
 
 # ZigZag鋸齒形指標峰谷辨識與趨勢過濾
@@ -100,6 +104,6 @@ ZigZag的**最後一段線會「事後修正」**！當價格創新高/新低時
 
 ## 來源
 
-- [將市場變動自動轉換為視覺效果的ZigZag指標 - OANDA Lab](../../raw/2026-05-11/ZigZag鋸齒形指標OANDA.md)
-- [神奇ZigZag指標 - 匯匯文學](../../raw/2026-05-11/ZigZag鋸齒形指標匯匯文學.md)
-- [6個觀察重點：Zig Zag 之字轉折指標 - TrendlinearXCash](../../raw/2026-05-11/ZigZag鋸齒形指標峰谷高低TrendlinearXCash.md)
+- [將市場變動自動轉換為視覺效果的ZigZag指標 - OANDA Lab](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/zigzag-visualization/>)
+- [神奇ZigZag指標 - 匯匯文學](<https://fxlittw.com/what-is-zigzag/>)
+- [6個觀察重點：Zig Zag 之字轉折指標 - TrendlinearXCash](<https://medium.com/@trendlinearxcash/%E9%87%8D%E9%BB%9E-zig-zag-%E4%B9%8B%E5%AD%97%E8%BD%89%E6%8A%98%E6%8C%87%E6%A8%99-%E5%B3%B0%E8%B0%B7%E9%AB%98%E4%BD%8E-7b50c9f472be>)

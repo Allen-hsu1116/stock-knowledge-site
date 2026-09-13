@@ -1,6 +1,14 @@
 ---
 title: "PEG本益成長比"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-02/本益成長比PEG市場先生.md
+- raw/2026-05-02/本益成長比PEG選股StockFeel.md
+- raw/2026-05-02/PEG本益成長比選股回測FinLab.md
+- raw/2026-05-02/台股估值PE與PEG進場點E大.md
+- raw/2026-05-05/PEG策略實戰本益成長比挖掘被低估成長股FinLab.md
+- raw/2026-05-05/PEG評價法教學本益成長比找潛力標的富果.md
+- raw/2026-05-05/本益成長比PEG市場先生.md
 ---
 
 # PEG本益成長比
@@ -131,10 +139,10 @@ FinLab 2026年回測證實，傳統停損/移停對成長股策略不僅無效�
 
 ## 來源
 
-- [看懂本益成長比(PEG)：市場先生](../../raw/2026-05-02/本益成長比PEG市場先生.md)
-- [本益成長比是什麼？StockFeel](../../raw/2026-05-02/本益成長比PEG選股StockFeel.md)
-- [七七四十九種PEG選股策略：FinLab](../../raw/2026-05-02/PEG本益成長比選股回測FinLab.md)
-- [2026台股估值全攻略：E大](../../raw/2026-05-02/台股估值PE與PEG進場點E大.md)
-- [PEG策略實戰：本益成長比挖掘被低估成長股：FinLab](../../raw/2026-05-05/PEG策略實戰本益成長比挖掘被低估成長股FinLab.md)
-- [PEG評價法教學：富果](../../raw/2026-05-05/PEG評價法教學本益成長比找潛力標的富果.md)
-- [看懂本益成長比(PEG)：市場先生](../../raw/2026-05-05/本益成長比PEG市場先生.md)
+- [看懂本益成長比(PEG)：市場先生](<https://rich01.com/ratio-peg/>)
+- [本益成長比是什麼？StockFeel](<https://www.stockfeel.com.tw/%E6%9C%AC%E7%9B%8A%E6%88%90%E9%95%B7%E6%AF%94-peg-%E9%81%B8%E8%82%A1/>)
+- [七七四十九種PEG選股策略：FinLab](<https://www.finlab.tw/peg/>)
+- [2026台股估值全攻略：E大](<https://efrontrade.com/2026/01/pe-ratio-peg-valuation-complete-guide.html>)
+- [PEG策略實戰：本益成長比挖掘被低估成長股：FinLab](<https://finlab.finance/blog/peg-strategy>)
+- [PEG評價法教學：富果](<https://blog.fugle.tw/post/peg-ratio>)
+- [看懂本益成長比(PEG)：市場先生](<https://rich01.com/ratio-peg/>)

@@ -1,6 +1,8 @@
 ---
 title: "選擇權 Max Pain 最大痛點理論"
 category: "籌碼面分析"
+raw_files:
+- raw/2026-05-17/選擇權未平倉入門與Max-Pain.md
 ---
 
 # 選擇權 Max Pain 最大痛點理論
@@ -90,7 +92,7 @@ Max Pain 和傳統支撐壓力表（看最大 OI）是不同概念：
 
 ## 來源
 
-- [選擇權市場的最大痛點是什麼？怎麼應用在加密貨幣 - DA Labs](../../raw/2026-05-17/選擇權未平倉入門與Max-Pain.md)
-- [選擇權教學：從入門交易到選擇權未平倉意義解讀 - 永豐期貨](../../raw/2026-05-17/選擇權未平倉入門與Max-Pain.md)
-- [解讀選擇權未平倉 - 選擇權搖錢樹](../../raw/2026-05-17/選擇權未平倉入門與Max-Pain.md)
-- [2024選擇權未平倉籌碼分析 - 不預測漲跌](../../raw/2026-05-17/選擇權未平倉入門與Max-Pain.md)
+- 選擇權市場的最大痛點是什麼？怎麼應用在加密貨幣 - DA Labs（原始來源：[1](<https://www.spf.com.tw/mktinfo/Futures/OA/option-001.html>)、[2](<https://dalabs.org/technical-analysis/option-max-pain-price/>)、[3](<https://options.tw/%E9%81%B8%E6%93%87%E6%AC%8A%E6%9C%AA%E5%B9%B3%E5%80%89/>)、[4](<https://gooptions.cc/%E9%81%B8%E6%93%87%E6%AC%8A%E6%9C%AA%E5%B9%B3%E5%80%89/>)）
+- 選擇權教學：從入門交易到選擇權未平倉意義解讀 - 永豐期貨（原始來源：[1](<https://www.spf.com.tw/mktinfo/Futures/OA/option-001.html>)、[2](<https://dalabs.org/technical-analysis/option-max-pain-price/>)、[3](<https://options.tw/%E9%81%B8%E6%93%87%E6%AC%8A%E6%9C%AA%E5%B9%B3%E5%80%89/>)、[4](<https://gooptions.cc/%E9%81%B8%E6%93%87%E6%AC%8A%E6%9C%AA%E5%B9%B3%E5%80%89/>)）
+- 解讀選擇權未平倉 - 選擇權搖錢樹（原始來源：[1](<https://www.spf.com.tw/mktinfo/Futures/OA/option-001.html>)、[2](<https://dalabs.org/technical-analysis/option-max-pain-price/>)、[3](<https://options.tw/%E9%81%B8%E6%93%87%E6%AC%8A%E6%9C%AA%E5%B9%B3%E5%80%89/>)、[4](<https://gooptions.cc/%E9%81%B8%E6%93%87%E6%AC%8A%E6%9C%AA%E5%B9%B3%E5%80%89/>)）
+- 2024選擇權未平倉籌碼分析 - 不預測漲跌（原始來源：[1](<https://www.spf.com.tw/mktinfo/Futures/OA/option-001.html>)、[2](<https://dalabs.org/technical-analysis/option-max-pain-price/>)、[3](<https://options.tw/%E9%81%B8%E6%93%87%E6%AC%8A%E6%9C%AA%E5%B9%B3%E5%80%89/>)、[4](<https://gooptions.cc/%E9%81%B8%E6%93%87%E6%AC%8A%E6%9C%AA%E5%B9%B3%E5%80%89/>)）

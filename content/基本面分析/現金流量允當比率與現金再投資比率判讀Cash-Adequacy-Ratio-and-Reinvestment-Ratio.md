@@ -1,6 +1,9 @@
 ---
 title: "現金流量允當比率與現金再投資比率判讀Cash-Adequacy-Ratio-and-Reinvestment-Ratio"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-19/看懂現金流量表三大現金流與財務比率StockFeel.md
+- raw/2026-05-16/現金流量表完整解析三大活動與財務比率-StockFeel.md
 ---
 
 # 現金流量允當比率與現金再投資比率判讀Cash-Adequacy-Ratio-and-Reinvestment-Ratio
@@ -164,5 +167,5 @@ category: "基本面分析"
 
 ## 來源
 
-- [看懂現金流量表三大現金流與財務比率](../../raw/2026-05-19/看懂現金流量表三大現金流與財務比率StockFeel.md)
-- [現金流量表完整解析三大活動與財務比率](../../raw/2026-05-16/現金流量表完整解析三大活動與財務比率-StockFeel.md)
+- [看懂現金流量表三大現金流與財務比率](<https://www.stockfeel.com.tw/三大報表-財報分析-現金流量/>)
+- [現金流量表完整解析三大活動與財務比率](<https://www.stockfeel.com.tw/三大報表-財報分析-現金流量/>)

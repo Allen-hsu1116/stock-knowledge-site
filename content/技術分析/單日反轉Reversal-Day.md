@@ -1,6 +1,9 @@
 ---
 title: "單日反轉Reversal-Day"
 category: "技術分析"
+raw_files:
+- raw/2026-05-18/單日反轉K線型態-今周刊.md
+- raw/2026-05-18/K線圖教學全攻略2026-E大.md
 ---
 
 # 單日反轉Reversal-Day
@@ -64,5 +67,5 @@ category: "技術分析"
 
 ## 來源
 
-- [台股何時回到應有價值？掌握強勢反轉訊號「單日反轉」- 今周刊](../../raw/2026-05-18/單日反轉K線型態-今周刊.md)
-- [K線圖教學全攻略：2026年從入門到精通的型態辨識與實戰策略 - E大成長股投資筆記](../../raw/2026-05-18/K線圖教學全攻略2026-E大.md)
+- [台股何時回到應有價值？掌握強勢反轉訊號「單日反轉」- 今周刊](<https://www.businesstoday.com.tw/article/category/183008/post/202504240036/>)
+- [K線圖教學全攻略：2026年從入門到精通的型態辨識與實戰策略 - E大成長股投資筆記](<https://efrontrade.com/2026/05/k-line-pattern-complete-guide-2026.html>)

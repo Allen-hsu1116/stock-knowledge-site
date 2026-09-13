@@ -1,6 +1,9 @@
 ---
 title: "技術分析回測方法與過度擬合Backtesting-and-Overfitting"
 category: "技術分析"
+raw_files:
+- raw/2026-05-11/策略優化如何避免過擬合FinLab.md
+- raw/2026-05-11/回測局限性避免無效回測市場先生.md
 ---
 
 # 技術分析回測方法與過度擬合Backtesting-and-Overfitting
@@ -130,5 +133,5 @@ Garbage in garbage out。數據有缺失、錯誤、誤植，回測結果必然�
 
 ## 來源
 
-- [策略優化 - 如何避免過擬合？ - FinLab](../../raw/2026-05-11/策略優化如何避免過擬合FinLab.md)
-- [回測局限性：回測有哪些限制？要怎麼避免無效回測？ - 市場先生](../../raw/2026-05-11/回測局限性避免無效回測市場先生.md)
+- [策略優化 - 如何避免過擬合？ - FinLab](<https://www.finlab.tw/backtesting-overfitting-probability/>)
+- [回測局限性：回測有哪些限制？要怎麼避免無效回測？ - 市場先生](<https://rich01.com/limitation-of-backtesting/>)

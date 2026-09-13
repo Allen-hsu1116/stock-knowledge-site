@@ -5,6 +5,9 @@ source: memory
 source_date: 2026-04-29
 status: raw_linked
 raw_file: raw/2026-04-29/自營商買賣超與避險意義.md
+raw_files:
+- raw/2026-04-29/自營商買賣超與避險意義.md
+- raw/2026-04-29/自營商權證避險買超判讀.md
 ---
 
 # 自營商權證避險Delta操作機制
@@ -115,5 +118,5 @@ Delta值衡量標的股每漲跌1元，權證價格變動多少。同時也是�
 
 ## 來源
 
-- [自營商是什麼？自營商買賣超代表什麼意思？- Mr.Market市場先生](../../raw/2026-04-29/自營商權證避險買超判讀.md)
-- [自營商是什麼？自營商買賣超與避險的意義？- CMoney](../../raw/2026-04-29/自營商買賣超與避險意義.md)
+- [自營商是什麼？自營商買賣超代表什麼意思？- Mr.Market市場先生](<https://rich01.com/dealer-overbought-oversold/>)
+- [自營商是什麼？自營商買賣超與避險的意義？- CMoney](<https://www.cmoney.tw/learn/course/michelle/topic/729>)

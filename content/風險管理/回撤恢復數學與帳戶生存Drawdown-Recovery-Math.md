@@ -1,6 +1,8 @@
 ---
 title: "回撤恢復數學與帳戶生存Drawdown-Recovery-Math"
 category: "風險管理"
+raw_files:
+- raw/2026-05-15/最大回檔MDD定義計算與實務解析.md
 ---
 
 # 回撤恢復數學與帳戶生存Drawdown-Recovery-Math
@@ -121,4 +123,4 @@ category: "風險管理"
 
 ## 來源
 
-- [最大回檔 MDD 定義、計算與實務解析](../../raw/2026-05-15/最大回檔MDD定義計算與實務解析.md)
+- [最大回檔 MDD 定義、計算與實務解析](<https://www.quantsnote.com/what-is-maximum-drawdown-mdd/>)

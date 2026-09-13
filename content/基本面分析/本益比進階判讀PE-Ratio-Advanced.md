@@ -1,6 +1,9 @@
 ---
 title: "本益比進階判讀PE-Ratio-Advanced"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/本益比市盈率PE-Ratio.md
+- raw/2026-05-05/企業價值倍數EV-EBITDA.md
 ---
 
 # 本益比進階判讀PE-Ratio-Advanced
@@ -105,5 +108,5 @@ EPS為負時P/E無意義。解決方案：改用P/S（股價營收比）、EV/EB
 
 ## 來源
 
-- [本益比市盈率PE-Ratio](../../raw/2026-05-05/本益比市盈率PE-Ratio.md)
-- [企業價值倍數EV/EBITDA](../../raw/2026-05-05/企業價值倍數EV-EBITDA.md)
+- [本益比市盈率PE-Ratio](<https://wiki.mbalib.com/zh-tw/%E6%9C%AC%E7%9B%8A%E6%AF%94>)
+- [企業價值倍數EV/EBITDA](<https://wiki.mbalib.com/zh-tw/EV%2FEBITDA>)

@@ -1,6 +1,8 @@
 ---
 title: "無形資產攤銷與減值判讀Intangible-Asset-Amortization-and-Impairment"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/無形資產攤銷與減值.md
 ---
 
 # 無形資產攤銷與減值判讀Intangible-Asset-Amortization-and-Impairment
@@ -92,4 +94,4 @@ category: "基本面分析"
 
 ## 來源
 
-- [無形資產攤銷 - MBA智庫百科](../../raw/2026-05-05/無形資產攤銷與減值.md)
+- [無形資產攤銷 - MBA智庫百科](<https://wiki.mbalib.com/zh-tw/无形资产摊销>)

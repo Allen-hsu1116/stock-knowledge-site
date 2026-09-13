@@ -1,6 +1,9 @@
 ---
 title: "破產風險 Risk of Ruin"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/Risk-of-Ruin-Wikipedia.md
+- raw/2026-05-15/賭徒破產理論Gamblers-Ruin.md
 ---
 
 # 破產風險 Risk of Ruin
@@ -38,8 +41,8 @@ category: "風險管理"
 
 ### 簡化理解：連續虧損模型
 
-更直觀的理解方式：假設帳戶有$1000可承受虧損，每筆最多虧$200：
-- 4筆交易以內：破產風險 = 0%（最多虧$800）
+更直觀的理解方式：假設帳戶有\$1000可承受虧損，每筆最多虧\$200：
+- 4筆交易以內：破產風險 = 0%（最多虧\$800）
 - 5筆交易：破產風險 ≈ 3%（需5筆全虧）
 - 交易越多，累積破產風險持續上升
 
@@ -142,8 +145,8 @@ s值（初始資金除以單筆最大虧損）是破產風險最敏感的變數�
 
 ## 來源
 
-- [Risk of Ruin - Wikipedia](../../raw/2026-05-08/Risk-of-Ruin-Wikipedia.md)
-- [賭徒破產理論(Gambler's Ruin)機率公式證明](../../raw/2026-05-15/賭徒破產理論Gamblers-Ruin.md)
+- [Risk of Ruin - Wikipedia](<https://en.wikipedia.org/wiki/Risk_of_ruin>)
+- [賭徒破產理論(Gambler's Ruin)機率公式證明](<https://quanist.blogspot.com/2021/07/gamblers-ruin.html>)
 - Taranto & Khan (2020). "Gambler's ruin problem and bi-directional grid constrained trading and investment strategies"
 - Dickson (2005). Insurance Risk And Ruin. Cambridge University Press
 - Powers (2001). Starting Out in Futures Trading. McGraw-Hill

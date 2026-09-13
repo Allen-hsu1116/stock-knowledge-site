@@ -1,6 +1,10 @@
 ---
 title: "企業價值倍數 EV/EBIT與EV/EBITDA"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-05/企業價值倍數EV-EBIT-EBITDA市場先生.md
+- raw/2026-05-05/企業價值倍數Enterprise-Multiple口袋證券.md
+- raw/2026-05-05/MBA智庫-企業價值倍數EV-EBITDA.md
 ---
 
 # 企業價值倍數 EV/EBIT與EV/EBITDA
@@ -143,6 +147,6 @@ EV/EBITDA 的核心概念可追溯到 1980 年代，由 John Malone 在 Tele-Com
 - [[SOTP分部加總估值法Sum-of-the-Parts-Valuation|SOTP分部估值法]] - EV/EBITDA是SOTP各部門最常用的估值倍數
 
 ## 來源
-- [企業價值倍數EV/EBIT、EV/EBITDA是什麼？怎麼計算？- 市場先生](../../raw/2026-05-05/企業價值倍數EV-EBIT-EBITDA市場先生.md)
-- [企業價值倍數 Enterprise Multiple - 口袋證券](../../raw/2026-05-05/企業價值倍數Enterprise-Multiple口袋證券.md)
-- [企業價值倍數 EV/EBITDA - MBA智庫百科](../../raw/2026-05-05/MBA智庫-企業價值倍數EV-EBITDA.md)
+- [企業價值倍數EV/EBIT、EV/EBITDA是什麼？怎麼計算？- 市場先生](<https://rich01.com/ev-ebitda-defination/>)
+- [企業價值倍數 Enterprise Multiple - 口袋證券](<https://www.pocket.tw/school/report/SCHOOL/4729/>)
+- [企業價值倍數 EV/EBITDA - MBA智庫百科](<https://wiki.mbalib.com/zh-tw/EV/EBITDA>)

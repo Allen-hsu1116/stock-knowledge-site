@@ -1,6 +1,8 @@
 ---
 title: "交易系統Trading-System設計與迷思"
 category: "風險管理"
+raw_files:
+- raw/2026-05-08/交易系統Trading-System-mbalib.md
 ---
 
 # 交易系統Trading-System設計與迷思
@@ -112,4 +114,4 @@ category: "風險管理"
 
 ## 來源
 
-- [交易系統 - MBA智库百科](../../raw/2026-05-08/交易系統Trading-System-mbalib.md)
+- [交易系統 - MBA智库百科](<https://wiki.mbalib.com/zh-tw/交易系统>)

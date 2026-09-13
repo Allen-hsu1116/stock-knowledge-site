@@ -1,6 +1,12 @@
 ---
 title: "K線組合型態反轉訊號"
 category: "技術分析"
+raw_files:
+- raw/2026-05-03/K線組合型態24種.md
+- raw/2026-05-03/K線組合型態進階吞噬晨星夜星.md
+- raw/2026-05-18/K線組合型態與裸K交易法.md
+- raw/2026-05-18/K線圖教學全攻略2026-E大.md
+- raw/2026-05-18/高檔反轉時機掌握-CMoney朱家泓.md
 ---
 
 # K線組合型態反轉訊號
@@ -167,8 +173,8 @@ K線組合型態是由2-3根K線組成的圖形模式，比單根K線的訊號�
 
 ## 來源
 
-- [K線組合型態24種全攻略](../../raw/2026-05-03/K線組合型態24種.md)
-- [K線組合型態進階：吞噬、晨星、夜星、紅三兵、黑三兵](../../raw/2026-05-03/K線組合型態進階吞噬晨星夜星.md)
-- [K線型態學與裸K交易 - QuantPass](../../raw/2026-05-18/K線組合型態與裸K交易法.md)
-- [K線圖教學全攻略2026-E大](../../raw/2026-05-18/K線圖教學全攻略2026-E大.md)
-- [技術分析輕鬆學｜如何掌握高檔反轉時機 - CMoney朱家泓](../../raw/2026-05-18/高檔反轉時機掌握-CMoney朱家泓.md)
+- [K線組合型態24種全攻略](<https://gofire.today/k-charts/>)
+- [K線組合型態進階：吞噬、晨星、夜星、紅三兵、黑三兵](<https://quantpass.org/kbar-pattern-2/>)
+- [K線型態學與裸K交易 - QuantPass](<https://quantpass.org/kbar-pattern-2/>)
+- [K線圖教學全攻略2026-E大](<https://efrontrade.com/2026/05/k-line-pattern-complete-guide-2026.html>)
+- [技術分析輕鬆學｜如何掌握高檔反轉時機 - CMoney朱家泓](<https://www.cmoney.tw/notes/note-detail.aspx?nid=741535>)

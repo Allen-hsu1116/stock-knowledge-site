@@ -3,6 +3,9 @@ title: 利差隱含違約機率與信用利差分解 Spread-Implied Default Prob
 aliases: [利差隱含違約機率, Spread-Implied Default Probability, 信用利差分解, 風險中立違約機率, Bond-CDS Basis]
 category: 基本面分析
 date: 2026-09-02
+raw_files:
+- raw/2026-09-02/NBER公司債違約與流動性利差分解學習紀錄.md
+- raw/2026-09-02/NTU縮減式信用風險與違約強度學習紀錄.md
 ---
 
 # 利差隱含違約機率與信用利差分解 Spread-Implied Default Probability
@@ -138,5 +141,5 @@ NBER研究指出違約與流動性會互相放大。流動性惡化提高公司�
 
 ## 來源
 
-- [NBER：Quantifying Liquidity and Default Risks of Corporate Bonds](../../raw/2026-09-02/NBER公司債違約與流動性利差分解學習紀錄.md)
-- [NTU Notes on Financial Risk and Analytics：Reduced-Form Approach](../../raw/2026-09-02/NTU縮減式信用風險與違約強度學習紀錄.md)
+- NBER：Quantifying Liquidity and Default Risks of Corporate Bonds（原始來源：[1](<https://www.nber.org/papers/w20638>)、[2](<https://www.nber.org/system/files/working_papers/w20638/w20638.pdf>)）
+- [NTU Notes on Financial Risk and Analytics：Reduced-Form Approach](<https://personal.ntu.edu.sg/nprivault/MH8331/credit_risk_reduced_form.pdf>)

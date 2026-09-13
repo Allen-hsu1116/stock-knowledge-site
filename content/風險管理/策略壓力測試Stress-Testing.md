@@ -1,6 +1,12 @@
 ---
 title: "策略壓力測試 Stress Testing"
 category: "風險管理"
+raw_files:
+- raw/2026-05-01/FinLab策略優化避免過度擬合.md
+- raw/2026-05-01/Walk-Forward-Analysis三種驗證方法比較.md
+- raw/2026-05-09/壓力測試Stress-Testing進階歷史情境法.md
+- raw/2026-05-15/槓桿壓力測試與極端情境模擬.md
+- raw/2026-05-15/Stress-Testing-Scenario-Analysis-RyanOConnell.md
 ---
 
 # 策略壓力測試 Stress Testing
@@ -288,8 +294,8 @@ DPG（衍生性商品政策小組）定義的七種標準衝擊：
 
 ## 來源
 
-- [FinLab 策略優化避免過度擬合](../../raw/2026-05-01/FinLab策略優化避免過度擬合.md)
-- [Walk-Forward Analysis三種驗證方法比較](../../raw/2026-05-01/Walk-Forward-Analysis三種驗證方法比較.md)
-- [壓力測試 MBA智库百科](../../raw/2026-05-09/壓力測試Stress-Testing進階歷史情境法.md)
-- [槓桿壓力測試與極端情境模擬](../../raw/2026-05-15/槓桿壓力測試與極端情境模擬.md)
-- [Stress Testing & Scenario Analysis - Ryan OConnell, CFA](../../raw/2026-05-15/Stress-Testing-Scenario-Analysis-RyanOConnell.md)
+- [FinLab 策略優化避免過度擬合](<https://www.finlab.tw/backtesting-overfitting-probability/>)
+- [Walk-Forward Analysis三種驗證方法比較](<https://medium.com/@NFS303/walk-forward-analysis-a-production-ready-comparison-of-three-validation-approaches-69cd25fc9fc7>)
+- [壓力測試 MBA智库百科](<https://wiki.mbalib.com/zh-tw/壓力測試>)
+- [槓桿壓力測試與極端情境模擬](<https://vocus.cc/article/681cb32ffd897800019873d2>)
+- [Stress Testing & Scenario Analysis - Ryan OConnell, CFA](<https://ryanoconnellfinance.com/stress-testing-scenario-analysis/>)

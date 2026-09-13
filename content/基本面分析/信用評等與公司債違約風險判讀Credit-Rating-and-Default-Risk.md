@@ -2,6 +2,8 @@
 title: 信用評等與公司債違約風險判讀 Credit Rating & Default Risk
 date: 2026-06-23
 category: "基本面分析"
+raw_files:
+- raw/2026-06-23/信用評等Wikipedia.md
 ---
 
 # 信用評等與公司債違約風險判讀 Credit Rating & Default Risk
@@ -105,7 +107,7 @@ Moody's 研究顯示 5 年累積違約率：
 
 ## 來源
 
-- [Credit Rating - Wikipedia](../../raw/2026-06-23/信用評等Wikipedia.md)
+- [Credit Rating - Wikipedia](<https://en.wikipedia.org/wiki/Credit_rating>)
 - Moody's 5-Year Default Rate Study
 - Journal of Finance Corporate Bond Spread Study (1973-1989)
 - 中華信用評等公司（S&P Taiwan）

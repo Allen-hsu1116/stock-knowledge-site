@@ -2,6 +2,10 @@
 category: "基本面分析"
 title: 減資三種方式與實戰判讀Capital-Reduction
 date: 2026-05-09
+raw_files:
+- raw/2026-05-09/減資三種方式與實戰判讀-StockFeel.md
+- raw/2026-05-09/現金減資選股實戰-商周陳唯泰.md
+- raw/2026-05-09/現金減資進階判讀-減資題材與風險評估.md
 ---
 
 # 減資三種方式與實戰判讀Capital-Reduction
@@ -129,7 +133,7 @@ date: 2026-05-09
 
 ## 來源
 
-- [減資意思？現金減資後股價影響？減資計算？](../../raw/2026-05-09/減資三種方式與實戰判讀-StockFeel.md)
-- [現金減資後股價會漲？選股教練](../../raw/2026-05-09/現金減資選股實戰-商周陳唯泰.md)
-- [現金減資進階判讀：減資題材與風險評估](../../raw/2026-05-09/現金減資進階判讀-減資題材與風險評估.md)
+- [減資意思？現金減資後股價影響？減資計算？](<https://www.stockfeel.com.tw/%E6%B8%9B%E8%B3%87-%E8%BF%B7%E6%80%9D/>)
+- [現金減資後股價會漲？選股教練](<https://smart.businessweekly.com.tw/Reading/IndepArticle.aspx?id=6020495>)
+- [現金減資進階判讀：減資題材與風險評估](<https://readmo.cmoney.tw/article/b87b553f-c55e-4fe4-8018-c3189fc0c43d>)
 - [企業瘦身術-減資 - 投保中心](https://www.sfipc.org.tw/News_Content.aspx?n=7542&s=11839&_CSN=50)

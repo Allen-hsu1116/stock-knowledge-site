@@ -1,6 +1,8 @@
 ---
 category: "技術分析"
 title: 圓底圓頂型態Rounding-Top-and-Bottom
+raw_files:
+- raw/2026-05-17/圓底圓頂型態實戰判讀.md
 ---
 
 # 圓底圓頂型態Rounding-Top-and-Bottom
@@ -64,7 +66,7 @@ title: 圓底圓頂型態Rounding-Top-and-Bottom
 圓頂目標價 = 頸線 -（最高點 - 頸線）
 ```
 
-例：圓底頸線 $100、最低點 $70 → 目標 $130
+例：圓底頸線 \$100、最低點 \$70 → 目標 \$130
 
 ### 量價確認三步驟
 
@@ -98,6 +100,6 @@ title: 圓底圓頂型態Rounding-Top-and-Bottom
 
 ## 來源
 
-- [Rounded Top and Rounded Bottom - Titan FX](../../raw/2026-05-17/圓底圓頂型態實戰判讀.md)
-- [圓型底 Rounding Bottom - 庫加老師 TIFA Life](../../raw/2026-05-17/圓底圓頂型態實戰判讀.md)
-- [出現「圓弧底」型態，股價大漲55.1% - CMoney](../../raw/2026-05-17/圓底圓頂型態實戰判讀.md)
+- Rounded Top and Rounded Bottom - Titan FX（原始來源：[1](<https://research.titanfx.com/technical-analysis/candlestick-chart/rounded-top-bottom-pattern>)、[2](<https://ks1224.pixnet.net/blog/post/367771677>)、[3](<https://www.cmoney.tw/notes/note-detail.aspx?nid=871330>)）
+- 圓型底 Rounding Bottom - 庫加老師 TIFA Life（原始來源：[1](<https://research.titanfx.com/technical-analysis/candlestick-chart/rounded-top-bottom-pattern>)、[2](<https://ks1224.pixnet.net/blog/post/367771677>)、[3](<https://www.cmoney.tw/notes/note-detail.aspx?nid=871330>)）
+- 出現「圓弧底」型態，股價大漲55.1% - CMoney（原始來源：[1](<https://research.titanfx.com/technical-analysis/candlestick-chart/rounded-top-bottom-pattern>)、[2](<https://ks1224.pixnet.net/blog/post/367771677>)、[3](<https://www.cmoney.tw/notes/note-detail.aspx?nid=871330>)）

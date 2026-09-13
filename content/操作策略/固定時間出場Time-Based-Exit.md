@@ -1,6 +1,8 @@
 ---
 title: "固定時間出場 Time-Based Exit"
 category: "操作策略"
+raw_files:
+- raw/2026-05-14/固定時間出場-Time-Based-Exit-市場先生.md
 ---
 
 # 固定時間出場 Time-Based Exit
@@ -109,4 +111,4 @@ category: "操作策略"
 - [[海龜交易法則]] - 海龜法則的出場也包含時間元素
 
 ## 來源
-- [投資或交易時，你會設定一個「固定時間出場」嗎？- 市場先生](../../raw/2026-05-14/固定時間出場-Time-Based-Exit-市場先生.md)
+- [投資或交易時，你會設定一個「固定時間出場」嗎？- 市場先生](<https://rich01.com/blog-post_44/>)

@@ -4,6 +4,8 @@ category: "基本面分析"
 source: raw/2026-05-12/Piotroski-F-Score-進階實戰.md
 source_date: 2026-05-12
 status: compiled
+raw_files:
+- raw/2026-05-12/Piotroski-F-Score-進階實戰.md
 ---
 
 # Piotroski F-Score 進階實戰
@@ -142,7 +144,7 @@ F-Score 不建議單獨使用，最佳組合：
 
 ## 來源
 
-- [F-score是什麼？如何用來選股？— 市場先生](../../raw/2026-05-12/Piotroski-F-Score-進階實戰.md)
-- [TQuant Lab F-score 策略 — TEJ台灣經濟新報](../../raw/2026-05-12/Piotroski-F-Score-進階實戰.md)
-- [皮爾托斯基分數(F-score) — 鉅亨易策略](../../raw/2026-05-12/Piotroski-F-Score-進階實戰.md)
+- F-score是什麼？如何用來選股？— 市場先生（原始來源：[1](<https://rich01.com/piotroski-f-score-0/>)、[2](<https://www.tejwin.com/insight/tquant-lab-f-score-策略/>)、[3](<https://hao.cnyes.com/post/8459>)）
+- TQuant Lab F-score 策略 — TEJ台灣經濟新報（原始來源：[1](<https://rich01.com/piotroski-f-score-0/>)、[2](<https://www.tejwin.com/insight/tquant-lab-f-score-策略/>)、[3](<https://hao.cnyes.com/post/8459>)）
+- 皮爾托斯基分數(F-score) — 鉅亨易策略（原始來源：[1](<https://rich01.com/piotroski-f-score-0/>)、[2](<https://www.tejwin.com/insight/tquant-lab-f-score-策略/>)、[3](<https://hao.cnyes.com/post/8459>)）
 - Piotroski, J. (2000). "Value Investing: The Use of Historical Financial Statement Information to Separate Winners from Losers"

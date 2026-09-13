@@ -1,6 +1,8 @@
 ---
 title: "ROA資產報酬率進階判讀"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-12/ROA資產報酬率進階判讀.md
 ---
 
 # ROA資產報酬率進階判讀
@@ -142,6 +144,6 @@ ROA突然異常飆高可能是：
 
 ## 來源
 
-- [ROA資產報酬率 - Mr.Market市場先生](../../raw/2026-05-12/ROA資產報酬率進階判讀.md)
-- [ROA是什麼 - StockFeel股感](../../raw/2026-05-12/ROA資產報酬率進階判讀.md)
-- [ROA與ROE差異 - Spark Spark Finance](../../raw/2026-05-12/ROA資產報酬率進階判讀.md)
+- [ROA資產報酬率 - Mr.Market市場先生](<https://rich01.com/what-is-roa/、https://sparksparkfinance.com/investment/investing-basics/return-on-assets-roa/、https://www.stockfeel.com.tw/本益比、roe-及-roa-的意義/>)
+- [ROA是什麼 - StockFeel股感](<https://rich01.com/what-is-roa/、https://sparksparkfinance.com/investment/investing-basics/return-on-assets-roa/、https://www.stockfeel.com.tw/本益比、roe-及-roa-的意義/>)
+- [ROA與ROE差異 - Spark Spark Finance](<https://rich01.com/what-is-roa/、https://sparksparkfinance.com/investment/investing-basics/return-on-assets-roa/、https://www.stockfeel.com.tw/本益比、roe-及-roa-的意義/>)

@@ -1,6 +1,9 @@
 ---
 title: "庫藏股買回分析Treasury-Stock-Buyback"
 category: "基本面分析"
+raw_files:
+- raw/2026-05-12/庫藏股買回分析StockFeel.md
+- raw/2026-05-12/庫藏股買回分析市場先生.md
 ---
 
 # 庫藏股買回分析Treasury-Stock-Buyback
@@ -136,5 +139,5 @@ category: "基本面分析"
 
 ## 來源
 
-- [庫藏股是什麼？買回庫藏股對股價影響？實施庫藏股優缺點？ - StockFeel](../../raw/2026-05-12/庫藏股買回分析StockFeel.md)
-- [庫藏股是什麼？為什麼公司要買回庫藏股？會影響股價嗎？ - 市場先生](../../raw/2026-05-12/庫藏股買回分析市場先生.md)
+- [庫藏股是什麼？買回庫藏股對股價影響？實施庫藏股優缺點？ - StockFeel](<https://www.stockfeel.com.tw/%E5%BA%AB%E8%97%8D%E8%82%A1%E7%A5%A8%E8%B2%B7%E5%9B%9E-%E5%BA%AB%E8%97%8D%E8%82%A1-%E5%8F%B0%E8%82%A1%E5%AD%B8%E7%BF%92/>)
+- [庫藏股是什麼？為什麼公司要買回庫藏股？會影響股價嗎？ - 市場先生](<https://rich01.com/blog-pos-24/>)

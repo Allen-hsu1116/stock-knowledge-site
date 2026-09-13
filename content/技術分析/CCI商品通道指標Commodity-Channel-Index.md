@@ -1,6 +1,18 @@
 ---
 title: "CCI商品通道指標 Commodity Channel Index"
 category: "技術分析"
+raw_files:
+- raw/2026-05-02/CCI商品通道指標-quantpass.md
+- raw/2026-05-02/CCI指標順勢交易-winsmart.md
+- raw/2026-05-02/CCI指標TradingView與OANDA.md
+- raw/2026-05-02/CCI商品通道指標判斷盤整-康和期貨.md
+- raw/2026-05-03/CCI指標完整教學QuantPass.md
+- raw/2026-05-03/CCI順勢指標OANDA.md
+- raw/2026-05-03/CCI順勢指標StockFeel.md
+- raw/2026-05-18/CCI順勢指標-StockFeel.md
+- raw/2026-05-18/CCI順勢指標-winsmart.md
+- raw/2026-05-18/CCI順勢指標-XQ.md
+- raw/2026-05-18/CCI商品通道指標QuantPass-OANDA-康和期貨.md
 ---
 
 # CCI商品通道指標 Commodity Channel Index
@@ -160,14 +172,14 @@ KD在80以上「超買」時，趨勢股可能繼續大漲，此時用KD放空�
 
 ## 來源
 
-- [CCI指標完整教學 - 量化通 QuantPass](../../raw/2026-05-02/CCI商品通道指標-quantpass.md)
-- [1招破解CCI指標 - WINSMART](../../raw/2026-05-02/CCI指標順勢交易-winsmart.md)
-- [順勢指標CCI - TradingView](../../raw/2026-05-02/CCI指標TradingView與OANDA.md)
-- [CCI商品通道指標判斷盤整 - 康和期貨](../../raw/2026-05-02/CCI商品通道指標判斷盤整-康和期貨.md)
-- [CCI指標完整教學 - 量化通 QuantPass](../../raw/2026-05-03/CCI指標完整教學QuantPass.md)
-- [CCI順勢指標 - OANDA Lab](../../raw/2026-05-03/CCI順勢指標OANDA.md)
-- [CCI順勢指標判斷買賣點 - StockFeel](../../raw/2026-05-03/CCI順勢指標StockFeel.md)
-- [CCI指標順勢交易實戰 - StockFeel 2026](../../raw/2026-05-18/CCI順勢指標-StockFeel.md)
-- [CCI指標順勢交易提高勝算 - WINSMART](../../raw/2026-05-18/CCI順勢指標-winsmart.md)
-- [CCI商品通道指標公式 - XQ](../../raw/2026-05-18/CCI順勢指標-XQ.md)
-- [CCI商品通道指標 - QuantPass、OANDA、康和期貨](../../raw/2026-05-18/CCI商品通道指標QuantPass-OANDA-康和期貨.md)
+- [CCI指標完整教學 - 量化通 QuantPass](<https://quantpass.org/cci-2/>)
+- [1招破解CCI指標 - WINSMART](<https://winsmart.tw/en/online_teaching/cci%E6%8C%87%E6%A8%99/>)
+- 順勢指標CCI - TradingView（原始來源：[1](<https://tw.tradingview.com/support/solutions/43000502001/>)、[2](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/commodity-channel-index/>)）
+- [CCI商品通道指標判斷盤整 - 康和期貨](<https://futures.com.tw/futures-instruction/technical-analysis/%E5%88%A9%E7%94%A8cci%E6%8C%87%E6%A8%99%E5%88%A4%E6%96%B7%E7%9B%A4%E6%95%B4%E3%80%81%E8%B6%85%E8%B2%B7%E8%B6%85%E8%B3%A3/>)
+- [CCI指標完整教學 - 量化通 QuantPass](<https://quantpass.org/cci-2/>)
+- [CCI順勢指標 - OANDA Lab](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/commodity-channel-index/>)
+- [CCI順勢指標判斷買賣點 - StockFeel](<https://www.stockfeel.com.tw/cci-%E9%A0%86%E5%8B%A2%E6%8C%87%E6%A8%99-%E5%8F%83%E6%95%B8/>)
+- [CCI指標順勢交易實戰 - StockFeel 2026](<https://www.stockfeel.com.tw/cci-%E9%A0%86%E5%8B%A2%E6%8C%87%E6%A8%99-%E5%8F%83%E6%95%B8/>)
+- [CCI指標順勢交易提高勝算 - WINSMART](<https://winsmart.tw/en/online_teaching/cci%E6%8C%87%E6%A8%99/>)
+- [CCI商品通道指標公式 - XQ](<https://www.xq.com.tw/xstrader/cci%E6%8C%87%E6%A8%99/>)
+- CCI商品通道指標 - QuantPass、OANDA、康和期貨（原始來源：[1](<https://quantpass.org/cci/>)、[2](<https://www.oanda.com/bvi-ft/lab-education/technical_analysis/commodity-channel-index/>)、[3](<https://futures.com.tw/futures-instruction/technical-analysis/利用cci指標判斷盤整、超買超賣/>)）

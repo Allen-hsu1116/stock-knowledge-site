@@ -2,6 +2,8 @@
 category: "操作策略"
 title: 財報公告交易策略 Earnings Announcement Trading
 date: 2026-06-18
+raw_files:
+- raw/2026-06-18/Post-earnings-announcement-drift-Wikipedia.md
 ---
 
 # 財報公告交易策略 Earnings Announcement Trading
@@ -68,4 +70,4 @@ date: 2026-06-18
 
 ## 來源
 
-- [Post-earnings-announcement drift - Wikipedia](../../raw/2026-06-18/Post-earnings-announcement-drift-Wikipedia.md)
+- [Post-earnings-announcement drift - Wikipedia](<https://en.wikipedia.org/wiki/Post-earnings-announcement_drift>)

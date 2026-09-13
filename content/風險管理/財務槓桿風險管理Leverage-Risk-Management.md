@@ -1,6 +1,8 @@
 ---
 title: "財務槓桿風險管理Leverage-Risk-Management"
 category: "風險管理"
+raw_files:
+- raw/2026-05-03/財務槓桿風險管理.md
 ---
 
 # 財務槓桿風險管理Leverage-Risk-Management
@@ -82,4 +84,4 @@ category: "風險管理"
 
 ## 來源
 
-- [財務槓桿是什麼？最完整的財務槓桿解析指南 - Mr.Market市場先生](../../raw/2026-05-03/財務槓桿風險管理.md)
+- [財務槓桿是什麼？最完整的財務槓桿解析指南 - Mr.Market市場先生](<https://rich01.com/what-is-financial-leverage/>)

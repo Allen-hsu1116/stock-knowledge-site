@@ -1,6 +1,11 @@
 ---
 title: "箱型理論 Darvas Box"
 category: "操作策略"
+raw_files:
+- raw/2026-04-30/箱型理論達華斯箱型整理Yahoo財經.md
+- raw/2026-04-30/箱型理論市場先生完整解析.md
+- raw/2026-04-30/箱型理論OANDA交易策略介紹.md
+- raw/2026-05-14/箱型理論進階實戰Darvas-Box-Advanced.md
 ---
 
 # 箱型理論 Darvas Box
@@ -161,7 +166,7 @@ category: "操作策略"
 
 ## 來源
 
-- [箱型整理也能賺！怎麼判斷「多空交戰」突破點？ - Yahoo財經](../../raw/2026-04-30/箱型理論達華斯箱型整理Yahoo財經.md)
-- [箱型理論/箱型整理是什麼？ - Mr.Market市場先生](../../raw/2026-04-30/箱型理論市場先生完整解析.md)
-- [何謂箱型理論及其交易策略介紹 - OANDA Lab](../../raw/2026-04-30/箱型理論OANDA交易策略介紹.md)
-- [箱型理論進階實戰：Darvas Box 選股、階梯操作與假突破過濾 - 2026-05-14](../../raw/2026-05-14/箱型理論進階實戰Darvas-Box-Advanced.md)
+- [箱型整理也能賺！怎麼判斷「多空交戰」突破點？ - Yahoo財經](<https://tw.stock.yahoo.com/news/%E7%AE%B1%E5%9E%8B%E6%95%B4%E7%90%86%E4%B9%9F%E8%83%BD%E8%B3%BA%EF%BC%81%E6%80%8E%E9%BA%BC%E5%88%A4%E6%96%B7%E3%80%8C%E5%A4%9A%E7%A9%BA%E4%BA%A4%E6%88%B0%E3%80%8D%E7%AA%81%E7%A0%B4%E9%BB%9E%EF%BC%9F%E5%81%87%E7%AA%81%E7%A0%B4%E5%8F%88%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F%E4%B8%80%E6%96%87%E7%9C%8B%E6%87%82%E3%80%8C%E7%AE%B1%E5%9E%8B%E7%90%86%E8%AB%96%E3%80%8D%EF%BD%9C%E7%9C%8B%E5%9C%96%E8%AA%AA%E8%82%A1%E5%B8%82-091603373.html>)
+- [箱型理論/箱型整理是什麼？ - Mr.Market市場先生](<https://rich01.com/what-is-box-theory/>)
+- [何謂箱型理論及其交易策略介紹 - OANDA Lab](<https://www.oanda.com/bvi-ft/lab-education/blog/box-theory/>)
+- 箱型理論進階實戰：Darvas Box 選股、階梯操作與假突破過濾 - 2026-05-14（原始來源：[1](<https://tw.stock.yahoo.com/news/箱型整理也能賺>)、[2](<https://www.esunsec.com.tw/article/post/61>)、[3](<https://www.oanda.com/bvi-ft/lab-education/blog/box-theory/>)、[4](<https://www.rayskyinvest.com/88933/darvas-box-theory>)）

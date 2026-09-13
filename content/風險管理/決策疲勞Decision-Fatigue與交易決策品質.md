@@ -3,6 +3,10 @@ category: "風險管理"
 title: 決策疲勞Decision-Fatigue與交易決策品質
 created: 2026-05-15
 topic: 風險管理
+raw_files:
+- raw/2026-05-15/決策疲勞MBA智庫百科.md
+- raw/2026-05-15/決策疲勞長期傷害JANDI.md
+- raw/2026-05-15/交易心理深度思考正念交易.md
 ---
 
 # 決策疲勞Decision-Fatigue與交易決策品質
@@ -143,6 +147,6 @@ topic: 風險管理
 
 ## 來源
 
-- [決策疲勞——MBA智庫百科](../../raw/2026-05-15/決策疲勞MBA智庫百科.md)
-- [千萬別忽視決策疲勞長期傷害——JANDI](../../raw/2026-05-15/決策疲勞長期傷害JANDI.md)
-- [交易心理的深度思考——《心理學博士的深度交易課》讀後](../../raw/2026-05-15/交易心理深度思考正念交易.md)
+- [決策疲勞——MBA智庫百科](<https://wiki.mbalib.com/zh-tw/%E5%86%B3%E7%AD%96%E7%96%B2%E5%8A%B3>)
+- [千萬別忽視決策疲勞長期傷害——JANDI](<https://blog.jandi.com/tw/decision-fatigue/>)
+- [交易心理的深度思考——《心理學博士的深度交易課》讀後](<https://justininvesting.wordpress.com/2018/09/03/trademindfully/>)
