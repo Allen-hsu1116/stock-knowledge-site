@@ -18,7 +18,7 @@ raw_files:
 1. **當期所得稅（Current Tax）**：依據稅法規定當年度應繳納的所得稅，包含營利事業所得稅、未分配盈餘所得稅、基本稅額等
 2. **遞延所得稅（Deferred Tax）**：會計利潤與課稅所得的「時間性差異」產生的所得稅影響數
 
-> ⚠️ 關鍵觀念：財報上的所得稅費用 ≠ 公司實際繳給政府的稅金。當期所得稅才是真正繳出去的錢，遞延所得稅是會計上的調整。
+> ⚠️ 關鍵觀念：財報上的「所得稅費用」不等於實際付稅；當期所得稅費用也是應計金額，尚未支付的部分列為負債，溢付則列為資產，不能把當期稅費直接當作已繳現金。遞延所得稅則反映暫時性差異等未來稅務效果。此處依IFRS Foundation的IAS 12公開概覽於2026-09-15修正。
 
 ### 有效稅率（ETR）
 
@@ -121,6 +121,8 @@ ETR直接影響稅後淨利，進而影響EPS和估值：
 
 ## 相關主題
 
+- [[基本面分析/不確定所得稅處理IFRIC23與稅務估計風險]]
+- [[基本面分析/全球最低稅PillarTwo與遞延所得稅例外]]
 - [[盈餘品質分析]]
 - [[盈餘管理手法識別與判讀]]
 - [[應計項目異象Accrual-Anomaly]]
@@ -132,6 +134,7 @@ ETR直接影響稅後淨利，進而影響EPS和估值：
 
 ## 來源
 
+- [IFRS Foundation：IAS 12 Income Taxes公開概覽](https://www.ifrs.org/issued-standards/list-of-standards/ias-12-income-taxes/) — 2026-09-15用於修正「當期稅費等於已繳現金」的錯誤；本次未全面重驗其他舊案例及歷史稅法數字。
 - 有效稅率（ETR）是什麼？ - PG財經筆記（原始來源：[1](<https://pgfinnote.substack.com/p/effective-tax-rate-etr>)、[2](<https://garrickcpa.wordpress.com/2020/03/21/一次就看懂所得稅之會計處理/>)、[3](<https://www.fishhuang.idv.tw/2022/07/Financial-Statement-Analysis-34-earnings-quality-index.html>)）
 - 一次就看懂所得稅之會計處理 - 小會計師的大視界（原始來源：[1](<https://pgfinnote.substack.com/p/effective-tax-rate-etr>)、[2](<https://garrickcpa.wordpress.com/2020/03/21/一次就看懂所得稅之會計處理/>)、[3](<https://www.fishhuang.idv.tw/2022/07/Financial-Statement-Analysis-34-earnings-quality-index.html>)）
 - 盈餘品質指標 - 薛兆亨（原始來源：[1](<https://pgfinnote.substack.com/p/effective-tax-rate-etr>)、[2](<https://garrickcpa.wordpress.com/2020/03/21/一次就看懂所得稅之會計處理/>)、[3](<https://www.fishhuang.idv.tw/2022/07/Financial-Statement-Analysis-34-earnings-quality-index.html>)）
