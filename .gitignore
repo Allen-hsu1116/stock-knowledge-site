@@ -9,3 +9,6 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+
+# Retired private sources must not re-enter publication
+/content/YouTube頻道/

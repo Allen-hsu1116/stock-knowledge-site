@@ -22,6 +22,7 @@ rsync -av --delete \
   --exclude='.obsidian' \
   --exclude='templates' \
   --exclude='private' \
+  --exclude='YouTube頻道' \
   "$WIKI_DIR/" "$QUARTZ_DIR/content/"
 
 # 複製首頁（獨立維護，不受 wiki/INDEX.md 影響）

@@ -12,7 +12,6 @@ function customSortFn(a: FileTrieNode, b: FileTrieNode): number {
     "籌碼面分析": 3,
     "操作策略": 4,
     "風險管理": 5,
-    "YouTube頻道": 6,
     "每日分析": 7,
   }
   // 如果兩邊都是資料夾或都是檔案，按自定義順序/字母排序
